@@ -1,243 +1,146 @@
 {
-   "$defs": {
-      "Address": {
-         "additionalProperties": false,
-         "description": "",
-         "properties": {
-            "city": {
-               "type": "string"
+    "$defs": {
+        "NamedThing": {
+            "additionalProperties": false,
+            "description": "A generic grouping for any identifiable entity",
+            "properties": {
+                "description": {
+                    "description": "A human-readable description for a thing",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                }
             },
-            "postal_code": {
-               "type": "string"
+            "required": [
+                "id"
+            ],
+            "title": "NamedThing",
+            "type": "object"
+        },
+        "PersonStatus": {
+            "description": "",
+            "enum": [
+                "ALIVE",
+                "DEAD",
+                "UNKNOWN"
+            ],
+            "title": "PersonStatus",
+            "type": "string"
+        },
+        "UseCase": {
+            "additionalProperties": false,
+            "description": "Represents a UseCase",
+            "properties": {
+                "age_in_years": {
+                    "description": "Number of years since birth",
+                    "type": "integer"
+                },
+                "birth_date": {
+                    "description": "Date on which a person is born",
+                    "format": "date",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description for a thing",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                },
+                "primary_email": {
+                    "description": "The main email address of a person",
+                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
+                    "type": "string"
+                },
+                "vital_status": {
+                    "$ref": "#/$defs/PersonStatus",
+                    "description": "living or dead status"
+                }
             },
-            "street": {
-               "type": "string"
-            }
-         },
-         "required": [],
-         "title": "Address",
-         "type": "object"
-      },
-      "FamilialRelationship": {
-         "additionalProperties": false,
-         "description": "",
-         "properties": {
-            "ended_at_time": {
-               "format": "date",
-               "type": "string"
+            "required": [
+                "id"
+            ],
+            "title": "UseCase",
+            "type": "object"
+        },
+        "UseCaseCollection": {
+            "additionalProperties": false,
+            "description": "A holder for UseCase objects",
+            "properties": {
+                "entries": {
+                    "additionalProperties": {
+                        "$ref": "#/$defs/UseCase__identifier_optional"
+                    },
+                    "type": "object"
+                }
             },
-            "related_to": {
-               "type": "string"
+            "title": "UseCaseCollection",
+            "type": "object"
+        },
+        "UseCase__identifier_optional": {
+            "additionalProperties": false,
+            "description": "Represents a UseCase",
+            "properties": {
+                "age_in_years": {
+                    "description": "Number of years since birth",
+                    "type": "integer"
+                },
+                "birth_date": {
+                    "description": "Date on which a person is born",
+                    "format": "date",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description for a thing",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                },
+                "primary_email": {
+                    "description": "The main email address of a person",
+                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
+                    "type": "string"
+                },
+                "vital_status": {
+                    "$ref": "#/$defs/PersonStatus",
+                    "description": "living or dead status"
+                }
             },
-            "started_at_time": {
-               "format": "date",
-               "type": "string"
+            "required": [],
+            "title": "UseCase",
+            "type": "object"
+        }
+    },
+    "$id": "https://w3id.org/bridge2ai/standards-usecase-schema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "properties": {
+        "entries": {
+            "additionalProperties": {
+                "$ref": "#/$defs/UseCase__identifier_optional"
             },
-            "type": {
-               "$ref": "#/$defs/FamilialRelationshipType"
-            }
-         },
-         "required": [
-            "type",
-            "related_to"
-         ],
-         "title": "FamilialRelationship",
-         "type": "object"
-      },
-      "FamilialRelationshipType": {
-         "description": "",
-         "enum": [
-            "SIBLING_OF",
-            "PARENT_OF",
-            "CHILD_OF"
-         ],
-         "title": "FamilialRelationshipType",
-         "type": "string"
-      },
-      "NamedThing": {
-         "additionalProperties": false,
-         "description": "A generic grouping for any identifiable entity",
-         "properties": {
-            "description": {
-               "type": "string"
-            },
-            "id": {
-               "type": "string"
-            },
-            "image": {
-               "type": "string"
-            },
-            "name": {
-               "type": "string"
-            }
-         },
-         "required": [
-            "id"
-         ],
-         "title": "NamedThing",
-         "type": "object"
-      },
-      "Organization": {
-         "additionalProperties": false,
-         "description": "An organization such as a company or university",
-         "properties": {
-            "aliases": {
-               "items": {
-                  "type": "string"
-               },
-               "type": "array"
-            },
-            "description": {
-               "type": "string"
-            },
-            "founding_date": {
-               "type": "string"
-            },
-            "id": {
-               "type": "string"
-            },
-            "image": {
-               "type": "string"
-            },
-            "mission_statement": {
-               "type": "string"
-            },
-            "name": {
-               "type": "string"
-            }
-         },
-         "required": [
-            "id"
-         ],
-         "title": "Organization",
-         "type": "object"
-      },
-      "Person": {
-         "additionalProperties": false,
-         "description": "A person (alive, dead, undead, or fictional).",
-         "properties": {
-            "age_in_years": {
-               "maximum": 999,
-               "minimum": 0,
-               "type": "integer"
-            },
-            "aliases": {
-               "items": {
-                  "type": "string"
-               },
-               "type": "array"
-            },
-            "birth_date": {
-               "type": "string"
-            },
-            "current_address": {
-               "$ref": "#/$defs/Address",
-               "description": "The address at which a person currently lives"
-            },
-            "description": {
-               "type": "string"
-            },
-            "has_familial_relationships": {
-               "items": {
-                  "$ref": "#/$defs/FamilialRelationship"
-               },
-               "type": "array"
-            },
-            "id": {
-               "type": "string"
-            },
-            "image": {
-               "type": "string"
-            },
-            "name": {
-               "type": "string"
-            },
-            "primary_email": {
-               "pattern": "^\\S+@[\\S+\\.]+\\S+",
-               "type": "string"
-            }
-         },
-         "required": [
-            "id"
-         ],
-         "title": "Person",
-         "type": "object"
-      },
-      "PersonStatus": {
-         "description": "",
-         "enum": [
-            "ALIVE",
-            "DEAD",
-            "UNKNOWN"
-         ],
-         "title": "PersonStatus",
-         "type": "string"
-      },
-      "Registry": {
-         "additionalProperties": false,
-         "description": "Top level data container",
-         "properties": {
-            "organizations": {
-               "items": {
-                  "$ref": "#/$defs/Organization"
-               },
-               "type": "array"
-            },
-            "persons": {
-               "items": {
-                  "$ref": "#/$defs/Person"
-               },
-               "type": "array"
-            }
-         },
-         "required": [],
-         "title": "Registry",
-         "type": "object"
-      },
-      "Relationship": {
-         "additionalProperties": false,
-         "description": "",
-         "properties": {
-            "ended_at_time": {
-               "format": "date",
-               "type": "string"
-            },
-            "related_to": {
-               "type": "string"
-            },
-            "started_at_time": {
-               "format": "date",
-               "type": "string"
-            },
-            "type": {
-               "type": "string"
-            }
-         },
-         "required": [],
-         "title": "Relationship",
-         "type": "object"
-      }
-   },
-   "$id": "https://w3id.org/my_org/my_datamodel",
-   "$schema": "http://json-schema.org/draft-07/schema#",
-   "additionalProperties": true,
-   "metamodel_version": "1.7.0",
-   "properties": {
-      "organizations": {
-         "items": {
-            "$ref": "#/$defs/Organization"
-         },
-         "type": "array"
-      },
-      "persons": {
-         "items": {
-            "$ref": "#/$defs/Person"
-         },
-         "type": "array"
-      }
-   },
-   "required": [],
-   "title": "my_datamodel",
-   "type": "object",
-   "version": null
+            "type": "object"
+        }
+    },
+    "title": "standards-usecase-schema",
+    "type": "object",
+    "version": null
 }
