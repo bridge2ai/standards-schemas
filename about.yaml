@@ -1,0 +1,6 @@
+name: standards_usecase_schema
+author: J. Harry Caufield <jhc@lbl.gov>
+description: Data schema for Bridge2AI Standards Use Cases.
+source_schema_path: src/standards_usecase_schema/schema/standards_usecase_schema.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: personinfo enums
