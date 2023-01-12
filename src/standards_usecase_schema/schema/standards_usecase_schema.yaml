@@ -13,8 +13,7 @@ prefixes:
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
-  example: https://example.org/
-default_prefix: standards_usecase_schema
+default_prefix: STANDARDSUSECASE
 default_range: string
 
 imports:
@@ -34,15 +33,20 @@ classes:
   UseCase:
     is_a: NamedThing
     description: >-
-      Represents a UseCase
+      Represents a use case for Bridge2AI standards.
     slots:
-      - primary_email
-      - birth_date
-      - age_in_years
-      - vital_status
-    slot_usage:
-      primary_email:
-        pattern: "^\\S+@[\\S+\\.]+\\S+"
+      - use_case_category
+      - known_limitations
+      - relevance_to_dgps
+      - data_types
+      - data_substrates
+      - standards_and_tools_for_dgp_use
+      - alternative_standards_and_tools
+      - enables
+      - involved_in_experimental_design
+      - involved_in_metadata_management
+      - involved_in_quality_control
+      - xrefs
         
   UseCaseCollection:
     tree_root: true
@@ -66,30 +70,74 @@ slots:
   description:
     slot_uri: schema:description
     description: A human-readable description for a thing
-  primary_email:
-    slot_uri: schema:email
-    description: The main email address of a person
-  birth_date:
-    slot_uri: schema:birthDate
-    range: date
-    description: Date on which a person is born
-  age_in_years:
-    range: integer
-    description: Number of years since birth
-  vital_status:
-    range: PersonStatus
-    description: living or dead status
+  use_case_category:
+    range: UseCaseCategory
+    description: >-
+      Category of the UseCase.
+      Not all projects will incorporate use cases in all categories.
+  known_limitations:
+    range: string
+    description: >-
+      Any current obstacles to implementing this use case.
+      This could be a selection from one or more predefined categories
+      including lack of standards, lack of relevant patient cohort,
+      lack of funding, etc.
+  relevance_to_dgps:
+    range: DataGeneratingProject
+    description: Relevance of the use case to one or more DGPs.
+  data_types:
+  data_substrates:
+  standards_and_tools_for_dgp_use:
+  alternative_standards_and_tools:
+  enables:
+  involved_in_experimental_design:
+  involved_in_metadata_management:
+  involved_in_quality_control:
+  xrefs:
     
 enums:
-  PersonStatus:
+  UseCaseCategory:
     permissible_values:
-      ALIVE:
-        description: the person is living
-        meaning: PATO:0001421 
-      DEAD:
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        description: the vital status is not known
-        todos:
-          - map this to an ontology
+      Acquisition:
+        description: Acquisition
+        meaning:
+      Integration:
+        description: Integration
+        meaning:
+      Standardization:
+        description: Standardization
+        meaning:
+      Modeling:
+        description: Modeling
+        meaning:
+      Application:
+        description: Application
+        meaning:
+      Assessment:
+        description: Assessment
+        meaning:
+  # TODO: Move DGPs to a parent hierarchy
+  DataGeneratingProject:
+    permissible_values:
+      AI-READI:
+        description: AI-READI
+        meaning: >-
+          "Uncovering the details of how human health is restored
+          after disease, using type 2 diabetes as a model"
+      CHoRUS:
+        description: "CHoRUS: Collaborative Hospital Repository Uniting Standards"
+        meaning: >-
+          "Using imaging, clinical, and other data collected in
+          an ICU setting for diagnosis and risk prediction"
+      CM4AI:
+        description: "CM4AI: Cell Maps for AI"
+        meaning: >-
+          "Mapping spatiotemporal architecture of human cells to
+          interpret cell structure/function in health and disease"
+      Voice:
+        description: Voice
+        meaning: >-
+          "Voice as a Biomarker of Health: Building an ethically
+          sourced, bioaccoustic database to understand disease
+          like never before"
+
