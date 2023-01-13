@@ -5,7 +5,7 @@ description = "Data schemas for Bridge2AI Standards."
 authors = ["J. Harry Caufield <jhc@lbl.gov>"]
 license = "MIT"
 readme = "README.md"
-include = ["README.md", "src/standards_usecase_schema/schema", "project"]
+include = ["README.md", "src/standards_schemas/schema", "project"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
