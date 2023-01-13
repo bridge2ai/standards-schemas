@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "standards_usecase_schema"
+name = "standards_schemas"
 version = "0.1.0"
-description = "Data schema for Bridge2AI Standards Use Cases."
+description = "Data schemas for Bridge2AI Standards."
 authors = ["J. Harry Caufield <jhc@lbl.gov>"]
 license = "MIT"
 readme = "README.md"

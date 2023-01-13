@@ -1,19 +1,19 @@
-# standards-usecase-schema
+# standards-schemas
 
-Data schema for Bridge2AI Standards Use Cases.
+Data schema for Bridge2AI Standards Schemas.
 
 ## Website
 
-* [https://bridge2ai.github.io/standards-usecase-schema](https://bridge2ai.github.io/standards-usecase-schema)
+* [https://bridge2ai.github.io/standards-schemas](https://bridge2ai.github.io/standards-usecase-schema)
 
 ## Repository Structure
 
 * [examples/](examples/) - example data
 * [project/](project/) - project files (do not edit these)
 * [src/](src/) - source files (edit these)
-    * [standards_usecase_schema](src/standards_usecase_schema)
-        * [schema](src/standards_usecase_schema/schema) -- LinkML schema (edit this)
-* [datamodel](src/standards_usecase_schema/datamodel) -- Generated python datamodel
+  * [standards-schemas](src/standards-schemas)
+    * [schema](src/standards-schemas/schema) -- LinkML schemas
+* [datamodel](src/standards_usecase_schema/datamodel) -- Generated python datamodels
 * [tests](tests/) - python tests
 
 ## Developer Documentation
@@ -21,8 +21,8 @@ Data schema for Bridge2AI Standards Use Cases.
 <details>
 Use the `make` command to generate project artefacts:
 
-- `make all`: make everything
-- `make deploy`: deploys site
+* `make all`: make everything
+* `make deploy`: deploys site
 
 </details>
 
