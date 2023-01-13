@@ -55,9 +55,9 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
 | [involved_in_metadata_management](involved_in_metadata_management.md) | 0..1 <br/> NONE |  | direct |
 | [involved_in_quality_control](involved_in_quality_control.md) | 0..1 <br/> NONE |  | direct |
 | [xrefs](xrefs.md) | 0..1 <br/> NONE |  | direct |
-| [name](name.md) | 0..1 <br/> NONE | A human-readable name for a thing | [NamedThing](NamedThing.md) |
 | [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [description](description.md) | 0..1 <br/> NONE | A human-readable description for a thing | [NamedThing](NamedThing.md) |
+| [name](name.md) | 0..1 <br/> NONE | A human-readable name for a thing | [NamedThing](NamedThing.md) |
 
 
 

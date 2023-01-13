@@ -1,5 +1,5 @@
 # Auto generated from standards_usecase_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-01-13T11:57:29
+# Generation date: 2023-01-13T11:58:31
 # Schema: standards-usecase-schema
 #
 # id: https://w3id.org/bridge2ai/standards-usecase-schema

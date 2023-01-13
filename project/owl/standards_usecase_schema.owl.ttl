@@ -16,7 +16,7 @@
     dcterms:license "MIT" ;
     dcterms:title "standards-usecase-schema" ;
     rdfs:seeAlso "https://bridge2ai.github.io/standards-usecase-schema" ;
-    linkml:generation_date "2023-01-13T11:57:27" ;
+    linkml:generation_date "2023-01-13T11:58:29" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "standards_usecase_schema.yaml" ;
     linkml:source_file_date "2023-01-13T11:57:19" ;
@@ -168,35 +168,23 @@ STANDARDSUSECASE:UseCase a owl:Class,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
+            owl:onProperty STANDARDSUSECASE:enables ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
             owl:onProperty STANDARDSUSECASE:alternative_standards_and_tools ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty STANDARDSUSECASE:standards_and_tools_for_dgp_use ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty STANDARDSUSECASE:involved_in_metadata_management ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass STANDARDSUSECASE:UseCaseCategory ;
-            owl:onProperty STANDARDSUSECASE:use_case_category ],
+            owl:onProperty STANDARDSUSECASE:known_limitations ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty STANDARDSUSECASE:involved_in_quality_control ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty STANDARDSUSECASE:enables ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty STANDARDSUSECASE:data_substrates ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty STANDARDSUSECASE:xrefs ],
+            owl:onClass STANDARDSUSECASE:UseCaseCategory ;
+            owl:onProperty STANDARDSUSECASE:use_case_category ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass STANDARDSUSECASE:DataGeneratingProject ;
@@ -204,15 +192,27 @@ STANDARDSUSECASE:UseCase a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty STANDARDSUSECASE:data_types ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
             owl:onProperty STANDARDSUSECASE:involved_in_experimental_design ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty STANDARDSUSECASE:known_limitations ],
+            owl:onProperty STANDARDSUSECASE:data_types ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty STANDARDSUSECASE:data_substrates ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty STANDARDSUSECASE:involved_in_metadata_management ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty STANDARDSUSECASE:xrefs ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty STANDARDSUSECASE:standards_and_tools_for_dgp_use ],
         STANDARDSUSECASE:NamedThing ;
     skos:definition "Represents a use case for Bridge2AI standards." .
 
