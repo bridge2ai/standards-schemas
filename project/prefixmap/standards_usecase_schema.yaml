@@ -1,10 +1,9 @@
 {
    "PATO": "http://purl.obolibrary.org/obo/PATO_",
+   "STANDARDSUSECASE": "https://w3id.org/bridge2ai/standards-usecase-schema/",
    "biolink": "https://w3id.org/biolink/",
-   "example": "https://example.org/",
    "linkml": "https://w3id.org/linkml/",
    "schema": "http://schema.org/",
-   "standards_usecase_schema": "https://w3id.org/bridge2ai/standards-usecase-schema/",
    "NamedThing": {
       "@id": "schema:Thing"
    }

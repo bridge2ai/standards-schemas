@@ -4,7 +4,7 @@
 
 A unique identifier for a thing
 
-URI: [standards_usecase_schema:id](https://w3id.org/bridge2ai/standards-usecase-schema/id)
+URI: [STANDARDSUSECASE:id](https://w3id.org/bridge2ai/standards-usecase-schema/id)
 
 
 ## Domain and Range

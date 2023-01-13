@@ -8,7 +8,7 @@ see_also:
   - https://bridge2ai.github.io/standards-usecase-schema
 
 prefixes:
-  standards_usecase_schema: https://w3id.org/bridge2ai/standards-usecase-schema/
+  STANDARDSUSECASE: https://w3id.org/bridge2ai/standards-usecase-schema/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/
@@ -120,24 +120,25 @@ enums:
   DataGeneratingProject:
     permissible_values:
       AI-READI:
-        description: AI-READI
-        meaning: >-
-          "Uncovering the details of how human health is restored
-          after disease, using type 2 diabetes as a model"
+        description: >-
+          AI-READI: Uncovering the details of how human health is restored
+          after disease, using type 2 diabetes as a model.
+        meaning: 
       CHoRUS:
-        description: "CHoRUS: Collaborative Hospital Repository Uniting Standards"
-        meaning: >-
-          "Using imaging, clinical, and other data collected in
-          an ICU setting for diagnosis and risk prediction"
+        description: >-
+          CHoRUS: Collaborative Hospital Repository Uniting Standards.
+          Using imaging, clinical, and other data collected in
+          an ICU setting for diagnosis and risk prediction.
+        meaning:
       CM4AI:
-        description: "CM4AI: Cell Maps for AI"
-        meaning: >-
-          "Mapping spatiotemporal architecture of human cells to
-          interpret cell structure/function in health and disease"
+        description: >-
+          CM4AI: Cell Maps for AI. Mapping spatiotemporal architecture
+          of human cells to interpret cell structure/function in health
+          and disease.
+        meaning:
       Voice:
-        description: Voice
-        meaning: >-
-          "Voice as a Biomarker of Health: Building an ethically
+        description: >-
+          Voice as a Biomarker of Health: Building an ethically
           sourced, bioaccoustic database to understand disease
-          like never before"
-
+          like never before.
+        meaning:

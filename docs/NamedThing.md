@@ -65,7 +65,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | schema:Thing |
-| native | standards_usecase_schema:NamedThing |
+| native | STANDARDSUSECASE:NamedThing |
 
 
 ## LinkML Source

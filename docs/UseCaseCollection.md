@@ -4,7 +4,7 @@ _A holder for UseCase objects_
 
 
 
-URI: [standards_usecase_schema:UseCaseCollection](https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCollection)
+URI: [STANDARDSUSECASE:UseCaseCollection](https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCollection)
 
 
 ```mermaid
@@ -54,8 +54,8 @@ URI: [standards_usecase_schema:UseCaseCollection](https://w3id.org/bridge2ai/sta
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | standards_usecase_schema:UseCaseCollection |
-| native | standards_usecase_schema:UseCaseCollection |
+| self | STANDARDSUSECASE:UseCaseCollection |
+| native | STANDARDSUSECASE:UseCaseCollection |
 
 
 ## LinkML Source

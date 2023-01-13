@@ -4,14 +4,14 @@
 
 A generic grouping for any identifiable entity
 
-URI: [standards_usecase_schema:NamedThing](https://w3id.org/bridge2ai/standards-usecase-schema/NamedThing)
+URI: [STANDARDSUSECASE:NamedThing](https://w3id.org/bridge2ai/standards-usecase-schema/NamedThing)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F]^-[UseCase])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F]^-[UseCase])
 
 ## Children
 
- * [UseCase](UseCase.md) - Represents a UseCase
+ * [UseCase](UseCase.md) - Represents a use case for Bridge2AI standards.
 
 ## Referenced by Class
 

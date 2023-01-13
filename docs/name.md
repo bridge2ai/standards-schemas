@@ -16,7 +16,7 @@ URI: [schema:name](http://schema.org/name)
 | Name | Description |
 | --- | --- |
 [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity
-[UseCase](UseCase.md) | Represents a UseCase
+[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
 
 
 

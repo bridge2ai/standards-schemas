@@ -1,5 +1,16 @@
 {
     "$defs": {
+        "DataGeneratingProject": {
+            "description": "",
+            "enum": [
+                "AI-READI",
+                "CHoRUS",
+                "CM4AI",
+                "Voice"
+            ],
+            "title": "DataGeneratingProject",
+            "type": "string"
+        },
         "NamedThing": {
             "additionalProperties": false,
             "description": "A generic grouping for any identifiable entity",
@@ -23,49 +34,60 @@
             "title": "NamedThing",
             "type": "object"
         },
-        "PersonStatus": {
-            "description": "",
-            "enum": [
-                "ALIVE",
-                "DEAD",
-                "UNKNOWN"
-            ],
-            "title": "PersonStatus",
-            "type": "string"
-        },
         "UseCase": {
             "additionalProperties": false,
-            "description": "Represents a UseCase",
+            "description": "Represents a use case for Bridge2AI standards.",
             "properties": {
-                "age_in_years": {
-                    "description": "Number of years since birth",
-                    "type": "integer"
+                "alternative_standards_and_tools": {
+                    "type": "string"
                 },
-                "birth_date": {
-                    "description": "Date on which a person is born",
-                    "format": "date",
+                "data_substrates": {
+                    "type": "string"
+                },
+                "data_types": {
                     "type": "string"
                 },
                 "description": {
                     "description": "A human-readable description for a thing",
                     "type": "string"
                 },
+                "enables": {
+                    "type": "string"
+                },
                 "id": {
                     "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "involved_in_experimental_design": {
+                    "type": "string"
+                },
+                "involved_in_metadata_management": {
+                    "type": "string"
+                },
+                "involved_in_quality_control": {
+                    "type": "string"
+                },
+                "known_limitations": {
+                    "description": "Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.",
                     "type": "string"
                 },
                 "name": {
                     "description": "A human-readable name for a thing",
                     "type": "string"
                 },
-                "primary_email": {
-                    "description": "The main email address of a person",
-                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
+                "relevance_to_dgps": {
+                    "$ref": "#/$defs/DataGeneratingProject",
+                    "description": "Relevance of the use case to one or more DGPs."
+                },
+                "standards_and_tools_for_dgp_use": {
                     "type": "string"
                 },
-                "vital_status": {
-                    "$ref": "#/$defs/PersonStatus",
-                    "description": "living or dead status"
+                "use_case_category": {
+                    "$ref": "#/$defs/UseCaseCategory",
+                    "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories."
+                },
+                "xrefs": {
+                    "type": "string"
                 }
             },
             "required": [
@@ -73,6 +95,19 @@
             ],
             "title": "UseCase",
             "type": "object"
+        },
+        "UseCaseCategory": {
+            "description": "",
+            "enum": [
+                "Acquisition",
+                "Integration",
+                "Standardization",
+                "Modeling",
+                "Application",
+                "Assessment"
+            ],
+            "title": "UseCaseCategory",
+            "type": "string"
         },
         "UseCaseCollection": {
             "additionalProperties": false,
@@ -90,37 +125,58 @@
         },
         "UseCase__identifier_optional": {
             "additionalProperties": false,
-            "description": "Represents a UseCase",
+            "description": "Represents a use case for Bridge2AI standards.",
             "properties": {
-                "age_in_years": {
-                    "description": "Number of years since birth",
-                    "type": "integer"
+                "alternative_standards_and_tools": {
+                    "type": "string"
                 },
-                "birth_date": {
-                    "description": "Date on which a person is born",
-                    "format": "date",
+                "data_substrates": {
+                    "type": "string"
+                },
+                "data_types": {
                     "type": "string"
                 },
                 "description": {
                     "description": "A human-readable description for a thing",
                     "type": "string"
                 },
+                "enables": {
+                    "type": "string"
+                },
                 "id": {
                     "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "involved_in_experimental_design": {
+                    "type": "string"
+                },
+                "involved_in_metadata_management": {
+                    "type": "string"
+                },
+                "involved_in_quality_control": {
+                    "type": "string"
+                },
+                "known_limitations": {
+                    "description": "Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.",
                     "type": "string"
                 },
                 "name": {
                     "description": "A human-readable name for a thing",
                     "type": "string"
                 },
-                "primary_email": {
-                    "description": "The main email address of a person",
-                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
+                "relevance_to_dgps": {
+                    "$ref": "#/$defs/DataGeneratingProject",
+                    "description": "Relevance of the use case to one or more DGPs."
+                },
+                "standards_and_tools_for_dgp_use": {
                     "type": "string"
                 },
-                "vital_status": {
-                    "$ref": "#/$defs/PersonStatus",
-                    "description": "living or dead status"
+                "use_case_category": {
+                    "$ref": "#/$defs/UseCaseCategory",
+                    "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories."
+                },
+                "xrefs": {
+                    "type": "string"
                 }
             },
             "required": [],

@@ -4,7 +4,7 @@
 
 A human-readable description for a thing
 
-URI: [standards_usecase_schema:description](https://w3id.org/bridge2ai/standards-usecase-schema/description)
+URI: [STANDARDSUSECASE:description](https://w3id.org/bridge2ai/standards-usecase-schema/description)
 
 
 ## Domain and Range

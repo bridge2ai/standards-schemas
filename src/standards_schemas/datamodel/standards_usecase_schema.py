@@ -1,5 +1,5 @@
 # Auto generated from standards_usecase_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-01-12T17:20:21
+# Generation date: 2023-01-13T11:57:29
 # Schema: standards-usecase-schema
 #
 # id: https://w3id.org/bridge2ai/standards-usecase-schema
@@ -22,8 +22,8 @@ from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from rdflib import Namespace, URIRef
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.linkml_model.types import Date, Integer, String, Uriorcurie
-from linkml_runtime.utils.metamodelcore import URIorCURIE, XSDDate
+from linkml_runtime.linkml_model.types import String, Uriorcurie
+from linkml_runtime.utils.metamodelcore import URIorCURIE
 
 metamodel_version = "1.7.0"
 version = None
@@ -33,12 +33,11 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
 PATO = CurieNamespace('PATO', 'http://purl.obolibrary.org/obo/PATO_')
+STANDARDSUSECASE = CurieNamespace('STANDARDSUSECASE', 'https://w3id.org/bridge2ai/standards-usecase-schema/')
 BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
-EXAMPLE = CurieNamespace('example', 'https://example.org/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')
-STANDARDS_USECASE_SCHEMA = CurieNamespace('standards_usecase_schema', 'https://w3id.org/bridge2ai/standards-usecase-schema/')
-DEFAULT_ = STANDARDS_USECASE_SCHEMA
+DEFAULT_ = STANDARDSUSECASE
 
 
 # Types
@@ -62,7 +61,7 @@ class NamedThing(YAMLRoot):
     class_class_uri: ClassVar[URIRef] = SCHEMA.Thing
     class_class_curie: ClassVar[str] = "schema:Thing"
     class_name: ClassVar[str] = "NamedThing"
-    class_model_uri: ClassVar[URIRef] = STANDARDS_USECASE_SCHEMA.NamedThing
+    class_model_uri: ClassVar[URIRef] = STANDARDSUSECASE.NamedThing
 
     id: Union[str, NamedThingId] = None
     name: Optional[str] = None
@@ -86,20 +85,28 @@ class NamedThing(YAMLRoot):
 @dataclass
 class UseCase(NamedThing):
     """
-    Represents a UseCase
+    Represents a use case for Bridge2AI standards.
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = STANDARDS_USECASE_SCHEMA.UseCase
-    class_class_curie: ClassVar[str] = "standards_usecase_schema:UseCase"
+    class_class_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCase
+    class_class_curie: ClassVar[str] = "STANDARDSUSECASE:UseCase"
     class_name: ClassVar[str] = "UseCase"
-    class_model_uri: ClassVar[URIRef] = STANDARDS_USECASE_SCHEMA.UseCase
+    class_model_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCase
 
     id: Union[str, UseCaseId] = None
-    primary_email: Optional[str] = None
-    birth_date: Optional[Union[str, XSDDate]] = None
-    age_in_years: Optional[int] = None
-    vital_status: Optional[Union[str, "PersonStatus"]] = None
+    use_case_category: Optional[Union[str, "UseCaseCategory"]] = None
+    known_limitations: Optional[str] = None
+    relevance_to_dgps: Optional[Union[str, "DataGeneratingProject"]] = None
+    data_types: Optional[str] = None
+    data_substrates: Optional[str] = None
+    standards_and_tools_for_dgp_use: Optional[str] = None
+    alternative_standards_and_tools: Optional[str] = None
+    enables: Optional[str] = None
+    involved_in_experimental_design: Optional[str] = None
+    involved_in_metadata_management: Optional[str] = None
+    involved_in_quality_control: Optional[str] = None
+    xrefs: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -107,17 +114,41 @@ class UseCase(NamedThing):
         if not isinstance(self.id, UseCaseId):
             self.id = UseCaseId(self.id)
 
-        if self.primary_email is not None and not isinstance(self.primary_email, str):
-            self.primary_email = str(self.primary_email)
+        if self.use_case_category is not None and not isinstance(self.use_case_category, UseCaseCategory):
+            self.use_case_category = UseCaseCategory(self.use_case_category)
 
-        if self.birth_date is not None and not isinstance(self.birth_date, XSDDate):
-            self.birth_date = XSDDate(self.birth_date)
+        if self.known_limitations is not None and not isinstance(self.known_limitations, str):
+            self.known_limitations = str(self.known_limitations)
 
-        if self.age_in_years is not None and not isinstance(self.age_in_years, int):
-            self.age_in_years = int(self.age_in_years)
+        if self.relevance_to_dgps is not None and not isinstance(self.relevance_to_dgps, DataGeneratingProject):
+            self.relevance_to_dgps = DataGeneratingProject(self.relevance_to_dgps)
 
-        if self.vital_status is not None and not isinstance(self.vital_status, PersonStatus):
-            self.vital_status = PersonStatus(self.vital_status)
+        if self.data_types is not None and not isinstance(self.data_types, str):
+            self.data_types = str(self.data_types)
+
+        if self.data_substrates is not None and not isinstance(self.data_substrates, str):
+            self.data_substrates = str(self.data_substrates)
+
+        if self.standards_and_tools_for_dgp_use is not None and not isinstance(self.standards_and_tools_for_dgp_use, str):
+            self.standards_and_tools_for_dgp_use = str(self.standards_and_tools_for_dgp_use)
+
+        if self.alternative_standards_and_tools is not None and not isinstance(self.alternative_standards_and_tools, str):
+            self.alternative_standards_and_tools = str(self.alternative_standards_and_tools)
+
+        if self.enables is not None and not isinstance(self.enables, str):
+            self.enables = str(self.enables)
+
+        if self.involved_in_experimental_design is not None and not isinstance(self.involved_in_experimental_design, str):
+            self.involved_in_experimental_design = str(self.involved_in_experimental_design)
+
+        if self.involved_in_metadata_management is not None and not isinstance(self.involved_in_metadata_management, str):
+            self.involved_in_metadata_management = str(self.involved_in_metadata_management)
+
+        if self.involved_in_quality_control is not None and not isinstance(self.involved_in_quality_control, str):
+            self.involved_in_quality_control = str(self.involved_in_quality_control)
+
+        if self.xrefs is not None and not isinstance(self.xrefs, str):
+            self.xrefs = str(self.xrefs)
 
         super().__post_init__(**kwargs)
 
@@ -129,10 +160,10 @@ class UseCaseCollection(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = STANDARDS_USECASE_SCHEMA.UseCaseCollection
-    class_class_curie: ClassVar[str] = "standards_usecase_schema:UseCaseCollection"
+    class_class_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCaseCollection
+    class_class_curie: ClassVar[str] = "STANDARDSUSECASE:UseCaseCollection"
     class_name: ClassVar[str] = "UseCaseCollection"
-    class_model_uri: ClassVar[URIRef] = STANDARDS_USECASE_SCHEMA.UseCaseCollection
+    class_model_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCaseCollection
 
     entries: Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]] = empty_dict()
 
@@ -143,49 +174,92 @@ class UseCaseCollection(YAMLRoot):
 
 
 # Enumerations
-class PersonStatus(EnumDefinitionImpl):
+class UseCaseCategory(EnumDefinitionImpl):
 
-    ALIVE = PermissibleValue(text="ALIVE",
-                                 description="the person is living",
-                                 meaning=PATO["0001421"])
-    DEAD = PermissibleValue(text="DEAD",
-                               description="the person is deceased",
-                               meaning=PATO["0001422"])
-    UNKNOWN = PermissibleValue(text="UNKNOWN",
-                                     description="the vital status is not known")
+    Acquisition = PermissibleValue(text="Acquisition",
+                                             description="Acquisition")
+    Integration = PermissibleValue(text="Integration",
+                                             description="Integration")
+    Standardization = PermissibleValue(text="Standardization",
+                                                     description="Standardization")
+    Modeling = PermissibleValue(text="Modeling",
+                                       description="Modeling")
+    Application = PermissibleValue(text="Application",
+                                             description="Application")
+    Assessment = PermissibleValue(text="Assessment",
+                                           description="Assessment")
 
     _defn = EnumDefinition(
-        name="PersonStatus",
+        name="UseCaseCategory",
     )
+
+class DataGeneratingProject(EnumDefinitionImpl):
+
+    CHoRUS = PermissibleValue(text="CHoRUS",
+                                   description="CHoRUS: Collaborative Hospital Repository Uniting Standards. Using imaging, clinical, and other data collected in an ICU setting for diagnosis and risk prediction.")
+    CM4AI = PermissibleValue(text="CM4AI",
+                                 description="CM4AI: Cell Maps for AI. Mapping spatiotemporal architecture of human cells to interpret cell structure/function in health and disease.")
+    Voice = PermissibleValue(text="Voice",
+                                 description="Voice as a Biomarker of Health: Building an ethically sourced, bioaccoustic database to understand disease like never before.")
+
+    _defn = EnumDefinition(
+        name="DataGeneratingProject",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "AI-READI",
+                PermissibleValue(text="AI-READI",
+                                 description="AI-READI: Uncovering the details of how human health is restored after disease, using type 2 diabetes as a model.") )
 
 # Slots
 class slots:
     pass
 
 slots.id = Slot(uri=SCHEMA.identifier, name="id", curie=SCHEMA.curie('identifier'),
-                   model_uri=STANDARDS_USECASE_SCHEMA.id, domain=None, range=URIRef)
+                   model_uri=STANDARDSUSECASE.id, domain=None, range=URIRef)
 
 slots.name = Slot(uri=SCHEMA.name, name="name", curie=SCHEMA.curie('name'),
-                   model_uri=STANDARDS_USECASE_SCHEMA.name, domain=None, range=Optional[str])
+                   model_uri=STANDARDSUSECASE.name, domain=None, range=Optional[str])
 
 slots.description = Slot(uri=SCHEMA.description, name="description", curie=SCHEMA.curie('description'),
-                   model_uri=STANDARDS_USECASE_SCHEMA.description, domain=None, range=Optional[str])
+                   model_uri=STANDARDSUSECASE.description, domain=None, range=Optional[str])
 
-slots.primary_email = Slot(uri=SCHEMA.email, name="primary_email", curie=SCHEMA.curie('email'),
-                   model_uri=STANDARDS_USECASE_SCHEMA.primary_email, domain=None, range=Optional[str])
+slots.use_case_category = Slot(uri=STANDARDSUSECASE.use_case_category, name="use_case_category", curie=STANDARDSUSECASE.curie('use_case_category'),
+                   model_uri=STANDARDSUSECASE.use_case_category, domain=None, range=Optional[Union[str, "UseCaseCategory"]])
 
-slots.birth_date = Slot(uri=SCHEMA.birthDate, name="birth_date", curie=SCHEMA.curie('birthDate'),
-                   model_uri=STANDARDS_USECASE_SCHEMA.birth_date, domain=None, range=Optional[Union[str, XSDDate]])
+slots.known_limitations = Slot(uri=STANDARDSUSECASE.known_limitations, name="known_limitations", curie=STANDARDSUSECASE.curie('known_limitations'),
+                   model_uri=STANDARDSUSECASE.known_limitations, domain=None, range=Optional[str])
 
-slots.age_in_years = Slot(uri=STANDARDS_USECASE_SCHEMA.age_in_years, name="age_in_years", curie=STANDARDS_USECASE_SCHEMA.curie('age_in_years'),
-                   model_uri=STANDARDS_USECASE_SCHEMA.age_in_years, domain=None, range=Optional[int])
+slots.relevance_to_dgps = Slot(uri=STANDARDSUSECASE.relevance_to_dgps, name="relevance_to_dgps", curie=STANDARDSUSECASE.curie('relevance_to_dgps'),
+                   model_uri=STANDARDSUSECASE.relevance_to_dgps, domain=None, range=Optional[Union[str, "DataGeneratingProject"]])
 
-slots.vital_status = Slot(uri=STANDARDS_USECASE_SCHEMA.vital_status, name="vital_status", curie=STANDARDS_USECASE_SCHEMA.curie('vital_status'),
-                   model_uri=STANDARDS_USECASE_SCHEMA.vital_status, domain=None, range=Optional[Union[str, "PersonStatus"]])
+slots.data_types = Slot(uri=STANDARDSUSECASE.data_types, name="data_types", curie=STANDARDSUSECASE.curie('data_types'),
+                   model_uri=STANDARDSUSECASE.data_types, domain=None, range=Optional[str])
 
-slots.useCaseCollection__entries = Slot(uri=STANDARDS_USECASE_SCHEMA.entries, name="useCaseCollection__entries", curie=STANDARDS_USECASE_SCHEMA.curie('entries'),
-                   model_uri=STANDARDS_USECASE_SCHEMA.useCaseCollection__entries, domain=None, range=Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]])
+slots.data_substrates = Slot(uri=STANDARDSUSECASE.data_substrates, name="data_substrates", curie=STANDARDSUSECASE.curie('data_substrates'),
+                   model_uri=STANDARDSUSECASE.data_substrates, domain=None, range=Optional[str])
 
-slots.UseCase_primary_email = Slot(uri=SCHEMA.email, name="UseCase_primary_email", curie=SCHEMA.curie('email'),
-                   model_uri=STANDARDS_USECASE_SCHEMA.UseCase_primary_email, domain=UseCase, range=Optional[str],
-                   pattern=re.compile(r'^\S+@[\S+\.]+\S+'))
+slots.standards_and_tools_for_dgp_use = Slot(uri=STANDARDSUSECASE.standards_and_tools_for_dgp_use, name="standards_and_tools_for_dgp_use", curie=STANDARDSUSECASE.curie('standards_and_tools_for_dgp_use'),
+                   model_uri=STANDARDSUSECASE.standards_and_tools_for_dgp_use, domain=None, range=Optional[str])
+
+slots.alternative_standards_and_tools = Slot(uri=STANDARDSUSECASE.alternative_standards_and_tools, name="alternative_standards_and_tools", curie=STANDARDSUSECASE.curie('alternative_standards_and_tools'),
+                   model_uri=STANDARDSUSECASE.alternative_standards_and_tools, domain=None, range=Optional[str])
+
+slots.enables = Slot(uri=STANDARDSUSECASE.enables, name="enables", curie=STANDARDSUSECASE.curie('enables'),
+                   model_uri=STANDARDSUSECASE.enables, domain=None, range=Optional[str])
+
+slots.involved_in_experimental_design = Slot(uri=STANDARDSUSECASE.involved_in_experimental_design, name="involved_in_experimental_design", curie=STANDARDSUSECASE.curie('involved_in_experimental_design'),
+                   model_uri=STANDARDSUSECASE.involved_in_experimental_design, domain=None, range=Optional[str])
+
+slots.involved_in_metadata_management = Slot(uri=STANDARDSUSECASE.involved_in_metadata_management, name="involved_in_metadata_management", curie=STANDARDSUSECASE.curie('involved_in_metadata_management'),
+                   model_uri=STANDARDSUSECASE.involved_in_metadata_management, domain=None, range=Optional[str])
+
+slots.involved_in_quality_control = Slot(uri=STANDARDSUSECASE.involved_in_quality_control, name="involved_in_quality_control", curie=STANDARDSUSECASE.curie('involved_in_quality_control'),
+                   model_uri=STANDARDSUSECASE.involved_in_quality_control, domain=None, range=Optional[str])
+
+slots.xrefs = Slot(uri=STANDARDSUSECASE.xrefs, name="xrefs", curie=STANDARDSUSECASE.curie('xrefs'),
+                   model_uri=STANDARDSUSECASE.xrefs, domain=None, range=Optional[str])
+
+slots.useCaseCollection__entries = Slot(uri=STANDARDSUSECASE.entries, name="useCaseCollection__entries", curie=STANDARDSUSECASE.curie('entries'),
+                   model_uri=STANDARDSUSECASE.useCaseCollection__entries, domain=None, range=Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]])

@@ -1,6 +1,6 @@
 # Slot: entries
 
-URI: [standards_usecase_schema:entries](https://w3id.org/bridge2ai/standards-usecase-schema/entries)
+URI: [STANDARDSUSECASE:entries](https://w3id.org/bridge2ai/standards-usecase-schema/entries)
 
 
 

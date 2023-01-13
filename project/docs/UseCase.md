@@ -2,12 +2,12 @@
 # Class: UseCase
 
 
-Represents a UseCase
+Represents a use case for Bridge2AI standards.
 
-URI: [standards_usecase_schema:UseCase](https://w3id.org/bridge2ai/standards-usecase-schema/UseCase)
+URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-schema/UseCase)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCaseCollection]++-%20entries%200..*>[UseCase&#124;primary_email:string%20%3F;birth_date:date%20%3F;age_in_years:integer%20%3F;vital_status:PersonStatus%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[UseCase],[UseCaseCollection],[NamedThing])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCaseCollection]++-%20entries%200..*>[UseCase&#124;primary_email:string%20%3F;birth_date:date%20%3F;age_in_years:integer%20%3F;vital_status:PersonStatus%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[UseCase],[UseCaseCollection],[NamedThing])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCaseCollection]++-%20entries%200..*>[UseCase&#124;use_case_category:UseCaseCategory%20%3F;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20%3F;data_types:string%20%3F;data_substrates:string%20%3F;standards_and_tools_for_dgp_use:string%20%3F;alternative_standards_and_tools:string%20%3F;enables:string%20%3F;involved_in_experimental_design:string%20%3F;involved_in_metadata_management:string%20%3F;involved_in_quality_control:string%20%3F;xrefs:string%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[UseCase],[UseCaseCollection],[NamedThing])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCaseCollection]++-%20entries%200..*>[UseCase&#124;use_case_category:UseCaseCategory%20%3F;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20%3F;data_types:string%20%3F;data_substrates:string%20%3F;standards_and_tools_for_dgp_use:string%20%3F;alternative_standards_and_tools:string%20%3F;enables:string%20%3F;involved_in_experimental_design:string%20%3F;involved_in_metadata_management:string%20%3F;involved_in_quality_control:string%20%3F;xrefs:string%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[UseCase],[UseCaseCollection],[NamedThing])
 
 ## Parents
 
@@ -22,18 +22,33 @@ URI: [standards_usecase_schema:UseCase](https://w3id.org/bridge2ai/standards-use
 
 ### Own
 
- * [UseCase➞primary_email](UseCase_primary_email.md)  <sub>0..1</sub>
-     * Description: The main email address of a person
+ * [use_case_category](use_case_category.md)  <sub>0..1</sub>
+     * Description: Category of the UseCase. Not all projects will incorporate use cases in all categories.
+     * Range: [UseCaseCategory](UseCaseCategory.md)
+ * [known_limitations](known_limitations.md)  <sub>0..1</sub>
+     * Description: Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.
      * Range: [String](types/String.md)
- * [birth_date](birth_date.md)  <sub>0..1</sub>
-     * Description: Date on which a person is born
-     * Range: [Date](types/Date.md)
- * [age_in_years](age_in_years.md)  <sub>0..1</sub>
-     * Description: Number of years since birth
-     * Range: [Integer](types/Integer.md)
- * [vital_status](vital_status.md)  <sub>0..1</sub>
-     * Description: living or dead status
-     * Range: [PersonStatus](PersonStatus.md)
+ * [relevance_to_dgps](relevance_to_dgps.md)  <sub>0..1</sub>
+     * Description: Relevance of the use case to one or more DGPs.
+     * Range: [DataGeneratingProject](DataGeneratingProject.md)
+ * [data_types](data_types.md)  <sub>0..1</sub>
+     * Range: [String](types/String.md)
+ * [data_substrates](data_substrates.md)  <sub>0..1</sub>
+     * Range: [String](types/String.md)
+ * [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md)  <sub>0..1</sub>
+     * Range: [String](types/String.md)
+ * [alternative_standards_and_tools](alternative_standards_and_tools.md)  <sub>0..1</sub>
+     * Range: [String](types/String.md)
+ * [enables](enables.md)  <sub>0..1</sub>
+     * Range: [String](types/String.md)
+ * [involved_in_experimental_design](involved_in_experimental_design.md)  <sub>0..1</sub>
+     * Range: [String](types/String.md)
+ * [involved_in_metadata_management](involved_in_metadata_management.md)  <sub>0..1</sub>
+     * Range: [String](types/String.md)
+ * [involved_in_quality_control](involved_in_quality_control.md)  <sub>0..1</sub>
+     * Range: [String](types/String.md)
+ * [xrefs](xrefs.md)  <sub>0..1</sub>
+     * Range: [String](types/String.md)
 
 ### Inherited from NamedThing:
 

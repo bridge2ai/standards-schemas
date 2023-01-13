@@ -13,7 +13,7 @@ Data schema for Bridge2AI Standards Use Cases.
 ### Classes
 
  * [NamedThing](NamedThing.md) - A generic grouping for any identifiable entity
-     * [UseCase](UseCase.md) - Represents a UseCase
+     * [UseCase](UseCase.md) - Represents a use case for Bridge2AI standards.
  * [UseCaseCollection](UseCaseCollection.md) - A holder for UseCase objects
 
 ### Mixins
@@ -21,19 +21,27 @@ Data schema for Bridge2AI Standards Use Cases.
 
 ### Slots
 
- * [age_in_years](age_in_years.md) - Number of years since birth
- * [birth_date](birth_date.md) - Date on which a person is born
+ * [alternative_standards_and_tools](alternative_standards_and_tools.md)
+ * [data_substrates](data_substrates.md)
+ * [data_types](data_types.md)
  * [description](description.md) - A human-readable description for a thing
+ * [enables](enables.md)
  * [id](id.md) - A unique identifier for a thing
+ * [involved_in_experimental_design](involved_in_experimental_design.md)
+ * [involved_in_metadata_management](involved_in_metadata_management.md)
+ * [involved_in_quality_control](involved_in_quality_control.md)
+ * [known_limitations](known_limitations.md) - Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.
  * [name](name.md) - A human-readable name for a thing
- * [primary_email](primary_email.md) - The main email address of a person
-     * [UseCase➞primary_email](UseCase_primary_email.md)
+ * [relevance_to_dgps](relevance_to_dgps.md) - Relevance of the use case to one or more DGPs.
+ * [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md)
  * [➞entries](useCaseCollection__entries.md)
- * [vital_status](vital_status.md) - living or dead status
+ * [use_case_category](use_case_category.md) - Category of the UseCase. Not all projects will incorporate use cases in all categories.
+ * [xrefs](xrefs.md)
 
 ### Enums
 
- * [PersonStatus](PersonStatus.md)
+ * [DataGeneratingProject](DataGeneratingProject.md)
+ * [UseCaseCategory](UseCaseCategory.md)
 
 ### Subsets
 

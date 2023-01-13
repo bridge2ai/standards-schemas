@@ -12,7 +12,7 @@
   "license": "MIT",
   "prefixes": [
     {
-      "prefix_prefix": "standards_usecase_schema",
+      "prefix_prefix": "STANDARDSUSECASE",
       "prefix_reference": "https://w3id.org/bridge2ai/standards-usecase-schema/"
     },
     {
@@ -30,13 +30,9 @@
     {
       "prefix_prefix": "PATO",
       "prefix_reference": "http://purl.obolibrary.org/obo/PATO_"
-    },
-    {
-      "prefix_prefix": "example",
-      "prefix_reference": "https://example.org/"
     }
   ],
-  "default_prefix": "standards_usecase_schema",
+  "default_prefix": "STANDARDSUSECASE",
   "default_range": "string",
   "types": [
     {
@@ -211,26 +207,56 @@
   ],
   "enums": [
     {
-      "name": "PersonStatus",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/PersonStatus",
+      "name": "UseCaseCategory",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "permissible_values": [
         {
-          "text": "ALIVE",
-          "description": "the person is living",
-          "meaning": "PATO:0001421"
+          "text": "Acquisition",
+          "description": "Acquisition"
         },
         {
-          "text": "DEAD",
-          "description": "the person is deceased",
-          "meaning": "PATO:0001422"
+          "text": "Integration",
+          "description": "Integration"
         },
         {
-          "text": "UNKNOWN",
-          "description": "the vital status is not known",
-          "todos": [
-            "map this to an ontology"
-          ]
+          "text": "Standardization",
+          "description": "Standardization"
+        },
+        {
+          "text": "Modeling",
+          "description": "Modeling"
+        },
+        {
+          "text": "Application",
+          "description": "Application"
+        },
+        {
+          "text": "Assessment",
+          "description": "Assessment"
+        }
+      ]
+    },
+    {
+      "name": "DataGeneratingProject",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/DataGeneratingProject",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "permissible_values": [
+        {
+          "text": "AI-READI",
+          "description": "AI-READI: Uncovering the details of how human health is restored after disease, using type 2 diabetes as a model."
+        },
+        {
+          "text": "CHoRUS",
+          "description": "CHoRUS: Collaborative Hospital Repository Uniting Standards. Using imaging, clinical, and other data collected in an ICU setting for diagnosis and risk prediction."
+        },
+        {
+          "text": "CM4AI",
+          "description": "CM4AI: Cell Maps for AI. Mapping spatiotemporal architecture of human cells to interpret cell structure/function in health and disease."
+        },
+        {
+          "text": "Voice",
+          "description": "Voice as a Biomarker of Health: Building an ethically sourced, bioaccoustic database to understand disease like never before."
         }
       ]
     }
@@ -287,14 +313,24 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "primary_email",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/primary_email",
-      "description": "The main email address of a person",
+      "name": "use_case_category",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
+      "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
-      "mappings": [
-        "http://schema.org/email"
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
       ],
-      "slot_uri": "http://schema.org/email",
+      "range": "UseCaseCategory",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "known_limitations",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations",
+      "description": "Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations",
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
@@ -303,45 +339,124 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "birth_date",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/birth_date",
-      "description": "Date on which a person is born",
+      "name": "relevance_to_dgps",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps",
+      "description": "Relevance of the use case to one or more DGPs.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
-      "mappings": [
-        "http://schema.org/birthDate"
-      ],
-      "slot_uri": "http://schema.org/birthDate",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps",
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
-      "range": "date",
+      "range": "DataGeneratingProject",
       "@type": "SlotDefinition"
     },
     {
-      "name": "age_in_years",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/age_in_years",
-      "description": "Number of years since birth",
+      "name": "data_types",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_types",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/age_in_years",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_types",
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
-      "range": "integer",
+      "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "vital_status",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/vital_status",
-      "description": "living or dead status",
+      "name": "data_substrates",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/vital_status",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates",
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
-      "range": "PersonStatus",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "standards_and_tools_for_dgp_use",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "alternative_standards_and_tools",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "enables",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/enables",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/enables",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "involved_in_experimental_design",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "involved_in_metadata_management",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "involved_in_quality_control",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "xrefs",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/xrefs",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/xrefs",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "string",
       "@type": "SlotDefinition"
     },
     {
@@ -356,28 +471,6 @@
       ],
       "range": "UseCase",
       "inlined": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "UseCase_primary_email",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/primary_email",
-      "description": "The main email address of a person",
-      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
-      "mappings": [
-        "http://schema.org/email"
-      ],
-      "is_a": "primary_email",
-      "domain": "UseCase",
-      "slot_uri": "http://schema.org/email",
-      "alias": "primary_email",
-      "owner": "UseCase",
-      "domain_of": [
-        "UseCase"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "primary_email",
-      "range": "string",
-      "pattern": "^\\S+@[\\S+\\.]+\\S+",
       "@type": "SlotDefinition"
     }
   ],
@@ -402,17 +495,25 @@
     {
       "name": "UseCase",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCase",
-      "description": "Represents a UseCase",
+      "description": "Represents a use case for Bridge2AI standards.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "is_a": "NamedThing",
       "slots": [
         "id",
         "name",
         "description",
-        "UseCase_primary_email",
-        "birth_date",
-        "age_in_years",
-        "vital_status"
+        "use_case_category",
+        "known_limitations",
+        "relevance_to_dgps",
+        "data_types",
+        "data_substrates",
+        "standards_and_tools_for_dgp_use",
+        "alternative_standards_and_tools",
+        "enables",
+        "involved_in_experimental_design",
+        "involved_in_metadata_management",
+        "involved_in_quality_control",
+        "xrefs"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCase",
@@ -443,9 +544,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_usecase_schema.yaml",
-  "source_file_date": "2023-01-12T17:11:45",
-  "source_file_size": 2297,
-  "generation_date": "2023-01-12T17:20:16",
+  "source_file_date": "2023-01-13T11:57:19",
+  "source_file_size": 4017,
+  "generation_date": "2023-01-13T11:57:24",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_usecase_schema.context.jsonld",

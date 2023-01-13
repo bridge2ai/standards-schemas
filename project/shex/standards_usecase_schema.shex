@@ -48,10 +48,18 @@ linkml:Nodeidentifier NONLITERAL
 <UseCase> CLOSED {
     (  $<UseCase_tes> (  &<NamedThing_tes> ;
           rdf:type [ schema:Thing ] ? ;
-          schema:email @linkml:String ? ;
-          schema:birthDate @linkml:Date ? ;
-          <age_in_years> @linkml:Integer ? ;
-          <vital_status> @<PersonStatus> ?
+          <use_case_category> @<UseCaseCategory> ? ;
+          <known_limitations> @linkml:String ? ;
+          <relevance_to_dgps> @<DataGeneratingProject> ? ;
+          <data_types> @linkml:String ? ;
+          <data_substrates> @linkml:String ? ;
+          <standards_and_tools_for_dgp_use> @linkml:String ? ;
+          <alternative_standards_and_tools> @linkml:String ? ;
+          <enables> @linkml:String ? ;
+          <involved_in_experimental_design> @linkml:String ? ;
+          <involved_in_metadata_management> @linkml:String ? ;
+          <involved_in_quality_control> @linkml:String ? ;
+          <xrefs> @linkml:String ?
        ) ;
        rdf:type [ <UseCase> ]
     )

@@ -1,8 +1,6 @@
-# Slot: id
-_A unique identifier for a thing_
+# Slot: enables
 
-
-URI: [schema:identifier](http://schema.org/identifier)
+URI: [STANDARDSUSECASE:enables](https://w3id.org/bridge2ai/standards-usecase-schema/enables)
 
 
 
@@ -15,7 +13,6 @@ URI: [schema:identifier](http://schema.org/identifier)
 
 | Name | Description |
 | --- | --- |
-[NamedThing](NamedThing.md) | A generic grouping for any identifiable entity
 [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
 
 
@@ -25,7 +22,7 @@ URI: [schema:identifier](http://schema.org/identifier)
 
 ## Properties
 
-* Range: [xsd:anyURI](xsd:anyURI)
+* Range: [xsd:string](xsd:string)
 
 
 
@@ -53,16 +50,13 @@ URI: [schema:identifier](http://schema.org/identifier)
 
 <details>
 ```yaml
-name: id
-description: A unique identifier for a thing
+name: enables
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
-slot_uri: schema:identifier
-identifier: true
-alias: id
+alias: enables
 domain_of:
-- NamedThing
-range: uriorcurie
+- UseCase
+range: string
 
 ```
 </details>
