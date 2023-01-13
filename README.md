@@ -11,9 +11,9 @@ Data schema for Bridge2AI Standards Schemas.
 * [examples/](examples/) - example data
 * [project/](project/) - project files (do not edit these)
 * [src/](src/) - source files (edit these)
-  * [standards-schemas](src/standards-schemas)
-    * [schema](src/standards-schemas/schema) -- LinkML schemas
-* [datamodel](src/standards_usecase_schema/datamodel) -- Generated python datamodels
+  * [standards_schemas](src/standards_schemas)
+    * [schema](src/standards_schemas/schema) -- LinkML schemas
+* [datamodel](src/standards_schemas/datamodel) -- Generated python datamodels
 * [tests](tests/) - python tests
 
 ## Developer Documentation
