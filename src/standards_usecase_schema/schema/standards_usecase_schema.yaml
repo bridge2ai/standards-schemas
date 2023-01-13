@@ -85,7 +85,7 @@ slots:
   relevance_to_dgps:
     range: DataGeneratingProject
     description: Relevance of the use case to one or more DGPs.
-  data_types:
+  data_types: # TODO: link to data types schema
   data_substrates:
   standards_and_tools_for_dgp_use:
   alternative_standards_and_tools:
