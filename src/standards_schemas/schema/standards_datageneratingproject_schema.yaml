@@ -1,0 +1,20 @@
+id: https://w3id.org/bridge2ai/standards-datageneratingproject-schema
+name: standards-datageneratingproject-schema
+title: standards-datageneratingproject-schema
+description: |-
+  Data schema for Bridge2AI Data Generating Projects (DGPs) in the Standards context.
+license: MIT
+see_also:
+  - https://bridge2ai.github.io/standards-datageneratingproject-schema
+
+prefixes:
+  STANDARDSDATAGENERATINGPROJECT: https://w3id.org/bridge2ai/standards-datageneratingproject-schema/
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/
+  schema: http://schema.org/
+  PATO: http://purl.obolibrary.org/obo/PATO_
+default_prefix: STANDARDSDATAGENERATINGPROJECT
+default_range: string
+
+imports:
+  - linkml:types

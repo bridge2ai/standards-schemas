@@ -1,0 +1,20 @@
+id: https://w3id.org/bridge2ai/standards-datatopic-schema
+name: standards-datatopic-schema
+title: standards-datatopic-schema
+description: |-
+  Data schema for Bridge2AI data topic types.
+license: MIT
+see_also:
+  - https://bridge2ai.github.io/standards-datatopic-schema
+
+prefixes:
+  STANDARDSDATATOPIC: https://w3id.org/bridge2ai/standards-datatopic-schema/
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/
+  schema: http://schema.org/
+  PATO: http://purl.obolibrary.org/obo/PATO_
+default_prefix: STANDARDSDATATOPIC
+default_range: string
+
+imports:
+  - linkml:types

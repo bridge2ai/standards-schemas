@@ -1,0 +1,20 @@
+id: https://w3id.org/bridge2ai/standards-datasubstrate-schema
+name: standards-datasubstrate-schema
+title: standards-datasubstrate-schema
+description: |-
+  Data schema for Bridge2AI data substrate types.
+license: MIT
+see_also:
+  - https://bridge2ai.github.io/standards-datasubstrate-schema
+
+prefixes:
+  STANDARDSDATASUBSTRATE: https://w3id.org/bridge2ai/standards-datasubstrate-schema/
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/
+  schema: http://schema.org/
+  PATO: http://purl.obolibrary.org/obo/PATO_
+default_prefix: STANDARDSDATASUBSTRATE
+default_range: string
+
+imports:
+  - linkml:types
