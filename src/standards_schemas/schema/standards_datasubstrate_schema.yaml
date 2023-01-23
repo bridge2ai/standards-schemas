@@ -10,7 +10,7 @@ see_also:
 prefixes:
   STANDARDSDATASUBSTRATE: https://w3id.org/bridge2ai/standards-datasubstrate-schema/
   linkml: https://w3id.org/linkml/
-  biolink: https://w3id.org/biolink/
+  biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
 default_prefix: STANDARDSDATASUBSTRATE
