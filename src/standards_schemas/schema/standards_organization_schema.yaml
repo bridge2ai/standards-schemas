@@ -13,8 +13,24 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
+  ROR: https://ror.org/
+  WIKIDATA: http://identifiers.org/wikidata/
 default_prefix: STANDARDSORGANIZATION
 default_range: string
 
 imports:
   - linkml:types
+  - standards_schema
+
+classes:
+
+  # Restricted to ROR/Wikidata for now -
+  # but would like to handle any HTTPS URL too
+  Organization:
+    is_a: NamedThing
+    description: >-
+      Represents a group or organization related to or
+      responsible for one or more Bridge2AI standards.
+    id_prefixes:
+      - ROR
+      - WIKIDATA

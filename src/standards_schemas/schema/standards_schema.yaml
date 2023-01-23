@@ -8,7 +8,7 @@ see_also:
   - https://bridge2ai.github.io/standards-schema
 
 prefixes:
-  STANDARDSUSECASE: https://w3id.org/bridge2ai/standards-schema/
+  STANDARDS: https://w3id.org/bridge2ai/standards-schema/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
