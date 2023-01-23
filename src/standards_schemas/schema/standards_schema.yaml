@@ -49,6 +49,32 @@ slots:
     slot_uri: schema:description
     description: A human-readable description for a thing.
 
+  related to:
+    description: >-
+      A relationship that is asserted between two named things.
+    domain: NamedThing
+    range: NamedThing
+    multivalued: true
+    inherited: true
+    symmetric: true
+    exact_mappings:
+      - skos:relatedMatch
+
+  # TODO: Could be more specific with is_a relationships.
+  subclass of:
+    is_a: related to
+    description: >-
+      Holds between two classes where the domain class is
+      a specialization of the range class.
+    domain: NamedThing
+    range: NamedThing
+    multivalued: True
+    exact_mappings:
+      - rdfs:subClassOf
+      - MESH:isa
+    narrow_mappings:
+      - rdfs:subPropertyOf
+
 enums:
   DataGeneratingProject:
     description: One of the Bridge2AI Data Generating Projects.
