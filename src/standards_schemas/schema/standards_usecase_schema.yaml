@@ -19,6 +19,7 @@ default_range: string
 imports:
   - linkml:types
   - standards_schema
+  - standards_datatopic_schema
 
 classes:
 
