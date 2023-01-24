@@ -45,6 +45,8 @@ classes:
       - NCIT
     slots:
       - metadata_storage
+      - file_extensions
+      - known_limitations
 
 slots:
 
@@ -53,4 +55,14 @@ slots:
     is_a: node property
     range: DataSubstrate
     description: Data Substrate in which metadata is stored.
+    multivalued: true
+  file_extensions:
+    is_a: node property
+    description: Commonly used file extensions for this substrate.
+    multivalued: true
+  known_limitations:
+    is_a: node property
+    description: >-
+      Potential obstacles particular to this substrate
+      or implementation. 
     multivalued: true
