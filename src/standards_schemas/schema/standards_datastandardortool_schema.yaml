@@ -18,3 +18,167 @@ default_range: string
 
 imports:
   - linkml:types
+  - standards_schema
+  - standards_organization_schema
+  - standards_datatopic_schema
+
+
+classes:
+
+  DataStandardOrTool:
+    is_a: NamedThing
+    description: >-
+      Represents a standard or tool in the Bridge2AI
+      Standards Registry.
+    slots:
+      - collection
+      - concerns data topic
+      - has relevant organization
+      - purpose_detail
+      - is_open
+      - requires_registration
+      - url
+      - publication
+      - formal_specification
+
+slots:
+
+  collection:
+    is_a: node property
+    range: StandardsCollectionTag
+    description: >-
+      Tags for specific sets of standards.
+    multivalued: true
+  
+  purpose_detail:
+    is_a: node property
+    description: >-
+      Text description of the standard or tool.
+  
+  is_open:
+    is_a: node property
+    range: boolean
+    description: >-
+      Is the standard or tool FAIR and available
+      free of cost?
+  
+  requires_registration:
+    is_a: node property
+    range: boolean
+    description: >-
+      Does usage of the standard or tool
+      require registrion of a user or group
+      with some organization or managerial body?
+
+  concerns data topic:
+    is_a: related to
+    description: >-
+      Subject standard is generally applied
+      in the context of object data topic.
+    domain: DataStandardOrTool
+    range: DataTopic
+  
+  url:
+    is_a: node property
+    range: uriorcurie
+    description: >-
+      URL for basic documentation of the standard
+      or tool.
+
+  publication:
+    is_a: node property
+    range: uriorcurie
+    description: >-
+      Relevant publication for the standard
+      or tool. Prefer a DOI or PUBMED.
+
+  formal_specification:
+    is_a: node property
+    range: uriorcurie
+    description: >-
+      Relevant code repository or other location
+      for a formal specification of the standard
+      or tool. Often a URL, particularly to
+      a Git repository.
+
+  has relevant organization:
+    is_a: related to
+    description: >-
+      Subject standard is managed or otherwise guided
+      buy the object organization(s).
+    domain: DataStandardOrTool
+    range: Organization
+
+enums:
+  StandardsCollectionTag:
+    description: Tags for specific sets of standards.
+    permissible_values:
+      audiovisual:
+        description: Audiovisual Standard
+      deprecated:
+        description: Deprecated
+      fileformat:
+        description: File Format
+      toolkit:
+        description: Bioinformatics Toolkit
+      clinicaldata:
+        description: Clinical Data
+      multimodal:
+        description: Multimodal Data Integration
+      text:
+        description: Text Data
+      cloudplatform:
+        description: Cloud Research Platform
+      cloudservice:
+        description: Cloud Service
+      codesystem:
+        description: Code System
+      datamodel:
+        description: Data Model
+      dataregistry:
+        description: Data Registry
+      softwareregistry:
+        description: Software Registry
+      datavisualization:
+        description: Data Visualization
+      notebookplatform:
+        description: Notebook Platform
+      datasheets:
+        description: Datasheets
+      machinelearningframework:
+        description: Machine Learning Framework
+      workflowlanguage:
+        description: Workflow Language
+      diagnosticinstrument:
+        description: Diagnostic Instrument
+      drugdata:
+        description: Drug Data
+      eyedata:
+        description: Eye Data
+      markuplanguage:
+        description: Markup Language
+      graphdataplatform:
+        description: Graph Data Platform
+      guidelines:
+        description: Guidelines
+      minimuminformationschema:
+        description: Minimum Information Schema
+      modelcards:
+        description: Model Cards
+      obofoundry:
+        description: OBO Foundry
+      ontologyregistry:
+        description: Ontology Registry
+      policy:
+        description: Policy
+      proteindata:
+        description: Protein Data
+      referencegenome:
+        description: Reference Genome
+      scrnaseqanalysis:
+        description: scRNA-seq Analysis
+      speechdata:
+        description: Speech Data
+      standardsregistry:
+        description: Standards Registry
+      
