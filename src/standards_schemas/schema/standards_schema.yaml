@@ -48,6 +48,15 @@ slots:
   description:
     slot_uri: schema:description
     description: A human-readable description for a thing.
+  xref:
+    is_a: node property
+    aliases: [ 'dbxref', 'Dbxref', 'DbXref' ]
+    domain: named thing
+    range: uriorcurie
+    description: >-
+      URI of corresponding class in an ontology
+      of experimental procedures, in CURIE form.
+    multivalued: true
 
   related to:
     description: >-
