@@ -86,7 +86,7 @@ slots:
   xref:
     is_a: node property
     aliases: [ 'dbxref', 'Dbxref', 'DbXref' ]
-    domain: named thing
+    domain: NamedThing
     range: uriorcurie
     description: >-
       URI of corresponding class in an ontology
