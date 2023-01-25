@@ -256,6 +256,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    Inheritance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#applicable-classes" class="md-nav__link">
     Applicable Classes
   </a>
@@ -317,9 +324,15 @@
 
 
 <h1 id="slot-data_substrates">Slot: data_substrates</h1>
+<p><em>Relevance of the use case to one or more data substrates.</em></p>
 <p>URI: <a href="https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates">STANDARDSUSECASE:data_substrates</a></p>
-<!-- no inheritance hierarchy -->
-
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../node_property/">node_property</a><ul>
+<li><strong>data_substrates</strong></li>
+</ul>
+</li>
+</ul>
 <h2 id="applicable-classes">Applicable Classes</h2>
 <table>
 <thead>
@@ -337,7 +350,8 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="xsd:string">xsd:string</a></li>
+<li>Range: <a href="../DataSubstrate/">DataSubstrate</a></li>
+<li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -348,12 +362,16 @@
 <details>
 
 <pre><code class="language-yaml">name: data_substrates
+description: Relevance of the use case to one or more data substrates.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
+is_a: node property
+domain: NamedThing
+multivalued: true
 alias: data_substrates
 domain_of:
 - UseCase
-range: string
+range: DataSubstrate
 
 </code></pre>
 

@@ -256,6 +256,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    Inheritance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#applicable-classes" class="md-nav__link">
     Applicable Classes
   </a>
@@ -317,9 +324,15 @@
 
 
 <h1 id="slot-involved_in_quality_control">Slot: involved_in_quality_control</h1>
+<p><em>True is use case is likely to be implemented as part of data validation operations.</em></p>
 <p>URI: <a href="https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control">STANDARDSUSECASE:involved_in_quality_control</a></p>
-<!-- no inheritance hierarchy -->
-
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../node_property/">node_property</a><ul>
+<li><strong>involved_in_quality_control</strong></li>
+</ul>
+</li>
+</ul>
 <h2 id="applicable-classes">Applicable Classes</h2>
 <table>
 <thead>
@@ -337,7 +350,7 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="xsd:string">xsd:string</a></li>
+<li>Range: <a href="xsd:boolean">xsd:boolean</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -348,12 +361,16 @@
 <details>
 
 <pre><code class="language-yaml">name: involved_in_quality_control
+description: True is use case is likely to be implemented as part of data validation
+  operations.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
+is_a: node property
+domain: NamedThing
 alias: involved_in_quality_control
 domain_of:
 - UseCase
-range: string
+range: boolean
 
 </code></pre>
 

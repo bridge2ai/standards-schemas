@@ -256,6 +256,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    Inheritance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#applicable-classes" class="md-nav__link">
     Applicable Classes
   </a>
@@ -317,9 +324,15 @@
 
 
 <h1 id="slot-standards_and_tools_for_dgp_use">Slot: standards_and_tools_for_dgp_use</h1>
+<p><em>List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.</em></p>
 <p>URI: <a href="https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use">STANDARDSUSECASE:standards_and_tools_for_dgp_use</a></p>
-<!-- no inheritance hierarchy -->
-
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../node_property/">node_property</a><ul>
+<li><strong>standards_and_tools_for_dgp_use</strong></li>
+</ul>
+</li>
+</ul>
 <h2 id="applicable-classes">Applicable Classes</h2>
 <table>
 <thead>
@@ -337,7 +350,8 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="xsd:string">xsd:string</a></li>
+<li>Range: <a href="../DataStandardOrTool/">DataStandardOrTool</a></li>
+<li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -348,12 +362,19 @@
 <details>
 
 <pre><code class="language-yaml">name: standards_and_tools_for_dgp_use
+description: List of identifiers of standards and tools; those planned to be used,
+  or already in use, by one or more Bridge2AI DGPs in addressing this use case, from
+  those in the Standards Registry, or TBD if standards/tools not yet finalized for
+  this use case.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
+is_a: node property
+domain: NamedThing
+multivalued: true
 alias: standards_and_tools_for_dgp_use
 domain_of:
 - UseCase
-range: string
+range: DataStandardOrTool
 
 </code></pre>
 
