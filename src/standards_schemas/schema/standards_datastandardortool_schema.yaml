@@ -25,6 +25,7 @@ imports:
 
 classes:
 
+  # TODO: add subclasses for specific Types
   DataStandardOrTool:
     is_a: NamedThing
     description: >-

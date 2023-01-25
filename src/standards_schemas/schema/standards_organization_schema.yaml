@@ -22,15 +22,35 @@ imports:
   - linkml:types
   - standards_schema
 
+types:
+  ror identifier:
+    typeof: uriorcurie
+  wikidata identifier:
+    typeof: uriorcurie
+
 classes:
 
-  # Restricted to ROR/Wikidata for now -
-  # but would like to handle any HTTPS URL too
   Organization:
     is_a: NamedThing
     description: >-
       Represents a group or organization related to or
       responsible for one or more Bridge2AI standards.
-    id_prefixes:
-      - ROR
-      - WIKIDATA
+    slots:
+      - ROR_ID
+      - Wikidata_ID
+      - URL
+
+slots:
+
+  ROR_ID:
+    examples:
+    - value: ror:02mp31p96
+    range: ror identifier
+  Wikidata_ID:
+    examples:
+    - value: wikidata:Q282186
+    range: wikidata identifier
+  URL:
+    examples:
+    - value: https://www.zeiss.com/
+    range: identifier

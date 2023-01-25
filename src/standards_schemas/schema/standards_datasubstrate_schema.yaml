@@ -36,14 +36,10 @@ classes:
       Represents a data substrate for Bridge2AI data.
       This may be a high-level data structure
       or a specific implementation of that structure.
-    id_prefixes:
-      - edam.data
-      - edam.format
-      - edam.operation
-      - edam.topic
-      - MeSH
-      - NCIT
     slots:
+      - EDAM_ID
+      - MeSH_ID
+      - NCIT_ID
       - metadata_storage
       - file_extensions
       - known_limitations

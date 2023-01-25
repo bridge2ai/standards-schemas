@@ -19,6 +19,14 @@ default_range: string
 imports:
   - linkml:types
 
+types:
+  edam identifier:
+    typeof: uriorcurie
+  mesh identifier:
+    typeof: uriorcurie
+  ncit identifier:
+    typeof: uriorcurie
+
 classes:
 
   NamedThing:
@@ -48,6 +56,18 @@ slots:
   description:
     slot_uri: schema:description
     description: A human-readable description for a thing.
+  EDAM_ID:
+    examples:
+    - value: edam.data:0006
+    range: edam identifier
+  MeSH_ID:
+    examples:
+    - value: mesh:D014831
+    range: mesh identifier
+  NCIT_ID:
+    examples:
+    - value: ncit:C92692
+    range: ncit identifier
   xref:
     is_a: node property
     aliases: [ 'dbxref', 'Dbxref', 'DbXref' ]

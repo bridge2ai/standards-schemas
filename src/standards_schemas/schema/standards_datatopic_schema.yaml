@@ -28,17 +28,12 @@ imports:
 
 classes:
 
-  # TODO: some data topics may not have the specified
-  # identifier types
   DataTopic:
     is_a: NamedThing
     description: >-
       Represents a general data topic for Bridge2AI
       data or the tools/standards applied to the data.
-    id_prefixes:
-      - edam.data
-      - edam.format
-      - edam.operation
-      - edam.topic
-      - MeSH
-      - NCIT
+    slots:
+      - EDAM_ID
+      - MeSH_ID
+      - NCIT_ID
