@@ -1,6 +1,8 @@
 # Enum: UseCaseCategory
 
 
+_Category of use case._
+
 
 URI: [UseCaseCategory](UseCaseCategory)
 
@@ -8,12 +10,12 @@ URI: [UseCaseCategory](UseCaseCategory)
 
 | Value | Meaning | Description |
 | --- | --- | --- |
-| Acquisition | None | Acquisition |
-| Integration | None | Integration |
-| Standardization | None | Standardization |
-| Modeling | None | Modeling |
-| Application | None | Application |
-| Assessment | None | Assessment |
+| acquisition | None | Acquisition |
+| integration | None | Integration |
+| standardization | None | Standardization |
+| modeling | None | Modeling |
+| application | None | Application |
+| assessment | None | Assessment |
 
 
 
@@ -50,26 +52,27 @@ URI: [UseCaseCategory](UseCaseCategory)
 <details>
 ```yaml
 name: UseCaseCategory
+description: Category of use case.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
 permissible_values:
-  Acquisition:
-    text: Acquisition
+  acquisition:
+    text: acquisition
     description: Acquisition
-  Integration:
-    text: Integration
+  integration:
+    text: integration
     description: Integration
-  Standardization:
-    text: Standardization
+  standardization:
+    text: standardization
     description: Standardization
-  Modeling:
-    text: Modeling
+  modeling:
+    text: modeling
     description: Modeling
-  Application:
-    text: Application
+  application:
+    text: application
     description: Application
-  Assessment:
-    text: Assessment
+  assessment:
+    text: assessment
     description: Assessment
 
 ```

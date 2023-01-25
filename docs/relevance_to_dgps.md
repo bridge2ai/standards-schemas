@@ -6,7 +6,12 @@ URI: [STANDARDSUSECASE:relevance_to_dgps](https://w3id.org/bridge2ai/standards-u
 
 
 
-<!-- no inheritance hierarchy -->
+
+## Inheritance
+
+* [node_property](node_property.md)
+    * **relevance_to_dgps**
+
 
 
 
@@ -56,6 +61,8 @@ name: relevance_to_dgps
 description: Relevance of the use case to one or more DGPs.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
+is_a: node property
+domain: NamedThing
 alias: relevance_to_dgps
 domain_of:
 - UseCase

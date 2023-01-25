@@ -1,10 +1,17 @@
 # Slot: involved_in_metadata_management
+_True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data._
+
 
 URI: [STANDARDSUSECASE:involved_in_metadata_management](https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management)
 
 
 
-<!-- no inheritance hierarchy -->
+
+## Inheritance
+
+* [node_property](node_property.md)
+    * **involved_in_metadata_management**
+
 
 
 
@@ -22,7 +29,7 @@ URI: [STANDARDSUSECASE:involved_in_metadata_management](https://w3id.org/bridge2
 
 ## Properties
 
-* Range: [xsd:string](xsd:string)
+* Range: [xsd:boolean](xsd:boolean)
 
 
 
@@ -51,12 +58,17 @@ URI: [STANDARDSUSECASE:involved_in_metadata_management](https://w3id.org/bridge2
 <details>
 ```yaml
 name: involved_in_metadata_management
+description: True if use case is likely to be implemented as part of metadata indexing,
+  sample tracking, or any other storage of high-level data properties. Includes use
+  cases in which metadata will be collected along with data.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
+is_a: node property
+domain: NamedThing
 alias: involved_in_metadata_management
 domain_of:
 - UseCase
-range: string
+range: boolean
 
 ```
 </details>

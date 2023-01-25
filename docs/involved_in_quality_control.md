@@ -1,10 +1,17 @@
 # Slot: involved_in_quality_control
+_True is use case is likely to be implemented as part of data validation operations._
+
 
 URI: [STANDARDSUSECASE:involved_in_quality_control](https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control)
 
 
 
-<!-- no inheritance hierarchy -->
+
+## Inheritance
+
+* [node_property](node_property.md)
+    * **involved_in_quality_control**
+
 
 
 
@@ -22,7 +29,7 @@ URI: [STANDARDSUSECASE:involved_in_quality_control](https://w3id.org/bridge2ai/s
 
 ## Properties
 
-* Range: [xsd:string](xsd:string)
+* Range: [xsd:boolean](xsd:boolean)
 
 
 
@@ -51,12 +58,16 @@ URI: [STANDARDSUSECASE:involved_in_quality_control](https://w3id.org/bridge2ai/s
 <details>
 ```yaml
 name: involved_in_quality_control
+description: True is use case is likely to be implemented as part of data validation
+  operations.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
+is_a: node property
+domain: NamedThing
 alias: involved_in_quality_control
 domain_of:
 - UseCase
-range: string
+range: boolean
 
 ```
 </details>

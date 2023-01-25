@@ -1,8 +1,8 @@
-# Slot: data_substrates
-_Relevance of the use case to one or more data substrates._
+# Slot: data_topics
+_Relevance of the use case to one or more data topics._
 
 
-URI: [STANDARDSUSECASE:data_substrates](https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates)
+URI: [STANDARDSUSECASE:data_topics](https://w3id.org/bridge2ai/standards-usecase-schema/data_topics)
 
 
 
@@ -10,7 +10,7 @@ URI: [STANDARDSUSECASE:data_substrates](https://w3id.org/bridge2ai/standards-use
 ## Inheritance
 
 * [node_property](node_property.md)
-    * **data_substrates**
+    * **data_topics**
 
 
 
@@ -29,7 +29,7 @@ URI: [STANDARDSUSECASE:data_substrates](https://w3id.org/bridge2ai/standards-use
 
 ## Properties
 
-* Range: [DataSubstrate](DataSubstrate.md)
+* Range: [DataTopic](DataTopic.md)
 * Multivalued: True
 
 
@@ -59,17 +59,17 @@ URI: [STANDARDSUSECASE:data_substrates](https://w3id.org/bridge2ai/standards-use
 
 <details>
 ```yaml
-name: data_substrates
-description: Relevance of the use case to one or more data substrates.
+name: data_topics
+description: Relevance of the use case to one or more data topics.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
 is_a: node property
 domain: NamedThing
 multivalued: true
-alias: data_substrates
+alias: data_topics
 domain_of:
 - UseCase
-range: DataSubstrate
+range: DataTopic
 
 ```
 </details>

@@ -6,7 +6,12 @@ URI: [STANDARDSUSECASE:known_limitations](https://w3id.org/bridge2ai/standards-u
 
 
 
-<!-- no inheritance hierarchy -->
+
+## Inheritance
+
+* [node_property](node_property.md)
+    * **known_limitations**
+
 
 
 
@@ -58,6 +63,8 @@ description: Any current obstacles to implementing this use case. This could be 
   of relevant patient cohort, lack of funding, etc.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
+is_a: node property
+domain: NamedThing
 alias: known_limitations
 domain_of:
 - UseCase

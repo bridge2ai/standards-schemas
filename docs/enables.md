@@ -1,10 +1,17 @@
 # Slot: enables
+_Other use case(s) this use case supports or makes possible._
+
 
 URI: [STANDARDSUSECASE:enables](https://w3id.org/bridge2ai/standards-usecase-schema/enables)
 
 
 
-<!-- no inheritance hierarchy -->
+
+## Inheritance
+
+* [node_property](node_property.md)
+    * **enables**
+
 
 
 
@@ -22,7 +29,9 @@ URI: [STANDARDSUSECASE:enables](https://w3id.org/bridge2ai/standards-usecase-sch
 
 ## Properties
 
-* Range: [xsd:string](xsd:string)
+* Range: [UseCase](UseCase.md)
+* Multivalued: True
+
 
 
 
@@ -51,12 +60,16 @@ URI: [STANDARDSUSECASE:enables](https://w3id.org/bridge2ai/standards-usecase-sch
 <details>
 ```yaml
 name: enables
+description: Other use case(s) this use case supports or makes possible.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
+is_a: node property
+domain: NamedThing
+multivalued: true
 alias: enables
 domain_of:
 - UseCase
-range: string
+range: UseCase
 
 ```
 </details>

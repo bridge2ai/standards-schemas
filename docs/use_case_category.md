@@ -6,7 +6,12 @@ URI: [STANDARDSUSECASE:use_case_category](https://w3id.org/bridge2ai/standards-u
 
 
 
-<!-- no inheritance hierarchy -->
+
+## Inheritance
+
+* [node_property](node_property.md)
+    * **use_case_category**
+
 
 
 
@@ -57,6 +62,8 @@ description: Category of the UseCase. Not all projects will incorporate use case
   in all categories.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
+is_a: node property
+domain: NamedThing
 alias: use_case_category
 domain_of:
 - UseCase
