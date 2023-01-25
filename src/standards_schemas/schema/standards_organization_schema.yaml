@@ -44,13 +44,17 @@ slots:
 
   ROR_ID:
     examples:
-    - value: ror:02mp31p96
+      - value: ROR:02mp31p96
     range: ror identifier
+    values_from:
+      - ROR
   Wikidata_ID:
     examples:
-    - value: wikidata:Q282186
+      - value: WIKIDATA:Q282186
     range: wikidata identifier
+    values_from:
+      - WIKIDATA
   URL:
     examples:
-    - value: https://www.zeiss.com/
+      - value: https://www.zeiss.com/
     range: identifier

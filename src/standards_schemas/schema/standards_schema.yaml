@@ -13,6 +13,12 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  MeSH: http://id.nlm.nih.gov/mesh/
+  edam.data: http://edamontology.org/data_
+  edam.format: http://edamontology.org/format_
+  edam.operation: http://edamontology.org/operation_
+  edam.topic: http://edamontology.org/topic_
 default_prefix: STANDARDS
 default_range: string
 
@@ -58,16 +64,25 @@ slots:
     description: A human-readable description for a thing.
   EDAM_ID:
     examples:
-    - value: edam.data:0006
+      - value: edam.data:0006
     range: edam identifier
+    values_from:
+      - edam.data
+      - edam.format
+      - edam.operation
+      - edam.topic
   MeSH_ID:
     examples:
-    - value: mesh:D014831
+      - value: MeSH:D014831
     range: mesh identifier
+    values_from:
+      - MeSH
   NCIT_ID:
     examples:
-    - value: ncit:C92692
+      - value: NCIT:C92692
     range: ncit identifier
+    values_from:
+      - NCIT
   xref:
     is_a: node property
     aliases: [ 'dbxref', 'Dbxref', 'DbXref' ]
