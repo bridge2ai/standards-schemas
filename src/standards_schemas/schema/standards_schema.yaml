@@ -22,6 +22,10 @@ prefixes:
 default_prefix: STANDARDS
 default_range: string
 
+emit_prefixes:
+  - rdfs
+  - skos
+
 imports:
   - linkml:types
 
@@ -49,7 +53,7 @@ slots:
     description: >-
       A grouping for any property that holds
       between a node and a value.
-    domain: named thing
+    domain: NamedThing
   id:
     identifier: true
     slot_uri: schema:identifier
@@ -86,7 +90,7 @@ slots:
   xref:
     is_a: node property
     aliases: [ 'dbxref', 'Dbxref', 'DbXref' ]
-    domain: named thing
+    domain: NamedThing
     range: uriorcurie
     description: >-
       URI of corresponding class in an ontology

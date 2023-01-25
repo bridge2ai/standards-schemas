@@ -1,4 +1,4 @@
 name: standards_schemas
 author: J. Harry Caufield <jhc@lbl.gov>
 description: Data schemas for Bridge2AI Standards.
-source_schema_path: src/standards_schemas/schema/
+source_schema_path: src/standards_schemas/schema/standards_schema_all.yaml

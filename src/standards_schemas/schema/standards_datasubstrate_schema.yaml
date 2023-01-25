@@ -42,7 +42,7 @@ classes:
       - NCIT_ID
       - metadata_storage
       - file_extensions
-      - known_limitations
+      - limitations
 
 slots:
 
@@ -56,7 +56,7 @@ slots:
     is_a: node property
     description: Commonly used file extensions for this substrate.
     multivalued: true
-  known_limitations:
+  limitations:
     is_a: node property
     description: >-
       Potential obstacles particular to this substrate

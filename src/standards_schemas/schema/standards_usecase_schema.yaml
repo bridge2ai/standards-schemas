@@ -33,7 +33,7 @@ classes:
       - use_case_category
       - known_limitations
       - relevance_to_dgps
-      - data_types
+      - data_topics
       - data_substrates
       - standards_and_tools_for_dgp_use
       - alternative_standards_and_tools
@@ -77,17 +77,17 @@ slots:
     is_a: node property
     range: DataGeneratingProject
     description: Relevance of the use case to one or more DGPs.
-  data_topics: # TODO: link to data topics schema
+  data_topics:
     is_a: node property
     range: DataTopic
     description: Relevance of the use case to one or more data topics.
     multivalued: true
-  data_substrates: # TODO: link to data substrates schema
+  data_substrates:
     is_a: node property
     range: DataSubstrate
     description: Relevance of the use case to one or more data substrates. 
     multivalued: true
-  standards_and_tools_for_dgp_use: # TODO: link to DataStandardOrTool schema
+  standards_and_tools_for_dgp_use:
     # TODO: add option for this to be TBD
     is_a: node property
     range: DataStandardOrTool
@@ -98,7 +98,7 @@ slots:
       from those in the Standards Registry,
       or TBD if standards/tools not yet finalized for this use case.
     multivalued: true
-  alternative_standards_and_tools: # TODO: link to DataStandardOrTool schema
+  alternative_standards_and_tools:
     is_a: node property
     range: DataStandardOrTool
     description: >-

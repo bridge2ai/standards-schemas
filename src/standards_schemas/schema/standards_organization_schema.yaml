@@ -57,4 +57,3 @@ slots:
   URL:
     examples:
       - value: https://www.zeiss.com/
-    range: identifier
