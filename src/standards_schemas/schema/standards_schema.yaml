@@ -49,7 +49,7 @@ slots:
     description: >-
       A grouping for any property that holds
       between a node and a value.
-    domain: named thing
+    domain: NamedThing
   id:
     identifier: true
     slot_uri: schema:identifier
