@@ -22,6 +22,9 @@ prefixes:
 default_prefix: STANDARDS
 default_range: string
 
+emit_prefixes:
+  - skos
+
 imports:
   - linkml:types
 
