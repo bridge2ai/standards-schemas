@@ -25,7 +25,6 @@ imports:
 
 classes:
 
-  # TODO: add subclasses for specific Types
   DataStandardOrTool:
     is_a: NamedThing
     description: >-
@@ -41,6 +40,70 @@ classes:
       - url
       - publication
       - formal_specification
+
+  DataStandard:
+    is_a: DataStandardOrTool
+    description: >-
+      Represents a general purpose standard in the
+      Bridge2AI Standards Registry.
+
+  BiomedicalStandard:
+    is_a: DataStandard
+    description: >-
+      Represents a standard in the Bridge2AI
+      Standards Registry with particular applications
+      or relevance to clinical or biomedical research
+      purposes.
+
+  Registry:
+    is_a: DataStandardOrTool
+    description: >-
+      Represents a resource in the Bridge2AI
+      Standards Registry serving to curate and/or
+      index other resources.
+
+  OntologyOrVocabulary:
+    is_a: DataStandardOrTool
+    description: >-
+      A set of concepts and categories, potentially
+      defined or accompanied by their hierarchical
+      relationships.
+  
+  ModelRepository:
+    is_a: DataStandardOrTool
+    description: >-
+      Represents a resource in the Bridge2AI
+      Standards Registry serving to curate and
+      store computational models. To be a respository,
+      the resource must not index models alone.
+
+  ReferenceDataOrDataset:
+    is_a: DataStandardOrTool
+    description: >-
+      Represents a resource in the Bridge2AI
+      Standards Registry serving as a standardized,
+      reusable data source.
+  
+  SoftwareOrTool:
+    is_a: DataStandardOrTool
+    description: >-
+      Represents a piece of software or computational tool
+      in the Bridge2AI Standards Registry.
+
+  ReferenceImplementation:
+    is_a: DataStandardOrTool
+    description: >-
+      Represents an implementation of one or more standards
+      or tools in the Bridge2AI Standards Registry, whether
+      as a full specification in a particular language or
+      as an application to a specific use case.
+
+  TrainingProgram:
+    is_a: DataStandardOrTool
+    description: >-
+      Represents a training program for skills and experience
+      related to standards or tools in the Bridge2AI Standards
+      Registry.
 
 slots:
 
