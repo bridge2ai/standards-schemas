@@ -77,6 +77,7 @@ slots:
     is_a: node property
     range: DataGeneratingProject
     description: Relevance of the use case to one or more DGPs.
+    multivalued: true
   data_topics:
     is_a: node property
     range: DataTopic
