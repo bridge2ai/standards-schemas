@@ -15,7 +15,7 @@ class TestData(unittest.TestCase):
     """Test data and datamodel."""
 
     def test_data(self):
-        """Date test."""
+        """Data test."""
         for path in EXAMPLE_FILES:
             obj = yaml_loader.load(path, target_class=UseCase)
             assert obj
