@@ -108,7 +108,7 @@ slots:
       but serving as viable alternatives,
       from those in the Standards Registry.
     multivalued: true
-  enables:
+  enables:  # Should probably be an association type
     is_a: node property
     range: UseCase
     description: Other use case(s) this use case supports or makes possible.
