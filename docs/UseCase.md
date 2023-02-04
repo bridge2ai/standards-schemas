@@ -45,7 +45,7 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
 | ---  | --- | --- | --- |
 | [use_case_category](use_case_category.md) | 0..1 <br/> [UseCaseCategory](UseCaseCategory.md) | Category of the UseCase | direct |
 | [known_limitations](known_limitations.md) | 0..1 <br/> [xsd:string](xsd:string) | Any current obstacles to implementing this use case | direct |
-| [relevance_to_dgps](relevance_to_dgps.md) | 0..1 <br/> [DataGeneratingProject](DataGeneratingProject.md) | Relevance of the use case to one or more DGPs | direct |
+| [relevance_to_dgps](relevance_to_dgps.md) | 0..* <br/> [DataGeneratingProject](DataGeneratingProject.md) | Relevance of the use case to one or more DGPs | direct |
 | [data_topics](data_topics.md) | 0..* <br/> [DataTopic](DataTopic.md) | Relevance of the use case to one or more data topics | direct |
 | [data_substrates](data_substrates.md) | 0..* <br/> [DataSubstrate](DataSubstrate.md) | Relevance of the use case to one or more data substrates | direct |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | 0..* <br/> [DataStandardOrTool](DataStandardOrTool.md) | List of identifiers of standards and tools; those planned to be used, or alre... | direct |
@@ -55,9 +55,9 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
 | [involved_in_metadata_management](involved_in_metadata_management.md) | 0..1 <br/> [xsd:boolean](xsd:boolean) | True if use case is likely to be implemented as part of metadata indexing, sa... | direct |
 | [involved_in_quality_control](involved_in_quality_control.md) | 0..1 <br/> [xsd:boolean](xsd:boolean) | True is use case is likely to be implemented as part of data validation opera... | direct |
 | [xref](xref.md) | 0..* <br/> [xsd:anyURI](xsd:anyURI) | URI of corresponding class in an ontology of experimental procedures, in CURI... | direct |
+| [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [description](description.md) | 0..1 <br/> NONE | A human-readable description for a thing | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> NONE | A human-readable name for a thing | [NamedThing](NamedThing.md) |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 
 
 
@@ -68,7 +68,6 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [UseCase](UseCase.md) | [enables](enables.md) | range | [UseCase](UseCase.md) |
-| [UseCaseCollection](UseCaseCollection.md) | [entries](entries.md) | range | [UseCase](UseCase.md) |
 
 
 
@@ -187,8 +186,7 @@ attributes:
     description: Relevance of the use case to one or more DGPs.
     from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
     rank: 1000
-    is_a: node property
-    domain: NamedThing
+    multivalued: true
     alias: relevance_to_dgps
     owner: UseCase
     domain_of:

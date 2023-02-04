@@ -2,9 +2,9 @@
 # Enum: UseCaseCategory
 
 
+Category of use case.
 
-
-URI: [STANDARDSUSECASE:UseCaseCategory](https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseCategory](https://w3id.org/bridge2ai/standards-schema-all/UseCaseCategory)
 
 
 ## Other properties
@@ -16,10 +16,10 @@ URI: [STANDARDSUSECASE:UseCaseCategory](https://w3id.org/bridge2ai/standards-use
 
 | Text | Description | Meaning | Other Information |
 | :--- | :---: | :---: | ---: |
-| Acquisition | Acquisition |  |  |
-| Integration | Integration |  |  |
-| Standardization | Standardization |  |  |
-| Modeling | Modeling |  |  |
-| Application | Application |  |  |
-| Assessment | Assessment |  |  |
+| acquisition | Acquisition |  |  |
+| integration | Integration |  |  |
+| standardization | Standardization |  |  |
+| modeling | Modeling |  |  |
+| application | Application |  |  |
+| assessment | Assessment |  |  |
 

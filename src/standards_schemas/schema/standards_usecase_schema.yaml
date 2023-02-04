@@ -45,17 +45,6 @@ classes:
     slot_usage:
       use_case_category:
         required: true
-        
-  UseCaseCollection:
-    tree_root: true
-    description: >-
-      A holder for UseCase objects
-    attributes:
-      entries:
-        description:
-        range: UseCase
-        multivalued: true
-        inlined: true
 
 slots:
 
@@ -74,7 +63,6 @@ slots:
       including lack of standards, lack of relevant patient cohort,
       lack of funding, etc.
   relevance_to_dgps:
-    is_a: node property
     range: DataGeneratingProject
     description: Relevance of the use case to one or more DGPs.
     multivalued: true

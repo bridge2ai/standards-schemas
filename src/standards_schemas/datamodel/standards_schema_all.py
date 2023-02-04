@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-01-25T17:01:54
+# Generation date: 2023-02-03T21:35:05
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -40,9 +40,8 @@ STANDARDSDATATOPIC = CurieNamespace('STANDARDSDATATOPIC', 'https://w3id.org/brid
 STANDARDSORGANIZATION = CurieNamespace('STANDARDSORGANIZATION', 'https://w3id.org/bridge2ai/standards-organization-schema/')
 STANDARDSUSECASE = CurieNamespace('STANDARDSUSECASE', 'https://w3id.org/bridge2ai/standards-usecase-schema/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-RDFS = CurieNamespace('rdfs', 'http://example.org/UNKNOWN/rdfs/')
+RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')
-SKOS = CurieNamespace('skos', 'http://example.org/UNKNOWN/skos/')
 XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
 DEFAULT_ = CurieNamespace('', 'https://w3id.org/bridge2ai/standards-schema-all/')
 
@@ -584,7 +583,7 @@ class UseCase(NamedThing):
     id: Union[str, UseCaseId] = None
     use_case_category: Union[str, "UseCaseCategory"] = None
     known_limitations: Optional[str] = None
-    relevance_to_dgps: Optional[Union[str, "DataGeneratingProject"]] = None
+    relevance_to_dgps: Optional[Union[Union[str, "DataGeneratingProject"], List[Union[str, "DataGeneratingProject"]]]] = empty_list()
     data_topics: Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]] = empty_list()
     data_substrates: Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]] = empty_list()
     standards_and_tools_for_dgp_use: Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]] = empty_list()
@@ -609,8 +608,9 @@ class UseCase(NamedThing):
         if self.known_limitations is not None and not isinstance(self.known_limitations, str):
             self.known_limitations = str(self.known_limitations)
 
-        if self.relevance_to_dgps is not None and not isinstance(self.relevance_to_dgps, DataGeneratingProject):
-            self.relevance_to_dgps = DataGeneratingProject(self.relevance_to_dgps)
+        if not isinstance(self.relevance_to_dgps, list):
+            self.relevance_to_dgps = [self.relevance_to_dgps] if self.relevance_to_dgps is not None else []
+        self.relevance_to_dgps = [v if isinstance(v, DataGeneratingProject) else DataGeneratingProject(v) for v in self.relevance_to_dgps]
 
         if not isinstance(self.data_topics, list):
             self.data_topics = [self.data_topics] if self.data_topics is not None else []
@@ -644,26 +644,6 @@ class UseCase(NamedThing):
         if not isinstance(self.xref, list):
             self.xref = [self.xref] if self.xref is not None else []
         self.xref = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.xref]
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass
-class UseCaseCollection(YAMLRoot):
-    """
-    A holder for UseCase objects
-    """
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCaseCollection
-    class_class_curie: ClassVar[str] = "STANDARDSUSECASE:UseCaseCollection"
-    class_name: ClassVar[str] = "UseCaseCollection"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/UseCaseCollection")
-
-    entries: Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]] = empty_dict()
-
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        self._normalize_inlined_as_dict(slot_name="entries", slot_type=UseCase, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -877,7 +857,7 @@ slots.known_limitations = Slot(uri=STANDARDSUSECASE.known_limitations, name="kno
                    model_uri=DEFAULT_.known_limitations, domain=NamedThing, range=Optional[str])
 
 slots.relevance_to_dgps = Slot(uri=STANDARDSUSECASE.relevance_to_dgps, name="relevance_to_dgps", curie=STANDARDSUSECASE.curie('relevance_to_dgps'),
-                   model_uri=DEFAULT_.relevance_to_dgps, domain=NamedThing, range=Optional[Union[str, "DataGeneratingProject"]])
+                   model_uri=DEFAULT_.relevance_to_dgps, domain=None, range=Optional[Union[Union[str, "DataGeneratingProject"], List[Union[str, "DataGeneratingProject"]]]])
 
 slots.data_topics = Slot(uri=STANDARDSUSECASE.data_topics, name="data_topics", curie=STANDARDSUSECASE.curie('data_topics'),
                    model_uri=DEFAULT_.data_topics, domain=NamedThing, range=Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]])
@@ -902,9 +882,6 @@ slots.involved_in_metadata_management = Slot(uri=STANDARDSUSECASE.involved_in_me
 
 slots.involved_in_quality_control = Slot(uri=STANDARDSUSECASE.involved_in_quality_control, name="involved_in_quality_control", curie=STANDARDSUSECASE.curie('involved_in_quality_control'),
                    model_uri=DEFAULT_.involved_in_quality_control, domain=NamedThing, range=Optional[Union[bool, Bool]])
-
-slots.useCaseCollection__entries = Slot(uri=DEFAULT_.entries, name="useCaseCollection__entries", curie=DEFAULT_.curie('entries'),
-                   model_uri=DEFAULT_.useCaseCollection__entries, domain=None, range=Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]])
 
 slots.UseCase_use_case_category = Slot(uri=STANDARDSUSECASE.use_case_category, name="UseCase_use_case_category", curie=STANDARDSUSECASE.curie('use_case_category'),
                    model_uri=DEFAULT_.UseCase_use_case_category, domain=UseCase, range=Union[str, "UseCaseCategory"])

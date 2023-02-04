@@ -2,17 +2,18 @@
 # Slot: enables
 
 
+Other use case(s) this use case supports or makes possible.
 
-
-URI: [STANDARDSUSECASE:enables](https://w3id.org/bridge2ai/standards-usecase-schema/enables)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/enables](https://w3id.org/bridge2ai/standards-schema-all/enables)
 
 
 ## Domain and Range
 
-None &#8594;  <sub>0..1</sub> [String](types/String.md)
+[NamedThing](NamedThing.md) &#8594;  <sub>0..\*</sub> [UseCase](UseCase.md)
 
 ## Parents
 
+ *  is_a: [node property](node_property.md)
 
 ## Children
 

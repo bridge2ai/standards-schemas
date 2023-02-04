@@ -4,17 +4,23 @@
 
 A generic grouping for any identifiable entity
 
-URI: [STANDARDSUSECASE:NamedThing](https://w3id.org/bridge2ai/standards-usecase-schema/NamedThing)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/NamedThing](https://w3id.org/bridge2ai/standards-schema-all/NamedThing)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F]^-[UseCase])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F]^-[UseCase])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])
 
 ## Children
 
+ * [DataStandardOrTool](DataStandardOrTool.md) - Represents a standard or tool in the Bridge2AI Standards Registry.
+ * [DataSubstrate](DataSubstrate.md) - Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure.
+ * [DataTopic](DataTopic.md) - Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
+ * [Organization](Organization.md) - Represents a group or organization related to or responsible for one or more Bridge2AI standards.
  * [UseCase](UseCase.md) - Represents a use case for Bridge2AI standards.
 
 ## Referenced by Class
 
+ *  **[NamedThing](NamedThing.md)** *[related to](related_to.md)*  <sub>0..\*</sub>  **[NamedThing](NamedThing.md)**
+ *  **[NamedThing](NamedThing.md)** *[subclass of](subclass_of.md)*  <sub>0..\*</sub>  **[NamedThing](NamedThing.md)**
 
 ## Attributes
 
@@ -22,13 +28,13 @@ URI: [STANDARDSUSECASE:NamedThing](https://w3id.org/bridge2ai/standards-usecase-
 ### Own
 
  * [id](id.md)  <sub>1..1</sub>
-     * Description: A unique identifier for a thing
+     * Description: A unique identifier for a thing.
      * Range: [Uriorcurie](types/Uriorcurie.md)
  * [name](name.md)  <sub>0..1</sub>
-     * Description: A human-readable name for a thing
+     * Description: A human-readable name for a thing.
      * Range: [String](types/String.md)
  * [description](description.md)  <sub>0..1</sub>
-     * Description: A human-readable description for a thing
+     * Description: A human-readable description for a thing.
      * Range: [String](types/String.md)
 
 ## Other properties

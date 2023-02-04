@@ -37,9 +37,9 @@ URI: [STANDARDSORGANIZATION:Organization](STANDARDSORGANIZATION:Organization)
 | [ROR_ID](ROR_ID.md) | 0..1 <br/> [RorIdentifier](RorIdentifier.md) |  | direct |
 | [Wikidata_ID](Wikidata_ID.md) | 0..1 <br/> [WikidataIdentifier](WikidataIdentifier.md) |  | direct |
 | [URL](URL.md) | 0..1 <br/> NONE |  | direct |
+| [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [description](description.md) | 0..1 <br/> NONE | A human-readable description for a thing | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> NONE | A human-readable name for a thing | [NamedThing](NamedThing.md) |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 
 
 

@@ -55,8 +55,6 @@ URI: [STANDARDS:related_to](https://w3id.org/bridge2ai/standards-schema/related_
 name: related to
 description: A relationship that is asserted between two named things.
 from_schema: https://w3id.org/bridge2ai/standards-schema
-exact_mappings:
-- skos:relatedMatch
 rank: 1000
 domain: NamedThing
 multivalued: true
