@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-03T21:35:05
+# Generation date: 2023-02-03T21:53:33
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -265,7 +265,7 @@ class Organization(NamedThing):
     """
     Represents a group or organization related to or responsible for one or more Bridge2AI standards.
     """
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[List[str]] = ["related_to"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSORGANIZATION.Organization
     class_class_curie: ClassVar[str] = "STANDARDSORGANIZATION:Organization"
@@ -276,6 +276,7 @@ class Organization(NamedThing):
     ROR_ID: Optional[Union[str, RorIdentifier]] = None
     Wikidata_ID: Optional[Union[str, WikidataIdentifier]] = None
     URL: Optional[str] = None
+    related_to: Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -291,6 +292,10 @@ class Organization(NamedThing):
 
         if self.URL is not None and not isinstance(self.URL, str):
             self.URL = str(self.URL)
+
+        if not isinstance(self.related_to, list):
+            self.related_to = [self.related_to] if self.related_to is not None else []
+        self.related_to = [v if isinstance(v, NamedThingId) else NamedThingId(v) for v in self.related_to]
 
         super().__post_init__(**kwargs)
 

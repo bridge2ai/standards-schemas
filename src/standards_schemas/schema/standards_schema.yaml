@@ -95,7 +95,7 @@ slots:
       of experimental procedures, in CURIE form.
     multivalued: true
 
-  related to:
+  related_to:
     description: >-
       A relationship that is asserted between two named things.
     domain: NamedThing
@@ -105,8 +105,8 @@ slots:
     symmetric: true
 
   # TODO: Could be more specific with is_a relationships.
-  subclass of:
-    is_a: related to
+  subclass_of:
+    is_a: related_to
     description: >-
       Holds between two classes where the domain class is
       a specialization of the range class.
