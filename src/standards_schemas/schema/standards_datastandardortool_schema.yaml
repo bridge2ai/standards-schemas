@@ -135,7 +135,7 @@ slots:
       with some organization or managerial body?
 
   concerns data topic:
-    is_a: related to
+    is_a: related_to
     description: >-
       Subject standard is generally applied
       in the context of object data topic.
@@ -166,7 +166,7 @@ slots:
       a Git repository.
 
   has relevant organization:
-    is_a: related to
+    is_a: related_to
     description: >-
       Subject standard is managed or otherwise guided
       buy the object organization(s).
