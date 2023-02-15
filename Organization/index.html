@@ -214,7 +214,9 @@
       Organization : description
       Organization : id
       Organization : name
+      Organization : related_to
       Organization : ROR_ID
+      Organization : subclass_of
       Organization : URL
       Organization : Wikidata_ID
 
@@ -251,8 +253,14 @@
 </tr>
 <tr>
 <td><a href="../URL/">URL</a></td>
-<td>0..1 <br/> NONE</td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../related_to/">related_to</a></td>
+<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>A relationship that is asserted between two named things</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -262,15 +270,21 @@
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>A human-readable name for a thing</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> NONE</td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../name/">name</a></td>
-<td>0..1 <br/> NONE</td>
-<td>A human-readable name for a thing</td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>Holds between two classes where the domain class is a specialization of the r...</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
@@ -386,6 +400,7 @@ slots:
 - ROR_ID
 - Wikidata_ID
 - URL
+- related_to
 
 </code></pre>
 </details>
@@ -434,6 +449,20 @@ attributes:
     owner: Organization
     domain_of:
     - Organization
+  related_to:
+    name: related_to
+    description: A relationship that is asserted between two named things.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    rank: 1000
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: related_to
+    owner: Organization
+    domain_of:
+    - Organization
+    symmetric: true
+    range: NamedThing
   id:
     name: id
     description: A unique identifier for a thing.
@@ -457,6 +486,7 @@ attributes:
     owner: Organization
     domain_of:
     - NamedThing
+    range: string
   description:
     name: description
     description: A human-readable description for a thing.
@@ -467,6 +497,27 @@ attributes:
     owner: Organization
     domain_of:
     - NamedThing
+    range: string
+  subclass_of:
+    name: subclass_of
+    description: Holds between two classes where the domain class is a specialization
+      of the range class.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    exact_mappings:
+    - rdfs:subClassOf
+    - MESH:isa
+    narrow_mappings:
+    - rdfs:subPropertyOf
+    rank: 1000
+    is_a: related_to
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: subclass_of
+    owner: Organization
+    domain_of:
+    - NamedThing
+    range: NamedThing
 
 </code></pre>
 </details>
