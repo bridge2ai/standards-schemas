@@ -8,6 +8,7 @@ see_also:
   - https://bridge2ai.github.io/standards-schema
 
 prefixes:
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
   STANDARDS: https://w3id.org/bridge2ai/standards-schema/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/vocab/
@@ -19,12 +20,9 @@ prefixes:
   edam.format: http://edamontology.org/format_
   edam.operation: http://edamontology.org/operation_
   edam.topic: http://edamontology.org/topic_
+
 default_prefix: STANDARDS
 default_range: string
-
-emit_prefixes:
-  - rdfs
-  - skos
 
 imports:
   - linkml:types
@@ -46,6 +44,7 @@ classes:
       - id
       - name
       - description
+      - subclass_of
     class_uri: schema:Thing
 
 slots:
@@ -97,7 +96,7 @@ slots:
       of experimental procedures, in CURIE form.
     multivalued: true
 
-  related to:
+  related_to:
     description: >-
       A relationship that is asserted between two named things.
     domain: NamedThing
@@ -105,12 +104,10 @@ slots:
     multivalued: true
     inherited: true
     symmetric: true
-    exact_mappings:
-      - skos:relatedMatch
 
   # TODO: Could be more specific with is_a relationships.
-  subclass of:
-    is_a: related to
+  subclass_of:
+    is_a: related_to
     description: >-
       Holds between two classes where the domain class is
       a specialization of the range class.

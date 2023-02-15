@@ -2,17 +2,18 @@
 # Slot: involved_in_quality_control
 
 
+True is use case is likely to be implemented as part of data validation operations.
 
-
-URI: [STANDARDSUSECASE:involved_in_quality_control](https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/involved_in_quality_control](https://w3id.org/bridge2ai/standards-schema-all/involved_in_quality_control)
 
 
 ## Domain and Range
 
-None &#8594;  <sub>0..1</sub> [String](types/String.md)
+[NamedThing](NamedThing.md) &#8594;  <sub>0..1</sub> [Boolean](types/Boolean.md)
 
 ## Parents
 
+ *  is_a: [node property](node_property.md)
 
 ## Children
 

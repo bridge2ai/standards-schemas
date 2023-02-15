@@ -24,7 +24,6 @@ Name: standards-schema-all
 | [SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standar... |
 | [TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ... |
 | [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |
-| [UseCaseCollection](UseCaseCollection.md) | A holder for UseCase objects |
 
 
 ## Slots
@@ -39,7 +38,6 @@ Name: standards-schema-all
 | [description](description.md) | A human-readable description for a thing |
 | [EDAM_ID](EDAM_ID.md) |  |
 | [enables](enables.md) | Other use case(s) this use case supports or makes possible |
-| [entries](entries.md) |  |
 | [file_extensions](file_extensions.md) | Commonly used file extensions for this substrate |
 | [formal_specification](formal_specification.md) | Relevant code repository or other location for a formal specification of the ... |
 | [has_relevant_organization](has_relevant_organization.md) | Subject standard is managed or otherwise guided buy the object organization(s... |
@@ -84,6 +82,7 @@ Name: standards-schema-all
 | Type | Description |
 | --- | --- |
 | [xsd:boolean](xsd:boolean) | A binary (true or false) value |
+| [xsd:string](xsd:string) | a compact URI |
 | [xsd:date](xsd:date) | a date (year, month and day) in an idealized calendar |
 | [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime) | Either a date or a datetime |
 | [xsd:dateTime](xsd:dateTime) | The combination of a date and time |

@@ -2,17 +2,18 @@
 # Slot: alternative_standards_and_tools
 
 
+List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.
 
-
-URI: [STANDARDSUSECASE:alternative_standards_and_tools](https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/alternative_standards_and_tools](https://w3id.org/bridge2ai/standards-schema-all/alternative_standards_and_tools)
 
 
 ## Domain and Range
 
-None &#8594;  <sub>0..1</sub> [String](types/String.md)
+[NamedThing](NamedThing.md) &#8594;  <sub>0..\*</sub> [DataStandardOrTool](DataStandardOrTool.md)
 
 ## Parents
 
+ *  is_a: [node property](node_property.md)
 
 ## Children
 

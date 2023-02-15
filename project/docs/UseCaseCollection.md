@@ -4,7 +4,7 @@
 
 A holder for UseCase objects
 
-URI: [STANDARDSUSECASE:UseCaseCollection](https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCollection)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseCollection](https://w3id.org/bridge2ai/standards-schema-all/UseCaseCollection)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<entries%200..*-++[UseCaseCollection],[UseCase])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<entries%200..*-++[UseCaseCollection],[UseCase])

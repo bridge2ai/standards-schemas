@@ -43,9 +43,9 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate
 | [metadata_storage](metadata_storage.md) | 0..* <br/> [DataSubstrate](DataSubstrate.md) | Data Substrate in which metadata is stored | direct |
 | [file_extensions](file_extensions.md) | 0..* <br/> NONE | Commonly used file extensions for this substrate | direct |
 | [limitations](limitations.md) | 0..* <br/> NONE | Potential obstacles particular to this substrate or implementation | direct |
-| [name](name.md) | 0..1 <br/> NONE | A human-readable name for a thing | [NamedThing](NamedThing.md) |
-| [description](description.md) | 0..1 <br/> NONE | A human-readable description for a thing | [NamedThing](NamedThing.md) |
 | [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
+| [description](description.md) | 0..1 <br/> NONE | A human-readable description for a thing | [NamedThing](NamedThing.md) |
+| [name](name.md) | 0..1 <br/> NONE | A human-readable name for a thing | [NamedThing](NamedThing.md) |
 
 
 

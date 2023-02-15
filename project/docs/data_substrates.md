@@ -2,17 +2,18 @@
 # Slot: data_substrates
 
 
+Relevance of the use case to one or more data substrates.
 
-
-URI: [STANDARDSUSECASE:data_substrates](https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/data_substrates](https://w3id.org/bridge2ai/standards-schema-all/data_substrates)
 
 
 ## Domain and Range
 
-None &#8594;  <sub>0..1</sub> [String](types/String.md)
+[NamedThing](NamedThing.md) &#8594;  <sub>0..\*</sub> [DataSubstrate](DataSubstrate.md)
 
 ## Parents
 
+ *  is_a: [node property](node_property.md)
 
 ## Children
 

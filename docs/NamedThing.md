@@ -53,7 +53,6 @@ URI: [schema:Thing](http://schema.org/Thing)
 | ---  | --- | --- | --- |
 | [UseCase](UseCase.md) | [use_case_category](use_case_category.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [known_limitations](known_limitations.md) | domain | [NamedThing](NamedThing.md) |
-| [UseCase](UseCase.md) | [relevance_to_dgps](relevance_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [data_topics](data_topics.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [data_substrates](data_substrates.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | domain | [NamedThing](NamedThing.md) |

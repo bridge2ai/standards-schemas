@@ -39,6 +39,7 @@ classes:
       - ROR_ID
       - Wikidata_ID
       - URL
+      - related_to
 
 slots:
 

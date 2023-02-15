@@ -32,8 +32,8 @@ classes:
       Standards Registry.
     slots:
       - collection
-      - concerns data topic
-      - has relevant organization
+      - concerns_data_topic
+      - has_relevant_organization
       - purpose_detail
       - is_open
       - requires_registration
@@ -134,8 +134,8 @@ slots:
       require registrion of a user or group
       with some organization or managerial body?
 
-  concerns data topic:
-    is_a: related to
+  concerns_data_topic:
+    is_a: related_to
     description: >-
       Subject standard is generally applied
       in the context of object data topic.
@@ -165,8 +165,8 @@ slots:
       or tool. Often a URL, particularly to
       a Git repository.
 
-  has relevant organization:
-    is_a: related to
+  has_relevant_organization:
+    is_a: related_to
     description: >-
       Subject standard is managed or otherwise guided
       buy the object organization(s).

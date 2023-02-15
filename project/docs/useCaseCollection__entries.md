@@ -4,7 +4,7 @@
 
 
 
-URI: [STANDARDSUSECASE:useCaseCollection__entries](https://w3id.org/bridge2ai/standards-usecase-schema/useCaseCollection__entries)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/useCaseCollection__entries](https://w3id.org/bridge2ai/standards-schema-all/useCaseCollection__entries)
 
 
 ## Domain and Range

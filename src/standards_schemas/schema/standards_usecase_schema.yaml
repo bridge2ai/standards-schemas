@@ -45,17 +45,6 @@ classes:
     slot_usage:
       use_case_category:
         required: true
-        
-  UseCaseCollection:
-    tree_root: true
-    description: >-
-      A holder for UseCase objects
-    attributes:
-      entries:
-        description:
-        range: UseCase
-        multivalued: true
-        inlined: true
 
 slots:
 
@@ -74,9 +63,9 @@ slots:
       including lack of standards, lack of relevant patient cohort,
       lack of funding, etc.
   relevance_to_dgps:
-    is_a: node property
     range: DataGeneratingProject
     description: Relevance of the use case to one or more DGPs.
+    multivalued: true
   data_topics:
     is_a: node property
     range: DataTopic
@@ -108,7 +97,7 @@ slots:
       but serving as viable alternatives,
       from those in the Standards Registry.
     multivalued: true
-  enables:
+  enables:  # Should probably be an association type
     is_a: node property
     range: UseCase
     description: Other use case(s) this use case supports or makes possible.

@@ -12,7 +12,6 @@ URI: [STANDARDS:node_property](https://w3id.org/bridge2ai/standards-schema/node_
 * **node_property**
     * [use_case_category](use_case_category.md)
     * [known_limitations](known_limitations.md)
-    * [relevance_to_dgps](relevance_to_dgps.md)
     * [data_topics](data_topics.md)
     * [data_substrates](data_substrates.md)
     * [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md)
