@@ -7,7 +7,7 @@ Represents a resource in the Bridge2AI Standards Registry serving as a standardi
 URI: [https://w3id.org/bridge2ai/standards-schema-all/ReferenceDataOrDataset](https://w3id.org/bridge2ai/standards-schema-all/ReferenceDataOrDataset)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]^-[ReferenceDataOrDataset&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[Organization],[DataTopic],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]^-[ReferenceDataOrDataset&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[Organization],[DataTopic],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]^-[ReferenceDataOrDataset&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[Organization],[NamedThing],[DataTopic],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]^-[ReferenceDataOrDataset&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[Organization],[NamedThing],[DataTopic],[DataStandardOrTool])
 
 ## Parents
 
@@ -27,13 +27,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/ReferenceDataOrDataset](ht
  * [description](description.md)  <sub>0..1</sub>
      * Description: A human-readable description for a thing.
      * Range: [String](types/String.md)
+ * [subclass_of](subclass_of.md)  <sub>0..\*</sub>
+     * Description: Holds between two classes where the domain class is a specialization of the range class.
+     * Range: [NamedThing](NamedThing.md)
  * [collection](collection.md)  <sub>0..\*</sub>
      * Description: Tags for specific sets of standards.
      * Range: [StandardsCollectionTag](StandardsCollectionTag.md)
- * [concerns data topic](concerns_data_topic.md)  <sub>0..\*</sub>
+ * [concerns_data_topic](concerns_data_topic.md)  <sub>0..\*</sub>
      * Description: Subject standard is generally applied in the context of object data topic.
      * Range: [DataTopic](DataTopic.md)
- * [has relevant organization](has_relevant_organization.md)  <sub>0..\*</sub>
+ * [has_relevant_organization](has_relevant_organization.md)  <sub>0..\*</sub>
      * Description: Subject standard is managed or otherwise guided buy the object organization(s).
      * Range: [Organization](Organization.md)
  * [purpose_detail](purpose_detail.md)  <sub>0..1</sub>

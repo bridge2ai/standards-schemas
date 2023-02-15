@@ -4,6 +4,7 @@ message BiomedicalStandard
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -20,6 +21,7 @@ message DataStandard
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -36,6 +38,7 @@ message DataStandardOrTool
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -46,16 +49,17 @@ message DataStandardOrTool
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
  }
-// Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure.
+// Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.
 message DataSubstrate
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
   edamIdentifier eDAMID = 0
   meshIdentifier meSHID = 0
   ncitIdentifier nCITID = 0
- repeated  dataSubstrate metadataStorage = 0
+ repeated  string metadataStorage = 0
  repeated  string fileExtensions = 0
  repeated  string limitations = 0
  }
@@ -65,6 +69,7 @@ message DataTopic
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
   edamIdentifier eDAMID = 0
   meshIdentifier meSHID = 0
   ncitIdentifier nCITID = 0
@@ -75,6 +80,7 @@ message ModelRepository
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -91,6 +97,7 @@ message NamedThing
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  }
 // A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.
 message OntologyOrVocabulary
@@ -98,6 +105,7 @@ message OntologyOrVocabulary
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -114,9 +122,11 @@ message Organization
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
   rorIdentifier rORID = 0
   wikidataIdentifier wikidataID = 0
   string uRL = 0
+ repeated  namedThing relatedTo = 0
  }
 // Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.
 message ReferenceDataOrDataset
@@ -124,6 +134,7 @@ message ReferenceDataOrDataset
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -140,6 +151,7 @@ message ReferenceImplementation
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -156,6 +168,7 @@ message Registry
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -172,6 +185,7 @@ message SoftwareOrTool
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -188,6 +202,7 @@ message TrainingProgram
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -204,6 +219,7 @@ message UseCase
   uriorcurie id = 0
   string name = 0
   string description = 0
+ repeated  namedThing subclassOf = 0
   useCaseCategory useCaseCategory = 0
   string knownLimitations = 0
  repeated  dataGeneratingProject relevanceToDgps = 0

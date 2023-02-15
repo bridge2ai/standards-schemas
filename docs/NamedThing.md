@@ -7,6 +7,7 @@ _A generic grouping for any identifiable entity_
 URI: [schema:Thing](http://schema.org/Thing)
 
 
+
 ```mermaid
  classDiagram
     class NamedThing
@@ -19,8 +20,10 @@ URI: [schema:Thing](http://schema.org/Thing)
       NamedThing : description
       NamedThing : id
       NamedThing : name
+      NamedThing : subclass_of
       
 ```
+
 
 
 
@@ -40,8 +43,9 @@ URI: [schema:Thing](http://schema.org/Thing)
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | direct |
-| [name](name.md) | 0..1 <br/> NONE | A human-readable name for a thing | direct |
-| [description](description.md) | 0..1 <br/> NONE | A human-readable description for a thing | direct |
+| [name](name.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable name for a thing | direct |
+| [description](description.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable description for a thing | direct |
+| [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | direct |
 
 
 
@@ -62,6 +66,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [UseCase](UseCase.md) | [involved_in_metadata_management](involved_in_metadata_management.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [involved_in_quality_control](involved_in_quality_control.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [xref](xref.md) | domain | [NamedThing](NamedThing.md) |
+| [UseCase](UseCase.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [UseCase](UseCase.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -69,6 +75,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataStandardOrTool](DataStandardOrTool.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [DataStandardOrTool](DataStandardOrTool.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [DataStandardOrTool](DataStandardOrTool.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -76,6 +84,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataStandard](DataStandard.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [DataStandard](DataStandard.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [DataStandard](DataStandard.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -83,6 +93,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [BiomedicalStandard](BiomedicalStandard.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [BiomedicalStandard](BiomedicalStandard.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [BiomedicalStandard](BiomedicalStandard.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -90,6 +102,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [Registry](Registry.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [Registry](Registry.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [Registry](Registry.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -97,6 +111,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -104,6 +120,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [ModelRepository](ModelRepository.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [ModelRepository](ModelRepository.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [ModelRepository](ModelRepository.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -111,6 +129,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -118,6 +138,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [SoftwareOrTool](SoftwareOrTool.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [SoftwareOrTool](SoftwareOrTool.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [SoftwareOrTool](SoftwareOrTool.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -125,6 +147,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [ReferenceImplementation](ReferenceImplementation.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [ReferenceImplementation](ReferenceImplementation.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [ReferenceImplementation](ReferenceImplementation.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [is_open](is_open.md) | domain | [NamedThing](NamedThing.md) |
@@ -132,9 +156,21 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [TrainingProgram](TrainingProgram.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [TrainingProgram](TrainingProgram.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [TrainingProgram](TrainingProgram.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [DataTopic](DataTopic.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [DataTopic](DataTopic.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [NamedThing](NamedThing.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [NamedThing](NamedThing.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [metadata_storage](metadata_storage.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [file_extensions](file_extensions.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [limitations](limitations.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSubstrate](DataSubstrate.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSubstrate](DataSubstrate.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 
 
 
@@ -166,6 +202,9 @@ URI: [schema:Thing](http://schema.org/Thing)
 | native | STANDARDS:NamedThing |
 
 
+
+
+
 ## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
@@ -182,6 +221,7 @@ slots:
 - id
 - name
 - description
+- subclass_of
 class_uri: schema:Thing
 
 ```
@@ -229,6 +269,26 @@ attributes:
     owner: NamedThing
     domain_of:
     - NamedThing
+  subclass_of:
+    name: subclass_of
+    description: Holds between two classes where the domain class is a specialization
+      of the range class.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    exact_mappings:
+    - rdfs:subClassOf
+    - MESH:isa
+    narrow_mappings:
+    - rdfs:subPropertyOf
+    rank: 1000
+    is_a: related_to
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: subclass_of
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: NamedThing
 class_uri: schema:Thing
 
 ```

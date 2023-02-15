@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-07T14:53:35
+# Generation date: 2023-02-15T13:12:15
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -218,7 +218,9 @@ class DataTopic(NamedThing):
 class DataSubstrate(NamedThing):
     """
     Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific
-    implementation of that structure.
+    implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which
+    refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate
+    but the concept of TSV format is a DataStandard.
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of"]
 
@@ -231,7 +233,7 @@ class DataSubstrate(NamedThing):
     EDAM_ID: Optional[Union[str, EdamIdentifier]] = None
     MeSH_ID: Optional[Union[str, MeshIdentifier]] = None
     NCIT_ID: Optional[Union[str, NcitIdentifier]] = None
-    metadata_storage: Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]] = empty_list()
+    metadata_storage: Optional[Union[str, List[str]]] = empty_list()
     file_extensions: Optional[Union[str, List[str]]] = empty_list()
     limitations: Optional[Union[str, List[str]]] = empty_list()
 
@@ -252,7 +254,7 @@ class DataSubstrate(NamedThing):
 
         if not isinstance(self.metadata_storage, list):
             self.metadata_storage = [self.metadata_storage] if self.metadata_storage is not None else []
-        self.metadata_storage = [v if isinstance(v, DataSubstrateId) else DataSubstrateId(v) for v in self.metadata_storage]
+        self.metadata_storage = [v if isinstance(v, str) else str(v) for v in self.metadata_storage]
 
         if not isinstance(self.file_extensions, list):
             self.file_extensions = [self.file_extensions] if self.file_extensions is not None else []
@@ -816,7 +818,7 @@ slots.subclass_of = Slot(uri=STANDARDS.subclass_of, name="subclass_of", curie=ST
                    model_uri=DEFAULT_.subclass_of, domain=NamedThing, range=Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]])
 
 slots.metadata_storage = Slot(uri=STANDARDSDATASUBSTRATE.metadata_storage, name="metadata_storage", curie=STANDARDSDATASUBSTRATE.curie('metadata_storage'),
-                   model_uri=DEFAULT_.metadata_storage, domain=NamedThing, range=Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]])
+                   model_uri=DEFAULT_.metadata_storage, domain=NamedThing, range=Optional[Union[str, List[str]]])
 
 slots.file_extensions = Slot(uri=STANDARDSDATASUBSTRATE.file_extensions, name="file_extensions", curie=STANDARDSDATASUBSTRATE.curie('file_extensions'),
                    model_uri=DEFAULT_.file_extensions, domain=NamedThing, range=Optional[Union[str, List[str]]])
@@ -845,7 +847,7 @@ slots.is_open = Slot(uri=STANDARDSDATASTANDARDORTOOL.is_open, name="is_open", cu
 slots.requires_registration = Slot(uri=STANDARDSDATASTANDARDORTOOL.requires_registration, name="requires_registration", curie=STANDARDSDATASTANDARDORTOOL.curie('requires_registration'),
                    model_uri=DEFAULT_.requires_registration, domain=NamedThing, range=Optional[Union[bool, Bool]])
 
-slots.concerns_data_topic = Slot(uri=STANDARDSDATASTANDARDORTOOL.concerns_data_topic, name="concerns data topic", curie=STANDARDSDATASTANDARDORTOOL.curie('concerns_data_topic'),
+slots.concerns_data_topic = Slot(uri=STANDARDSDATASTANDARDORTOOL.concerns_data_topic, name="concerns_data_topic", curie=STANDARDSDATASTANDARDORTOOL.curie('concerns_data_topic'),
                    model_uri=DEFAULT_.concerns_data_topic, domain=DataStandardOrTool, range=Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]])
 
 slots.url = Slot(uri=STANDARDSDATASTANDARDORTOOL.url, name="url", curie=STANDARDSDATASTANDARDORTOOL.curie('url'),
@@ -857,7 +859,7 @@ slots.publication = Slot(uri=STANDARDSDATASTANDARDORTOOL.publication, name="publ
 slots.formal_specification = Slot(uri=STANDARDSDATASTANDARDORTOOL.formal_specification, name="formal_specification", curie=STANDARDSDATASTANDARDORTOOL.curie('formal_specification'),
                    model_uri=DEFAULT_.formal_specification, domain=NamedThing, range=Optional[Union[str, URIorCURIE]])
 
-slots.has_relevant_organization = Slot(uri=STANDARDSDATASTANDARDORTOOL.has_relevant_organization, name="has relevant organization", curie=STANDARDSDATASTANDARDORTOOL.curie('has_relevant_organization'),
+slots.has_relevant_organization = Slot(uri=STANDARDSDATASTANDARDORTOOL.has_relevant_organization, name="has_relevant_organization", curie=STANDARDSDATASTANDARDORTOOL.curie('has_relevant_organization'),
                    model_uri=DEFAULT_.has_relevant_organization, domain=DataStandardOrTool, range=Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]])
 
 slots.use_case_category = Slot(uri=STANDARDSUSECASE.use_case_category, name="use_case_category", curie=STANDARDSUSECASE.curie('use_case_category'),

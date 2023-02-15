@@ -660,6 +660,9 @@
       "multivalued": true,
       "inherited": true,
       "owner": "related_to",
+      "domain_of": [
+        "Organization"
+      ],
       "symmetric": true,
       "range": "NamedThing",
       "@type": "SlotDefinition"
@@ -681,7 +684,10 @@
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/subclass_of",
       "multivalued": true,
       "inherited": true,
-      "owner": "subclass_of",
+      "owner": "NamedThing",
+      "domain_of": [
+        "NamedThing"
+      ],
       "range": "NamedThing",
       "@type": "SlotDefinition"
     },
@@ -698,7 +704,17 @@
       "domain_of": [
         "DataSubstrate"
       ],
-      "range": "DataSubstrate",
+      "range": "string",
+      "any_of": [
+        {
+          "range": "DataSubstrate",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "equals_string": "file headers",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
       "@type": "SlotDefinition"
     },
     {
@@ -1134,7 +1150,8 @@
       "slots": [
         "id",
         "name",
-        "description"
+        "description",
+        "subclass_of"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Thing",
@@ -1150,6 +1167,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "EDAM_ID",
         "MeSH_ID",
         "NCIT_ID"
@@ -1161,13 +1179,14 @@
     {
       "name": "DataSubstrate",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate",
-      "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure.",
+      "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.",
       "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
       "is_a": "NamedThing",
       "slots": [
         "id",
         "name",
         "description",
+        "subclass_of",
         "EDAM_ID",
         "MeSH_ID",
         "NCIT_ID",
@@ -1189,9 +1208,11 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "ROR_ID",
         "Wikidata_ID",
-        "URL"
+        "URL",
+        "related_to"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-organization-schema/Organization",
@@ -1207,6 +1228,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1231,6 +1253,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1255,6 +1278,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1279,6 +1303,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1303,6 +1328,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1327,6 +1353,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1351,6 +1378,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1375,6 +1403,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1399,6 +1428,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1423,6 +1453,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1447,6 +1478,7 @@
         "id",
         "name",
         "description",
+        "subclass_of",
         "UseCase_use_case_category",
         "known_limitations",
         "relevance_to_dgps",
@@ -1469,7 +1501,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-02-01T15:18:19",
   "source_file_size": 439,
-  "generation_date": "2023-02-03T21:34:53",
+  "generation_date": "2023-02-15T13:12:05",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

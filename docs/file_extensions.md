@@ -29,7 +29,7 @@ URI: [STANDARDSDATASUBSTRATE:file_extensions](STANDARDSDATASUBSTRATE:file_extens
 
 ## Properties
 
-* Range: NONE
+* Range: [xsd:string](xsd:string)
 * Multivalued: True
 
 
@@ -69,6 +69,7 @@ multivalued: true
 alias: file_extensions
 domain_of:
 - DataSubstrate
+range: string
 
 ```
 </details>

@@ -38,7 +38,7 @@ URI: [schema:name](http://schema.org/name)
 
 ## Properties
 
-* Range: NONE
+* Range: [xsd:string](xsd:string)
 
 
 
@@ -74,6 +74,7 @@ slot_uri: schema:name
 alias: name
 domain_of:
 - NamedThing
+range: string
 
 ```
 </details>

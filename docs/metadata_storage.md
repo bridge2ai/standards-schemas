@@ -29,7 +29,7 @@ URI: [STANDARDSDATASUBSTRATE:metadata_storage](STANDARDSDATASUBSTRATE:metadata_s
 
 ## Properties
 
-* Range: [DataSubstrate](DataSubstrate.md)
+* Range: [xsd:string](xsd:string)
 * Multivalued: True
 
 
@@ -69,7 +69,10 @@ multivalued: true
 alias: metadata_storage
 domain_of:
 - DataSubstrate
-range: DataSubstrate
+range: string
+any_of:
+- range: DataSubstrate
+- equals_string: file headers
 
 ```
 </details>

@@ -38,7 +38,7 @@ URI: [schema:description](http://schema.org/description)
 
 ## Properties
 
-* Range: NONE
+* Range: [xsd:string](xsd:string)
 
 
 
@@ -74,6 +74,7 @@ slot_uri: schema:description
 alias: description
 domain_of:
 - NamedThing
+range: string
 
 ```
 </details>

@@ -99,7 +99,7 @@ STANDARDSDATASUBSTRATE:DataSubstrate CLOSED {
           STANDARDS:EDAM_ID @STANDARDS:EdamIdentifier ? ;
           STANDARDS:MeSH_ID @STANDARDS:MeshIdentifier ? ;
           STANDARDS:NCIT_ID @STANDARDS:NcitIdentifier ? ;
-          STANDARDSDATASUBSTRATE:metadata_storage @STANDARDSDATASUBSTRATE:DataSubstrate * ;
+          STANDARDSDATASUBSTRATE:metadata_storage @linkml:String * ;
           STANDARDSDATASUBSTRATE:file_extensions @linkml:String * ;
           STANDARDSDATASUBSTRATE:limitations @linkml:String *
        ) ;
@@ -129,7 +129,8 @@ STANDARDSDATASTANDARDORTOOL:ModelRepository CLOSED {
 STANDARDS:NamedThing  (
     CLOSED {
        (  $STANDARDS:NamedThing_tes (  schema:name @linkml:String ? ;
-             schema:description @linkml:String ?
+             schema:description @linkml:String ? ;
+             STANDARDS:subclass_of @STANDARDS:NamedThing *
           ) ;
           rdf:type [ schema:Thing ]
        )
@@ -150,7 +151,8 @@ STANDARDSORGANIZATION:Organization CLOSED {
           rdf:type [ schema:Thing ] ? ;
           STANDARDSORGANIZATION:ROR_ID @STANDARDSORGANIZATION:RorIdentifier ? ;
           STANDARDSORGANIZATION:Wikidata_ID @STANDARDSORGANIZATION:WikidataIdentifier ? ;
-          STANDARDSORGANIZATION:URL @linkml:String ?
+          STANDARDSORGANIZATION:URL @linkml:String ? ;
+          STANDARDS:related_to @STANDARDS:NamedThing *
        ) ;
        rdf:type [ STANDARDSORGANIZATION:Organization ]
     )

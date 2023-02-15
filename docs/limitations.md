@@ -29,7 +29,7 @@ URI: [STANDARDSDATASUBSTRATE:limitations](STANDARDSDATASUBSTRATE:limitations)
 
 ## Properties
 
-* Range: NONE
+* Range: [xsd:string](xsd:string)
 * Multivalued: True
 
 
@@ -69,6 +69,7 @@ multivalued: true
 alias: limitations
 domain_of:
 - DataSubstrate
+range: string
 
 ```
 </details>

@@ -18,6 +18,15 @@ URI: [STANDARDS:related_to](https://w3id.org/bridge2ai/standards-schema/related_
 
 
 
+## Applicable Classes
+
+| Name | Description |
+| --- | --- |
+[Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ...
+
+
+
+
 
 
 ## Properties
@@ -52,7 +61,7 @@ URI: [STANDARDS:related_to](https://w3id.org/bridge2ai/standards-schema/related_
 
 <details>
 ```yaml
-name: related to
+name: related_to
 description: A relationship that is asserted between two named things.
 from_schema: https://w3id.org/bridge2ai/standards-schema
 rank: 1000
@@ -60,6 +69,8 @@ domain: NamedThing
 multivalued: true
 inherited: true
 alias: related_to
+domain_of:
+- Organization
 symmetric: true
 range: NamedThing
 

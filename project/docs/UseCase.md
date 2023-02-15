@@ -70,3 +70,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase](https://w3id.org/
  * [description](description.md)  <sub>0..1</sub>
      * Description: A human-readable description for a thing.
      * Range: [String](types/String.md)
+ * [subclass_of](subclass_of.md)  <sub>0..\*</sub>
+     * Description: Holds between two classes where the domain class is a specialization of the range class.
+     * Range: [NamedThing](NamedThing.md)

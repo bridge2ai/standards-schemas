@@ -7,7 +7,7 @@ Represents a group or organization related to or responsible for one or more Bri
 URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id.org/bridge2ai/standards-schema-all/Organization)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]-%20has%20relevant%20organization%200..*>[Organization&#124;ROR_ID:ror_identifier%20%3F;Wikidata_ID:wikidata_identifier%20%3F;URL:string%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[Organization],[NamedThing],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]-%20has%20relevant%20organization%200..*>[Organization&#124;ROR_ID:ror_identifier%20%3F;Wikidata_ID:wikidata_identifier%20%3F;URL:string%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[Organization],[NamedThing],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to%200..*-%20[Organization&#124;ROR_ID:ror_identifier%20%3F;Wikidata_ID:wikidata_identifier%20%3F;URL:string%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[NamedThing]^-[Organization],[NamedThing],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to%200..*-%20[Organization&#124;ROR_ID:ror_identifier%20%3F;Wikidata_ID:wikidata_identifier%20%3F;URL:string%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[NamedThing]^-[Organization],[NamedThing],[DataStandardOrTool])
 
 ## Parents
 
@@ -15,7 +15,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 
 ## Referenced by Class
 
- *  **[DataStandardOrTool](DataStandardOrTool.md)** *[has relevant organization](has_relevant_organization.md)*  <sub>0..\*</sub>  **[Organization](Organization.md)**
+ *  **[DataStandardOrTool](DataStandardOrTool.md)** *[has_relevant_organization](has_relevant_organization.md)*  <sub>0..\*</sub>  **[Organization](Organization.md)**
 
 ## Attributes
 
@@ -31,6 +31,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
  * [URL](URL.md)  <sub>0..1</sub>
      * Range: [String](types/String.md)
      * Example: https://www.zeiss.com/ None
+ * [related_to](related_to.md)  <sub>0..\*</sub>
+     * Description: A relationship that is asserted between two named things.
+     * Range: [NamedThing](NamedThing.md)
 
 ### Inherited from NamedThing:
 
@@ -43,3 +46,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
  * [description](description.md)  <sub>0..1</sub>
      * Description: A human-readable description for a thing.
      * Range: [String](types/String.md)
+ * [subclass_of](subclass_of.md)  <sub>0..\*</sub>
+     * Description: Holds between two classes where the domain class is a specialization of the range class.
+     * Range: [NamedThing](NamedThing.md)

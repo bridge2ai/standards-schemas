@@ -23,7 +23,7 @@ High-level classes for Bridge2AI Standards schemas.
          * [Registry](Registry.md) - Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources.
          * [SoftwareOrTool](SoftwareOrTool.md) - Represents a piece of software or computational tool in the Bridge2AI Standards Registry.
          * [TrainingProgram](TrainingProgram.md) - Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry.
-     * [DataSubstrate](DataSubstrate.md) - Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure.
+     * [DataSubstrate](DataSubstrate.md) - Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.
      * [DataTopic](DataTopic.md) - Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
      * [Organization](Organization.md) - Represents a group or organization related to or responsible for one or more Bridge2AI standards.
      * [UseCase](UseCase.md) - Represents a use case for Bridge2AI standards.
@@ -65,10 +65,10 @@ High-level classes for Bridge2AI Standards schemas.
      * [use_case_category](use_case_category.md) - Category of the UseCase. Not all projects will incorporate use cases in all categories.
          * [UseCase➞use_case_category](UseCase_use_case_category.md)
      * [xref](xref.md) - URI of corresponding class in an ontology of experimental procedures, in CURIE form.
- * [related to](related_to.md) - A relationship that is asserted between two named things.
-     * [concerns data topic](concerns_data_topic.md) - Subject standard is generally applied in the context of object data topic.
-     * [has relevant organization](has_relevant_organization.md) - Subject standard is managed or otherwise guided buy the object organization(s).
-     * [subclass of](subclass_of.md) - Holds between two classes where the domain class is a specialization of the range class.
+ * [related_to](related_to.md) - A relationship that is asserted between two named things.
+     * [concerns_data_topic](concerns_data_topic.md) - Subject standard is generally applied in the context of object data topic.
+     * [has_relevant_organization](has_relevant_organization.md) - Subject standard is managed or otherwise guided buy the object organization(s).
+     * [subclass_of](subclass_of.md) - Holds between two classes where the domain class is a specialization of the range class.
  * [relevance_to_dgps](relevance_to_dgps.md) - Relevance of the use case to one or more DGPs.
 
 ### Enums

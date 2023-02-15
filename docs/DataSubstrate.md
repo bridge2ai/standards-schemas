@@ -1,10 +1,11 @@
 # Class: DataSubstrate
-_Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure._
+_Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard._
 
 
 
 
 URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate)
+
 
 
 ```mermaid
@@ -21,8 +22,10 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate
       DataSubstrate : metadata_storage
       DataSubstrate : name
       DataSubstrate : NCIT_ID
+      DataSubstrate : subclass_of
       
 ```
+
 
 
 
@@ -40,12 +43,13 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate
 | [EDAM_ID](EDAM_ID.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) |  | direct |
 | [MeSH_ID](MeSH_ID.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) |  | direct |
 | [NCIT_ID](NCIT_ID.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) |  | direct |
-| [metadata_storage](metadata_storage.md) | 0..* <br/> [DataSubstrate](DataSubstrate.md) | Data Substrate in which metadata is stored | direct |
-| [file_extensions](file_extensions.md) | 0..* <br/> NONE | Commonly used file extensions for this substrate | direct |
-| [limitations](limitations.md) | 0..* <br/> NONE | Potential obstacles particular to this substrate or implementation | direct |
+| [metadata_storage](metadata_storage.md) | 0..* <br/> [xsd:string](xsd:string) | Data Substrate in which metadata is stored | direct |
+| [file_extensions](file_extensions.md) | 0..* <br/> [xsd:string](xsd:string) | Commonly used file extensions for this substrate | direct |
+| [limitations](limitations.md) | 0..* <br/> [xsd:string](xsd:string) | Potential obstacles particular to this substrate or implementation | direct |
 | [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
-| [description](description.md) | 0..1 <br/> NONE | A human-readable description for a thing | [NamedThing](NamedThing.md) |
-| [name](name.md) | 0..1 <br/> NONE | A human-readable name for a thing | [NamedThing](NamedThing.md) |
+| [name](name.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
+| [description](description.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
+| [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
 
 
 
@@ -56,7 +60,6 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [UseCase](UseCase.md) | [data_substrates](data_substrates.md) | range | [DataSubstrate](DataSubstrate.md) |
-| [DataSubstrate](DataSubstrate.md) | [metadata_storage](metadata_storage.md) | range | [DataSubstrate](DataSubstrate.md) |
 
 
 
@@ -88,6 +91,9 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate
 | native | STANDARDSDATASUBSTRATE:DataSubstrate |
 
 
+
+
+
 ## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
@@ -98,7 +104,10 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate
 ```yaml
 name: DataSubstrate
 description: Represents a data substrate for Bridge2AI data. This may be a high-level
-  data structure or a specific implementation of that structure.
+  data structure or a specific implementation of that structure. Interpret as "data,
+  in this form or format", as compared to DataStandard, which refers to the set of
+  rules defining a standard. For example, data in TSV format is represented as a DataSubstrate
+  but the concept of TSV format is a DataStandard.
 from_schema: https://w3id.org/bridge2ai/standards-datasubstrate-schema
 rank: 1000
 is_a: NamedThing
@@ -119,7 +128,10 @@ slots:
 ```yaml
 name: DataSubstrate
 description: Represents a data substrate for Bridge2AI data. This may be a high-level
-  data structure or a specific implementation of that structure.
+  data structure or a specific implementation of that structure. Interpret as "data,
+  in this form or format", as compared to DataStandard, which refers to the set of
+  rules defining a standard. For example, data in TSV format is represented as a DataSubstrate
+  but the concept of TSV format is a DataStandard.
 from_schema: https://w3id.org/bridge2ai/standards-datasubstrate-schema
 rank: 1000
 is_a: NamedThing
@@ -181,7 +193,9 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - DataSubstrate
-    range: DataSubstrate
+    any_of:
+    - range: DataSubstrate
+    - equals_string: file headers
   file_extensions:
     name: file_extensions
     description: Commonly used file extensions for this substrate.
@@ -229,6 +243,7 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - NamedThing
+    range: string
   description:
     name: description
     description: A human-readable description for a thing.
@@ -239,6 +254,27 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - NamedThing
+    range: string
+  subclass_of:
+    name: subclass_of
+    description: Holds between two classes where the domain class is a specialization
+      of the range class.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    exact_mappings:
+    - rdfs:subClassOf
+    - MESH:isa
+    narrow_mappings:
+    - rdfs:subPropertyOf
+    rank: 1000
+    is_a: related_to
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: subclass_of
+    owner: DataSubstrate
+    domain_of:
+    - NamedThing
+    range: NamedThing
 
 ```
 </details>
