@@ -68,11 +68,11 @@ URI: [STANDARDSDATASTANDARDORTOOL:has_relevant_organization](https://w3id.org/br
 
 <details>
 ```yaml
-name: has relevant organization
+name: has_relevant_organization
 description: Subject standard is managed or otherwise guided buy the object organization(s).
 from_schema: https://w3id.org/bridge2ai/standards-datastandardortool-schema
 rank: 1000
-is_a: related to
+is_a: related_to
 domain: DataStandardOrTool
 multivalued: true
 inherited: true

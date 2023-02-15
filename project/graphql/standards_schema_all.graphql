@@ -3,6 +3,7 @@ type BiomedicalStandard
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -19,6 +20,7 @@ type DataStandard
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -35,6 +37,7 @@ type DataStandardOrTool
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -51,10 +54,11 @@ type DataSubstrate
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     eDAMID: EdamIdentifier
     meSHID: MeshIdentifier
     nCITID: NcitIdentifier
-    metadataStorage: [DataSubstrate]
+    metadataStorage: [String]
     fileExtensions: [String]
     limitations: [String]
   }
@@ -64,6 +68,7 @@ type DataTopic
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     eDAMID: EdamIdentifier
     meSHID: MeshIdentifier
     nCITID: NcitIdentifier
@@ -74,6 +79,7 @@ type ModelRepository
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -90,6 +96,7 @@ type NamedThing
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
   }
 
 type OntologyOrVocabulary
@@ -97,6 +104,7 @@ type OntologyOrVocabulary
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -113,9 +121,11 @@ type Organization
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     rORID: RorIdentifier
     wikidataID: WikidataIdentifier
     uRL: String
+    relatedTo: [NamedThing]
   }
 
 type ReferenceDataOrDataset
@@ -123,6 +133,7 @@ type ReferenceDataOrDataset
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -139,6 +150,7 @@ type ReferenceImplementation
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -155,6 +167,7 @@ type Registry
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -171,6 +184,7 @@ type SoftwareOrTool
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -187,6 +201,7 @@ type TrainingProgram
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -203,6 +218,7 @@ type UseCase
     id: Uriorcurie!
     name: String
     description: String
+    subclassOf: [NamedThing]
     useCaseCategory: UseCaseCategory!
     knownLimitations: String
     relevanceToDgps: [DataGeneratingProject]

@@ -22,7 +22,7 @@ URI: [STANDARDSORGANIZATION:URL](STANDARDSORGANIZATION:URL)
 
 ## Properties
 
-* Range: NONE
+* Range: [xsd:string](xsd:string)
 
 
 
@@ -65,6 +65,7 @@ rank: 1000
 alias: URL
 domain_of:
 - Organization
+range: string
 
 ```
 </details>

@@ -57,6 +57,13 @@
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
                 },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": "string"
@@ -136,6 +143,13 @@
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
                 },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": "string"
@@ -204,6 +218,13 @@
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
                 },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": "string"
@@ -217,7 +238,7 @@
         },
         "DataSubstrate": {
             "additionalProperties": false,
-            "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure.",
+            "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.",
             "properties": {
                 "EDAM_ID": {
                     "type": "string"
@@ -251,6 +272,12 @@
                     "type": "array"
                 },
                 "metadata_storage": {
+                    "anyOf": [
+                        {},
+                        {
+                            "const": "file headers"
+                        }
+                    ],
                     "description": "Data Substrate in which metadata is stored.",
                     "items": {
                         "type": "string"
@@ -260,6 +287,13 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 }
             },
             "required": [
@@ -292,6 +326,13 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 }
             },
             "required": [
@@ -357,6 +398,13 @@
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
                 },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": "string"
@@ -383,6 +431,13 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 }
             },
             "required": [
@@ -448,6 +503,13 @@
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
                 },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": "string"
@@ -483,6 +545,20 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 }
             },
             "required": [
@@ -547,6 +623,13 @@
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
@@ -616,6 +699,13 @@
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
                 },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": "string"
@@ -684,6 +774,13 @@
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
                 },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": "string"
@@ -751,6 +848,13 @@
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
@@ -861,6 +965,13 @@
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
                 },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "url": {
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": "string"
@@ -941,6 +1052,13 @@
                 },
                 "standards_and_tools_for_dgp_use": {
                     "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
                     "items": {
                         "type": "string"
                     },

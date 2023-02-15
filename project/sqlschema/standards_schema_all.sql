@@ -4,6 +4,7 @@ CREATE TABLE "BiomedicalStandard" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -19,6 +20,7 @@ CREATE TABLE "DataStandard" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -34,6 +36,7 @@ CREATE TABLE "DataStandardOrTool" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -45,21 +48,11 @@ CREATE TABLE "DataStandardOrTool" (
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE "DataSubstrate" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	"EDAM_ID" TEXT, 
-	"MeSH_ID" TEXT, 
-	"NCIT_ID" TEXT, 
-	metadata_storage TEXT, 
-	PRIMARY KEY (id)
-);
-
 CREATE TABLE "DataTopic" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	"EDAM_ID" TEXT, 
 	"MeSH_ID" TEXT, 
 	"NCIT_ID" TEXT, 
@@ -70,6 +63,7 @@ CREATE TABLE "ModelRepository" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -85,6 +79,7 @@ CREATE TABLE "NamedThing" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	PRIMARY KEY (id)
 );
 
@@ -92,6 +87,7 @@ CREATE TABLE "OntologyOrVocabulary" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -107,9 +103,11 @@ CREATE TABLE "Organization" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	"ROR_ID" TEXT, 
 	"Wikidata_ID" TEXT, 
 	"URL" TEXT, 
+	related_to TEXT, 
 	PRIMARY KEY (id)
 );
 
@@ -117,6 +115,7 @@ CREATE TABLE "ReferenceDataOrDataset" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -132,6 +131,7 @@ CREATE TABLE "ReferenceImplementation" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -147,6 +147,7 @@ CREATE TABLE "Registry" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -162,6 +163,7 @@ CREATE TABLE "SoftwareOrTool" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -177,6 +179,7 @@ CREATE TABLE "TrainingProgram" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
 	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
@@ -192,15 +195,28 @@ CREATE TABLE "UseCase" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
+	subclass_of TEXT, 
 	use_case_category VARCHAR(15) NOT NULL, 
 	known_limitations TEXT, 
 	data_topics TEXT, 
-	data_substrates TEXT, 
 	standards_and_tools_for_dgp_use TEXT, 
 	alternative_standards_and_tools TEXT, 
 	involved_in_experimental_design BOOLEAN, 
 	involved_in_metadata_management BOOLEAN, 
 	involved_in_quality_control BOOLEAN, 
+	"UseCase_id" TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY("UseCase_id") REFERENCES "UseCase" (id)
+);
+
+CREATE TABLE "DataSubstrate" (
+	id TEXT NOT NULL, 
+	name TEXT, 
+	description TEXT, 
+	subclass_of TEXT, 
+	"EDAM_ID" TEXT, 
+	"MeSH_ID" TEXT, 
+	"NCIT_ID" TEXT, 
 	"UseCase_id" TEXT, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY("UseCase_id") REFERENCES "UseCase" (id)
@@ -225,20 +241,6 @@ CREATE TABLE "DataStandardOrTool_collection" (
 	collection VARCHAR(24), 
 	PRIMARY KEY (backref_id, collection), 
 	FOREIGN KEY(backref_id) REFERENCES "DataStandardOrTool" (id)
-);
-
-CREATE TABLE "DataSubstrate_file_extensions" (
-	backref_id TEXT, 
-	file_extensions TEXT, 
-	PRIMARY KEY (backref_id, file_extensions), 
-	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
-);
-
-CREATE TABLE "DataSubstrate_limitations" (
-	backref_id TEXT, 
-	limitations TEXT, 
-	PRIMARY KEY (backref_id, limitations), 
-	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
 );
 
 CREATE TABLE "ModelRepository_collection" (
@@ -302,4 +304,25 @@ CREATE TABLE "UseCase_xref" (
 	xref TEXT, 
 	PRIMARY KEY (backref_id, xref), 
 	FOREIGN KEY(backref_id) REFERENCES "UseCase" (id)
+);
+
+CREATE TABLE "DataSubstrate_metadata_storage" (
+	backref_id TEXT, 
+	metadata_storage TEXT, 
+	PRIMARY KEY (backref_id, metadata_storage), 
+	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
+);
+
+CREATE TABLE "DataSubstrate_file_extensions" (
+	backref_id TEXT, 
+	file_extensions TEXT, 
+	PRIMARY KEY (backref_id, file_extensions), 
+	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
+);
+
+CREATE TABLE "DataSubstrate_limitations" (
+	backref_id TEXT, 
+	limitations TEXT, 
+	PRIMARY KEY (backref_id, limitations), 
+	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
 );

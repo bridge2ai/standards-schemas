@@ -7,7 +7,7 @@ Represents a general data topic for Bridge2AI data or the tools/standards applie
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.org/bridge2ai/standards-schema-all/DataTopic)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns%20data%20topic%200..*>[DataTopic&#124;EDAM_ID:edam_identifier%20%3F;MeSH_ID:mesh_identifier%20%3F;NCIT_ID:ncit_identifier%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[UseCase]-%20data_topics%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns%20data%20topic%200..*>[DataTopic&#124;EDAM_ID:edam_identifier%20%3F;MeSH_ID:mesh_identifier%20%3F;NCIT_ID:ncit_identifier%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[UseCase]-%20data_topics%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic&#124;EDAM_ID:edam_identifier%20%3F;MeSH_ID:mesh_identifier%20%3F;NCIT_ID:ncit_identifier%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[UseCase]-%20data_topics%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic&#124;EDAM_ID:edam_identifier%20%3F;MeSH_ID:mesh_identifier%20%3F;NCIT_ID:ncit_identifier%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[UseCase]-%20data_topics%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataStandardOrTool])
 
 ## Parents
 
@@ -15,7 +15,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 
 ## Referenced by Class
 
- *  **[DataStandardOrTool](DataStandardOrTool.md)** *[concerns data topic](concerns_data_topic.md)*  <sub>0..\*</sub>  **[DataTopic](DataTopic.md)**
+ *  **[DataStandardOrTool](DataStandardOrTool.md)** *[concerns_data_topic](concerns_data_topic.md)*  <sub>0..\*</sub>  **[DataTopic](DataTopic.md)**
  *  **[NamedThing](NamedThing.md)** *[data_topics](data_topics.md)*  <sub>0..\*</sub>  **[DataTopic](DataTopic.md)**
 
 ## Attributes
@@ -44,3 +44,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
  * [description](description.md)  <sub>0..1</sub>
      * Description: A human-readable description for a thing.
      * Range: [String](types/String.md)
+ * [subclass_of](subclass_of.md)  <sub>0..\*</sub>
+     * Description: Holds between two classes where the domain class is a specialization of the range class.
+     * Range: [NamedThing](NamedThing.md)

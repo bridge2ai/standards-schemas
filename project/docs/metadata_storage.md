@@ -9,7 +9,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/metadata_storage](https://
 
 ## Domain and Range
 
-[NamedThing](NamedThing.md) &#8594;  <sub>0..\*</sub> [DataSubstrate](DataSubstrate.md)
+[NamedThing](NamedThing.md) &#8594;  <sub>0..\*</sub> [String](types/String.md)
 
 ## Parents
 

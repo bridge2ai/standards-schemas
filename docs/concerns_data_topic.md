@@ -68,11 +68,11 @@ URI: [STANDARDSDATASTANDARDORTOOL:concerns_data_topic](https://w3id.org/bridge2a
 
 <details>
 ```yaml
-name: concerns data topic
+name: concerns_data_topic
 description: Subject standard is generally applied in the context of object data topic.
 from_schema: https://w3id.org/bridge2ai/standards-datastandardortool-schema
 rank: 1000
-is_a: related to
+is_a: related_to
 domain: DataStandardOrTool
 multivalued: true
 inherited: true

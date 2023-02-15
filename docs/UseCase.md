@@ -7,6 +7,7 @@ _Represents a use case for Bridge2AI standards._
 URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-schema/UseCase)
 
 
+
 ```mermaid
  classDiagram
     class UseCase
@@ -25,10 +26,12 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
       UseCase : name
       UseCase : relevance_to_dgps
       UseCase : standards_and_tools_for_dgp_use
+      UseCase : subclass_of
       UseCase : use_case_category
       UseCase : xref
       
 ```
+
 
 
 
@@ -56,8 +59,9 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
 | [involved_in_quality_control](involved_in_quality_control.md) | 0..1 <br/> [xsd:boolean](xsd:boolean) | True is use case is likely to be implemented as part of data validation opera... | direct |
 | [xref](xref.md) | 0..* <br/> [xsd:anyURI](xsd:anyURI) | URI of corresponding class in an ontology of experimental procedures, in CURI... | direct |
 | [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
-| [description](description.md) | 0..1 <br/> NONE | A human-readable description for a thing | [NamedThing](NamedThing.md) |
-| [name](name.md) | 0..1 <br/> NONE | A human-readable name for a thing | [NamedThing](NamedThing.md) |
+| [name](name.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
+| [description](description.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
+| [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
 
 
 
@@ -97,6 +101,9 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
 | ---  | ---  |
 | self | STANDARDSUSECASE:UseCase |
 | native | STANDARDSUSECASE:UseCase |
+
+
+
 
 
 ## LinkML Source
@@ -343,6 +350,7 @@ attributes:
     owner: UseCase
     domain_of:
     - NamedThing
+    range: string
   description:
     name: description
     description: A human-readable description for a thing.
@@ -353,6 +361,27 @@ attributes:
     owner: UseCase
     domain_of:
     - NamedThing
+    range: string
+  subclass_of:
+    name: subclass_of
+    description: Holds between two classes where the domain class is a specialization
+      of the range class.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    exact_mappings:
+    - rdfs:subClassOf
+    - MESH:isa
+    narrow_mappings:
+    - rdfs:subPropertyOf
+    rank: 1000
+    is_a: related_to
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: subclass_of
+    owner: UseCase
+    domain_of:
+    - NamedThing
+    range: NamedThing
 
 ```
 </details>
