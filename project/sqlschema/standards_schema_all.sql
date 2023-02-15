@@ -59,6 +59,11 @@ CREATE TABLE "DataTopic" (
 	PRIMARY KEY (id)
 );
 
+CREATE TABLE "DataTopicContainer" (
+	data_topics_collection TEXT, 
+	PRIMARY KEY (data_topics_collection)
+);
+
 CREATE TABLE "ModelRepository" (
 	id TEXT NOT NULL, 
 	name TEXT, 

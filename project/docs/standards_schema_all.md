@@ -12,6 +12,7 @@ High-level classes for Bridge2AI Standards schemas.
 
 ### Classes
 
+ * [DataTopicContainer](DataTopicContainer.md) - A container for DataTopics.
  * [NamedThing](NamedThing.md) - A generic grouping for any identifiable entity
      * [DataStandardOrTool](DataStandardOrTool.md) - Represents a standard or tool in the Bridge2AI Standards Registry.
          * [DataStandard](DataStandard.md) - Represents a general purpose standard in the Bridge2AI Standards Registry.
@@ -41,6 +42,7 @@ High-level classes for Bridge2AI Standards schemas.
  * [ROR_ID](ROR_ID.md)
  * [URL](URL.md)
  * [Wikidata_ID](Wikidata_ID.md)
+ * [data_topics_collection](data_topics_collection.md)
  * [description](description.md) - A human-readable description for a thing.
  * [id](id.md) - A unique identifier for a thing.
  * [name](name.md) - A human-readable name for a thing.

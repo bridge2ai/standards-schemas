@@ -24,6 +24,9 @@
    "DataTopic": {
       "@id": "STANDARDSDATATOPIC:DataTopic"
    },
+   "DataTopicContainer": {
+      "@id": "STANDARDSDATATOPIC:DataTopicContainer"
+   },
    "ModelRepository": {
       "@id": "STANDARDSDATASTANDARDORTOOL:ModelRepository"
    },

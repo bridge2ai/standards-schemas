@@ -16,6 +16,7 @@ Name: standards-schema-all
 | [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |
 | [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |
 | [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |
+| [DataTopicContainer](DataTopicContainer.md) | A container for DataTopics |
 | [ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |
 | [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their... |
@@ -39,6 +40,7 @@ Name: standards-schema-all
 | [concerns_data_topic](concerns_data_topic.md) | Subject standard is generally applied in the context of object data topic |
 | [data_substrates](data_substrates.md) | Relevance of the use case to one or more data substrates |
 | [data_topics](data_topics.md) | Relevance of the use case to one or more data topics |
+| [data_topics_collection](data_topics_collection.md) |  |
 | [description](description.md) | A human-readable description for a thing |
 | [EDAM_ID](EDAM_ID.md) |  |
 | [enables](enables.md) | Other use case(s) this use case supports or makes possible |

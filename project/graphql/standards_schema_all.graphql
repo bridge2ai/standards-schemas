@@ -74,6 +74,11 @@ type DataTopic
     nCITID: NcitIdentifier
   }
 
+type DataTopicContainer
+  {
+    dataTopicsCollection: [DataTopic]
+  }
+
 type ModelRepository
   {
     id: Uriorcurie!

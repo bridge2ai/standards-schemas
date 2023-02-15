@@ -77,7 +77,6 @@ from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
 slots:
 - use_cases
-tree_root: true
 
 ```
 </details>
@@ -103,7 +102,6 @@ attributes:
     range: UseCase
     inlined: true
     inlined_as_list: true
-tree_root: true
 
 ```
 </details>

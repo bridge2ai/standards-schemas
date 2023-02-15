@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-15T18:15:24
+# Generation date: 2023-02-15T18:29:05
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -210,6 +210,26 @@ class DataTopic(NamedThing):
 
         if self.NCIT_ID is not None and not isinstance(self.NCIT_ID, NcitIdentifier):
             self.NCIT_ID = NcitIdentifier(self.NCIT_ID)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class DataTopicContainer(YAMLRoot):
+    """
+    A container for DataTopics.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = STANDARDSDATATOPIC.DataTopicContainer
+    class_class_curie: ClassVar[str] = "STANDARDSDATATOPIC:DataTopicContainer"
+    class_name: ClassVar[str] = "DataTopicContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer")
+
+    data_topics_collection: Optional[Union[Dict[Union[str, DataTopicId], Union[dict, DataTopic]], List[Union[dict, DataTopic]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        self._normalize_inlined_as_list(slot_name="data_topics_collection", slot_type=DataTopic, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -856,6 +876,9 @@ slots.related_to = Slot(uri=STANDARDS.related_to, name="related_to", curie=STAND
 
 slots.subclass_of = Slot(uri=STANDARDS.subclass_of, name="subclass_of", curie=STANDARDS.curie('subclass_of'),
                    model_uri=DEFAULT_.subclass_of, domain=NamedThing, range=Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]])
+
+slots.data_topics_collection = Slot(uri=STANDARDSDATATOPIC.data_topics_collection, name="data_topics_collection", curie=STANDARDSDATATOPIC.curie('data_topics_collection'),
+                   model_uri=DEFAULT_.data_topics_collection, domain=None, range=Optional[Union[Dict[Union[str, DataTopicId], Union[dict, DataTopic]], List[Union[dict, DataTopic]]]])
 
 slots.metadata_storage = Slot(uri=STANDARDSDATASUBSTRATE.metadata_storage, name="metadata_storage", curie=STANDARDSDATASUBSTRATE.curie('metadata_storage'),
                    model_uri=DEFAULT_.metadata_storage, domain=NamedThing, range=Optional[Union[str, List[str]]])

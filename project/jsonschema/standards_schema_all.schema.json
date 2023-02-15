@@ -341,6 +341,20 @@
             "title": "DataTopic",
             "type": "object"
         },
+        "DataTopicContainer": {
+            "additionalProperties": false,
+            "description": "A container for DataTopics.",
+            "properties": {
+                "data_topics_collection": {
+                    "items": {
+                        "$ref": "#/$defs/DataTopic"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "DataTopicContainer",
+            "type": "object"
+        },
         "ModelRepository": {
             "additionalProperties": false,
             "description": "Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.",
@@ -1129,20 +1143,6 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": true,
     "metamodel_version": "1.7.0",
-    "properties": {
-        "organizations": {
-            "items": {
-                "$ref": "#/$defs/Organization"
-            },
-            "type": "array"
-        },
-        "use_cases": {
-            "items": {
-                "$ref": "#/$defs/UseCase"
-            },
-            "type": "array"
-        }
-    },
     "title": "standards-schema-all",
     "type": "object",
     "version": null

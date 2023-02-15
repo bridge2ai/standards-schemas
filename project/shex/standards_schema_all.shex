@@ -118,6 +118,12 @@ STANDARDSDATATOPIC:DataTopic CLOSED {
     )
 }
 
+STANDARDSDATATOPIC:DataTopicContainer CLOSED {
+    (  $STANDARDSDATATOPIC:DataTopicContainer_tes STANDARDSDATATOPIC:data_topics_collection @STANDARDSDATATOPIC:DataTopic * ;
+       rdf:type [ STANDARDSDATATOPIC:DataTopicContainer ] ?
+    )
+}
+
 STANDARDSDATASTANDARDORTOOL:ModelRepository CLOSED {
     (  $STANDARDSDATASTANDARDORTOOL:ModelRepository_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
           rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
