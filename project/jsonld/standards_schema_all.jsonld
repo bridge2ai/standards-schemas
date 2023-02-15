@@ -1119,6 +1119,33 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "container_name",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/container_name",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/container_name",
+      "owner": "UseCaseContainer",
+      "domain_of": [
+        "UseCaseContainer"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "use_cases",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_cases",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_cases",
+      "multivalued": true,
+      "owner": "UseCaseContainer",
+      "domain_of": [
+        "UseCaseContainer"
+      ],
+      "range": "UseCase",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "UseCase_use_case_category",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
       "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories.",
@@ -1495,13 +1522,26 @@
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCase",
       "@type": "ClassDefinition"
+    },
+    {
+      "name": "UseCaseContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseContainer",
+      "description": "A container for UseCase.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slots": [
+        "container_name",
+        "use_cases"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseContainer",
+      "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-02-01T15:18:19",
   "source_file_size": 439,
-  "generation_date": "2023-02-15T13:12:05",
+  "generation_date": "2023-02-15T17:05:35",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

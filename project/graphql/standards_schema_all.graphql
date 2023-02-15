@@ -233,3 +233,9 @@ type UseCase
     xref: [Uriorcurie]
   }
 
+type UseCaseContainer
+  {
+    containerName: String
+    useCases: [UseCase]
+  }
+

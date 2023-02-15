@@ -233,3 +233,9 @@ message UseCase
   boolean involvedInQualityControl = 0
  repeated  uriorcurie xref = 0
  }
+// A container for UseCase.
+message UseCaseContainer
+ {
+  string containerName = 0
+ repeated  useCase useCases = 0
+ }

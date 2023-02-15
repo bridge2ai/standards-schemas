@@ -218,4 +218,12 @@ STANDARDSUSECASE:UseCase CLOSED {
     )
 }
 
+STANDARDSUSECASE:UseCaseContainer CLOSED {
+    (  $STANDARDSUSECASE:UseCaseContainer_tes (  STANDARDSUSECASE:container_name @linkml:String ? ;
+          STANDARDSUSECASE:use_cases @STANDARDSUSECASE:UseCase *
+       ) ;
+       rdf:type [ STANDARDSUSECASE:UseCaseContainer ] ?
+    )
+}
+
 

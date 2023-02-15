@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-15T13:12:15
+# Generation date: 2023-02-15T17:05:44
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -660,6 +660,30 @@ class UseCase(NamedThing):
         super().__post_init__(**kwargs)
 
 
+@dataclass
+class UseCaseContainer(YAMLRoot):
+    """
+    A container for UseCase.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCaseContainer
+    class_class_curie: ClassVar[str] = "STANDARDSUSECASE:UseCaseContainer"
+    class_name: ClassVar[str] = "UseCaseContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer")
+
+    container_name: Optional[str] = None
+    use_cases: Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self.container_name is not None and not isinstance(self.container_name, str):
+            self.container_name = str(self.container_name)
+
+        self._normalize_inlined_as_list(slot_name="use_cases", slot_type=UseCase, key_name="id", keyed=True)
+
+        super().__post_init__(**kwargs)
+
+
 # Enumerations
 class DataGeneratingProject(EnumDefinitionImpl):
     """
@@ -894,6 +918,12 @@ slots.involved_in_metadata_management = Slot(uri=STANDARDSUSECASE.involved_in_me
 
 slots.involved_in_quality_control = Slot(uri=STANDARDSUSECASE.involved_in_quality_control, name="involved_in_quality_control", curie=STANDARDSUSECASE.curie('involved_in_quality_control'),
                    model_uri=DEFAULT_.involved_in_quality_control, domain=NamedThing, range=Optional[Union[bool, Bool]])
+
+slots.container_name = Slot(uri=STANDARDSUSECASE.container_name, name="container_name", curie=STANDARDSUSECASE.curie('container_name'),
+                   model_uri=DEFAULT_.container_name, domain=None, range=Optional[str])
+
+slots.use_cases = Slot(uri=STANDARDSUSECASE.use_cases, name="use_cases", curie=STANDARDSUSECASE.curie('use_cases'),
+                   model_uri=DEFAULT_.use_cases, domain=None, range=Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]])
 
 slots.UseCase_use_case_category = Slot(uri=STANDARDSUSECASE.use_case_category, name="UseCase_use_case_category", curie=STANDARDSUSECASE.curie('use_case_category'),
                    model_uri=DEFAULT_.UseCase_use_case_category, domain=UseCase, range=Union[str, "UseCaseCategory"])

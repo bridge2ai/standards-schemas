@@ -26,6 +26,7 @@ Name: standards-schema-all
 | [SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standar... |
 | [TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ... |
 | [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |
+| [UseCaseContainer](UseCaseContainer.md) | A container for UseCase |
 
 
 ## Slots
@@ -35,6 +36,7 @@ Name: standards-schema-all
 | [alternative_standards_and_tools](alternative_standards_and_tools.md) | List of identifiers of standards and tools; those not explicitly planned to b... |
 | [collection](collection.md) | Tags for specific sets of standards |
 | [concerns_data_topic](concerns_data_topic.md) | Subject standard is generally applied in the context of object data topic |
+| [container_name](container_name.md) |  |
 | [data_substrates](data_substrates.md) | Relevance of the use case to one or more data substrates |
 | [data_topics](data_topics.md) | Relevance of the use case to one or more data topics |
 | [description](description.md) | A human-readable description for a thing |
@@ -66,6 +68,7 @@ Name: standards-schema-all
 | [url](url.md) | URL for basic documentation of the standard or tool |
 | [URL](URL.md) |  |
 | [use_case_category](use_case_category.md) | Category of the UseCase |
+| [use_cases](use_cases.md) |  |
 | [Wikidata_ID](Wikidata_ID.md) |  |
 | [xref](xref.md) | URI of corresponding class in an ontology of experimental procedures, in CURI... |
 

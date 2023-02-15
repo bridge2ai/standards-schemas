@@ -1,0 +1,119 @@
+# Class: UseCaseContainer
+_A container for UseCase._
+
+
+
+
+URI: [STANDARDSUSECASE:UseCaseContainer](https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseContainer)
+
+
+
+```mermaid
+ classDiagram
+    class UseCaseContainer
+      UseCaseContainer : container_name
+      UseCaseContainer : use_cases
+      
+```
+
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [container_name](container_name.md) | 0..1 <br/> [xsd:string](xsd:string) |  | direct |
+| [use_cases](use_cases.md) | 0..* <br/> [UseCase](UseCase.md) |  | direct |
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/bridge2ai/standards-usecase-schema
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | STANDARDSUSECASE:UseCaseContainer |
+| native | STANDARDSUSECASE:UseCaseContainer |
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+```yaml
+name: UseCaseContainer
+description: A container for UseCase.
+from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
+rank: 1000
+slots:
+- container_name
+- use_cases
+
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+name: UseCaseContainer
+description: A container for UseCase.
+from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
+rank: 1000
+attributes:
+  container_name:
+    name: container_name
+    from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
+    rank: 1000
+    alias: container_name
+    owner: UseCaseContainer
+    domain_of:
+    - UseCaseContainer
+    range: string
+  use_cases:
+    name: use_cases
+    from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
+    rank: 1000
+    multivalued: true
+    alias: use_cases
+    owner: UseCaseContainer
+    domain_of:
+    - UseCaseContainer
+    range: UseCase
+    inlined: true
+    inlined_as_list: true
+
+```
+</details>

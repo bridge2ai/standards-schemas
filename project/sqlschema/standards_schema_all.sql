@@ -201,12 +201,17 @@ CREATE TABLE "UseCase" (
 	data_topics TEXT, 
 	standards_and_tools_for_dgp_use TEXT, 
 	alternative_standards_and_tools TEXT, 
+	enables TEXT, 
 	involved_in_experimental_design BOOLEAN, 
 	involved_in_metadata_management BOOLEAN, 
 	involved_in_quality_control BOOLEAN, 
-	"UseCase_id" TEXT, 
-	PRIMARY KEY (id), 
-	FOREIGN KEY("UseCase_id") REFERENCES "UseCase" (id)
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE "UseCaseContainer" (
+	container_name TEXT, 
+	use_cases TEXT, 
+	PRIMARY KEY (container_name, use_cases)
 );
 
 CREATE TABLE "DataSubstrate" (

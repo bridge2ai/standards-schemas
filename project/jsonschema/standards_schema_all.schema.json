@@ -1095,6 +1095,23 @@
             ],
             "title": "UseCaseCategory",
             "type": "string"
+        },
+        "UseCaseContainer": {
+            "additionalProperties": false,
+            "description": "A container for UseCase.",
+            "properties": {
+                "container_name": {
+                    "type": "string"
+                },
+                "use_cases": {
+                    "items": {
+                        "$ref": "#/$defs/UseCase"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "UseCaseContainer",
+            "type": "object"
         }
     },
     "$id": "https://w3id.org/bridge2ai/standards-schema-all",

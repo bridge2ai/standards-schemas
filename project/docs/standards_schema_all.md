@@ -27,6 +27,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [DataTopic](DataTopic.md) - Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
      * [Organization](Organization.md) - Represents a group or organization related to or responsible for one or more Bridge2AI standards.
      * [UseCase](UseCase.md) - Represents a use case for Bridge2AI standards.
+ * [UseCaseContainer](UseCaseContainer.md) - A container for UseCase.
 
 ### Mixins
 
@@ -39,6 +40,7 @@ High-level classes for Bridge2AI Standards schemas.
  * [ROR_ID](ROR_ID.md)
  * [URL](URL.md)
  * [Wikidata_ID](Wikidata_ID.md)
+ * [container_name](container_name.md)
  * [description](description.md) - A human-readable description for a thing.
  * [id](id.md) - A unique identifier for a thing.
  * [name](name.md) - A human-readable name for a thing.
@@ -70,6 +72,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [has_relevant_organization](has_relevant_organization.md) - Subject standard is managed or otherwise guided buy the object organization(s).
      * [subclass_of](subclass_of.md) - Holds between two classes where the domain class is a specialization of the range class.
  * [relevance_to_dgps](relevance_to_dgps.md) - Relevance of the use case to one or more DGPs.
+ * [use_cases](use_cases.md)
 
 ### Enums
 
