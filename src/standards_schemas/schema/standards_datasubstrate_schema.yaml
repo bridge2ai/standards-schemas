@@ -28,14 +28,17 @@ imports:
 
 classes:
 
-  # TODO: some data substrates may not have the specified
-  # identifier types
   DataSubstrate:
     is_a: NamedThing
     description: >-
       Represents a data substrate for Bridge2AI data.
       This may be a high-level data structure
       or a specific implementation of that structure.
+      Interpret as "data, in this form or format",
+      as compared to DataStandard, which refers to the
+      set of rules defining a standard. For example,
+      data in TSV format is represented as a DataSubstrate
+      but the concept of TSV format is a DataStandard.
     slots:
       - EDAM_ID
       - MeSH_ID
