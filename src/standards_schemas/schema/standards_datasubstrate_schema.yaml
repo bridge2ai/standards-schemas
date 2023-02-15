@@ -49,12 +49,13 @@ classes:
 
 slots:
 
-  # TODO: enable "file headers" to be used as an option here
   # TODO: need the "transform to" relation
   # TODO: need to specify related_to relation
   metadata_storage:
     is_a: node property
-    range: DataSubstrate
+    any_of:
+      - range: DataSubstrate
+      - equals_string: file headers
     description: Data Substrate in which metadata is stored.
     multivalued: true
   file_extensions:

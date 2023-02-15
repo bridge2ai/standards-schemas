@@ -10,4 +10,4 @@ metadata_storage: file headers
 file_extensions:
   - txt
   - bed
-limitations:
+limitations: Sequences can get very long.
