@@ -567,6 +567,20 @@
             "title": "Organization",
             "type": "object"
         },
+        "OrganizationContainer": {
+            "additionalProperties": false,
+            "description": "A container for Organizations.",
+            "properties": {
+                "organizations": {
+                    "items": {
+                        "$ref": "#/$defs/Organization"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "OrganizationContainer",
+            "type": "object"
+        },
         "ReferenceDataOrDataset": {
             "additionalProperties": false,
             "description": "Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.",
@@ -1100,9 +1114,6 @@
             "additionalProperties": false,
             "description": "A container for UseCase.",
             "properties": {
-                "container_name": {
-                    "type": "string"
-                },
                 "use_cases": {
                     "items": {
                         "$ref": "#/$defs/UseCase"
@@ -1118,6 +1129,20 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": true,
     "metamodel_version": "1.7.0",
+    "properties": {
+        "organizations": {
+            "items": {
+                "$ref": "#/$defs/Organization"
+            },
+            "type": "array"
+        },
+        "use_cases": {
+            "items": {
+                "$ref": "#/$defs/UseCase"
+            },
+            "type": "array"
+        }
+    },
     "title": "standards-schema-all",
     "type": "object",
     "version": null

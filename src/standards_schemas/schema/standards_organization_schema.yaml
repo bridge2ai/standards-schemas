@@ -41,6 +41,12 @@ classes:
       - URL
       - related_to
 
+  OrganizationContainer:
+    description: >-
+      A container for Organizations.
+    slots:
+      - organizations
+
 slots:
 
   ROR_ID:
@@ -58,3 +64,8 @@ slots:
   URL:
     examples:
       - value: https://www.zeiss.com/
+  organizations:
+    range: Organization
+    inlined: true
+    inlined_as_list: true
+    multivalued: true

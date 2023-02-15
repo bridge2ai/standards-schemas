@@ -36,6 +36,9 @@
    "Organization": {
       "@id": "STANDARDSORGANIZATION:Organization"
    },
+   "OrganizationContainer": {
+      "@id": "STANDARDSORGANIZATION:OrganizationContainer"
+   },
    "ReferenceDataOrDataset": {
       "@id": "STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset"
    },

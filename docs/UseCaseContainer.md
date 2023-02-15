@@ -11,7 +11,6 @@ URI: [STANDARDSUSECASE:UseCaseContainer](https://w3id.org/bridge2ai/standards-us
 ```mermaid
  classDiagram
     class UseCaseContainer
-      UseCaseContainer : container_name
       UseCaseContainer : use_cases
       
 ```
@@ -26,7 +25,6 @@ URI: [STANDARDSUSECASE:UseCaseContainer](https://w3id.org/bridge2ai/standards-us
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [container_name](container_name.md) | 0..1 <br/> [xsd:string](xsd:string) |  | direct |
 | [use_cases](use_cases.md) | 0..* <br/> [UseCase](UseCase.md) |  | direct |
 
 
@@ -78,8 +76,8 @@ description: A container for UseCase.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
 slots:
-- container_name
 - use_cases
+tree_root: true
 
 ```
 </details>
@@ -93,15 +91,6 @@ description: A container for UseCase.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
 attributes:
-  container_name:
-    name: container_name
-    from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
-    rank: 1000
-    alias: container_name
-    owner: UseCaseContainer
-    domain_of:
-    - UseCaseContainer
-    range: string
   use_cases:
     name: use_cases
     from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
@@ -114,6 +103,7 @@ attributes:
     range: UseCase
     inlined: true
     inlined_as_list: true
+tree_root: true
 
 ```
 </details>

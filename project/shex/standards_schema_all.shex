@@ -158,6 +158,12 @@ STANDARDSORGANIZATION:Organization CLOSED {
     )
 }
 
+STANDARDSORGANIZATION:OrganizationContainer CLOSED {
+    (  $STANDARDSORGANIZATION:OrganizationContainer_tes STANDARDSORGANIZATION:organizations @STANDARDSORGANIZATION:Organization * ;
+       rdf:type [ STANDARDSORGANIZATION:OrganizationContainer ] ?
+    )
+}
+
 STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset CLOSED {
     (  $STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
           rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
@@ -219,9 +225,7 @@ STANDARDSUSECASE:UseCase CLOSED {
 }
 
 STANDARDSUSECASE:UseCaseContainer CLOSED {
-    (  $STANDARDSUSECASE:UseCaseContainer_tes (  STANDARDSUSECASE:container_name @linkml:String ? ;
-          STANDARDSUSECASE:use_cases @STANDARDSUSECASE:UseCase *
-       ) ;
+    (  $STANDARDSUSECASE:UseCaseContainer_tes STANDARDSUSECASE:use_cases @STANDARDSUSECASE:UseCase * ;
        rdf:type [ STANDARDSUSECASE:UseCaseContainer ] ?
     )
 }

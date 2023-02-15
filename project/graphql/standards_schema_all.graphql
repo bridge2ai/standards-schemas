@@ -128,6 +128,11 @@ type Organization
     relatedTo: [NamedThing]
   }
 
+type OrganizationContainer
+  {
+    organizations: [Organization]
+  }
+
 type ReferenceDataOrDataset
   {
     id: Uriorcurie!
@@ -235,7 +240,6 @@ type UseCase
 
 type UseCaseContainer
   {
-    containerName: String
     useCases: [UseCase]
   }
 

@@ -50,7 +50,6 @@ classes:
     description: >-
       A container for UseCase.
     slots:
-      - container_name
       - use_cases
 
 slots:
@@ -131,8 +130,6 @@ slots:
     description: >-
       True is use case is likely to be implemented as
       part of data validation operations.
-  container_name:
-    range: string
   use_cases:
     range: UseCase
     inlined: true

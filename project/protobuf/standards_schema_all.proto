@@ -128,6 +128,11 @@ message Organization
   string uRL = 0
  repeated  namedThing relatedTo = 0
  }
+// A container for Organizations.
+message OrganizationContainer
+ {
+ repeated  organization organizations = 0
+ }
 // Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.
 message ReferenceDataOrDataset
  {
@@ -236,6 +241,5 @@ message UseCase
 // A container for UseCase.
 message UseCaseContainer
  {
-  string containerName = 0
  repeated  useCase useCases = 0
  }

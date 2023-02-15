@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-15T17:05:44
+# Generation date: 2023-02-15T18:15:24
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -303,6 +303,26 @@ class Organization(NamedThing):
         if not isinstance(self.related_to, list):
             self.related_to = [self.related_to] if self.related_to is not None else []
         self.related_to = [v if isinstance(v, NamedThingId) else NamedThingId(v) for v in self.related_to]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class OrganizationContainer(YAMLRoot):
+    """
+    A container for Organizations.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = STANDARDSORGANIZATION.OrganizationContainer
+    class_class_curie: ClassVar[str] = "STANDARDSORGANIZATION:OrganizationContainer"
+    class_name: ClassVar[str] = "OrganizationContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer")
+
+    organizations: Optional[Union[Dict[Union[str, OrganizationId], Union[dict, Organization]], List[Union[dict, Organization]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        self._normalize_inlined_as_list(slot_name="organizations", slot_type=Organization, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -672,13 +692,9 @@ class UseCaseContainer(YAMLRoot):
     class_name: ClassVar[str] = "UseCaseContainer"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer")
 
-    container_name: Optional[str] = None
     use_cases: Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]] = empty_dict()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self.container_name is not None and not isinstance(self.container_name, str):
-            self.container_name = str(self.container_name)
-
         self._normalize_inlined_as_list(slot_name="use_cases", slot_type=UseCase, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
@@ -859,6 +875,9 @@ slots.Wikidata_ID = Slot(uri=STANDARDSORGANIZATION.Wikidata_ID, name="Wikidata_I
 slots.URL = Slot(uri=STANDARDSORGANIZATION.URL, name="URL", curie=STANDARDSORGANIZATION.curie('URL'),
                    model_uri=DEFAULT_.URL, domain=None, range=Optional[str])
 
+slots.organizations = Slot(uri=STANDARDSORGANIZATION.organizations, name="organizations", curie=STANDARDSORGANIZATION.curie('organizations'),
+                   model_uri=DEFAULT_.organizations, domain=None, range=Optional[Union[Dict[Union[str, OrganizationId], Union[dict, Organization]], List[Union[dict, Organization]]]])
+
 slots.collection = Slot(uri=STANDARDSDATASTANDARDORTOOL.collection, name="collection", curie=STANDARDSDATASTANDARDORTOOL.curie('collection'),
                    model_uri=DEFAULT_.collection, domain=NamedThing, range=Optional[Union[Union[str, "StandardsCollectionTag"], List[Union[str, "StandardsCollectionTag"]]]])
 
@@ -918,9 +937,6 @@ slots.involved_in_metadata_management = Slot(uri=STANDARDSUSECASE.involved_in_me
 
 slots.involved_in_quality_control = Slot(uri=STANDARDSUSECASE.involved_in_quality_control, name="involved_in_quality_control", curie=STANDARDSUSECASE.curie('involved_in_quality_control'),
                    model_uri=DEFAULT_.involved_in_quality_control, domain=NamedThing, range=Optional[Union[bool, Bool]])
-
-slots.container_name = Slot(uri=STANDARDSUSECASE.container_name, name="container_name", curie=STANDARDSUSECASE.curie('container_name'),
-                   model_uri=DEFAULT_.container_name, domain=None, range=Optional[str])
 
 slots.use_cases = Slot(uri=STANDARDSUSECASE.use_cases, name="use_cases", curie=STANDARDSUSECASE.curie('use_cases'),
                    model_uri=DEFAULT_.use_cases, domain=None, range=Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]])

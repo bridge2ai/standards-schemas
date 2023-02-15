@@ -111,6 +111,11 @@ CREATE TABLE "Organization" (
 	PRIMARY KEY (id)
 );
 
+CREATE TABLE "OrganizationContainer" (
+	organizations TEXT, 
+	PRIMARY KEY (organizations)
+);
+
 CREATE TABLE "ReferenceDataOrDataset" (
 	id TEXT NOT NULL, 
 	name TEXT, 
@@ -209,9 +214,8 @@ CREATE TABLE "UseCase" (
 );
 
 CREATE TABLE "UseCaseContainer" (
-	container_name TEXT, 
 	use_cases TEXT, 
-	PRIMARY KEY (container_name, use_cases)
+	PRIMARY KEY (use_cases)
 );
 
 CREATE TABLE "DataSubstrate" (
