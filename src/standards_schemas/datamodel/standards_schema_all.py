@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-15T13:12:15
+# Generation date: 2023-02-15T20:48:36
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -215,6 +215,26 @@ class DataTopic(NamedThing):
 
 
 @dataclass
+class DataTopicContainer(YAMLRoot):
+    """
+    A container for DataTopics.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = STANDARDSDATATOPIC.DataTopicContainer
+    class_class_curie: ClassVar[str] = "STANDARDSDATATOPIC:DataTopicContainer"
+    class_name: ClassVar[str] = "DataTopicContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer")
+
+    data_topics_collection: Optional[Union[Dict[Union[str, DataTopicId], Union[dict, DataTopic]], List[Union[dict, DataTopic]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        self._normalize_inlined_as_list(slot_name="data_topics_collection", slot_type=DataTopic, key_name="id", keyed=True)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
 class DataSubstrate(NamedThing):
     """
     Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific
@@ -268,6 +288,26 @@ class DataSubstrate(NamedThing):
 
 
 @dataclass
+class DataSubstrateContainer(YAMLRoot):
+    """
+    A container for DataSubstrates.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = STANDARDSDATASUBSTRATE.DataSubstrateContainer
+    class_class_curie: ClassVar[str] = "STANDARDSDATASUBSTRATE:DataSubstrateContainer"
+    class_name: ClassVar[str] = "DataSubstrateContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer")
+
+    data_substrates_collection: Optional[Union[Dict[Union[str, DataSubstrateId], Union[dict, DataSubstrate]], List[Union[dict, DataSubstrate]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        self._normalize_inlined_as_list(slot_name="data_substrates_collection", slot_type=DataSubstrate, key_name="id", keyed=True)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
 class Organization(NamedThing):
     """
     Represents a group or organization related to or responsible for one or more Bridge2AI standards.
@@ -303,6 +343,26 @@ class Organization(NamedThing):
         if not isinstance(self.related_to, list):
             self.related_to = [self.related_to] if self.related_to is not None else []
         self.related_to = [v if isinstance(v, NamedThingId) else NamedThingId(v) for v in self.related_to]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class OrganizationContainer(YAMLRoot):
+    """
+    A container for Organizations.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = STANDARDSORGANIZATION.OrganizationContainer
+    class_class_curie: ClassVar[str] = "STANDARDSORGANIZATION:OrganizationContainer"
+    class_name: ClassVar[str] = "OrganizationContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer")
+
+    organizations: Optional[Union[Dict[Union[str, OrganizationId], Union[dict, Organization]], List[Union[dict, Organization]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        self._normalize_inlined_as_list(slot_name="organizations", slot_type=Organization, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -581,6 +641,26 @@ class TrainingProgram(DataStandardOrTool):
 
 
 @dataclass
+class DataStandardOrToolContainer(YAMLRoot):
+    """
+    A container for DataStandardOrTool(s).
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.DataStandardOrToolContainer
+    class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer"
+    class_name: ClassVar[str] = "DataStandardOrToolContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer")
+
+    data_standardortools_collection: Optional[Union[Dict[Union[str, DataStandardOrToolId], Union[dict, DataStandardOrTool]], List[Union[dict, DataStandardOrTool]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        self._normalize_inlined_as_list(slot_name="data_standardortools_collection", slot_type=DataStandardOrTool, key_name="id", keyed=True)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
 class UseCase(NamedThing):
     """
     Represents a use case for Bridge2AI standards.
@@ -656,6 +736,26 @@ class UseCase(NamedThing):
         if not isinstance(self.xref, list):
             self.xref = [self.xref] if self.xref is not None else []
         self.xref = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.xref]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class UseCaseContainer(YAMLRoot):
+    """
+    A container for UseCase.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCaseContainer
+    class_class_curie: ClassVar[str] = "STANDARDSUSECASE:UseCaseContainer"
+    class_name: ClassVar[str] = "UseCaseContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer")
+
+    use_cases: Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        self._normalize_inlined_as_list(slot_name="use_cases", slot_type=UseCase, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -817,6 +917,9 @@ slots.related_to = Slot(uri=STANDARDS.related_to, name="related_to", curie=STAND
 slots.subclass_of = Slot(uri=STANDARDS.subclass_of, name="subclass_of", curie=STANDARDS.curie('subclass_of'),
                    model_uri=DEFAULT_.subclass_of, domain=NamedThing, range=Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]])
 
+slots.data_topics_collection = Slot(uri=STANDARDSDATATOPIC.data_topics_collection, name="data_topics_collection", curie=STANDARDSDATATOPIC.curie('data_topics_collection'),
+                   model_uri=DEFAULT_.data_topics_collection, domain=None, range=Optional[Union[Dict[Union[str, DataTopicId], Union[dict, DataTopic]], List[Union[dict, DataTopic]]]])
+
 slots.metadata_storage = Slot(uri=STANDARDSDATASUBSTRATE.metadata_storage, name="metadata_storage", curie=STANDARDSDATASUBSTRATE.curie('metadata_storage'),
                    model_uri=DEFAULT_.metadata_storage, domain=NamedThing, range=Optional[Union[str, List[str]]])
 
@@ -826,6 +929,9 @@ slots.file_extensions = Slot(uri=STANDARDSDATASUBSTRATE.file_extensions, name="f
 slots.limitations = Slot(uri=STANDARDSDATASUBSTRATE.limitations, name="limitations", curie=STANDARDSDATASUBSTRATE.curie('limitations'),
                    model_uri=DEFAULT_.limitations, domain=NamedThing, range=Optional[Union[str, List[str]]])
 
+slots.data_substrates_collection = Slot(uri=STANDARDSDATASUBSTRATE.data_substrates_collection, name="data_substrates_collection", curie=STANDARDSDATASUBSTRATE.curie('data_substrates_collection'),
+                   model_uri=DEFAULT_.data_substrates_collection, domain=None, range=Optional[Union[Dict[Union[str, DataSubstrateId], Union[dict, DataSubstrate]], List[Union[dict, DataSubstrate]]]])
+
 slots.ROR_ID = Slot(uri=STANDARDSORGANIZATION.ROR_ID, name="ROR_ID", curie=STANDARDSORGANIZATION.curie('ROR_ID'),
                    model_uri=DEFAULT_.ROR_ID, domain=None, range=Optional[Union[str, RorIdentifier]])
 
@@ -834,6 +940,9 @@ slots.Wikidata_ID = Slot(uri=STANDARDSORGANIZATION.Wikidata_ID, name="Wikidata_I
 
 slots.URL = Slot(uri=STANDARDSORGANIZATION.URL, name="URL", curie=STANDARDSORGANIZATION.curie('URL'),
                    model_uri=DEFAULT_.URL, domain=None, range=Optional[str])
+
+slots.organizations = Slot(uri=STANDARDSORGANIZATION.organizations, name="organizations", curie=STANDARDSORGANIZATION.curie('organizations'),
+                   model_uri=DEFAULT_.organizations, domain=None, range=Optional[Union[Dict[Union[str, OrganizationId], Union[dict, Organization]], List[Union[dict, Organization]]]])
 
 slots.collection = Slot(uri=STANDARDSDATASTANDARDORTOOL.collection, name="collection", curie=STANDARDSDATASTANDARDORTOOL.curie('collection'),
                    model_uri=DEFAULT_.collection, domain=NamedThing, range=Optional[Union[Union[str, "StandardsCollectionTag"], List[Union[str, "StandardsCollectionTag"]]]])
@@ -861,6 +970,9 @@ slots.formal_specification = Slot(uri=STANDARDSDATASTANDARDORTOOL.formal_specifi
 
 slots.has_relevant_organization = Slot(uri=STANDARDSDATASTANDARDORTOOL.has_relevant_organization, name="has_relevant_organization", curie=STANDARDSDATASTANDARDORTOOL.curie('has_relevant_organization'),
                    model_uri=DEFAULT_.has_relevant_organization, domain=DataStandardOrTool, range=Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]])
+
+slots.data_standardortools_collection = Slot(uri=STANDARDSDATASTANDARDORTOOL.data_standardortools_collection, name="data_standardortools_collection", curie=STANDARDSDATASTANDARDORTOOL.curie('data_standardortools_collection'),
+                   model_uri=DEFAULT_.data_standardortools_collection, domain=None, range=Optional[Union[Dict[Union[str, DataStandardOrToolId], Union[dict, DataStandardOrTool]], List[Union[dict, DataStandardOrTool]]]])
 
 slots.use_case_category = Slot(uri=STANDARDSUSECASE.use_case_category, name="use_case_category", curie=STANDARDSUSECASE.curie('use_case_category'),
                    model_uri=DEFAULT_.use_case_category, domain=NamedThing, range=Optional[Union[str, "UseCaseCategory"]])
@@ -894,6 +1006,9 @@ slots.involved_in_metadata_management = Slot(uri=STANDARDSUSECASE.involved_in_me
 
 slots.involved_in_quality_control = Slot(uri=STANDARDSUSECASE.involved_in_quality_control, name="involved_in_quality_control", curie=STANDARDSUSECASE.curie('involved_in_quality_control'),
                    model_uri=DEFAULT_.involved_in_quality_control, domain=NamedThing, range=Optional[Union[bool, Bool]])
+
+slots.use_cases = Slot(uri=STANDARDSUSECASE.use_cases, name="use_cases", curie=STANDARDSUSECASE.curie('use_cases'),
+                   model_uri=DEFAULT_.use_cases, domain=None, range=Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]])
 
 slots.UseCase_use_case_category = Slot(uri=STANDARDSUSECASE.use_case_category, name="UseCase_use_case_category", curie=STANDARDSUSECASE.curie('use_case_category'),
                    model_uri=DEFAULT_.UseCase_use_case_category, domain=UseCase, range=Union[str, "UseCaseCategory"])

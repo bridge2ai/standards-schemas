@@ -49,6 +49,11 @@ message DataStandardOrTool
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
  }
+// A container for DataStandardOrTool(s).
+message DataStandardOrToolContainer
+ {
+ repeated  dataStandardOrTool dataStandardortoolsCollection = 0
+ }
 // Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.
 message DataSubstrate
  {
@@ -63,6 +68,11 @@ message DataSubstrate
  repeated  string fileExtensions = 0
  repeated  string limitations = 0
  }
+// A container for DataSubstrates.
+message DataSubstrateContainer
+ {
+ repeated  dataSubstrate dataSubstratesCollection = 0
+ }
 // Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
 message DataTopic
  {
@@ -73,6 +83,11 @@ message DataTopic
   edamIdentifier eDAMID = 0
   meshIdentifier meSHID = 0
   ncitIdentifier nCITID = 0
+ }
+// A container for DataTopics.
+message DataTopicContainer
+ {
+ repeated  dataTopic dataTopicsCollection = 0
  }
 // Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.
 message ModelRepository
@@ -127,6 +142,11 @@ message Organization
   wikidataIdentifier wikidataID = 0
   string uRL = 0
  repeated  namedThing relatedTo = 0
+ }
+// A container for Organizations.
+message OrganizationContainer
+ {
+ repeated  organization organizations = 0
  }
 // Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.
 message ReferenceDataOrDataset
@@ -232,4 +252,9 @@ message UseCase
   boolean involvedInMetadataManagement = 0
   boolean involvedInQualityControl = 0
  repeated  uriorcurie xref = 0
+ }
+// A container for UseCase.
+message UseCaseContainer
+ {
+ repeated  useCase useCases = 0
  }

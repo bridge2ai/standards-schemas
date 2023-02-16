@@ -1,8 +1,6 @@
-# Slot: birth_date
-_Date on which a person is born_
+# Slot: usecases
 
-
-URI: [schema:birthDate](http://schema.org/birthDate)
+URI: [STANDARDSUSECASE:usecases](https://w3id.org/bridge2ai/standards-usecase-schema/usecases)
 
 
 
@@ -15,7 +13,7 @@ URI: [schema:birthDate](http://schema.org/birthDate)
 
 | Name | Description |
 | --- | --- |
-[UseCase](UseCase.md) | Represents a UseCase
+[UseCaseContainer](UseCaseContainer.md) | A container for UseCase
 
 
 
@@ -24,7 +22,9 @@ URI: [schema:birthDate](http://schema.org/birthDate)
 
 ## Properties
 
-* Range: [xsd:date](xsd:date)
+* Range: [UseCase](UseCase.md)
+* Multivalued: True
+
 
 
 
@@ -52,15 +52,16 @@ URI: [schema:birthDate](http://schema.org/birthDate)
 
 <details>
 ```yaml
-name: birth_date
-description: Date on which a person is born
+name: usecases
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
-slot_uri: schema:birthDate
-alias: birth_date
+multivalued: true
+alias: usecases
 domain_of:
-- UseCase
-range: date
+- UseCaseContainer
+range: UseCase
+inlined: true
+inlined_as_list: true
 
 ```
 </details>

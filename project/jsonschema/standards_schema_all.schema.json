@@ -236,6 +236,20 @@
             "title": "DataStandardOrTool",
             "type": "object"
         },
+        "DataStandardOrToolContainer": {
+            "additionalProperties": false,
+            "description": "A container for DataStandardOrTool(s).",
+            "properties": {
+                "data_standardortools_collection": {
+                    "items": {
+                        "$ref": "#/$defs/DataStandardOrTool"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "DataStandardOrToolContainer",
+            "type": "object"
+        },
         "DataSubstrate": {
             "additionalProperties": false,
             "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.",
@@ -302,6 +316,20 @@
             "title": "DataSubstrate",
             "type": "object"
         },
+        "DataSubstrateContainer": {
+            "additionalProperties": false,
+            "description": "A container for DataSubstrates.",
+            "properties": {
+                "data_substrates_collection": {
+                    "items": {
+                        "$ref": "#/$defs/DataSubstrate"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "DataSubstrateContainer",
+            "type": "object"
+        },
         "DataTopic": {
             "additionalProperties": false,
             "description": "Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.",
@@ -339,6 +367,20 @@
                 "id"
             ],
             "title": "DataTopic",
+            "type": "object"
+        },
+        "DataTopicContainer": {
+            "additionalProperties": false,
+            "description": "A container for DataTopics.",
+            "properties": {
+                "data_topics_collection": {
+                    "items": {
+                        "$ref": "#/$defs/DataTopic"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "DataTopicContainer",
             "type": "object"
         },
         "ModelRepository": {
@@ -565,6 +607,20 @@
                 "id"
             ],
             "title": "Organization",
+            "type": "object"
+        },
+        "OrganizationContainer": {
+            "additionalProperties": false,
+            "description": "A container for Organizations.",
+            "properties": {
+                "organizations": {
+                    "items": {
+                        "$ref": "#/$defs/Organization"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "OrganizationContainer",
             "type": "object"
         },
         "ReferenceDataOrDataset": {
@@ -1095,6 +1151,20 @@
             ],
             "title": "UseCaseCategory",
             "type": "string"
+        },
+        "UseCaseContainer": {
+            "additionalProperties": false,
+            "description": "A container for UseCase.",
+            "properties": {
+                "use_cases": {
+                    "items": {
+                        "$ref": "#/$defs/UseCase"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "UseCaseContainer",
+            "type": "object"
         }
     },
     "$id": "https://w3id.org/bridge2ai/standards-schema-all",

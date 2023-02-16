@@ -72,6 +72,7 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [UseCase](UseCase.md) | [enables](enables.md) | range | [UseCase](UseCase.md) |
+| [UseCaseContainer](UseCaseContainer.md) | [use_cases](use_cases.md) | range | [UseCase](UseCase.md) |
 
 
 

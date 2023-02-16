@@ -18,11 +18,20 @@
    "DataStandardOrTool": {
       "@id": "STANDARDSDATASTANDARDORTOOL:DataStandardOrTool"
    },
+   "DataStandardOrToolContainer": {
+      "@id": "STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer"
+   },
    "DataSubstrate": {
       "@id": "STANDARDSDATASUBSTRATE:DataSubstrate"
    },
+   "DataSubstrateContainer": {
+      "@id": "STANDARDSDATASUBSTRATE:DataSubstrateContainer"
+   },
    "DataTopic": {
       "@id": "STANDARDSDATATOPIC:DataTopic"
+   },
+   "DataTopicContainer": {
+      "@id": "STANDARDSDATATOPIC:DataTopicContainer"
    },
    "ModelRepository": {
       "@id": "STANDARDSDATASTANDARDORTOOL:ModelRepository"
@@ -35,6 +44,9 @@
    },
    "Organization": {
       "@id": "STANDARDSORGANIZATION:Organization"
+   },
+   "OrganizationContainer": {
+      "@id": "STANDARDSORGANIZATION:OrganizationContainer"
    },
    "ReferenceDataOrDataset": {
       "@id": "STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset"
@@ -53,5 +65,8 @@
    },
    "UseCase": {
       "@id": "STANDARDSUSECASE:UseCase"
+   },
+   "UseCaseContainer": {
+      "@id": "STANDARDSUSECASE:UseCaseContainer"
    }
 }

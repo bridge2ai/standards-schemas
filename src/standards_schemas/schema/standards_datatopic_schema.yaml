@@ -37,3 +37,17 @@ classes:
       - EDAM_ID
       - MeSH_ID
       - NCIT_ID
+
+  DataTopicContainer:
+    description: >-
+      A container for DataTopics.
+    slots:
+      - data_topics_collection
+
+slots:
+
+  data_topics_collection:
+    range: DataTopic
+    inlined: true
+    inlined_as_list: true
+    multivalued: true

@@ -12,6 +12,9 @@ High-level classes for Bridge2AI Standards schemas.
 
 ### Classes
 
+ * [DataStandardOrToolContainer](DataStandardOrToolContainer.md) - A container for DataStandardOrTool(s).
+ * [DataSubstrateContainer](DataSubstrateContainer.md) - A container for DataSubstrates.
+ * [DataTopicContainer](DataTopicContainer.md) - A container for DataTopics.
  * [NamedThing](NamedThing.md) - A generic grouping for any identifiable entity
      * [DataStandardOrTool](DataStandardOrTool.md) - Represents a standard or tool in the Bridge2AI Standards Registry.
          * [DataStandard](DataStandard.md) - Represents a general purpose standard in the Bridge2AI Standards Registry.
@@ -27,6 +30,8 @@ High-level classes for Bridge2AI Standards schemas.
      * [DataTopic](DataTopic.md) - Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
      * [Organization](Organization.md) - Represents a group or organization related to or responsible for one or more Bridge2AI standards.
      * [UseCase](UseCase.md) - Represents a use case for Bridge2AI standards.
+ * [OrganizationContainer](OrganizationContainer.md) - A container for Organizations.
+ * [UseCaseContainer](UseCaseContainer.md) - A container for UseCase.
 
 ### Mixins
 
@@ -39,6 +44,9 @@ High-level classes for Bridge2AI Standards schemas.
  * [ROR_ID](ROR_ID.md)
  * [URL](URL.md)
  * [Wikidata_ID](Wikidata_ID.md)
+ * [data_standardortools_collection](data_standardortools_collection.md)
+ * [data_substrates_collection](data_substrates_collection.md)
+ * [data_topics_collection](data_topics_collection.md)
  * [description](description.md) - A human-readable description for a thing.
  * [id](id.md) - A unique identifier for a thing.
  * [name](name.md) - A human-readable name for a thing.
@@ -65,11 +73,13 @@ High-level classes for Bridge2AI Standards schemas.
      * [use_case_category](use_case_category.md) - Category of the UseCase. Not all projects will incorporate use cases in all categories.
          * [UseCase➞use_case_category](UseCase_use_case_category.md)
      * [xref](xref.md) - URI of corresponding class in an ontology of experimental procedures, in CURIE form.
+ * [organizations](organizations.md)
  * [related_to](related_to.md) - A relationship that is asserted between two named things.
      * [concerns_data_topic](concerns_data_topic.md) - Subject standard is generally applied in the context of object data topic.
      * [has_relevant_organization](has_relevant_organization.md) - Subject standard is managed or otherwise guided buy the object organization(s).
      * [subclass_of](subclass_of.md) - Holds between two classes where the domain class is a specialization of the range class.
  * [relevance_to_dgps](relevance_to_dgps.md) - Relevance of the use case to one or more DGPs.
+ * [use_cases](use_cases.md)
 
 ### Enums
 

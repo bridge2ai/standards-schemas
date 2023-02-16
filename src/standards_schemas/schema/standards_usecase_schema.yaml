@@ -46,6 +46,12 @@ classes:
       use_case_category:
         required: true
 
+  UseCaseContainer:
+    description: >-
+      A container for UseCase.
+    slots:
+      - use_cases
+
 slots:
 
   use_case_category:
@@ -124,6 +130,11 @@ slots:
     description: >-
       True is use case is likely to be implemented as
       part of data validation operations.
+  use_cases:
+    range: UseCase
+    inlined: true
+    inlined_as_list: true
+    multivalued: true
     
 enums:
   UseCaseCategory:

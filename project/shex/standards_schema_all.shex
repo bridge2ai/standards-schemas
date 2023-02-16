@@ -93,6 +93,13 @@ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool  (
     @STANDARDSDATASTANDARDORTOOL:SoftwareOrTool OR @STANDARDSDATASTANDARDORTOOL:TrainingProgram
 )
 
+STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer CLOSED {
+    (  $STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer_tes STANDARDSDATASTANDARDORTOOL:data_standardortools_collection
+       @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool * ;
+       rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer ] ?
+    )
+}
+
 STANDARDSDATASUBSTRATE:DataSubstrate CLOSED {
     (  $STANDARDSDATASUBSTRATE:DataSubstrate_tes (  &STANDARDS:NamedThing_tes ;
           rdf:type [ schema:Thing ] ? ;
@@ -107,6 +114,13 @@ STANDARDSDATASUBSTRATE:DataSubstrate CLOSED {
     )
 }
 
+STANDARDSDATASUBSTRATE:DataSubstrateContainer CLOSED {
+    (  $STANDARDSDATASUBSTRATE:DataSubstrateContainer_tes STANDARDSDATASUBSTRATE:data_substrates_collection
+       @STANDARDSDATASUBSTRATE:DataSubstrate * ;
+       rdf:type [ STANDARDSDATASUBSTRATE:DataSubstrateContainer ] ?
+    )
+}
+
 STANDARDSDATATOPIC:DataTopic CLOSED {
     (  $STANDARDSDATATOPIC:DataTopic_tes (  &STANDARDS:NamedThing_tes ;
           rdf:type [ schema:Thing ] ? ;
@@ -115,6 +129,12 @@ STANDARDSDATATOPIC:DataTopic CLOSED {
           STANDARDS:NCIT_ID @STANDARDS:NcitIdentifier ?
        ) ;
        rdf:type [ STANDARDSDATATOPIC:DataTopic ]
+    )
+}
+
+STANDARDSDATATOPIC:DataTopicContainer CLOSED {
+    (  $STANDARDSDATATOPIC:DataTopicContainer_tes STANDARDSDATATOPIC:data_topics_collection @STANDARDSDATATOPIC:DataTopic * ;
+       rdf:type [ STANDARDSDATATOPIC:DataTopicContainer ] ?
     )
 }
 
@@ -155,6 +175,12 @@ STANDARDSORGANIZATION:Organization CLOSED {
           STANDARDS:related_to @STANDARDS:NamedThing *
        ) ;
        rdf:type [ STANDARDSORGANIZATION:Organization ]
+    )
+}
+
+STANDARDSORGANIZATION:OrganizationContainer CLOSED {
+    (  $STANDARDSORGANIZATION:OrganizationContainer_tes STANDARDSORGANIZATION:organizations @STANDARDSORGANIZATION:Organization * ;
+       rdf:type [ STANDARDSORGANIZATION:OrganizationContainer ] ?
     )
 }
 
@@ -215,6 +241,12 @@ STANDARDSUSECASE:UseCase CLOSED {
           STANDARDS:xref @linkml:Uriorcurie *
        ) ;
        rdf:type [ STANDARDSUSECASE:UseCase ]
+    )
+}
+
+STANDARDSUSECASE:UseCaseContainer CLOSED {
+    (  $STANDARDSUSECASE:UseCaseContainer_tes STANDARDSUSECASE:use_cases @STANDARDSUSECASE:UseCase * ;
+       rdf:type [ STANDARDSUSECASE:UseCaseContainer ] ?
     )
 }
 

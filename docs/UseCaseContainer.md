@@ -1,18 +1,20 @@
-# Class: UseCaseCollection
-_A holder for UseCase objects_
+# Class: UseCaseContainer
+_A container for UseCase._
 
 
 
 
-URI: [STANDARDSUSECASE:UseCaseCollection](https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCollection)
+URI: [STANDARDSUSECASE:UseCaseContainer](https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseContainer)
+
 
 
 ```mermaid
  classDiagram
-    class UseCaseCollection
-      UseCaseCollection : entries
+    class UseCaseContainer
+      UseCaseContainer : use_cases
       
 ```
+
 
 
 
@@ -23,7 +25,7 @@ URI: [STANDARDSUSECASE:UseCaseCollection](https://w3id.org/bridge2ai/standards-u
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [entries](entries.md) | 0..* <br/> [UseCase](UseCase.md) |  | direct |
+| [use_cases](use_cases.md) | 0..* <br/> [UseCase](UseCase.md) |  | direct |
 
 
 
@@ -54,8 +56,11 @@ URI: [STANDARDSUSECASE:UseCaseCollection](https://w3id.org/bridge2ai/standards-u
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | STANDARDSUSECASE:UseCaseCollection |
-| native | STANDARDSUSECASE:UseCaseCollection |
+| self | STANDARDSUSECASE:UseCaseContainer |
+| native | STANDARDSUSECASE:UseCaseContainer |
+
+
+
 
 
 ## LinkML Source
@@ -66,19 +71,12 @@ URI: [STANDARDSUSECASE:UseCaseCollection](https://w3id.org/bridge2ai/standards-u
 
 <details>
 ```yaml
-name: UseCaseCollection
-description: A holder for UseCase objects
+name: UseCaseContainer
+description: A container for UseCase.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
-attributes:
-  entries:
-    name: entries
-    from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
-    rank: 1000
-    multivalued: true
-    range: UseCase
-    inlined: true
-tree_root: true
+slots:
+- use_cases
 
 ```
 </details>
@@ -87,23 +85,23 @@ tree_root: true
 
 <details>
 ```yaml
-name: UseCaseCollection
-description: A holder for UseCase objects
+name: UseCaseContainer
+description: A container for UseCase.
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
 attributes:
-  entries:
-    name: entries
+  use_cases:
+    name: use_cases
     from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
     rank: 1000
     multivalued: true
-    alias: entries
-    owner: UseCaseCollection
+    alias: use_cases
+    owner: UseCaseContainer
     domain_of:
-    - UseCaseCollection
+    - UseCaseContainer
     range: UseCase
     inlined: true
-tree_root: true
+    inlined_as_list: true
 
 ```
 </details>

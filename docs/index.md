@@ -14,18 +14,23 @@ Name: standards-schema-all
 | [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app... |
 | [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |
 | [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |
+| [DataStandardOrToolContainer](DataStandardOrToolContainer.md) | A container for DataStandardOrTool(s) |
 | [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |
+| [DataSubstrateContainer](DataSubstrateContainer.md) | A container for DataSubstrates |
 | [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |
+| [DataTopicContainer](DataTopicContainer.md) | A container for DataTopics |
 | [ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |
 | [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their... |
 | [Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ... |
+| [OrganizationContainer](OrganizationContainer.md) | A container for Organizations |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | Represents a resource in the Bridge2AI Standards Registry serving as a standa... |
 | [ReferenceImplementation](ReferenceImplementation.md) | Represents an implementation of one or more standards or tools in the Bridge2... |
 | [Registry](Registry.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |
 | [SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standar... |
 | [TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ... |
 | [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |
+| [UseCaseContainer](UseCaseContainer.md) | A container for UseCase |
 
 
 ## Slots
@@ -35,8 +40,11 @@ Name: standards-schema-all
 | [alternative_standards_and_tools](alternative_standards_and_tools.md) | List of identifiers of standards and tools; those not explicitly planned to b... |
 | [collection](collection.md) | Tags for specific sets of standards |
 | [concerns_data_topic](concerns_data_topic.md) | Subject standard is generally applied in the context of object data topic |
+| [data_standardortools_collection](data_standardortools_collection.md) |  |
 | [data_substrates](data_substrates.md) | Relevance of the use case to one or more data substrates |
+| [data_substrates_collection](data_substrates_collection.md) |  |
 | [data_topics](data_topics.md) | Relevance of the use case to one or more data topics |
+| [data_topics_collection](data_topics_collection.md) |  |
 | [description](description.md) | A human-readable description for a thing |
 | [EDAM_ID](EDAM_ID.md) |  |
 | [enables](enables.md) | Other use case(s) this use case supports or makes possible |
@@ -55,6 +63,7 @@ Name: standards-schema-all
 | [name](name.md) | A human-readable name for a thing |
 | [NCIT_ID](NCIT_ID.md) |  |
 | [node_property](node_property.md) | A grouping for any property that holds between a node and a value |
+| [organizations](organizations.md) |  |
 | [publication](publication.md) | Relevant publication for the standard or tool |
 | [purpose_detail](purpose_detail.md) | Text description of the standard or tool |
 | [related_to](related_to.md) | A relationship that is asserted between two named things |
@@ -66,6 +75,7 @@ Name: standards-schema-all
 | [url](url.md) | URL for basic documentation of the standard or tool |
 | [URL](URL.md) |  |
 | [use_case_category](use_case_category.md) | Category of the UseCase |
+| [use_cases](use_cases.md) |  |
 | [Wikidata_ID](Wikidata_ID.md) |  |
 | [xref](xref.md) | URI of corresponding class in an ontology of experimental procedures, in CURI... |
 

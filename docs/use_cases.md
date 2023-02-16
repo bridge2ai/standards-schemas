@@ -1,8 +1,6 @@
-# Slot: vital_status
-_living or dead status_
+# Slot: use_cases
 
-
-URI: [standards_usecase_schema:vital_status](https://w3id.org/bridge2ai/standards-usecase-schema/vital_status)
+URI: [STANDARDSUSECASE:use_cases](https://w3id.org/bridge2ai/standards-usecase-schema/use_cases)
 
 
 
@@ -15,7 +13,7 @@ URI: [standards_usecase_schema:vital_status](https://w3id.org/bridge2ai/standard
 
 | Name | Description |
 | --- | --- |
-[UseCase](UseCase.md) | Represents a UseCase
+[UseCaseContainer](UseCaseContainer.md) | A container for UseCase
 
 
 
@@ -24,7 +22,9 @@ URI: [standards_usecase_schema:vital_status](https://w3id.org/bridge2ai/standard
 
 ## Properties
 
-* Range: [PersonStatus](PersonStatus.md)
+* Range: [UseCase](UseCase.md)
+* Multivalued: True
+
 
 
 
@@ -52,14 +52,16 @@ URI: [standards_usecase_schema:vital_status](https://w3id.org/bridge2ai/standard
 
 <details>
 ```yaml
-name: vital_status
-description: living or dead status
+name: use_cases
 from_schema: https://w3id.org/bridge2ai/standards-usecase-schema
 rank: 1000
-alias: vital_status
+multivalued: true
+alias: use_cases
 domain_of:
-- UseCase
-range: PersonStatus
+- UseCaseContainer
+range: UseCase
+inlined: true
+inlined_as_list: true
 
 ```
 </details>

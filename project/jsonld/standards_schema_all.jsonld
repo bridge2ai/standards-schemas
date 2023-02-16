@@ -692,6 +692,21 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "data_topics_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/data_topics_collection",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/data_topics_collection",
+      "multivalued": true,
+      "owner": "DataTopicContainer",
+      "domain_of": [
+        "DataTopicContainer"
+      ],
+      "range": "DataTopic",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "metadata_storage",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage",
       "description": "Data Substrate in which metadata is stored.",
@@ -747,6 +762,21 @@
         "DataSubstrate"
       ],
       "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_substrates_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection",
+      "multivalued": true,
+      "owner": "DataSubstrateContainer",
+      "domain_of": [
+        "DataSubstrateContainer"
+      ],
+      "range": "DataSubstrate",
+      "inlined": true,
+      "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
     {
@@ -807,6 +837,21 @@
         "Organization"
       ],
       "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "organizations",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/organizations",
+      "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/organizations",
+      "multivalued": true,
+      "owner": "OrganizationContainer",
+      "domain_of": [
+        "OrganizationContainer"
+      ],
+      "range": "Organization",
+      "inlined": true,
+      "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
     {
@@ -947,6 +992,21 @@
         "DataStandardOrTool"
       ],
       "range": "Organization",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_standardortools_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/data_standardortools_collection",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/data_standardortools_collection",
+      "multivalued": true,
+      "owner": "DataStandardOrToolContainer",
+      "domain_of": [
+        "DataStandardOrToolContainer"
+      ],
+      "range": "DataStandardOrTool",
+      "inlined": true,
+      "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1119,6 +1179,21 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "use_cases",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_cases",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_cases",
+      "multivalued": true,
+      "owner": "UseCaseContainer",
+      "domain_of": [
+        "UseCaseContainer"
+      ],
+      "range": "UseCase",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "UseCase_use_case_category",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
       "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories.",
@@ -1177,6 +1252,18 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "DataTopicContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopicContainer",
+      "description": "A container for DataTopics.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
+      "slots": [
+        "data_topics_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopicContainer",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "DataSubstrate",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate",
       "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.",
@@ -1199,6 +1286,18 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "DataSubstrateContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrateContainer",
+      "description": "A container for DataSubstrates.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
+      "slots": [
+        "data_substrates_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrateContainer",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "Organization",
       "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/Organization",
       "description": "Represents a group or organization related to or responsible for one or more Bridge2AI standards.",
@@ -1216,6 +1315,18 @@
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-organization-schema/Organization",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OrganizationContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/OrganizationContainer",
+      "description": "A container for Organizations.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
+      "slots": [
+        "organizations"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-organization-schema/OrganizationContainer",
       "@type": "ClassDefinition"
     },
     {
@@ -1469,6 +1580,18 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "DataStandardOrToolContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrToolContainer",
+      "description": "A container for DataStandardOrTool(s).",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "slots": [
+        "data_standardortools_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrToolContainer",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "UseCase",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCase",
       "description": "Represents a use case for Bridge2AI standards.",
@@ -1495,13 +1618,25 @@
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCase",
       "@type": "ClassDefinition"
+    },
+    {
+      "name": "UseCaseContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseContainer",
+      "description": "A container for UseCase.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slots": [
+        "use_cases"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseContainer",
+      "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-02-01T15:18:19",
   "source_file_size": 439,
-  "generation_date": "2023-02-15T13:12:05",
+  "generation_date": "2023-02-15T20:48:26",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

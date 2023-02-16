@@ -49,6 +49,11 @@ type DataStandardOrTool
     formalSpecification: Uriorcurie
   }
 
+type DataStandardOrToolContainer
+  {
+    dataStandardortoolsCollection: [DataStandardOrTool]
+  }
+
 type DataSubstrate
   {
     id: Uriorcurie!
@@ -63,6 +68,11 @@ type DataSubstrate
     limitations: [String]
   }
 
+type DataSubstrateContainer
+  {
+    dataSubstratesCollection: [DataSubstrate]
+  }
+
 type DataTopic
   {
     id: Uriorcurie!
@@ -72,6 +82,11 @@ type DataTopic
     eDAMID: EdamIdentifier
     meSHID: MeshIdentifier
     nCITID: NcitIdentifier
+  }
+
+type DataTopicContainer
+  {
+    dataTopicsCollection: [DataTopic]
   }
 
 type ModelRepository
@@ -126,6 +141,11 @@ type Organization
     wikidataID: WikidataIdentifier
     uRL: String
     relatedTo: [NamedThing]
+  }
+
+type OrganizationContainer
+  {
+    organizations: [Organization]
   }
 
 type ReferenceDataOrDataset
@@ -231,5 +251,10 @@ type UseCase
     involvedInMetadataManagement: Boolean
     involvedInQualityControl: Boolean
     xref: [Uriorcurie]
+  }
+
+type UseCaseContainer
+  {
+    useCases: [UseCase]
   }
 
