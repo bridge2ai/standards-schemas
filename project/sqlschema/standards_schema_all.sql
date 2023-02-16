@@ -48,6 +48,11 @@ CREATE TABLE "DataStandardOrTool" (
 	PRIMARY KEY (id)
 );
 
+CREATE TABLE "DataStandardOrToolContainer" (
+	data_standardortools_collection TEXT, 
+	PRIMARY KEY (data_standardortools_collection)
+);
+
 CREATE TABLE "DataSubstrate" (
 	id TEXT NOT NULL, 
 	name TEXT, 

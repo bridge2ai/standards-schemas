@@ -49,6 +49,11 @@ type DataStandardOrTool
     formalSpecification: Uriorcurie
   }
 
+type DataStandardOrToolContainer
+  {
+    dataStandardortoolsCollection: [DataStandardOrTool]
+  }
+
 type DataSubstrate
   {
     id: Uriorcurie!

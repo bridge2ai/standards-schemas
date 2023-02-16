@@ -995,6 +995,21 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "data_standardortools_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/data_standardortools_collection",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/data_standardortools_collection",
+      "multivalued": true,
+      "owner": "DataStandardOrToolContainer",
+      "domain_of": [
+        "DataStandardOrToolContainer"
+      ],
+      "range": "DataStandardOrTool",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "use_case_category",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
       "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories.",
@@ -1565,6 +1580,18 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "DataStandardOrToolContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrToolContainer",
+      "description": "A container for DataStandardOrTool(s).",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "slots": [
+        "data_standardortools_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrToolContainer",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "UseCase",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCase",
       "description": "Represents a use case for Bridge2AI standards.",
@@ -1609,7 +1636,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-02-01T15:18:19",
   "source_file_size": 439,
-  "generation_date": "2023-02-15T20:40:53",
+  "generation_date": "2023-02-15T20:44:02",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

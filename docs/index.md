@@ -14,6 +14,7 @@ Name: standards-schema-all
 | [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app... |
 | [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |
 | [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |
+| [DataStandardOrToolContainer](DataStandardOrToolContainer.md) | A container for DataStandardOrTool(s) |
 | [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |
 | [DataSubstrateContainer](DataSubstrateContainer.md) | A container for DataSubstrates |
 | [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |
@@ -39,6 +40,7 @@ Name: standards-schema-all
 | [alternative_standards_and_tools](alternative_standards_and_tools.md) | List of identifiers of standards and tools; those not explicitly planned to b... |
 | [collection](collection.md) | Tags for specific sets of standards |
 | [concerns_data_topic](concerns_data_topic.md) | Subject standard is generally applied in the context of object data topic |
+| [data_standardortools_collection](data_standardortools_collection.md) |  |
 | [data_substrates](data_substrates.md) | Relevance of the use case to one or more data substrates |
 | [data_substrates_collection](data_substrates_collection.md) |  |
 | [data_topics](data_topics.md) | Relevance of the use case to one or more data topics |

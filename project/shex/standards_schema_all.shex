@@ -93,6 +93,13 @@ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool  (
     @STANDARDSDATASTANDARDORTOOL:SoftwareOrTool OR @STANDARDSDATASTANDARDORTOOL:TrainingProgram
 )
 
+STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer CLOSED {
+    (  $STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer_tes STANDARDSDATASTANDARDORTOOL:data_standardortools_collection
+       @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool * ;
+       rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer ] ?
+    )
+}
+
 STANDARDSDATASUBSTRATE:DataSubstrate CLOSED {
     (  $STANDARDSDATASUBSTRATE:DataSubstrate_tes (  &STANDARDS:NamedThing_tes ;
           rdf:type [ schema:Thing ] ? ;

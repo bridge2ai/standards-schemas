@@ -105,6 +105,12 @@ classes:
       related to standards or tools in the Bridge2AI Standards
       Registry.
 
+  DataStandardOrToolContainer:
+    description: >-
+      A container for DataStandardOrTool(s).
+    slots:
+      - data_standardortools_collection
+
 slots:
 
   collection:
@@ -172,6 +178,12 @@ slots:
       buy the object organization(s).
     domain: DataStandardOrTool
     range: Organization
+
+  data_standardortools_collection:
+    range: DataStandardOrTool
+    inlined: true
+    inlined_as_list: true
+    multivalued: true
 
 enums:
   StandardsCollectionTag:

@@ -49,6 +49,11 @@ message DataStandardOrTool
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
  }
+// A container for DataStandardOrTool(s).
+message DataStandardOrToolContainer
+ {
+ repeated  dataStandardOrTool dataStandardortoolsCollection = 0
+ }
 // Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.
 message DataSubstrate
  {

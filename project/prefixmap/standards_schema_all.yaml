@@ -18,6 +18,9 @@
    "DataStandardOrTool": {
       "@id": "STANDARDSDATASTANDARDORTOOL:DataStandardOrTool"
    },
+   "DataStandardOrToolContainer": {
+      "@id": "STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer"
+   },
    "DataSubstrate": {
       "@id": "STANDARDSDATASUBSTRATE:DataSubstrate"
    },
