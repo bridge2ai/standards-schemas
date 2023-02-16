@@ -48,6 +48,22 @@ CREATE TABLE "DataStandardOrTool" (
 	PRIMARY KEY (id)
 );
 
+CREATE TABLE "DataSubstrate" (
+	id TEXT NOT NULL, 
+	name TEXT, 
+	description TEXT, 
+	subclass_of TEXT, 
+	"EDAM_ID" TEXT, 
+	"MeSH_ID" TEXT, 
+	"NCIT_ID" TEXT, 
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE "DataSubstrateContainer" (
+	data_substrates_collection TEXT, 
+	PRIMARY KEY (data_substrates_collection)
+);
+
 CREATE TABLE "DataTopic" (
 	id TEXT NOT NULL, 
 	name TEXT, 
@@ -209,6 +225,7 @@ CREATE TABLE "UseCase" (
 	use_case_category VARCHAR(15) NOT NULL, 
 	known_limitations TEXT, 
 	data_topics TEXT, 
+	data_substrates TEXT, 
 	standards_and_tools_for_dgp_use TEXT, 
 	alternative_standards_and_tools TEXT, 
 	enables TEXT, 
@@ -221,19 +238,6 @@ CREATE TABLE "UseCase" (
 CREATE TABLE "UseCaseContainer" (
 	use_cases TEXT, 
 	PRIMARY KEY (use_cases)
-);
-
-CREATE TABLE "DataSubstrate" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	"EDAM_ID" TEXT, 
-	"MeSH_ID" TEXT, 
-	"NCIT_ID" TEXT, 
-	"UseCase_id" TEXT, 
-	PRIMARY KEY (id), 
-	FOREIGN KEY("UseCase_id") REFERENCES "UseCase" (id)
 );
 
 CREATE TABLE "BiomedicalStandard_collection" (
@@ -255,6 +259,27 @@ CREATE TABLE "DataStandardOrTool_collection" (
 	collection VARCHAR(24), 
 	PRIMARY KEY (backref_id, collection), 
 	FOREIGN KEY(backref_id) REFERENCES "DataStandardOrTool" (id)
+);
+
+CREATE TABLE "DataSubstrate_metadata_storage" (
+	backref_id TEXT, 
+	metadata_storage TEXT, 
+	PRIMARY KEY (backref_id, metadata_storage), 
+	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
+);
+
+CREATE TABLE "DataSubstrate_file_extensions" (
+	backref_id TEXT, 
+	file_extensions TEXT, 
+	PRIMARY KEY (backref_id, file_extensions), 
+	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
+);
+
+CREATE TABLE "DataSubstrate_limitations" (
+	backref_id TEXT, 
+	limitations TEXT, 
+	PRIMARY KEY (backref_id, limitations), 
+	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
 );
 
 CREATE TABLE "ModelRepository_collection" (
@@ -318,25 +343,4 @@ CREATE TABLE "UseCase_xref" (
 	xref TEXT, 
 	PRIMARY KEY (backref_id, xref), 
 	FOREIGN KEY(backref_id) REFERENCES "UseCase" (id)
-);
-
-CREATE TABLE "DataSubstrate_metadata_storage" (
-	backref_id TEXT, 
-	metadata_storage TEXT, 
-	PRIMARY KEY (backref_id, metadata_storage), 
-	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
-);
-
-CREATE TABLE "DataSubstrate_file_extensions" (
-	backref_id TEXT, 
-	file_extensions TEXT, 
-	PRIMARY KEY (backref_id, file_extensions), 
-	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
-);
-
-CREATE TABLE "DataSubstrate_limitations" (
-	backref_id TEXT, 
-	limitations TEXT, 
-	PRIMARY KEY (backref_id, limitations), 
-	FOREIGN KEY(backref_id) REFERENCES "DataSubstrate" (id)
 );

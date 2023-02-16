@@ -63,6 +63,11 @@ type DataSubstrate
     limitations: [String]
   }
 
+type DataSubstrateContainer
+  {
+    dataSubstratesCollection: [DataSubstrate]
+  }
+
 type DataTopic
   {
     id: Uriorcurie!

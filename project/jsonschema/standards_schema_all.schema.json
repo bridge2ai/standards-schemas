@@ -302,6 +302,20 @@
             "title": "DataSubstrate",
             "type": "object"
         },
+        "DataSubstrateContainer": {
+            "additionalProperties": false,
+            "description": "A container for DataSubstrates.",
+            "properties": {
+                "data_substrates_collection": {
+                    "items": {
+                        "$ref": "#/$defs/DataSubstrate"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "DataSubstrateContainer",
+            "type": "object"
+        },
         "DataTopic": {
             "additionalProperties": false,
             "description": "Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.",

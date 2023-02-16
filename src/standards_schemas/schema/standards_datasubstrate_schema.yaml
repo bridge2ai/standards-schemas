@@ -47,6 +47,12 @@ classes:
       - file_extensions
       - limitations
 
+  DataSubstrateContainer:
+    description: >-
+      A container for DataSubstrates.
+    slots:
+      - data_substrates_collection
+
 slots:
 
   # TODO: need the "transform to" relation
@@ -67,4 +73,9 @@ slots:
     description: >-
       Potential obstacles particular to this substrate
       or implementation. 
+    multivalued: true
+  data_substrates_collection:
+    range: DataSubstrate
+    inlined: true
+    inlined_as_list: true
     multivalued: true

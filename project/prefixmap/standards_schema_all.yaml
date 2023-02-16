@@ -21,6 +21,9 @@
    "DataSubstrate": {
       "@id": "STANDARDSDATASUBSTRATE:DataSubstrate"
    },
+   "DataSubstrateContainer": {
+      "@id": "STANDARDSDATASUBSTRATE:DataSubstrateContainer"
+   },
    "DataTopic": {
       "@id": "STANDARDSDATATOPIC:DataTopic"
    },

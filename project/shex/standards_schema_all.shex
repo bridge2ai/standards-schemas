@@ -107,6 +107,13 @@ STANDARDSDATASUBSTRATE:DataSubstrate CLOSED {
     )
 }
 
+STANDARDSDATASUBSTRATE:DataSubstrateContainer CLOSED {
+    (  $STANDARDSDATASUBSTRATE:DataSubstrateContainer_tes STANDARDSDATASUBSTRATE:data_substrates_collection
+       @STANDARDSDATASUBSTRATE:DataSubstrate * ;
+       rdf:type [ STANDARDSDATASUBSTRATE:DataSubstrateContainer ] ?
+    )
+}
+
 STANDARDSDATATOPIC:DataTopic CLOSED {
     (  $STANDARDSDATATOPIC:DataTopic_tes (  &STANDARDS:NamedThing_tes ;
           rdf:type [ schema:Thing ] ? ;

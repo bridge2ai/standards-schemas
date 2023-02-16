@@ -765,6 +765,21 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "data_substrates_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection",
+      "multivalued": true,
+      "owner": "DataSubstrateContainer",
+      "domain_of": [
+        "DataSubstrateContainer"
+      ],
+      "range": "DataSubstrate",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "ROR_ID",
       "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ROR_ID",
       "examples": [
@@ -1256,6 +1271,18 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "DataSubstrateContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrateContainer",
+      "description": "A container for DataSubstrates.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
+      "slots": [
+        "data_substrates_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrateContainer",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "Organization",
       "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/Organization",
       "description": "Represents a group or organization related to or responsible for one or more Bridge2AI standards.",
@@ -1582,7 +1609,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-02-01T15:18:19",
   "source_file_size": 439,
-  "generation_date": "2023-02-15T18:28:56",
+  "generation_date": "2023-02-15T20:40:53",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

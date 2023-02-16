@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-15T18:29:05
+# Generation date: 2023-02-15T20:41:02
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -283,6 +283,26 @@ class DataSubstrate(NamedThing):
         if not isinstance(self.limitations, list):
             self.limitations = [self.limitations] if self.limitations is not None else []
         self.limitations = [v if isinstance(v, str) else str(v) for v in self.limitations]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class DataSubstrateContainer(YAMLRoot):
+    """
+    A container for DataSubstrates.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = STANDARDSDATASUBSTRATE.DataSubstrateContainer
+    class_class_curie: ClassVar[str] = "STANDARDSDATASUBSTRATE:DataSubstrateContainer"
+    class_name: ClassVar[str] = "DataSubstrateContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer")
+
+    data_substrates_collection: Optional[Union[Dict[Union[str, DataSubstrateId], Union[dict, DataSubstrate]], List[Union[dict, DataSubstrate]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        self._normalize_inlined_as_list(slot_name="data_substrates_collection", slot_type=DataSubstrate, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -888,6 +908,9 @@ slots.file_extensions = Slot(uri=STANDARDSDATASUBSTRATE.file_extensions, name="f
 
 slots.limitations = Slot(uri=STANDARDSDATASUBSTRATE.limitations, name="limitations", curie=STANDARDSDATASUBSTRATE.curie('limitations'),
                    model_uri=DEFAULT_.limitations, domain=NamedThing, range=Optional[Union[str, List[str]]])
+
+slots.data_substrates_collection = Slot(uri=STANDARDSDATASUBSTRATE.data_substrates_collection, name="data_substrates_collection", curie=STANDARDSDATASUBSTRATE.curie('data_substrates_collection'),
+                   model_uri=DEFAULT_.data_substrates_collection, domain=None, range=Optional[Union[Dict[Union[str, DataSubstrateId], Union[dict, DataSubstrate]], List[Union[dict, DataSubstrate]]]])
 
 slots.ROR_ID = Slot(uri=STANDARDSORGANIZATION.ROR_ID, name="ROR_ID", curie=STANDARDSORGANIZATION.curie('ROR_ID'),
                    model_uri=DEFAULT_.ROR_ID, domain=None, range=Optional[Union[str, RorIdentifier]])

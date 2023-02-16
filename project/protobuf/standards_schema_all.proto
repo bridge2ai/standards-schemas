@@ -63,6 +63,11 @@ message DataSubstrate
  repeated  string fileExtensions = 0
  repeated  string limitations = 0
  }
+// A container for DataSubstrates.
+message DataSubstrateContainer
+ {
+ repeated  dataSubstrate dataSubstratesCollection = 0
+ }
 // Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
 message DataTopic
  {
