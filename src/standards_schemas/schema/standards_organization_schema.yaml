@@ -36,9 +36,9 @@ classes:
       Represents a group or organization related to or
       responsible for one or more Bridge2AI standards.
     slots:
-      - ROR_ID
-      - Wikidata_ID
-      - URL
+      - ror_id
+      - wikidata_id
+      - url
       - related_to
 
   OrganizationContainer:
@@ -49,21 +49,18 @@ classes:
 
 slots:
 
-  ROR_ID:
+  ror_id:
     examples:
       - value: ROR:02mp31p96
     range: ror identifier
     values_from:
       - ROR
-  Wikidata_ID:
+  wikidata_id:
     examples:
       - value: WIKIDATA:Q282186
     range: wikidata identifier
     values_from:
       - WIKIDATA
-  URL:
-    examples:
-      - value: https://www.zeiss.com/
   organizations:
     range: Organization
     inlined: true

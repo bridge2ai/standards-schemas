@@ -148,13 +148,6 @@ slots:
     domain: DataStandardOrTool
     range: DataTopic
   
-  url:
-    is_a: node property
-    range: uriorcurie
-    description: >-
-      URL for basic documentation of the standard
-      or tool.
-
   publication:
     is_a: node property
     range: uriorcurie

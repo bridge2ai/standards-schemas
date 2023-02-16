@@ -67,7 +67,7 @@ slots:
     slot_uri: schema:description
     description: A human-readable description for a thing.
     range: string
-  EDAM_ID:
+  edam_id:
     examples:
       - value: edam.data:0006
     range: edam identifier
@@ -76,18 +76,24 @@ slots:
       - edam.format
       - edam.operation
       - edam.topic
-  MeSH_ID:
+  mesh_id:
     examples:
       - value: MeSH:D014831
     range: mesh identifier
     values_from:
       - MeSH
-  NCIT_ID:
+  ncit_id:
     examples:
       - value: NCIT:C92692
     range: ncit identifier
     values_from:
       - NCIT
+  url:
+    is_a: node property
+    range: uriorcurie
+    description: >-
+      URL for basic documentation of the standard
+      or tool.
   xref:
     is_a: node property
     aliases: [ 'dbxref', 'Dbxref', 'DbXref' ]
