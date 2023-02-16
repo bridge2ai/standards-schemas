@@ -2,9 +2,9 @@
 # Slot: involved_in_metadata_management
 
 
-True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data.
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/involved_in_metadata_management](https://w3id.org/bridge2ai/standards-schema-all/involved_in_metadata_management)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/involved_in_metadata_management](https://w3id.org/bridge2ai/standards-schema/involved_in_metadata_management)
 
 
 ## Domain and Range

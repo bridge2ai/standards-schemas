@@ -4,7 +4,7 @@
 
 
 
-URI: [STANDARDS:MeshIdentifier](https://w3id.org/bridge2ai/standards-schema/MeshIdentifier)
+URI: [:MeshIdentifier](https://w3id.org/bridge2ai/standards-schema/MeshIdentifier)
 
 |  |  |  |
 | --- | --- | --- |

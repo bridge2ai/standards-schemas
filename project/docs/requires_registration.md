@@ -2,9 +2,9 @@
 # Slot: requires_registration
 
 
-Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/requires_registration](https://w3id.org/bridge2ai/standards-schema-all/requires_registration)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/requires_registration](https://w3id.org/bridge2ai/standards-schema/requires_registration)
 
 
 ## Domain and Range
@@ -20,13 +20,4 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/requires_registration](htt
 
 ## Used by
 
- * [BiomedicalStandard](BiomedicalStandard.md)
- * [DataStandard](DataStandard.md)
  * [DataStandardOrTool](DataStandardOrTool.md)
- * [ModelRepository](ModelRepository.md)
- * [OntologyOrVocabulary](OntologyOrVocabulary.md)
- * [ReferenceDataOrDataset](ReferenceDataOrDataset.md)
- * [ReferenceImplementation](ReferenceImplementation.md)
- * [Registry](Registry.md)
- * [SoftwareOrTool](SoftwareOrTool.md)
- * [TrainingProgram](TrainingProgram.md)

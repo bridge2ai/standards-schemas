@@ -4,7 +4,7 @@
 
 
 
-URI: [STANDARDSORGANIZATION:WikidataIdentifier](https://w3id.org/bridge2ai/standards-organization-schema/WikidataIdentifier)
+URI: [:WikidataIdentifier](https://w3id.org/bridge2ai/standards-schema/WikidataIdentifier)
 
 |  |  |  |
 | --- | --- | --- |

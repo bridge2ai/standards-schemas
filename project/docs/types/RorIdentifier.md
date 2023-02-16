@@ -4,7 +4,7 @@
 
 
 
-URI: [STANDARDSORGANIZATION:RorIdentifier](https://w3id.org/bridge2ai/standards-organization-schema/RorIdentifier)
+URI: [:RorIdentifier](https://w3id.org/bridge2ai/standards-schema/RorIdentifier)
 
 |  |  |  |
 | --- | --- | --- |

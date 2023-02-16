@@ -1,16 +1,324 @@
-id: https://w3id.org/bridge2ai/standards-schema-all
-name: standards-schema-all
-title: standards-schema-all
-description: |-
-  High-level classes for Bridge2AI Standards schemas.
+id: https://w3id.org/bridge2ai/standards-schema
+name: standards-schema
+
 prefixes:
+  MeSH: http://id.nlm.nih.gov/mesh/
+  STANDARDSDATASTANDARDORTOOL: https://w3id.org/bridge2ai/standards-datastandardortool-schema/
+  STANDARDSDATASUBSTRATE: https://w3id.org/bridge2ai/standards-datasubstrate-schema/
+  STANDARDSDATATOPIC: https://w3id.org/bridge2ai/standards-datatopic-schema/
+  STANDARDSORGANIZATION: https://w3id.org/bridge2ai/standards-organization-schema/
+  STANDARDSUSECASE: https://w3id.org/bridge2ai/standards-usecase-schema/
   linkml: https://w3id.org/linkml/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
 
 imports:
   - linkml:types
-  - standards_schema
-  - standards_datatopic_schema
-  - standards_datasubstrate_schema
-  - standards_organization_schema
-  - standards_datastandardortool_schema
-  - standards_usecase_schema
+
+default_range: string
+
+types:
+  edam identifier:
+    # schemnaloader was complaining
+    #   WARNING:root:No datatype specified for : edam identifier, using plain Literal
+    #   so added uri to the typeof assertions
+    typeof: uriorcurie
+    uri: xsd:string
+
+  mesh identifier:
+    typeof: uriorcurie
+    uri: xsd:string
+  ncit identifier:
+    typeof: uriorcurie
+    uri: xsd:string
+  ror identifier:
+    typeof: uriorcurie
+    uri: xsd:string
+  wikidata identifier:
+    typeof: uriorcurie
+    uri: xsd:string
+
+classes:
+  NamedThing:
+    slots:
+      - id
+      - name
+      - description
+      - subclass_of
+    class_uri: schema:Thing
+
+  UseCase:
+    is_a: NamedThing
+    slots:
+      - alternative_standards_and_tools
+      - data_substrates
+      - data_topics
+      - enables
+      - involved_in_experimental_design
+      - involved_in_metadata_management
+      - involved_in_quality_control
+      - known_limitations
+      - relevance_to_dgps
+      - standards_and_tools_for_dgp_use
+      - use_case_category
+      - xref
+    slot_usage:
+      # will there be some other classes in which use_case_category will be optional?
+      #   if not, this is better asserted in the slot definition as opposed to a per-class slot_usage
+      use_case_category:
+        required: true
+
+  UseCaseContainer:
+    slots:
+      - container_name
+      - use_cases
+
+
+  DataTopic:
+    is_a: NamedThing
+    slots:
+      - EDAM_ID
+      - MeSH_ID
+      - NCIT_ID
+
+  DataSubstrate:
+    is_a: NamedThing
+    slots:
+      - EDAM_ID
+      - MeSH_ID
+      - NCIT_ID
+      - metadata_storage
+      - file_extensions
+      - limitations
+
+  DataStandardOrTool:
+    is_a: NamedThing
+    slots:
+      - collection
+      - concerns_data_topic
+      - has_relevant_organization
+      - purpose_detail
+      - is_open
+      - requires_registration
+      - url
+      - publication
+      - formal_specification
+
+  Organization:
+    is_a: NamedThing
+    slots:
+      - ROR_ID
+      - Wikidata_ID
+      - URL
+      - related_to
+
+slots:
+  id:
+    identifier: true
+    slot_uri: schema:identifier
+    range: uriorcurie
+  #    required: true
+  name:
+    slot_uri: schema:name
+  description:
+    slot_uri: schema:description
+  xref:
+    # MAM I recommend using a terminal 's' on the names of multivalued slots
+    multivalued: true
+  use_case_category:
+    is_a: node property
+    range: UseCaseCategory
+  known_limitations:
+    is_a: node property
+    range: string
+  relevance_to_dgps:
+    range: DataGeneratingProject
+    multivalued: true
+  data_topics:
+    is_a: node property
+    range: DataTopic
+    multivalued: true
+  data_substrates:
+    is_a: node property
+    range: DataSubstrate
+    multivalued: true
+  standards_and_tools_for_dgp_use:
+    # TODO: add option for this to be TBD
+    is_a: node property
+    range: DataStandardOrTool
+    multivalued: true
+  alternative_standards_and_tools:
+    is_a: node property
+    range: DataStandardOrTool
+    multivalued: true
+  enables: # Should probably be an association type
+    is_a: node property
+    range: UseCase
+    multivalued: true
+  involved_in_experimental_design:
+    is_a: node property
+    range: boolean
+  involved_in_metadata_management:
+    is_a: node property
+    range: boolean
+  involved_in_quality_control:
+    is_a: node property
+    range: boolean
+  EDAM_ID:
+    examples:
+      - value: edam.data:0006
+    range: edam identifier
+    values_from:
+      - edam.data
+      - edam.format
+      - edam.operation
+      - edam.topic
+  MeSH_ID:
+    examples:
+      - value: MeSH:D014831
+    range: mesh identifier
+    values_from:
+      - MeSH
+  NCIT_ID:
+    examples:
+      - value: NCIT:C92692
+    range: ncit identifier
+    values_from:
+      - NCIT
+  metadata_storage:
+    is_a: node property
+    any_of:
+      - range: DataSubstrate
+      - equals_string: file headers
+    multivalued: true
+  file_extensions:
+    is_a: node property
+    multivalued: true
+  limitations:
+    is_a: node property
+    multivalued: true
+  collection:
+    is_a: node property
+    range: StandardsCollectionTag
+    multivalued: true
+  concerns_data_topic:
+    is_a: related_to
+    domain: DataStandardOrTool
+    range: DataTopic
+  has_relevant_organization:
+    is_a: related_to
+    domain: DataStandardOrTool
+    range: Organization
+  purpose_detail:
+    is_a: node property
+  is_open:
+    is_a: node property
+    range: boolean
+  requires_registration:
+    is_a: node property
+    range: boolean
+  url:
+    is_a: node property
+    range: uriorcurie
+  URL:
+    # two slots with the same name, only different cases? uh oh.
+    examples:
+      - value: https://www.zeiss.com/
+  publication:
+    is_a: node property
+    range: uriorcurie
+  formal_specification:
+    is_a: node property
+    range: uriorcurie
+  ROR_ID:
+    examples:
+      - value: ROR:02mp31p96
+    range: ror identifier
+    values_from:
+      - ROR
+  Wikidata_ID:
+    examples:
+      - value: WIKIDATA:Q282186
+    range: wikidata identifier
+    values_from:
+      - WIKIDATA
+  related_to:
+    domain: NamedThing
+    range: NamedThing
+    multivalued: true
+    inherited: true
+    symmetric: true
+  node property:
+    description: >-
+    domain: NamedThing
+  container_name: { }
+  use_cases:
+    multivalued: true
+    range: UseCase
+    inlined_as_list: true
+  # TODO: Could be more specific with is_a relationships.
+  subclass_of:
+    is_a: related_to
+    domain: NamedThing
+    range: NamedThing
+    multivalued: True
+    exact_mappings:
+      - rdfs:subClassOf
+      - MESH:isa
+    narrow_mappings:
+      - rdfs:subPropertyOf
+
+enums:
+  UseCaseCategory:
+    permissible_values:
+      acquisition:
+      integration:
+      standardization:
+      modeling:
+      application:
+      assessment:
+  DataGeneratingProject:
+    permissible_values:
+      aireadi:
+      chorus:
+        meaning: https://reporter.nih.gov/project-details/10472824
+      cm4ai:
+        meaning: https://reporter.nih.gov/project-details/10473403
+      voice:
+        meaning: https://reporter.nih.gov/project-details/10473236
+  StandardsCollectionTag:
+    permissible_values:
+      audiovisual:
+      deprecated:
+      fileformat:
+      toolkit:
+      clinicaldata:
+      multimodal:
+      text:
+      cloudplatform:
+      cloudservice:
+      codesystem:
+      datamodel:
+      dataregistry:
+      softwareregistry:
+      datavisualization:
+      notebookplatform:
+      datasheets:
+      machinelearningframework:
+      workflowlanguage:
+      diagnosticinstrument:
+      drugdata:
+      eyedata:
+      markuplanguage:
+      graphdataplatform:
+      guidelines:
+      minimuminformationschema:
+      modelcards:
+      obofoundry:
+      ontologyregistry:
+      policy:
+      proteindata:
+      referencegenome:
+      scrnaseqanalysis:
+      speechdata:
+      standardsregistry:
+

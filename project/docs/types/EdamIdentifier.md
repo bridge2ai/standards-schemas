@@ -4,7 +4,7 @@
 
 
 
-URI: [STANDARDS:EdamIdentifier](https://w3id.org/bridge2ai/standards-schema/EdamIdentifier)
+URI: [:EdamIdentifier](https://w3id.org/bridge2ai/standards-schema/EdamIdentifier)
 
 |  |  |  |
 | --- | --- | --- |

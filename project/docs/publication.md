@@ -2,9 +2,9 @@
 # Slot: publication
 
 
-Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/publication](https://w3id.org/bridge2ai/standards-schema-all/publication)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/publication](https://w3id.org/bridge2ai/standards-schema/publication)
 
 
 ## Domain and Range
@@ -20,13 +20,4 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/publication](https://w3id.
 
 ## Used by
 
- * [BiomedicalStandard](BiomedicalStandard.md)
- * [DataStandard](DataStandard.md)
  * [DataStandardOrTool](DataStandardOrTool.md)
- * [ModelRepository](ModelRepository.md)
- * [OntologyOrVocabulary](OntologyOrVocabulary.md)
- * [ReferenceDataOrDataset](ReferenceDataOrDataset.md)
- * [ReferenceImplementation](ReferenceImplementation.md)
- * [Registry](Registry.md)
- * [SoftwareOrTool](SoftwareOrTool.md)
- * [TrainingProgram](TrainingProgram.md)

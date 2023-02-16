@@ -4,7 +4,7 @@
 
 
 
-URI: [STANDARDS:NcitIdentifier](https://w3id.org/bridge2ai/standards-schema/NcitIdentifier)
+URI: [:NcitIdentifier](https://w3id.org/bridge2ai/standards-schema/NcitIdentifier)
 
 |  |  |  |
 | --- | --- | --- |

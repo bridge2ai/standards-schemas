@@ -2,9 +2,9 @@
 # Slot: collection
 
 
-Tags for specific sets of standards.
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/collection](https://w3id.org/bridge2ai/standards-schema-all/collection)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/collection](https://w3id.org/bridge2ai/standards-schema/collection)
 
 
 ## Domain and Range
@@ -20,13 +20,4 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/collection](https://w3id.o
 
 ## Used by
 
- * [BiomedicalStandard](BiomedicalStandard.md)
- * [DataStandard](DataStandard.md)
  * [DataStandardOrTool](DataStandardOrTool.md)
- * [ModelRepository](ModelRepository.md)
- * [OntologyOrVocabulary](OntologyOrVocabulary.md)
- * [ReferenceDataOrDataset](ReferenceDataOrDataset.md)
- * [ReferenceImplementation](ReferenceImplementation.md)
- * [Registry](Registry.md)
- * [SoftwareOrTool](SoftwareOrTool.md)
- * [TrainingProgram](TrainingProgram.md)

@@ -2,9 +2,9 @@
 # Slot: node property
 
 
-A grouping for any property that holds between a node and a value.
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/node_property](https://w3id.org/bridge2ai/standards-schema-all/node_property)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/node_property](https://w3id.org/bridge2ai/standards-schema/node_property)
 
 
 ## Domain and Range
@@ -36,7 +36,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/node_property](https://w3i
  *  [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md)
  *  [url](url.md)
  *  [use_case_category](use_case_category.md)
- *  [xref](xref.md)
 
 ## Used by
 

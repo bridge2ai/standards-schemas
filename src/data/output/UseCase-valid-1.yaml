@@ -1,0 +1,39 @@
+id: STANDARDSUSECASE:1
+name: Obtain patient data from records of clinical visits.
+description: Collecting clinical data from patient visits involves the process of
+  gathering information about a patient's medical history, current symptoms, and other
+  relevant information during a healthcare appointment. This typically includes taking
+  a detailed medical history, conducting a physical examination, ordering and interpreting
+  diagnostic tests, and documenting the findings in the patient's medical record.
+  This may also include more focused evaluations, as with the AI-READI project’s assessments
+  of cognitive function and visual acuity. Medical records may include structured/unstructured
+  text, values for lab results, and/or images.
+use_case_category: acquisition
+alternative_standards_and_tools:
+- STANDARDSUSECASE:123
+- STANDARDSUSECASE:555
+data_substrates:
+- STANDARDSUSECASE:abc
+- STANDARDSUSECASE:xyz
+data_topics:
+- STANDARDSDATATOPIC:Image
+- STANDARDSDATATOPIC:Clinical_Observations
+enables:
+- STANDARDSUSECASE:5
+- STANDARDSUSECASE:13
+- STANDARDSUSECASE:17
+- STANDARDSUSECASE:19
+involved_in_experimental_design: true
+involved_in_metadata_management: true
+involved_in_quality_control: false
+known_limitations: xyz
+relevance_to_dgps:
+- aireadi
+- chorus
+- voice
+standards_and_tools_for_dgp_use:
+- STANDARDSDATASTANDARDORTOOL:DICOM
+- STANDARDSDATASTANDARDORTOOL:OMOP_CDM
+xref:
+- STANDARDSUSECASE:abc
+- STANDARDSUSECASE:xyz

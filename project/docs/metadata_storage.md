@@ -2,9 +2,9 @@
 # Slot: metadata_storage
 
 
-Data Substrate in which metadata is stored.
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/metadata_storage](https://w3id.org/bridge2ai/standards-schema-all/metadata_storage)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/metadata_storage](https://w3id.org/bridge2ai/standards-schema/metadata_storage)
 
 
 ## Domain and Range

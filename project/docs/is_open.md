@@ -2,9 +2,9 @@
 # Slot: is_open
 
 
-Is the standard or tool FAIR and available free of cost?
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/is_open](https://w3id.org/bridge2ai/standards-schema-all/is_open)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/is_open](https://w3id.org/bridge2ai/standards-schema/is_open)
 
 
 ## Domain and Range
@@ -20,13 +20,4 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/is_open](https://w3id.org/
 
 ## Used by
 
- * [BiomedicalStandard](BiomedicalStandard.md)
- * [DataStandard](DataStandard.md)
  * [DataStandardOrTool](DataStandardOrTool.md)
- * [ModelRepository](ModelRepository.md)
- * [OntologyOrVocabulary](OntologyOrVocabulary.md)
- * [ReferenceDataOrDataset](ReferenceDataOrDataset.md)
- * [ReferenceImplementation](ReferenceImplementation.md)
- * [Registry](Registry.md)
- * [SoftwareOrTool](SoftwareOrTool.md)
- * [TrainingProgram](TrainingProgram.md)

@@ -4,7 +4,7 @@
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/EDAM_ID](https://w3id.org/bridge2ai/standards-schema-all/EDAM_ID)
+URI: [https://w3id.org/bridge2ai/standards-schema/EDAM_ID](https://w3id.org/bridge2ai/standards-schema/EDAM_ID)
 
 
 ## Domain and Range

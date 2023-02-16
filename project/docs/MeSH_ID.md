@@ -4,7 +4,7 @@
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/MeSH_ID](https://w3id.org/bridge2ai/standards-schema-all/MeSH_ID)
+URI: [https://w3id.org/bridge2ai/standards-schema/MeSH_ID](https://w3id.org/bridge2ai/standards-schema/MeSH_ID)
 
 
 ## Domain and Range

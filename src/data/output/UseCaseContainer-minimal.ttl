@@ -1,0 +1,14 @@
+@prefix STANDARDSUSECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/> .
+@prefix ns1: <https://w3id.org/bridge2ai/standards-schema/:> .
+
+STANDARDSUSECASE:1 a ns1:UseCase ;
+    ns1:use_case_category "acquisition" .
+
+STANDARDSUSECASE:2 a ns1:UseCase ;
+    ns1:use_case_category "acquisition" .
+
+[] a ns1:UseCaseContainer ;
+    ns1:container_name "container_1" ;
+    ns1:use_cases STANDARDSUSECASE:1,
+        STANDARDSUSECASE:2 .
+

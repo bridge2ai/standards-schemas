@@ -2,9 +2,9 @@
 # Slot: involved_in_experimental_design
 
 
-True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment.
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/involved_in_experimental_design](https://w3id.org/bridge2ai/standards-schema-all/involved_in_experimental_design)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/involved_in_experimental_design](https://w3id.org/bridge2ai/standards-schema/involved_in_experimental_design)
 
 
 ## Domain and Range

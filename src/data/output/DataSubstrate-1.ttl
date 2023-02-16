@@ -1,0 +1,15 @@
+@prefix STANDARDSDATASUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/> .
+@prefix ns1: <schema:> .
+@prefix ns2: <https://w3id.org/bridge2ai/standards-schema/:> .
+
+STANDARDSDATASUBSTRATE:53 a ns2:DataSubstrate ;
+    ns2:EDAM_ID "edam.format:3003" ;
+    ns2:NCIT_ID "ncit:C153367" ;
+    ns2:file_extensions "bed",
+        "txt" ;
+    ns2:limitations "Sequences can get very long." ;
+    ns2:metadata_storage "file headers" ;
+    ns2:subclass_of STANDARDSDATASUBSTRATE:1 ;
+    ns1:description "BED (Browser Extensible Data) format provides a flexible way to define the data lines that are displayed in a genome annotation track." ;
+    ns1:name "BED" .
+

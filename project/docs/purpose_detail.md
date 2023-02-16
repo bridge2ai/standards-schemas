@@ -2,9 +2,9 @@
 # Slot: purpose_detail
 
 
-Text description of the standard or tool.
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/purpose_detail](https://w3id.org/bridge2ai/standards-schema-all/purpose_detail)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/purpose_detail](https://w3id.org/bridge2ai/standards-schema/purpose_detail)
 
 
 ## Domain and Range
@@ -20,13 +20,4 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/purpose_detail](https://w3
 
 ## Used by
 
- * [BiomedicalStandard](BiomedicalStandard.md)
- * [DataStandard](DataStandard.md)
  * [DataStandardOrTool](DataStandardOrTool.md)
- * [ModelRepository](ModelRepository.md)
- * [OntologyOrVocabulary](OntologyOrVocabulary.md)
- * [ReferenceDataOrDataset](ReferenceDataOrDataset.md)
- * [ReferenceImplementation](ReferenceImplementation.md)
- * [Registry](Registry.md)
- * [SoftwareOrTool](SoftwareOrTool.md)
- * [TrainingProgram](TrainingProgram.md)

@@ -4,7 +4,7 @@
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/ROR_ID](https://w3id.org/bridge2ai/standards-schema-all/ROR_ID)
+URI: [https://w3id.org/bridge2ai/standards-schema/ROR_ID](https://w3id.org/bridge2ai/standards-schema/ROR_ID)
 
 
 ## Domain and Range

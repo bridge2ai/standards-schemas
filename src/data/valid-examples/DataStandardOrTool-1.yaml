@@ -3,10 +3,12 @@
 id: STANDARDSDATASTANDARDORTOOL:53
 name: OMOP CDM
 description: Observational Medical Outcomes Partnership Common Data Model
-collection: 
+collection:
   - datamodel
-concerns_data_topic: STANDARDSDATATOPIC:4
-has_relevant_organization: STANDARDSORGANIZATION:76
+concerns_data_topic:
+  - STANDARDSDATATOPIC:4
+has_relevant_organization:
+  - STANDARDSORGANIZATION:76
 purpose_detail: Open community data standard designed to standardize the structure and content of observational data and to enable efficient analyses that can produce reliable evidence.
 is_open: True
 requires_registration: False

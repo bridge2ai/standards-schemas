@@ -4,7 +4,7 @@
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/URL](https://w3id.org/bridge2ai/standards-schema-all/URL)
+URI: [https://w3id.org/bridge2ai/standards-schema/URL](https://w3id.org/bridge2ai/standards-schema/URL)
 
 
 ## Domain and Range

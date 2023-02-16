@@ -1,0 +1,33 @@
+@prefix STANDARDSDATASTANDARDORTOOL: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+@prefix STANDARDSDATATOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
+@prefix STANDARDSUSECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/> .
+@prefix ns1: <https://w3id.org/bridge2ai/standards-schema/:> .
+@prefix ns2: <schema:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+STANDARDSUSECASE:1 a ns1:UseCase ;
+    ns1:alternative_standards_and_tools STANDARDSUSECASE:123,
+        STANDARDSUSECASE:555 ;
+    ns1:data_substrates STANDARDSUSECASE:abc,
+        STANDARDSUSECASE:xyz ;
+    ns1:data_topics STANDARDSDATATOPIC:Clinical_Observations,
+        STANDARDSDATATOPIC:Image ;
+    ns1:enables STANDARDSUSECASE:13,
+        STANDARDSUSECASE:17,
+        STANDARDSUSECASE:19,
+        STANDARDSUSECASE:5 ;
+    ns1:involved_in_experimental_design true ;
+    ns1:involved_in_metadata_management true ;
+    ns1:involved_in_quality_control false ;
+    ns1:known_limitations "xyz" ;
+    ns1:relevance_to_dgps "aireadi",
+        "chorus",
+        "voice" ;
+    ns1:standards_and_tools_for_dgp_use STANDARDSDATASTANDARDORTOOL:DICOM,
+        STANDARDSDATASTANDARDORTOOL:OMOP_CDM ;
+    ns1:use_case_category "acquisition" ;
+    ns1:xref "STANDARDSUSECASE:abc",
+        "STANDARDSUSECASE:xyz" ;
+    ns2:description "Collecting clinical data from patient visits involves the process of gathering information about a patient's medical history, current symptoms, and other relevant information during a healthcare appointment. This typically includes taking a detailed medical history, conducting a physical examination, ordering and interpreting diagnostic tests, and documenting the findings in the patient's medical record. This may also include more focused evaluations, as with the AI-READI project’s assessments of cognitive function and visual acuity. Medical records may include structured/unstructured text, values for lab results, and/or images." ;
+    ns2:name "Obtain patient data from records of clinical visits." .
+

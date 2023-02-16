@@ -1,0 +1,6 @@
+container_name: container_1
+use_cases:
+  - id: "STANDARDSUSECASE:1"
+    use_case_category: acquisition
+  - id: "STANDARDSUSECASE:2"
+    use_case_category: acquisition

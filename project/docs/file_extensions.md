@@ -2,9 +2,9 @@
 # Slot: file_extensions
 
 
-Commonly used file extensions for this substrate.
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/file_extensions](https://w3id.org/bridge2ai/standards-schema-all/file_extensions)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/file_extensions](https://w3id.org/bridge2ai/standards-schema/file_extensions)
 
 
 ## Domain and Range

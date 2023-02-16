@@ -4,7 +4,7 @@
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/Wikidata_ID](https://w3id.org/bridge2ai/standards-schema-all/Wikidata_ID)
+URI: [https://w3id.org/bridge2ai/standards-schema/Wikidata_ID](https://w3id.org/bridge2ai/standards-schema/Wikidata_ID)
 
 
 ## Domain and Range

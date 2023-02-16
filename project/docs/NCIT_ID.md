@@ -4,7 +4,7 @@
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/NCIT_ID](https://w3id.org/bridge2ai/standards-schema-all/NCIT_ID)
+URI: [https://w3id.org/bridge2ai/standards-schema/NCIT_ID](https://w3id.org/bridge2ai/standards-schema/NCIT_ID)
 
 
 ## Domain and Range

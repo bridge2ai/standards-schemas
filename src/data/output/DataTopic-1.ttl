@@ -1,0 +1,12 @@
+@prefix STANDARDSDATATOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
+@prefix ns1: <https://w3id.org/bridge2ai/standards-schema/:> .
+@prefix ns2: <schema:> .
+
+STANDARDSDATATOPIC:2 a ns1:DataTopic ;
+    ns1:EDAM_ID "edam.topic:3070" ;
+    ns1:MeSH_ID "mesh:D001695" ;
+    ns1:NCIT_ID "ncit:C16345" ;
+    ns1:subclass_of STANDARDSDATATOPIC:1 ;
+    ns2:description "Data involving any study of living organisms at any scale." ;
+    ns2:name "Biology" .
+

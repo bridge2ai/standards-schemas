@@ -1,57 +1,28 @@
 {
-   "MESH": "http://id.nlm.nih.gov/mesh/",
-   "STANDARDS": "https://w3id.org/bridge2ai/standards-schema/",
    "STANDARDSDATASTANDARDORTOOL": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/",
-   "STANDARDSDATASUBSTRATE": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/",
    "STANDARDSDATATOPIC": "https://w3id.org/bridge2ai/standards-datatopic-schema/",
-   "STANDARDSORGANIZATION": "https://w3id.org/bridge2ai/standards-organization-schema/",
    "STANDARDSUSECASE": "https://w3id.org/bridge2ai/standards-usecase-schema/",
    "linkml": "https://w3id.org/linkml/",
-   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "schema": "http://schema.org/",
-   "BiomedicalStandard": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:BiomedicalStandard"
-   },
-   "DataStandard": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:DataStandard"
-   },
    "DataStandardOrTool": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:DataStandardOrTool"
+      "@id": "https://w3id.org/bridge2ai/standards-schema/DataStandardOrTool"
    },
    "DataSubstrate": {
-      "@id": "STANDARDSDATASUBSTRATE:DataSubstrate"
+      "@id": "https://w3id.org/bridge2ai/standards-schema/DataSubstrate"
    },
    "DataTopic": {
-      "@id": "STANDARDSDATATOPIC:DataTopic"
-   },
-   "ModelRepository": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:ModelRepository"
+      "@id": "https://w3id.org/bridge2ai/standards-schema/DataTopic"
    },
    "NamedThing": {
-      "@id": "schema:Thing"
-   },
-   "OntologyOrVocabulary": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary"
+      "@id": "https://w3id.org/bridge2ai/standards-schema/NamedThing"
    },
    "Organization": {
-      "@id": "STANDARDSORGANIZATION:Organization"
-   },
-   "ReferenceDataOrDataset": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset"
-   },
-   "ReferenceImplementation": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:ReferenceImplementation"
-   },
-   "Registry": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:Registry"
-   },
-   "SoftwareOrTool": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:SoftwareOrTool"
-   },
-   "TrainingProgram": {
-      "@id": "STANDARDSDATASTANDARDORTOOL:TrainingProgram"
+      "@id": "https://w3id.org/bridge2ai/standards-schema/Organization"
    },
    "UseCase": {
-      "@id": "STANDARDSUSECASE:UseCase"
+      "@id": "https://w3id.org/bridge2ai/standards-schema/UseCase"
+   },
+   "UseCaseContainer": {
+      "@id": "https://w3id.org/bridge2ai/standards-schema/UseCaseContainer"
    }
 }

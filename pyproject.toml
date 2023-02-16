@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "standards_schemas"
-version = "0.1.0"
+version = "0.0.0.post68.dev0+451e3f6"
 description = "Data schemas for Bridge2AI Standards."
 authors = ["J. Harry Caufield <jhc@lbl.gov>"]
 license = "MIT"
@@ -13,7 +13,7 @@ linkml-runtime = "^1.1.24"
 cruft = "^2.12.0"
 
 [tool.poetry-dynamic-versioning]
-enable = true
+enable = false
 vcs = "git"
 style = "pep440"
 

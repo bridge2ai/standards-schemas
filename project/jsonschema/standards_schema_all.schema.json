@@ -1,82 +1,7 @@
 {
     "$defs": {
-        "BiomedicalStandard": {
-            "additionalProperties": false,
-            "description": "Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes.",
-            "properties": {
-                "collection": {
-                    "description": "Tags for specific sets of standards.",
-                    "items": {
-                        "$ref": "#/$defs/StandardsCollectionTag"
-                    },
-                    "type": "array"
-                },
-                "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing.",
-                    "type": "string"
-                },
-                "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
-                    "type": "string"
-                },
-                "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing.",
-                    "type": "string"
-                },
-                "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
-                    "type": "boolean"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing.",
-                    "type": "string"
-                },
-                "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": "string"
-                },
-                "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
-                    "type": "string"
-                },
-                "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
-                    "type": "boolean"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "BiomedicalStandard",
-            "type": "object"
-        },
         "DataGeneratingProject": {
-            "description": "One of the Bridge2AI Data Generating Projects.",
+            "description": "",
             "enum": [
                 "aireadi",
                 "chorus",
@@ -86,147 +11,53 @@
             "title": "DataGeneratingProject",
             "type": "string"
         },
-        "DataStandard": {
-            "additionalProperties": false,
-            "description": "Represents a general purpose standard in the Bridge2AI Standards Registry.",
-            "properties": {
-                "collection": {
-                    "description": "Tags for specific sets of standards.",
-                    "items": {
-                        "$ref": "#/$defs/StandardsCollectionTag"
-                    },
-                    "type": "array"
-                },
-                "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing.",
-                    "type": "string"
-                },
-                "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
-                    "type": "string"
-                },
-                "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing.",
-                    "type": "string"
-                },
-                "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
-                    "type": "boolean"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing.",
-                    "type": "string"
-                },
-                "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": "string"
-                },
-                "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
-                    "type": "string"
-                },
-                "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
-                    "type": "boolean"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "DataStandard",
-            "type": "object"
-        },
         "DataStandardOrTool": {
             "additionalProperties": false,
-            "description": "Represents a standard or tool in the Bridge2AI Standards Registry.",
+            "description": "",
             "properties": {
                 "collection": {
-                    "description": "Tags for specific sets of standards.",
                     "items": {
                         "$ref": "#/$defs/StandardsCollectionTag"
                     },
                     "type": "array"
                 },
                 "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "description": {
-                    "description": "A human-readable description for a thing.",
                     "type": "string"
                 },
                 "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": "string"
                 },
                 "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "id": {
-                    "description": "A unique identifier for a thing.",
                     "type": "string"
                 },
                 "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
                     "type": "boolean"
                 },
                 "name": {
-                    "description": "A human-readable name for a thing.",
                     "type": "string"
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": "string"
                 },
                 "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
                     "type": "string"
                 },
                 "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
                 },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
                 "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
                     "type": "string"
                 }
             },
@@ -238,7 +69,7 @@
         },
         "DataSubstrate": {
             "additionalProperties": false,
-            "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.",
+            "description": "",
             "properties": {
                 "EDAM_ID": {
                     "type": "string"
@@ -250,22 +81,18 @@
                     "type": "string"
                 },
                 "description": {
-                    "description": "A human-readable description for a thing.",
                     "type": "string"
                 },
                 "file_extensions": {
-                    "description": "Commonly used file extensions for this substrate.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "id": {
-                    "description": "A unique identifier for a thing.",
                     "type": "string"
                 },
                 "limitations": {
-                    "description": "Potential obstacles particular to this substrate or implementation. ",
                     "items": {
                         "type": "string"
                     },
@@ -278,22 +105,13 @@
                             "const": "file headers"
                         }
                     ],
-                    "description": "Data Substrate in which metadata is stored.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "name": {
-                    "description": "A human-readable name for a thing.",
                     "type": "string"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
                 }
             },
             "required": [
@@ -304,7 +122,7 @@
         },
         "DataTopic": {
             "additionalProperties": false,
-            "description": "Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.",
+            "description": "",
             "properties": {
                 "EDAM_ID": {
                     "type": "string"
@@ -316,23 +134,13 @@
                     "type": "string"
                 },
                 "description": {
-                    "description": "A human-readable description for a thing.",
                     "type": "string"
                 },
                 "id": {
-                    "description": "A unique identifier for a thing.",
                     "type": "string"
                 },
                 "name": {
-                    "description": "A human-readable name for a thing.",
                     "type": "string"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
                 }
             },
             "required": [
@@ -341,103 +149,18 @@
             "title": "DataTopic",
             "type": "object"
         },
-        "ModelRepository": {
-            "additionalProperties": false,
-            "description": "Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.",
-            "properties": {
-                "collection": {
-                    "description": "Tags for specific sets of standards.",
-                    "items": {
-                        "$ref": "#/$defs/StandardsCollectionTag"
-                    },
-                    "type": "array"
-                },
-                "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing.",
-                    "type": "string"
-                },
-                "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
-                    "type": "string"
-                },
-                "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing.",
-                    "type": "string"
-                },
-                "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
-                    "type": "boolean"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing.",
-                    "type": "string"
-                },
-                "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": "string"
-                },
-                "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
-                    "type": "string"
-                },
-                "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
-                    "type": "boolean"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "ModelRepository",
-            "type": "object"
-        },
         "NamedThing": {
             "additionalProperties": false,
-            "description": "A generic grouping for any identifiable entity",
+            "description": "",
             "properties": {
                 "description": {
-                    "description": "A human-readable description for a thing.",
                     "type": "string"
                 },
                 "id": {
-                    "description": "A unique identifier for a thing.",
                     "type": "string"
                 },
                 "name": {
-                    "description": "A human-readable name for a thing.",
                     "type": "string"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
                 }
             },
             "required": [
@@ -446,84 +169,9 @@
             "title": "NamedThing",
             "type": "object"
         },
-        "OntologyOrVocabulary": {
-            "additionalProperties": false,
-            "description": "A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.",
-            "properties": {
-                "collection": {
-                    "description": "Tags for specific sets of standards.",
-                    "items": {
-                        "$ref": "#/$defs/StandardsCollectionTag"
-                    },
-                    "type": "array"
-                },
-                "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing.",
-                    "type": "string"
-                },
-                "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
-                    "type": "string"
-                },
-                "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing.",
-                    "type": "string"
-                },
-                "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
-                    "type": "boolean"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing.",
-                    "type": "string"
-                },
-                "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": "string"
-                },
-                "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
-                    "type": "string"
-                },
-                "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
-                    "type": "boolean"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "OntologyOrVocabulary",
-            "type": "object"
-        },
         "Organization": {
             "additionalProperties": false,
-            "description": "Represents a group or organization related to or responsible for one or more Bridge2AI standards.",
+            "description": "",
             "properties": {
                 "ROR_ID": {
                     "type": "string"
@@ -535,26 +183,15 @@
                     "type": "string"
                 },
                 "description": {
-                    "description": "A human-readable description for a thing.",
                     "type": "string"
                 },
                 "id": {
-                    "description": "A unique identifier for a thing.",
                     "type": "string"
                 },
                 "name": {
-                    "description": "A human-readable name for a thing.",
                     "type": "string"
                 },
                 "related_to": {
-                    "description": "A relationship that is asserted between two named things.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
                     "items": {
                         "type": "string"
                     },
@@ -567,308 +204,8 @@
             "title": "Organization",
             "type": "object"
         },
-        "ReferenceDataOrDataset": {
-            "additionalProperties": false,
-            "description": "Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.",
-            "properties": {
-                "collection": {
-                    "description": "Tags for specific sets of standards.",
-                    "items": {
-                        "$ref": "#/$defs/StandardsCollectionTag"
-                    },
-                    "type": "array"
-                },
-                "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing.",
-                    "type": "string"
-                },
-                "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
-                    "type": "string"
-                },
-                "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing.",
-                    "type": "string"
-                },
-                "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
-                    "type": "boolean"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing.",
-                    "type": "string"
-                },
-                "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": "string"
-                },
-                "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
-                    "type": "string"
-                },
-                "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
-                    "type": "boolean"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "ReferenceDataOrDataset",
-            "type": "object"
-        },
-        "ReferenceImplementation": {
-            "additionalProperties": false,
-            "description": "Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case.",
-            "properties": {
-                "collection": {
-                    "description": "Tags for specific sets of standards.",
-                    "items": {
-                        "$ref": "#/$defs/StandardsCollectionTag"
-                    },
-                    "type": "array"
-                },
-                "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing.",
-                    "type": "string"
-                },
-                "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
-                    "type": "string"
-                },
-                "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing.",
-                    "type": "string"
-                },
-                "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
-                    "type": "boolean"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing.",
-                    "type": "string"
-                },
-                "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": "string"
-                },
-                "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
-                    "type": "string"
-                },
-                "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
-                    "type": "boolean"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "ReferenceImplementation",
-            "type": "object"
-        },
-        "Registry": {
-            "additionalProperties": false,
-            "description": "Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources.",
-            "properties": {
-                "collection": {
-                    "description": "Tags for specific sets of standards.",
-                    "items": {
-                        "$ref": "#/$defs/StandardsCollectionTag"
-                    },
-                    "type": "array"
-                },
-                "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing.",
-                    "type": "string"
-                },
-                "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
-                    "type": "string"
-                },
-                "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing.",
-                    "type": "string"
-                },
-                "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
-                    "type": "boolean"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing.",
-                    "type": "string"
-                },
-                "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": "string"
-                },
-                "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
-                    "type": "string"
-                },
-                "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
-                    "type": "boolean"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "Registry",
-            "type": "object"
-        },
-        "SoftwareOrTool": {
-            "additionalProperties": false,
-            "description": "Represents a piece of software or computational tool in the Bridge2AI Standards Registry.",
-            "properties": {
-                "collection": {
-                    "description": "Tags for specific sets of standards.",
-                    "items": {
-                        "$ref": "#/$defs/StandardsCollectionTag"
-                    },
-                    "type": "array"
-                },
-                "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing.",
-                    "type": "string"
-                },
-                "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
-                    "type": "string"
-                },
-                "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing.",
-                    "type": "string"
-                },
-                "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
-                    "type": "boolean"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing.",
-                    "type": "string"
-                },
-                "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": "string"
-                },
-                "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
-                    "type": "string"
-                },
-                "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
-                    "type": "boolean"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "SoftwareOrTool",
-            "type": "object"
-        },
         "StandardsCollectionTag": {
-            "description": "Tags for specific sets of standards.",
+            "description": "",
             "enum": [
                 "audiovisual",
                 "deprecated",
@@ -908,168 +245,71 @@
             "title": "StandardsCollectionTag",
             "type": "string"
         },
-        "TrainingProgram": {
-            "additionalProperties": false,
-            "description": "Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry.",
-            "properties": {
-                "collection": {
-                    "description": "Tags for specific sets of standards.",
-                    "items": {
-                        "$ref": "#/$defs/StandardsCollectionTag"
-                    },
-                    "type": "array"
-                },
-                "concerns_data_topic": {
-                    "description": "Subject standard is generally applied in the context of object data topic.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing.",
-                    "type": "string"
-                },
-                "formal_specification": {
-                    "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
-                    "type": "string"
-                },
-                "has_relevant_organization": {
-                    "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing.",
-                    "type": "string"
-                },
-                "is_open": {
-                    "description": "Is the standard or tool FAIR and available free of cost?",
-                    "type": "boolean"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing.",
-                    "type": "string"
-                },
-                "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": "string"
-                },
-                "purpose_detail": {
-                    "description": "Text description of the standard or tool.",
-                    "type": "string"
-                },
-                "requires_registration": {
-                    "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
-                    "type": "boolean"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "url": {
-                    "description": "URL for basic documentation of the standard or tool.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "TrainingProgram",
-            "type": "object"
-        },
         "UseCase": {
             "additionalProperties": false,
-            "description": "Represents a use case for Bridge2AI standards.",
+            "description": "",
             "properties": {
                 "alternative_standards_and_tools": {
-                    "description": "List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "data_substrates": {
-                    "description": "Relevance of the use case to one or more data substrates.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "data_topics": {
-                    "description": "Relevance of the use case to one or more data topics.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "description": {
-                    "description": "A human-readable description for a thing.",
                     "type": "string"
                 },
                 "enables": {
-                    "description": "Other use case(s) this use case supports or makes possible.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "id": {
-                    "description": "A unique identifier for a thing.",
                     "type": "string"
                 },
                 "involved_in_experimental_design": {
-                    "description": "True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment.",
                     "type": "boolean"
                 },
                 "involved_in_metadata_management": {
-                    "description": "True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data.",
                     "type": "boolean"
                 },
                 "involved_in_quality_control": {
-                    "description": "True is use case is likely to be implemented as part of data validation operations.",
                     "type": "boolean"
                 },
                 "known_limitations": {
-                    "description": "Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.",
                     "type": "string"
                 },
                 "name": {
-                    "description": "A human-readable name for a thing.",
                     "type": "string"
                 },
                 "relevance_to_dgps": {
-                    "description": "Relevance of the use case to one or more DGPs.",
                     "items": {
                         "$ref": "#/$defs/DataGeneratingProject"
                     },
                     "type": "array"
                 },
                 "standards_and_tools_for_dgp_use": {
-                    "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "subclass_of": {
-                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "use_case_category": {
-                    "$ref": "#/$defs/UseCaseCategory",
-                    "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories."
+                    "$ref": "#/$defs/UseCaseCategory"
                 },
                 "xref": {
-                    "description": "URI of corresponding class in an ontology of experimental procedures, in CURIE form.",
                     "items": {
                         "type": "string"
                     },
@@ -1084,7 +324,7 @@
             "type": "object"
         },
         "UseCaseCategory": {
-            "description": "Category of use case.",
+            "description": "",
             "enum": [
                 "acquisition",
                 "integration",
@@ -1095,13 +335,107 @@
             ],
             "title": "UseCaseCategory",
             "type": "string"
+        },
+        "UseCaseContainer": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "container_name": {
+                    "type": "string"
+                },
+                "use_cases": {
+                    "additionalProperties": {
+                        "$ref": "#/$defs/UseCase__identifier_optional"
+                    },
+                    "type": "object"
+                }
+            },
+            "title": "UseCaseContainer",
+            "type": "object"
+        },
+        "UseCase__identifier_optional": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "alternative_standards_and_tools": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "data_substrates": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "data_topics": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "enables": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "involved_in_experimental_design": {
+                    "type": "boolean"
+                },
+                "involved_in_metadata_management": {
+                    "type": "boolean"
+                },
+                "involved_in_quality_control": {
+                    "type": "boolean"
+                },
+                "known_limitations": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "relevance_to_dgps": {
+                    "items": {
+                        "$ref": "#/$defs/DataGeneratingProject"
+                    },
+                    "type": "array"
+                },
+                "standards_and_tools_for_dgp_use": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "use_case_category": {
+                    "$ref": "#/$defs/UseCaseCategory"
+                },
+                "xref": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "use_case_category"
+            ],
+            "title": "UseCase",
+            "type": "object"
         }
     },
-    "$id": "https://w3id.org/bridge2ai/standards-schema-all",
+    "$id": "https://w3id.org/bridge2ai/standards-schema",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": true,
     "metamodel_version": "1.7.0",
-    "title": "standards-schema-all",
+    "title": "standards-schema",
     "type": "object",
     "version": null
 }

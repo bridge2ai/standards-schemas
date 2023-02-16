@@ -1,15 +1,19 @@
-BASE <https://w3id.org/bridge2ai/standards-schema-all/>
+BASE <https://w3id.org/bridge2ai/standards-schema/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
 PREFIX schema: <http://schema.org/>
-PREFIX STANDARDS: <https://w3id.org/bridge2ai/standards-schema/>
-PREFIX STANDARDSDATATOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/>
-PREFIX STANDARDSDATASUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/>
-PREFIX STANDARDSORGANIZATION: <https://w3id.org/bridge2ai/standards-organization-schema/>
-PREFIX STANDARDSDATASTANDARDORTOOL: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/>
-PREFIX STANDARDSUSECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/>
 
+
+<EdamIdentifier> IRI
+
+<MeshIdentifier> IRI
+
+<NcitIdentifier> IRI
+
+<RorIdentifier> IRI
+
+<WikidataIdentifier> IRI
 
 linkml:String xsd:string
 
@@ -43,178 +47,95 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-STANDARDS:EdamIdentifier IRI
-
-STANDARDS:MeshIdentifier IRI
-
-STANDARDS:NcitIdentifier IRI
-
-STANDARDSORGANIZATION:RorIdentifier IRI
-
-STANDARDSORGANIZATION:WikidataIdentifier IRI
-
-STANDARDSDATASTANDARDORTOOL:BiomedicalStandard CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:BiomedicalStandard_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandard_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandard ] ?
+<DataStandardOrTool> CLOSED {
+    (  $<DataStandardOrTool_tes> (  &<NamedThing_tes> ;
+          rdf:type [ <NamedThing> ] ? ;
+          <collection> @<StandardsCollectionTag> * ;
+          <concerns_data_topic> @<DataTopic> * ;
+          <has_relevant_organization> @<Organization> * ;
+          <purpose_detail> @linkml:String ? ;
+          <is_open> @linkml:Boolean ? ;
+          <requires_registration> @linkml:Boolean ? ;
+          <url> @linkml:Uriorcurie ? ;
+          <publication> @linkml:Uriorcurie ? ;
+          <formal_specification> @linkml:Uriorcurie ?
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:BiomedicalStandard ]
+       rdf:type [ <DataStandardOrTool> ]
     )
 }
 
-STANDARDSDATASTANDARDORTOOL:DataStandard  (
+<DataSubstrate> CLOSED {
+    (  $<DataSubstrate_tes> (  &<NamedThing_tes> ;
+          rdf:type [ <NamedThing> ] ? ;
+          <EDAM_ID> @<EdamIdentifier> ? ;
+          <MeSH_ID> @<MeshIdentifier> ? ;
+          <NCIT_ID> @<NcitIdentifier> ? ;
+          <metadata_storage> @linkml:String * ;
+          <file_extensions> @linkml:String * ;
+          <limitations> @linkml:String *
+       ) ;
+       rdf:type [ <DataSubstrate> ]
+    )
+}
+
+<DataTopic> CLOSED {
+    (  $<DataTopic_tes> (  &<NamedThing_tes> ;
+          rdf:type [ <NamedThing> ] ? ;
+          <EDAM_ID> @<EdamIdentifier> ? ;
+          <MeSH_ID> @<MeshIdentifier> ? ;
+          <NCIT_ID> @<NcitIdentifier> ?
+       ) ;
+       rdf:type [ <DataTopic> ]
+    )
+}
+
+<NamedThing>  (
     CLOSED {
-       (  $STANDARDSDATASTANDARDORTOOL:DataStandard_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-             rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+       (  $<NamedThing_tes> (  schema:name @linkml:String ? ;
+             schema:description @linkml:String ?
           ) ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandard ]
+          rdf:type [ <NamedThing> ]
        )
-    } OR @STANDARDSDATASTANDARDORTOOL:BiomedicalStandard
+    } OR @<DataStandardOrTool> OR @<DataSubstrate> OR @<DataTopic> OR @<Organization> OR @<UseCase>
 )
 
-STANDARDSDATASTANDARDORTOOL:DataStandardOrTool  (
-    CLOSED {
-       (  $STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes (  &STANDARDS:NamedThing_tes ;
-             rdf:type [ schema:Thing ] ? ;
-             STANDARDSDATASTANDARDORTOOL:collection @STANDARDSDATASTANDARDORTOOL:StandardsCollectionTag * ;
-             STANDARDSDATASTANDARDORTOOL:concerns_data_topic @STANDARDSDATATOPIC:DataTopic * ;
-             STANDARDSDATASTANDARDORTOOL:has_relevant_organization @STANDARDSORGANIZATION:Organization * ;
-             STANDARDSDATASTANDARDORTOOL:purpose_detail @linkml:String ? ;
-             STANDARDSDATASTANDARDORTOOL:is_open @linkml:Boolean ? ;
-             STANDARDSDATASTANDARDORTOOL:requires_registration @linkml:Boolean ? ;
-             STANDARDSDATASTANDARDORTOOL:url @linkml:Uriorcurie ? ;
-             STANDARDSDATASTANDARDORTOOL:publication @linkml:Uriorcurie ? ;
-             STANDARDSDATASTANDARDORTOOL:formal_specification @linkml:Uriorcurie ?
-          ) ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ]
-       )
-    } OR @STANDARDSDATASTANDARDORTOOL:DataStandard OR @STANDARDSDATASTANDARDORTOOL:ModelRepository OR
-    @STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary OR @STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset OR
-    @STANDARDSDATASTANDARDORTOOL:ReferenceImplementation OR @STANDARDSDATASTANDARDORTOOL:Registry OR
-    @STANDARDSDATASTANDARDORTOOL:SoftwareOrTool OR @STANDARDSDATASTANDARDORTOOL:TrainingProgram
-)
-
-STANDARDSDATASUBSTRATE:DataSubstrate CLOSED {
-    (  $STANDARDSDATASUBSTRATE:DataSubstrate_tes (  &STANDARDS:NamedThing_tes ;
-          rdf:type [ schema:Thing ] ? ;
-          STANDARDS:EDAM_ID @STANDARDS:EdamIdentifier ? ;
-          STANDARDS:MeSH_ID @STANDARDS:MeshIdentifier ? ;
-          STANDARDS:NCIT_ID @STANDARDS:NcitIdentifier ? ;
-          STANDARDSDATASUBSTRATE:metadata_storage @linkml:String * ;
-          STANDARDSDATASUBSTRATE:file_extensions @linkml:String * ;
-          STANDARDSDATASUBSTRATE:limitations @linkml:String *
+<Organization> CLOSED {
+    (  $<Organization_tes> (  &<NamedThing_tes> ;
+          rdf:type [ <NamedThing> ] ? ;
+          <ROR_ID> @<RorIdentifier> ? ;
+          <Wikidata_ID> @<WikidataIdentifier> ? ;
+          <URL> @linkml:String ? ;
+          <related_to> @<NamedThing> *
        ) ;
-       rdf:type [ STANDARDSDATASUBSTRATE:DataSubstrate ]
+       rdf:type [ <Organization> ]
     )
 }
 
-STANDARDSDATATOPIC:DataTopic CLOSED {
-    (  $STANDARDSDATATOPIC:DataTopic_tes (  &STANDARDS:NamedThing_tes ;
-          rdf:type [ schema:Thing ] ? ;
-          STANDARDS:EDAM_ID @STANDARDS:EdamIdentifier ? ;
-          STANDARDS:MeSH_ID @STANDARDS:MeshIdentifier ? ;
-          STANDARDS:NCIT_ID @STANDARDS:NcitIdentifier ?
+<UseCase> CLOSED {
+    (  $<UseCase_tes> (  &<NamedThing_tes> ;
+          rdf:type [ <NamedThing> ] ? ;
+          <alternative_standards_and_tools> @<DataStandardOrTool> * ;
+          <data_substrates> @<DataSubstrate> * ;
+          <data_topics> @<DataTopic> * ;
+          <enables> @<UseCase> * ;
+          <involved_in_experimental_design> @linkml:Boolean ? ;
+          <involved_in_metadata_management> @linkml:Boolean ? ;
+          <involved_in_quality_control> @linkml:Boolean ? ;
+          <known_limitations> @linkml:String ? ;
+          <relevance_to_dgps> @<DataGeneratingProject> * ;
+          <standards_and_tools_for_dgp_use> @<DataStandardOrTool> * ;
+          <use_case_category> @<UseCaseCategory> ;
+          <xref> @linkml:String *
        ) ;
-       rdf:type [ STANDARDSDATATOPIC:DataTopic ]
+       rdf:type [ <UseCase> ]
     )
 }
 
-STANDARDSDATASTANDARDORTOOL:ModelRepository CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:ModelRepository_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+<UseCaseContainer> CLOSED {
+    (  $<UseCaseContainer_tes> (  <container_name> @linkml:String ? ;
+          <use_cases> @<UseCase> *
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:ModelRepository ]
-    )
-}
-
-STANDARDS:NamedThing  (
-    CLOSED {
-       (  $STANDARDS:NamedThing_tes (  schema:name @linkml:String ? ;
-             schema:description @linkml:String ? ;
-             STANDARDS:subclass_of @STANDARDS:NamedThing *
-          ) ;
-          rdf:type [ schema:Thing ]
-       )
-    } OR @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool OR @STANDARDSDATASUBSTRATE:DataSubstrate OR @STANDARDSDATATOPIC:DataTopic
-    OR @STANDARDSORGANIZATION:Organization OR @STANDARDSUSECASE:UseCase
-)
-
-STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
-       ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary ]
-    )
-}
-
-STANDARDSORGANIZATION:Organization CLOSED {
-    (  $STANDARDSORGANIZATION:Organization_tes (  &STANDARDS:NamedThing_tes ;
-          rdf:type [ schema:Thing ] ? ;
-          STANDARDSORGANIZATION:ROR_ID @STANDARDSORGANIZATION:RorIdentifier ? ;
-          STANDARDSORGANIZATION:Wikidata_ID @STANDARDSORGANIZATION:WikidataIdentifier ? ;
-          STANDARDSORGANIZATION:URL @linkml:String ? ;
-          STANDARDS:related_to @STANDARDS:NamedThing *
-       ) ;
-       rdf:type [ STANDARDSORGANIZATION:Organization ]
-    )
-}
-
-STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
-       ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset ]
-    )
-}
-
-STANDARDSDATASTANDARDORTOOL:ReferenceImplementation CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:ReferenceImplementation_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
-       ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:ReferenceImplementation ]
-    )
-}
-
-STANDARDSDATASTANDARDORTOOL:Registry CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:Registry_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
-       ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:Registry ]
-    )
-}
-
-STANDARDSDATASTANDARDORTOOL:SoftwareOrTool CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:SoftwareOrTool_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
-       ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:SoftwareOrTool ]
-    )
-}
-
-STANDARDSDATASTANDARDORTOOL:TrainingProgram CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:TrainingProgram_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
-       ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:TrainingProgram ]
-    )
-}
-
-STANDARDSUSECASE:UseCase CLOSED {
-    (  $STANDARDSUSECASE:UseCase_tes (  &STANDARDS:NamedThing_tes ;
-          rdf:type [ schema:Thing ] ? ;
-          STANDARDSUSECASE:use_case_category @STANDARDSUSECASE:UseCaseCategory ;
-          STANDARDSUSECASE:known_limitations @linkml:String ? ;
-          STANDARDSUSECASE:relevance_to_dgps @STANDARDS:DataGeneratingProject * ;
-          STANDARDSUSECASE:data_topics @STANDARDSDATATOPIC:DataTopic * ;
-          STANDARDSUSECASE:data_substrates @STANDARDSDATASUBSTRATE:DataSubstrate * ;
-          STANDARDSUSECASE:standards_and_tools_for_dgp_use @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool * ;
-          STANDARDSUSECASE:alternative_standards_and_tools @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool * ;
-          STANDARDSUSECASE:enables @STANDARDSUSECASE:UseCase * ;
-          STANDARDSUSECASE:involved_in_experimental_design @linkml:Boolean ? ;
-          STANDARDSUSECASE:involved_in_metadata_management @linkml:Boolean ? ;
-          STANDARDSUSECASE:involved_in_quality_control @linkml:Boolean ? ;
-          STANDARDS:xref @linkml:Uriorcurie *
-       ) ;
-       rdf:type [ STANDARDSUSECASE:UseCase ]
+       rdf:type [ <UseCaseContainer> ] ?
     )
 }
 

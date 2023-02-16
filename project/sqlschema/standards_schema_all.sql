@@ -1,44 +1,10 @@
 
 
-CREATE TABLE "BiomedicalStandard" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
-	purpose_detail TEXT, 
-	is_open BOOLEAN, 
-	requires_registration BOOLEAN, 
-	url TEXT, 
-	publication TEXT, 
-	formal_specification TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "DataStandard" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
-	purpose_detail TEXT, 
-	is_open BOOLEAN, 
-	requires_registration BOOLEAN, 
-	url TEXT, 
-	publication TEXT, 
-	formal_specification TEXT, 
-	PRIMARY KEY (id)
-);
-
 CREATE TABLE "DataStandardOrTool" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
-	subclass_of TEXT, 
 	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
 	purpose_detail TEXT, 
 	is_open BOOLEAN, 
 	requires_registration BOOLEAN, 
@@ -52,142 +18,9 @@ CREATE TABLE "DataTopic" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
-	subclass_of TEXT, 
 	"EDAM_ID" TEXT, 
 	"MeSH_ID" TEXT, 
 	"NCIT_ID" TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "ModelRepository" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
-	purpose_detail TEXT, 
-	is_open BOOLEAN, 
-	requires_registration BOOLEAN, 
-	url TEXT, 
-	publication TEXT, 
-	formal_specification TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "NamedThing" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "OntologyOrVocabulary" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
-	purpose_detail TEXT, 
-	is_open BOOLEAN, 
-	requires_registration BOOLEAN, 
-	url TEXT, 
-	publication TEXT, 
-	formal_specification TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "Organization" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	"ROR_ID" TEXT, 
-	"Wikidata_ID" TEXT, 
-	"URL" TEXT, 
-	related_to TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "ReferenceDataOrDataset" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
-	purpose_detail TEXT, 
-	is_open BOOLEAN, 
-	requires_registration BOOLEAN, 
-	url TEXT, 
-	publication TEXT, 
-	formal_specification TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "ReferenceImplementation" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
-	purpose_detail TEXT, 
-	is_open BOOLEAN, 
-	requires_registration BOOLEAN, 
-	url TEXT, 
-	publication TEXT, 
-	formal_specification TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "Registry" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
-	purpose_detail TEXT, 
-	is_open BOOLEAN, 
-	requires_registration BOOLEAN, 
-	url TEXT, 
-	publication TEXT, 
-	formal_specification TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "SoftwareOrTool" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
-	purpose_detail TEXT, 
-	is_open BOOLEAN, 
-	requires_registration BOOLEAN, 
-	url TEXT, 
-	publication TEXT, 
-	formal_specification TEXT, 
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE "TrainingProgram" (
-	id TEXT NOT NULL, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	concerns_data_topic TEXT, 
-	has_relevant_organization TEXT, 
-	purpose_detail TEXT, 
-	is_open BOOLEAN, 
-	requires_registration BOOLEAN, 
-	url TEXT, 
-	publication TEXT, 
-	formal_specification TEXT, 
 	PRIMARY KEY (id)
 );
 
@@ -195,25 +28,28 @@ CREATE TABLE "UseCase" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
-	subclass_of TEXT, 
-	use_case_category VARCHAR(15) NOT NULL, 
-	known_limitations TEXT, 
-	data_topics TEXT, 
-	standards_and_tools_for_dgp_use TEXT, 
 	alternative_standards_and_tools TEXT, 
+	data_topics TEXT, 
+	enables TEXT, 
 	involved_in_experimental_design BOOLEAN, 
 	involved_in_metadata_management BOOLEAN, 
 	involved_in_quality_control BOOLEAN, 
-	"UseCase_id" TEXT, 
-	PRIMARY KEY (id), 
-	FOREIGN KEY("UseCase_id") REFERENCES "UseCase" (id)
+	known_limitations TEXT, 
+	standards_and_tools_for_dgp_use TEXT, 
+	use_case_category VARCHAR(15) NOT NULL, 
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE "UseCaseContainer" (
+	container_name TEXT, 
+	use_cases TEXT, 
+	PRIMARY KEY (container_name, use_cases)
 );
 
 CREATE TABLE "DataSubstrate" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
-	subclass_of TEXT, 
 	"EDAM_ID" TEXT, 
 	"MeSH_ID" TEXT, 
 	"NCIT_ID" TEXT, 
@@ -222,18 +58,16 @@ CREATE TABLE "DataSubstrate" (
 	FOREIGN KEY("UseCase_id") REFERENCES "UseCase" (id)
 );
 
-CREATE TABLE "BiomedicalStandard_collection" (
-	backref_id TEXT, 
-	collection VARCHAR(24), 
-	PRIMARY KEY (backref_id, collection), 
-	FOREIGN KEY(backref_id) REFERENCES "BiomedicalStandard" (id)
-);
-
-CREATE TABLE "DataStandard_collection" (
-	backref_id TEXT, 
-	collection VARCHAR(24), 
-	PRIMARY KEY (backref_id, collection), 
-	FOREIGN KEY(backref_id) REFERENCES "DataStandard" (id)
+CREATE TABLE "Organization" (
+	id TEXT NOT NULL, 
+	name TEXT, 
+	description TEXT, 
+	"ROR_ID" TEXT, 
+	"Wikidata_ID" TEXT, 
+	"URL" TEXT, 
+	"DataStandardOrTool_id" TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY("DataStandardOrTool_id") REFERENCES "DataStandardOrTool" (id)
 );
 
 CREATE TABLE "DataStandardOrTool_collection" (
@@ -241,55 +75,6 @@ CREATE TABLE "DataStandardOrTool_collection" (
 	collection VARCHAR(24), 
 	PRIMARY KEY (backref_id, collection), 
 	FOREIGN KEY(backref_id) REFERENCES "DataStandardOrTool" (id)
-);
-
-CREATE TABLE "ModelRepository_collection" (
-	backref_id TEXT, 
-	collection VARCHAR(24), 
-	PRIMARY KEY (backref_id, collection), 
-	FOREIGN KEY(backref_id) REFERENCES "ModelRepository" (id)
-);
-
-CREATE TABLE "OntologyOrVocabulary_collection" (
-	backref_id TEXT, 
-	collection VARCHAR(24), 
-	PRIMARY KEY (backref_id, collection), 
-	FOREIGN KEY(backref_id) REFERENCES "OntologyOrVocabulary" (id)
-);
-
-CREATE TABLE "ReferenceDataOrDataset_collection" (
-	backref_id TEXT, 
-	collection VARCHAR(24), 
-	PRIMARY KEY (backref_id, collection), 
-	FOREIGN KEY(backref_id) REFERENCES "ReferenceDataOrDataset" (id)
-);
-
-CREATE TABLE "ReferenceImplementation_collection" (
-	backref_id TEXT, 
-	collection VARCHAR(24), 
-	PRIMARY KEY (backref_id, collection), 
-	FOREIGN KEY(backref_id) REFERENCES "ReferenceImplementation" (id)
-);
-
-CREATE TABLE "Registry_collection" (
-	backref_id TEXT, 
-	collection VARCHAR(24), 
-	PRIMARY KEY (backref_id, collection), 
-	FOREIGN KEY(backref_id) REFERENCES "Registry" (id)
-);
-
-CREATE TABLE "SoftwareOrTool_collection" (
-	backref_id TEXT, 
-	collection VARCHAR(24), 
-	PRIMARY KEY (backref_id, collection), 
-	FOREIGN KEY(backref_id) REFERENCES "SoftwareOrTool" (id)
-);
-
-CREATE TABLE "TrainingProgram_collection" (
-	backref_id TEXT, 
-	collection VARCHAR(24), 
-	PRIMARY KEY (backref_id, collection), 
-	FOREIGN KEY(backref_id) REFERENCES "TrainingProgram" (id)
 );
 
 CREATE TABLE "UseCase_relevance_to_dgps" (
@@ -304,6 +89,15 @@ CREATE TABLE "UseCase_xref" (
 	xref TEXT, 
 	PRIMARY KEY (backref_id, xref), 
 	FOREIGN KEY(backref_id) REFERENCES "UseCase" (id)
+);
+
+CREATE TABLE "NamedThing" (
+	id TEXT NOT NULL, 
+	name TEXT, 
+	description TEXT, 
+	"Organization_id" TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY("Organization_id") REFERENCES "Organization" (id)
 );
 
 CREATE TABLE "DataSubstrate_metadata_storage" (

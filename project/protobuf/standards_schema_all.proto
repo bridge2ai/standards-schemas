@@ -1,44 +1,8 @@
-// Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes.
-message BiomedicalStandard
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  standardsCollectionTag collection = 0
- repeated  dataTopic concernsDataTopic = 0
- repeated  organization hasRelevantOrganization = 0
-  string purposeDetail = 0
-  boolean isOpen = 0
-  boolean requiresRegistration = 0
-  uriorcurie url = 0
-  uriorcurie publication = 0
-  uriorcurie formalSpecification = 0
- }
-// Represents a general purpose standard in the Bridge2AI Standards Registry.
-message DataStandard
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  standardsCollectionTag collection = 0
- repeated  dataTopic concernsDataTopic = 0
- repeated  organization hasRelevantOrganization = 0
-  string purposeDetail = 0
-  boolean isOpen = 0
-  boolean requiresRegistration = 0
-  uriorcurie url = 0
-  uriorcurie publication = 0
-  uriorcurie formalSpecification = 0
- }
-// Represents a standard or tool in the Bridge2AI Standards Registry.
 message DataStandardOrTool
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
- repeated  namedThing subclassOf = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -49,13 +13,11 @@ message DataStandardOrTool
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
  }
-// Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.
 message DataSubstrate
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
- repeated  namedThing subclassOf = 0
   edamIdentifier eDAMID = 0
   meshIdentifier meSHID = 0
   ncitIdentifier nCITID = 0
@@ -63,173 +25,51 @@ message DataSubstrate
  repeated  string fileExtensions = 0
  repeated  string limitations = 0
  }
-// Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
 message DataTopic
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
- repeated  namedThing subclassOf = 0
   edamIdentifier eDAMID = 0
   meshIdentifier meSHID = 0
   ncitIdentifier nCITID = 0
  }
-// Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.
-message ModelRepository
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  standardsCollectionTag collection = 0
- repeated  dataTopic concernsDataTopic = 0
- repeated  organization hasRelevantOrganization = 0
-  string purposeDetail = 0
-  boolean isOpen = 0
-  boolean requiresRegistration = 0
-  uriorcurie url = 0
-  uriorcurie publication = 0
-  uriorcurie formalSpecification = 0
- }
-// A generic grouping for any identifiable entity
 message NamedThing
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
- repeated  namedThing subclassOf = 0
  }
-// A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.
-message OntologyOrVocabulary
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  standardsCollectionTag collection = 0
- repeated  dataTopic concernsDataTopic = 0
- repeated  organization hasRelevantOrganization = 0
-  string purposeDetail = 0
-  boolean isOpen = 0
-  boolean requiresRegistration = 0
-  uriorcurie url = 0
-  uriorcurie publication = 0
-  uriorcurie formalSpecification = 0
- }
-// Represents a group or organization related to or responsible for one or more Bridge2AI standards.
 message Organization
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
- repeated  namedThing subclassOf = 0
   rorIdentifier rORID = 0
   wikidataIdentifier wikidataID = 0
   string uRL = 0
  repeated  namedThing relatedTo = 0
  }
-// Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.
-message ReferenceDataOrDataset
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  standardsCollectionTag collection = 0
- repeated  dataTopic concernsDataTopic = 0
- repeated  organization hasRelevantOrganization = 0
-  string purposeDetail = 0
-  boolean isOpen = 0
-  boolean requiresRegistration = 0
-  uriorcurie url = 0
-  uriorcurie publication = 0
-  uriorcurie formalSpecification = 0
- }
-// Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case.
-message ReferenceImplementation
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  standardsCollectionTag collection = 0
- repeated  dataTopic concernsDataTopic = 0
- repeated  organization hasRelevantOrganization = 0
-  string purposeDetail = 0
-  boolean isOpen = 0
-  boolean requiresRegistration = 0
-  uriorcurie url = 0
-  uriorcurie publication = 0
-  uriorcurie formalSpecification = 0
- }
-// Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources.
-message Registry
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  standardsCollectionTag collection = 0
- repeated  dataTopic concernsDataTopic = 0
- repeated  organization hasRelevantOrganization = 0
-  string purposeDetail = 0
-  boolean isOpen = 0
-  boolean requiresRegistration = 0
-  uriorcurie url = 0
-  uriorcurie publication = 0
-  uriorcurie formalSpecification = 0
- }
-// Represents a piece of software or computational tool in the Bridge2AI Standards Registry.
-message SoftwareOrTool
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  standardsCollectionTag collection = 0
- repeated  dataTopic concernsDataTopic = 0
- repeated  organization hasRelevantOrganization = 0
-  string purposeDetail = 0
-  boolean isOpen = 0
-  boolean requiresRegistration = 0
-  uriorcurie url = 0
-  uriorcurie publication = 0
-  uriorcurie formalSpecification = 0
- }
-// Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry.
-message TrainingProgram
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  standardsCollectionTag collection = 0
- repeated  dataTopic concernsDataTopic = 0
- repeated  organization hasRelevantOrganization = 0
-  string purposeDetail = 0
-  boolean isOpen = 0
-  boolean requiresRegistration = 0
-  uriorcurie url = 0
-  uriorcurie publication = 0
-  uriorcurie formalSpecification = 0
- }
-// Represents a use case for Bridge2AI standards.
 message UseCase
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
- repeated  namedThing subclassOf = 0
-  useCaseCategory useCaseCategory = 0
-  string knownLimitations = 0
- repeated  dataGeneratingProject relevanceToDgps = 0
- repeated  dataTopic dataTopics = 0
- repeated  dataSubstrate dataSubstrates = 0
- repeated  dataStandardOrTool standardsAndToolsForDgpUse = 0
  repeated  dataStandardOrTool alternativeStandardsAndTools = 0
+ repeated  dataSubstrate dataSubstrates = 0
+ repeated  dataTopic dataTopics = 0
  repeated  useCase enables = 0
   boolean involvedInExperimentalDesign = 0
   boolean involvedInMetadataManagement = 0
   boolean involvedInQualityControl = 0
- repeated  uriorcurie xref = 0
+  string knownLimitations = 0
+ repeated  dataGeneratingProject relevanceToDgps = 0
+ repeated  dataStandardOrTool standardsAndToolsForDgpUse = 0
+  useCaseCategory useCaseCategory = 0
+ repeated  string xref = 0
+ }
+message UseCaseContainer
+ {
+  string containerName = 0
+ repeated  useCase useCases = 0
  }

@@ -1,0 +1,12 @@
+@prefix STANDARDSORGANIZATION: <https://w3id.org/bridge2ai/standards-organization-schema/> .
+@prefix ns1: <https://w3id.org/bridge2ai/standards-schema/:> .
+@prefix ns2: <schema:> .
+
+STANDARDSORGANIZATION:1 a ns1:Organization ;
+    ns1:ROR_ID "ror:03jmfdf59" ;
+    ns1:URL "https://www.ahrq.gov/" ;
+    ns1:Wikidata_ID "wikidata:Q4692008" ;
+    ns1:subclass_of STANDARDSORGANIZATION:2 ;
+    ns2:description "US Agency for Healthcare Research and Quality" ;
+    ns2:name "AHRQ" .
+

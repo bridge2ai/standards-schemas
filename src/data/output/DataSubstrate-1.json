@@ -1,0 +1,21 @@
+{
+  "id": "STANDARDSDATASUBSTRATE:53",
+  "name": "BED",
+  "description": "BED (Browser Extensible Data) format provides a flexible way to define the data lines that are displayed in a genome annotation track.",
+  "subclass_of": [
+    "STANDARDSDATASUBSTRATE:1"
+  ],
+  "EDAM_ID": "edam.format:3003",
+  "NCIT_ID": "ncit:C153367",
+  "metadata_storage": [
+    "file headers"
+  ],
+  "file_extensions": [
+    "txt",
+    "bed"
+  ],
+  "limitations": [
+    "Sequences can get very long."
+  ],
+  "@type": "DataSubstrate"
+}

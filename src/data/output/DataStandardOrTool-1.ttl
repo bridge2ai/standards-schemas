@@ -1,0 +1,20 @@
+@prefix STANDARDSDATASTANDARDORTOOL: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+@prefix STANDARDSDATATOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
+@prefix STANDARDSORGANIZATION: <https://w3id.org/bridge2ai/standards-organization-schema/> .
+@prefix ns1: <https://w3id.org/bridge2ai/standards-schema/:> .
+@prefix ns2: <schema:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+STANDARDSDATASTANDARDORTOOL:53 a ns1:DataStandardOrTool ;
+    ns1:collection "datamodel" ;
+    ns1:concerns_data_topic STANDARDSDATATOPIC:4 ;
+    ns1:formal_specification "https://github.com/OHDSI/CommonDataModel"^^xsd:anyURI ;
+    ns1:has_relevant_organization STANDARDSORGANIZATION:76 ;
+    ns1:is_open true ;
+    ns1:publication "doi:10.3233/978-1-61499-564-7-574"^^xsd:anyURI ;
+    ns1:purpose_detail "Open community data standard designed to standardize the structure and content of observational data and to enable efficient analyses that can produce reliable evidence." ;
+    ns1:requires_registration false ;
+    ns1:url "https://ohdsi.github.io/CommonDataModel/"^^xsd:anyURI ;
+    ns2:description "Observational Medical Outcomes Partnership Common Data Model" ;
+    ns2:name "OMOP CDM" .
+

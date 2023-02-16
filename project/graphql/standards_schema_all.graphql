@@ -1,43 +1,8 @@
-type BiomedicalStandard
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    collection: [StandardsCollectionTag]
-    concernsDataTopic: [DataTopic]
-    hasRelevantOrganization: [Organization]
-    purposeDetail: String
-    isOpen: Boolean
-    requiresRegistration: Boolean
-    url: Uriorcurie
-    publication: Uriorcurie
-    formalSpecification: Uriorcurie
-  }
-
-type DataStandard
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    collection: [StandardsCollectionTag]
-    concernsDataTopic: [DataTopic]
-    hasRelevantOrganization: [Organization]
-    purposeDetail: String
-    isOpen: Boolean
-    requiresRegistration: Boolean
-    url: Uriorcurie
-    publication: Uriorcurie
-    formalSpecification: Uriorcurie
-  }
-
 type DataStandardOrTool
   {
     id: Uriorcurie!
     name: String
     description: String
-    subclassOf: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -54,7 +19,6 @@ type DataSubstrate
     id: Uriorcurie!
     name: String
     description: String
-    subclassOf: [NamedThing]
     eDAMID: EdamIdentifier
     meSHID: MeshIdentifier
     nCITID: NcitIdentifier
@@ -68,27 +32,9 @@ type DataTopic
     id: Uriorcurie!
     name: String
     description: String
-    subclassOf: [NamedThing]
     eDAMID: EdamIdentifier
     meSHID: MeshIdentifier
     nCITID: NcitIdentifier
-  }
-
-type ModelRepository
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    collection: [StandardsCollectionTag]
-    concernsDataTopic: [DataTopic]
-    hasRelevantOrganization: [Organization]
-    purposeDetail: String
-    isOpen: Boolean
-    requiresRegistration: Boolean
-    url: Uriorcurie
-    publication: Uriorcurie
-    formalSpecification: Uriorcurie
   }
 
 type NamedThing
@@ -96,24 +42,6 @@ type NamedThing
     id: Uriorcurie!
     name: String
     description: String
-    subclassOf: [NamedThing]
-  }
-
-type OntologyOrVocabulary
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    collection: [StandardsCollectionTag]
-    concernsDataTopic: [DataTopic]
-    hasRelevantOrganization: [Organization]
-    purposeDetail: String
-    isOpen: Boolean
-    requiresRegistration: Boolean
-    url: Uriorcurie
-    publication: Uriorcurie
-    formalSpecification: Uriorcurie
   }
 
 type Organization
@@ -121,96 +49,10 @@ type Organization
     id: Uriorcurie!
     name: String
     description: String
-    subclassOf: [NamedThing]
     rORID: RorIdentifier
     wikidataID: WikidataIdentifier
     uRL: String
     relatedTo: [NamedThing]
-  }
-
-type ReferenceDataOrDataset
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    collection: [StandardsCollectionTag]
-    concernsDataTopic: [DataTopic]
-    hasRelevantOrganization: [Organization]
-    purposeDetail: String
-    isOpen: Boolean
-    requiresRegistration: Boolean
-    url: Uriorcurie
-    publication: Uriorcurie
-    formalSpecification: Uriorcurie
-  }
-
-type ReferenceImplementation
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    collection: [StandardsCollectionTag]
-    concernsDataTopic: [DataTopic]
-    hasRelevantOrganization: [Organization]
-    purposeDetail: String
-    isOpen: Boolean
-    requiresRegistration: Boolean
-    url: Uriorcurie
-    publication: Uriorcurie
-    formalSpecification: Uriorcurie
-  }
-
-type Registry
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    collection: [StandardsCollectionTag]
-    concernsDataTopic: [DataTopic]
-    hasRelevantOrganization: [Organization]
-    purposeDetail: String
-    isOpen: Boolean
-    requiresRegistration: Boolean
-    url: Uriorcurie
-    publication: Uriorcurie
-    formalSpecification: Uriorcurie
-  }
-
-type SoftwareOrTool
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    collection: [StandardsCollectionTag]
-    concernsDataTopic: [DataTopic]
-    hasRelevantOrganization: [Organization]
-    purposeDetail: String
-    isOpen: Boolean
-    requiresRegistration: Boolean
-    url: Uriorcurie
-    publication: Uriorcurie
-    formalSpecification: Uriorcurie
-  }
-
-type TrainingProgram
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    collection: [StandardsCollectionTag]
-    concernsDataTopic: [DataTopic]
-    hasRelevantOrganization: [Organization]
-    purposeDetail: String
-    isOpen: Boolean
-    requiresRegistration: Boolean
-    url: Uriorcurie
-    publication: Uriorcurie
-    formalSpecification: Uriorcurie
   }
 
 type UseCase
@@ -218,18 +60,23 @@ type UseCase
     id: Uriorcurie!
     name: String
     description: String
-    subclassOf: [NamedThing]
-    useCaseCategory: UseCaseCategory!
-    knownLimitations: String
-    relevanceToDgps: [DataGeneratingProject]
-    dataTopics: [DataTopic]
-    dataSubstrates: [DataSubstrate]
-    standardsAndToolsForDgpUse: [DataStandardOrTool]
     alternativeStandardsAndTools: [DataStandardOrTool]
+    dataSubstrates: [DataSubstrate]
+    dataTopics: [DataTopic]
     enables: [UseCase]
     involvedInExperimentalDesign: Boolean
     involvedInMetadataManagement: Boolean
     involvedInQualityControl: Boolean
-    xref: [Uriorcurie]
+    knownLimitations: String
+    relevanceToDgps: [DataGeneratingProject]
+    standardsAndToolsForDgpUse: [DataStandardOrTool]
+    useCaseCategory: UseCaseCategory!
+    xref: [String]
+  }
+
+type UseCaseContainer
+  {
+    containerName: String
+    useCases: [UseCase]
   }
 

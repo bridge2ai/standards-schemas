@@ -2,18 +2,17 @@
 # Slot: xref
 
 
-URI of corresponding class in an ontology of experimental procedures, in CURIE form.
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/xref](https://w3id.org/bridge2ai/standards-schema-all/xref)
+
+URI: [https://w3id.org/bridge2ai/standards-schema/xref](https://w3id.org/bridge2ai/standards-schema/xref)
 
 
 ## Domain and Range
 
-[NamedThing](NamedThing.md) &#8594;  <sub>0..\*</sub> [Uriorcurie](types/Uriorcurie.md)
+None &#8594;  <sub>0..\*</sub> [String](types/String.md)
 
 ## Parents
 
- *  is_a: [node property](node_property.md)
 
 ## Children
 
@@ -21,12 +20,3 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/xref](https://w3id.org/bri
 ## Used by
 
  * [UseCase](UseCase.md)
-
-## Other properties
-
-|  |  |  |
-| --- | --- | --- |
-| **Aliases:** | | dbxref |
-|  | | Dbxref |
-|  | | DbXref |
-
