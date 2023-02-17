@@ -153,7 +153,7 @@ attributes:
     domain_of:
     - DataTopic
     - DataSubstrate
-    range: edam identifier
+    range: edam_identifier
   mesh_id:
     name: mesh_id
     examples:
@@ -167,7 +167,7 @@ attributes:
     domain_of:
     - DataTopic
     - DataSubstrate
-    range: mesh identifier
+    range: mesh_identifier
   ncit_id:
     name: ncit_id
     examples:
@@ -181,7 +181,7 @@ attributes:
     domain_of:
     - DataTopic
     - DataSubstrate
-    range: ncit identifier
+    range: ncit_identifier
   metadata_storage:
     name: metadata_storage
     description: Data Substrate in which metadata is stored.

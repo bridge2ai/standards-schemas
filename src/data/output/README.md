@@ -89,14 +89,6 @@ subclass_of:
 - STANDARDSDATATOPIC:1
 
 ```
-## DataStandardOrToolContainer-valid-1
-### Input
-```yaml
-data_standardortools_collection:
-- id: STANDARDSDATASTANDARDORTOOL:1
-- id: STANDARDSDATASTANDARDORTOOL:2
-
-```
 ## DataStandardOrTool-valid-1
 ### Input
 ```yaml
@@ -146,6 +138,14 @@ id: STANDARDSORGANIZATION:2
 ```yaml
 id: STANDARDSUSECASE:1
 use_case_category: acquisition
+
+```
+## DataStandardOrToolContainer-minimal-1
+### Input
+```yaml
+data_standardortools_collection:
+- id: STANDARDSDATASTANDARDORTOOL:1
+- id: STANDARDSDATASTANDARDORTOOL:2
 
 ```
 ## UseCaseContainer-minimal-1

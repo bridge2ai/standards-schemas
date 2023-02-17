@@ -69,7 +69,7 @@ alias: mesh_id
 domain_of:
 - DataTopic
 - DataSubstrate
-range: mesh identifier
+range: mesh_identifier
 
 ```
 </details>

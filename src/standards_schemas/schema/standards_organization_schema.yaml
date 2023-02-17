@@ -13,8 +13,8 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
-  ROR: https://ror.org/
-  WIKIDATA: http://identifiers.org/wikidata/
+  ror: https://ror.org/
+  wikidata: http://identifiers.org/wikidata/
 default_prefix: STANDARDSORGANIZATION
 default_range: string
 
@@ -25,8 +25,12 @@ imports:
 types:
   ror_identifier:
     typeof: uriorcurie
+    id_prefixes:
+      - ror
   wikidata_identifier:
     typeof: uriorcurie
+    id_prefixes:
+      - wikidata
 
 classes:
 

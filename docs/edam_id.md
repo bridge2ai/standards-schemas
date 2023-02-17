@@ -72,7 +72,7 @@ alias: edam_id
 domain_of:
 - DataTopic
 - DataSubstrate
-range: edam identifier
+range: edam_identifier
 
 ```
 </details>

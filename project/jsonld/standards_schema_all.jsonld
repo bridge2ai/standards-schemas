@@ -243,6 +243,12 @@
     },
     {
       "name": "edam_identifier",
+      "id_prefixes": [
+        "edam.data",
+        "edam.format",
+        "edam.operation",
+        "edam.topic"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/EdamIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "typeof": "uriorcurie",
@@ -253,6 +259,9 @@
     },
     {
       "name": "mesh_identifier",
+      "id_prefixes": [
+        "mesh"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/MeshIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "typeof": "uriorcurie",
@@ -263,6 +272,9 @@
     },
     {
       "name": "ncit_identifier",
+      "id_prefixes": [
+        "ncit"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/NcitIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "typeof": "uriorcurie",
@@ -273,6 +285,9 @@
     },
     {
       "name": "ror_identifier",
+      "id_prefixes": [
+        "ror"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/RorIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
       "typeof": "uriorcurie",
@@ -283,6 +298,9 @@
     },
     {
       "name": "wikidata_identifier",
+      "id_prefixes": [
+        "wikidata"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/WikidataIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
       "typeof": "uriorcurie",
@@ -1619,7 +1637,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-02-01T15:18:19",
   "source_file_size": 439,
-  "generation_date": "2023-02-17T11:50:29",
+  "generation_date": "2023-02-17T13:14:52",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

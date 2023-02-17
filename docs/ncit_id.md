@@ -69,7 +69,7 @@ alias: ncit_id
 domain_of:
 - DataTopic
 - DataSubstrate
-range: ncit identifier
+range: ncit_identifier
 
 ```
 </details>

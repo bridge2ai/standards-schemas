@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-17T11:50:39
+# Generation date: 2023-02-17T13:15:02
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -50,21 +50,21 @@ DEFAULT_ = CurieNamespace('', 'https://w3id.org/bridge2ai/standards-schema-all/'
 class EdamIdentifier(Uriorcurie):
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
-    type_name = "edam identifier"
+    type_name = "edam_identifier"
     type_model_uri = URIRef("https://w3id.org/bridge2ai/standards-schema-all/EdamIdentifier")
 
 
 class MeshIdentifier(Uriorcurie):
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
-    type_name = "mesh identifier"
+    type_name = "mesh_identifier"
     type_model_uri = URIRef("https://w3id.org/bridge2ai/standards-schema-all/MeshIdentifier")
 
 
 class NcitIdentifier(Uriorcurie):
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
-    type_name = "ncit identifier"
+    type_name = "ncit_identifier"
     type_model_uri = URIRef("https://w3id.org/bridge2ai/standards-schema-all/NcitIdentifier")
 
 
