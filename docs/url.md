@@ -2,7 +2,7 @@
 _URL for basic documentation of the standard or tool._
 
 
-URI: [STANDARDSDATASTANDARDORTOOL:url](https://w3id.org/bridge2ai/standards-datastandardortool-schema/url)
+URI: [STANDARDS:url](https://w3id.org/bridge2ai/standards-schema/url)
 
 
 
@@ -21,6 +21,7 @@ URI: [STANDARDSDATASTANDARDORTOOL:url](https://w3id.org/bridge2ai/standards-data
 | Name | Description |
 | --- | --- |
 [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry
+[Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ...
 [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry
 [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app...
 [Registry](Registry.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a...
@@ -57,7 +58,7 @@ URI: [STANDARDSDATASTANDARDORTOOL:url](https://w3id.org/bridge2ai/standards-data
 ### Schema Source
 
 
-* from schema: https://w3id.org/bridge2ai/standards-datastandardortool-schema
+* from schema: https://w3id.org/bridge2ai/standards-schema
 
 
 
@@ -68,13 +69,14 @@ URI: [STANDARDSDATASTANDARDORTOOL:url](https://w3id.org/bridge2ai/standards-data
 ```yaml
 name: url
 description: URL for basic documentation of the standard or tool.
-from_schema: https://w3id.org/bridge2ai/standards-datastandardortool-schema
+from_schema: https://w3id.org/bridge2ai/standards-schema
 rank: 1000
 is_a: node property
 domain: NamedThing
 alias: url
 domain_of:
 - DataStandardOrTool
+- Organization
 range: uriorcurie
 
 ```

@@ -1,6 +1,6 @@
 # Slot: data_substrates_collection
 
-URI: [STANDARDSDATASUBSTRATE:data_substrates_collection](STANDARDSDATASUBSTRATE:data_substrates_collection)
+URI: [STANDARDSDATASUBSTRATE:data_substrates_collection](https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection)
 
 
 

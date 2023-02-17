@@ -4,7 +4,7 @@ _Represents a data substrate for Bridge2AI data. This may be a high-level data s
 
 
 
-URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate)
+URI: [STANDARDSDATASUBSTRATE:DataSubstrate](https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate)
 
 
 
@@ -14,14 +14,14 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate
       NamedThing <|-- DataSubstrate
       
       DataSubstrate : description
-      DataSubstrate : EDAM_ID
+      DataSubstrate : edam_id
       DataSubstrate : file_extensions
       DataSubstrate : id
       DataSubstrate : limitations
-      DataSubstrate : MeSH_ID
+      DataSubstrate : mesh_id
       DataSubstrate : metadata_storage
       DataSubstrate : name
-      DataSubstrate : NCIT_ID
+      DataSubstrate : ncit_id
       DataSubstrate : subclass_of
       
 ```
@@ -40,9 +40,9 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](STANDARDSDATASUBSTRATE:DataSubstrate
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [EDAM_ID](EDAM_ID.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) |  | direct |
-| [MeSH_ID](MeSH_ID.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) |  | direct |
-| [NCIT_ID](NCIT_ID.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) |  | direct |
+| [edam_id](edam_id.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) |  | direct |
+| [mesh_id](mesh_id.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) |  | direct |
+| [ncit_id](ncit_id.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) |  | direct |
 | [metadata_storage](metadata_storage.md) | 0..* <br/> [xsd:string](xsd:string) | Data Substrate in which metadata is stored | direct |
 | [file_extensions](file_extensions.md) | 0..* <br/> [xsd:string](xsd:string) | Commonly used file extensions for this substrate | direct |
 | [limitations](limitations.md) | 0..* <br/> [xsd:string](xsd:string) | Potential obstacles particular to this substrate or implementation | direct |
@@ -113,9 +113,9 @@ from_schema: https://w3id.org/bridge2ai/standards-datasubstrate-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- EDAM_ID
-- MeSH_ID
-- NCIT_ID
+- edam_id
+- mesh_id
+- ncit_id
 - metadata_storage
 - file_extensions
 - limitations
@@ -137,8 +137,8 @@ from_schema: https://w3id.org/bridge2ai/standards-datasubstrate-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  EDAM_ID:
-    name: EDAM_ID
+  edam_id:
+    name: edam_id
     examples:
     - value: edam.data:0006
     from_schema: https://w3id.org/bridge2ai/standards-schema
@@ -148,40 +148,40 @@ attributes:
     - edam.format
     - edam.operation
     - edam.topic
-    alias: EDAM_ID
+    alias: edam_id
     owner: DataSubstrate
     domain_of:
     - DataTopic
     - DataSubstrate
-    range: edam identifier
-  MeSH_ID:
-    name: MeSH_ID
+    range: edam_identifier
+  mesh_id:
+    name: mesh_id
     examples:
     - value: MeSH:D014831
     from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
     values_from:
     - MeSH
-    alias: MeSH_ID
+    alias: mesh_id
     owner: DataSubstrate
     domain_of:
     - DataTopic
     - DataSubstrate
-    range: mesh identifier
-  NCIT_ID:
-    name: NCIT_ID
+    range: mesh_identifier
+  ncit_id:
+    name: ncit_id
     examples:
     - value: NCIT:C92692
     from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
     values_from:
     - NCIT
-    alias: NCIT_ID
+    alias: ncit_id
     owner: DataSubstrate
     domain_of:
     - DataTopic
     - DataSubstrate
-    range: ncit identifier
+    range: ncit_identifier
   metadata_storage:
     name: metadata_storage
     description: Data Substrate in which metadata is stored.
@@ -194,6 +194,7 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - DataSubstrate
+    range: string
     any_of:
     - range: DataSubstrate
     - equals_string: file headers
@@ -209,6 +210,7 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - DataSubstrate
+    range: string
   limitations:
     name: limitations
     description: 'Potential obstacles particular to this substrate or implementation. '
@@ -221,6 +223,7 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - DataSubstrate
+    range: string
   id:
     name: id
     description: A unique identifier for a thing.

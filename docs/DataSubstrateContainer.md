@@ -4,7 +4,7 @@ _A container for DataSubstrates._
 
 
 
-URI: [STANDARDSDATASUBSTRATE:DataSubstrateContainer](STANDARDSDATASUBSTRATE:DataSubstrateContainer)
+URI: [STANDARDSDATASUBSTRATE:DataSubstrateContainer](https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrateContainer)
 
 
 

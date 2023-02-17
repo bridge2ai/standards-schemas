@@ -13,8 +13,8 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
-  ROR: https://ror.org/
-  WIKIDATA: http://identifiers.org/wikidata/
+  ror: https://ror.org/
+  wikidata: http://identifiers.org/wikidata/
 default_prefix: STANDARDSORGANIZATION
 default_range: string
 
@@ -23,10 +23,14 @@ imports:
   - standards_schema
 
 types:
-  ror identifier:
+  ror_identifier:
     typeof: uriorcurie
-  wikidata identifier:
+    id_prefixes:
+      - ror
+  wikidata_identifier:
     typeof: uriorcurie
+    id_prefixes:
+      - wikidata
 
 classes:
 
@@ -36,9 +40,9 @@ classes:
       Represents a group or organization related to or
       responsible for one or more Bridge2AI standards.
     slots:
-      - ROR_ID
-      - Wikidata_ID
-      - URL
+      - ror_id
+      - wikidata_id
+      - url
       - related_to
 
   OrganizationContainer:
@@ -49,21 +53,18 @@ classes:
 
 slots:
 
-  ROR_ID:
+  ror_id:
     examples:
       - value: ROR:02mp31p96
-    range: ror identifier
+    range: ror_identifier
     values_from:
       - ROR
-  Wikidata_ID:
+  wikidata_id:
     examples:
       - value: WIKIDATA:Q282186
-    range: wikidata identifier
+    range: wikidata_identifier
     values_from:
       - WIKIDATA
-  URL:
-    examples:
-      - value: https://www.zeiss.com/
   organizations:
     range: Organization
     inlined: true

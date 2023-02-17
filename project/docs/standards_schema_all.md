@@ -38,18 +38,15 @@ High-level classes for Bridge2AI Standards schemas.
 
 ### Slots
 
- * [EDAM_ID](EDAM_ID.md)
- * [MeSH_ID](MeSH_ID.md)
- * [NCIT_ID](NCIT_ID.md)
- * [ROR_ID](ROR_ID.md)
- * [URL](URL.md)
- * [Wikidata_ID](Wikidata_ID.md)
  * [data_standardortools_collection](data_standardortools_collection.md)
  * [data_substrates_collection](data_substrates_collection.md)
  * [data_topics_collection](data_topics_collection.md)
  * [description](description.md) - A human-readable description for a thing.
+ * [edam_id](edam_id.md)
  * [id](id.md) - A unique identifier for a thing.
+ * [mesh_id](mesh_id.md)
  * [name](name.md) - A human-readable name for a thing.
+ * [ncit_id](ncit_id.md)
  * [node property](node_property.md) - A grouping for any property that holds between a node and a value.
      * [alternative_standards_and_tools](alternative_standards_and_tools.md) - List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.
      * [collection](collection.md) - Tags for specific sets of standards.
@@ -79,7 +76,9 @@ High-level classes for Bridge2AI Standards schemas.
      * [has_relevant_organization](has_relevant_organization.md) - Subject standard is managed or otherwise guided buy the object organization(s).
      * [subclass_of](subclass_of.md) - Holds between two classes where the domain class is a specialization of the range class.
  * [relevance_to_dgps](relevance_to_dgps.md) - Relevance of the use case to one or more DGPs.
+ * [ror_id](ror_id.md)
  * [use_cases](use_cases.md)
+ * [wikidata_id](wikidata_id.md)
 
 ### Enums
 

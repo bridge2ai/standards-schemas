@@ -1,0 +1,11 @@
+{
+  "data_substrates_collection": [
+    {
+      "id": "STANDARDSDATASUBSTRATE:1"
+    },
+    {
+      "id": "STANDARDSDATASUBSTRATE:2"
+    }
+  ],
+  "@type": "DataSubstrateContainer"
+}

@@ -1,5 +1,5 @@
 
-# Type: ncit identifier
+# Type: ncit_identifier
 
 
 

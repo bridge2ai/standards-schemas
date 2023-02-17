@@ -21,6 +21,14 @@ URI: [xsd:anyURI](xsd:anyURI)
 ## Identifier and Mapping Information
 
 
+### Valid ID Prefixes
+
+Instances of this class *should* have identifiers with one of the following prefixes:
+
+* wikidata
+
+
+
 
 
 

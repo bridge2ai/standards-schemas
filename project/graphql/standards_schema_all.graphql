@@ -60,9 +60,9 @@ type DataSubstrate
     name: String
     description: String
     subclassOf: [NamedThing]
-    eDAMID: EdamIdentifier
-    meSHID: MeshIdentifier
-    nCITID: NcitIdentifier
+    edamId: EdamIdentifier
+    meshId: MeshIdentifier
+    ncitId: NcitIdentifier
     metadataStorage: [String]
     fileExtensions: [String]
     limitations: [String]
@@ -79,9 +79,9 @@ type DataTopic
     name: String
     description: String
     subclassOf: [NamedThing]
-    eDAMID: EdamIdentifier
-    meSHID: MeshIdentifier
-    nCITID: NcitIdentifier
+    edamId: EdamIdentifier
+    meshId: MeshIdentifier
+    ncitId: NcitIdentifier
   }
 
 type DataTopicContainer
@@ -137,9 +137,9 @@ type Organization
     name: String
     description: String
     subclassOf: [NamedThing]
-    rORID: RorIdentifier
-    wikidataID: WikidataIdentifier
-    uRL: String
+    rorId: RorIdentifier
+    wikidataId: WikidataIdentifier
+    url: Uriorcurie
     relatedTo: [NamedThing]
   }
 

@@ -1,5 +1,5 @@
 
-# Type: ror identifier
+# Type: ror_identifier
 
 
 

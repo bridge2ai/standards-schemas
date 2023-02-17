@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-15T20:48:36
+# Generation date: 2023-02-17T13:15:02
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -50,35 +50,35 @@ DEFAULT_ = CurieNamespace('', 'https://w3id.org/bridge2ai/standards-schema-all/'
 class EdamIdentifier(Uriorcurie):
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
-    type_name = "edam identifier"
+    type_name = "edam_identifier"
     type_model_uri = URIRef("https://w3id.org/bridge2ai/standards-schema-all/EdamIdentifier")
 
 
 class MeshIdentifier(Uriorcurie):
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
-    type_name = "mesh identifier"
+    type_name = "mesh_identifier"
     type_model_uri = URIRef("https://w3id.org/bridge2ai/standards-schema-all/MeshIdentifier")
 
 
 class NcitIdentifier(Uriorcurie):
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
-    type_name = "ncit identifier"
+    type_name = "ncit_identifier"
     type_model_uri = URIRef("https://w3id.org/bridge2ai/standards-schema-all/NcitIdentifier")
 
 
 class RorIdentifier(Uriorcurie):
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
-    type_name = "ror identifier"
+    type_name = "ror_identifier"
     type_model_uri = URIRef("https://w3id.org/bridge2ai/standards-schema-all/RorIdentifier")
 
 
 class WikidataIdentifier(Uriorcurie):
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
-    type_name = "wikidata identifier"
+    type_name = "wikidata_identifier"
     type_model_uri = URIRef("https://w3id.org/bridge2ai/standards-schema-all/WikidataIdentifier")
 
 
@@ -192,9 +192,9 @@ class DataTopic(NamedThing):
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataTopic")
 
     id: Union[str, DataTopicId] = None
-    EDAM_ID: Optional[Union[str, EdamIdentifier]] = None
-    MeSH_ID: Optional[Union[str, MeshIdentifier]] = None
-    NCIT_ID: Optional[Union[str, NcitIdentifier]] = None
+    edam_id: Optional[Union[str, EdamIdentifier]] = None
+    mesh_id: Optional[Union[str, MeshIdentifier]] = None
+    ncit_id: Optional[Union[str, NcitIdentifier]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -202,14 +202,14 @@ class DataTopic(NamedThing):
         if not isinstance(self.id, DataTopicId):
             self.id = DataTopicId(self.id)
 
-        if self.EDAM_ID is not None and not isinstance(self.EDAM_ID, EdamIdentifier):
-            self.EDAM_ID = EdamIdentifier(self.EDAM_ID)
+        if self.edam_id is not None and not isinstance(self.edam_id, EdamIdentifier):
+            self.edam_id = EdamIdentifier(self.edam_id)
 
-        if self.MeSH_ID is not None and not isinstance(self.MeSH_ID, MeshIdentifier):
-            self.MeSH_ID = MeshIdentifier(self.MeSH_ID)
+        if self.mesh_id is not None and not isinstance(self.mesh_id, MeshIdentifier):
+            self.mesh_id = MeshIdentifier(self.mesh_id)
 
-        if self.NCIT_ID is not None and not isinstance(self.NCIT_ID, NcitIdentifier):
-            self.NCIT_ID = NcitIdentifier(self.NCIT_ID)
+        if self.ncit_id is not None and not isinstance(self.ncit_id, NcitIdentifier):
+            self.ncit_id = NcitIdentifier(self.ncit_id)
 
         super().__post_init__(**kwargs)
 
@@ -250,9 +250,9 @@ class DataSubstrate(NamedThing):
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate")
 
     id: Union[str, DataSubstrateId] = None
-    EDAM_ID: Optional[Union[str, EdamIdentifier]] = None
-    MeSH_ID: Optional[Union[str, MeshIdentifier]] = None
-    NCIT_ID: Optional[Union[str, NcitIdentifier]] = None
+    edam_id: Optional[Union[str, EdamIdentifier]] = None
+    mesh_id: Optional[Union[str, MeshIdentifier]] = None
+    ncit_id: Optional[Union[str, NcitIdentifier]] = None
     metadata_storage: Optional[Union[str, List[str]]] = empty_list()
     file_extensions: Optional[Union[str, List[str]]] = empty_list()
     limitations: Optional[Union[str, List[str]]] = empty_list()
@@ -263,14 +263,14 @@ class DataSubstrate(NamedThing):
         if not isinstance(self.id, DataSubstrateId):
             self.id = DataSubstrateId(self.id)
 
-        if self.EDAM_ID is not None and not isinstance(self.EDAM_ID, EdamIdentifier):
-            self.EDAM_ID = EdamIdentifier(self.EDAM_ID)
+        if self.edam_id is not None and not isinstance(self.edam_id, EdamIdentifier):
+            self.edam_id = EdamIdentifier(self.edam_id)
 
-        if self.MeSH_ID is not None and not isinstance(self.MeSH_ID, MeshIdentifier):
-            self.MeSH_ID = MeshIdentifier(self.MeSH_ID)
+        if self.mesh_id is not None and not isinstance(self.mesh_id, MeshIdentifier):
+            self.mesh_id = MeshIdentifier(self.mesh_id)
 
-        if self.NCIT_ID is not None and not isinstance(self.NCIT_ID, NcitIdentifier):
-            self.NCIT_ID = NcitIdentifier(self.NCIT_ID)
+        if self.ncit_id is not None and not isinstance(self.ncit_id, NcitIdentifier):
+            self.ncit_id = NcitIdentifier(self.ncit_id)
 
         if not isinstance(self.metadata_storage, list):
             self.metadata_storage = [self.metadata_storage] if self.metadata_storage is not None else []
@@ -320,9 +320,9 @@ class Organization(NamedThing):
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/Organization")
 
     id: Union[str, OrganizationId] = None
-    ROR_ID: Optional[Union[str, RorIdentifier]] = None
-    Wikidata_ID: Optional[Union[str, WikidataIdentifier]] = None
-    URL: Optional[str] = None
+    ror_id: Optional[Union[str, RorIdentifier]] = None
+    wikidata_id: Optional[Union[str, WikidataIdentifier]] = None
+    url: Optional[Union[str, URIorCURIE]] = None
     related_to: Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -331,14 +331,14 @@ class Organization(NamedThing):
         if not isinstance(self.id, OrganizationId):
             self.id = OrganizationId(self.id)
 
-        if self.ROR_ID is not None and not isinstance(self.ROR_ID, RorIdentifier):
-            self.ROR_ID = RorIdentifier(self.ROR_ID)
+        if self.ror_id is not None and not isinstance(self.ror_id, RorIdentifier):
+            self.ror_id = RorIdentifier(self.ror_id)
 
-        if self.Wikidata_ID is not None and not isinstance(self.Wikidata_ID, WikidataIdentifier):
-            self.Wikidata_ID = WikidataIdentifier(self.Wikidata_ID)
+        if self.wikidata_id is not None and not isinstance(self.wikidata_id, WikidataIdentifier):
+            self.wikidata_id = WikidataIdentifier(self.wikidata_id)
 
-        if self.URL is not None and not isinstance(self.URL, str):
-            self.URL = str(self.URL)
+        if self.url is not None and not isinstance(self.url, URIorCURIE):
+            self.url = URIorCURIE(self.url)
 
         if not isinstance(self.related_to, list):
             self.related_to = [self.related_to] if self.related_to is not None else []
@@ -899,14 +899,17 @@ slots.name = Slot(uri=SCHEMA.name, name="name", curie=SCHEMA.curie('name'),
 slots.description = Slot(uri=SCHEMA.description, name="description", curie=SCHEMA.curie('description'),
                    model_uri=DEFAULT_.description, domain=None, range=Optional[str])
 
-slots.EDAM_ID = Slot(uri=STANDARDS.EDAM_ID, name="EDAM_ID", curie=STANDARDS.curie('EDAM_ID'),
-                   model_uri=DEFAULT_.EDAM_ID, domain=None, range=Optional[Union[str, EdamIdentifier]])
+slots.edam_id = Slot(uri=STANDARDS.edam_id, name="edam_id", curie=STANDARDS.curie('edam_id'),
+                   model_uri=DEFAULT_.edam_id, domain=None, range=Optional[Union[str, EdamIdentifier]])
 
-slots.MeSH_ID = Slot(uri=STANDARDS.MeSH_ID, name="MeSH_ID", curie=STANDARDS.curie('MeSH_ID'),
-                   model_uri=DEFAULT_.MeSH_ID, domain=None, range=Optional[Union[str, MeshIdentifier]])
+slots.mesh_id = Slot(uri=STANDARDS.mesh_id, name="mesh_id", curie=STANDARDS.curie('mesh_id'),
+                   model_uri=DEFAULT_.mesh_id, domain=None, range=Optional[Union[str, MeshIdentifier]])
 
-slots.NCIT_ID = Slot(uri=STANDARDS.NCIT_ID, name="NCIT_ID", curie=STANDARDS.curie('NCIT_ID'),
-                   model_uri=DEFAULT_.NCIT_ID, domain=None, range=Optional[Union[str, NcitIdentifier]])
+slots.ncit_id = Slot(uri=STANDARDS.ncit_id, name="ncit_id", curie=STANDARDS.curie('ncit_id'),
+                   model_uri=DEFAULT_.ncit_id, domain=None, range=Optional[Union[str, NcitIdentifier]])
+
+slots.url = Slot(uri=STANDARDS.url, name="url", curie=STANDARDS.curie('url'),
+                   model_uri=DEFAULT_.url, domain=NamedThing, range=Optional[Union[str, URIorCURIE]])
 
 slots.xref = Slot(uri=STANDARDS.xref, name="xref", curie=STANDARDS.curie('xref'),
                    model_uri=DEFAULT_.xref, domain=NamedThing, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
@@ -932,14 +935,11 @@ slots.limitations = Slot(uri=STANDARDSDATASUBSTRATE.limitations, name="limitatio
 slots.data_substrates_collection = Slot(uri=STANDARDSDATASUBSTRATE.data_substrates_collection, name="data_substrates_collection", curie=STANDARDSDATASUBSTRATE.curie('data_substrates_collection'),
                    model_uri=DEFAULT_.data_substrates_collection, domain=None, range=Optional[Union[Dict[Union[str, DataSubstrateId], Union[dict, DataSubstrate]], List[Union[dict, DataSubstrate]]]])
 
-slots.ROR_ID = Slot(uri=STANDARDSORGANIZATION.ROR_ID, name="ROR_ID", curie=STANDARDSORGANIZATION.curie('ROR_ID'),
-                   model_uri=DEFAULT_.ROR_ID, domain=None, range=Optional[Union[str, RorIdentifier]])
+slots.ror_id = Slot(uri=STANDARDSORGANIZATION.ror_id, name="ror_id", curie=STANDARDSORGANIZATION.curie('ror_id'),
+                   model_uri=DEFAULT_.ror_id, domain=None, range=Optional[Union[str, RorIdentifier]])
 
-slots.Wikidata_ID = Slot(uri=STANDARDSORGANIZATION.Wikidata_ID, name="Wikidata_ID", curie=STANDARDSORGANIZATION.curie('Wikidata_ID'),
-                   model_uri=DEFAULT_.Wikidata_ID, domain=None, range=Optional[Union[str, WikidataIdentifier]])
-
-slots.URL = Slot(uri=STANDARDSORGANIZATION.URL, name="URL", curie=STANDARDSORGANIZATION.curie('URL'),
-                   model_uri=DEFAULT_.URL, domain=None, range=Optional[str])
+slots.wikidata_id = Slot(uri=STANDARDSORGANIZATION.wikidata_id, name="wikidata_id", curie=STANDARDSORGANIZATION.curie('wikidata_id'),
+                   model_uri=DEFAULT_.wikidata_id, domain=None, range=Optional[Union[str, WikidataIdentifier]])
 
 slots.organizations = Slot(uri=STANDARDSORGANIZATION.organizations, name="organizations", curie=STANDARDSORGANIZATION.curie('organizations'),
                    model_uri=DEFAULT_.organizations, domain=None, range=Optional[Union[Dict[Union[str, OrganizationId], Union[dict, Organization]], List[Union[dict, Organization]]]])
@@ -958,9 +958,6 @@ slots.requires_registration = Slot(uri=STANDARDSDATASTANDARDORTOOL.requires_regi
 
 slots.concerns_data_topic = Slot(uri=STANDARDSDATASTANDARDORTOOL.concerns_data_topic, name="concerns_data_topic", curie=STANDARDSDATASTANDARDORTOOL.curie('concerns_data_topic'),
                    model_uri=DEFAULT_.concerns_data_topic, domain=DataStandardOrTool, range=Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]])
-
-slots.url = Slot(uri=STANDARDSDATASTANDARDORTOOL.url, name="url", curie=STANDARDSDATASTANDARDORTOOL.curie('url'),
-                   model_uri=DEFAULT_.url, domain=NamedThing, range=Optional[Union[str, URIorCURIE]])
 
 slots.publication = Slot(uri=STANDARDSDATASTANDARDORTOOL.publication, name="publication", curie=STANDARDSDATASTANDARDORTOOL.curie('publication'),
                    model_uri=DEFAULT_.publication, domain=NamedThing, range=Optional[Union[str, URIorCURIE]])

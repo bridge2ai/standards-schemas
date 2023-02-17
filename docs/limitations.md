@@ -2,7 +2,7 @@
 _Potential obstacles particular to this substrate or implementation. _
 
 
-URI: [STANDARDSDATASUBSTRATE:limitations](STANDARDSDATASUBSTRATE:limitations)
+URI: [STANDARDSDATASUBSTRATE:limitations](https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations)
 
 
 

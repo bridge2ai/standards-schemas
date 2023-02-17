@@ -25,6 +25,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/url](https://w3id.org/brid
  * [DataStandardOrTool](DataStandardOrTool.md)
  * [ModelRepository](ModelRepository.md)
  * [OntologyOrVocabulary](OntologyOrVocabulary.md)
+ * [Organization](Organization.md)
  * [ReferenceDataOrDataset](ReferenceDataOrDataset.md)
  * [ReferenceImplementation](ReferenceImplementation.md)
  * [Registry](Registry.md)

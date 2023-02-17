@@ -14,8 +14,8 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
-  NCIT: http://purl.obolibrary.org/obo/NCIT_
-  MeSH: http://id.nlm.nih.gov/mesh/
+  ncit: http://purl.obolibrary.org/obo/NCIT_
+  mesh: http://id.nlm.nih.gov/mesh/
   edam.data: http://edamontology.org/data_
   edam.format: http://edamontology.org/format_
   edam.operation: http://edamontology.org/operation_
@@ -28,12 +28,21 @@ imports:
   - linkml:types
 
 types:
-  edam identifier:
+  edam_identifier:
     typeof: uriorcurie
-  mesh identifier:
+    id_prefixes:
+      - edam.data
+      - edam.format
+      - edam.operation
+      - edam.topic
+  mesh_identifier:
     typeof: uriorcurie
-  ncit identifier:
+    id_prefixes:
+      - mesh
+  ncit_identifier:
     typeof: uriorcurie
+    id_prefixes:
+      - ncit
 
 classes:
 
@@ -62,30 +71,38 @@ slots:
   name:
     slot_uri: schema:name
     description: A human-readable name for a thing.
+    range: string
   description:
     slot_uri: schema:description
     description: A human-readable description for a thing.
-  EDAM_ID:
+    range: string
+  edam_id:
     examples:
       - value: edam.data:0006
-    range: edam identifier
+    range: edam_identifier
     values_from:
       - edam.data
       - edam.format
       - edam.operation
       - edam.topic
-  MeSH_ID:
+  mesh_id:
     examples:
       - value: MeSH:D014831
-    range: mesh identifier
+    range: mesh_identifier
     values_from:
       - MeSH
-  NCIT_ID:
+  ncit_id:
     examples:
       - value: NCIT:C92692
-    range: ncit identifier
+    range: ncit_identifier
     values_from:
       - NCIT
+  url:
+    is_a: node property
+    range: uriorcurie
+    description: >-
+      URL for basic documentation of the standard
+      or tool.
   xref:
     is_a: node property
     aliases: [ 'dbxref', 'Dbxref', 'DbXref' ]

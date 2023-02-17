@@ -243,6 +243,12 @@
     },
     {
       "name": "edam_identifier",
+      "id_prefixes": [
+        "edam.data",
+        "edam.format",
+        "edam.operation",
+        "edam.topic"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/EdamIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "typeof": "uriorcurie",
@@ -253,6 +259,9 @@
     },
     {
       "name": "mesh_identifier",
+      "id_prefixes": [
+        "mesh"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/MeshIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "typeof": "uriorcurie",
@@ -263,6 +272,9 @@
     },
     {
       "name": "ncit_identifier",
+      "id_prefixes": [
+        "ncit"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/NcitIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "typeof": "uriorcurie",
@@ -273,6 +285,9 @@
     },
     {
       "name": "ror_identifier",
+      "id_prefixes": [
+        "ror"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/RorIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
       "typeof": "uriorcurie",
@@ -283,6 +298,9 @@
     },
     {
       "name": "wikidata_identifier",
+      "id_prefixes": [
+        "wikidata"
+      ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/WikidataIdentifier",
       "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
       "typeof": "uriorcurie",
@@ -561,8 +579,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "EDAM_ID",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/EDAM_ID",
+      "name": "edam_id",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/edam_id",
       "examples": [
         {
           "value": "edam.data:0006",
@@ -576,7 +594,7 @@
         "edam.operation",
         "edam.topic"
       ],
-      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/EDAM_ID",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/edam_id",
       "owner": "DataSubstrate",
       "domain_of": [
         "DataTopic",
@@ -586,8 +604,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "MeSH_ID",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/MeSH_ID",
+      "name": "mesh_id",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/mesh_id",
       "examples": [
         {
           "value": "MeSH:D014831",
@@ -598,7 +616,7 @@
       "values_from": [
         "MeSH"
       ],
-      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/MeSH_ID",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/mesh_id",
       "owner": "DataSubstrate",
       "domain_of": [
         "DataTopic",
@@ -608,8 +626,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "NCIT_ID",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/NCIT_ID",
+      "name": "ncit_id",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/ncit_id",
       "examples": [
         {
           "value": "NCIT:C92692",
@@ -620,13 +638,29 @@
       "values_from": [
         "NCIT"
       ],
-      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/NCIT_ID",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/ncit_id",
       "owner": "DataSubstrate",
       "domain_of": [
         "DataTopic",
         "DataSubstrate"
       ],
       "range": "ncit_identifier",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "url",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/url",
+      "description": "URL for basic documentation of the standard or tool.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/url",
+      "owner": "DataStandardOrTool",
+      "domain_of": [
+        "Organization",
+        "DataStandardOrTool"
+      ],
+      "range": "uriorcurie",
       "@type": "SlotDefinition"
     },
     {
@@ -780,8 +814,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "ROR_ID",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ROR_ID",
+      "name": "ror_id",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ror_id",
       "examples": [
         {
           "value": "ROR:02mp31p96",
@@ -792,7 +826,7 @@
       "values_from": [
         "ROR"
       ],
-      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ROR_ID",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ror_id",
       "owner": "Organization",
       "domain_of": [
         "Organization"
@@ -801,8 +835,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "Wikidata_ID",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/Wikidata_ID",
+      "name": "wikidata_id",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id",
       "examples": [
         {
           "value": "WIKIDATA:Q282186",
@@ -813,30 +847,12 @@
       "values_from": [
         "WIKIDATA"
       ],
-      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/Wikidata_ID",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id",
       "owner": "Organization",
       "domain_of": [
         "Organization"
       ],
       "range": "wikidata_identifier",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "URL",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/URL",
-      "examples": [
-        {
-          "value": "https://www.zeiss.com/",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/URL",
-      "owner": "Organization",
-      "domain_of": [
-        "Organization"
-      ],
-      "range": "string",
       "@type": "SlotDefinition"
     },
     {
@@ -930,21 +946,6 @@
         "DataStandardOrTool"
       ],
       "range": "DataTopic",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "url",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/url",
-      "description": "URL for basic documentation of the standard or tool.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "node_property",
-      "domain": "NamedThing",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/url",
-      "owner": "DataStandardOrTool",
-      "domain_of": [
-        "DataStandardOrTool"
-      ],
-      "range": "uriorcurie",
       "@type": "SlotDefinition"
     },
     {
@@ -1243,9 +1244,9 @@
         "name",
         "description",
         "subclass_of",
-        "EDAM_ID",
-        "MeSH_ID",
-        "NCIT_ID"
+        "edam_id",
+        "mesh_id",
+        "ncit_id"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic",
@@ -1274,9 +1275,9 @@
         "name",
         "description",
         "subclass_of",
-        "EDAM_ID",
-        "MeSH_ID",
-        "NCIT_ID",
+        "edam_id",
+        "mesh_id",
+        "ncit_id",
         "metadata_storage",
         "file_extensions",
         "limitations"
@@ -1308,9 +1309,9 @@
         "name",
         "description",
         "subclass_of",
-        "ROR_ID",
-        "Wikidata_ID",
-        "URL",
+        "ror_id",
+        "wikidata_id",
+        "url",
         "related_to"
       ],
       "slot_usage": {},
@@ -1636,7 +1637,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-02-01T15:18:19",
   "source_file_size": 439,
-  "generation_date": "2023-02-15T20:48:26",
+  "generation_date": "2023-02-17T13:14:52",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

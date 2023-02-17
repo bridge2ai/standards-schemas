@@ -1,0 +1,11 @@
+{
+  "organizations": [
+    {
+      "id": "STANDARDSORGANIZATION:1"
+    },
+    {
+      "id": "STANDARDSORGANIZATION:2"
+    }
+  ],
+  "@type": "OrganizationContainer"
+}

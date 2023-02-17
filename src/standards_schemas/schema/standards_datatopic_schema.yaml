@@ -34,9 +34,9 @@ classes:
       Represents a general data topic for Bridge2AI
       data or the tools/standards applied to the data.
     slots:
-      - EDAM_ID
-      - MeSH_ID
-      - NCIT_ID
+      - edam_id
+      - mesh_id
+      - ncit_id
 
   DataTopicContainer:
     description: >-

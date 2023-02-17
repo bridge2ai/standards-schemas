@@ -1,5 +1,5 @@
 
-# Type: mesh identifier
+# Type: mesh_identifier
 
 
 

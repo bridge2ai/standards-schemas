@@ -1,5 +1,5 @@
 
-# Type: edam identifier
+# Type: edam_identifier
 
 
 

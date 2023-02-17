@@ -7,7 +7,7 @@ Represents a group or organization related to or responsible for one or more Bri
 URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id.org/bridge2ai/standards-schema-all/Organization)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to%200..*-%20[Organization&#124;ROR_ID:ror_identifier%20%3F;Wikidata_ID:wikidata_identifier%20%3F;URL:string%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to%200..*-%20[Organization&#124;ROR_ID:ror_identifier%20%3F;Wikidata_ID:wikidata_identifier%20%3F;URL:string%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])
 
 ## Parents
 
@@ -23,15 +23,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 
 ### Own
 
- * [ROR_ID](ROR_ID.md)  <sub>0..1</sub>
+ * [ror_id](ror_id.md)  <sub>0..1</sub>
      * Range: [RorIdentifier](types/RorIdentifier.md)
      * Example: ROR:02mp31p96 None
- * [Wikidata_ID](Wikidata_ID.md)  <sub>0..1</sub>
+ * [wikidata_id](wikidata_id.md)  <sub>0..1</sub>
      * Range: [WikidataIdentifier](types/WikidataIdentifier.md)
      * Example: WIKIDATA:Q282186 None
- * [URL](URL.md)  <sub>0..1</sub>
-     * Range: [String](types/String.md)
-     * Example: https://www.zeiss.com/ None
+ * [url](url.md)  <sub>0..1</sub>
+     * Description: URL for basic documentation of the standard or tool.
+     * Range: [Uriorcurie](types/Uriorcurie.md)
  * [related_to](related_to.md)  <sub>0..\*</sub>
      * Description: A relationship that is asserted between two named things.
      * Range: [NamedThing](NamedThing.md)

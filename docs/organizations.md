@@ -1,6 +1,6 @@
 # Slot: organizations
 
-URI: [STANDARDSORGANIZATION:organizations](STANDARDSORGANIZATION:organizations)
+URI: [STANDARDSORGANIZATION:organizations](https://w3id.org/bridge2ai/standards-organization-schema/organizations)
 
 
 
