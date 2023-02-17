@@ -1,0 +1,4 @@
+@prefix STANDARDSDATASUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/> .
+
+STANDARDSDATASUBSTRATE:53 a STANDARDSDATASUBSTRATE:DataSubstrate .
+

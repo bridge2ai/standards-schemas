@@ -46,7 +46,7 @@ Name: standards-schema-all
 | [data_topics](data_topics.md) | Relevance of the use case to one or more data topics |
 | [data_topics_collection](data_topics_collection.md) |  |
 | [description](description.md) | A human-readable description for a thing |
-| [EDAM_ID](EDAM_ID.md) |  |
+| [edam_id](edam_id.md) |  |
 | [enables](enables.md) | Other use case(s) this use case supports or makes possible |
 | [file_extensions](file_extensions.md) | Commonly used file extensions for this substrate |
 | [formal_specification](formal_specification.md) | Relevant code repository or other location for a formal specification of the ... |
@@ -58,10 +58,10 @@ Name: standards-schema-all
 | [is_open](is_open.md) | Is the standard or tool FAIR and available free of cost? |
 | [known_limitations](known_limitations.md) | Any current obstacles to implementing this use case |
 | [limitations](limitations.md) | Potential obstacles particular to this substrate or implementation |
-| [MeSH_ID](MeSH_ID.md) |  |
+| [mesh_id](mesh_id.md) |  |
 | [metadata_storage](metadata_storage.md) | Data Substrate in which metadata is stored |
 | [name](name.md) | A human-readable name for a thing |
-| [NCIT_ID](NCIT_ID.md) |  |
+| [ncit_id](ncit_id.md) |  |
 | [node_property](node_property.md) | A grouping for any property that holds between a node and a value |
 | [organizations](organizations.md) |  |
 | [publication](publication.md) | Relevant publication for the standard or tool |
@@ -69,14 +69,13 @@ Name: standards-schema-all
 | [related_to](related_to.md) | A relationship that is asserted between two named things |
 | [relevance_to_dgps](relevance_to_dgps.md) | Relevance of the use case to one or more DGPs |
 | [requires_registration](requires_registration.md) | Does usage of the standard or tool require registrion of a user or group with... |
-| [ROR_ID](ROR_ID.md) |  |
+| [ror_id](ror_id.md) |  |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |
 | [url](url.md) | URL for basic documentation of the standard or tool |
-| [URL](URL.md) |  |
 | [use_case_category](use_case_category.md) | Category of the UseCase |
 | [use_cases](use_cases.md) |  |
-| [Wikidata_ID](Wikidata_ID.md) |  |
+| [wikidata_id](wikidata_id.md) |  |
 | [xref](xref.md) | URI of corresponding class in an ontology of experimental procedures, in CURI... |
 
 

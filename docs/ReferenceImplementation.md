@@ -207,7 +207,7 @@ attributes:
   url:
     name: url
     description: URL for basic documentation of the standard or tool.
-    from_schema: https://w3id.org/bridge2ai/standards-datastandardortool-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
     is_a: node property
     domain: NamedThing
@@ -215,6 +215,7 @@ attributes:
     owner: ReferenceImplementation
     domain_of:
     - DataStandardOrTool
+    - Organization
     range: uriorcurie
   publication:
     name: publication

@@ -4,7 +4,7 @@ _A container for Organizations._
 
 
 
-URI: [STANDARDSORGANIZATION:OrganizationContainer](STANDARDSORGANIZATION:OrganizationContainer)
+URI: [STANDARDSORGANIZATION:OrganizationContainer](https://w3id.org/bridge2ai/standards-organization-schema/OrganizationContainer)
 
 
 

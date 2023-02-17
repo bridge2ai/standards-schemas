@@ -1,0 +1,12 @@
+@prefix STANDARDSUSECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/> .
+
+STANDARDSUSECASE:1 a STANDARDSUSECASE:UseCase ;
+    STANDARDSUSECASE:use_case_category "acquisition" .
+
+STANDARDSUSECASE:2 a STANDARDSUSECASE:UseCase ;
+    STANDARDSUSECASE:use_case_category "acquisition" .
+
+[] a STANDARDSUSECASE:UseCaseContainer ;
+    STANDARDSUSECASE:use_cases STANDARDSUSECASE:1,
+        STANDARDSUSECASE:2 .
+

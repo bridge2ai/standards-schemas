@@ -162,6 +162,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataTopic](DataTopic.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
 | [NamedThing](NamedThing.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [NamedThing](NamedThing.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [Organization](Organization.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
 | [Organization](Organization.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
 | [Organization](Organization.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
@@ -259,6 +260,7 @@ attributes:
     owner: NamedThing
     domain_of:
     - NamedThing
+    range: string
   description:
     name: description
     description: A human-readable description for a thing.
@@ -269,6 +271,7 @@ attributes:
     owner: NamedThing
     domain_of:
     - NamedThing
+    range: string
   subclass_of:
     name: subclass_of
     description: Holds between two classes where the domain class is a specialization

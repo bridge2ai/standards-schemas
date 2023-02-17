@@ -1,9 +1,0 @@
-# Example Organization data
-
-id: STANDARDSORGANIZATION:1
-name:
-subclass_of: STANDARDSORGANIZATION:2
-description: My Uncle Greg's Storage Unit
-ROR_ID: ror_03jmfdf59
-Wikidata_ID: CHEBI:Q4692008
-URL:

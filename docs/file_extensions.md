@@ -2,7 +2,7 @@
 _Commonly used file extensions for this substrate._
 
 
-URI: [STANDARDSDATASUBSTRATE:file_extensions](STANDARDSDATASUBSTRATE:file_extensions)
+URI: [STANDARDSDATASUBSTRATE:file_extensions](https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions)
 
 
 

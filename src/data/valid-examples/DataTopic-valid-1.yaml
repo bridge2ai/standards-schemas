@@ -5,6 +5,6 @@ name: Biology
 subclass_of:
   - STANDARDSDATATOPIC:1
 description: Data involving any study of living organisms at any scale.
-EDAM_ID: edam.topic:3070
-MeSH_ID: mesh:D001695
-NCIT_ID: ncit:C16345
+edam_id: edam.topic:3070
+mesh_id: mesh:D001695
+ncit_id: ncit:C16345

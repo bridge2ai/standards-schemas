@@ -2,7 +2,7 @@
 _Data Substrate in which metadata is stored._
 
 
-URI: [STANDARDSDATASUBSTRATE:metadata_storage](STANDARDSDATASUBSTRATE:metadata_storage)
+URI: [STANDARDSDATASUBSTRATE:metadata_storage](https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage)
 
 
 

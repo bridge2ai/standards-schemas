@@ -81,7 +81,7 @@ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool  (
              STANDARDSDATASTANDARDORTOOL:purpose_detail @linkml:String ? ;
              STANDARDSDATASTANDARDORTOOL:is_open @linkml:Boolean ? ;
              STANDARDSDATASTANDARDORTOOL:requires_registration @linkml:Boolean ? ;
-             STANDARDSDATASTANDARDORTOOL:url @linkml:Uriorcurie ? ;
+             STANDARDS:url @linkml:Uriorcurie ? ;
              STANDARDSDATASTANDARDORTOOL:publication @linkml:Uriorcurie ? ;
              STANDARDSDATASTANDARDORTOOL:formal_specification @linkml:Uriorcurie ?
           ) ;
@@ -103,9 +103,9 @@ STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer CLOSED {
 STANDARDSDATASUBSTRATE:DataSubstrate CLOSED {
     (  $STANDARDSDATASUBSTRATE:DataSubstrate_tes (  &STANDARDS:NamedThing_tes ;
           rdf:type [ schema:Thing ] ? ;
-          STANDARDS:EDAM_ID @STANDARDS:EdamIdentifier ? ;
-          STANDARDS:MeSH_ID @STANDARDS:MeshIdentifier ? ;
-          STANDARDS:NCIT_ID @STANDARDS:NcitIdentifier ? ;
+          STANDARDS:edam_id @STANDARDS:EdamIdentifier ? ;
+          STANDARDS:mesh_id @STANDARDS:MeshIdentifier ? ;
+          STANDARDS:ncit_id @STANDARDS:NcitIdentifier ? ;
           STANDARDSDATASUBSTRATE:metadata_storage @linkml:String * ;
           STANDARDSDATASUBSTRATE:file_extensions @linkml:String * ;
           STANDARDSDATASUBSTRATE:limitations @linkml:String *
@@ -124,9 +124,9 @@ STANDARDSDATASUBSTRATE:DataSubstrateContainer CLOSED {
 STANDARDSDATATOPIC:DataTopic CLOSED {
     (  $STANDARDSDATATOPIC:DataTopic_tes (  &STANDARDS:NamedThing_tes ;
           rdf:type [ schema:Thing ] ? ;
-          STANDARDS:EDAM_ID @STANDARDS:EdamIdentifier ? ;
-          STANDARDS:MeSH_ID @STANDARDS:MeshIdentifier ? ;
-          STANDARDS:NCIT_ID @STANDARDS:NcitIdentifier ?
+          STANDARDS:edam_id @STANDARDS:EdamIdentifier ? ;
+          STANDARDS:mesh_id @STANDARDS:MeshIdentifier ? ;
+          STANDARDS:ncit_id @STANDARDS:NcitIdentifier ?
        ) ;
        rdf:type [ STANDARDSDATATOPIC:DataTopic ]
     )
@@ -169,9 +169,9 @@ STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary CLOSED {
 STANDARDSORGANIZATION:Organization CLOSED {
     (  $STANDARDSORGANIZATION:Organization_tes (  &STANDARDS:NamedThing_tes ;
           rdf:type [ schema:Thing ] ? ;
-          STANDARDSORGANIZATION:ROR_ID @STANDARDSORGANIZATION:RorIdentifier ? ;
-          STANDARDSORGANIZATION:Wikidata_ID @STANDARDSORGANIZATION:WikidataIdentifier ? ;
-          STANDARDSORGANIZATION:URL @linkml:String ? ;
+          STANDARDSORGANIZATION:ror_id @STANDARDSORGANIZATION:RorIdentifier ? ;
+          STANDARDSORGANIZATION:wikidata_id @STANDARDSORGANIZATION:WikidataIdentifier ? ;
+          STANDARDS:url @linkml:Uriorcurie ? ;
           STANDARDS:related_to @STANDARDS:NamedThing *
        ) ;
        rdf:type [ STANDARDSORGANIZATION:Organization ]

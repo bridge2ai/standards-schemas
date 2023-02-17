@@ -59,6 +59,7 @@ slots:
   # TODO: need to specify related_to relation
   metadata_storage:
     is_a: node property
+    range: string
     any_of:
       - range: DataSubstrate
       - equals_string: file headers

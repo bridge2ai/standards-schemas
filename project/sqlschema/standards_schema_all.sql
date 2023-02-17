@@ -58,9 +58,9 @@ CREATE TABLE "DataSubstrate" (
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
-	"EDAM_ID" TEXT, 
-	"MeSH_ID" TEXT, 
-	"NCIT_ID" TEXT, 
+	edam_id TEXT, 
+	mesh_id TEXT, 
+	ncit_id TEXT, 
 	PRIMARY KEY (id)
 );
 
@@ -74,9 +74,9 @@ CREATE TABLE "DataTopic" (
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
-	"EDAM_ID" TEXT, 
-	"MeSH_ID" TEXT, 
-	"NCIT_ID" TEXT, 
+	edam_id TEXT, 
+	mesh_id TEXT, 
+	ncit_id TEXT, 
 	PRIMARY KEY (id)
 );
 
@@ -130,9 +130,9 @@ CREATE TABLE "Organization" (
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
-	"ROR_ID" TEXT, 
-	"Wikidata_ID" TEXT, 
-	"URL" TEXT, 
+	ror_id TEXT, 
+	wikidata_id TEXT, 
+	url TEXT, 
 	related_to TEXT, 
 	PRIMARY KEY (id)
 );

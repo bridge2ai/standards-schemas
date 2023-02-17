@@ -1,5 +1,5 @@
 
-# Type: wikidata identifier
+# Type: wikidata_identifier
 
 
 

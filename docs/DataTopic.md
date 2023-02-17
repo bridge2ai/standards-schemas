@@ -14,11 +14,11 @@ URI: [STANDARDSDATATOPIC:DataTopic](https://w3id.org/bridge2ai/standards-datatop
       NamedThing <|-- DataTopic
       
       DataTopic : description
-      DataTopic : EDAM_ID
+      DataTopic : edam_id
       DataTopic : id
-      DataTopic : MeSH_ID
+      DataTopic : mesh_id
       DataTopic : name
-      DataTopic : NCIT_ID
+      DataTopic : ncit_id
       DataTopic : subclass_of
       
 ```
@@ -37,9 +37,9 @@ URI: [STANDARDSDATATOPIC:DataTopic](https://w3id.org/bridge2ai/standards-datatop
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [EDAM_ID](EDAM_ID.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) |  | direct |
-| [MeSH_ID](MeSH_ID.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) |  | direct |
-| [NCIT_ID](NCIT_ID.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) |  | direct |
+| [edam_id](edam_id.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) |  | direct |
+| [mesh_id](mesh_id.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) |  | direct |
+| [ncit_id](ncit_id.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) |  | direct |
 | [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
 | [description](description.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
@@ -114,9 +114,9 @@ from_schema: https://w3id.org/bridge2ai/standards-datatopic-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- EDAM_ID
-- MeSH_ID
-- NCIT_ID
+- edam_id
+- mesh_id
+- ncit_id
 
 ```
 </details>
@@ -132,8 +132,8 @@ from_schema: https://w3id.org/bridge2ai/standards-datatopic-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  EDAM_ID:
-    name: EDAM_ID
+  edam_id:
+    name: edam_id
     examples:
     - value: edam.data:0006
     from_schema: https://w3id.org/bridge2ai/standards-schema
@@ -143,35 +143,35 @@ attributes:
     - edam.format
     - edam.operation
     - edam.topic
-    alias: EDAM_ID
+    alias: edam_id
     owner: DataTopic
     domain_of:
     - DataTopic
     - DataSubstrate
     range: edam identifier
-  MeSH_ID:
-    name: MeSH_ID
+  mesh_id:
+    name: mesh_id
     examples:
     - value: MeSH:D014831
     from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
     values_from:
     - MeSH
-    alias: MeSH_ID
+    alias: mesh_id
     owner: DataTopic
     domain_of:
     - DataTopic
     - DataSubstrate
     range: mesh identifier
-  NCIT_ID:
-    name: NCIT_ID
+  ncit_id:
+    name: ncit_id
     examples:
     - value: NCIT:C92692
     from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
     values_from:
     - NCIT
-    alias: NCIT_ID
+    alias: ncit_id
     owner: DataTopic
     domain_of:
     - DataTopic

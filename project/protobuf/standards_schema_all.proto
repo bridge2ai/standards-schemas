@@ -61,9 +61,9 @@ message DataSubstrate
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
-  edamIdentifier eDAMID = 0
-  meshIdentifier meSHID = 0
-  ncitIdentifier nCITID = 0
+  edamIdentifier edamId = 0
+  meshIdentifier meshId = 0
+  ncitIdentifier ncitId = 0
  repeated  string metadataStorage = 0
  repeated  string fileExtensions = 0
  repeated  string limitations = 0
@@ -80,9 +80,9 @@ message DataTopic
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
-  edamIdentifier eDAMID = 0
-  meshIdentifier meSHID = 0
-  ncitIdentifier nCITID = 0
+  edamIdentifier edamId = 0
+  meshIdentifier meshId = 0
+  ncitIdentifier ncitId = 0
  }
 // A container for DataTopics.
 message DataTopicContainer
@@ -138,9 +138,9 @@ message Organization
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
-  rorIdentifier rORID = 0
-  wikidataIdentifier wikidataID = 0
-  string uRL = 0
+  rorIdentifier rorId = 0
+  wikidataIdentifier wikidataId = 0
+  uriorcurie url = 0
  repeated  namedThing relatedTo = 0
  }
 // A container for Organizations.

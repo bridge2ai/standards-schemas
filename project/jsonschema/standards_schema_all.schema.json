@@ -254,17 +254,11 @@
             "additionalProperties": false,
             "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.",
             "properties": {
-                "EDAM_ID": {
-                    "type": "string"
-                },
-                "MeSH_ID": {
-                    "type": "string"
-                },
-                "NCIT_ID": {
-                    "type": "string"
-                },
                 "description": {
                     "description": "A human-readable description for a thing.",
+                    "type": "string"
+                },
+                "edam_id": {
                     "type": "string"
                 },
                 "file_extensions": {
@@ -285,6 +279,9 @@
                     },
                     "type": "array"
                 },
+                "mesh_id": {
+                    "type": "string"
+                },
                 "metadata_storage": {
                     "anyOf": [
                         {},
@@ -300,6 +297,9 @@
                 },
                 "name": {
                     "description": "A human-readable name for a thing.",
+                    "type": "string"
+                },
+                "ncit_id": {
                     "type": "string"
                 },
                 "subclass_of": {
@@ -334,25 +334,25 @@
             "additionalProperties": false,
             "description": "Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.",
             "properties": {
-                "EDAM_ID": {
-                    "type": "string"
-                },
-                "MeSH_ID": {
-                    "type": "string"
-                },
-                "NCIT_ID": {
-                    "type": "string"
-                },
                 "description": {
                     "description": "A human-readable description for a thing.",
+                    "type": "string"
+                },
+                "edam_id": {
                     "type": "string"
                 },
                 "id": {
                     "description": "A unique identifier for a thing.",
                     "type": "string"
                 },
+                "mesh_id": {
+                    "type": "string"
+                },
                 "name": {
                     "description": "A human-readable name for a thing.",
+                    "type": "string"
+                },
+                "ncit_id": {
                     "type": "string"
                 },
                 "subclass_of": {
@@ -567,15 +567,6 @@
             "additionalProperties": false,
             "description": "Represents a group or organization related to or responsible for one or more Bridge2AI standards.",
             "properties": {
-                "ROR_ID": {
-                    "type": "string"
-                },
-                "URL": {
-                    "type": "string"
-                },
-                "Wikidata_ID": {
-                    "type": "string"
-                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -595,12 +586,22 @@
                     },
                     "type": "array"
                 },
+                "ror_id": {
+                    "type": "string"
+                },
                 "subclass_of": {
                     "description": "Holds between two classes where the domain class is a specialization of the range class.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
+                },
+                "url": {
+                    "description": "URL for basic documentation of the standard or tool.",
+                    "type": "string"
+                },
+                "wikidata_id": {
+                    "type": "string"
                 }
             },
             "required": [

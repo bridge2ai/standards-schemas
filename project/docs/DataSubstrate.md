@@ -7,7 +7,7 @@ Represents a data substrate for Bridge2AI data. This may be a high-level data st
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[UseCase]-%20data_substrates%200..*>[DataSubstrate&#124;EDAM_ID:edam_identifier%20%3F;MeSH_ID:mesh_identifier%20%3F;NCIT_ID:ncit_identifier%20%3F;metadata_storage:string%20*;file_extensions:string%20*;limitations:string%20*;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataSubstrateContainer]++-%20data_substrates_collection%200..*>[DataSubstrate],[NamedThing]^-[DataSubstrate],[UseCase],[DataSubstrateContainer])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[UseCase]-%20data_substrates%200..*>[DataSubstrate&#124;EDAM_ID:edam_identifier%20%3F;MeSH_ID:mesh_identifier%20%3F;NCIT_ID:ncit_identifier%20%3F;metadata_storage:string%20*;file_extensions:string%20*;limitations:string%20*;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataSubstrateContainer]++-%20data_substrates_collection%200..*>[DataSubstrate],[NamedThing]^-[DataSubstrate],[UseCase],[DataSubstrateContainer])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[UseCase]-%20data_substrates%200..*>[DataSubstrate&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;metadata_storage:string%20*;file_extensions:string%20*;limitations:string%20*;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataSubstrateContainer]++-%20data_substrates_collection%200..*>[DataSubstrate],[NamedThing]^-[DataSubstrate],[UseCase],[DataSubstrateContainer])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[UseCase]-%20data_substrates%200..*>[DataSubstrate&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;metadata_storage:string%20*;file_extensions:string%20*;limitations:string%20*;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataSubstrateContainer]++-%20data_substrates_collection%200..*>[DataSubstrate],[NamedThing]^-[DataSubstrate],[UseCase],[DataSubstrateContainer])
 
 ## Parents
 
@@ -23,13 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 
 ### Own
 
- * [EDAM_ID](EDAM_ID.md)  <sub>0..1</sub>
+ * [edam_id](edam_id.md)  <sub>0..1</sub>
      * Range: [EdamIdentifier](types/EdamIdentifier.md)
      * Example: edam.data:0006 None
- * [MeSH_ID](MeSH_ID.md)  <sub>0..1</sub>
+ * [mesh_id](mesh_id.md)  <sub>0..1</sub>
      * Range: [MeshIdentifier](types/MeshIdentifier.md)
      * Example: MeSH:D014831 None
- * [NCIT_ID](NCIT_ID.md)  <sub>0..1</sub>
+ * [ncit_id](ncit_id.md)  <sub>0..1</sub>
      * Range: [NcitIdentifier](types/NcitIdentifier.md)
      * Example: NCIT:C92692 None
  * [metadata_storage](metadata_storage.md)  <sub>0..\*</sub>

@@ -38,7 +38,7 @@ URI: [STANDARDSDATASTANDARDORTOOL:purpose_detail](https://w3id.org/bridge2ai/sta
 
 ## Properties
 
-* Range: NONE
+* Range: [xsd:string](xsd:string)
 
 
 
@@ -75,6 +75,7 @@ domain: NamedThing
 alias: purpose_detail
 domain_of:
 - DataStandardOrTool
+range: string
 
 ```
 </details>

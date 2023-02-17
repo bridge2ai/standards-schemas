@@ -1,9 +1,0 @@
-# Example DataTopic data
-
-id: tuna fish
-name: Biology
-subclass_of: 1
-description: Good fish for sandwiches.
-EDAM_ID: edam.topic:3070
-MeSH_ID: mesh:D001695
-NCIT_ID: ncit:C16345

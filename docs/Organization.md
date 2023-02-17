@@ -4,7 +4,7 @@ _Represents a group or organization related to or responsible for one or more Br
 
 
 
-URI: [STANDARDSORGANIZATION:Organization](STANDARDSORGANIZATION:Organization)
+URI: [STANDARDSORGANIZATION:Organization](https://w3id.org/bridge2ai/standards-organization-schema/Organization)
 
 
 
@@ -17,10 +17,10 @@ URI: [STANDARDSORGANIZATION:Organization](STANDARDSORGANIZATION:Organization)
       Organization : id
       Organization : name
       Organization : related_to
-      Organization : ROR_ID
+      Organization : ror_id
       Organization : subclass_of
-      Organization : URL
-      Organization : Wikidata_ID
+      Organization : url
+      Organization : wikidata_id
       
 ```
 
@@ -38,9 +38,9 @@ URI: [STANDARDSORGANIZATION:Organization](STANDARDSORGANIZATION:Organization)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [ROR_ID](ROR_ID.md) | 0..1 <br/> [RorIdentifier](RorIdentifier.md) |  | direct |
-| [Wikidata_ID](Wikidata_ID.md) | 0..1 <br/> [WikidataIdentifier](WikidataIdentifier.md) |  | direct |
-| [URL](URL.md) | 0..1 <br/> [xsd:string](xsd:string) |  | direct |
+| [ror_id](ror_id.md) | 0..1 <br/> [RorIdentifier](RorIdentifier.md) |  | direct |
+| [wikidata_id](wikidata_id.md) | 0..1 <br/> [WikidataIdentifier](WikidataIdentifier.md) |  | direct |
+| [url](url.md) | 0..1 <br/> [xsd:anyURI](xsd:anyURI) | URL for basic documentation of the standard or tool | direct |
 | [related_to](related_to.md) | 0..* <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | direct |
 | [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -115,9 +115,9 @@ from_schema: https://w3id.org/bridge2ai/standards-organization-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- ROR_ID
-- Wikidata_ID
-- URL
+- ror_id
+- wikidata_id
+- url
 - related_to
 
 ```
@@ -134,42 +134,45 @@ from_schema: https://w3id.org/bridge2ai/standards-organization-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  ROR_ID:
-    name: ROR_ID
+  ror_id:
+    name: ror_id
     examples:
     - value: ROR:02mp31p96
     from_schema: https://w3id.org/bridge2ai/standards-organization-schema
     rank: 1000
     values_from:
     - ROR
-    alias: ROR_ID
+    alias: ror_id
     owner: Organization
     domain_of:
     - Organization
-    range: ror identifier
-  Wikidata_ID:
-    name: Wikidata_ID
+    range: ror_identifier
+  wikidata_id:
+    name: wikidata_id
     examples:
     - value: WIKIDATA:Q282186
     from_schema: https://w3id.org/bridge2ai/standards-organization-schema
     rank: 1000
     values_from:
     - WIKIDATA
-    alias: Wikidata_ID
+    alias: wikidata_id
     owner: Organization
     domain_of:
     - Organization
-    range: wikidata identifier
-  URL:
-    name: URL
-    examples:
-    - value: https://www.zeiss.com/
-    from_schema: https://w3id.org/bridge2ai/standards-organization-schema
+    range: wikidata_identifier
+  url:
+    name: url
+    description: URL for basic documentation of the standard or tool.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
-    alias: URL
+    is_a: node property
+    domain: NamedThing
+    alias: url
     owner: Organization
     domain_of:
+    - DataStandardOrTool
     - Organization
+    range: uriorcurie
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
