@@ -89,6 +89,14 @@ subclass_of:
 - STANDARDSDATATOPIC:1
 
 ```
+## DataStandardOrToolContainer-valid-1
+### Input
+```yaml
+data_standardortools_collection:
+- id: STANDARDSDATASTANDARDORTOOL:1
+- id: STANDARDSDATASTANDARDORTOOL:2
+
+```
 ## DataStandardOrTool-valid-1
 ### Input
 ```yaml
@@ -154,6 +162,22 @@ use_cases:
 ### Input
 ```yaml
 id: STANDARDSDATASTANDARDORTOOL:53
+
+```
+## DataSubstrateContainer-minimal-1
+### Input
+```yaml
+data_substrates_collection:
+- id: STANDARDSDATASUBSTRATE:1
+- id: STANDARDSDATASUBSTRATE:2
+
+```
+## OrganizationContainer-minimal-1
+### Input
+```yaml
+organizations:
+- id: STANDARDSORGANIZATION:1
+- id: STANDARDSORGANIZATION:2
 
 ```
 ## DataTopic-minimal-1
