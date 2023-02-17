@@ -9,6 +9,7 @@ see_also:
 
 prefixes:
   STANDARDSDATASTANDARDORTOOL: https://w3id.org/bridge2ai/standards-datastandardortool-schema/
+  STANDARDSORGANIZATION: https://w3id.org/bridge2ai/standards-organization-schema/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
@@ -121,6 +122,7 @@ slots:
     multivalued: true
   
   purpose_detail:
+    range: string
     is_a: node property
     description: >-
       Text description of the standard or tool.

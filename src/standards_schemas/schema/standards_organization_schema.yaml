@@ -23,9 +23,9 @@ imports:
   - standards_schema
 
 types:
-  ror identifier:
+  ror_identifier:
     typeof: uriorcurie
-  wikidata identifier:
+  wikidata_identifier:
     typeof: uriorcurie
 
 classes:
@@ -52,13 +52,13 @@ slots:
   ror_id:
     examples:
       - value: ROR:02mp31p96
-    range: ror identifier
+    range: ror_identifier
     values_from:
       - ROR
   wikidata_id:
     examples:
       - value: WIKIDATA:Q282186
-    range: wikidata identifier
+    range: wikidata_identifier
     values_from:
       - WIKIDATA
   organizations:
