@@ -206,20 +206,21 @@
 </a>
 <h1 id="class-datasubstrate">Class: DataSubstrate</h1>
 <p><em>Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.</em></p>
-<p>URI: <a href="STANDARDSDATASUBSTRATE:DataSubstrate">STANDARDSDATASUBSTRATE:DataSubstrate</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate">STANDARDSDATASUBSTRATE:DataSubstrate</a></p>
 <div class="mermaid"> classDiagram
     class DataSubstrate
       NamedThing &lt;|-- DataSubstrate
 
       DataSubstrate : description
-      DataSubstrate : EDAM_ID
+      DataSubstrate : edam_id
       DataSubstrate : file_extensions
       DataSubstrate : id
       DataSubstrate : limitations
-      DataSubstrate : MeSH_ID
+      DataSubstrate : mesh_id
       DataSubstrate : metadata_storage
       DataSubstrate : name
-      DataSubstrate : NCIT_ID
+      DataSubstrate : ncit_id
+      DataSubstrate : related_to
       DataSubstrate : subclass_of
 
 </div>
@@ -242,56 +243,56 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../EDAM_ID/">EDAM_ID</a></td>
+<td><a href="../edam_id/">edam_id</a></td>
 <td>0..1 <br/> <a href="../EdamIdentifier/">EdamIdentifier</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../MeSH_ID/">MeSH_ID</a></td>
+<td><a href="../mesh_id/">mesh_id</a></td>
 <td>0..1 <br/> <a href="../MeshIdentifier/">MeshIdentifier</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../NCIT_ID/">NCIT_ID</a></td>
+<td><a href="../ncit_id/">ncit_id</a></td>
 <td>0..1 <br/> <a href="../NcitIdentifier/">NcitIdentifier</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../metadata_storage/">metadata_storage</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>Data Substrate in which metadata is stored</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../file_extensions/">file_extensions</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>Commonly used file extensions for this substrate</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../limitations/">limitations</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>Potential obstacles particular to this substrate or implementation</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -299,6 +300,12 @@
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>Holds between two classes where the domain class is a specialization of the r...</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../related_to/">related_to</a></td>
+<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>A relationship that is asserted between two named things</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
@@ -366,9 +373,9 @@ from_schema: https://w3id.org/bridge2ai/standards-datasubstrate-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- EDAM_ID
-- MeSH_ID
-- NCIT_ID
+- edam_id
+- mesh_id
+- ncit_id
 - metadata_storage
 - file_extensions
 - limitations
@@ -387,8 +394,8 @@ from_schema: https://w3id.org/bridge2ai/standards-datasubstrate-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  EDAM_ID:
-    name: EDAM_ID
+  edam_id:
+    name: edam_id
     examples:
     - value: edam.data:0006
     from_schema: https://w3id.org/bridge2ai/standards-schema
@@ -398,40 +405,40 @@ attributes:
     - edam.format
     - edam.operation
     - edam.topic
-    alias: EDAM_ID
+    alias: edam_id
     owner: DataSubstrate
     domain_of:
     - DataTopic
     - DataSubstrate
-    range: edam identifier
-  MeSH_ID:
-    name: MeSH_ID
+    range: edam_identifier
+  mesh_id:
+    name: mesh_id
     examples:
     - value: MeSH:D014831
     from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
     values_from:
     - MeSH
-    alias: MeSH_ID
+    alias: mesh_id
     owner: DataSubstrate
     domain_of:
     - DataTopic
     - DataSubstrate
-    range: mesh identifier
-  NCIT_ID:
-    name: NCIT_ID
+    range: mesh_identifier
+  ncit_id:
+    name: ncit_id
     examples:
     - value: NCIT:C92692
     from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
     values_from:
     - NCIT
-    alias: NCIT_ID
+    alias: ncit_id
     owner: DataSubstrate
     domain_of:
     - DataTopic
     - DataSubstrate
-    range: ncit identifier
+    range: ncit_identifier
   metadata_storage:
     name: metadata_storage
     description: Data Substrate in which metadata is stored.
@@ -444,6 +451,7 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - DataSubstrate
+    range: string
     any_of:
     - range: DataSubstrate
     - equals_string: file headers
@@ -459,6 +467,7 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - DataSubstrate
+    range: string
   limitations:
     name: limitations
     description: 'Potential obstacles particular to this substrate or implementation. '
@@ -471,6 +480,7 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - DataSubstrate
+    range: string
   id:
     name: id
     description: A unique identifier for a thing.
@@ -525,6 +535,21 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - NamedThing
+    range: NamedThing
+  related_to:
+    name: related_to
+    description: A relationship that is asserted between two named things.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    rank: 1000
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: related_to
+    owner: DataSubstrate
+    domain_of:
+    - NamedThing
+    - Organization
+    symmetric: true
     range: NamedThing
 
 </code></pre>

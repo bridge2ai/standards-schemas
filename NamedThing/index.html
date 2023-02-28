@@ -218,6 +218,7 @@
       NamedThing : description
       NamedThing : id
       NamedThing : name
+      NamedThing : related_to
       NamedThing : subclass_of
 
 </div>
@@ -245,19 +246,19 @@
 <tbody>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
 <td>direct</td>
 </tr>
@@ -265,6 +266,12 @@
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>0..* <br/> <a href="./">NamedThing</a></td>
 <td>Holds between two classes where the domain class is a specialization of the r...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../related_to/">related_to</a></td>
+<td>0..* <br/> <a href="./">NamedThing</a></td>
+<td>A relationship that is asserted between two named things</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -359,6 +366,18 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -409,6 +428,18 @@
 <tr>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../related_to/">related_to</a></td>
 <td>range</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
@@ -467,6 +498,18 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -517,6 +560,18 @@
 <tr>
 <td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../related_to/">related_to</a></td>
 <td>range</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
@@ -575,6 +630,18 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -625,6 +692,18 @@
 <tr>
 <td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../related_to/">related_to</a></td>
 <td>range</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
@@ -683,6 +762,18 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -733,6 +824,18 @@
 <tr>
 <td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
+<td><a href="../related_to/">related_to</a></td>
 <td>range</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
@@ -791,6 +894,18 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -845,6 +960,18 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../TrainingProgram/">TrainingProgram</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -895,6 +1022,18 @@
 <tr>
 <td><a href="../TrainingProgram/">TrainingProgram</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../related_to/">related_to</a></td>
 <td>range</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
@@ -911,6 +1050,18 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="./">NamedThing</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
@@ -920,6 +1071,24 @@
 <td><a href="./">NamedThing</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
@@ -976,6 +1145,18 @@
 <td>range</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -1015,6 +1196,7 @@ slots:
 - name
 - description
 - subclass_of
+- related_to
 class_uri: schema:Thing
 
 </code></pre>
@@ -1049,6 +1231,7 @@ attributes:
     owner: NamedThing
     domain_of:
     - NamedThing
+    range: string
   description:
     name: description
     description: A human-readable description for a thing.
@@ -1059,6 +1242,7 @@ attributes:
     owner: NamedThing
     domain_of:
     - NamedThing
+    range: string
   subclass_of:
     name: subclass_of
     description: Holds between two classes where the domain class is a specialization
@@ -1078,6 +1262,21 @@ attributes:
     owner: NamedThing
     domain_of:
     - NamedThing
+    range: NamedThing
+  related_to:
+    name: related_to
+    description: A relationship that is asserted between two named things.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    rank: 1000
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: related_to
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    - Organization
+    symmetric: true
     range: NamedThing
 class_uri: schema:Thing
 

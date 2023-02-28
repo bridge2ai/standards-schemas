@@ -216,6 +216,7 @@
       DataStandard : name
       DataStandard : publication
       DataStandard : purpose_detail
+      DataStandard : related_to
       DataStandard : requires_registration
       DataStandard : subclass_of
       DataStandard : url
@@ -233,6 +234,7 @@
       DataStandard : name
       DataStandard : publication
       DataStandard : purpose_detail
+      DataStandard : related_to
       DataStandard : requires_registration
       DataStandard : subclass_of
       DataStandard : url
@@ -282,55 +284,55 @@
 </tr>
 <tr>
 <td><a href="../purpose_detail/">purpose_detail</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>Text description of the standard or tool</td>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 </tr>
 <tr>
 <td><a href="../is_open/">is_open</a></td>
-<td>0..1 <br/> <a href="xsd:boolean">xsd:boolean</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></td>
 <td>Is the standard or tool FAIR and available free of cost?</td>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 </tr>
 <tr>
 <td><a href="../requires_registration/">requires_registration</a></td>
-<td>0..1 <br/> <a href="xsd:boolean">xsd:boolean</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></td>
 <td>Does usage of the standard or tool require registrion of a user or group with...</td>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 </tr>
 <tr>
 <td><a href="../url/">url</a></td>
-<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>URL for basic documentation of the standard or tool</td>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 </tr>
 <tr>
 <td><a href="../publication/">publication</a></td>
-<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>Relevant publication for the standard or tool</td>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 </tr>
 <tr>
 <td><a href="../formal_specification/">formal_specification</a></td>
-<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>Relevant code repository or other location for a formal specification of the ...</td>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -338,6 +340,12 @@
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>Holds between two classes where the domain class is a specialization of the r...</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../related_to/">related_to</a></td>
+<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>A relationship that is asserted between two named things</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
@@ -468,7 +476,7 @@ attributes:
   url:
     name: url
     description: URL for basic documentation of the standard or tool.
-    from_schema: https://w3id.org/bridge2ai/standards-datastandardortool-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
     is_a: node property
     domain: NamedThing
@@ -476,6 +484,7 @@ attributes:
     owner: DataStandard
     domain_of:
     - DataStandardOrTool
+    - Organization
     range: uriorcurie
   publication:
     name: publication
@@ -556,6 +565,21 @@ attributes:
     owner: DataStandard
     domain_of:
     - NamedThing
+    range: NamedThing
+  related_to:
+    name: related_to
+    description: A relationship that is asserted between two named things.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    rank: 1000
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: related_to
+    owner: DataStandard
+    domain_of:
+    - NamedThing
+    - Organization
+    symmetric: true
     range: NamedThing
 
 </code></pre>

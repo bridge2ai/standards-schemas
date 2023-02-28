@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://bridge2ai.github.io/standards-usecase-schema/requires_registration/">
+        <link rel="canonical" href="https://bridge2ai.github.io/standards-usecase-schema/wikidata_id/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: requires_registration - standards-usecase-schema</title>
+        <title>Slot: wikidata_id - standards-usecase-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-requires_registration" class="md-skip">
+        <a href="#slot-wikidata_id" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: requires_registration
+              Slot: wikidata_id
             
           </span>
         </div>
@@ -256,13 +256,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#inheritance" class="md-nav__link">
-    Inheritance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#applicable-classes" class="md-nav__link">
     Applicable Classes
   </a>
@@ -272,6 +265,13 @@
         <li class="md-nav__item">
   <a href="#properties" class="md-nav__link">
     Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -317,22 +317,16 @@
                 
                   
 
-  <a href="https://github.com/bridge2ai/standards-usecase-schema/edit/master/docs/requires_registration.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/bridge2ai/standards-usecase-schema/edit/master/docs/wikidata_id.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-requires_registration">Slot: requires_registration</h1>
-<p><em>Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration">STANDARDSDATASTANDARDORTOOL:requires_registration</a></p>
-<h2 id="inheritance">Inheritance</h2>
-<ul>
-<li><a href="../node_property/">node_property</a><ul>
-<li><strong>requires_registration</strong></li>
-</ul>
-</li>
-</ul>
+<h1 id="slot-wikidata_id">Slot: wikidata_id</h1>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id">STANDARDSORGANIZATION:wikidata_id</a></p>
+<!-- no inheritance hierarchy -->
+
 <h2 id="applicable-classes">Applicable Classes</h2>
 <table>
 <thead>
@@ -343,70 +337,47 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td>Represents a standard or tool in the Bridge2AI Standards Registry</td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td>Represents a general purpose standard in the Bridge2AI Standards Registry</td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td>Represents a standard in the Bridge2AI Standards Registry with particular app...</td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td>A set of concepts and categories, potentially defined or accompanied by their...</td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td>Represents a resource in the Bridge2AI Standards Registry serving as a standa...</td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td>Represents a piece of software or computational tool in the Bridge2AI Standar...</td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td>Represents an implementation of one or more standards or tools in the Bridge2...</td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td>Represents a training program for skills and experience related to standards ...</td>
+<td><a href="../Organization/">Organization</a></td>
+<td>Represents a group or organization related to or responsible for one or more ...</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></li>
+<li>Range: <a href="../WikidataIdentifier/">WikidataIdentifier</a></li>
 </ul>
+<h2 id="examples">Examples</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WIKIDATA:Q282186</td>
+</tr>
+</tbody>
+</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/bridge2ai/standards-datastandardortool-schema</li>
+<li>from schema: https://w3id.org/bridge2ai/standards-organization-schema</li>
 </ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: requires_registration
-description: Does usage of the standard or tool require registrion of a user or group
-  with some organization or managerial body?
-from_schema: https://w3id.org/bridge2ai/standards-datastandardortool-schema
+<pre><code class="language-yaml">name: wikidata_id
+examples:
+- value: WIKIDATA:Q282186
+from_schema: https://w3id.org/bridge2ai/standards-organization-schema
 rank: 1000
-is_a: node property
-domain: NamedThing
-alias: requires_registration
+values_from:
+- WIKIDATA
+alias: wikidata_id
 domain_of:
-- DataStandardOrTool
-range: boolean
+- Organization
+range: wikidata_identifier
 
 </code></pre>
 

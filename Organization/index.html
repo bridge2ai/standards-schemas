@@ -206,7 +206,7 @@
 </a>
 <h1 id="class-organization">Class: Organization</h1>
 <p><em>Represents a group or organization related to or responsible for one or more Bridge2AI standards.</em></p>
-<p>URI: <a href="STANDARDSORGANIZATION:Organization">STANDARDSORGANIZATION:Organization</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-organization-schema/Organization">STANDARDSORGANIZATION:Organization</a></p>
 <div class="mermaid"> classDiagram
     class Organization
       NamedThing &lt;|-- Organization
@@ -215,10 +215,10 @@
       Organization : id
       Organization : name
       Organization : related_to
-      Organization : ROR_ID
+      Organization : ror_id
       Organization : subclass_of
-      Organization : URL
-      Organization : Wikidata_ID
+      Organization : url
+      Organization : wikidata_id
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -240,21 +240,21 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../ROR_ID/">ROR_ID</a></td>
+<td><a href="../ror_id/">ror_id</a></td>
 <td>0..1 <br/> <a href="../RorIdentifier/">RorIdentifier</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../Wikidata_ID/">Wikidata_ID</a></td>
+<td><a href="../wikidata_id/">wikidata_id</a></td>
 <td>0..1 <br/> <a href="../WikidataIdentifier/">WikidataIdentifier</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../URL/">URL</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
-<td></td>
+<td><a href="../url/">url</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>URL for basic documentation of the standard or tool</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -265,19 +265,19 @@
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -403,9 +403,9 @@ from_schema: https://w3id.org/bridge2ai/standards-organization-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- ROR_ID
-- Wikidata_ID
-- URL
+- ror_id
+- wikidata_id
+- url
 - related_to
 
 </code></pre>
@@ -419,42 +419,45 @@ from_schema: https://w3id.org/bridge2ai/standards-organization-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  ROR_ID:
-    name: ROR_ID
+  ror_id:
+    name: ror_id
     examples:
     - value: ROR:02mp31p96
     from_schema: https://w3id.org/bridge2ai/standards-organization-schema
     rank: 1000
     values_from:
     - ROR
-    alias: ROR_ID
+    alias: ror_id
     owner: Organization
     domain_of:
     - Organization
-    range: ror identifier
-  Wikidata_ID:
-    name: Wikidata_ID
+    range: ror_identifier
+  wikidata_id:
+    name: wikidata_id
     examples:
     - value: WIKIDATA:Q282186
     from_schema: https://w3id.org/bridge2ai/standards-organization-schema
     rank: 1000
     values_from:
     - WIKIDATA
-    alias: Wikidata_ID
+    alias: wikidata_id
     owner: Organization
     domain_of:
     - Organization
-    range: wikidata identifier
-  URL:
-    name: URL
-    examples:
-    - value: https://www.zeiss.com/
-    from_schema: https://w3id.org/bridge2ai/standards-organization-schema
+    range: wikidata_identifier
+  url:
+    name: url
+    description: URL for basic documentation of the standard or tool.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
     rank: 1000
-    alias: URL
+    is_a: node property
+    domain: NamedThing
+    alias: url
     owner: Organization
     domain_of:
+    - DataStandardOrTool
     - Organization
+    range: uriorcurie
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
@@ -466,6 +469,7 @@ attributes:
     alias: related_to
     owner: Organization
     domain_of:
+    - NamedThing
     - Organization
     symmetric: true
     range: NamedThing
