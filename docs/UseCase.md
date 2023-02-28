@@ -24,6 +24,7 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
       UseCase : involved_in_quality_control
       UseCase : known_limitations
       UseCase : name
+      UseCase : related_to
       UseCase : relevance_to_dgps
       UseCase : standards_and_tools_for_dgp_use
       UseCase : subclass_of
@@ -47,21 +48,22 @@ URI: [STANDARDSUSECASE:UseCase](https://w3id.org/bridge2ai/standards-usecase-sch
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [use_case_category](use_case_category.md) | 0..1 <br/> [UseCaseCategory](UseCaseCategory.md) | Category of the UseCase | direct |
-| [known_limitations](known_limitations.md) | 0..1 <br/> [xsd:string](xsd:string) | Any current obstacles to implementing this use case | direct |
+| [known_limitations](known_limitations.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Any current obstacles to implementing this use case | direct |
 | [relevance_to_dgps](relevance_to_dgps.md) | 0..* <br/> [DataGeneratingProject](DataGeneratingProject.md) | Relevance of the use case to one or more DGPs | direct |
 | [data_topics](data_topics.md) | 0..* <br/> [DataTopic](DataTopic.md) | Relevance of the use case to one or more data topics | direct |
 | [data_substrates](data_substrates.md) | 0..* <br/> [DataSubstrate](DataSubstrate.md) | Relevance of the use case to one or more data substrates | direct |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | 0..* <br/> [DataStandardOrTool](DataStandardOrTool.md) | List of identifiers of standards and tools; those planned to be used, or alre... | direct |
 | [alternative_standards_and_tools](alternative_standards_and_tools.md) | 0..* <br/> [DataStandardOrTool](DataStandardOrTool.md) | List of identifiers of standards and tools; those not explicitly planned to b... | direct |
 | [enables](enables.md) | 0..* <br/> [UseCase](UseCase.md) | Other use case(s) this use case supports or makes possible | direct |
-| [involved_in_experimental_design](involved_in_experimental_design.md) | 0..1 <br/> [xsd:boolean](xsd:boolean) | True if use case is likely to be implemented as part of an experimental proce... | direct |
-| [involved_in_metadata_management](involved_in_metadata_management.md) | 0..1 <br/> [xsd:boolean](xsd:boolean) | True if use case is likely to be implemented as part of metadata indexing, sa... | direct |
-| [involved_in_quality_control](involved_in_quality_control.md) | 0..1 <br/> [xsd:boolean](xsd:boolean) | True is use case is likely to be implemented as part of data validation opera... | direct |
-| [xref](xref.md) | 0..* <br/> [xsd:anyURI](xsd:anyURI) | URI of corresponding class in an ontology of experimental procedures, in CURI... | direct |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
-| [name](name.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
-| [description](description.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
+| [involved_in_experimental_design](involved_in_experimental_design.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | True if use case is likely to be implemented as part of an experimental proce... | direct |
+| [involved_in_metadata_management](involved_in_metadata_management.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | True if use case is likely to be implemented as part of metadata indexing, sa... | direct |
+| [involved_in_quality_control](involved_in_quality_control.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | True is use case is likely to be implemented as part of data validation opera... | direct |
+| [xref](xref.md) | 0..* <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | URI of corresponding class in an ontology of experimental procedures, in CURI... | direct |
+| [id](id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
+| [name](name.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
+| [description](description.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
 | [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
+| [related_to](related_to.md) | 0..* <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | [NamedThing](NamedThing.md) |
 
 
 
@@ -382,6 +384,21 @@ attributes:
     owner: UseCase
     domain_of:
     - NamedThing
+    range: NamedThing
+  related_to:
+    name: related_to
+    description: A relationship that is asserted between two named things.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    rank: 1000
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: related_to
+    owner: UseCase
+    domain_of:
+    - NamedThing
+    - Organization
+    symmetric: true
     range: NamedThing
 
 ```

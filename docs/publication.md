@@ -38,7 +38,7 @@ URI: [STANDARDSDATASTANDARDORTOOL:publication](https://w3id.org/bridge2ai/standa
 
 ## Properties
 
-* Range: [xsd:anyURI](xsd:anyURI)
+* Range: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 
 
 

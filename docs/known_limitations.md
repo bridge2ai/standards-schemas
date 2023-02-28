@@ -29,7 +29,7 @@ URI: [STANDARDSUSECASE:known_limitations](https://w3id.org/bridge2ai/standards-u
 
 ## Properties
 
-* Range: [xsd:string](xsd:string)
+* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 
 
 

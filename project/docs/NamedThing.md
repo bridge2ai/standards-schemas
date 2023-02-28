@@ -7,7 +7,7 @@ A generic grouping for any identifiable entity
 URI: [https://w3id.org/bridge2ai/standards-schema-all/NamedThing](https://w3id.org/bridge2ai/standards-schema-all/NamedThing)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing]<subclass_of%200..*-%20[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F],[Organization]-%20related_to%200..*>[NamedThing],[NamedThing]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing]<subclass_of%200..*-%20[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F],[Organization]-%20related_to%200..*>[NamedThing],[NamedThing]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing]<related_to%200..*-%20[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F],[NamedThing]<subclass_of%200..*-%20[NamedThing],[NamedThing]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing]<related_to%200..*-%20[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F],[NamedThing]<subclass_of%200..*-%20[NamedThing],[NamedThing]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])
 
 ## Children
 
@@ -38,6 +38,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/NamedThing](https://w3id.o
      * Range: [String](types/String.md)
  * [subclass_of](subclass_of.md)  <sub>0..\*</sub>
      * Description: Holds between two classes where the domain class is a specialization of the range class.
+     * Range: [NamedThing](NamedThing.md)
+ * [related_to](related_to.md)  <sub>0..\*</sub>
+     * Description: A relationship that is asserted between two named things.
      * Range: [NamedThing](NamedThing.md)
 
 ## Other properties

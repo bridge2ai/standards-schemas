@@ -29,7 +29,7 @@ URI: [STANDARDSUSECASE:involved_in_quality_control](https://w3id.org/bridge2ai/s
 
 ## Properties
 
-* Range: [xsd:boolean](xsd:boolean)
+* Range: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
 
 
 

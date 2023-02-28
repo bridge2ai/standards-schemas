@@ -37,6 +37,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
  * [subclass_of](subclass_of.md)  <sub>0..\*</sub>
      * Description: Holds between two classes where the domain class is a specialization of the range class.
      * Range: [NamedThing](NamedThing.md)
+ * [related_to](related_to.md)  <sub>0..\*</sub>
+     * Description: A relationship that is asserted between two named things.
+     * Range: [NamedThing](NamedThing.md)
  * [collection](collection.md)  <sub>0..\*</sub>
      * Description: Tags for specific sets of standards.
      * Range: [StandardsCollectionTag](StandardsCollectionTag.md)

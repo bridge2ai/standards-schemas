@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-17T13:15:02
+# Generation date: 2023-02-28T11:20:01
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -148,7 +148,7 @@ class NamedThing(YAMLRoot):
     """
     A generic grouping for any identifiable entity
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
 
     class_class_uri: ClassVar[URIRef] = SCHEMA.Thing
     class_class_curie: ClassVar[str] = "schema:Thing"
@@ -159,6 +159,7 @@ class NamedThing(YAMLRoot):
     name: Optional[str] = None
     description: Optional[str] = None
     subclass_of: Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]] = empty_list()
+    related_to: Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -176,6 +177,10 @@ class NamedThing(YAMLRoot):
             self.subclass_of = [self.subclass_of] if self.subclass_of is not None else []
         self.subclass_of = [v if isinstance(v, NamedThingId) else NamedThingId(v) for v in self.subclass_of]
 
+        if not isinstance(self.related_to, list):
+            self.related_to = [self.related_to] if self.related_to is not None else []
+        self.related_to = [v if isinstance(v, NamedThingId) else NamedThingId(v) for v in self.related_to]
+
         super().__post_init__(**kwargs)
 
 
@@ -184,7 +189,7 @@ class DataTopic(NamedThing):
     """
     Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATATOPIC.DataTopic
     class_class_curie: ClassVar[str] = "STANDARDSDATATOPIC:DataTopic"
@@ -242,7 +247,7 @@ class DataSubstrate(NamedThing):
     refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate
     but the concept of TSV format is a DataStandard.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASUBSTRATE.DataSubstrate
     class_class_curie: ClassVar[str] = "STANDARDSDATASUBSTRATE:DataSubstrate"
@@ -372,7 +377,7 @@ class DataStandardOrTool(NamedThing):
     """
     Represents a standard or tool in the Bridge2AI Standards Registry.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.DataStandardOrTool
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:DataStandardOrTool"
@@ -434,7 +439,7 @@ class DataStandard(DataStandardOrTool):
     """
     Represents a general purpose standard in the Bridge2AI Standards Registry.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.DataStandard
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:DataStandard"
@@ -458,7 +463,7 @@ class BiomedicalStandard(DataStandard):
     Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or
     biomedical research purposes.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.BiomedicalStandard
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:BiomedicalStandard"
@@ -481,7 +486,7 @@ class Registry(DataStandardOrTool):
     """
     Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.Registry
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:Registry"
@@ -504,7 +509,7 @@ class OntologyOrVocabulary(DataStandardOrTool):
     """
     A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.OntologyOrVocabulary
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary"
@@ -528,7 +533,7 @@ class ModelRepository(DataStandardOrTool):
     Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be
     a respository, the resource must not index models alone.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.ModelRepository
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:ModelRepository"
@@ -551,7 +556,7 @@ class ReferenceDataOrDataset(DataStandardOrTool):
     """
     Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.ReferenceDataOrDataset
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset"
@@ -574,7 +579,7 @@ class SoftwareOrTool(DataStandardOrTool):
     """
     Represents a piece of software or computational tool in the Bridge2AI Standards Registry.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.SoftwareOrTool
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:SoftwareOrTool"
@@ -598,7 +603,7 @@ class ReferenceImplementation(DataStandardOrTool):
     Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a
     full specification in a particular language or as an application to a specific use case.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.ReferenceImplementation
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:ReferenceImplementation"
@@ -622,7 +627,7 @@ class TrainingProgram(DataStandardOrTool):
     Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards
     Registry.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSDATASTANDARDORTOOL.TrainingProgram
     class_class_curie: ClassVar[str] = "STANDARDSDATASTANDARDORTOOL:TrainingProgram"
@@ -665,7 +670,7 @@ class UseCase(NamedThing):
     """
     Represents a use case for Bridge2AI standards.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
 
     class_class_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCase
     class_class_curie: ClassVar[str] = "STANDARDSUSECASE:UseCase"

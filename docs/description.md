@@ -38,7 +38,7 @@ URI: [schema:description](http://schema.org/description)
 
 ## Properties
 
-* Range: [xsd:string](xsd:string)
+* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 
 
 

@@ -29,7 +29,7 @@ URI: [STANDARDSDATASUBSTRATE:metadata_storage](https://w3id.org/bridge2ai/standa
 
 ## Properties
 
-* Range: [xsd:string](xsd:string)
+* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 * Multivalued: True
 
 

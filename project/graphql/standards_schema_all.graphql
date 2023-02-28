@@ -4,6 +4,7 @@ type BiomedicalStandard
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -21,6 +22,7 @@ type DataStandard
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -38,6 +40,7 @@ type DataStandardOrTool
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -60,6 +63,7 @@ type DataSubstrate
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     edamId: EdamIdentifier
     meshId: MeshIdentifier
     ncitId: NcitIdentifier
@@ -79,6 +83,7 @@ type DataTopic
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     edamId: EdamIdentifier
     meshId: MeshIdentifier
     ncitId: NcitIdentifier
@@ -95,6 +100,7 @@ type ModelRepository
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -112,6 +118,7 @@ type NamedThing
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
   }
 
 type OntologyOrVocabulary
@@ -120,6 +127,7 @@ type OntologyOrVocabulary
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -154,6 +162,7 @@ type ReferenceDataOrDataset
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -171,6 +180,7 @@ type ReferenceImplementation
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -188,6 +198,7 @@ type Registry
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -205,6 +216,7 @@ type SoftwareOrTool
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -222,6 +234,7 @@ type TrainingProgram
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -239,6 +252,7 @@ type UseCase
     name: String
     description: String
     subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
     useCaseCategory: UseCaseCategory!
     knownLimitations: String
     relevanceToDgps: [DataGeneratingProject]

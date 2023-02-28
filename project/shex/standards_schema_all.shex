@@ -150,7 +150,8 @@ STANDARDS:NamedThing  (
     CLOSED {
        (  $STANDARDS:NamedThing_tes (  schema:name @linkml:String ? ;
              schema:description @linkml:String ? ;
-             STANDARDS:subclass_of @STANDARDS:NamedThing *
+             STANDARDS:subclass_of @STANDARDS:NamedThing * ;
+             STANDARDS:related_to @STANDARDS:NamedThing *
           ) ;
           rdf:type [ schema:Thing ]
        )
@@ -171,8 +172,7 @@ STANDARDSORGANIZATION:Organization CLOSED {
           rdf:type [ schema:Thing ] ? ;
           STANDARDSORGANIZATION:ror_id @STANDARDSORGANIZATION:RorIdentifier ? ;
           STANDARDSORGANIZATION:wikidata_id @STANDARDSORGANIZATION:WikidataIdentifier ? ;
-          STANDARDS:url @linkml:Uriorcurie ? ;
-          STANDARDS:related_to @STANDARDS:NamedThing *
+          STANDARDS:url @linkml:Uriorcurie ?
        ) ;
        rdf:type [ STANDARDSORGANIZATION:Organization ]
     )
