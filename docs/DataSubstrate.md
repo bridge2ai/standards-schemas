@@ -22,6 +22,7 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](https://w3id.org/bridge2ai/standards
       DataSubstrate : metadata_storage
       DataSubstrate : name
       DataSubstrate : ncit_id
+      DataSubstrate : related_to
       DataSubstrate : subclass_of
       
 ```
@@ -43,13 +44,14 @@ URI: [STANDARDSDATASUBSTRATE:DataSubstrate](https://w3id.org/bridge2ai/standards
 | [edam_id](edam_id.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) |  | direct |
 | [mesh_id](mesh_id.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) |  | direct |
 | [ncit_id](ncit_id.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) |  | direct |
-| [metadata_storage](metadata_storage.md) | 0..* <br/> [xsd:string](xsd:string) | Data Substrate in which metadata is stored | direct |
-| [file_extensions](file_extensions.md) | 0..* <br/> [xsd:string](xsd:string) | Commonly used file extensions for this substrate | direct |
-| [limitations](limitations.md) | 0..* <br/> [xsd:string](xsd:string) | Potential obstacles particular to this substrate or implementation | direct |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
-| [name](name.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
-| [description](description.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
+| [metadata_storage](metadata_storage.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Data Substrate in which metadata is stored | direct |
+| [file_extensions](file_extensions.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Commonly used file extensions for this substrate | direct |
+| [limitations](limitations.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Potential obstacles particular to this substrate or implementation | direct |
+| [id](id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
+| [name](name.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
+| [description](description.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
 | [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
+| [related_to](related_to.md) | 0..* <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | [NamedThing](NamedThing.md) |
 
 
 
@@ -278,6 +280,21 @@ attributes:
     owner: DataSubstrate
     domain_of:
     - NamedThing
+    range: NamedThing
+  related_to:
+    name: related_to
+    description: A relationship that is asserted between two named things.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    rank: 1000
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: related_to
+    owner: DataSubstrate
+    domain_of:
+    - NamedThing
+    - Organization
+    symmetric: true
     range: NamedThing
 
 ```

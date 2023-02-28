@@ -29,7 +29,7 @@ URI: [STANDARDS:xref](https://w3id.org/bridge2ai/standards-schema/xref)
 
 ## Properties
 
-* Range: [xsd:anyURI](xsd:anyURI)
+* Range: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 * Multivalued: True
 
 

@@ -39,7 +39,7 @@ URI: [STANDARDS:url](https://w3id.org/bridge2ai/standards-schema/url)
 
 ## Properties
 
-* Range: [xsd:anyURI](xsd:anyURI)
+* Range: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 
 
 

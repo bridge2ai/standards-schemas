@@ -38,7 +38,7 @@ URI: [STANDARDSDATASTANDARDORTOOL:purpose_detail](https://w3id.org/bridge2ai/sta
 
 ## Properties
 
-* Range: [xsd:string](xsd:string)
+* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 
 
 

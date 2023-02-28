@@ -23,6 +23,7 @@ URI: [STANDARDSDATASTANDARDORTOOL:DataStandardOrTool](https://w3id.org/bridge2ai
       DataStandardOrTool : name
       DataStandardOrTool : publication
       DataStandardOrTool : purpose_detail
+      DataStandardOrTool : related_to
       DataStandardOrTool : requires_registration
       DataStandardOrTool : subclass_of
       DataStandardOrTool : url
@@ -47,6 +48,7 @@ URI: [STANDARDSDATASTANDARDORTOOL:DataStandardOrTool](https://w3id.org/bridge2ai
       DataStandardOrTool : name
       DataStandardOrTool : publication
       DataStandardOrTool : purpose_detail
+      DataStandardOrTool : related_to
       DataStandardOrTool : requires_registration
       DataStandardOrTool : subclass_of
       DataStandardOrTool : url
@@ -78,16 +80,17 @@ URI: [STANDARDSDATASTANDARDORTOOL:DataStandardOrTool](https://w3id.org/bridge2ai
 | [collection](collection.md) | 0..* <br/> [StandardsCollectionTag](StandardsCollectionTag.md) | Tags for specific sets of standards | direct |
 | [concerns_data_topic](concerns_data_topic.md) | 0..* <br/> [DataTopic](DataTopic.md) | Subject standard is generally applied in the context of object data topic | direct |
 | [has_relevant_organization](has_relevant_organization.md) | 0..* <br/> [Organization](Organization.md) | Subject standard is managed or otherwise guided buy the object organization(s... | direct |
-| [purpose_detail](purpose_detail.md) | 0..1 <br/> [xsd:string](xsd:string) | Text description of the standard or tool | direct |
-| [is_open](is_open.md) | 0..1 <br/> [xsd:boolean](xsd:boolean) | Is the standard or tool FAIR and available free of cost? | direct |
-| [requires_registration](requires_registration.md) | 0..1 <br/> [xsd:boolean](xsd:boolean) | Does usage of the standard or tool require registrion of a user or group with... | direct |
-| [url](url.md) | 0..1 <br/> [xsd:anyURI](xsd:anyURI) | URL for basic documentation of the standard or tool | direct |
-| [publication](publication.md) | 0..1 <br/> [xsd:anyURI](xsd:anyURI) | Relevant publication for the standard or tool | direct |
-| [formal_specification](formal_specification.md) | 0..1 <br/> [xsd:anyURI](xsd:anyURI) | Relevant code repository or other location for a formal specification of the ... | direct |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](xsd:anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
-| [name](name.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
-| [description](description.md) | 0..1 <br/> [xsd:string](xsd:string) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
+| [purpose_detail](purpose_detail.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Text description of the standard or tool | direct |
+| [is_open](is_open.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | Is the standard or tool FAIR and available free of cost? | direct |
+| [requires_registration](requires_registration.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | Does usage of the standard or tool require registrion of a user or group with... | direct |
+| [url](url.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | URL for basic documentation of the standard or tool | direct |
+| [publication](publication.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | Relevant publication for the standard or tool | direct |
+| [formal_specification](formal_specification.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | Relevant code repository or other location for a formal specification of the ... | direct |
+| [id](id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
+| [name](name.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
+| [description](description.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
 | [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
+| [related_to](related_to.md) | 0..* <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | [NamedThing](NamedThing.md) |
 
 
 
@@ -362,6 +365,21 @@ attributes:
     owner: DataStandardOrTool
     domain_of:
     - NamedThing
+    range: NamedThing
+  related_to:
+    name: related_to
+    description: A relationship that is asserted between two named things.
+    from_schema: https://w3id.org/bridge2ai/standards-schema
+    rank: 1000
+    domain: NamedThing
+    multivalued: true
+    inherited: true
+    alias: related_to
+    owner: DataStandardOrTool
+    domain_of:
+    - NamedThing
+    - Organization
+    symmetric: true
     range: NamedThing
 
 ```

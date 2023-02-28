@@ -38,7 +38,7 @@ URI: [STANDARDSDATASTANDARDORTOOL:requires_registration](https://w3id.org/bridge
 
 ## Properties
 
-* Range: [xsd:boolean](xsd:boolean)
+* Range: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
 
 
 

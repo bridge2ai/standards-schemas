@@ -38,7 +38,7 @@ URI: [STANDARDSDATASTANDARDORTOOL:is_open](https://w3id.org/bridge2ai/standards-
 
 ## Properties
 
-* Range: [xsd:boolean](xsd:boolean)
+* Range: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
 
 
 

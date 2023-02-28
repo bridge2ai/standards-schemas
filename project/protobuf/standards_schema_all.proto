@@ -5,6 +5,7 @@ message BiomedicalStandard
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -22,6 +23,7 @@ message DataStandard
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -39,6 +41,7 @@ message DataStandardOrTool
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -61,6 +64,7 @@ message DataSubstrate
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
   edamIdentifier edamId = 0
   meshIdentifier meshId = 0
   ncitIdentifier ncitId = 0
@@ -80,6 +84,7 @@ message DataTopic
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
   edamIdentifier edamId = 0
   meshIdentifier meshId = 0
   ncitIdentifier ncitId = 0
@@ -96,6 +101,7 @@ message ModelRepository
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -113,6 +119,7 @@ message NamedThing
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  }
 // A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.
 message OntologyOrVocabulary
@@ -121,6 +128,7 @@ message OntologyOrVocabulary
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -155,6 +163,7 @@ message ReferenceDataOrDataset
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -172,6 +181,7 @@ message ReferenceImplementation
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -189,6 +199,7 @@ message Registry
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -206,6 +217,7 @@ message SoftwareOrTool
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -223,6 +235,7 @@ message TrainingProgram
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -240,6 +253,7 @@ message UseCase
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
   useCaseCategory useCaseCategory = 0
   string knownLimitations = 0
  repeated  dataGeneratingProject relevanceToDgps = 0

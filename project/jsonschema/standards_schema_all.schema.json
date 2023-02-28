@@ -53,6 +53,13 @@
                     "description": "Text description of the standard or tool.",
                     "type": "string"
                 },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
@@ -139,6 +146,13 @@
                     "description": "Text description of the standard or tool.",
                     "type": "string"
                 },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
@@ -213,6 +227,13 @@
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
                     "type": "string"
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
@@ -302,6 +323,13 @@
                 "ncit_id": {
                     "type": "string"
                 },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "subclass_of": {
                     "description": "Holds between two classes where the domain class is a specialization of the range class.",
                     "items": {
@@ -354,6 +382,13 @@
                 },
                 "ncit_id": {
                     "type": "string"
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "subclass_of": {
                     "description": "Holds between two classes where the domain class is a specialization of the range class.",
@@ -436,6 +471,13 @@
                     "description": "Text description of the standard or tool.",
                     "type": "string"
                 },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
@@ -473,6 +515,13 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "subclass_of": {
                     "description": "Holds between two classes where the domain class is a specialization of the range class.",
@@ -540,6 +589,13 @@
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
                     "type": "string"
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
@@ -677,6 +733,13 @@
                     "description": "Text description of the standard or tool.",
                     "type": "string"
                 },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
@@ -751,6 +814,13 @@
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
                     "type": "string"
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
@@ -827,6 +897,13 @@
                     "description": "Text description of the standard or tool.",
                     "type": "string"
                 },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
@@ -901,6 +978,13 @@
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
                     "type": "string"
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
@@ -1018,6 +1102,13 @@
                     "description": "Text description of the standard or tool.",
                     "type": "string"
                 },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "requires_registration": {
                     "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
                     "type": "boolean"
@@ -1099,6 +1190,13 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "relevance_to_dgps": {
                     "description": "Relevance of the use case to one or more DGPs.",
