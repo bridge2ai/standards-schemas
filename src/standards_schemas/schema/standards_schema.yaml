@@ -28,6 +28,11 @@ imports:
   - linkml:types
 
 types:
+  category_type:
+    typeof: uriorcurie
+    description: >-
+      A primitive type in which the value denotes a class within the model.
+      The value must be a URI or a CURIE.
   edam_identifier:
     typeof: uriorcurie
     id_prefixes:
@@ -51,6 +56,7 @@ classes:
       A generic grouping for any identifiable entity
     slots:
       - id
+      - category
       - name
       - description
       - subclass_of
@@ -69,6 +75,23 @@ slots:
     range: uriorcurie
     description: A unique identifier for a thing.
     required: true
+  type:
+    slot_uri: rdf:type
+    domain: NamedThing
+    exact_mappings:
+      - gff3:type
+      - gpi:DB_Object_Type
+    multivalued: true
+  category:
+    is_a: type
+    domain: NamedThing
+    range: category_type
+    designates_type: true
+    description: >-
+      Name of the high level ontology class in which this entity is categorized.
+      Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+    is_class_field: true
+    multivalued: true
   name:
     slot_uri: schema:name
     description: A human-readable name for a thing.
