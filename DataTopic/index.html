@@ -206,19 +206,29 @@
 </a>
 <h1 id="class-datatopic">Class: DataTopic</h1>
 <p><em>Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic">STANDARDSDATATOPIC:DataTopic</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:DataTopic">https://w3id.org/bridge2ai/standards-schema-all/:DataTopic</a></p>
 <div class="mermaid"> classDiagram
     class DataTopic
       NamedThing &lt;|-- DataTopic
 
+      DataTopic : category
+        DataTopic &lt;.. category_type : category
       DataTopic : description
+        DataTopic &lt;.. string : description
       DataTopic : edam_id
+        DataTopic &lt;.. edam_identifier : edam_id
       DataTopic : id
+        DataTopic &lt;.. uriorcurie : id
       DataTopic : mesh_id
+        DataTopic &lt;.. mesh_identifier : mesh_id
       DataTopic : name
+        DataTopic &lt;.. string : name
       DataTopic : ncit_id
+        DataTopic &lt;.. ncit_identifier : ncit_id
       DataTopic : related_to
+        DataTopic &lt;.. NamedThing : related_to
       DataTopic : subclass_of
+        DataTopic &lt;.. NamedThing : subclass_of
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -259,19 +269,25 @@
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>A unique identifier for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../category/">category</a></td>
+<td>0..1 <br/> <a href="../CategoryType/">CategoryType</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A human-readable name for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A human-readable description for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -377,7 +393,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/bridge2ai/standards-datatopic-schema</li>
+<li>from schema: https://w3id.org/bridge2ai/standards-schema-all</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -390,11 +406,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>STANDARDSDATATOPIC:DataTopic</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/:DataTopic</td>
 </tr>
 <tr>
 <td>native</td>
-<td>STANDARDSDATATOPIC:DataTopic</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/:DataTopic</td>
 </tr>
 </tbody>
 </table>
@@ -405,7 +421,7 @@
 <pre><code class="language-yaml">name: DataTopic
 description: Represents a general data topic for Bridge2AI data or the tools/standards
   applied to the data.
-from_schema: https://w3id.org/bridge2ai/standards-datatopic-schema
+from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: NamedThing
 slots:
@@ -420,7 +436,7 @@ slots:
 <pre><code class="language-yaml">name: DataTopic
 description: Represents a general data topic for Bridge2AI data or the tools/standards
   applied to the data.
-from_schema: https://w3id.org/bridge2ai/standards-datatopic-schema
+from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: NamedThing
 attributes:
@@ -428,7 +444,7 @@ attributes:
     name: edam_id
     examples:
     - value: edam.data:0006
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     values_from:
     - edam.data
@@ -445,7 +461,7 @@ attributes:
     name: mesh_id
     examples:
     - value: MeSH:D014831
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     values_from:
     - MeSH
@@ -459,7 +475,7 @@ attributes:
     name: ncit_id
     examples:
     - value: NCIT:C92692
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     values_from:
     - NCIT
@@ -472,7 +488,7 @@ attributes:
   id:
     name: id
     description: A unique identifier for a thing.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -482,10 +498,24 @@ attributes:
     - NamedThing
     range: uriorcurie
     required: true
+  category:
+    name: category
+    description: Name of the high level ontology class in which this entity is categorized.
+      Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: type
+    domain: NamedThing
+    designates_type: true
+    alias: category
+    owner: DataTopic
+    domain_of:
+    - NamedThing
+    range: category_type
   name:
     name: name
     description: A human-readable name for a thing.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -496,7 +526,7 @@ attributes:
   description:
     name: description
     description: A human-readable description for a thing.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -508,7 +538,7 @@ attributes:
     name: subclass_of
     description: Holds between two classes where the domain class is a specialization
       of the range class.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     exact_mappings:
     - rdfs:subClassOf
     - MESH:isa
@@ -527,7 +557,7 @@ attributes:
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
     multivalued: true

@@ -215,11 +215,18 @@
       NamedThing &lt;|-- Organization
       NamedThing &lt;|-- DataSubstrate
 
+      NamedThing : category
+        NamedThing &lt;.. category_type : category
       NamedThing : description
+        NamedThing &lt;.. string : description
       NamedThing : id
+        NamedThing &lt;.. uriorcurie : id
       NamedThing : name
+        NamedThing &lt;.. string : name
       NamedThing : related_to
+        NamedThing &lt;.. NamedThing : related_to
       NamedThing : subclass_of
+        NamedThing &lt;.. NamedThing : subclass_of
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -246,19 +253,25 @@
 <tbody>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>A unique identifier for a thing</td>
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../category/">category</a></td>
+<td>0..1 <br/> <a href="../CategoryType/">CategoryType</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A human-readable name for a thing</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A human-readable description for a thing</td>
 <td>direct</td>
 </tr>
@@ -355,6 +368,12 @@
 </tr>
 <tr>
 <td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../UseCase/">UseCase</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -421,6 +440,12 @@
 </tr>
 <tr>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -487,6 +512,12 @@
 </tr>
 <tr>
 <td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -553,6 +584,12 @@
 </tr>
 <tr>
 <td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -619,6 +656,12 @@
 </tr>
 <tr>
 <td><a href="../Registry/">Registry</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -685,6 +728,12 @@
 </tr>
 <tr>
 <td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -751,6 +800,12 @@
 </tr>
 <tr>
 <td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -817,6 +872,12 @@
 </tr>
 <tr>
 <td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -883,6 +944,12 @@
 </tr>
 <tr>
 <td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -949,6 +1016,12 @@
 </tr>
 <tr>
 <td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -1015,6 +1088,12 @@
 </tr>
 <tr>
 <td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -1039,6 +1118,12 @@
 </tr>
 <tr>
 <td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -1059,6 +1144,12 @@
 <td><a href="../DataTopic/">DataTopic</a></td>
 <td><a href="../related_to/">related_to</a></td>
 <td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
@@ -1101,6 +1192,12 @@
 <td><a href="../Organization/">Organization</a></td>
 <td><a href="../related_to/">related_to</a></td>
 <td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
@@ -1135,6 +1232,12 @@
 </tr>
 <tr>
 <td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
@@ -1162,7 +1265,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/bridge2ai/standards-schema</li>
+<li>from schema: https://w3id.org/bridge2ai/standards-schema-all</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -1179,7 +1282,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>STANDARDS:NamedThing</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/:NamedThing</td>
 </tr>
 </tbody>
 </table>
@@ -1189,10 +1292,11 @@
 <details>
 <pre><code class="language-yaml">name: NamedThing
 description: A generic grouping for any identifiable entity
-from_schema: https://w3id.org/bridge2ai/standards-schema
+from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 slots:
 - id
+- category
 - name
 - description
 - subclass_of
@@ -1205,13 +1309,13 @@ class_uri: schema:Thing
 <details>
 <pre><code class="language-yaml">name: NamedThing
 description: A generic grouping for any identifiable entity
-from_schema: https://w3id.org/bridge2ai/standards-schema
+from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 attributes:
   id:
     name: id
     description: A unique identifier for a thing.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -1221,10 +1325,24 @@ attributes:
     - NamedThing
     range: uriorcurie
     required: true
+  category:
+    name: category
+    description: Name of the high level ontology class in which this entity is categorized.
+      Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: type
+    domain: NamedThing
+    designates_type: true
+    alias: category
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: category_type
   name:
     name: name
     description: A human-readable name for a thing.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -1235,7 +1353,7 @@ attributes:
   description:
     name: description
     description: A human-readable description for a thing.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -1247,7 +1365,7 @@ attributes:
     name: subclass_of
     description: Holds between two classes where the domain class is a specialization
       of the range class.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     exact_mappings:
     - rdfs:subClassOf
     - MESH:isa
@@ -1266,7 +1384,7 @@ attributes:
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
-    from_schema: https://w3id.org/bridge2ai/standards-schema
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
     multivalued: true

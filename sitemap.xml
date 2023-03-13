@@ -2,452 +2,542 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/BiomedicalStandard/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Boolean/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/CategoryType/</loc>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/DataGeneratingProject/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/DataStandard/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/DataStandardOrTool/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/DataStandardOrToolContainer/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/DataSubstrate/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/DataSubstrateContainer/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/DataTopic/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/DataTopicContainer/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Date/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/DateOrDatetime/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Datetime/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Decimal/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Double/</loc>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/EDAM_ID/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/EdamIdentifier/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Float/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Integer/</loc>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/MESH_ID/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/MeSH_ID/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/MeshIdentifier/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/ModelRepository/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/NCIT_ID/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/NamedThing/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/NcitIdentifier/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Ncname/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Nodeidentifier/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Objectidentifier/</loc>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/OntologyOrVocabulary/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/Organization/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/OrganizationContainer/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/ROR_ID/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/ReferenceDataOrDataset/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/ReferenceImplementation/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/Registry/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/RorIdentifier/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/SoftwareOrTool/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/StandardsCollectionTag/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/String/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Time/</loc>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/TrainingProgram/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/URL/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Uri/</loc>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/Uriorcurie/</loc>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/UseCase/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/UseCaseCategory/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/UseCaseContainer/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/WikidataIdentifier/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/Wikidata_ID/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/about/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/alternative_standards_and_tools/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/category/</loc>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/collection/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/concerns_data_topic/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/data_standardortools_collection/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/data_substrates/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/data_substrates_collection/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/data_topics/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/data_topics_collection/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/data_types/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/description/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/edam_id/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/enables/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/entries/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/file_extensions/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/formal_specification/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/has_relevant_organization/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/id/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/involved_in_experimental_design/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/involved_in_metadata_management/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/involved_in_quality_control/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/is_open/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/known_limitations/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/limitations/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/mesh_id/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/metadata_storage/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/name/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/ncit_id/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/node_property/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/organizations/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/primary_email/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/publication/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/purpose_detail/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/related_to/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/relevance_to_dgps/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/requires_registration/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/ror_id/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/standards-datastandardortool-schema/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/standards-datasubstrate-schema/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/standards-datatopic-schema/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/standards-organization-schema/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/standards-schema-all/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/standards-schema/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/standards-usecase-schema/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/standards_and_tools_for_dgp_use/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/subclass_of/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-usecase-schema/type/</loc>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/types/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/url/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/use_case_category/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/use_cases/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/usecases/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/wikidata_id/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/xref/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-usecase-schema/xrefs/</loc>
-         <lastmod>2023-02-28</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
