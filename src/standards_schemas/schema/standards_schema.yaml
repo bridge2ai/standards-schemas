@@ -76,7 +76,6 @@ slots:
     description: A unique identifier for a thing.
     required: true
   type:
-    slot_uri: rdf:type
     domain: NamedThing
     exact_mappings:
       - gff3:type
