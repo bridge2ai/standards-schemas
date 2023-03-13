@@ -77,6 +77,8 @@ High-level classes for Bridge2AI Standards schemas.
      * [subclass_of](subclass_of.md) - Holds between two classes where the domain class is a specialization of the range class.
  * [relevance_to_dgps](relevance_to_dgps.md) - Relevance of the use case to one or more DGPs.
  * [ror_id](ror_id.md)
+ * [type](type.md)
+     * [category](category.md) - Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
  * [use_cases](use_cases.md)
  * [wikidata_id](wikidata_id.md)
 
@@ -112,6 +114,7 @@ High-level classes for Bridge2AI Standards schemas.
 #### Defined
 
  * [Boolean](types/Boolean.md)  (**Bool**)  - A binary (true or false) value
+ * [CategoryType](types/CategoryType.md)  ([Uriorcurie](types/Uriorcurie.md))  - A primitive type in which the value denotes a class within the model.
  * [Curie](types/Curie.md)  (**Curie**)  - a compact URI
  * [Date](types/Date.md)  (**XSDDate**)  - a date (year, month and day) in an idealized calendar
  * [DateOrDatetime](types/DateOrDatetime.md)  (**str**)  - Either a date or a datetime

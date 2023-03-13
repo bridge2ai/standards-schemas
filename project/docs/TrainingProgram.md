@@ -7,7 +7,7 @@ Represents a training program for skills and experience related to standards or 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram](https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]^-[TrainingProgram&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[Organization],[NamedThing],[DataTopic],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]^-[TrainingProgram&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[Organization],[NamedThing],[DataTopic],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]^-[TrainingProgram&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[Organization],[NamedThing],[DataTopic],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[DataStandardOrTool]^-[TrainingProgram&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[Organization],[NamedThing],[DataTopic],[DataStandardOrTool])
 
 ## Parents
 
@@ -21,6 +21,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram](https://w
  * [id](id.md)  <sub>1..1</sub>
      * Description: A unique identifier for a thing.
      * Range: [Uriorcurie](types/Uriorcurie.md)
+ * [category](category.md)  <sub>0..1</sub>
+     * Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+     * Range: [CategoryType](types/CategoryType.md)
  * [name](name.md)  <sub>0..1</sub>
      * Description: A human-readable name for a thing.
      * Range: [String](types/String.md)

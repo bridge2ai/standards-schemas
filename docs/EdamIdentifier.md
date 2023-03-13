@@ -43,7 +43,7 @@ Instances of this class *should* have identifiers with one of the following pref
 ### Schema Source
 
 
-* from schema: https://w3id.org/bridge2ai/standards-schema
+* from schema: https://w3id.org/bridge2ai/standards-schema-all
 
 
 

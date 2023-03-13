@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-02-28T11:20:01
+# Generation date: 2023-03-13T15:49:33
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -47,6 +47,14 @@ DEFAULT_ = CurieNamespace('', 'https://w3id.org/bridge2ai/standards-schema-all/'
 
 
 # Types
+class CategoryType(Uriorcurie):
+    """ A primitive type in which the value denotes a class within the model. """
+    type_class_uri = XSD.anyURI
+    type_class_curie = "xsd:anyURI"
+    type_name = "category_type"
+    type_model_uri = URIRef("https://w3id.org/bridge2ai/standards-schema-all/CategoryType")
+
+
 class EdamIdentifier(Uriorcurie):
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
@@ -156,6 +164,7 @@ class NamedThing(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/NamedThing")
 
     id: Union[str, NamedThingId] = None
+    category: Optional[Union[str, CategoryType]] = None
     name: Optional[str] = None
     description: Optional[str] = None
     subclass_of: Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]] = empty_list()
@@ -166,6 +175,9 @@ class NamedThing(YAMLRoot):
             self.MissingRequiredField("id")
         if not isinstance(self.id, NamedThingId):
             self.id = NamedThingId(self.id)
+
+        if self.category is not None and not isinstance(self.category, CategoryType):
+            self.category = CategoryType(self.category)
 
         if self.name is not None and not isinstance(self.name, str):
             self.name = str(self.name)
@@ -897,6 +909,12 @@ slots.node_property = Slot(uri=STANDARDS.node_property, name="node property", cu
 
 slots.id = Slot(uri=SCHEMA.identifier, name="id", curie=SCHEMA.curie('identifier'),
                    model_uri=DEFAULT_.id, domain=None, range=URIRef)
+
+slots.type = Slot(uri=STANDARDS.type, name="type", curie=STANDARDS.curie('type'),
+                   model_uri=DEFAULT_.type, domain=NamedThing, range=Optional[str])
+
+slots.category = Slot(uri=STANDARDS.category, name="category", curie=STANDARDS.curie('category'),
+                   model_uri=DEFAULT_.category, domain=NamedThing, range=Optional[Union[str, CategoryType]])
 
 slots.name = Slot(uri=SCHEMA.name, name="name", curie=SCHEMA.curie('name'),
                    model_uri=DEFAULT_.name, domain=None, range=Optional[str])
