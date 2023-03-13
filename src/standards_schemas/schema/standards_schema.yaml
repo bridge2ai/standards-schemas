@@ -32,7 +32,6 @@ types:
     typeof: uriorcurie
     description: >-
       A primitive type in which the value denotes a class within the model.
-      The value must be a URI or a CURIE.
   edam_identifier:
     typeof: uriorcurie
     id_prefixes:
