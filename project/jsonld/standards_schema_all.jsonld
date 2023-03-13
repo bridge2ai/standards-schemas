@@ -242,6 +242,17 @@
       "@type": "TypeDefinition"
     },
     {
+      "name": "category_type",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/CategoryType",
+      "description": "A primitive type in which the value denotes a class within the model.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "typeof": "uriorcurie",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
       "name": "edam_identifier",
       "id_prefixes": [
         "edam.data",
@@ -544,6 +555,32 @@
       ],
       "range": "uriorcurie",
       "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "type",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/type",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/type",
+      "owner": "type",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "category",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/category",
+      "description": "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\".",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "is_a": "type",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/category",
+      "designates_type": true,
+      "owner": "NamedThing",
+      "domain_of": [
+        "NamedThing"
+      ],
+      "range": "category_type",
       "@type": "SlotDefinition"
     },
     {
@@ -1226,6 +1263,7 @@
       ],
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1243,6 +1281,7 @@
       "is_a": "NamedThing",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1275,6 +1314,7 @@
       "is_a": "NamedThing",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1310,6 +1350,7 @@
       "is_a": "NamedThing",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1342,6 +1383,7 @@
       "is_a": "NamedThing",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1368,6 +1410,7 @@
       "is_a": "DataStandardOrTool",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1394,6 +1437,7 @@
       "is_a": "DataStandard",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1420,6 +1464,7 @@
       "is_a": "DataStandardOrTool",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1446,6 +1491,7 @@
       "is_a": "DataStandardOrTool",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1472,6 +1518,7 @@
       "is_a": "DataStandardOrTool",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1498,6 +1545,7 @@
       "is_a": "DataStandardOrTool",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1524,6 +1572,7 @@
       "is_a": "DataStandardOrTool",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1550,6 +1599,7 @@
       "is_a": "DataStandardOrTool",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1576,6 +1626,7 @@
       "is_a": "DataStandardOrTool",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1614,6 +1665,7 @@
       "is_a": "NamedThing",
       "slots": [
         "id",
+        "category",
         "name",
         "description",
         "subclass_of",
@@ -1652,7 +1704,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-02-01T15:18:19",
   "source_file_size": 439,
-  "generation_date": "2023-02-28T11:19:50",
+  "generation_date": "2023-03-13T15:49:23",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

@@ -38,6 +38,7 @@ Name: standards-schema-all
 | Slot | Description |
 | --- | --- |
 | [alternative_standards_and_tools](alternative_standards_and_tools.md) | List of identifiers of standards and tools; those not explicitly planned to b... |
+| [category](category.md) | Name of the high level ontology class in which this entity is categorized |
 | [collection](collection.md) | Tags for specific sets of standards |
 | [concerns_data_topic](concerns_data_topic.md) | Subject standard is generally applied in the context of object data topic |
 | [data_standardortools_collection](data_standardortools_collection.md) |  |
@@ -72,6 +73,7 @@ Name: standards-schema-all
 | [ror_id](ror_id.md) |  |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |
+| [type](type.md) |  |
 | [url](url.md) | URL for basic documentation of the standard or tool |
 | [use_case_category](use_case_category.md) | Category of the UseCase |
 | [use_cases](use_cases.md) |  |
@@ -92,25 +94,26 @@ Name: standards-schema-all
 
 | Type | Description |
 | --- | --- |
-| [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | A binary (true or false) value |
-| [xsd:date](http://www.w3.org/2001/XMLSchema#date) | a date (year, month and day) in an idealized calendar |
-| [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime) | Either a date or a datetime |
-| [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) | The combination of a date and time |
-| [xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) | A real number with arbitrary precision that conforms to the xsd:decimal speci... |
-| [xsd:double](http://www.w3.org/2001/XMLSchema#double) | A real number that conforms to the xsd:double specification |
+| [Boolean](Boolean.md) | A binary (true or false) value |
+| [CategoryType](CategoryType.md) | A primitive type in which the value denotes a class within the model |
+| [Date](Date.md) | a date (year, month and day) in an idealized calendar |
+| [DateOrDatetime](DateOrDatetime.md) | Either a date or a datetime |
+| [Datetime](Datetime.md) | The combination of a date and time |
+| [Decimal](Decimal.md) | A real number with arbitrary precision that conforms to the xsd:decimal speci... |
+| [Double](Double.md) | A real number that conforms to the xsd:double specification |
 | [EdamIdentifier](EdamIdentifier.md) |  |
-| [xsd:float](http://www.w3.org/2001/XMLSchema#float) | A real number that conforms to the xsd:float specification |
-| [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | An integer |
+| [Float](Float.md) | A real number that conforms to the xsd:float specification |
+| [Integer](Integer.md) | An integer |
 | [MeshIdentifier](MeshIdentifier.md) |  |
 | [NcitIdentifier](NcitIdentifier.md) |  |
-| [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Prefix part of CURIE |
-| [shex:nonLiteral](http://www.w3.org/ns/shex#nonLiteral) | A URI, CURIE or BNODE that represents a node in a model |
-| [shex:iri](http://www.w3.org/ns/shex#iri) | A URI or CURIE that represents an object in the model |
+| [Ncname](Ncname.md) | Prefix part of CURIE |
+| [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
+| [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [RorIdentifier](RorIdentifier.md) |  |
-| [xsd:string](http://www.w3.org/2001/XMLSchema#string) | A character string |
-| [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) | A time object represents a (local) time of day, independent of any particular... |
-| [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | a complete URI |
-| [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | a URI or a CURIE |
+| [String](String.md) | A character string |
+| [Time](Time.md) | A time object represents a (local) time of day, independent of any particular... |
+| [Uri](Uri.md) | a complete URI |
+| [Uriorcurie](Uriorcurie.md) | a URI or a CURIE |
 | [WikidataIdentifier](WikidataIdentifier.md) |  |
 
 

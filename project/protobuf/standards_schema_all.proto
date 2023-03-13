@@ -2,6 +2,7 @@
 message BiomedicalStandard
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -20,6 +21,7 @@ message BiomedicalStandard
 message DataStandard
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -38,6 +40,7 @@ message DataStandard
 message DataStandardOrTool
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -61,6 +64,7 @@ message DataStandardOrToolContainer
 message DataSubstrate
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -81,6 +85,7 @@ message DataSubstrateContainer
 message DataTopic
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -98,6 +103,7 @@ message DataTopicContainer
 message ModelRepository
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -116,6 +122,7 @@ message ModelRepository
 message NamedThing
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -125,6 +132,7 @@ message NamedThing
 message OntologyOrVocabulary
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -143,6 +151,7 @@ message OntologyOrVocabulary
 message Organization
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -160,6 +169,7 @@ message OrganizationContainer
 message ReferenceDataOrDataset
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -178,6 +188,7 @@ message ReferenceDataOrDataset
 message ReferenceImplementation
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -196,6 +207,7 @@ message ReferenceImplementation
 message Registry
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -214,6 +226,7 @@ message Registry
 message SoftwareOrTool
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -232,6 +245,7 @@ message SoftwareOrTool
 message TrainingProgram
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
@@ -250,6 +264,7 @@ message TrainingProgram
 message UseCase
  {
   uriorcurie id = 0
+  categoryType category = 0
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0

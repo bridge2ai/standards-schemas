@@ -43,6 +43,8 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
+STANDARDS:CategoryType IRI
+
 STANDARDS:EdamIdentifier IRI
 
 STANDARDS:MeshIdentifier IRI
@@ -148,7 +150,8 @@ STANDARDSDATASTANDARDORTOOL:ModelRepository CLOSED {
 
 STANDARDS:NamedThing  (
     CLOSED {
-       (  $STANDARDS:NamedThing_tes (  schema:name @linkml:String ? ;
+       (  $STANDARDS:NamedThing_tes (  STANDARDS:category @STANDARDS:CategoryType ? ;
+             schema:name @linkml:String ? ;
              schema:description @linkml:String ? ;
              STANDARDS:subclass_of @STANDARDS:NamedThing * ;
              STANDARDS:related_to @STANDARDS:NamedThing *

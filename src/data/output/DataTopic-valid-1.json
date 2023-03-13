@@ -1,5 +1,6 @@
 {
   "id": "STANDARDSDATATOPIC:2",
+  "category": "DataTopic",
   "name": "Biology",
   "description": "Data involving any study of living organisms at any scale.",
   "subclass_of": [

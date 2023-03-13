@@ -7,7 +7,7 @@ A generic grouping for any identifiable entity
 URI: [https://w3id.org/bridge2ai/standards-schema-all/NamedThing](https://w3id.org/bridge2ai/standards-schema-all/NamedThing)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing]<related_to%200..*-%20[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F],[NamedThing]<subclass_of%200..*-%20[NamedThing],[NamedThing]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing]<related_to%200..*-%20[NamedThing&#124;id:uriorcurie;name:string%20%3F;description:string%20%3F],[NamedThing]<subclass_of%200..*-%20[NamedThing],[NamedThing]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing]<related_to%200..*-%20[NamedThing&#124;id:uriorcurie;category:category_type%20%3F;name:string%20%3F;description:string%20%3F],[NamedThing]<subclass_of%200..*-%20[NamedThing],[NamedThing]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase],[Organization],[NamedThing]<related_to%200..*-%20[NamedThing&#124;id:uriorcurie;category:category_type%20%3F;name:string%20%3F;description:string%20%3F],[NamedThing]<subclass_of%200..*-%20[NamedThing],[NamedThing]^-[UseCase],[NamedThing]^-[Organization],[NamedThing]^-[DataTopic],[NamedThing]^-[DataSubstrate],[NamedThing]^-[DataStandardOrTool],[DataTopic],[DataSubstrate],[DataStandardOrTool])
 
 ## Children
 
@@ -30,6 +30,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/NamedThing](https://w3id.o
  * [id](id.md)  <sub>1..1</sub>
      * Description: A unique identifier for a thing.
      * Range: [Uriorcurie](types/Uriorcurie.md)
+ * [category](category.md)  <sub>0..1</sub>
+     * Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+     * Range: [CategoryType](types/CategoryType.md)
  * [name](name.md)  <sub>0..1</sub>
      * Description: A human-readable name for a thing.
      * Range: [String](types/String.md)

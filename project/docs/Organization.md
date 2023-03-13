@@ -7,7 +7,7 @@ Represents a group or organization related to or responsible for one or more Bri
 URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id.org/bridge2ai/standards-schema-all/Organization)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to(i)%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to(i)%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to(i)%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to(i)%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])
 
 ## Parents
 
@@ -41,6 +41,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
  * [id](id.md)  <sub>1..1</sub>
      * Description: A unique identifier for a thing.
      * Range: [Uriorcurie](types/Uriorcurie.md)
+ * [category](category.md)  <sub>0..1</sub>
+     * Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+     * Range: [CategoryType](types/CategoryType.md)
  * [name](name.md)  <sub>0..1</sub>
      * Description: A human-readable name for a thing.
      * Range: [String](types/String.md)

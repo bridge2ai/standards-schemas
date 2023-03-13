@@ -2,6 +2,7 @@
 
 CREATE TABLE "BiomedicalStandard" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -19,6 +20,7 @@ CREATE TABLE "BiomedicalStandard" (
 
 CREATE TABLE "DataStandard" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -36,6 +38,7 @@ CREATE TABLE "DataStandard" (
 
 CREATE TABLE "DataStandardOrTool" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -58,6 +61,7 @@ CREATE TABLE "DataStandardOrToolContainer" (
 
 CREATE TABLE "DataSubstrate" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -75,6 +79,7 @@ CREATE TABLE "DataSubstrateContainer" (
 
 CREATE TABLE "DataTopic" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -92,6 +97,7 @@ CREATE TABLE "DataTopicContainer" (
 
 CREATE TABLE "ModelRepository" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -109,6 +115,7 @@ CREATE TABLE "ModelRepository" (
 
 CREATE TABLE "NamedThing" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -118,6 +125,7 @@ CREATE TABLE "NamedThing" (
 
 CREATE TABLE "OntologyOrVocabulary" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -135,6 +143,7 @@ CREATE TABLE "OntologyOrVocabulary" (
 
 CREATE TABLE "Organization" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -152,6 +161,7 @@ CREATE TABLE "OrganizationContainer" (
 
 CREATE TABLE "ReferenceDataOrDataset" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -169,6 +179,7 @@ CREATE TABLE "ReferenceDataOrDataset" (
 
 CREATE TABLE "ReferenceImplementation" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -186,6 +197,7 @@ CREATE TABLE "ReferenceImplementation" (
 
 CREATE TABLE "Registry" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -203,6 +215,7 @@ CREATE TABLE "Registry" (
 
 CREATE TABLE "SoftwareOrTool" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -220,6 +233,7 @@ CREATE TABLE "SoftwareOrTool" (
 
 CREATE TABLE "TrainingProgram" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 
@@ -237,6 +251,7 @@ CREATE TABLE "TrainingProgram" (
 
 CREATE TABLE "UseCase" (
 	id TEXT NOT NULL, 
+	category TEXT, 
 	name TEXT, 
 	description TEXT, 
 	subclass_of TEXT, 

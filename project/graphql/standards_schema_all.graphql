@@ -1,6 +1,7 @@
 type BiomedicalStandard
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -19,6 +20,7 @@ type BiomedicalStandard
 type DataStandard
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -37,6 +39,7 @@ type DataStandard
 type DataStandardOrTool
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -60,6 +63,7 @@ type DataStandardOrToolContainer
 type DataSubstrate
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -80,6 +84,7 @@ type DataSubstrateContainer
 type DataTopic
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -97,6 +102,7 @@ type DataTopicContainer
 type ModelRepository
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -115,6 +121,7 @@ type ModelRepository
 type NamedThing
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -124,6 +131,7 @@ type NamedThing
 type OntologyOrVocabulary
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -142,6 +150,7 @@ type OntologyOrVocabulary
 type Organization
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -159,6 +168,7 @@ type OrganizationContainer
 type ReferenceDataOrDataset
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -177,6 +187,7 @@ type ReferenceDataOrDataset
 type ReferenceImplementation
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -195,6 +206,7 @@ type ReferenceImplementation
 type Registry
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -213,6 +225,7 @@ type Registry
 type SoftwareOrTool
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -231,6 +244,7 @@ type SoftwareOrTool
 type TrainingProgram
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
@@ -249,6 +263,7 @@ type TrainingProgram
 type UseCase
   {
     id: Uriorcurie!
+    category: CategoryType
     name: String
     description: String
     subclassOf: [NamedThing]
