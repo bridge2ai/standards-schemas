@@ -3,11 +3,11 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-STANDARDSORGANIZATION:1 a STANDARDSORGANIZATION:Organization ;
-    schema:description "US Agency for Healthcare Research and Quality" ;
+STANDARDSORGANIZATION:1 schema:description "US Agency for Healthcare Research and Quality" ;
     schema:name "AHRQ" ;
     STANDARDSORGANIZATION:ror_id "ror:03jmfdf59" ;
     STANDARDSORGANIZATION:wikidata_id "wikidata:Q4692008" ;
+    STANDARDS:category "Organization" ;
     STANDARDS:subclass_of STANDARDSORGANIZATION:2 ;
     STANDARDS:url "https://www.ahrq.gov/"^^xsd:anyURI .
 

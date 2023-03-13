@@ -1,5 +1,6 @@
 {
   "id": "STANDARDSORGANIZATION:1",
+  "category": "Organization",
   "name": "AHRQ",
   "description": "US Agency for Healthcare Research and Quality",
   "subclass_of": [

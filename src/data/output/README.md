@@ -10,6 +10,7 @@ id: STANDARDSDATASUBSTRATE:53
 alternative_standards_and_tools:
 - STANDARDSUSECASE:123
 - STANDARDSUSECASE:555
+category: UseCase
 data_substrates:
 - STANDARDSUSECASE:abc
 - STANDARDSUSECASE:xyz
@@ -51,6 +52,7 @@ xref:
 ## DataSubstrate-valid-1
 ### Input
 ```yaml
+category: DataSubstrate
 description: BED (Browser Extensible Data) format provides a flexible way to define
   the data lines that are displayed in a genome annotation track.
 edam_id: edam.format:3003
@@ -66,6 +68,7 @@ subclass_of:
 ## Organization-1
 ### Input
 ```yaml
+category: Organization
 description: US Agency for Healthcare Research and Quality
 id: STANDARDSORGANIZATION:1
 name: AHRQ
@@ -79,6 +82,7 @@ wikidata_id: wikidata:Q4692008
 ## DataTopic-valid-1
 ### Input
 ```yaml
+category: DataTopic
 description: Data involving any study of living organisms at any scale.
 edam_id: edam.topic:3070
 id: STANDARDSDATATOPIC:2
@@ -92,6 +96,7 @@ subclass_of:
 ## DataStandardOrTool-valid-1
 ### Input
 ```yaml
+category: BiomedicalStandard
 collection:
 - datamodel
 concerns_data_topic:

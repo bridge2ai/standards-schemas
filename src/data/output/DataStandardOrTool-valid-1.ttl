@@ -5,8 +5,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-STANDARDSDATASTANDARDORTOOL:53 a STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ;
-    schema:description "Observational Medical Outcomes Partnership Common Data Model" ;
+STANDARDSDATASTANDARDORTOOL:53 schema:description "Observational Medical Outcomes Partnership Common Data Model" ;
     schema:name "OMOP CDM" ;
     STANDARDSDATASTANDARDORTOOL:collection "datamodel" ;
     STANDARDSDATASTANDARDORTOOL:concerns_data_topic STANDARDSDATATOPIC:4 ;
@@ -16,5 +15,6 @@ STANDARDSDATASTANDARDORTOOL:53 a STANDARDSDATASTANDARDORTOOL:DataStandardOrTool 
     STANDARDSDATASTANDARDORTOOL:publication "doi:10.3233/978-1-61499-564-7-574"^^xsd:anyURI ;
     STANDARDSDATASTANDARDORTOOL:purpose_detail "Open community data standard designed to standardize the structure and content of observational data and to enable efficient analyses that can produce reliable evidence." ;
     STANDARDSDATASTANDARDORTOOL:requires_registration false ;
+    STANDARDS:category "BiomedicalStandard" ;
     STANDARDS:url "https://ohdsi.github.io/CommonDataModel/"^^xsd:anyURI .
 

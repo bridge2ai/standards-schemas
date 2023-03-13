@@ -1,5 +1,6 @@
 {
   "id": "STANDARDSDATASTANDARDORTOOL:53",
+  "category": "BiomedicalStandard",
   "name": "OMOP CDM",
   "description": "Observational Medical Outcomes Partnership Common Data Model",
   "collection": [
@@ -17,5 +18,5 @@
   "url": "https://ohdsi.github.io/CommonDataModel/",
   "publication": "doi:10.3233/978-1-61499-564-7-574",
   "formal_specification": "https://github.com/OHDSI/CommonDataModel",
-  "@type": "DataStandardOrTool"
+  "@type": "BiomedicalStandard"
 }

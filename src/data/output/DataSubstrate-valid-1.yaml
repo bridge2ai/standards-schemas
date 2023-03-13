@@ -1,4 +1,5 @@
 id: STANDARDSDATASUBSTRATE:53
+category: DataSubstrate
 name: BED
 description: BED (Browser Extensible Data) format provides a flexible way to define
   the data lines that are displayed in a genome annotation track.

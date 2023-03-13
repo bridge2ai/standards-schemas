@@ -2,6 +2,7 @@
 
 id: STANDARDSORGANIZATION:1
 name: AHRQ
+category: Organization
 subclass_of:
   - STANDARDSORGANIZATION:2
 description: US Agency for Healthcare Research and Quality

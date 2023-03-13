@@ -1,4 +1,5 @@
 id: STANDARDSUSECASE:1
+category: UseCase
 name: Obtain patient data from records of clinical visits.
 description: Collecting clinical data from patient visits involves the process of
   gathering information about a patient's medical history, current symptoms, and other
