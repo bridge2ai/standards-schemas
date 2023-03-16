@@ -1,15 +1,15 @@
-id: https://w3id.org/bridge2ai/standards-usecase-schema
+id: https://w3id.org/bridge2ai/standards-schema
 name: standards-usecase-schema
 title: standards-usecase-schema
 description: |-
   Data schema for Bridge2AI Standards Use Cases.
 license: MIT
 see_also:
-  - https://bridge2ai.github.io/standards-usecase-schema
+  - https://bridge2ai.github.io/standards-schema
 
 prefixes:
-  STANDARDSUSECASE: https://w3id.org/bridge2ai/standards-usecase-schema/
-  STANDARDSDATASUBSTRATE: https://w3id.org/bridge2ai/standards-datasubstrate-schema/
+  STANDARDSUSECASE: https://w3id.org/bridge2ai/standards-schema/
+  STANDARDSDATASUBSTRATE: https://w3id.org/bridge2ai/standards-schema/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
