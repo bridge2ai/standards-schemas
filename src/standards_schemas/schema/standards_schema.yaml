@@ -14,7 +14,7 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
-  ncit: http://purl.obolibrary.org/obo/NCIT_
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
   mesh: http://id.nlm.nih.gov/mesh/
   edam.data: http://edamontology.org/data_
   edam.format: http://edamontology.org/format_
@@ -46,7 +46,7 @@ types:
   ncit_identifier:
     typeof: uriorcurie
     id_prefixes:
-      - ncit
+      - NCIT
 
 classes:
 
