@@ -1,6 +1,8 @@
 # Type: EdamIdentifier
 
 
+_Identifier from EDAM ontology_
+
 
 URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 

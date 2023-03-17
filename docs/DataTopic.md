@@ -48,9 +48,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [edam_id](edam_id.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) |  | direct |
-| [mesh_id](mesh_id.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) |  | direct |
-| [ncit_id](ncit_id.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) |  | direct |
+| [edam_id](edam_id.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) | Unique EDAM identifier | direct |
+| [mesh_id](mesh_id.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) | Unique MeSH identifier | direct |
+| [ncit_id](ncit_id.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) | Unique NCIt Identifier | direct |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -147,6 +147,7 @@ is_a: NamedThing
 attributes:
   edam_id:
     name: edam_id
+    description: Unique EDAM identifier
     examples:
     - value: edam.data:0006
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
@@ -164,6 +165,7 @@ attributes:
     range: edam_identifier
   mesh_id:
     name: mesh_id
+    description: Unique MeSH identifier
     examples:
     - value: MeSH:D014831
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
@@ -178,6 +180,7 @@ attributes:
     range: mesh_identifier
   ncit_id:
     name: ncit_id
+    description: Unique NCIt Identifier
     examples:
     - value: NCIT:C92692
     from_schema: https://w3id.org/bridge2ai/standards-schema-all

@@ -41,13 +41,13 @@ Name: standards-schema-all
 | [category](category.md) | Name of the high level ontology class in which this entity is categorized |
 | [collection](collection.md) | Tags for specific sets of standards |
 | [concerns_data_topic](concerns_data_topic.md) | Subject standard is generally applied in the context of object data topic |
-| [data_standardortools_collection](data_standardortools_collection.md) |  |
+| [data_standardortools_collection](data_standardortools_collection.md) | Collection of associated data standards or tools |
 | [data_substrates](data_substrates.md) | Relevance of the use case to one or more data substrates |
-| [data_substrates_collection](data_substrates_collection.md) |  |
+| [data_substrates_collection](data_substrates_collection.md) | Collection of associated data substrates |
 | [data_topics](data_topics.md) | Relevance of the use case to one or more data topics |
-| [data_topics_collection](data_topics_collection.md) |  |
+| [data_topics_collection](data_topics_collection.md) | Collection of associated data topics |
 | [description](description.md) | A human-readable description for a thing |
-| [edam_id](edam_id.md) |  |
+| [edam_id](edam_id.md) | Unique EDAM identifier |
 | [enables](enables.md) | Other use case(s) this use case supports or makes possible |
 | [file_extensions](file_extensions.md) | Commonly used file extensions for this substrate |
 | [formal_specification](formal_specification.md) | Relevant code repository or other location for a formal specification of the ... |
@@ -59,25 +59,26 @@ Name: standards-schema-all
 | [is_open](is_open.md) | Is the standard or tool FAIR and available free of cost? |
 | [known_limitations](known_limitations.md) | Any current obstacles to implementing this use case |
 | [limitations](limitations.md) | Potential obstacles particular to this substrate or implementation |
-| [mesh_id](mesh_id.md) |  |
+| [mesh_id](mesh_id.md) | Unique MeSH identifier |
 | [metadata_storage](metadata_storage.md) | Data Substrate in which metadata is stored |
 | [name](name.md) | A human-readable name for a thing |
-| [ncit_id](ncit_id.md) |  |
+| [ncit_id](ncit_id.md) | Unique NCIt Identifier |
 | [node_property](node_property.md) | A grouping for any property that holds between a node and a value |
-| [organizations](organizations.md) |  |
+| [not_relevant_to_dgps](not_relevant_to_dgps.md) | Is the standard or tool currently relevant to DGPs? |
+| [organizations](organizations.md) | Collection of associated organizations |
 | [publication](publication.md) | Relevant publication for the standard or tool |
 | [purpose_detail](purpose_detail.md) | Text description of the standard or tool |
 | [related_to](related_to.md) | A relationship that is asserted between two named things |
 | [relevance_to_dgps](relevance_to_dgps.md) | Relevance of the use case to one or more DGPs |
 | [requires_registration](requires_registration.md) | Does usage of the standard or tool require registrion of a user or group with... |
-| [ror_id](ror_id.md) |  |
+| [ror_id](ror_id.md) | Unique ROR identifier |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |
-| [type](type.md) |  |
+| [type](type.md) | A generic slot for any label corresponding to the label  for an entity type a... |
 | [url](url.md) | URL for basic documentation of the standard or tool |
 | [use_case_category](use_case_category.md) | Category of the UseCase |
-| [use_cases](use_cases.md) |  |
-| [wikidata_id](wikidata_id.md) |  |
+| [use_cases](use_cases.md) | Collection of associated use cases |
+| [wikidata_id](wikidata_id.md) | Unique Wikidata identifier |
 | [xref](xref.md) | URI of corresponding class in an ontology of experimental procedures, in CURI... |
 
 
@@ -101,20 +102,20 @@ Name: standards-schema-all
 | [Datetime](Datetime.md) | The combination of a date and time |
 | [Decimal](Decimal.md) | A real number with arbitrary precision that conforms to the xsd:decimal speci... |
 | [Double](Double.md) | A real number that conforms to the xsd:double specification |
-| [EdamIdentifier](EdamIdentifier.md) |  |
+| [EdamIdentifier](EdamIdentifier.md) | Identifier from EDAM ontology |
 | [Float](Float.md) | A real number that conforms to the xsd:float specification |
 | [Integer](Integer.md) | An integer |
-| [MeshIdentifier](MeshIdentifier.md) |  |
-| [NcitIdentifier](NcitIdentifier.md) |  |
+| [MeshIdentifier](MeshIdentifier.md) | Identifier from Medical Subject Headings (MeSH) biomedical vocabulary |
+| [NcitIdentifier](NcitIdentifier.md) | Identifier from NCIT reference terminology with broad coverage of the cancer ... |
 | [Ncname](Ncname.md) | Prefix part of CURIE |
 | [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
 | [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |
-| [RorIdentifier](RorIdentifier.md) |  |
+| [RorIdentifier](RorIdentifier.md) | Identifier from Research Organization Registry |
 | [String](String.md) | A character string |
 | [Time](Time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](Uri.md) | a complete URI |
 | [Uriorcurie](Uriorcurie.md) | a URI or a CURIE |
-| [WikidataIdentifier](WikidataIdentifier.md) |  |
+| [WikidataIdentifier](WikidataIdentifier.md) | Identifier from Wikidata open knowledge base |
 
 
 ## Subsets

@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-03-13T15:49:33
+# Generation date: 2023-03-17T14:55:34
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -38,7 +38,6 @@ STANDARDSDATASTANDARDORTOOL = CurieNamespace('STANDARDSDATASTANDARDORTOOL', 'htt
 STANDARDSDATASUBSTRATE = CurieNamespace('STANDARDSDATASUBSTRATE', 'https://w3id.org/bridge2ai/standards-datasubstrate-schema/')
 STANDARDSDATATOPIC = CurieNamespace('STANDARDSDATATOPIC', 'https://w3id.org/bridge2ai/standards-datatopic-schema/')
 STANDARDSORGANIZATION = CurieNamespace('STANDARDSORGANIZATION', 'https://w3id.org/bridge2ai/standards-organization-schema/')
-STANDARDSUSECASE = CurieNamespace('STANDARDSUSECASE', 'https://w3id.org/bridge2ai/standards-usecase-schema/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')
@@ -56,6 +55,7 @@ class CategoryType(Uriorcurie):
 
 
 class EdamIdentifier(Uriorcurie):
+    """ Identifier from EDAM ontology """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "edam_identifier"
@@ -63,6 +63,7 @@ class EdamIdentifier(Uriorcurie):
 
 
 class MeshIdentifier(Uriorcurie):
+    """ Identifier from Medical Subject Headings (MeSH) biomedical vocabulary. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "mesh_identifier"
@@ -70,6 +71,7 @@ class MeshIdentifier(Uriorcurie):
 
 
 class NcitIdentifier(Uriorcurie):
+    """ Identifier from NCIT reference terminology with broad coverage of the cancer domain. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "ncit_identifier"
@@ -77,6 +79,7 @@ class NcitIdentifier(Uriorcurie):
 
 
 class RorIdentifier(Uriorcurie):
+    """ Identifier from Research Organization Registry. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "ror_identifier"
@@ -84,6 +87,7 @@ class RorIdentifier(Uriorcurie):
 
 
 class WikidataIdentifier(Uriorcurie):
+    """ Identifier from Wikidata open knowledge base. """
     type_class_uri = XSD.anyURI
     type_class_curie = "xsd:anyURI"
     type_name = "wikidata_identifier"
@@ -144,10 +148,6 @@ class ReferenceImplementationId(DataStandardOrToolId):
 
 
 class TrainingProgramId(DataStandardOrToolId):
-    pass
-
-
-class UseCaseId(NamedThingId):
     pass
 
 
@@ -677,106 +677,6 @@ class DataStandardOrToolContainer(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
-class UseCase(NamedThing):
-    """
-    Represents a use case for Bridge2AI standards.
-    """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
-
-    class_class_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCase
-    class_class_curie: ClassVar[str] = "STANDARDSUSECASE:UseCase"
-    class_name: ClassVar[str] = "UseCase"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/UseCase")
-
-    id: Union[str, UseCaseId] = None
-    use_case_category: Union[str, "UseCaseCategory"] = None
-    known_limitations: Optional[str] = None
-    relevance_to_dgps: Optional[Union[Union[str, "DataGeneratingProject"], List[Union[str, "DataGeneratingProject"]]]] = empty_list()
-    data_topics: Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]] = empty_list()
-    data_substrates: Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]] = empty_list()
-    standards_and_tools_for_dgp_use: Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]] = empty_list()
-    alternative_standards_and_tools: Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]] = empty_list()
-    enables: Optional[Union[Union[str, UseCaseId], List[Union[str, UseCaseId]]]] = empty_list()
-    involved_in_experimental_design: Optional[Union[bool, Bool]] = None
-    involved_in_metadata_management: Optional[Union[bool, Bool]] = None
-    involved_in_quality_control: Optional[Union[bool, Bool]] = None
-    xref: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
-
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, UseCaseId):
-            self.id = UseCaseId(self.id)
-
-        if self._is_empty(self.use_case_category):
-            self.MissingRequiredField("use_case_category")
-        if not isinstance(self.use_case_category, UseCaseCategory):
-            self.use_case_category = UseCaseCategory(self.use_case_category)
-
-        if self.known_limitations is not None and not isinstance(self.known_limitations, str):
-            self.known_limitations = str(self.known_limitations)
-
-        if not isinstance(self.relevance_to_dgps, list):
-            self.relevance_to_dgps = [self.relevance_to_dgps] if self.relevance_to_dgps is not None else []
-        self.relevance_to_dgps = [v if isinstance(v, DataGeneratingProject) else DataGeneratingProject(v) for v in self.relevance_to_dgps]
-
-        if not isinstance(self.data_topics, list):
-            self.data_topics = [self.data_topics] if self.data_topics is not None else []
-        self.data_topics = [v if isinstance(v, DataTopicId) else DataTopicId(v) for v in self.data_topics]
-
-        if not isinstance(self.data_substrates, list):
-            self.data_substrates = [self.data_substrates] if self.data_substrates is not None else []
-        self.data_substrates = [v if isinstance(v, DataSubstrateId) else DataSubstrateId(v) for v in self.data_substrates]
-
-        if not isinstance(self.standards_and_tools_for_dgp_use, list):
-            self.standards_and_tools_for_dgp_use = [self.standards_and_tools_for_dgp_use] if self.standards_and_tools_for_dgp_use is not None else []
-        self.standards_and_tools_for_dgp_use = [v if isinstance(v, DataStandardOrToolId) else DataStandardOrToolId(v) for v in self.standards_and_tools_for_dgp_use]
-
-        if not isinstance(self.alternative_standards_and_tools, list):
-            self.alternative_standards_and_tools = [self.alternative_standards_and_tools] if self.alternative_standards_and_tools is not None else []
-        self.alternative_standards_and_tools = [v if isinstance(v, DataStandardOrToolId) else DataStandardOrToolId(v) for v in self.alternative_standards_and_tools]
-
-        if not isinstance(self.enables, list):
-            self.enables = [self.enables] if self.enables is not None else []
-        self.enables = [v if isinstance(v, UseCaseId) else UseCaseId(v) for v in self.enables]
-
-        if self.involved_in_experimental_design is not None and not isinstance(self.involved_in_experimental_design, Bool):
-            self.involved_in_experimental_design = Bool(self.involved_in_experimental_design)
-
-        if self.involved_in_metadata_management is not None and not isinstance(self.involved_in_metadata_management, Bool):
-            self.involved_in_metadata_management = Bool(self.involved_in_metadata_management)
-
-        if self.involved_in_quality_control is not None and not isinstance(self.involved_in_quality_control, Bool):
-            self.involved_in_quality_control = Bool(self.involved_in_quality_control)
-
-        if not isinstance(self.xref, list):
-            self.xref = [self.xref] if self.xref is not None else []
-        self.xref = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.xref]
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass
-class UseCaseContainer(YAMLRoot):
-    """
-    A container for UseCase.
-    """
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = STANDARDSUSECASE.UseCaseContainer
-    class_class_curie: ClassVar[str] = "STANDARDSUSECASE:UseCaseContainer"
-    class_name: ClassVar[str] = "UseCaseContainer"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer")
-
-    use_cases: Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]] = empty_dict()
-
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        self._normalize_inlined_as_list(slot_name="use_cases", slot_type=UseCase, key_name="id", keyed=True)
-
-        super().__post_init__(**kwargs)
-
-
 # Enumerations
 class DataGeneratingProject(EnumDefinitionImpl):
     """
@@ -878,33 +778,11 @@ class StandardsCollectionTag(EnumDefinitionImpl):
         description="Tags for specific sets of standards.",
     )
 
-class UseCaseCategory(EnumDefinitionImpl):
-    """
-    Category of use case.
-    """
-    acquisition = PermissibleValue(text="acquisition",
-                                             description="Acquisition")
-    integration = PermissibleValue(text="integration",
-                                             description="Integration")
-    standardization = PermissibleValue(text="standardization",
-                                                     description="Standardization")
-    modeling = PermissibleValue(text="modeling",
-                                       description="Modeling")
-    application = PermissibleValue(text="application",
-                                             description="Application")
-    assessment = PermissibleValue(text="assessment",
-                                           description="Assessment")
-
-    _defn = EnumDefinition(
-        name="UseCaseCategory",
-        description="Category of use case.",
-    )
-
 # Slots
 class slots:
     pass
 
-slots.node_property = Slot(uri=STANDARDS.node_property, name="node property", curie=STANDARDS.curie('node_property'),
+slots.node_property = Slot(uri=STANDARDS.node_property, name="node_property", curie=STANDARDS.curie('node_property'),
                    model_uri=DEFAULT_.node_property, domain=NamedThing, range=Optional[str])
 
 slots.id = Slot(uri=SCHEMA.identifier, name="id", curie=SCHEMA.curie('identifier'),
@@ -994,41 +872,5 @@ slots.has_relevant_organization = Slot(uri=STANDARDSDATASTANDARDORTOOL.has_relev
 slots.data_standardortools_collection = Slot(uri=STANDARDSDATASTANDARDORTOOL.data_standardortools_collection, name="data_standardortools_collection", curie=STANDARDSDATASTANDARDORTOOL.curie('data_standardortools_collection'),
                    model_uri=DEFAULT_.data_standardortools_collection, domain=None, range=Optional[Union[Dict[Union[str, DataStandardOrToolId], Union[dict, DataStandardOrTool]], List[Union[dict, DataStandardOrTool]]]])
 
-slots.use_case_category = Slot(uri=STANDARDSUSECASE.use_case_category, name="use_case_category", curie=STANDARDSUSECASE.curie('use_case_category'),
-                   model_uri=DEFAULT_.use_case_category, domain=NamedThing, range=Optional[Union[str, "UseCaseCategory"]])
-
-slots.known_limitations = Slot(uri=STANDARDSUSECASE.known_limitations, name="known_limitations", curie=STANDARDSUSECASE.curie('known_limitations'),
-                   model_uri=DEFAULT_.known_limitations, domain=NamedThing, range=Optional[str])
-
-slots.relevance_to_dgps = Slot(uri=STANDARDSUSECASE.relevance_to_dgps, name="relevance_to_dgps", curie=STANDARDSUSECASE.curie('relevance_to_dgps'),
-                   model_uri=DEFAULT_.relevance_to_dgps, domain=None, range=Optional[Union[Union[str, "DataGeneratingProject"], List[Union[str, "DataGeneratingProject"]]]])
-
-slots.data_topics = Slot(uri=STANDARDSUSECASE.data_topics, name="data_topics", curie=STANDARDSUSECASE.curie('data_topics'),
-                   model_uri=DEFAULT_.data_topics, domain=NamedThing, range=Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]])
-
-slots.data_substrates = Slot(uri=STANDARDSUSECASE.data_substrates, name="data_substrates", curie=STANDARDSUSECASE.curie('data_substrates'),
-                   model_uri=DEFAULT_.data_substrates, domain=NamedThing, range=Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]])
-
-slots.standards_and_tools_for_dgp_use = Slot(uri=STANDARDSUSECASE.standards_and_tools_for_dgp_use, name="standards_and_tools_for_dgp_use", curie=STANDARDSUSECASE.curie('standards_and_tools_for_dgp_use'),
-                   model_uri=DEFAULT_.standards_and_tools_for_dgp_use, domain=NamedThing, range=Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]])
-
-slots.alternative_standards_and_tools = Slot(uri=STANDARDSUSECASE.alternative_standards_and_tools, name="alternative_standards_and_tools", curie=STANDARDSUSECASE.curie('alternative_standards_and_tools'),
-                   model_uri=DEFAULT_.alternative_standards_and_tools, domain=NamedThing, range=Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]])
-
-slots.enables = Slot(uri=STANDARDSUSECASE.enables, name="enables", curie=STANDARDSUSECASE.curie('enables'),
-                   model_uri=DEFAULT_.enables, domain=NamedThing, range=Optional[Union[Union[str, UseCaseId], List[Union[str, UseCaseId]]]])
-
-slots.involved_in_experimental_design = Slot(uri=STANDARDSUSECASE.involved_in_experimental_design, name="involved_in_experimental_design", curie=STANDARDSUSECASE.curie('involved_in_experimental_design'),
-                   model_uri=DEFAULT_.involved_in_experimental_design, domain=NamedThing, range=Optional[Union[bool, Bool]])
-
-slots.involved_in_metadata_management = Slot(uri=STANDARDSUSECASE.involved_in_metadata_management, name="involved_in_metadata_management", curie=STANDARDSUSECASE.curie('involved_in_metadata_management'),
-                   model_uri=DEFAULT_.involved_in_metadata_management, domain=NamedThing, range=Optional[Union[bool, Bool]])
-
-slots.involved_in_quality_control = Slot(uri=STANDARDSUSECASE.involved_in_quality_control, name="involved_in_quality_control", curie=STANDARDSUSECASE.curie('involved_in_quality_control'),
-                   model_uri=DEFAULT_.involved_in_quality_control, domain=NamedThing, range=Optional[Union[bool, Bool]])
-
-slots.use_cases = Slot(uri=STANDARDSUSECASE.use_cases, name="use_cases", curie=STANDARDSUSECASE.curie('use_cases'),
-                   model_uri=DEFAULT_.use_cases, domain=None, range=Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]])
-
-slots.UseCase_use_case_category = Slot(uri=STANDARDSUSECASE.use_case_category, name="UseCase_use_case_category", curie=STANDARDSUSECASE.curie('use_case_category'),
-                   model_uri=DEFAULT_.UseCase_use_case_category, domain=UseCase, range=Union[str, "UseCaseCategory"])
+slots.not_relevant_to_dgps = Slot(uri=STANDARDSDATASTANDARDORTOOL.not_relevant_to_dgps, name="not_relevant_to_dgps", curie=STANDARDSDATASTANDARDORTOOL.curie('not_relevant_to_dgps'),
+                   model_uri=DEFAULT_.not_relevant_to_dgps, domain=NamedThing, range=Optional[Union[bool, Bool]])

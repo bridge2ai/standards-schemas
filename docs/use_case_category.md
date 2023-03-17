@@ -62,7 +62,7 @@ description: Category of the UseCase. Not all projects will incorporate use case
   in all categories.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 alias: use_case_category
 domain_of:

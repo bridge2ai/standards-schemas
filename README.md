@@ -4,7 +4,7 @@ Data schema for Bridge2AI Standards Schemas.
 
 ## Website
 
-* [https://bridge2ai.github.io/standards-schemas](https://bridge2ai.github.io/standards-usecase-schema)
+* [https://bridge2ai.github.io/standards-schemas](https://bridge2ai.github.io/standards-schema)
 
 ## Repository Structure
 
@@ -18,6 +18,8 @@ Data schema for Bridge2AI Standards Schemas.
 * [tests](tests/) - python tests
 
 ## Developer Documentation
+
+* `poetry install`: initiate poetry environment for development and build environment
 
 ### Project Generation
 

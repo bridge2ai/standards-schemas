@@ -26,7 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer](ht
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [organizations](organizations.md) | 0..* <br/> [Organization](Organization.md) |  | direct |
+| [organizations](organizations.md) | 0..* <br/> [Organization](Organization.md) | Collection of associated organizations | direct |
 
 
 
@@ -93,6 +93,7 @@ rank: 1000
 attributes:
   organizations:
     name: organizations
+    description: Collection of associated organizations.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     multivalued: true

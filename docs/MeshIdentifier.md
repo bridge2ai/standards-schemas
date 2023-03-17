@@ -1,6 +1,8 @@
 # Type: MeshIdentifier
 
 
+_Identifier from Medical Subject Headings (MeSH) biomedical vocabulary._
+
 
 URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 

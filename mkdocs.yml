@@ -1,4 +1,4 @@
-site_name: "standards-usecase-schema"
+site_name: "standards-schema"
 theme:
   name: material
 #  palette:
@@ -13,8 +13,8 @@ nav:
 #  - Home: home.md
   - Index: index.md
   - About: about.md
-site_url: https://bridge2ai.github.io/standards-usecase-schema
-repo_url: https://github.com/bridge2ai/standards-usecase-schema
+site_url: https://bridge2ai.github.io/standards-schema
+repo_url: https://github.com/bridge2ai/standards-schema
 
 # Uncomment this block to enable use of Google Analytics. 
 # Replace the property value with your own ID.

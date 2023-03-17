@@ -1,6 +1,8 @@
 # Type: WikidataIdentifier
 
 
+_Identifier from Wikidata open knowledge base._
+
 
 URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 

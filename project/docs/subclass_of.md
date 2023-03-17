@@ -34,7 +34,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/subclass_of](https://w3id.
  * [Registry](Registry.md)
  * [SoftwareOrTool](SoftwareOrTool.md)
  * [TrainingProgram](TrainingProgram.md)
- * [UseCase](UseCase.md)
 
 ## Other properties
 

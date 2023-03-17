@@ -54,9 +54,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrate](https://w3
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [edam_id](edam_id.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) |  | direct |
-| [mesh_id](mesh_id.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) |  | direct |
-| [ncit_id](ncit_id.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) |  | direct |
+| [edam_id](edam_id.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) | Unique EDAM identifier | direct |
+| [mesh_id](mesh_id.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) | Unique MeSH identifier | direct |
+| [ncit_id](ncit_id.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) | Unique NCIt Identifier | direct |
 | [metadata_storage](metadata_storage.md) | 0..* <br/> [String](String.md) | Data Substrate in which metadata is stored | direct |
 | [file_extensions](file_extensions.md) | 0..* <br/> [String](String.md) | Commonly used file extensions for this substrate | direct |
 | [limitations](limitations.md) | 0..* <br/> [String](String.md) | Potential obstacles particular to this substrate or implementation | direct |
@@ -155,6 +155,7 @@ is_a: NamedThing
 attributes:
   edam_id:
     name: edam_id
+    description: Unique EDAM identifier
     examples:
     - value: edam.data:0006
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
@@ -172,6 +173,7 @@ attributes:
     range: edam_identifier
   mesh_id:
     name: mesh_id
+    description: Unique MeSH identifier
     examples:
     - value: MeSH:D014831
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
@@ -186,6 +188,7 @@ attributes:
     range: mesh_identifier
   ncit_id:
     name: ncit_id
+    description: Unique NCIt Identifier
     examples:
     - value: NCIT:C92692
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
@@ -203,7 +206,7 @@ attributes:
     description: Data Substrate in which metadata is stored.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: metadata_storage
@@ -219,7 +222,7 @@ attributes:
     description: Commonly used file extensions for this substrate.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: file_extensions
@@ -232,7 +235,7 @@ attributes:
     description: 'Potential obstacles particular to this substrate or implementation. '
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: limitations

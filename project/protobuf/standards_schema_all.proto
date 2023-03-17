@@ -260,30 +260,3 @@ message TrainingProgram
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
  }
-// Represents a use case for Bridge2AI standards.
-message UseCase
- {
-  uriorcurie id = 0
-  categoryType category = 0
-  string name = 0
-  string description = 0
- repeated  namedThing subclassOf = 0
- repeated  namedThing relatedTo = 0
-  useCaseCategory useCaseCategory = 0
-  string knownLimitations = 0
- repeated  dataGeneratingProject relevanceToDgps = 0
- repeated  dataTopic dataTopics = 0
- repeated  dataSubstrate dataSubstrates = 0
- repeated  dataStandardOrTool standardsAndToolsForDgpUse = 0
- repeated  dataStandardOrTool alternativeStandardsAndTools = 0
- repeated  useCase enables = 0
-  boolean involvedInExperimentalDesign = 0
-  boolean involvedInMetadataManagement = 0
-  boolean involvedInQualityControl = 0
- repeated  uriorcurie xref = 0
- }
-// A container for UseCase.
-message UseCaseContainer
- {
- repeated  useCase useCases = 0
- }

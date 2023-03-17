@@ -75,7 +75,7 @@ aliases:
 - Dbxref
 - DbXref
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 multivalued: true
 alias: xref

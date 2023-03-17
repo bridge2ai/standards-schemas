@@ -1,4 +1,6 @@
 # Slot: data_standardortools_collection
+_Collection of associated data standards or tools_
+
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_standardortools_collection](https://w3id.org/bridge2ai/standards-schema-all/:data_standardortools_collection)
 
@@ -53,6 +55,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_standardortools_coll
 <details>
 ```yaml
 name: data_standardortools_collection
+description: Collection of associated data standards or tools
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 multivalued: true

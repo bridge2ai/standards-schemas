@@ -26,7 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer](h
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [data_substrates_collection](data_substrates_collection.md) | 0..* <br/> [DataSubstrate](DataSubstrate.md) |  | direct |
+| [data_substrates_collection](data_substrates_collection.md) | 0..* <br/> [DataSubstrate](DataSubstrate.md) | Collection of associated data substrates | direct |
 
 
 
@@ -93,6 +93,7 @@ rank: 1000
 attributes:
   data_substrates_collection:
     name: data_substrates_collection
+    description: Collection of associated data substrates
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     multivalued: true

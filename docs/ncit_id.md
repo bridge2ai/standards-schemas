@@ -1,4 +1,6 @@
 # Slot: ncit_id
+_Unique NCIt Identifier_
+
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org/bridge2ai/standards-schema-all/:ncit_id)
 
@@ -59,6 +61,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org
 <details>
 ```yaml
 name: ncit_id
+description: Unique NCIt Identifier
 examples:
 - value: NCIT:C92692
 from_schema: https://w3id.org/bridge2ai/standards-schema-all

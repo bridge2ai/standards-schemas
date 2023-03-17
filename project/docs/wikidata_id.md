@@ -2,7 +2,7 @@
 # Slot: wikidata_id
 
 
-
+Unique Wikidata identifier.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/wikidata_id](https://w3id.org/bridge2ai/standards-schema-all/wikidata_id)
 

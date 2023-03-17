@@ -26,7 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer](https:/
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [use_cases](use_cases.md) | 0..* <br/> [UseCase](UseCase.md) |  | direct |
+| [use_cases](use_cases.md) | 0..* <br/> [UseCase](UseCase.md) | Collection of associated use cases | direct |
 
 
 
@@ -93,6 +93,7 @@ rank: 1000
 attributes:
   use_cases:
     name: use_cases
+    description: Collection of associated use cases
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     multivalued: true

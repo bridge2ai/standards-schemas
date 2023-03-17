@@ -63,7 +63,7 @@ name: data_topics
 description: Relevance of the use case to one or more data topics.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 multivalued: true
 alias: data_topics

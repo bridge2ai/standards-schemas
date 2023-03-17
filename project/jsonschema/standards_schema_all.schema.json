@@ -274,6 +274,7 @@
             "description": "A container for DataStandardOrTool(s).",
             "properties": {
                 "data_standardortools_collection": {
+                    "description": "Collection of associated data standards or tools",
                     "items": {
                         "$ref": "#/$defs/DataStandardOrTool"
                     },
@@ -296,6 +297,7 @@
                     "type": "string"
                 },
                 "edam_id": {
+                    "description": "Unique EDAM identifier",
                     "type": "string"
                 },
                 "file_extensions": {
@@ -317,6 +319,7 @@
                     "type": "array"
                 },
                 "mesh_id": {
+                    "description": "Unique MeSH identifier",
                     "type": "string"
                 },
                 "metadata_storage": {
@@ -337,6 +340,7 @@
                     "type": "string"
                 },
                 "ncit_id": {
+                    "description": "Unique NCIt Identifier",
                     "type": "string"
                 },
                 "related_to": {
@@ -365,6 +369,7 @@
             "description": "A container for DataSubstrates.",
             "properties": {
                 "data_substrates_collection": {
+                    "description": "Collection of associated data substrates",
                     "items": {
                         "$ref": "#/$defs/DataSubstrate"
                     },
@@ -387,6 +392,7 @@
                     "type": "string"
                 },
                 "edam_id": {
+                    "description": "Unique EDAM identifier",
                     "type": "string"
                 },
                 "id": {
@@ -394,6 +400,7 @@
                     "type": "string"
                 },
                 "mesh_id": {
+                    "description": "Unique MeSH identifier",
                     "type": "string"
                 },
                 "name": {
@@ -401,6 +408,7 @@
                     "type": "string"
                 },
                 "ncit_id": {
+                    "description": "Unique NCIt Identifier",
                     "type": "string"
                 },
                 "related_to": {
@@ -429,6 +437,7 @@
             "description": "A container for DataTopics.",
             "properties": {
                 "data_topics_collection": {
+                    "description": "Collection of associated data topics.",
                     "items": {
                         "$ref": "#/$defs/DataTopic"
                     },
@@ -679,6 +688,7 @@
                     "type": "array"
                 },
                 "ror_id": {
+                    "description": "Unique ROR identifier.",
                     "type": "string"
                 },
                 "subclass_of": {
@@ -693,6 +703,7 @@
                     "type": "string"
                 },
                 "wikidata_id": {
+                    "description": "Unique Wikidata identifier.",
                     "type": "string"
                 }
             },
@@ -707,6 +718,7 @@
             "description": "A container for Organizations.",
             "properties": {
                 "organizations": {
+                    "description": "Collection of associated organizations.",
                     "items": {
                         "$ref": "#/$defs/Organization"
                     },
@@ -1316,6 +1328,7 @@
             "description": "A container for UseCase.",
             "properties": {
                 "use_cases": {
+                    "description": "Collection of associated use cases",
                     "items": {
                         "$ref": "#/$defs/UseCase"
                     },

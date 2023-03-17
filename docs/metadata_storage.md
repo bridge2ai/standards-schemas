@@ -63,7 +63,7 @@ name: metadata_storage
 description: Data Substrate in which metadata is stored.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 multivalued: true
 alias: metadata_storage

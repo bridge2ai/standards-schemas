@@ -55,10 +55,10 @@ classes:
 
 slots:
 
-  # TODO: need the "transform to" relation
+  # TODO: need the "transform_to" relation
   # TODO: need to specify related_to relation
   metadata_storage:
-    is_a: node property
+    is_a: node_property
     range: string
     any_of:
       - range: DataSubstrate
@@ -66,18 +66,19 @@ slots:
     description: Data Substrate in which metadata is stored.
     multivalued: true
   file_extensions:
-    is_a: node property
+    is_a: node_property
     range: string
     description: Commonly used file extensions for this substrate.
     multivalued: true
   limitations:
-    is_a: node property
+    is_a: node_property
     range: string
     description: >-
       Potential obstacles particular to this substrate
       or implementation. 
     multivalued: true
   data_substrates_collection:
+    description: Collection of associated data substrates
     range: DataSubstrate
     inlined: true
     inlined_as_list: true

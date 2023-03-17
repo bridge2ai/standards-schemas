@@ -15,4 +15,5 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer](htt
 ### Own
 
  * [organizations](organizations.md)  <sub>0..\*</sub>
+     * Description: Collection of associated organizations.
      * Range: [Organization](Organization.md)

@@ -26,6 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:node_property](https://w3
     * [requires_registration](requires_registration.md)
     * [publication](publication.md)
     * [formal_specification](formal_specification.md)
+    * [not_relevant_to_dgps](not_relevant_to_dgps.md)
     * [url](url.md)
     * [xref](xref.md)
     * [metadata_storage](metadata_storage.md)
@@ -68,7 +69,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:node_property](https://w3
 
 <details>
 ```yaml
-name: node property
+name: node_property
 description: A grouping for any property that holds between a node and a value.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000

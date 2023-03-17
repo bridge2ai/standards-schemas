@@ -62,7 +62,7 @@ description: True if use case is likely to be implemented as part of an experime
   procedure or collection of data to be used as part of an experiment.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 alias: involved_in_experimental_design
 domain_of:

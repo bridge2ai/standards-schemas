@@ -149,7 +149,7 @@ attributes:
     description: Tags for specific sets of standards.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: collection
@@ -191,7 +191,7 @@ attributes:
     description: Text description of the standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: purpose_detail
     owner: ReferenceImplementation
@@ -203,7 +203,7 @@ attributes:
     description: Is the standard or tool FAIR and available free of cost?
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: is_open
     owner: ReferenceImplementation
@@ -216,7 +216,7 @@ attributes:
       group with some organization or managerial body?
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: requires_registration
     owner: ReferenceImplementation
@@ -228,7 +228,7 @@ attributes:
     description: URL for basic documentation of the standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: url
     owner: ReferenceImplementation
@@ -241,7 +241,7 @@ attributes:
     description: Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: publication
     owner: ReferenceImplementation
@@ -254,7 +254,7 @@ attributes:
       of the standard or tool. Often a URL, particularly to a Git repository.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: formal_specification
     owner: ReferenceImplementation

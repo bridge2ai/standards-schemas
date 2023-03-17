@@ -1,4 +1,6 @@
 # Slot: mesh_id
+_Unique MeSH identifier_
+
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:mesh_id](https://w3id.org/bridge2ai/standards-schema-all/:mesh_id)
 
@@ -59,6 +61,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:mesh_id](https://w3id.org
 <details>
 ```yaml
 name: mesh_id
+description: Unique MeSH identifier
 examples:
 - value: MeSH:D014831
 from_schema: https://w3id.org/bridge2ai/standards-schema-all

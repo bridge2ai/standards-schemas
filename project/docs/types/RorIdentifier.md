@@ -2,7 +2,7 @@
 # Type: ror_identifier
 
 
-
+Identifier from Research Organization Registry.
 
 URI: [STANDARDSORGANIZATION:RorIdentifier](https://w3id.org/bridge2ai/standards-organization-schema/RorIdentifier)
 

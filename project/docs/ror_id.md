@@ -2,7 +2,7 @@
 # Slot: ror_id
 
 
-
+Unique ROR identifier.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/ror_id](https://w3id.org/bridge2ai/standards-schema-all/ror_id)
 

@@ -33,7 +33,6 @@ None &#8594;  <sub>1..1</sub> [Uriorcurie](types/Uriorcurie.md)
  * [Registry](Registry.md)
  * [SoftwareOrTool](SoftwareOrTool.md)
  * [TrainingProgram](TrainingProgram.md)
- * [UseCase](UseCase.md)
 
 ## Other properties
 
