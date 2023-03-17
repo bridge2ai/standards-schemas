@@ -132,6 +132,7 @@ slots:
       True is use case is likely to be implemented as
       part of data validation operations.
   use_cases:
+    description: Collection of associated use cases
     range: UseCase
     inlined: true
     inlined_as_list: true

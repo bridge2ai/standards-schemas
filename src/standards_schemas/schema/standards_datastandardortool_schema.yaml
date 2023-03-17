@@ -175,6 +175,7 @@ slots:
     range: Organization
 
   data_standardortools_collection:
+    description: Collection of associated data standards or tools
     range: DataStandardOrTool
     inlined: true
     inlined_as_list: true

@@ -78,6 +78,7 @@ slots:
       or implementation. 
     multivalued: true
   data_substrates_collection:
+    description: Collection of associated data substrates
     range: DataSubstrate
     inlined: true
     inlined_as_list: true

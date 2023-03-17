@@ -47,6 +47,7 @@ classes:
 slots:
 
   data_topics_collection:
+    description: Collection of associated data topics.
     range: DataTopic
     inlined: true
     inlined_as_list: true
