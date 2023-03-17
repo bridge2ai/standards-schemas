@@ -55,7 +55,7 @@ classes:
 
 slots:
 
-  # TODO: need the "transform to" relation
+  # TODO: need the "transform_to" relation
   # TODO: need to specify related_to relation
   metadata_storage:
     is_a: node_property
