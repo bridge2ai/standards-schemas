@@ -14,7 +14,7 @@ prefixes:
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
   ror: https://ror.org/
-  wikidata: http://identifiers.org/wikidata/
+  wikidata: http://www.wikidata.org/wiki/
 default_prefix: STANDARDSORGANIZATION
 default_range: string
 
