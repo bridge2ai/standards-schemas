@@ -62,7 +62,7 @@ description: True is use case is likely to be implemented as part of data valida
   operations.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 alias: involved_in_quality_control
 domain_of:

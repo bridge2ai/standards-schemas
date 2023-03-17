@@ -24,9 +24,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 ### Own
 
  * [ror_id](ror_id.md)  <sub>0..1</sub>
+     * Description: Unique ROR identifier.
      * Range: [RorIdentifier](types/RorIdentifier.md)
      * Example: ROR:02mp31p96 None
  * [wikidata_id](wikidata_id.md)  <sub>0..1</sub>
+     * Description: Unique Wikidata identifier.
      * Range: [WikidataIdentifier](types/WikidataIdentifier.md)
      * Example: WIKIDATA:Q282186 None
  * [url](url.md)  <sub>0..1</sub>

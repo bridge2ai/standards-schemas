@@ -2,7 +2,7 @@
 # Slot: ncit_id
 
 
-
+Unique NCIt Identifier
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/ncit_id](https://w3id.org/bridge2ai/standards-schema-all/ncit_id)
 

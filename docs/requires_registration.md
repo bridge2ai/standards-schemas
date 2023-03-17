@@ -71,7 +71,7 @@ description: Does usage of the standard or tool require registrion of a user or 
   with some organization or managerial body?
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 alias: requires_registration
 domain_of:

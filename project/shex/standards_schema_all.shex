@@ -8,7 +8,6 @@ PREFIX STANDARDSDATATOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schem
 PREFIX STANDARDSDATASUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/>
 PREFIX STANDARDSORGANIZATION: <https://w3id.org/bridge2ai/standards-organization-schema/>
 PREFIX STANDARDSDATASTANDARDORTOOL: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/>
-PREFIX STANDARDSUSECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/>
 
 
 linkml:String xsd:string
@@ -159,7 +158,7 @@ STANDARDS:NamedThing  (
           rdf:type [ schema:Thing ]
        )
     } OR @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool OR @STANDARDSDATASUBSTRATE:DataSubstrate OR @STANDARDSDATATOPIC:DataTopic
-    OR @STANDARDSORGANIZATION:Organization OR @STANDARDSUSECASE:UseCase
+    OR @STANDARDSORGANIZATION:Organization
 )
 
 STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary CLOSED {
@@ -224,32 +223,6 @@ STANDARDSDATASTANDARDORTOOL:TrainingProgram CLOSED {
           rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
        ) ;
        rdf:type [ STANDARDSDATASTANDARDORTOOL:TrainingProgram ]
-    )
-}
-
-STANDARDSUSECASE:UseCase CLOSED {
-    (  $STANDARDSUSECASE:UseCase_tes (  &STANDARDS:NamedThing_tes ;
-          rdf:type [ schema:Thing ] ? ;
-          STANDARDSUSECASE:use_case_category @STANDARDSUSECASE:UseCaseCategory ;
-          STANDARDSUSECASE:known_limitations @linkml:String ? ;
-          STANDARDSUSECASE:relevance_to_dgps @STANDARDS:DataGeneratingProject * ;
-          STANDARDSUSECASE:data_topics @STANDARDSDATATOPIC:DataTopic * ;
-          STANDARDSUSECASE:data_substrates @STANDARDSDATASUBSTRATE:DataSubstrate * ;
-          STANDARDSUSECASE:standards_and_tools_for_dgp_use @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool * ;
-          STANDARDSUSECASE:alternative_standards_and_tools @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool * ;
-          STANDARDSUSECASE:enables @STANDARDSUSECASE:UseCase * ;
-          STANDARDSUSECASE:involved_in_experimental_design @linkml:Boolean ? ;
-          STANDARDSUSECASE:involved_in_metadata_management @linkml:Boolean ? ;
-          STANDARDSUSECASE:involved_in_quality_control @linkml:Boolean ? ;
-          STANDARDS:xref @linkml:Uriorcurie *
-       ) ;
-       rdf:type [ STANDARDSUSECASE:UseCase ]
-    )
-}
-
-STANDARDSUSECASE:UseCaseContainer CLOSED {
-    (  $STANDARDSUSECASE:UseCaseContainer_tes STANDARDSUSECASE:use_cases @STANDARDSUSECASE:UseCase * ;
-       rdf:type [ STANDARDSUSECASE:UseCaseContainer ] ?
     )
 }
 

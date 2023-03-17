@@ -1,4 +1,6 @@
 # Slot: data_topics_collection
+_Collection of associated data topics._
+
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection](https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection)
 
@@ -53,6 +55,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection](h
 <details>
 ```yaml
 name: data_topics_collection
+description: Collection of associated data topics.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 multivalued: true

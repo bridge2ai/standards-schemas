@@ -26,7 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContain
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [data_standardortools_collection](data_standardortools_collection.md) | 0..* <br/> [DataStandardOrTool](DataStandardOrTool.md) |  | direct |
+| [data_standardortools_collection](data_standardortools_collection.md) | 0..* <br/> [DataStandardOrTool](DataStandardOrTool.md) | Collection of associated data standards or tools | direct |
 
 
 
@@ -93,6 +93,7 @@ rank: 1000
 attributes:
   data_standardortools_collection:
     name: data_standardortools_collection
+    description: Collection of associated data standards or tools
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     multivalued: true

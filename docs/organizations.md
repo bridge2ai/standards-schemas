@@ -1,4 +1,6 @@
 # Slot: organizations
+_Collection of associated organizations._
+
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:organizations](https://w3id.org/bridge2ai/standards-schema-all/:organizations)
 
@@ -53,6 +55,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:organizations](https://w3
 <details>
 ```yaml
 name: organizations
+description: Collection of associated organizations.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 multivalued: true

@@ -48,8 +48,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [ror_id](ror_id.md) | 0..1 <br/> [RorIdentifier](RorIdentifier.md) |  | direct |
-| [wikidata_id](wikidata_id.md) | 0..1 <br/> [WikidataIdentifier](WikidataIdentifier.md) |  | direct |
+| [ror_id](ror_id.md) | 0..1 <br/> [RorIdentifier](RorIdentifier.md) | Unique ROR identifier | direct |
+| [wikidata_id](wikidata_id.md) | 0..1 <br/> [WikidataIdentifier](WikidataIdentifier.md) | Unique Wikidata identifier | direct |
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | direct |
 | [related_to](related_to.md) | 0..* <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | direct |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
@@ -147,6 +147,7 @@ is_a: NamedThing
 attributes:
   ror_id:
     name: ror_id
+    description: Unique ROR identifier.
     examples:
     - value: ROR:02mp31p96
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
@@ -160,6 +161,7 @@ attributes:
     range: ror_identifier
   wikidata_id:
     name: wikidata_id
+    description: Unique Wikidata identifier.
     examples:
     - value: WIKIDATA:Q282186
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
@@ -176,7 +178,7 @@ attributes:
     description: URL for basic documentation of the standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: url
     owner: Organization

@@ -15,4 +15,5 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContaine
 ### Own
 
  * [data_standardortools_collection](data_standardortools_collection.md)  <sub>0..\*</sub>
+     * Description: Collection of associated data standards or tools
      * Range: [DataStandardOrTool](DataStandardOrTool.md)

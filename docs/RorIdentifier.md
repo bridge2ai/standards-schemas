@@ -1,6 +1,8 @@
 # Type: RorIdentifier
 
 
+_Identifier from Research Organization Registry._
+
 
 URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 

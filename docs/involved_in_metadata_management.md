@@ -63,7 +63,7 @@ description: True if use case is likely to be implemented as part of metadata in
   cases in which metadata will be collected along with data.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 alias: involved_in_metadata_management
 domain_of:

@@ -187,7 +187,7 @@ attributes:
       in all categories.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: use_case_category
     owner: UseCase
@@ -202,7 +202,7 @@ attributes:
       lack of relevant patient cohort, lack of funding, etc.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: known_limitations
     owner: UseCase
@@ -225,7 +225,7 @@ attributes:
     description: Relevance of the use case to one or more data topics.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: data_topics
@@ -238,7 +238,7 @@ attributes:
     description: Relevance of the use case to one or more data substrates.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: data_substrates
@@ -254,7 +254,7 @@ attributes:
       for this use case.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: standards_and_tools_for_dgp_use
@@ -269,7 +269,7 @@ attributes:
       but serving as viable alternatives, from those in the Standards Registry.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: alternative_standards_and_tools
@@ -282,7 +282,7 @@ attributes:
     description: Other use case(s) this use case supports or makes possible.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: enables
@@ -296,7 +296,7 @@ attributes:
       procedure or collection of data to be used as part of an experiment.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: involved_in_experimental_design
     owner: UseCase
@@ -310,7 +310,7 @@ attributes:
       Includes use cases in which metadata will be collected along with data.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: involved_in_metadata_management
     owner: UseCase
@@ -323,7 +323,7 @@ attributes:
       operations.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: involved_in_quality_control
     owner: UseCase
@@ -340,7 +340,7 @@ attributes:
     - Dbxref
     - DbXref
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: xref

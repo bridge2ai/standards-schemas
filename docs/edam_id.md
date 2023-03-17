@@ -1,4 +1,6 @@
 # Slot: edam_id
+_Unique EDAM identifier_
+
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:edam_id](https://w3id.org/bridge2ai/standards-schema-all/:edam_id)
 
@@ -59,6 +61,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:edam_id](https://w3id.org
 <details>
 ```yaml
 name: edam_id
+description: Unique EDAM identifier
 examples:
 - value: edam.data:0006
 from_schema: https://w3id.org/bridge2ai/standards-schema-all

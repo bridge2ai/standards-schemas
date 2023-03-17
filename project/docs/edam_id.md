@@ -2,7 +2,7 @@
 # Slot: edam_id
 
 
-
+Unique EDAM identifier
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/edam_id](https://w3id.org/bridge2ai/standards-schema-all/edam_id)
 

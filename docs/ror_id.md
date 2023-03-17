@@ -1,4 +1,6 @@
 # Slot: ror_id
+_Unique ROR identifier._
+
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:ror_id](https://w3id.org/bridge2ai/standards-schema-all/:ror_id)
 
@@ -58,6 +60,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ror_id](https://w3id.org/
 <details>
 ```yaml
 name: ror_id
+description: Unique ROR identifier.
 examples:
 - value: ROR:02mp31p96
 from_schema: https://w3id.org/bridge2ai/standards-schema-all

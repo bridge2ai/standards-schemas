@@ -232,7 +232,7 @@ attributes:
     description: Tags for specific sets of standards.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     multivalued: true
     alias: collection
@@ -274,7 +274,7 @@ attributes:
     description: Text description of the standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: purpose_detail
     owner: DataStandardOrTool
@@ -286,7 +286,7 @@ attributes:
     description: Is the standard or tool FAIR and available free of cost?
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: is_open
     owner: DataStandardOrTool
@@ -299,7 +299,7 @@ attributes:
       group with some organization or managerial body?
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: requires_registration
     owner: DataStandardOrTool
@@ -311,7 +311,7 @@ attributes:
     description: URL for basic documentation of the standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: url
     owner: DataStandardOrTool
@@ -324,7 +324,7 @@ attributes:
     description: Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: publication
     owner: DataStandardOrTool
@@ -337,7 +337,7 @@ attributes:
       of the standard or tool. Often a URL, particularly to a Git repository.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    is_a: node property
+    is_a: node_property
     domain: NamedThing
     alias: formal_specification
     owner: DataStandardOrTool

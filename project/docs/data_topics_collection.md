@@ -2,7 +2,7 @@
 # Slot: data_topics_collection
 
 
-
+Collection of associated data topics.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/data_topics_collection](https://w3id.org/bridge2ai/standards-schema-all/data_topics_collection)
 

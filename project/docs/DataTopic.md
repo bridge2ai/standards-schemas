@@ -7,7 +7,7 @@ Represents a general data topic for Bridge2AI data or the tools/standards applie
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.org/bridge2ai/standards-schema-all/DataTopic)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[UseCase]-%20data_topics%200..*>[DataTopic],[DataTopicContainer]++-%20data_topics_collection%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataTopicContainer],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[UseCase]-%20data_topics%200..*>[DataTopic],[DataTopicContainer]++-%20data_topics_collection%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataTopicContainer],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataTopicContainer]++-%20data_topics_collection%200..*>[DataTopic],[NamedThing]^-[DataTopic],[DataTopicContainer],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataTopicContainer]++-%20data_topics_collection%200..*>[DataTopic],[NamedThing]^-[DataTopic],[DataTopicContainer],[DataStandardOrTool])
 
 ## Parents
 
@@ -16,7 +16,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 ## Referenced by Class
 
  *  **[DataStandardOrTool](DataStandardOrTool.md)** *[concerns_data_topic](concerns_data_topic.md)*  <sub>0..\*</sub>  **[DataTopic](DataTopic.md)**
- *  **[NamedThing](NamedThing.md)** *[data_topics](data_topics.md)*  <sub>0..\*</sub>  **[DataTopic](DataTopic.md)**
  *  **None** *[data_topics_collection](data_topics_collection.md)*  <sub>0..\*</sub>  **[DataTopic](DataTopic.md)**
 
 ## Attributes
@@ -25,12 +24,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 ### Own
 
  * [edam_id](edam_id.md)  <sub>0..1</sub>
+     * Description: Unique EDAM identifier
      * Range: [EdamIdentifier](types/EdamIdentifier.md)
      * Example: edam.data:0006 None
  * [mesh_id](mesh_id.md)  <sub>0..1</sub>
+     * Description: Unique MeSH identifier
      * Range: [MeshIdentifier](types/MeshIdentifier.md)
      * Example: MeSH:D014831 None
  * [ncit_id](ncit_id.md)  <sub>0..1</sub>
+     * Description: Unique NCIt Identifier
      * Range: [NcitIdentifier](types/NcitIdentifier.md)
      * Example: NCIT:C92692 None
 

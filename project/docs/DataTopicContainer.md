@@ -15,4 +15,5 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer](https:
 ### Own
 
  * [data_topics_collection](data_topics_collection.md)  <sub>0..\*</sub>
+     * Description: Collection of associated data topics.
      * Range: [DataTopic](DataTopic.md)

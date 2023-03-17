@@ -70,7 +70,7 @@ name: is_open
 description: Is the standard or tool FAIR and available free of cost?
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 alias: is_open
 domain_of:

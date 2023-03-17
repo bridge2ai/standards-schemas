@@ -63,7 +63,7 @@ name: limitations
 description: 'Potential obstacles particular to this substrate or implementation. '
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 multivalued: true
 alias: limitations

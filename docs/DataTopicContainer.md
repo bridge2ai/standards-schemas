@@ -26,7 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer](https
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [data_topics_collection](data_topics_collection.md) | 0..* <br/> [DataTopic](DataTopic.md) |  | direct |
+| [data_topics_collection](data_topics_collection.md) | 0..* <br/> [DataTopic](DataTopic.md) | Collection of associated data topics | direct |
 
 
 
@@ -93,6 +93,7 @@ rank: 1000
 attributes:
   data_topics_collection:
     name: data_topics_collection
+    description: Collection of associated data topics.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     multivalued: true

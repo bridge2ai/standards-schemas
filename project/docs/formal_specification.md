@@ -13,7 +13,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/formal_specification](http
 
 ## Parents
 
- *  is_a: [node property](node_property.md)
+ *  is_a: [node_property](node_property.md)
 
 ## Children
 

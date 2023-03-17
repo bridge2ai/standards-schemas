@@ -1,4 +1,6 @@
 # Slot: wikidata_id
+_Unique Wikidata identifier._
+
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id](https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id)
 
@@ -58,6 +60,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id](https://w3id
 <details>
 ```yaml
 name: wikidata_id
+description: Unique Wikidata identifier.
 examples:
 - value: WIKIDATA:Q282186
 from_schema: https://w3id.org/bridge2ai/standards-schema-all

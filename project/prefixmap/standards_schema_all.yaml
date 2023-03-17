@@ -5,7 +5,6 @@
    "STANDARDSDATASUBSTRATE": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/",
    "STANDARDSDATATOPIC": "https://w3id.org/bridge2ai/standards-datatopic-schema/",
    "STANDARDSORGANIZATION": "https://w3id.org/bridge2ai/standards-organization-schema/",
-   "STANDARDSUSECASE": "https://w3id.org/bridge2ai/standards-usecase-schema/",
    "linkml": "https://w3id.org/linkml/",
    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "schema": "http://schema.org/",
@@ -62,11 +61,5 @@
    },
    "TrainingProgram": {
       "@id": "STANDARDSDATASTANDARDORTOOL:TrainingProgram"
-   },
-   "UseCase": {
-      "@id": "STANDARDSUSECASE:UseCase"
-   },
-   "UseCaseContainer": {
-      "@id": "STANDARDSUSECASE:UseCaseContainer"
    }
 }

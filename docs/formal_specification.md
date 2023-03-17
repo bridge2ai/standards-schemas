@@ -71,7 +71,7 @@ description: Relevant code repository or other location for a formal specificati
   of the standard or tool. Often a URL, particularly to a Git repository.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 alias: formal_specification
 domain_of:

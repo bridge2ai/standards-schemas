@@ -2,7 +2,7 @@
 # Type: ncit_identifier
 
 
-
+Identifier from NCIT reference terminology with broad coverage of the cancer domain.
 
 URI: [STANDARDS:NcitIdentifier](https://w3id.org/bridge2ai/standards-schema/NcitIdentifier)
 

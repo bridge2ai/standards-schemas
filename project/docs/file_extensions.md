@@ -13,7 +13,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/file_extensions](https://w
 
 ## Parents
 
- *  is_a: [node property](node_property.md)
+ *  is_a: [node_property](node_property.md)
 
 ## Children
 

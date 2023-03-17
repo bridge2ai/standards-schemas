@@ -15,4 +15,5 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer](ht
 ### Own
 
  * [data_substrates_collection](data_substrates_collection.md)  <sub>0..\*</sub>
+     * Description: Collection of associated data substrates
      * Range: [DataSubstrate](DataSubstrate.md)

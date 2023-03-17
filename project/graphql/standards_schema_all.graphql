@@ -260,30 +260,3 @@ type TrainingProgram
     formalSpecification: Uriorcurie
   }
 
-type UseCase
-  {
-    id: Uriorcurie!
-    category: CategoryType
-    name: String
-    description: String
-    subclassOf: [NamedThing]
-    relatedTo: [NamedThing]
-    useCaseCategory: UseCaseCategory!
-    knownLimitations: String
-    relevanceToDgps: [DataGeneratingProject]
-    dataTopics: [DataTopic]
-    dataSubstrates: [DataSubstrate]
-    standardsAndToolsForDgpUse: [DataStandardOrTool]
-    alternativeStandardsAndTools: [DataStandardOrTool]
-    enables: [UseCase]
-    involvedInExperimentalDesign: Boolean
-    involvedInMetadataManagement: Boolean
-    involvedInQualityControl: Boolean
-    xref: [Uriorcurie]
-  }
-
-type UseCaseContainer
-  {
-    useCases: [UseCase]
-  }
-

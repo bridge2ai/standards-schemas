@@ -13,14 +13,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/xref](https://w3id.org/bri
 
 ## Parents
 
- *  is_a: [node property](node_property.md)
+ *  is_a: [node_property](node_property.md)
 
 ## Children
 
 
 ## Used by
 
- * [UseCase](UseCase.md)
 
 ## Other properties
 

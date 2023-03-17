@@ -65,7 +65,7 @@ description: List of identifiers of standards and tools; those not explicitly pl
   as viable alternatives, from those in the Standards Registry.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node property
+is_a: node_property
 domain: NamedThing
 multivalued: true
 alias: alternative_standards_and_tools

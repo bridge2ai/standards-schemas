@@ -2,7 +2,7 @@
 # Slot: mesh_id
 
 
-
+Unique MeSH identifier
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/mesh_id](https://w3id.org/bridge2ai/standards-schema-all/mesh_id)
 
