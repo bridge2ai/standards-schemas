@@ -192,7 +192,3 @@ enums:
           sourced, bioaccoustic database to understand disease
           like never before.
         meaning: https://reporter.nih.gov/project-details/10473236
-      none:
-        description: >-
-          None: Does not currently apply to any of the Bridge2AI
-            Data Generating Projects.

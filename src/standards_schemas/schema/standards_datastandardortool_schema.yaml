@@ -181,6 +181,12 @@ slots:
     inlined_as_list: true
     multivalued: true
 
+  not_relevant_to_dgps:
+    description: >-
+      Is the standard or tool currently relevant to DGPs?
+    is_a: node_property
+    range: boolean
+
 enums:
   StandardsCollectionTag:
     description: Tags for specific sets of standards.
