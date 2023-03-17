@@ -14,7 +14,6 @@ URI: [DataGeneratingProject](DataGeneratingProject)
 | chorus | https://reporter.nih.gov/project-details/10472824 | CHoRUS: Collaborative Hospital Repository Uniting Standards |
 | cm4ai | https://reporter.nih.gov/project-details/10473403 | CM4AI: Cell Maps for AI |
 | voice | https://reporter.nih.gov/project-details/10473236 | Voice as a Biomarker of Health: Building an ethically sourced, bioaccoustic d... |
-| none | None | None: Does not currently apply to any of the Bridge2AI |
 
 
 
@@ -76,10 +75,6 @@ permissible_values:
     description: 'Voice as a Biomarker of Health: Building an ethically sourced, bioaccoustic
       database to understand disease like never before.'
     meaning: https://reporter.nih.gov/project-details/10473236
-  none:
-    text: none
-    description: "None: Does not currently apply to any of the Bridge2AI\n  Data Generating\
-      \ Projects."
 
 ```
 </details>

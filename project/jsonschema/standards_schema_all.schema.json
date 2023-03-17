@@ -92,8 +92,7 @@
                 "aireadi",
                 "chorus",
                 "cm4ai",
-                "voice",
-                "none"
+                "voice"
             ],
             "title": "DataGeneratingProject",
             "type": "string"

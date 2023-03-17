@@ -52,6 +52,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [is_open](is_open.md) - Is the standard or tool FAIR and available free of cost?
      * [limitations](limitations.md) - Potential obstacles particular to this substrate or implementation. 
      * [metadata_storage](metadata_storage.md) - Data Substrate in which metadata is stored.
+     * [not_relevant_to_dgps](not_relevant_to_dgps.md) - Is the standard or tool currently relevant to DGPs?
      * [publication](publication.md) - Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
      * [purpose_detail](purpose_detail.md) - Text description of the standard or tool.
      * [requires_registration](requires_registration.md) - Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?

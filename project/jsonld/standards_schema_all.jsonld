@@ -352,10 +352,6 @@
           "text": "voice",
           "description": "Voice as a Biomarker of Health: Building an ethically sourced, bioaccoustic database to understand disease like never before.",
           "meaning": "https://reporter.nih.gov/project-details/10473236"
-        },
-        {
-          "text": "none",
-          "description": "None: Does not currently apply to any of the Bridge2AI\n  Data Generating Projects."
         }
       ]
     },
@@ -1031,6 +1027,18 @@
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
+    },
+    {
+      "name": "not_relevant_to_dgps",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps",
+      "description": "Is the standard or tool currently relevant to DGPs?",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps",
+      "owner": "not_relevant_to_dgps",
+      "range": "boolean",
+      "@type": "SlotDefinition"
     }
   ],
   "classes": [
@@ -1443,7 +1451,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-03-15T16:18:22",
   "source_file_size": 439,
-  "generation_date": "2023-03-17T13:59:19",
+  "generation_date": "2023-03-17T14:55:28",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

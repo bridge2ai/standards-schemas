@@ -64,6 +64,7 @@ Name: standards-schema-all
 | [name](name.md) | A human-readable name for a thing |
 | [ncit_id](ncit_id.md) | Unique NCIt Identifier |
 | [node_property](node_property.md) | A grouping for any property that holds between a node and a value |
+| [not_relevant_to_dgps](not_relevant_to_dgps.md) | Is the standard or tool currently relevant to DGPs? |
 | [organizations](organizations.md) | Collection of associated organizations |
 | [publication](publication.md) | Relevant publication for the standard or tool |
 | [purpose_detail](purpose_detail.md) | Text description of the standard or tool |

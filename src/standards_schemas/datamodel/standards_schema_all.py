@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-03-17T13:59:24
+# Generation date: 2023-03-17T14:55:34
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -694,9 +694,6 @@ class DataGeneratingProject(EnumDefinitionImpl):
     voice = PermissibleValue(text="voice",
                                  description="Voice as a Biomarker of Health: Building an ethically sourced, bioaccoustic database to understand disease like never before.",
                                  meaning=None)
-    none = PermissibleValue(text="none",
-                               description="None: Does not currently apply to any of the Bridge2AI
-  Data Generating Projects.")
 
     _defn = EnumDefinition(
         name="DataGeneratingProject",
@@ -874,3 +871,6 @@ slots.has_relevant_organization = Slot(uri=STANDARDSDATASTANDARDORTOOL.has_relev
 
 slots.data_standardortools_collection = Slot(uri=STANDARDSDATASTANDARDORTOOL.data_standardortools_collection, name="data_standardortools_collection", curie=STANDARDSDATASTANDARDORTOOL.curie('data_standardortools_collection'),
                    model_uri=DEFAULT_.data_standardortools_collection, domain=None, range=Optional[Union[Dict[Union[str, DataStandardOrToolId], Union[dict, DataStandardOrTool]], List[Union[dict, DataStandardOrTool]]]])
+
+slots.not_relevant_to_dgps = Slot(uri=STANDARDSDATASTANDARDORTOOL.not_relevant_to_dgps, name="not_relevant_to_dgps", curie=STANDARDSDATASTANDARDORTOOL.curie('not_relevant_to_dgps'),
+                   model_uri=DEFAULT_.not_relevant_to_dgps, domain=NamedThing, range=Optional[Union[bool, Bool]])
