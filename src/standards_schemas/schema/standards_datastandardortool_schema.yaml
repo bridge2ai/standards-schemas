@@ -41,6 +41,7 @@ classes:
       - url
       - publication
       - formal_specification
+      - not_relevant_to_dgps
 
   DataStandard:
     is_a: DataStandardOrTool
