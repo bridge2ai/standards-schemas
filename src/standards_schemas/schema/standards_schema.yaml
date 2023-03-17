@@ -63,7 +63,7 @@ classes:
     class_uri: schema:Thing
 
 slots:
-  node property:
+  node_property:
     description: >-
       A grouping for any property that holds
       between a node and a value.
@@ -114,13 +114,13 @@ slots:
     values_from:
       - NCIT
   url:
-    is_a: node property
+    is_a: node_property
     range: uriorcurie
     description: >-
       URL for basic documentation of the standard
       or tool.
   xref:
-    is_a: node property
+    is_a: node_property
     aliases: [ 'dbxref', 'Dbxref', 'DbXref' ]
     domain: NamedThing
     range: uriorcurie

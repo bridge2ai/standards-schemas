@@ -115,7 +115,7 @@ classes:
 slots:
 
   collection:
-    is_a: node property
+    is_a: node_property
     range: StandardsCollectionTag
     description: >-
       Tags for specific sets of standards.
@@ -123,19 +123,19 @@ slots:
   
   purpose_detail:
     range: string
-    is_a: node property
+    is_a: node_property
     description: >-
       Text description of the standard or tool.
   
   is_open:
-    is_a: node property
+    is_a: node_property
     range: boolean
     description: >-
       Is the standard or tool FAIR and available
       free of cost?
   
   requires_registration:
-    is_a: node property
+    is_a: node_property
     range: boolean
     description: >-
       Does usage of the standard or tool
@@ -151,14 +151,14 @@ slots:
     range: DataTopic
   
   publication:
-    is_a: node property
+    is_a: node_property
     range: uriorcurie
     description: >-
       Relevant publication for the standard
       or tool. Prefer a DOI or PUBMED.
 
   formal_specification:
-    is_a: node property
+    is_a: node_property
     range: uriorcurie
     description: >-
       Relevant code repository or other location
