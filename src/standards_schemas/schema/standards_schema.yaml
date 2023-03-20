@@ -9,7 +9,7 @@ see_also:
 
 prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
-  STANDARDS: https://w3id.org/bridge2ai/standards-schema/
+  B2AI: https://w3id.org/bridge2ai/standards-schema/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
@@ -21,7 +21,7 @@ prefixes:
   edam.operation: http://edamontology.org/operation_
   edam.topic: http://edamontology.org/topic_
 
-default_prefix: STANDARDS
+default_prefix: B2AI
 default_range: string
 
 imports:
