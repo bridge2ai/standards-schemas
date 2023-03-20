@@ -1,6 +1,6 @@
 # the value of use_case_category is case-sensitive
 use_cases:
-  - id: "STANDARDSUSECASE:1"
+  - id: "B2AI.USECASE:1"
     use_case_category: Acquisition
-  - id: "STANDARDSUSECASE:2"
+  - id: "B2AI.USECASE:2"
     use_case_category: Acquisition

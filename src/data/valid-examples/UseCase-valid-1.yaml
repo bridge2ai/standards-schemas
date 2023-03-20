@@ -1,24 +1,24 @@
 # Example UseCase data
 
-id: "STANDARDSUSECASE:1"
+id: B2AI.USECASE:1
 use_case_category: acquisition
 name: Obtain patient data from records of clinical visits.
 category: UseCase
 description: "Collecting clinical data from patient visits involves the process of gathering information about a patient's medical history, current symptoms, and other relevant information during a healthcare appointment. This typically includes taking a detailed medical history, conducting a physical examination, ordering and interpreting diagnostic tests, and documenting the findings in the patient's medical record. This may also include more focused evaluations, as with the AI-READI project’s assessments of cognitive function and visual acuity. Medical records may include structured/unstructured text, values for lab results, and/or images."
 
 alternative_standards_and_tools:
-  - "STANDARDSUSECASE:123"
-  - "STANDARDSUSECASE:555"
+  - B2AI.STANDARD:123
+  - B2AI.STANDARD:555
 
 data_substrates:
-  - "STANDARDSUSECASE:abc"
-  - "STANDARDSUSECASE:xyz"
+  - B2AI.SUBSTRATE:12
+  - B2AI.SUBSTRATE:34
 
 known_limitations: xyz
 
 xref:
-  - "STANDARDSUSECASE:abc"
-  - "STANDARDSUSECASE:xyz"
+  - B2AI.USECASE:123
+  - B2AI.USECASE:456
 
 involved_in_experimental_design: True
 involved_in_metadata_management: True
@@ -29,18 +29,19 @@ relevance_to_dgps:
   - chorus
   - voice
 
-# there are some edge cases in which a YAML value, containing a colon but without quotation marks
+# there are some edge cases in which a YAML value,
+# containing a colon but without quotation marks
 #   will fail to parse
 data_topics: # Representative IDs only
-  - "STANDARDSDATATOPIC:Image"
-  - "STANDARDSDATATOPIC:Clinical_Observations"
+  - "B2AI.TOPIC:5"
+  - "B2AI.TOPIC:6"
 
 standards_and_tools_for_dgp_use: # Representative IDs only
-  - "STANDARDSDATASTANDARDORTOOL:DICOM"
-  - "STANDARDSDATASTANDARDORTOOL:OMOP_CDM"
+  - "B2AI.STANDARD:5"
+  - "B2AI.STANDARD:10"
 
 enables:
-  - "STANDARDSUSECASE:5"
-  - "STANDARDSUSECASE:13"
-  - "STANDARDSUSECASE:17"
-  - "STANDARDSUSECASE:19"
+  - B2AI.USECASE:5
+  - B2AI.USECASE:13
+  - B2AI.USECASE:17
+  - B2AI.USECASE:19

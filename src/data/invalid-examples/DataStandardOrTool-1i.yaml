@@ -1,15 +1,15 @@
 # Example DataStandardOrTool data
 
-id: STANDARDSDATASTANDARDORTOOL:53
+id: B2AI.STANDARD:53
 name: OMOP CDM
 description: Observational Medical Outcomes Partnership Common Data Model
 concerns data topic:
-  - STANDARDSDATATOPIC:4
+  - B2AI.TOPIC:4
 has relevant organization:
-  - STANDARDSORGANIZATION:76
+  - B2AI.ORGANIZATION:76
 purpose_detail: Open community data standard designed to standardize the structure and content of observational data and to enable efficient analyses that can produce reliable evidence.
 is_open_data: True
-requires_registration: False
+requires_registration: 3
 url: https://ohdsi.github.io/CommonDataModel/
 publication: doi:10.3233/978-1-61499-564-7-574
 formal_specification: https://github.com/OHDSI/CommonDataModel
