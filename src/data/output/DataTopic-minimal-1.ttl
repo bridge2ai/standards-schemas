@@ -1,4 +1,0 @@
-@prefix STANDARDSDATATOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
-
-STANDARDSDATATOPIC:2 a STANDARDSDATATOPIC:DataTopic .
-

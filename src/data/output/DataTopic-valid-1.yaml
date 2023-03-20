@@ -1,9 +1,0 @@
-id: STANDARDSDATATOPIC:2
-category: DataTopic
-name: Biology
-description: Data involving any study of living organisms at any scale.
-subclass_of:
-- STANDARDSDATATOPIC:1
-edam_id: edam.topic:3070
-mesh_id: mesh:D001695
-ncit_id: ncit:C16345
