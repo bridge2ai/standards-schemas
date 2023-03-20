@@ -33,6 +33,7 @@ None &#8594;  <sub>0..1</sub> [String](types/String.md)
  * [Registry](Registry.md)
  * [SoftwareOrTool](SoftwareOrTool.md)
  * [TrainingProgram](TrainingProgram.md)
+ * [UseCase](UseCase.md)
 
 ## Other properties
 

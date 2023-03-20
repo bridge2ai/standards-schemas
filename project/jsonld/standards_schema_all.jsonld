@@ -6,10 +6,10 @@
   "imports": [
     "linkml:types",
     "standards_schema",
-    "standards_datatopic_schema",
-    "standards_datasubstrate_schema",
-    "standards_organization_schema",
     "standards_datastandardortool_schema",
+    "standards_datasubstrate_schema",
+    "standards_datatopic_schema",
+    "standards_organization_schema",
     "standards_usecase_schema"
   ],
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -498,6 +498,38 @@
           "description": "Standards Registry"
         }
       ]
+    },
+    {
+      "name": "UseCaseCategory",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory",
+      "description": "Category of use case.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "permissible_values": [
+        {
+          "text": "acquisition",
+          "description": "Acquisition"
+        },
+        {
+          "text": "integration",
+          "description": "Integration"
+        },
+        {
+          "text": "standardization",
+          "description": "Standardization"
+        },
+        {
+          "text": "modeling",
+          "description": "Modeling"
+        },
+        {
+          "text": "application",
+          "description": "Application"
+        },
+        {
+          "text": "assessment",
+          "description": "Assessment"
+        }
+      ]
     }
   ],
   "slots": [
@@ -607,10 +639,10 @@
         "edam.topic"
       ],
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/edam_id",
-      "owner": "DataSubstrate",
+      "owner": "DataTopic",
       "domain_of": [
-        "DataTopic",
-        "DataSubstrate"
+        "DataSubstrate",
+        "DataTopic"
       ],
       "range": "edam_identifier",
       "@type": "SlotDefinition"
@@ -630,10 +662,10 @@
         "MeSH"
       ],
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/mesh_id",
-      "owner": "DataSubstrate",
+      "owner": "DataTopic",
       "domain_of": [
-        "DataTopic",
-        "DataSubstrate"
+        "DataSubstrate",
+        "DataTopic"
       ],
       "range": "mesh_identifier",
       "@type": "SlotDefinition"
@@ -653,10 +685,10 @@
         "NCIT"
       ],
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/ncit_id",
-      "owner": "DataSubstrate",
+      "owner": "DataTopic",
       "domain_of": [
-        "DataTopic",
-        "DataSubstrate"
+        "DataSubstrate",
+        "DataTopic"
       ],
       "range": "ncit_identifier",
       "@type": "SlotDefinition"
@@ -669,10 +701,10 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/url",
-      "owner": "DataStandardOrTool",
+      "owner": "Organization",
       "domain_of": [
-        "Organization",
-        "DataStandardOrTool"
+        "DataStandardOrTool",
+        "Organization"
       ],
       "range": "uriorcurie",
       "@type": "SlotDefinition"
@@ -692,6 +724,9 @@
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/xref",
       "multivalued": true,
       "owner": "xref",
+      "domain_of": [
+        "UseCase"
+      ],
       "range": "uriorcurie",
       "@type": "SlotDefinition"
     },
@@ -735,156 +770,6 @@
         "NamedThing"
       ],
       "range": "NamedThing",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "data_topics_collection",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/data_topics_collection",
-      "description": "Collection of associated data topics.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/data_topics_collection",
-      "multivalued": true,
-      "owner": "DataTopicContainer",
-      "domain_of": [
-        "DataTopicContainer"
-      ],
-      "range": "DataTopic",
-      "inlined": true,
-      "inlined_as_list": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "metadata_storage",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage",
-      "description": "Data Substrate in which metadata is stored.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
-      "is_a": "node_property",
-      "domain": "NamedThing",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage",
-      "multivalued": true,
-      "owner": "DataSubstrate",
-      "domain_of": [
-        "DataSubstrate"
-      ],
-      "range": "string",
-      "any_of": [
-        {
-          "range": "DataSubstrate",
-          "@type": "AnonymousSlotExpression"
-        },
-        {
-          "equals_string": "file headers",
-          "@type": "AnonymousSlotExpression"
-        }
-      ],
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "file_extensions",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions",
-      "description": "Commonly used file extensions for this substrate.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
-      "is_a": "node_property",
-      "domain": "NamedThing",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions",
-      "multivalued": true,
-      "owner": "DataSubstrate",
-      "domain_of": [
-        "DataSubstrate"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "limitations",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations",
-      "description": "Potential obstacles particular to this substrate or implementation. ",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
-      "is_a": "node_property",
-      "domain": "NamedThing",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations",
-      "multivalued": true,
-      "owner": "DataSubstrate",
-      "domain_of": [
-        "DataSubstrate"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "data_substrates_collection",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection",
-      "description": "Collection of associated data substrates",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection",
-      "multivalued": true,
-      "owner": "DataSubstrateContainer",
-      "domain_of": [
-        "DataSubstrateContainer"
-      ],
-      "range": "DataSubstrate",
-      "inlined": true,
-      "inlined_as_list": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "ror_id",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ror_id",
-      "description": "Unique ROR identifier.",
-      "examples": [
-        {
-          "value": "ROR:02mp31p96",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
-      "values_from": [
-        "ROR"
-      ],
-      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ror_id",
-      "owner": "Organization",
-      "domain_of": [
-        "Organization"
-      ],
-      "range": "ror_identifier",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "wikidata_id",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id",
-      "description": "Unique Wikidata identifier.",
-      "examples": [
-        {
-          "value": "WIKIDATA:Q282186",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
-      "values_from": [
-        "WIKIDATA"
-      ],
-      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id",
-      "owner": "Organization",
-      "domain_of": [
-        "Organization"
-      ],
-      "range": "wikidata_identifier",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "organizations",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/organizations",
-      "description": "Collection of associated organizations.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/organizations",
-      "multivalued": true,
-      "owner": "OrganizationContainer",
-      "domain_of": [
-        "OrganizationContainer"
-      ],
-      "range": "Organization",
-      "inlined": true,
-      "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1036,8 +921,365 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps",
-      "owner": "not_relevant_to_dgps",
+      "owner": "DataStandardOrTool",
+      "domain_of": [
+        "DataStandardOrTool"
+      ],
       "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "metadata_storage",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage",
+      "description": "Data Substrate in which metadata is stored.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage",
+      "multivalued": true,
+      "owner": "DataSubstrate",
+      "domain_of": [
+        "DataSubstrate"
+      ],
+      "range": "string",
+      "any_of": [
+        {
+          "range": "DataSubstrate",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "equals_string": "file headers",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "file_extensions",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions",
+      "description": "Commonly used file extensions for this substrate.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions",
+      "multivalued": true,
+      "owner": "DataSubstrate",
+      "domain_of": [
+        "DataSubstrate"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "limitations",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations",
+      "description": "Potential obstacles particular to this substrate or implementation. ",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations",
+      "multivalued": true,
+      "owner": "DataSubstrate",
+      "domain_of": [
+        "DataSubstrate"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_substrates_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection",
+      "description": "Collection of associated data substrates",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection",
+      "multivalued": true,
+      "owner": "DataSubstrateContainer",
+      "domain_of": [
+        "DataSubstrateContainer"
+      ],
+      "range": "DataSubstrate",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_topics_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/data_topics_collection",
+      "description": "Collection of associated data topics.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/data_topics_collection",
+      "multivalued": true,
+      "owner": "DataTopicContainer",
+      "domain_of": [
+        "DataTopicContainer"
+      ],
+      "range": "DataTopic",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ror_id",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ror_id",
+      "description": "Unique ROR identifier.",
+      "examples": [
+        {
+          "value": "ROR:02mp31p96",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
+      "values_from": [
+        "ROR"
+      ],
+      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ror_id",
+      "owner": "Organization",
+      "domain_of": [
+        "Organization"
+      ],
+      "range": "ror_identifier",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "wikidata_id",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id",
+      "description": "Unique Wikidata identifier.",
+      "examples": [
+        {
+          "value": "WIKIDATA:Q282186",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
+      "values_from": [
+        "WIKIDATA"
+      ],
+      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id",
+      "owner": "Organization",
+      "domain_of": [
+        "Organization"
+      ],
+      "range": "wikidata_identifier",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "organizations",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/organizations",
+      "description": "Collection of associated organizations.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/organizations",
+      "multivalued": true,
+      "owner": "OrganizationContainer",
+      "domain_of": [
+        "OrganizationContainer"
+      ],
+      "range": "Organization",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "use_case_category",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
+      "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "UseCaseCategory",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "known_limitations",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations",
+      "description": "Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "relevance_to_dgps",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps",
+      "description": "Relevance of the use case to one or more DGPs.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps",
+      "multivalued": true,
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "DataGeneratingProject",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_topics",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_topics",
+      "description": "Relevance of the use case to one or more data topics.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_topics",
+      "multivalued": true,
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "DataTopic",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_substrates",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates",
+      "description": "Relevance of the use case to one or more data substrates.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates",
+      "multivalued": true,
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "DataSubstrate",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "standards_and_tools_for_dgp_use",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use",
+      "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use",
+      "multivalued": true,
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "DataStandardOrTool",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "alternative_standards_and_tools",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools",
+      "description": "List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools",
+      "multivalued": true,
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "DataStandardOrTool",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "enables",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/enables",
+      "description": "Other use case(s) this use case supports or makes possible.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/enables",
+      "multivalued": true,
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "UseCase",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "involved_in_experimental_design",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design",
+      "description": "True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "involved_in_metadata_management",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management",
+      "description": "True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "involved_in_quality_control",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control",
+      "description": "True is use case is likely to be implemented as part of data validation operations.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "use_cases",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_cases",
+      "description": "Collection of associated use cases",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_cases",
+      "multivalued": true,
+      "owner": "UseCaseContainer",
+      "domain_of": [
+        "UseCaseContainer"
+      ],
+      "range": "UseCase",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "UseCase_use_case_category",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
+      "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
+      "is_a": "use_case_category",
+      "domain": "UseCase",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
+      "alias": "use_case_category",
+      "owner": "UseCase",
+      "domain_of": [
+        "UseCase"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "use_case_category",
+      "range": "UseCaseCategory",
+      "required": true,
       "@type": "SlotDefinition"
     }
   ],
@@ -1063,10 +1305,10 @@
       "@type": "ClassDefinition"
     },
     {
-      "name": "DataTopic",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic",
-      "description": "Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
+      "name": "DataStandardOrTool",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool",
+      "description": "Represents a standard or tool in the Bridge2AI Standards Registry.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
       "is_a": "NamedThing",
       "slots": [
         "id",
@@ -1075,24 +1317,283 @@
         "description",
         "subclass_of",
         "related_to",
-        "edam_id",
-        "mesh_id",
-        "ncit_id"
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic",
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool",
       "@type": "ClassDefinition"
     },
     {
-      "name": "DataTopicContainer",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopicContainer",
-      "description": "A container for DataTopics.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
+      "name": "DataStandard",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard",
+      "description": "Represents a general purpose standard in the Bridge2AI Standards Registry.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "DataStandardOrTool",
       "slots": [
-        "data_topics_collection"
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopicContainer",
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "BiomedicalStandard",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard",
+      "description": "Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "DataStandard",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Registry",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry",
+      "description": "Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "DataStandardOrTool",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OntologyOrVocabulary",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary",
+      "description": "A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "DataStandardOrTool",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ModelRepository",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository",
+      "description": "Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "DataStandardOrTool",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ReferenceDataOrDataset",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset",
+      "description": "Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "DataStandardOrTool",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SoftwareOrTool",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool",
+      "description": "Represents a piece of software or computational tool in the Bridge2AI Standards Registry.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "DataStandardOrTool",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ReferenceImplementation",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation",
+      "description": "Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "DataStandardOrTool",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TrainingProgram",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram",
+      "description": "Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "DataStandardOrTool",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "collection",
+        "concerns_data_topic",
+        "has_relevant_organization",
+        "purpose_detail",
+        "is_open",
+        "requires_registration",
+        "url",
+        "publication",
+        "formal_specification",
+        "not_relevant_to_dgps"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DataStandardOrToolContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrToolContainer",
+      "description": "A container for DataStandardOrTool(s).",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "slots": [
+        "data_standardortools_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrToolContainer",
       "@type": "ClassDefinition"
     },
     {
@@ -1132,6 +1633,39 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "DataTopic",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic",
+      "description": "Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
+      "is_a": "NamedThing",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "edam_id",
+        "mesh_id",
+        "ncit_id"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DataTopicContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopicContainer",
+      "description": "A container for DataTopics.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
+      "slots": [
+        "data_topics_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopicContainer",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "Organization",
       "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/Organization",
       "description": "Represents a group or organization related to or responsible for one or more Bridge2AI standards.",
@@ -1165,10 +1699,10 @@
       "@type": "ClassDefinition"
     },
     {
-      "name": "DataStandardOrTool",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool",
-      "description": "Represents a standard or tool in the Bridge2AI Standards Registry.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "name": "UseCase",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCase",
+      "description": "Represents a use case for Bridge2AI standards.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "is_a": "NamedThing",
       "slots": [
         "id",
@@ -1177,290 +1711,51 @@
         "description",
         "subclass_of",
         "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
+        "UseCase_use_case_category",
+        "known_limitations",
+        "relevance_to_dgps",
+        "data_topics",
+        "data_substrates",
+        "standards_and_tools_for_dgp_use",
+        "alternative_standards_and_tools",
+        "enables",
+        "involved_in_experimental_design",
+        "involved_in_metadata_management",
+        "involved_in_quality_control",
+        "xref"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool",
+      "class_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCase",
       "@type": "ClassDefinition"
     },
     {
-      "name": "DataStandard",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard",
-      "description": "Represents a general purpose standard in the Bridge2AI Standards Registry.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandardOrTool",
+      "name": "UseCaseContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseContainer",
+      "description": "A container for UseCase.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
+        "use_cases"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "BiomedicalStandard",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard",
-      "description": "Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandard",
-      "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "Registry",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry",
-      "description": "Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandardOrTool",
-      "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "OntologyOrVocabulary",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary",
-      "description": "A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandardOrTool",
-      "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "ModelRepository",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository",
-      "description": "Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandardOrTool",
-      "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "ReferenceDataOrDataset",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset",
-      "description": "Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandardOrTool",
-      "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "SoftwareOrTool",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool",
-      "description": "Represents a piece of software or computational tool in the Bridge2AI Standards Registry.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandardOrTool",
-      "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "ReferenceImplementation",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation",
-      "description": "Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandardOrTool",
-      "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "TrainingProgram",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram",
-      "description": "Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandardOrTool",
-      "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram",
-      "@type": "ClassDefinition"
-    },
-    {
-      "name": "DataStandardOrToolContainer",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrToolContainer",
-      "description": "A container for DataStandardOrTool(s).",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "slots": [
-        "data_standardortools_collection"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrToolContainer",
+      "class_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseContainer",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
-  "source_file_date": "2023-03-15T16:18:22",
+  "source_file_date": "2023-03-20T18:11:26",
   "source_file_size": 439,
-  "generation_date": "2023-03-17T14:55:28",
+  "generation_date": "2023-03-20T18:11:31",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     "standards_schema.context.jsonld",
-    "standards_datatopic_schema.context.jsonld",
-    "standards_datasubstrate_schema.context.jsonld",
-    "standards_organization_schema.context.jsonld",
     "standards_datastandardortool_schema.context.jsonld",
+    "standards_datasubstrate_schema.context.jsonld",
+    "standards_datatopic_schema.context.jsonld",
+    "standards_organization_schema.context.jsonld",
+    "standards_usecase_schema.context.jsonld",
     {
       "@base": "https://w3id.org/bridge2ai/standards-schema-all/"
     }

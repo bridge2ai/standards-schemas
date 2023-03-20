@@ -13,37 +13,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
     class DataStandardOrTool
       NamedThing <|-- DataStandardOrTool
       
-      DataStandardOrTool : category
-        DataStandardOrTool <.. category_type : category
-      DataStandardOrTool : collection
-        DataStandardOrTool <.. StandardsCollectionTag : collection
-      DataStandardOrTool : concerns_data_topic
-        DataStandardOrTool <.. DataTopic : concerns_data_topic
-      DataStandardOrTool : description
-        DataStandardOrTool <.. string : description
-      DataStandardOrTool : formal_specification
-        DataStandardOrTool <.. uriorcurie : formal_specification
-      DataStandardOrTool : has_relevant_organization
-        DataStandardOrTool <.. Organization : has_relevant_organization
-      DataStandardOrTool : id
-        DataStandardOrTool <.. uriorcurie : id
-      DataStandardOrTool : is_open
-        DataStandardOrTool <.. boolean : is_open
-      DataStandardOrTool : name
-        DataStandardOrTool <.. string : name
-      DataStandardOrTool : publication
-        DataStandardOrTool <.. uriorcurie : publication
-      DataStandardOrTool : purpose_detail
-        DataStandardOrTool <.. string : purpose_detail
-      DataStandardOrTool : related_to
-        DataStandardOrTool <.. NamedThing : related_to
-      DataStandardOrTool : requires_registration
-        DataStandardOrTool <.. boolean : requires_registration
-      DataStandardOrTool : subclass_of
-        DataStandardOrTool <.. NamedThing : subclass_of
-      DataStandardOrTool : url
-        DataStandardOrTool <.. uriorcurie : url
-      
 
       DataStandardOrTool <|-- DataStandard
       DataStandardOrTool <|-- Registry
@@ -54,36 +23,49 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
       DataStandardOrTool <|-- ReferenceImplementation
       DataStandardOrTool <|-- TrainingProgram
       
+      
       DataStandardOrTool : category
-        DataStandardOrTool <.. category_type : category
+        
       DataStandardOrTool : collection
-        DataStandardOrTool <.. StandardsCollectionTag : collection
+        
+          DataStandardOrTool ..> StandardsCollectionTag : collection
+        
       DataStandardOrTool : concerns_data_topic
-        DataStandardOrTool <.. DataTopic : concerns_data_topic
+        
+          DataStandardOrTool ..> DataTopic : concerns_data_topic
+        
       DataStandardOrTool : description
-        DataStandardOrTool <.. string : description
+        
       DataStandardOrTool : formal_specification
-        DataStandardOrTool <.. uriorcurie : formal_specification
+        
       DataStandardOrTool : has_relevant_organization
-        DataStandardOrTool <.. Organization : has_relevant_organization
+        
+          DataStandardOrTool ..> Organization : has_relevant_organization
+        
       DataStandardOrTool : id
-        DataStandardOrTool <.. uriorcurie : id
+        
       DataStandardOrTool : is_open
-        DataStandardOrTool <.. boolean : is_open
+        
       DataStandardOrTool : name
-        DataStandardOrTool <.. string : name
+        
+      DataStandardOrTool : not_relevant_to_dgps
+        
       DataStandardOrTool : publication
-        DataStandardOrTool <.. uriorcurie : publication
+        
       DataStandardOrTool : purpose_detail
-        DataStandardOrTool <.. string : purpose_detail
+        
       DataStandardOrTool : related_to
-        DataStandardOrTool <.. NamedThing : related_to
+        
+          DataStandardOrTool ..> NamedThing : related_to
+        
       DataStandardOrTool : requires_registration
-        DataStandardOrTool <.. boolean : requires_registration
+        
       DataStandardOrTool : subclass_of
-        DataStandardOrTool <.. NamedThing : subclass_of
+        
+          DataStandardOrTool ..> NamedThing : subclass_of
+        
       DataStandardOrTool : url
-        DataStandardOrTool <.. uriorcurie : url
+        
       
 ```
 
@@ -118,6 +100,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | direct |
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | direct |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | direct |
+| [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | direct |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -213,6 +196,7 @@ slots:
 - url
 - publication
 - formal_specification
+- not_relevant_to_dgps
 
 ```
 </details>
@@ -344,6 +328,18 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: uriorcurie
+  not_relevant_to_dgps:
+    name: not_relevant_to_dgps
+    description: Is the standard or tool currently relevant to DGPs?
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: not_relevant_to_dgps
+    owner: DataStandardOrTool
+    domain_of:
+    - DataStandardOrTool
+    range: boolean
   id:
     name: id
     description: A unique identifier for a thing.

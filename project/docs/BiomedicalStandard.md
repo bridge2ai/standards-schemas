@@ -7,7 +7,7 @@ Represents a standard in the Bridge2AI Standards Registry with particular applic
 URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[NamedThing],[DataTopic],[DataStandard],[DataStandard]^-[BiomedicalStandard&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F])](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[NamedThing],[DataTopic],[DataStandard],[DataStandard]^-[BiomedicalStandard&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[NamedThing],[DataTopic],[DataStandard],[DataStandard]^-[BiomedicalStandard&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F])](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[NamedThing],[DataTopic],[DataStandard],[DataStandard]^-[BiomedicalStandard&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F])
 
 ## Parents
 
@@ -63,3 +63,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
  * [formal_specification](formal_specification.md)  <sub>0..1</sub>
      * Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
      * Range: [Uriorcurie](types/Uriorcurie.md)
+ * [not_relevant_to_dgps](not_relevant_to_dgps.md)  <sub>0..1</sub>
+     * Description: Is the standard or tool currently relevant to DGPs?
+     * Range: [Boolean](types/Boolean.md)

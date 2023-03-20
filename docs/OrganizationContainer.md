@@ -12,7 +12,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer](ht
  classDiagram
     class OrganizationContainer
       OrganizationContainer : organizations
-        OrganizationContainer <.. Organization : organizations
+        
+          OrganizationContainer ..> Organization : organizations
+        
       
 ```
 

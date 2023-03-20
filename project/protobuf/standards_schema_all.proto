@@ -16,6 +16,7 @@ message BiomedicalStandard
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
  }
 // Represents a general purpose standard in the Bridge2AI Standards Registry.
 message DataStandard
@@ -35,6 +36,7 @@ message DataStandard
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
  }
 // Represents a standard or tool in the Bridge2AI Standards Registry.
 message DataStandardOrTool
@@ -54,6 +56,7 @@ message DataStandardOrTool
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
  }
 // A container for DataStandardOrTool(s).
 message DataStandardOrToolContainer
@@ -117,6 +120,7 @@ message ModelRepository
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
  }
 // A generic grouping for any identifiable entity
 message NamedThing
@@ -146,6 +150,7 @@ message OntologyOrVocabulary
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
  }
 // Represents a group or organization related to or responsible for one or more Bridge2AI standards.
 message Organization
@@ -183,6 +188,7 @@ message ReferenceDataOrDataset
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
  }
 // Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case.
 message ReferenceImplementation
@@ -202,6 +208,7 @@ message ReferenceImplementation
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
  }
 // Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources.
 message Registry
@@ -221,6 +228,7 @@ message Registry
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
  }
 // Represents a piece of software or computational tool in the Bridge2AI Standards Registry.
 message SoftwareOrTool
@@ -240,6 +248,7 @@ message SoftwareOrTool
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
  }
 // Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry.
 message TrainingProgram
@@ -259,4 +268,32 @@ message TrainingProgram
   uriorcurie url = 0
   uriorcurie publication = 0
   uriorcurie formalSpecification = 0
+  boolean notRelevantToDgps = 0
+ }
+// Represents a use case for Bridge2AI standards.
+message UseCase
+ {
+  uriorcurie id = 0
+  categoryType category = 0
+  string name = 0
+  string description = 0
+ repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
+  useCaseCategory useCaseCategory = 0
+  string knownLimitations = 0
+ repeated  dataGeneratingProject relevanceToDgps = 0
+ repeated  dataTopic dataTopics = 0
+ repeated  dataSubstrate dataSubstrates = 0
+ repeated  dataStandardOrTool standardsAndToolsForDgpUse = 0
+ repeated  dataStandardOrTool alternativeStandardsAndTools = 0
+ repeated  useCase enables = 0
+  boolean involvedInExperimentalDesign = 0
+  boolean involvedInMetadataManagement = 0
+  boolean involvedInQualityControl = 0
+ repeated  uriorcurie xref = 0
+ }
+// A container for UseCase.
+message UseCaseContainer
+ {
+ repeated  useCase useCases = 0
  }

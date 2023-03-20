@@ -20,6 +20,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/xref](https://w3id.org/bri
 
 ## Used by
 
+ * [UseCase](UseCase.md)
 
 ## Other properties
 

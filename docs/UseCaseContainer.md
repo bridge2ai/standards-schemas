@@ -12,7 +12,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer](https:/
  classDiagram
     class UseCaseContainer
       UseCaseContainer : use_cases
-        UseCaseContainer <.. UseCase : use_cases
+        
+          UseCaseContainer ..> UseCase : use_cases
+        
       
 ```
 

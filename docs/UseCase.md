@@ -14,41 +14,59 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
       NamedThing <|-- UseCase
       
       UseCase : alternative_standards_and_tools
-        UseCase <.. DataStandardOrTool : alternative_standards_and_tools
+        
+          UseCase ..> DataStandardOrTool : alternative_standards_and_tools
+        
       UseCase : category
-        UseCase <.. category_type : category
+        
       UseCase : data_substrates
-        UseCase <.. DataSubstrate : data_substrates
+        
+          UseCase ..> DataSubstrate : data_substrates
+        
       UseCase : data_topics
-        UseCase <.. DataTopic : data_topics
+        
+          UseCase ..> DataTopic : data_topics
+        
       UseCase : description
-        UseCase <.. string : description
+        
       UseCase : enables
-        UseCase <.. UseCase : enables
+        
+          UseCase ..> UseCase : enables
+        
       UseCase : id
-        UseCase <.. uriorcurie : id
+        
       UseCase : involved_in_experimental_design
-        UseCase <.. boolean : involved_in_experimental_design
+        
       UseCase : involved_in_metadata_management
-        UseCase <.. boolean : involved_in_metadata_management
+        
       UseCase : involved_in_quality_control
-        UseCase <.. boolean : involved_in_quality_control
+        
       UseCase : known_limitations
-        UseCase <.. string : known_limitations
+        
       UseCase : name
-        UseCase <.. string : name
+        
       UseCase : related_to
-        UseCase <.. NamedThing : related_to
+        
+          UseCase ..> NamedThing : related_to
+        
       UseCase : relevance_to_dgps
-        UseCase <.. DataGeneratingProject : relevance_to_dgps
+        
+          UseCase ..> DataGeneratingProject : relevance_to_dgps
+        
       UseCase : standards_and_tools_for_dgp_use
-        UseCase <.. DataStandardOrTool : standards_and_tools_for_dgp_use
+        
+          UseCase ..> DataStandardOrTool : standards_and_tools_for_dgp_use
+        
       UseCase : subclass_of
-        UseCase <.. NamedThing : subclass_of
+        
+          UseCase ..> NamedThing : subclass_of
+        
       UseCase : use_case_category
-        UseCase <.. UseCaseCategory : use_case_category
+        
+          UseCase ..> UseCaseCategory : use_case_category
+        
       UseCase : xref
-        UseCase <.. uriorcurie : xref
+        
       
 ```
 

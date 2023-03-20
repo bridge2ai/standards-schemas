@@ -4,7 +4,7 @@
 
 Identifier from EDAM ontology
 
-URI: [STANDARDS:EdamIdentifier](https://w3id.org/bridge2ai/standards-schema/EdamIdentifier)
+URI: [B2AI:EdamIdentifier](https://w3id.org/bridge2ai/standards-schema/EdamIdentifier)
 
 |  |  |  |
 | --- | --- | --- |

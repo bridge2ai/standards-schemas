@@ -12,7 +12,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContain
  classDiagram
     class DataStandardOrToolContainer
       DataStandardOrToolContainer : data_standardortools_collection
-        DataStandardOrToolContainer <.. DataStandardOrTool : data_standardortools_collection
+        
+          DataStandardOrToolContainer ..> DataStandardOrTool : data_standardortools_collection
+        
       
 ```
 

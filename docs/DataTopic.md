@@ -14,23 +14,27 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
       NamedThing <|-- DataTopic
       
       DataTopic : category
-        DataTopic <.. category_type : category
+        
       DataTopic : description
-        DataTopic <.. string : description
+        
       DataTopic : edam_id
-        DataTopic <.. edam_identifier : edam_id
+        
       DataTopic : id
-        DataTopic <.. uriorcurie : id
+        
       DataTopic : mesh_id
-        DataTopic <.. mesh_identifier : mesh_id
+        
       DataTopic : name
-        DataTopic <.. string : name
+        
       DataTopic : ncit_id
-        DataTopic <.. ncit_identifier : ncit_id
+        
       DataTopic : related_to
-        DataTopic <.. NamedThing : related_to
+        
+          DataTopic ..> NamedThing : related_to
+        
       DataTopic : subclass_of
-        DataTopic <.. NamedThing : subclass_of
+        
+          DataTopic ..> NamedThing : subclass_of
+        
       
 ```
 

@@ -14,35 +14,47 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram](https://
       DataStandardOrTool <|-- TrainingProgram
       
       TrainingProgram : category
-        TrainingProgram <.. category_type : category
+        
       TrainingProgram : collection
-        TrainingProgram <.. StandardsCollectionTag : collection
+        
+          TrainingProgram ..> StandardsCollectionTag : collection
+        
       TrainingProgram : concerns_data_topic
-        TrainingProgram <.. DataTopic : concerns_data_topic
+        
+          TrainingProgram ..> DataTopic : concerns_data_topic
+        
       TrainingProgram : description
-        TrainingProgram <.. string : description
+        
       TrainingProgram : formal_specification
-        TrainingProgram <.. uriorcurie : formal_specification
+        
       TrainingProgram : has_relevant_organization
-        TrainingProgram <.. Organization : has_relevant_organization
+        
+          TrainingProgram ..> Organization : has_relevant_organization
+        
       TrainingProgram : id
-        TrainingProgram <.. uriorcurie : id
+        
       TrainingProgram : is_open
-        TrainingProgram <.. boolean : is_open
+        
       TrainingProgram : name
-        TrainingProgram <.. string : name
+        
+      TrainingProgram : not_relevant_to_dgps
+        
       TrainingProgram : publication
-        TrainingProgram <.. uriorcurie : publication
+        
       TrainingProgram : purpose_detail
-        TrainingProgram <.. string : purpose_detail
+        
       TrainingProgram : related_to
-        TrainingProgram <.. NamedThing : related_to
+        
+          TrainingProgram ..> NamedThing : related_to
+        
       TrainingProgram : requires_registration
-        TrainingProgram <.. boolean : requires_registration
+        
       TrainingProgram : subclass_of
-        TrainingProgram <.. NamedThing : subclass_of
+        
+          TrainingProgram ..> NamedThing : subclass_of
+        
       TrainingProgram : url
-        TrainingProgram <.. uriorcurie : url
+        
       
 ```
 
@@ -70,6 +82,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram](https://
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | [DataStandardOrTool](DataStandardOrTool.md) |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -259,6 +272,18 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: uriorcurie
+  not_relevant_to_dgps:
+    name: not_relevant_to_dgps
+    description: Is the standard or tool currently relevant to DGPs?
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: not_relevant_to_dgps
+    owner: TrainingProgram
+    domain_of:
+    - DataStandardOrTool
+    range: boolean
   id:
     name: id
     description: A unique identifier for a thing.

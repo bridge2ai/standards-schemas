@@ -20,3 +20,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/not_relevant_to_dgps](http
 
 ## Used by
 
+ * [BiomedicalStandard](BiomedicalStandard.md)
+ * [DataStandard](DataStandard.md)
+ * [DataStandardOrTool](DataStandardOrTool.md)
+ * [ModelRepository](ModelRepository.md)
+ * [OntologyOrVocabulary](OntologyOrVocabulary.md)
+ * [ReferenceDataOrDataset](ReferenceDataOrDataset.md)
+ * [ReferenceImplementation](ReferenceImplementation.md)
+ * [Registry](Registry.md)
+ * [SoftwareOrTool](SoftwareOrTool.md)
+ * [TrainingProgram](TrainingProgram.md)

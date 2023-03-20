@@ -15,6 +15,7 @@ CREATE TABLE "BiomedicalStandard" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
 );
 
@@ -33,6 +34,7 @@ CREATE TABLE "DataStandard" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
 );
 
@@ -51,6 +53,7 @@ CREATE TABLE "DataStandardOrTool" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
 );
 
@@ -110,6 +113,7 @@ CREATE TABLE "ModelRepository" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
 );
 
@@ -138,6 +142,7 @@ CREATE TABLE "OntologyOrVocabulary" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
 );
 
@@ -174,6 +179,7 @@ CREATE TABLE "ReferenceDataOrDataset" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
 );
 
@@ -192,6 +198,7 @@ CREATE TABLE "ReferenceImplementation" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
 );
 
@@ -210,6 +217,7 @@ CREATE TABLE "Registry" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
 );
 
@@ -228,6 +236,7 @@ CREATE TABLE "SoftwareOrTool" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
 );
 
@@ -246,7 +255,33 @@ CREATE TABLE "TrainingProgram" (
 	url TEXT, 
 	publication TEXT, 
 	formal_specification TEXT, 
+	not_relevant_to_dgps BOOLEAN, 
 	PRIMARY KEY (id)
+);
+
+CREATE TABLE "UseCase" (
+	id TEXT NOT NULL, 
+	category TEXT, 
+	name TEXT, 
+	description TEXT, 
+	subclass_of TEXT, 
+	related_to TEXT, 
+	use_case_category VARCHAR(15) NOT NULL, 
+	known_limitations TEXT, 
+	data_topics TEXT, 
+	data_substrates TEXT, 
+	standards_and_tools_for_dgp_use TEXT, 
+	alternative_standards_and_tools TEXT, 
+	enables TEXT, 
+	involved_in_experimental_design BOOLEAN, 
+	involved_in_metadata_management BOOLEAN, 
+	involved_in_quality_control BOOLEAN, 
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE "UseCaseContainer" (
+	use_cases TEXT, 
+	PRIMARY KEY (use_cases)
 );
 
 CREATE TABLE "BiomedicalStandard_collection" (
@@ -338,4 +373,18 @@ CREATE TABLE "TrainingProgram_collection" (
 	collection VARCHAR(24), 
 	PRIMARY KEY (backref_id, collection), 
 	FOREIGN KEY(backref_id) REFERENCES "TrainingProgram" (id)
+);
+
+CREATE TABLE "UseCase_relevance_to_dgps" (
+	backref_id TEXT, 
+	relevance_to_dgps VARCHAR(7), 
+	PRIMARY KEY (backref_id, relevance_to_dgps), 
+	FOREIGN KEY(backref_id) REFERENCES "UseCase" (id)
+);
+
+CREATE TABLE "UseCase_xref" (
+	backref_id TEXT, 
+	xref TEXT, 
+	PRIMARY KEY (backref_id, xref), 
+	FOREIGN KEY(backref_id) REFERENCES "UseCase" (id)
 );

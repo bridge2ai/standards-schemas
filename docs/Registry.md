@@ -14,35 +14,47 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Registry](https://w3id.or
       DataStandardOrTool <|-- Registry
       
       Registry : category
-        Registry <.. category_type : category
+        
       Registry : collection
-        Registry <.. StandardsCollectionTag : collection
+        
+          Registry ..> StandardsCollectionTag : collection
+        
       Registry : concerns_data_topic
-        Registry <.. DataTopic : concerns_data_topic
+        
+          Registry ..> DataTopic : concerns_data_topic
+        
       Registry : description
-        Registry <.. string : description
+        
       Registry : formal_specification
-        Registry <.. uriorcurie : formal_specification
+        
       Registry : has_relevant_organization
-        Registry <.. Organization : has_relevant_organization
+        
+          Registry ..> Organization : has_relevant_organization
+        
       Registry : id
-        Registry <.. uriorcurie : id
+        
       Registry : is_open
-        Registry <.. boolean : is_open
+        
       Registry : name
-        Registry <.. string : name
+        
+      Registry : not_relevant_to_dgps
+        
       Registry : publication
-        Registry <.. uriorcurie : publication
+        
       Registry : purpose_detail
-        Registry <.. string : purpose_detail
+        
       Registry : related_to
-        Registry <.. NamedThing : related_to
+        
+          Registry ..> NamedThing : related_to
+        
       Registry : requires_registration
-        Registry <.. boolean : requires_registration
+        
       Registry : subclass_of
-        Registry <.. NamedThing : subclass_of
+        
+          Registry ..> NamedThing : subclass_of
+        
       Registry : url
-        Registry <.. uriorcurie : url
+        
       
 ```
 
@@ -70,6 +82,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Registry](https://w3id.or
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | [DataStandardOrTool](DataStandardOrTool.md) |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -259,6 +272,18 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: uriorcurie
+  not_relevant_to_dgps:
+    name: not_relevant_to_dgps
+    description: Is the standard or tool currently relevant to DGPs?
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: not_relevant_to_dgps
+    owner: Registry
+    domain_of:
+    - DataStandardOrTool
+    range: boolean
   id:
     name: id
     description: A unique identifier for a thing.
