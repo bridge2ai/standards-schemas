@@ -4,7 +4,7 @@
 
 Identifier from Medical Subject Headings (MeSH) biomedical vocabulary.
 
-URI: [STANDARDS:MeshIdentifier](https://w3id.org/bridge2ai/standards-schema/MeshIdentifier)
+URI: [B2AI:MeshIdentifier](https://w3id.org/bridge2ai/standards-schema/MeshIdentifier)
 
 |  |  |  |
 | --- | --- | --- |

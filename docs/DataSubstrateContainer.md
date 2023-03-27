@@ -12,7 +12,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer](h
  classDiagram
     class DataSubstrateContainer
       DataSubstrateContainer : data_substrates_collection
-        DataSubstrateContainer <.. DataSubstrate : data_substrates_collection
+        
+          DataSubstrateContainer ..> DataSubstrate : data_substrates_collection
+        
       
 ```
 

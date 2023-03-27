@@ -1,4 +1,4 @@
-@prefix STANDARDSDATASTANDARDORTOOL: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+@prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
 
-STANDARDSDATASTANDARDORTOOL:53 a STANDARDSDATASTANDARDORTOOL:DataStandardOrTool .
+B2AI_STANDARD:53 a B2AI_STANDARD:DataStandardOrTool .
 

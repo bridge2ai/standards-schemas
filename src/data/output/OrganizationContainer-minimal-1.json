@@ -1,10 +1,10 @@
 {
   "organizations": [
     {
-      "id": "STANDARDSORGANIZATION:1"
+      "id": "B2AI_ORG:1"
     },
     {
-      "id": "STANDARDSORGANIZATION:2"
+      "id": "B2AI_ORG:2"
     }
   ],
   "@type": "OrganizationContainer"

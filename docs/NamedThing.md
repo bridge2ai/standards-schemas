@@ -18,17 +18,21 @@ URI: [schema:Thing](http://schema.org/Thing)
       NamedThing <|-- DataSubstrate
       
       NamedThing : category
-        NamedThing <.. category_type : category
+        
       NamedThing : description
-        NamedThing <.. string : description
+        
       NamedThing : id
-        NamedThing <.. uriorcurie : id
+        
       NamedThing : name
-        NamedThing <.. string : name
+        
       NamedThing : related_to
-        NamedThing <.. NamedThing : related_to
+        
+          NamedThing ..> NamedThing : related_to
+        
       NamedThing : subclass_of
-        NamedThing <.. NamedThing : subclass_of
+        
+          NamedThing ..> NamedThing : subclass_of
+        
       
 ```
 
@@ -88,6 +92,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataStandardOrTool](DataStandardOrTool.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [DataStandardOrTool](DataStandardOrTool.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -100,6 +105,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataStandard](DataStandard.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [DataStandard](DataStandard.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -112,6 +118,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [BiomedicalStandard](BiomedicalStandard.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [BiomedicalStandard](BiomedicalStandard.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -124,6 +131,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [Registry](Registry.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [Registry](Registry.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -136,6 +144,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -148,6 +157,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [ModelRepository](ModelRepository.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [ModelRepository](ModelRepository.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -160,6 +170,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -172,6 +183,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [SoftwareOrTool](SoftwareOrTool.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [SoftwareOrTool](SoftwareOrTool.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -184,6 +196,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [ReferenceImplementation](ReferenceImplementation.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [ReferenceImplementation](ReferenceImplementation.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -196,6 +209,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [TrainingProgram](TrainingProgram.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [publication](publication.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [formal_specification](formal_specification.md) | domain | [NamedThing](NamedThing.md) |
+| [TrainingProgram](TrainingProgram.md) | [not_relevant_to_dgps](not_relevant_to_dgps.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |

@@ -49,6 +49,10 @@
                     "description": "A human-readable name for a thing.",
                     "type": "string"
                 },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
+                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": "string"
@@ -146,6 +150,10 @@
                     "description": "A human-readable name for a thing.",
                     "type": "string"
                 },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
+                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": "string"
@@ -231,6 +239,10 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
                 },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
@@ -496,6 +508,10 @@
                     "description": "A human-readable name for a thing.",
                     "type": "string"
                 },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
+                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": "string"
@@ -622,6 +638,10 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
                 },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
@@ -777,6 +797,10 @@
                     "description": "A human-readable name for a thing.",
                     "type": "string"
                 },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
+                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": "string"
@@ -862,6 +886,10 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
                 },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
@@ -949,6 +977,10 @@
                     "description": "A human-readable name for a thing.",
                     "type": "string"
                 },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
+                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": "string"
@@ -1034,6 +1066,10 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
                 },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
@@ -1161,6 +1197,10 @@
                 "name": {
                     "description": "A human-readable name for a thing.",
                     "type": "string"
+                },
+                "not_relevant_to_dgps": {
+                    "description": "Is the standard or tool currently relevant to DGPs?",
+                    "type": "boolean"
                 },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",

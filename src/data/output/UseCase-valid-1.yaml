@@ -1,4 +1,4 @@
-id: STANDARDSUSECASE:1
+id: B2AI_USECASE:1
 category: UseCase
 name: Obtain patient data from records of clinical visits.
 description: Collecting clinical data from patient visits involves the process of
@@ -16,25 +16,25 @@ relevance_to_dgps:
 - chorus
 - voice
 data_topics:
-- STANDARDSDATATOPIC:Image
-- STANDARDSDATATOPIC:Clinical_Observations
+- B2AI_TOPIC:5
+- B2AI_TOPIC:6
 data_substrates:
-- STANDARDSUSECASE:abc
-- STANDARDSUSECASE:xyz
+- B2AI_SUBSTRATE:12
+- B2AI_SUBSTRATE:34
 standards_and_tools_for_dgp_use:
-- STANDARDSDATASTANDARDORTOOL:DICOM
-- STANDARDSDATASTANDARDORTOOL:OMOP_CDM
+- B2AI_STANDARD:5
+- B2AI_STANDARD:10
 alternative_standards_and_tools:
-- STANDARDSUSECASE:123
-- STANDARDSUSECASE:555
+- B2AI_STANDARD:123
+- B2AI_STANDARD:555
 enables:
-- STANDARDSUSECASE:5
-- STANDARDSUSECASE:13
-- STANDARDSUSECASE:17
-- STANDARDSUSECASE:19
+- B2AI_USECASE:5
+- B2AI_USECASE:13
+- B2AI_USECASE:17
+- B2AI_USECASE:19
 involved_in_experimental_design: true
 involved_in_metadata_management: true
 involved_in_quality_control: false
 xref:
-- STANDARDSUSECASE:abc
-- STANDARDSUSECASE:xyz
+- B2AI_USECASE:123
+- B2AI_USECASE:456

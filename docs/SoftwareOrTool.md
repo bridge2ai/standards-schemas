@@ -14,35 +14,47 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool](https://w
       DataStandardOrTool <|-- SoftwareOrTool
       
       SoftwareOrTool : category
-        SoftwareOrTool <.. category_type : category
+        
       SoftwareOrTool : collection
-        SoftwareOrTool <.. StandardsCollectionTag : collection
+        
+          SoftwareOrTool ..> StandardsCollectionTag : collection
+        
       SoftwareOrTool : concerns_data_topic
-        SoftwareOrTool <.. DataTopic : concerns_data_topic
+        
+          SoftwareOrTool ..> DataTopic : concerns_data_topic
+        
       SoftwareOrTool : description
-        SoftwareOrTool <.. string : description
+        
       SoftwareOrTool : formal_specification
-        SoftwareOrTool <.. uriorcurie : formal_specification
+        
       SoftwareOrTool : has_relevant_organization
-        SoftwareOrTool <.. Organization : has_relevant_organization
+        
+          SoftwareOrTool ..> Organization : has_relevant_organization
+        
       SoftwareOrTool : id
-        SoftwareOrTool <.. uriorcurie : id
+        
       SoftwareOrTool : is_open
-        SoftwareOrTool <.. boolean : is_open
+        
       SoftwareOrTool : name
-        SoftwareOrTool <.. string : name
+        
+      SoftwareOrTool : not_relevant_to_dgps
+        
       SoftwareOrTool : publication
-        SoftwareOrTool <.. uriorcurie : publication
+        
       SoftwareOrTool : purpose_detail
-        SoftwareOrTool <.. string : purpose_detail
+        
       SoftwareOrTool : related_to
-        SoftwareOrTool <.. NamedThing : related_to
+        
+          SoftwareOrTool ..> NamedThing : related_to
+        
       SoftwareOrTool : requires_registration
-        SoftwareOrTool <.. boolean : requires_registration
+        
       SoftwareOrTool : subclass_of
-        SoftwareOrTool <.. NamedThing : subclass_of
+        
+          SoftwareOrTool ..> NamedThing : subclass_of
+        
       SoftwareOrTool : url
-        SoftwareOrTool <.. uriorcurie : url
+        
       
 ```
 
@@ -70,6 +82,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool](https://w
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | [DataStandardOrTool](DataStandardOrTool.md) |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -259,6 +272,18 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: uriorcurie
+  not_relevant_to_dgps:
+    name: not_relevant_to_dgps
+    description: Is the standard or tool currently relevant to DGPs?
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: not_relevant_to_dgps
+    owner: SoftwareOrTool
+    domain_of:
+    - DataStandardOrTool
+    range: boolean
   id:
     name: id
     description: A unique identifier for a thing.

@@ -7,7 +7,7 @@ Represents a data substrate for Bridge2AI data. This may be a high-level data st
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataSubstrateContainer]++-%20data_substrates_collection%200..*>[DataSubstrate&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;metadata_storage:string%20*;file_extensions:string%20*;limitations:string%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[DataSubstrate],[DataSubstrateContainer])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataSubstrateContainer]++-%20data_substrates_collection%200..*>[DataSubstrate&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;metadata_storage:string%20*;file_extensions:string%20*;limitations:string%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[DataSubstrate],[DataSubstrateContainer])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[UseCase]-%20data_substrates%200..*>[DataSubstrate&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;metadata_storage:string%20*;file_extensions:string%20*;limitations:string%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataSubstrateContainer]++-%20data_substrates_collection%200..*>[DataSubstrate],[NamedThing]^-[DataSubstrate],[UseCase],[DataSubstrateContainer])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[UseCase]-%20data_substrates%200..*>[DataSubstrate&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;metadata_storage:string%20*;file_extensions:string%20*;limitations:string%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataSubstrateContainer]++-%20data_substrates_collection%200..*>[DataSubstrate],[NamedThing]^-[DataSubstrate],[UseCase],[DataSubstrateContainer])
 
 ## Parents
 
@@ -15,6 +15,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 
 ## Referenced by Class
 
+ *  **[NamedThing](NamedThing.md)** *[data_substrates](data_substrates.md)*  <sub>0..\*</sub>  **[DataSubstrate](DataSubstrate.md)**
  *  **None** *[data_substrates_collection](data_substrates_collection.md)*  <sub>0..\*</sub>  **[DataSubstrate](DataSubstrate.md)**
 
 ## Attributes

@@ -2,12 +2,13 @@ BASE <https://w3id.org/bridge2ai/standards-schema-all/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
-PREFIX schema: <http://schema.org/>
-PREFIX STANDARDS: <https://w3id.org/bridge2ai/standards-schema/>
-PREFIX STANDARDSDATATOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/>
-PREFIX STANDARDSDATASUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/>
-PREFIX STANDARDSORGANIZATION: <https://w3id.org/bridge2ai/standards-organization-schema/>
-PREFIX STANDARDSDATASTANDARDORTOOL: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/>
+PREFIX schema1: <http://schema.org/>
+PREFIX B2AI: <https://w3id.org/bridge2ai/standards-schema/>
+PREFIX B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/>
+PREFIX B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/>
+PREFIX B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/>
+PREFIX B2AI_SUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/>
+PREFIX B2AI_USECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/>
 
 
 linkml:String xsd:string
@@ -42,187 +43,212 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-STANDARDS:CategoryType IRI
+B2AI:CategoryType IRI
 
-STANDARDS:EdamIdentifier IRI
+B2AI:EdamIdentifier IRI
 
-STANDARDS:MeshIdentifier IRI
+B2AI:MeshIdentifier IRI
 
-STANDARDS:NcitIdentifier IRI
+B2AI:NcitIdentifier IRI
 
-STANDARDSORGANIZATION:RorIdentifier IRI
+B2AI_ORG:RorIdentifier IRI
 
-STANDARDSORGANIZATION:WikidataIdentifier IRI
+B2AI_ORG:WikidataIdentifier IRI
 
-STANDARDSDATASTANDARDORTOOL:BiomedicalStandard CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:BiomedicalStandard_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandard_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandard ] ?
+B2AI_STANDARD:BiomedicalStandard CLOSED {
+    (  $B2AI_STANDARD:BiomedicalStandard_tes (  &B2AI_STANDARD:DataStandard_tes ;
+          rdf:type [ B2AI_STANDARD:DataStandard ] ?
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:BiomedicalStandard ]
+       rdf:type [ B2AI_STANDARD:BiomedicalStandard ]
     )
 }
 
-STANDARDSDATASTANDARDORTOOL:DataStandard  (
+B2AI_STANDARD:DataStandard  (
     CLOSED {
-       (  $STANDARDSDATASTANDARDORTOOL:DataStandard_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-             rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+       (  $B2AI_STANDARD:DataStandard_tes (  &B2AI_STANDARD:DataStandardOrTool_tes ;
+             rdf:type [ B2AI_STANDARD:DataStandardOrTool ] ?
           ) ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandard ]
+          rdf:type [ B2AI_STANDARD:DataStandard ]
        )
-    } OR @STANDARDSDATASTANDARDORTOOL:BiomedicalStandard
+    } OR @B2AI_STANDARD:BiomedicalStandard
 )
 
-STANDARDSDATASTANDARDORTOOL:DataStandardOrTool  (
+B2AI_STANDARD:DataStandardOrTool  (
     CLOSED {
-       (  $STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes (  &STANDARDS:NamedThing_tes ;
-             rdf:type [ schema:Thing ] ? ;
-             STANDARDSDATASTANDARDORTOOL:collection @STANDARDSDATASTANDARDORTOOL:StandardsCollectionTag * ;
-             STANDARDSDATASTANDARDORTOOL:concerns_data_topic @STANDARDSDATATOPIC:DataTopic * ;
-             STANDARDSDATASTANDARDORTOOL:has_relevant_organization @STANDARDSORGANIZATION:Organization * ;
-             STANDARDSDATASTANDARDORTOOL:purpose_detail @linkml:String ? ;
-             STANDARDSDATASTANDARDORTOOL:is_open @linkml:Boolean ? ;
-             STANDARDSDATASTANDARDORTOOL:requires_registration @linkml:Boolean ? ;
-             STANDARDS:url @linkml:Uriorcurie ? ;
-             STANDARDSDATASTANDARDORTOOL:publication @linkml:Uriorcurie ? ;
-             STANDARDSDATASTANDARDORTOOL:formal_specification @linkml:Uriorcurie ?
+       (  $B2AI_STANDARD:DataStandardOrTool_tes (  &B2AI:NamedThing_tes ;
+             rdf:type [ schema1:Thing ] ? ;
+             B2AI_STANDARD:collection @B2AI_STANDARD:StandardsCollectionTag * ;
+             B2AI_STANDARD:concerns_data_topic @B2AI_TOPIC:DataTopic * ;
+             B2AI_STANDARD:has_relevant_organization @B2AI_ORG:Organization * ;
+             B2AI_STANDARD:purpose_detail @linkml:String ? ;
+             B2AI_STANDARD:is_open @linkml:Boolean ? ;
+             B2AI_STANDARD:requires_registration @linkml:Boolean ? ;
+             B2AI:url @linkml:Uriorcurie ? ;
+             B2AI_STANDARD:publication @linkml:Uriorcurie ? ;
+             B2AI_STANDARD:formal_specification @linkml:Uriorcurie ? ;
+             B2AI_STANDARD:not_relevant_to_dgps @linkml:Boolean ?
           ) ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ]
+          rdf:type [ B2AI_STANDARD:DataStandardOrTool ]
        )
-    } OR @STANDARDSDATASTANDARDORTOOL:DataStandard OR @STANDARDSDATASTANDARDORTOOL:ModelRepository OR
-    @STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary OR @STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset OR
-    @STANDARDSDATASTANDARDORTOOL:ReferenceImplementation OR @STANDARDSDATASTANDARDORTOOL:Registry OR
-    @STANDARDSDATASTANDARDORTOOL:SoftwareOrTool OR @STANDARDSDATASTANDARDORTOOL:TrainingProgram
+    } OR @B2AI_STANDARD:DataStandard OR @B2AI_STANDARD:ModelRepository OR @B2AI_STANDARD:OntologyOrVocabulary OR
+    @B2AI_STANDARD:ReferenceDataOrDataset OR @B2AI_STANDARD:ReferenceImplementation OR @B2AI_STANDARD:Registry OR
+    @B2AI_STANDARD:SoftwareOrTool OR @B2AI_STANDARD:TrainingProgram
 )
 
-STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer_tes STANDARDSDATASTANDARDORTOOL:data_standardortools_collection
-       @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool * ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrToolContainer ] ?
+B2AI_STANDARD:DataStandardOrToolContainer CLOSED {
+    (  $B2AI_STANDARD:DataStandardOrToolContainer_tes B2AI_STANDARD:data_standardortools_collection
+       @B2AI_STANDARD:DataStandardOrTool * ;
+       rdf:type [ B2AI_STANDARD:DataStandardOrToolContainer ] ?
     )
 }
 
-STANDARDSDATASUBSTRATE:DataSubstrate CLOSED {
-    (  $STANDARDSDATASUBSTRATE:DataSubstrate_tes (  &STANDARDS:NamedThing_tes ;
-          rdf:type [ schema:Thing ] ? ;
-          STANDARDS:edam_id @STANDARDS:EdamIdentifier ? ;
-          STANDARDS:mesh_id @STANDARDS:MeshIdentifier ? ;
-          STANDARDS:ncit_id @STANDARDS:NcitIdentifier ? ;
-          STANDARDSDATASUBSTRATE:metadata_storage @linkml:String * ;
-          STANDARDSDATASUBSTRATE:file_extensions @linkml:String * ;
-          STANDARDSDATASUBSTRATE:limitations @linkml:String *
+B2AI_SUBSTRATE:DataSubstrate CLOSED {
+    (  $B2AI_SUBSTRATE:DataSubstrate_tes (  &B2AI:NamedThing_tes ;
+          rdf:type [ schema1:Thing ] ? ;
+          B2AI:edam_id @B2AI:EdamIdentifier ? ;
+          B2AI:mesh_id @B2AI:MeshIdentifier ? ;
+          B2AI:ncit_id @B2AI:NcitIdentifier ? ;
+          B2AI_SUBSTRATE:metadata_storage @linkml:String * ;
+          B2AI_SUBSTRATE:file_extensions @linkml:String * ;
+          B2AI_SUBSTRATE:limitations @linkml:String *
        ) ;
-       rdf:type [ STANDARDSDATASUBSTRATE:DataSubstrate ]
+       rdf:type [ B2AI_SUBSTRATE:DataSubstrate ]
     )
 }
 
-STANDARDSDATASUBSTRATE:DataSubstrateContainer CLOSED {
-    (  $STANDARDSDATASUBSTRATE:DataSubstrateContainer_tes STANDARDSDATASUBSTRATE:data_substrates_collection
-       @STANDARDSDATASUBSTRATE:DataSubstrate * ;
-       rdf:type [ STANDARDSDATASUBSTRATE:DataSubstrateContainer ] ?
+B2AI_SUBSTRATE:DataSubstrateContainer CLOSED {
+    (  $B2AI_SUBSTRATE:DataSubstrateContainer_tes B2AI_SUBSTRATE:data_substrates_collection @B2AI_SUBSTRATE:DataSubstrate * ;
+       rdf:type [ B2AI_SUBSTRATE:DataSubstrateContainer ] ?
     )
 }
 
-STANDARDSDATATOPIC:DataTopic CLOSED {
-    (  $STANDARDSDATATOPIC:DataTopic_tes (  &STANDARDS:NamedThing_tes ;
-          rdf:type [ schema:Thing ] ? ;
-          STANDARDS:edam_id @STANDARDS:EdamIdentifier ? ;
-          STANDARDS:mesh_id @STANDARDS:MeshIdentifier ? ;
-          STANDARDS:ncit_id @STANDARDS:NcitIdentifier ?
+B2AI_TOPIC:DataTopic CLOSED {
+    (  $B2AI_TOPIC:DataTopic_tes (  &B2AI:NamedThing_tes ;
+          rdf:type [ schema1:Thing ] ? ;
+          B2AI:edam_id @B2AI:EdamIdentifier ? ;
+          B2AI:mesh_id @B2AI:MeshIdentifier ? ;
+          B2AI:ncit_id @B2AI:NcitIdentifier ?
        ) ;
-       rdf:type [ STANDARDSDATATOPIC:DataTopic ]
+       rdf:type [ B2AI_TOPIC:DataTopic ]
     )
 }
 
-STANDARDSDATATOPIC:DataTopicContainer CLOSED {
-    (  $STANDARDSDATATOPIC:DataTopicContainer_tes STANDARDSDATATOPIC:data_topics_collection @STANDARDSDATATOPIC:DataTopic * ;
-       rdf:type [ STANDARDSDATATOPIC:DataTopicContainer ] ?
+B2AI_TOPIC:DataTopicContainer CLOSED {
+    (  $B2AI_TOPIC:DataTopicContainer_tes B2AI_TOPIC:data_topics_collection @B2AI_TOPIC:DataTopic * ;
+       rdf:type [ B2AI_TOPIC:DataTopicContainer ] ?
     )
 }
 
-STANDARDSDATASTANDARDORTOOL:ModelRepository CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:ModelRepository_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+B2AI_STANDARD:ModelRepository CLOSED {
+    (  $B2AI_STANDARD:ModelRepository_tes (  &B2AI_STANDARD:DataStandardOrTool_tes ;
+          rdf:type [ B2AI_STANDARD:DataStandardOrTool ] ?
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:ModelRepository ]
+       rdf:type [ B2AI_STANDARD:ModelRepository ]
     )
 }
 
-STANDARDS:NamedThing  (
+B2AI:NamedThing  (
     CLOSED {
-       (  $STANDARDS:NamedThing_tes (  STANDARDS:category @STANDARDS:CategoryType ? ;
-             schema:name @linkml:String ? ;
-             schema:description @linkml:String ? ;
-             STANDARDS:subclass_of @STANDARDS:NamedThing * ;
-             STANDARDS:related_to @STANDARDS:NamedThing *
+       (  $B2AI:NamedThing_tes (  B2AI:category @B2AI:CategoryType ? ;
+             schema1:name @linkml:String ? ;
+             schema1:description @linkml:String ? ;
+             B2AI:subclass_of @B2AI:NamedThing * ;
+             B2AI:related_to @B2AI:NamedThing *
           ) ;
-          rdf:type [ schema:Thing ]
+          rdf:type [ schema1:Thing ]
        )
-    } OR @STANDARDSDATASTANDARDORTOOL:DataStandardOrTool OR @STANDARDSDATASUBSTRATE:DataSubstrate OR @STANDARDSDATATOPIC:DataTopic
-    OR @STANDARDSORGANIZATION:Organization
+    } OR @B2AI_STANDARD:DataStandardOrTool OR @B2AI_SUBSTRATE:DataSubstrate OR @B2AI_TOPIC:DataTopic OR @B2AI_ORG:Organization OR
+    @B2AI_USECASE:UseCase
 )
 
-STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+B2AI_STANDARD:OntologyOrVocabulary CLOSED {
+    (  $B2AI_STANDARD:OntologyOrVocabulary_tes (  &B2AI_STANDARD:DataStandardOrTool_tes ;
+          rdf:type [ B2AI_STANDARD:DataStandardOrTool ] ?
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:OntologyOrVocabulary ]
+       rdf:type [ B2AI_STANDARD:OntologyOrVocabulary ]
     )
 }
 
-STANDARDSORGANIZATION:Organization CLOSED {
-    (  $STANDARDSORGANIZATION:Organization_tes (  &STANDARDS:NamedThing_tes ;
-          rdf:type [ schema:Thing ] ? ;
-          STANDARDSORGANIZATION:ror_id @STANDARDSORGANIZATION:RorIdentifier ? ;
-          STANDARDSORGANIZATION:wikidata_id @STANDARDSORGANIZATION:WikidataIdentifier ? ;
-          STANDARDS:url @linkml:Uriorcurie ?
+B2AI_ORG:Organization CLOSED {
+    (  $B2AI_ORG:Organization_tes (  &B2AI:NamedThing_tes ;
+          rdf:type [ schema1:Thing ] ? ;
+          B2AI_ORG:ror_id @B2AI_ORG:RorIdentifier ? ;
+          B2AI_ORG:wikidata_id @B2AI_ORG:WikidataIdentifier ? ;
+          B2AI:url @linkml:Uriorcurie ?
        ) ;
-       rdf:type [ STANDARDSORGANIZATION:Organization ]
+       rdf:type [ B2AI_ORG:Organization ]
     )
 }
 
-STANDARDSORGANIZATION:OrganizationContainer CLOSED {
-    (  $STANDARDSORGANIZATION:OrganizationContainer_tes STANDARDSORGANIZATION:organizations @STANDARDSORGANIZATION:Organization * ;
-       rdf:type [ STANDARDSORGANIZATION:OrganizationContainer ] ?
+B2AI_ORG:OrganizationContainer CLOSED {
+    (  $B2AI_ORG:OrganizationContainer_tes B2AI_ORG:organizations @B2AI_ORG:Organization * ;
+       rdf:type [ B2AI_ORG:OrganizationContainer ] ?
     )
 }
 
-STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+B2AI_STANDARD:ReferenceDataOrDataset CLOSED {
+    (  $B2AI_STANDARD:ReferenceDataOrDataset_tes (  &B2AI_STANDARD:DataStandardOrTool_tes ;
+          rdf:type [ B2AI_STANDARD:DataStandardOrTool ] ?
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:ReferenceDataOrDataset ]
+       rdf:type [ B2AI_STANDARD:ReferenceDataOrDataset ]
     )
 }
 
-STANDARDSDATASTANDARDORTOOL:ReferenceImplementation CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:ReferenceImplementation_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+B2AI_STANDARD:ReferenceImplementation CLOSED {
+    (  $B2AI_STANDARD:ReferenceImplementation_tes (  &B2AI_STANDARD:DataStandardOrTool_tes ;
+          rdf:type [ B2AI_STANDARD:DataStandardOrTool ] ?
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:ReferenceImplementation ]
+       rdf:type [ B2AI_STANDARD:ReferenceImplementation ]
     )
 }
 
-STANDARDSDATASTANDARDORTOOL:Registry CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:Registry_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+B2AI_STANDARD:Registry CLOSED {
+    (  $B2AI_STANDARD:Registry_tes (  &B2AI_STANDARD:DataStandardOrTool_tes ;
+          rdf:type [ B2AI_STANDARD:DataStandardOrTool ] ?
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:Registry ]
+       rdf:type [ B2AI_STANDARD:Registry ]
     )
 }
 
-STANDARDSDATASTANDARDORTOOL:SoftwareOrTool CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:SoftwareOrTool_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+B2AI_STANDARD:SoftwareOrTool CLOSED {
+    (  $B2AI_STANDARD:SoftwareOrTool_tes (  &B2AI_STANDARD:DataStandardOrTool_tes ;
+          rdf:type [ B2AI_STANDARD:DataStandardOrTool ] ?
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:SoftwareOrTool ]
+       rdf:type [ B2AI_STANDARD:SoftwareOrTool ]
     )
 }
 
-STANDARDSDATASTANDARDORTOOL:TrainingProgram CLOSED {
-    (  $STANDARDSDATASTANDARDORTOOL:TrainingProgram_tes (  &STANDARDSDATASTANDARDORTOOL:DataStandardOrTool_tes ;
-          rdf:type [ STANDARDSDATASTANDARDORTOOL:DataStandardOrTool ] ?
+B2AI_STANDARD:TrainingProgram CLOSED {
+    (  $B2AI_STANDARD:TrainingProgram_tes (  &B2AI_STANDARD:DataStandardOrTool_tes ;
+          rdf:type [ B2AI_STANDARD:DataStandardOrTool ] ?
        ) ;
-       rdf:type [ STANDARDSDATASTANDARDORTOOL:TrainingProgram ]
+       rdf:type [ B2AI_STANDARD:TrainingProgram ]
+    )
+}
+
+B2AI_USECASE:UseCase CLOSED {
+    (  $B2AI_USECASE:UseCase_tes (  &B2AI:NamedThing_tes ;
+          rdf:type [ schema1:Thing ] ? ;
+          B2AI_USECASE:use_case_category @B2AI_USECASE:UseCaseCategory ;
+          B2AI_USECASE:known_limitations @linkml:String ? ;
+          B2AI_USECASE:relevance_to_dgps @B2AI:DataGeneratingProject * ;
+          B2AI_USECASE:data_topics @B2AI_TOPIC:DataTopic * ;
+          B2AI_USECASE:data_substrates @B2AI_SUBSTRATE:DataSubstrate * ;
+          B2AI_USECASE:standards_and_tools_for_dgp_use @B2AI_STANDARD:DataStandardOrTool * ;
+          B2AI_USECASE:alternative_standards_and_tools @B2AI_STANDARD:DataStandardOrTool * ;
+          B2AI_USECASE:enables @B2AI_USECASE:UseCase * ;
+          B2AI_USECASE:involved_in_experimental_design @linkml:Boolean ? ;
+          B2AI_USECASE:involved_in_metadata_management @linkml:Boolean ? ;
+          B2AI_USECASE:involved_in_quality_control @linkml:Boolean ? ;
+          B2AI:xref @linkml:Uriorcurie *
+       ) ;
+       rdf:type [ B2AI_USECASE:UseCase ]
+    )
+}
+
+B2AI_USECASE:UseCaseContainer CLOSED {
+    (  $B2AI_USECASE:UseCaseContainer_tes B2AI_USECASE:use_cases @B2AI_USECASE:UseCase * ;
+       rdf:type [ B2AI_USECASE:UseCaseContainer ] ?
     )
 }
 

@@ -36,3 +36,4 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/related_to](https://w3id.o
  * [Registry](Registry.md)
  * [SoftwareOrTool](SoftwareOrTool.md)
  * [TrainingProgram](TrainingProgram.md)
+ * [UseCase](UseCase.md)

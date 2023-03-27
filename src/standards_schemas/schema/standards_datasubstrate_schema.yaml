@@ -8,7 +8,7 @@ see_also:
   - https://bridge2ai.github.io/standards-datasubstrate-schema
 
 prefixes:
-  STANDARDSDATASUBSTRATE: https://w3id.org/bridge2ai/standards-datasubstrate-schema/
+  B2AI_SUBSTRATE: https://w3id.org/bridge2ai/standards-datasubstrate-schema/
   edam.data: http://edamontology.org/data_
   edam.format: http://edamontology.org/format_
   edam.operation: http://edamontology.org/operation_
@@ -19,7 +19,7 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
-default_prefix: STANDARDSDATASUBSTRATE
+default_prefix: B2AI_SUBSTRATE
 default_range: string
 
 imports:

@@ -1,22 +1,22 @@
 ## DataSubstrate-minimal-1
 ### Input
 ```yaml
-id: STANDARDSDATASUBSTRATE:53
+id: B2AI_SUBSTRATE:53
 
 ```
 ## UseCase-valid-1
 ### Input
 ```yaml
 alternative_standards_and_tools:
-- STANDARDSUSECASE:123
-- STANDARDSUSECASE:555
+- B2AI_STANDARD:123
+- B2AI_STANDARD:555
 category: UseCase
 data_substrates:
-- STANDARDSUSECASE:abc
-- STANDARDSUSECASE:xyz
+- B2AI_SUBSTRATE:12
+- B2AI_SUBSTRATE:34
 data_topics:
-- STANDARDSDATATOPIC:Image
-- STANDARDSDATATOPIC:Clinical_Observations
+- B2AI_TOPIC:5
+- B2AI_TOPIC:6
 description: "Collecting clinical data from patient visits involves the process of\
   \ gathering information about a patient's medical history, current symptoms, and\
   \ other relevant information during a healthcare appointment. This typically includes\
@@ -26,11 +26,11 @@ description: "Collecting clinical data from patient visits involves the process 
   \ project\u2019s assessments of cognitive function and visual acuity. Medical records\
   \ may include structured/unstructured text, values for lab results, and/or images."
 enables:
-- STANDARDSUSECASE:5
-- STANDARDSUSECASE:13
-- STANDARDSUSECASE:17
-- STANDARDSUSECASE:19
-id: STANDARDSUSECASE:1
+- B2AI_USECASE:5
+- B2AI_USECASE:13
+- B2AI_USECASE:17
+- B2AI_USECASE:19
+id: B2AI_USECASE:1
 involved_in_experimental_design: true
 involved_in_metadata_management: true
 involved_in_quality_control: false
@@ -41,12 +41,12 @@ relevance_to_dgps:
 - chorus
 - voice
 standards_and_tools_for_dgp_use:
-- STANDARDSDATASTANDARDORTOOL:DICOM
-- STANDARDSDATASTANDARDORTOOL:OMOP_CDM
+- B2AI_STANDARD:5
+- B2AI_STANDARD:10
 use_case_category: acquisition
 xref:
-- STANDARDSUSECASE:abc
-- STANDARDSUSECASE:xyz
+- B2AI_USECASE:123
+- B2AI_USECASE:456
 
 ```
 ## DataSubstrate-valid-1
@@ -56,13 +56,13 @@ category: DataSubstrate
 description: BED (Browser Extensible Data) format provides a flexible way to define
   the data lines that are displayed in a genome annotation track.
 edam_id: edam.format:3003
-id: STANDARDSDATASUBSTRATE:53
+id: B2AI_SUBSTRATE:53
 metadata_storage:
 - file headers
 name: BED
 ncit_id: ncit:C153367
 subclass_of:
-- STANDARDSDATASUBSTRATE:1
+- B2AI_SUBSTRATE:1
 
 ```
 ## Organization-1
@@ -70,11 +70,11 @@ subclass_of:
 ```yaml
 category: Organization
 description: US Agency for Healthcare Research and Quality
-id: STANDARDSORGANIZATION:1
+id: B2AI_ORG:1
 name: AHRQ
 ror_id: ror:03jmfdf59
 subclass_of:
-- STANDARDSORGANIZATION:2
+- B2AI_ORG:2
 url: https://www.ahrq.gov/
 wikidata_id: wikidata:Q4692008
 
@@ -85,12 +85,12 @@ wikidata_id: wikidata:Q4692008
 category: DataTopic
 description: Data involving any study of living organisms at any scale.
 edam_id: edam.topic:3070
-id: STANDARDSDATATOPIC:2
+id: B2AI_TOPIC:2
 mesh_id: mesh:D001695
 name: Biology
 ncit_id: ncit:C16345
 subclass_of:
-- STANDARDSDATATOPIC:1
+- B2AI_TOPIC:1
 
 ```
 ## DataStandardOrTool-valid-1
@@ -100,12 +100,12 @@ category: BiomedicalStandard
 collection:
 - datamodel
 concerns_data_topic:
-- STANDARDSDATATOPIC:4
+- B2AI_TOPIC:4
 description: Observational Medical Outcomes Partnership Common Data Model
 formal_specification: https://github.com/OHDSI/CommonDataModel
 has_relevant_organization:
-- STANDARDSORGANIZATION:76
-id: STANDARDSDATASTANDARDORTOOL:53
+- B2AI_ORG:76
+id: B2AI_STANDARD:53
 is_open: true
 name: OMOP CDM
 publication: doi:10.3233/978-1-61499-564-7-574
@@ -122,26 +122,26 @@ url: https://ohdsi.github.io/CommonDataModel/
 data_topics_collection:
 - description: Data involving any study of living organisms at any scale.
   edam_id: edam.topic:3070
-  id: STANDARDSDATATOPIC:2
+  id: B2AI_TOPIC:2
   mesh_id: mesh:D001695
   name: Biology
   ncit_id: ncit:C16345
   subclass_of:
-  - STANDARDSDATATOPIC:1
-- id: STANDARDSDATATOPIC:3
+  - B2AI_TOPIC:1
+- id: B2AI_TOPIC:3
   name: Science
 
 ```
 ## Organization-minimal-1
 ### Input
 ```yaml
-id: STANDARDSORGANIZATION:2
+id: B2AI_ORG:2
 
 ```
 ## UseCase-minimal-1
 ### Input
 ```yaml
-id: STANDARDSUSECASE:1
+id: B2AI_USECASE:1
 use_case_category: acquisition
 
 ```
@@ -149,46 +149,46 @@ use_case_category: acquisition
 ### Input
 ```yaml
 data_standardortools_collection:
-- id: STANDARDSDATASTANDARDORTOOL:1
-- id: STANDARDSDATASTANDARDORTOOL:2
+- id: B2AI_STANDARD:1
+- id: B2AI_STANDARD:2
 
 ```
 ## UseCaseContainer-minimal-1
 ### Input
 ```yaml
 use_cases:
-- id: STANDARDSUSECASE:1
+- id: B2AI_USECASE:1
   use_case_category: acquisition
-- id: STANDARDSUSECASE:2
+- id: B2AI_USECASE:2
   use_case_category: acquisition
 
 ```
 ## DataStandardOrTool-minimal-1
 ### Input
 ```yaml
-id: STANDARDSDATASTANDARDORTOOL:53
+id: B2AI_STANDARD:53
 
 ```
 ## DataSubstrateContainer-minimal-1
 ### Input
 ```yaml
 data_substrates_collection:
-- id: STANDARDSDATASUBSTRATE:1
-- id: STANDARDSDATASUBSTRATE:2
+- id: B2AI_SUBSTRATE:1
+- id: B2AI_SUBSTRATE:2
 
 ```
 ## OrganizationContainer-minimal-1
 ### Input
 ```yaml
 organizations:
-- id: STANDARDSORGANIZATION:1
-- id: STANDARDSORGANIZATION:2
+- id: B2AI_ORG:1
+- id: B2AI_ORG:2
 
 ```
 ## DataTopic-minimal-1
 ### Input
 ```yaml
-id: STANDARDSDATATOPIC:2
+id: B2AI_TOPIC:2
 
 ```
 ## DataSubstrate-1i
@@ -201,7 +201,7 @@ description: BED (Browser Extensible Data) format provides a flexible way to def
 file_extensions:
 - txt
 - bed
-id: STANDARDSDATASUBSTRATE:53
+id: B2AI_SUBSTRATE:53
 limitations: Sequences can get very long.
 metadata_storage: 5
 name: BED
@@ -212,9 +212,9 @@ subclass_of: 100
 ### Input
 ```yaml
 use_cases:
-- id: STANDARDSUSECASE:1
+- id: B2AI_USECASE:1
   use_case_category: Acquisition
-- id: STANDARDSUSECASE:2
+- id: B2AI_USECASE:2
   use_case_category: Acquisition
 
 ```
@@ -235,8 +235,8 @@ subclass_of: 1
 ```yaml
 alternative_standards_and_tools: null
 data_topics:
-- STANDARDSDATATOPIC:Image
-- STANDARDSDATATOPIC:Clinical_Observations
+- B2AI_TOPIC:Image
+- B2AI_TOPIC::Clinical_Observations
 description: "Collecting clinical data from patient visits involves the process of\
   \ gathering information about a patient's medical history, current symptoms, and\
   \ other relevant information during a healthcare appointment. This typically includes\
@@ -246,22 +246,22 @@ description: "Collecting clinical data from patient visits involves the process 
   \ project\u2019s assessments of cognitive function and visual acuity. Medical records\
   \ may include structured/unstructured text, values for lab results, and/or images."
 enables:
-- STANDARDSUSECASE:5
-- STANDARDSUSECASE:13
-- STANDARDSUSECASE:17
-- STANDARDSUSECASE:19
+- B2AI_USECASE:5
+- B2AI_USECASE:13
+- B2AI_USECASE:17
+- B2AI_USECASE:19
 id: 1
 involved_in_experimental_design: true
 involved_in_metadata_management: true
-involved_in_quality_control: false
+involved_in_quality_control: Not applicable
 name: Obtain patient data from records of clinical visits.
 relevance_to_dgps:
 - 1
 - 2
 - 3
 standards_and_tools_for_dgp_use:
-- STANDARDSDATASTANDARDORTOOL:DICOM
-- STANDARDSDATASTANDARDORTOOL:OMOP_CDM
+- B2AI_STANDARD:DICOM
+- B2AI_STANDARD:OMOP_CDM
 use_case_category: Acquisition
 
 ```
@@ -269,19 +269,19 @@ use_case_category: Acquisition
 ### Input
 ```yaml
 concerns data topic:
-- STANDARDSDATATOPIC:4
+- B2AI_TOPIC:4
 description: Observational Medical Outcomes Partnership Common Data Model
 formal_specification: https://github.com/OHDSI/CommonDataModel
 has relevant organization:
-- STANDARDSORGANIZATION:76
-id: STANDARDSDATASTANDARDORTOOL:53
+- B2AI_ORGANIZATION:76
+id: B2AI_STANDARD:53
 is_open_data: true
 name: OMOP CDM
 publication: doi:10.3233/978-1-61499-564-7-574
 purpose_detail: Open community data standard designed to standardize the structure
   and content of observational data and to enable efficient analyses that can produce
   reliable evidence.
-requires_registration: false
+requires_registration: 3
 url: https://ohdsi.github.io/CommonDataModel/
 
 ```
@@ -292,8 +292,8 @@ ROR_ID: ror_03jmfdf59
 URL: null
 Wikidata_ID: CHEBI:Q4692008
 description: My Uncle Greg's Storage Unit
-id: STANDARDSORGANIZATION:1
+id: B2AI_ORG:1
 name: null
-subclass_of: STANDARDSORGANIZATION:2
+subclass_of: B2AI_ORG:2
 
 ```

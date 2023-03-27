@@ -1,10 +1,10 @@
 {
   "data_standardortools_collection": [
     {
-      "id": "STANDARDSDATASTANDARDORTOOL:1"
+      "id": "B2AI_STANDARD:1"
     },
     {
-      "id": "STANDARDSDATASTANDARDORTOOL:2"
+      "id": "B2AI_STANDARD:2"
     }
   ],
   "@type": "DataStandardOrToolContainer"

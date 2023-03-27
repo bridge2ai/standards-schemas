@@ -12,7 +12,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer](https
  classDiagram
     class DataTopicContainer
       DataTopicContainer : data_topics_collection
-        DataTopicContainer <.. DataTopic : data_topics_collection
+        
+          DataTopicContainer ..> DataTopic : data_topics_collection
+        
       
 ```
 

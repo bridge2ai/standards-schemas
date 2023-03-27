@@ -97,6 +97,7 @@ Name: standards-schema-all
 | --- | --- |
 | [Boolean](Boolean.md) | A binary (true or false) value |
 | [CategoryType](CategoryType.md) | A primitive type in which the value denotes a class within the model |
+| [Curie](Curie.md) | a compact URI |
 | [Date](Date.md) | a date (year, month and day) in an idealized calendar |
 | [DateOrDatetime](DateOrDatetime.md) | Either a date or a datetime |
 | [Datetime](Datetime.md) | The combination of a date and time |

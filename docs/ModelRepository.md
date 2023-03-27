@@ -14,35 +14,47 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository](https://
       DataStandardOrTool <|-- ModelRepository
       
       ModelRepository : category
-        ModelRepository <.. category_type : category
+        
       ModelRepository : collection
-        ModelRepository <.. StandardsCollectionTag : collection
+        
+          ModelRepository ..> StandardsCollectionTag : collection
+        
       ModelRepository : concerns_data_topic
-        ModelRepository <.. DataTopic : concerns_data_topic
+        
+          ModelRepository ..> DataTopic : concerns_data_topic
+        
       ModelRepository : description
-        ModelRepository <.. string : description
+        
       ModelRepository : formal_specification
-        ModelRepository <.. uriorcurie : formal_specification
+        
       ModelRepository : has_relevant_organization
-        ModelRepository <.. Organization : has_relevant_organization
+        
+          ModelRepository ..> Organization : has_relevant_organization
+        
       ModelRepository : id
-        ModelRepository <.. uriorcurie : id
+        
       ModelRepository : is_open
-        ModelRepository <.. boolean : is_open
+        
       ModelRepository : name
-        ModelRepository <.. string : name
+        
+      ModelRepository : not_relevant_to_dgps
+        
       ModelRepository : publication
-        ModelRepository <.. uriorcurie : publication
+        
       ModelRepository : purpose_detail
-        ModelRepository <.. string : purpose_detail
+        
       ModelRepository : related_to
-        ModelRepository <.. NamedThing : related_to
+        
+          ModelRepository ..> NamedThing : related_to
+        
       ModelRepository : requires_registration
-        ModelRepository <.. boolean : requires_registration
+        
       ModelRepository : subclass_of
-        ModelRepository <.. NamedThing : subclass_of
+        
+          ModelRepository ..> NamedThing : subclass_of
+        
       ModelRepository : url
-        ModelRepository <.. uriorcurie : url
+        
       
 ```
 
@@ -70,6 +82,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository](https://
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | [DataStandardOrTool](DataStandardOrTool.md) |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -261,6 +274,18 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: uriorcurie
+  not_relevant_to_dgps:
+    name: not_relevant_to_dgps
+    description: Is the standard or tool currently relevant to DGPs?
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: not_relevant_to_dgps
+    owner: ModelRepository
+    domain_of:
+    - DataStandardOrTool
+    range: boolean
   id:
     name: id
     description: A unique identifier for a thing.

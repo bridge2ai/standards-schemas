@@ -1,5 +1,5 @@
-# standards-usecase-schema
+# standards-schemas
 
-Data schema for Bridge2AI Standards Use Cases.
+Data schemas for Bridge2AI Standards and Use Cases.
 
 

@@ -14,23 +14,27 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
       NamedThing <|-- Organization
       
       Organization : category
-        Organization <.. category_type : category
+        
       Organization : description
-        Organization <.. string : description
+        
       Organization : id
-        Organization <.. uriorcurie : id
+        
       Organization : name
-        Organization <.. string : name
+        
       Organization : related_to
-        Organization <.. NamedThing : related_to
+        
+          Organization ..> NamedThing : related_to
+        
       Organization : ror_id
-        Organization <.. ror_identifier : ror_id
+        
       Organization : subclass_of
-        Organization <.. NamedThing : subclass_of
+        
+          Organization ..> NamedThing : subclass_of
+        
       Organization : url
-        Organization <.. uriorcurie : url
+        
       Organization : wikidata_id
-        Organization <.. wikidata_identifier : wikidata_id
+        
       
 ```
 

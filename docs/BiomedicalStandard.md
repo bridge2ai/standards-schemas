@@ -14,35 +14,47 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
       DataStandard <|-- BiomedicalStandard
       
       BiomedicalStandard : category
-        BiomedicalStandard <.. category_type : category
+        
       BiomedicalStandard : collection
-        BiomedicalStandard <.. StandardsCollectionTag : collection
+        
+          BiomedicalStandard ..> StandardsCollectionTag : collection
+        
       BiomedicalStandard : concerns_data_topic
-        BiomedicalStandard <.. DataTopic : concerns_data_topic
+        
+          BiomedicalStandard ..> DataTopic : concerns_data_topic
+        
       BiomedicalStandard : description
-        BiomedicalStandard <.. string : description
+        
       BiomedicalStandard : formal_specification
-        BiomedicalStandard <.. uriorcurie : formal_specification
+        
       BiomedicalStandard : has_relevant_organization
-        BiomedicalStandard <.. Organization : has_relevant_organization
+        
+          BiomedicalStandard ..> Organization : has_relevant_organization
+        
       BiomedicalStandard : id
-        BiomedicalStandard <.. uriorcurie : id
+        
       BiomedicalStandard : is_open
-        BiomedicalStandard <.. boolean : is_open
+        
       BiomedicalStandard : name
-        BiomedicalStandard <.. string : name
+        
+      BiomedicalStandard : not_relevant_to_dgps
+        
       BiomedicalStandard : publication
-        BiomedicalStandard <.. uriorcurie : publication
+        
       BiomedicalStandard : purpose_detail
-        BiomedicalStandard <.. string : purpose_detail
+        
       BiomedicalStandard : related_to
-        BiomedicalStandard <.. NamedThing : related_to
+        
+          BiomedicalStandard ..> NamedThing : related_to
+        
       BiomedicalStandard : requires_registration
-        BiomedicalStandard <.. boolean : requires_registration
+        
       BiomedicalStandard : subclass_of
-        BiomedicalStandard <.. NamedThing : subclass_of
+        
+          BiomedicalStandard ..> NamedThing : subclass_of
+        
       BiomedicalStandard : url
-        BiomedicalStandard <.. uriorcurie : url
+        
       
 ```
 
@@ -71,6 +83,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | [DataStandardOrTool](DataStandardOrTool.md) |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -260,6 +273,18 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: uriorcurie
+  not_relevant_to_dgps:
+    name: not_relevant_to_dgps
+    description: Is the standard or tool currently relevant to DGPs?
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: not_relevant_to_dgps
+    owner: BiomedicalStandard
+    domain_of:
+    - DataStandardOrTool
+    range: boolean
   id:
     name: id
     description: A unique identifier for a thing.

@@ -26,5 +26,5 @@ None &#8594;  <sub>0..1</sub> [EdamIdentifier](types/EdamIdentifier.md)
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example(value='edam.data:0006', description=None) |
+| **Examples:** | | Example(value='edam.data:0006', description=None, object=None) |
 

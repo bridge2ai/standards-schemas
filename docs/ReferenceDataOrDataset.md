@@ -14,35 +14,47 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset](h
       DataStandardOrTool <|-- ReferenceDataOrDataset
       
       ReferenceDataOrDataset : category
-        ReferenceDataOrDataset <.. category_type : category
+        
       ReferenceDataOrDataset : collection
-        ReferenceDataOrDataset <.. StandardsCollectionTag : collection
+        
+          ReferenceDataOrDataset ..> StandardsCollectionTag : collection
+        
       ReferenceDataOrDataset : concerns_data_topic
-        ReferenceDataOrDataset <.. DataTopic : concerns_data_topic
+        
+          ReferenceDataOrDataset ..> DataTopic : concerns_data_topic
+        
       ReferenceDataOrDataset : description
-        ReferenceDataOrDataset <.. string : description
+        
       ReferenceDataOrDataset : formal_specification
-        ReferenceDataOrDataset <.. uriorcurie : formal_specification
+        
       ReferenceDataOrDataset : has_relevant_organization
-        ReferenceDataOrDataset <.. Organization : has_relevant_organization
+        
+          ReferenceDataOrDataset ..> Organization : has_relevant_organization
+        
       ReferenceDataOrDataset : id
-        ReferenceDataOrDataset <.. uriorcurie : id
+        
       ReferenceDataOrDataset : is_open
-        ReferenceDataOrDataset <.. boolean : is_open
+        
       ReferenceDataOrDataset : name
-        ReferenceDataOrDataset <.. string : name
+        
+      ReferenceDataOrDataset : not_relevant_to_dgps
+        
       ReferenceDataOrDataset : publication
-        ReferenceDataOrDataset <.. uriorcurie : publication
+        
       ReferenceDataOrDataset : purpose_detail
-        ReferenceDataOrDataset <.. string : purpose_detail
+        
       ReferenceDataOrDataset : related_to
-        ReferenceDataOrDataset <.. NamedThing : related_to
+        
+          ReferenceDataOrDataset ..> NamedThing : related_to
+        
       ReferenceDataOrDataset : requires_registration
-        ReferenceDataOrDataset <.. boolean : requires_registration
+        
       ReferenceDataOrDataset : subclass_of
-        ReferenceDataOrDataset <.. NamedThing : subclass_of
+        
+          ReferenceDataOrDataset ..> NamedThing : subclass_of
+        
       ReferenceDataOrDataset : url
-        ReferenceDataOrDataset <.. uriorcurie : url
+        
       
 ```
 
@@ -70,6 +82,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset](h
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | [DataStandardOrTool](DataStandardOrTool.md) |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -259,6 +272,18 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: uriorcurie
+  not_relevant_to_dgps:
+    name: not_relevant_to_dgps
+    description: Is the standard or tool currently relevant to DGPs?
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: not_relevant_to_dgps
+    owner: ReferenceDataOrDataset
+    domain_of:
+    - DataStandardOrTool
+    range: boolean
   id:
     name: id
     description: A unique identifier for a thing.

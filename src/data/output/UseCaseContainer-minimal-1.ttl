@@ -1,12 +1,12 @@
-@prefix STANDARDSUSECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/> .
+@prefix B2AI_USECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/> .
 
-STANDARDSUSECASE:1 a STANDARDSUSECASE:UseCase ;
-    STANDARDSUSECASE:use_case_category "acquisition" .
+B2AI_USECASE:1 a B2AI_USECASE:UseCase ;
+    B2AI_USECASE:use_case_category "acquisition" .
 
-STANDARDSUSECASE:2 a STANDARDSUSECASE:UseCase ;
-    STANDARDSUSECASE:use_case_category "acquisition" .
+B2AI_USECASE:2 a B2AI_USECASE:UseCase ;
+    B2AI_USECASE:use_case_category "acquisition" .
 
-[] a STANDARDSUSECASE:UseCaseContainer ;
-    STANDARDSUSECASE:use_cases STANDARDSUSECASE:1,
-        STANDARDSUSECASE:2 .
+[] a B2AI_USECASE:UseCaseContainer ;
+    B2AI_USECASE:use_cases B2AI_USECASE:1,
+        B2AI_USECASE:2 .
 

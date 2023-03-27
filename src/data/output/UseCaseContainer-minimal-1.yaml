@@ -1,5 +1,5 @@
 use_cases:
-- id: STANDARDSUSECASE:1
+- id: B2AI_USECASE:1
   use_case_category: acquisition
-- id: STANDARDSUSECASE:2
+- id: B2AI_USECASE:2
   use_case_category: acquisition

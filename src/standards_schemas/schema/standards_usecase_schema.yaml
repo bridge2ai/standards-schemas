@@ -8,13 +8,13 @@ see_also:
   - https://bridge2ai.github.io/standards-schema
 
 prefixes:
-  STANDARDSUSECASE: https://w3id.org/bridge2ai/standards-usecase-schema/
-  STANDARDSDATASUBSTRATE: https://w3id.org/bridge2ai/standards-datasubstrate-schema/
+  B2AI_USECASE: https://w3id.org/bridge2ai/standards-usecase-schema/
+  B2AI_SUBSTRATE: https://w3id.org/bridge2ai/standards-datasubstrate-schema/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
-default_prefix: STANDARDSUSECASE
+default_prefix: B2AI_USECASE
 default_range: string
 
 imports:

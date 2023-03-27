@@ -1,10 +1,10 @@
 # Example DataTopic data
 
-id: STANDARDSDATATOPIC:2
+id: B2AI_TOPIC:2
 name: Biology
 category: DataTopic
 subclass_of:
-  - STANDARDSDATATOPIC:1
+  - B2AI_TOPIC:1
 description: Data involving any study of living organisms at any scale.
 edam_id: edam.topic:3070
 mesh_id: mesh:D001695

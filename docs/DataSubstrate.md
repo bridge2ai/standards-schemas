@@ -14,29 +14,33 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrate](https://w3
       NamedThing <|-- DataSubstrate
       
       DataSubstrate : category
-        DataSubstrate <.. category_type : category
+        
       DataSubstrate : description
-        DataSubstrate <.. string : description
+        
       DataSubstrate : edam_id
-        DataSubstrate <.. edam_identifier : edam_id
+        
       DataSubstrate : file_extensions
-        DataSubstrate <.. string : file_extensions
+        
       DataSubstrate : id
-        DataSubstrate <.. uriorcurie : id
+        
       DataSubstrate : limitations
-        DataSubstrate <.. string : limitations
+        
       DataSubstrate : mesh_id
-        DataSubstrate <.. mesh_identifier : mesh_id
+        
       DataSubstrate : metadata_storage
-        DataSubstrate <.. string : metadata_storage
+        
       DataSubstrate : name
-        DataSubstrate <.. string : name
+        
       DataSubstrate : ncit_id
-        DataSubstrate <.. ncit_identifier : ncit_id
+        
       DataSubstrate : related_to
-        DataSubstrate <.. NamedThing : related_to
+        
+          DataSubstrate ..> NamedThing : related_to
+        
       DataSubstrate : subclass_of
-        DataSubstrate <.. NamedThing : subclass_of
+        
+          DataSubstrate ..> NamedThing : subclass_of
+        
       
 ```
 

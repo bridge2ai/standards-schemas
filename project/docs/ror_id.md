@@ -25,5 +25,5 @@ None &#8594;  <sub>0..1</sub> [RorIdentifier](types/RorIdentifier.md)
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example(value='ROR:02mp31p96', description=None) |
+| **Examples:** | | Example(value='ROR:02mp31p96', description=None, object=None) |
 
