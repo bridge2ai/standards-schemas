@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-03-20T18:11:40
+# Generation date: 2023-03-27T13:36:08
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -208,8 +208,8 @@ class DataStandardOrTool(NamedThing):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.DataStandardOrTool
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:DataStandardOrTool"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.DataStandardOrTool
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:DataStandardOrTool"
     class_name: ClassVar[str] = "DataStandardOrTool"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool")
 
@@ -274,8 +274,8 @@ class DataStandard(DataStandardOrTool):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.DataStandard
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:DataStandard"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.DataStandard
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:DataStandard"
     class_name: ClassVar[str] = "DataStandard"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataStandard")
 
@@ -298,8 +298,8 @@ class BiomedicalStandard(DataStandard):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.BiomedicalStandard
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:BiomedicalStandard"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.BiomedicalStandard
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:BiomedicalStandard"
     class_name: ClassVar[str] = "BiomedicalStandard"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard")
 
@@ -321,8 +321,8 @@ class Registry(DataStandardOrTool):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.Registry
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:Registry"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.Registry
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:Registry"
     class_name: ClassVar[str] = "Registry"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/Registry")
 
@@ -344,8 +344,8 @@ class OntologyOrVocabulary(DataStandardOrTool):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.OntologyOrVocabulary
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:OntologyOrVocabulary"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.OntologyOrVocabulary
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:OntologyOrVocabulary"
     class_name: ClassVar[str] = "OntologyOrVocabulary"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/OntologyOrVocabulary")
 
@@ -368,8 +368,8 @@ class ModelRepository(DataStandardOrTool):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.ModelRepository
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:ModelRepository"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.ModelRepository
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:ModelRepository"
     class_name: ClassVar[str] = "ModelRepository"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/ModelRepository")
 
@@ -391,8 +391,8 @@ class ReferenceDataOrDataset(DataStandardOrTool):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.ReferenceDataOrDataset
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:ReferenceDataOrDataset"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.ReferenceDataOrDataset
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:ReferenceDataOrDataset"
     class_name: ClassVar[str] = "ReferenceDataOrDataset"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/ReferenceDataOrDataset")
 
@@ -414,8 +414,8 @@ class SoftwareOrTool(DataStandardOrTool):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.SoftwareOrTool
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:SoftwareOrTool"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.SoftwareOrTool
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:SoftwareOrTool"
     class_name: ClassVar[str] = "SoftwareOrTool"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool")
 
@@ -438,8 +438,8 @@ class ReferenceImplementation(DataStandardOrTool):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.ReferenceImplementation
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:ReferenceImplementation"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.ReferenceImplementation
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:ReferenceImplementation"
     class_name: ClassVar[str] = "ReferenceImplementation"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/ReferenceImplementation")
 
@@ -462,8 +462,8 @@ class TrainingProgram(DataStandardOrTool):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.TrainingProgram
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:TrainingProgram"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.TrainingProgram
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:TrainingProgram"
     class_name: ClassVar[str] = "TrainingProgram"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram")
 
@@ -485,8 +485,8 @@ class DataStandardOrToolContainer(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = B2AI.STANDARD.DataStandardOrToolContainer
-    class_class_curie: ClassVar[str] = "B2AI.STANDARD:DataStandardOrToolContainer"
+    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD.DataStandardOrToolContainer
+    class_class_curie: ClassVar[str] = "B2AI_STANDARD:DataStandardOrToolContainer"
     class_name: ClassVar[str] = "DataStandardOrToolContainer"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer")
 
@@ -508,8 +508,8 @@ class DataSubstrate(NamedThing):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.SUBSTRATE.DataSubstrate
-    class_class_curie: ClassVar[str] = "B2AI.SUBSTRATE:DataSubstrate"
+    class_class_uri: ClassVar[URIRef] = B2AI_SUBSTRATE.DataSubstrate
+    class_class_curie: ClassVar[str] = "B2AI_SUBSTRATE:DataSubstrate"
     class_name: ClassVar[str] = "DataSubstrate"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate")
 
@@ -558,8 +558,8 @@ class DataSubstrateContainer(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = B2AI.SUBSTRATE.DataSubstrateContainer
-    class_class_curie: ClassVar[str] = "B2AI.SUBSTRATE:DataSubstrateContainer"
+    class_class_uri: ClassVar[URIRef] = B2AI_SUBSTRATE.DataSubstrateContainer
+    class_class_curie: ClassVar[str] = "B2AI_SUBSTRATE:DataSubstrateContainer"
     class_name: ClassVar[str] = "DataSubstrateContainer"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer")
 
@@ -578,8 +578,8 @@ class DataTopic(NamedThing):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.TOPIC.DataTopic
-    class_class_curie: ClassVar[str] = "B2AI.TOPIC:DataTopic"
+    class_class_uri: ClassVar[URIRef] = B2AI_TOPIC.DataTopic
+    class_class_curie: ClassVar[str] = "B2AI_TOPIC:DataTopic"
     class_name: ClassVar[str] = "DataTopic"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataTopic")
 
@@ -613,8 +613,8 @@ class DataTopicContainer(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = B2AI.TOPIC.DataTopicContainer
-    class_class_curie: ClassVar[str] = "B2AI.TOPIC:DataTopicContainer"
+    class_class_uri: ClassVar[URIRef] = B2AI_TOPIC.DataTopicContainer
+    class_class_curie: ClassVar[str] = "B2AI_TOPIC:DataTopicContainer"
     class_name: ClassVar[str] = "DataTopicContainer"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer")
 
@@ -633,8 +633,8 @@ class Organization(NamedThing):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.ORGANIZATION.Organization
-    class_class_curie: ClassVar[str] = "B2AI.ORGANIZATION:Organization"
+    class_class_uri: ClassVar[URIRef] = B2AI_ORGANIZATION.Organization
+    class_class_curie: ClassVar[str] = "B2AI_ORGANIZATION:Organization"
     class_name: ClassVar[str] = "Organization"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/Organization")
 
@@ -673,8 +673,8 @@ class OrganizationContainer(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = B2AI.ORGANIZATION.OrganizationContainer
-    class_class_curie: ClassVar[str] = "B2AI.ORGANIZATION:OrganizationContainer"
+    class_class_uri: ClassVar[URIRef] = B2AI_ORGANIZATION.OrganizationContainer
+    class_class_curie: ClassVar[str] = "B2AI_ORGANIZATION:OrganizationContainer"
     class_name: ClassVar[str] = "OrganizationContainer"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer")
 
@@ -693,8 +693,8 @@ class UseCase(NamedThing):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI.USECASE.UseCase
-    class_class_curie: ClassVar[str] = "B2AI.USECASE:UseCase"
+    class_class_uri: ClassVar[URIRef] = B2AI_USECASE.UseCase
+    class_class_curie: ClassVar[str] = "B2AI_USECASE:UseCase"
     class_name: ClassVar[str] = "UseCase"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/UseCase")
 
@@ -773,8 +773,8 @@ class UseCaseContainer(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = B2AI.USECASE.UseCaseContainer
-    class_class_curie: ClassVar[str] = "B2AI.USECASE:UseCaseContainer"
+    class_class_uri: ClassVar[URIRef] = B2AI_USECASE.UseCaseContainer
+    class_class_curie: ClassVar[str] = "B2AI_USECASE:UseCaseContainer"
     class_name: ClassVar[str] = "UseCaseContainer"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer")
 
@@ -952,95 +952,95 @@ slots.related_to = Slot(uri=B2AI.related_to, name="related_to", curie=B2AI.curie
 slots.subclass_of = Slot(uri=B2AI.subclass_of, name="subclass_of", curie=B2AI.curie('subclass_of'),
                    model_uri=DEFAULT_.subclass_of, domain=NamedThing, range=Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]])
 
-slots.collection = Slot(uri=B2AI.STANDARD.collection, name="collection", curie=B2AI.STANDARD.curie('collection'),
+slots.collection = Slot(uri=B2AI_STANDARD.collection, name="collection", curie=B2AI_STANDARD.curie('collection'),
                    model_uri=DEFAULT_.collection, domain=NamedThing, range=Optional[Union[Union[str, "StandardsCollectionTag"], List[Union[str, "StandardsCollectionTag"]]]])
 
-slots.purpose_detail = Slot(uri=B2AI.STANDARD.purpose_detail, name="purpose_detail", curie=B2AI.STANDARD.curie('purpose_detail'),
+slots.purpose_detail = Slot(uri=B2AI_STANDARD.purpose_detail, name="purpose_detail", curie=B2AI_STANDARD.curie('purpose_detail'),
                    model_uri=DEFAULT_.purpose_detail, domain=NamedThing, range=Optional[str])
 
-slots.is_open = Slot(uri=B2AI.STANDARD.is_open, name="is_open", curie=B2AI.STANDARD.curie('is_open'),
+slots.is_open = Slot(uri=B2AI_STANDARD.is_open, name="is_open", curie=B2AI_STANDARD.curie('is_open'),
                    model_uri=DEFAULT_.is_open, domain=NamedThing, range=Optional[Union[bool, Bool]])
 
-slots.requires_registration = Slot(uri=B2AI.STANDARD.requires_registration, name="requires_registration", curie=B2AI.STANDARD.curie('requires_registration'),
+slots.requires_registration = Slot(uri=B2AI_STANDARD.requires_registration, name="requires_registration", curie=B2AI_STANDARD.curie('requires_registration'),
                    model_uri=DEFAULT_.requires_registration, domain=NamedThing, range=Optional[Union[bool, Bool]])
 
-slots.concerns_data_topic = Slot(uri=B2AI.STANDARD.concerns_data_topic, name="concerns_data_topic", curie=B2AI.STANDARD.curie('concerns_data_topic'),
+slots.concerns_data_topic = Slot(uri=B2AI_STANDARD.concerns_data_topic, name="concerns_data_topic", curie=B2AI_STANDARD.curie('concerns_data_topic'),
                    model_uri=DEFAULT_.concerns_data_topic, domain=DataStandardOrTool, range=Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]])
 
-slots.publication = Slot(uri=B2AI.STANDARD.publication, name="publication", curie=B2AI.STANDARD.curie('publication'),
+slots.publication = Slot(uri=B2AI_STANDARD.publication, name="publication", curie=B2AI_STANDARD.curie('publication'),
                    model_uri=DEFAULT_.publication, domain=NamedThing, range=Optional[Union[str, URIorCURIE]])
 
-slots.formal_specification = Slot(uri=B2AI.STANDARD.formal_specification, name="formal_specification", curie=B2AI.STANDARD.curie('formal_specification'),
+slots.formal_specification = Slot(uri=B2AI_STANDARD.formal_specification, name="formal_specification", curie=B2AI_STANDARD.curie('formal_specification'),
                    model_uri=DEFAULT_.formal_specification, domain=NamedThing, range=Optional[Union[str, URIorCURIE]])
 
-slots.has_relevant_organization = Slot(uri=B2AI.STANDARD.has_relevant_organization, name="has_relevant_organization", curie=B2AI.STANDARD.curie('has_relevant_organization'),
+slots.has_relevant_organization = Slot(uri=B2AI_STANDARD.has_relevant_organization, name="has_relevant_organization", curie=B2AI_STANDARD.curie('has_relevant_organization'),
                    model_uri=DEFAULT_.has_relevant_organization, domain=DataStandardOrTool, range=Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]])
 
-slots.data_standardortools_collection = Slot(uri=B2AI.STANDARD.data_standardortools_collection, name="data_standardortools_collection", curie=B2AI.STANDARD.curie('data_standardortools_collection'),
+slots.data_standardortools_collection = Slot(uri=B2AI_STANDARD.data_standardortools_collection, name="data_standardortools_collection", curie=B2AI_STANDARD.curie('data_standardortools_collection'),
                    model_uri=DEFAULT_.data_standardortools_collection, domain=None, range=Optional[Union[Dict[Union[str, DataStandardOrToolId], Union[dict, DataStandardOrTool]], List[Union[dict, DataStandardOrTool]]]])
 
-slots.not_relevant_to_dgps = Slot(uri=B2AI.STANDARD.not_relevant_to_dgps, name="not_relevant_to_dgps", curie=B2AI.STANDARD.curie('not_relevant_to_dgps'),
+slots.not_relevant_to_dgps = Slot(uri=B2AI_STANDARD.not_relevant_to_dgps, name="not_relevant_to_dgps", curie=B2AI_STANDARD.curie('not_relevant_to_dgps'),
                    model_uri=DEFAULT_.not_relevant_to_dgps, domain=NamedThing, range=Optional[Union[bool, Bool]])
 
-slots.metadata_storage = Slot(uri=B2AI.SUBSTRATE.metadata_storage, name="metadata_storage", curie=B2AI.SUBSTRATE.curie('metadata_storage'),
+slots.metadata_storage = Slot(uri=B2AI_SUBSTRATE.metadata_storage, name="metadata_storage", curie=B2AI_SUBSTRATE.curie('metadata_storage'),
                    model_uri=DEFAULT_.metadata_storage, domain=NamedThing, range=Optional[Union[str, List[str]]])
 
-slots.file_extensions = Slot(uri=B2AI.SUBSTRATE.file_extensions, name="file_extensions", curie=B2AI.SUBSTRATE.curie('file_extensions'),
+slots.file_extensions = Slot(uri=B2AI_SUBSTRATE.file_extensions, name="file_extensions", curie=B2AI_SUBSTRATE.curie('file_extensions'),
                    model_uri=DEFAULT_.file_extensions, domain=NamedThing, range=Optional[Union[str, List[str]]])
 
-slots.limitations = Slot(uri=B2AI.SUBSTRATE.limitations, name="limitations", curie=B2AI.SUBSTRATE.curie('limitations'),
+slots.limitations = Slot(uri=B2AI_SUBSTRATE.limitations, name="limitations", curie=B2AI_SUBSTRATE.curie('limitations'),
                    model_uri=DEFAULT_.limitations, domain=NamedThing, range=Optional[Union[str, List[str]]])
 
-slots.data_substrates_collection = Slot(uri=B2AI.SUBSTRATE.data_substrates_collection, name="data_substrates_collection", curie=B2AI.SUBSTRATE.curie('data_substrates_collection'),
+slots.data_substrates_collection = Slot(uri=B2AI_SUBSTRATE.data_substrates_collection, name="data_substrates_collection", curie=B2AI_SUBSTRATE.curie('data_substrates_collection'),
                    model_uri=DEFAULT_.data_substrates_collection, domain=None, range=Optional[Union[Dict[Union[str, DataSubstrateId], Union[dict, DataSubstrate]], List[Union[dict, DataSubstrate]]]])
 
-slots.data_topics_collection = Slot(uri=B2AI.TOPIC.data_topics_collection, name="data_topics_collection", curie=B2AI.TOPIC.curie('data_topics_collection'),
+slots.data_topics_collection = Slot(uri=B2AI_TOPIC.data_topics_collection, name="data_topics_collection", curie=B2AI_TOPIC.curie('data_topics_collection'),
                    model_uri=DEFAULT_.data_topics_collection, domain=None, range=Optional[Union[Dict[Union[str, DataTopicId], Union[dict, DataTopic]], List[Union[dict, DataTopic]]]])
 
-slots.ror_id = Slot(uri=B2AI.ORGANIZATION.ror_id, name="ror_id", curie=B2AI.ORGANIZATION.curie('ror_id'),
+slots.ror_id = Slot(uri=B2AI_ORGANIZATION.ror_id, name="ror_id", curie=B2AI_ORGANIZATION.curie('ror_id'),
                    model_uri=DEFAULT_.ror_id, domain=None, range=Optional[Union[str, RorIdentifier]])
 
-slots.wikidata_id = Slot(uri=B2AI.ORGANIZATION.wikidata_id, name="wikidata_id", curie=B2AI.ORGANIZATION.curie('wikidata_id'),
+slots.wikidata_id = Slot(uri=B2AI_ORGANIZATION.wikidata_id, name="wikidata_id", curie=B2AI_ORGANIZATION.curie('wikidata_id'),
                    model_uri=DEFAULT_.wikidata_id, domain=None, range=Optional[Union[str, WikidataIdentifier]])
 
-slots.organizations = Slot(uri=B2AI.ORGANIZATION.organizations, name="organizations", curie=B2AI.ORGANIZATION.curie('organizations'),
+slots.organizations = Slot(uri=B2AI_ORGANIZATION.organizations, name="organizations", curie=B2AI_ORGANIZATION.curie('organizations'),
                    model_uri=DEFAULT_.organizations, domain=None, range=Optional[Union[Dict[Union[str, OrganizationId], Union[dict, Organization]], List[Union[dict, Organization]]]])
 
-slots.use_case_category = Slot(uri=B2AI.USECASE.use_case_category, name="use_case_category", curie=B2AI.USECASE.curie('use_case_category'),
+slots.use_case_category = Slot(uri=B2AI_USECASE.use_case_category, name="use_case_category", curie=B2AI_USECASE.curie('use_case_category'),
                    model_uri=DEFAULT_.use_case_category, domain=NamedThing, range=Optional[Union[str, "UseCaseCategory"]])
 
-slots.known_limitations = Slot(uri=B2AI.USECASE.known_limitations, name="known_limitations", curie=B2AI.USECASE.curie('known_limitations'),
+slots.known_limitations = Slot(uri=B2AI_USECASE.known_limitations, name="known_limitations", curie=B2AI_USECASE.curie('known_limitations'),
                    model_uri=DEFAULT_.known_limitations, domain=NamedThing, range=Optional[str])
 
-slots.relevance_to_dgps = Slot(uri=B2AI.USECASE.relevance_to_dgps, name="relevance_to_dgps", curie=B2AI.USECASE.curie('relevance_to_dgps'),
+slots.relevance_to_dgps = Slot(uri=B2AI_USECASE.relevance_to_dgps, name="relevance_to_dgps", curie=B2AI_USECASE.curie('relevance_to_dgps'),
                    model_uri=DEFAULT_.relevance_to_dgps, domain=None, range=Optional[Union[Union[str, "DataGeneratingProject"], List[Union[str, "DataGeneratingProject"]]]])
 
-slots.data_topics = Slot(uri=B2AI.USECASE.data_topics, name="data_topics", curie=B2AI.USECASE.curie('data_topics'),
+slots.data_topics = Slot(uri=B2AI_USECASE.data_topics, name="data_topics", curie=B2AI_USECASE.curie('data_topics'),
                    model_uri=DEFAULT_.data_topics, domain=NamedThing, range=Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]])
 
-slots.data_substrates = Slot(uri=B2AI.USECASE.data_substrates, name="data_substrates", curie=B2AI.USECASE.curie('data_substrates'),
+slots.data_substrates = Slot(uri=B2AI_USECASE.data_substrates, name="data_substrates", curie=B2AI_USECASE.curie('data_substrates'),
                    model_uri=DEFAULT_.data_substrates, domain=NamedThing, range=Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]])
 
-slots.standards_and_tools_for_dgp_use = Slot(uri=B2AI.USECASE.standards_and_tools_for_dgp_use, name="standards_and_tools_for_dgp_use", curie=B2AI.USECASE.curie('standards_and_tools_for_dgp_use'),
+slots.standards_and_tools_for_dgp_use = Slot(uri=B2AI_USECASE.standards_and_tools_for_dgp_use, name="standards_and_tools_for_dgp_use", curie=B2AI_USECASE.curie('standards_and_tools_for_dgp_use'),
                    model_uri=DEFAULT_.standards_and_tools_for_dgp_use, domain=NamedThing, range=Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]])
 
-slots.alternative_standards_and_tools = Slot(uri=B2AI.USECASE.alternative_standards_and_tools, name="alternative_standards_and_tools", curie=B2AI.USECASE.curie('alternative_standards_and_tools'),
+slots.alternative_standards_and_tools = Slot(uri=B2AI_USECASE.alternative_standards_and_tools, name="alternative_standards_and_tools", curie=B2AI_USECASE.curie('alternative_standards_and_tools'),
                    model_uri=DEFAULT_.alternative_standards_and_tools, domain=NamedThing, range=Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]])
 
-slots.enables = Slot(uri=B2AI.USECASE.enables, name="enables", curie=B2AI.USECASE.curie('enables'),
+slots.enables = Slot(uri=B2AI_USECASE.enables, name="enables", curie=B2AI_USECASE.curie('enables'),
                    model_uri=DEFAULT_.enables, domain=NamedThing, range=Optional[Union[Union[str, UseCaseId], List[Union[str, UseCaseId]]]])
 
-slots.involved_in_experimental_design = Slot(uri=B2AI.USECASE.involved_in_experimental_design, name="involved_in_experimental_design", curie=B2AI.USECASE.curie('involved_in_experimental_design'),
+slots.involved_in_experimental_design = Slot(uri=B2AI_USECASE.involved_in_experimental_design, name="involved_in_experimental_design", curie=B2AI_USECASE.curie('involved_in_experimental_design'),
                    model_uri=DEFAULT_.involved_in_experimental_design, domain=NamedThing, range=Optional[Union[bool, Bool]])
 
-slots.involved_in_metadata_management = Slot(uri=B2AI.USECASE.involved_in_metadata_management, name="involved_in_metadata_management", curie=B2AI.USECASE.curie('involved_in_metadata_management'),
+slots.involved_in_metadata_management = Slot(uri=B2AI_USECASE.involved_in_metadata_management, name="involved_in_metadata_management", curie=B2AI_USECASE.curie('involved_in_metadata_management'),
                    model_uri=DEFAULT_.involved_in_metadata_management, domain=NamedThing, range=Optional[Union[bool, Bool]])
 
-slots.involved_in_quality_control = Slot(uri=B2AI.USECASE.involved_in_quality_control, name="involved_in_quality_control", curie=B2AI.USECASE.curie('involved_in_quality_control'),
+slots.involved_in_quality_control = Slot(uri=B2AI_USECASE.involved_in_quality_control, name="involved_in_quality_control", curie=B2AI_USECASE.curie('involved_in_quality_control'),
                    model_uri=DEFAULT_.involved_in_quality_control, domain=NamedThing, range=Optional[Union[bool, Bool]])
 
-slots.use_cases = Slot(uri=B2AI.USECASE.use_cases, name="use_cases", curie=B2AI.USECASE.curie('use_cases'),
+slots.use_cases = Slot(uri=B2AI_USECASE.use_cases, name="use_cases", curie=B2AI_USECASE.curie('use_cases'),
                    model_uri=DEFAULT_.use_cases, domain=None, range=Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]])
 
-slots.UseCase_use_case_category = Slot(uri=B2AI.USECASE.use_case_category, name="UseCase_use_case_category", curie=B2AI.USECASE.curie('use_case_category'),
+slots.UseCase_use_case_category = Slot(uri=B2AI_USECASE.use_case_category, name="UseCase_use_case_category", curie=B2AI_USECASE.curie('use_case_category'),
                    model_uri=DEFAULT_.UseCase_use_case_category, domain=UseCase, range=Union[str, "UseCaseCategory"])

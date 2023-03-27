@@ -8,14 +8,14 @@ see_also:
   - https://bridge2ai.github.io/standards-datastandardortool-schema
 
 prefixes:
-  B2AI.STANDARD: https://w3id.org/bridge2ai/standards-datastandardortool-schema/
-  B2AI.ORGANIZATION: https://w3id.org/bridge2ai/standards-organization-schema/
-  B2AI.TOPIC: https://w3id.org/bridge2ai/standards-datatopic-schema/
+  B2AI_STANDARD: https://w3id.org/bridge2ai/standards-datastandardortool-schema/
+  B2AI_ORGANIZATION: https://w3id.org/bridge2ai/standards-organization-schema/
+  B2AI_TOPIC: https://w3id.org/bridge2ai/standards-datatopic-schema/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
-default_prefix: B2AI.STANDARD
+default_prefix: B2AI_STANDARD
 default_range: string
 
 imports:
