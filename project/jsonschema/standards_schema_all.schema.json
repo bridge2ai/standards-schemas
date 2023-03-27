@@ -22,6 +22,23 @@
                     },
                     "type": "array"
                 },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
+                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -123,6 +140,23 @@
                     },
                     "type": "array"
                 },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
+                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -213,6 +247,23 @@
                     },
                     "type": "array"
                 },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
+                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -302,6 +353,23 @@
             "properties": {
                 "category": {
                     "description": "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\".",
+                    "type": "string"
+                },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
                     "type": "string"
                 },
                 "description": {
@@ -399,6 +467,23 @@
                     "description": "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\".",
                     "type": "string"
                 },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
+                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -481,6 +566,23 @@
                     },
                     "type": "array"
                 },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
+                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -557,6 +659,23 @@
                     "description": "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\".",
                     "type": "string"
                 },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
+                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -611,6 +730,23 @@
                         "type": "string"
                     },
                     "type": "array"
+                },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
                 },
                 "description": {
                     "description": "A human-readable description for a thing.",
@@ -686,6 +822,23 @@
             "properties": {
                 "category": {
                     "description": "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\".",
+                    "type": "string"
+                },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
                     "type": "string"
                 },
                 "description": {
@@ -769,6 +922,23 @@
                         "type": "string"
                     },
                     "type": "array"
+                },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
                 },
                 "description": {
                     "description": "A human-readable description for a thing.",
@@ -860,6 +1030,23 @@
                     },
                     "type": "array"
                 },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
+                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -950,6 +1137,23 @@
                     },
                     "type": "array"
                 },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
+                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -1039,6 +1243,23 @@
                         "type": "string"
                     },
                     "type": "array"
+                },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
                 },
                 "description": {
                     "description": "A human-readable description for a thing.",
@@ -1171,6 +1392,23 @@
                     },
                     "type": "array"
                 },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": "string"
+                },
                 "description": {
                     "description": "A human-readable description for a thing.",
                     "type": "string"
@@ -1252,6 +1490,23 @@
                 },
                 "category": {
                     "description": "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\".",
+                    "type": "string"
+                },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": "string"
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": "string"
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
                     "type": "string"
                 },
                 "data_substrates": {

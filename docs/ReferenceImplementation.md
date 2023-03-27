@@ -23,6 +23,14 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation](
         
           ReferenceImplementation ..> DataTopic : concerns_data_topic
         
+      ReferenceImplementation : contribution_date
+        
+      ReferenceImplementation : contributor_github_name
+        
+      ReferenceImplementation : contributor_name
+        
+      ReferenceImplementation : contributor_orcid
+        
       ReferenceImplementation : description
         
       ReferenceImplementation : formal_specification
@@ -89,6 +97,10 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation](
 | [description](description.md) | 0..1 <br/> [String](String.md) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
 | [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
 | [related_to](related_to.md) | 0..* <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | [NamedThing](NamedThing.md) |
+| [contributor_name](contributor_name.md) | 0..1 <br/> [String](String.md) | The name of the person who added this node | [NamedThing](NamedThing.md) |
+| [contributor_github_name](contributor_github_name.md) | 0..1 <br/> [String](String.md) | The name of the github user who added this node | [NamedThing](NamedThing.md) |
+| [contributor_orcid](contributor_orcid.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The ORCiD of the person who added this node | [NamedThing](NamedThing.md) |
+| [contribution_date](contribution_date.md) | 0..1 <br/> [Date](Date.md) | The date on which the node was added | [NamedThing](NamedThing.md) |
 
 
 
@@ -370,6 +382,58 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+  contributor_name:
+    name: contributor_name
+    description: The name of the person who added this node.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contributor_name
+    owner: ReferenceImplementation
+    domain_of:
+    - NamedThing
+    range: string
+  contributor_github_name:
+    name: contributor_github_name
+    description: The name of the github user who added this node.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contributor_github_name
+    owner: ReferenceImplementation
+    domain_of:
+    - NamedThing
+    range: string
+  contributor_orcid:
+    name: contributor_orcid
+    description: The ORCiD of the person who added this node.
+    examples:
+    - value: ORCID:0000-0001-1234-5678
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contributor_orcid
+    owner: ReferenceImplementation
+    domain_of:
+    - NamedThing
+    range: uriorcurie
+  contribution_date:
+    name: contribution_date
+    description: The date on which the node was added.
+    examples:
+    - value: '2023-03-20'
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contribution_date
+    owner: ReferenceImplementation
+    domain_of:
+    - NamedThing
+    range: date
 
 ```
 </details>

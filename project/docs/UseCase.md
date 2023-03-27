@@ -7,7 +7,7 @@ Represents a use case for Bridge2AI standards.
 URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase](https://w3id.org/bridge2ai/standards-schema-all/UseCase)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<enables%200..*-%20[UseCase&#124;use_case_category:UseCaseCategory;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20*;involved_in_experimental_design:boolean%20%3F;involved_in_metadata_management:boolean%20%3F;involved_in_quality_control:boolean%20%3F;xref:uriorcurie%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]<alternative_standards_and_tools%200..*-%20[UseCase],[DataStandardOrTool]<standards_and_tools_for_dgp_use%200..*-%20[UseCase],[DataSubstrate]<data_substrates%200..*-%20[UseCase],[DataTopic]<data_topics%200..*-%20[UseCase],[UseCaseContainer]++-%20use_cases%200..*>[UseCase],[NamedThing]^-[UseCase],[UseCaseContainer],[NamedThing],[DataTopic],[DataSubstrate],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<enables%200..*-%20[UseCase&#124;use_case_category:UseCaseCategory;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20*;involved_in_experimental_design:boolean%20%3F;involved_in_metadata_management:boolean%20%3F;involved_in_quality_control:boolean%20%3F;xref:uriorcurie%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]<alternative_standards_and_tools%200..*-%20[UseCase],[DataStandardOrTool]<standards_and_tools_for_dgp_use%200..*-%20[UseCase],[DataSubstrate]<data_substrates%200..*-%20[UseCase],[DataTopic]<data_topics%200..*-%20[UseCase],[UseCaseContainer]++-%20use_cases%200..*>[UseCase],[NamedThing]^-[UseCase],[UseCaseContainer],[NamedThing],[DataTopic],[DataSubstrate],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<enables%200..*-%20[UseCase&#124;use_case_category:UseCaseCategory;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20*;involved_in_experimental_design:boolean%20%3F;involved_in_metadata_management:boolean%20%3F;involved_in_quality_control:boolean%20%3F;xref:uriorcurie%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]<alternative_standards_and_tools%200..*-%20[UseCase],[DataStandardOrTool]<standards_and_tools_for_dgp_use%200..*-%20[UseCase],[DataSubstrate]<data_substrates%200..*-%20[UseCase],[DataTopic]<data_topics%200..*-%20[UseCase],[UseCaseContainer]++-%20use_cases%200..*>[UseCase],[NamedThing]^-[UseCase],[UseCaseContainer],[NamedThing],[DataTopic],[DataSubstrate],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<enables%200..*-%20[UseCase&#124;use_case_category:UseCaseCategory;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20*;involved_in_experimental_design:boolean%20%3F;involved_in_metadata_management:boolean%20%3F;involved_in_quality_control:boolean%20%3F;xref:uriorcurie%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]<alternative_standards_and_tools%200..*-%20[UseCase],[DataStandardOrTool]<standards_and_tools_for_dgp_use%200..*-%20[UseCase],[DataSubstrate]<data_substrates%200..*-%20[UseCase],[DataTopic]<data_topics%200..*-%20[UseCase],[UseCaseContainer]++-%20use_cases%200..*>[UseCase],[NamedThing]^-[UseCase],[UseCaseContainer],[NamedThing],[DataTopic],[DataSubstrate],[DataStandardOrTool])
 
 ## Parents
 
@@ -80,3 +80,17 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase](https://w3id.org/
  * [related_to](related_to.md)  <sub>0..\*</sub>
      * Description: A relationship that is asserted between two named things.
      * Range: [NamedThing](NamedThing.md)
+ * [contributor_name](contributor_name.md)  <sub>0..1</sub>
+     * Description: The name of the person who added this node.
+     * Range: [String](types/String.md)
+ * [contributor_github_name](contributor_github_name.md)  <sub>0..1</sub>
+     * Description: The name of the github user who added this node.
+     * Range: [String](types/String.md)
+ * [contributor_orcid](contributor_orcid.md)  <sub>0..1</sub>
+     * Description: The ORCiD of the person who added this node.
+     * Range: [Uriorcurie](types/Uriorcurie.md)
+     * Example: ORCID:0000-0001-1234-5678 None
+ * [contribution_date](contribution_date.md)  <sub>0..1</sub>
+     * Description: The date on which the node was added.
+     * Range: [Date](types/Date.md)
+     * Example: 2023-03-20 None

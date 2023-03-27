@@ -5,6 +5,9 @@ description: BED (Browser Extensible Data) format provides a flexible way to def
   the data lines that are displayed in a genome annotation track.
 subclass_of:
 - B2AI_SUBSTRATE:1
+contributor_name: Kiran Neelam
+contributor_orcid: ORCID:0000-0001-1276-5602
+contribution_date: '2023-02-02'
 edam_id: edam.format:3003
 ncit_id: ncit:C153367
 metadata_storage:

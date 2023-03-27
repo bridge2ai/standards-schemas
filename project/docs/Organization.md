@@ -7,7 +7,7 @@ Represents a group or organization related to or responsible for one or more Bri
 URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id.org/bridge2ai/standards-schema-all/Organization)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to(i)%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to(i)%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to(i)%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing]<related_to(i)%200..*-%20[Organization&#124;ror_id:ror_identifier%20%3F;wikidata_id:wikidata_identifier%20%3F;url:uriorcurie%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]-%20has_relevant_organization%200..*>[Organization],[OrganizationContainer]++-%20organizations%200..*>[Organization],[NamedThing]^-[Organization],[OrganizationContainer],[NamedThing],[DataStandardOrTool])
 
 ## Parents
 
@@ -55,3 +55,17 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
  * [subclass_of](subclass_of.md)  <sub>0..\*</sub>
      * Description: Holds between two classes where the domain class is a specialization of the range class.
      * Range: [NamedThing](NamedThing.md)
+ * [contributor_name](contributor_name.md)  <sub>0..1</sub>
+     * Description: The name of the person who added this node.
+     * Range: [String](types/String.md)
+ * [contributor_github_name](contributor_github_name.md)  <sub>0..1</sub>
+     * Description: The name of the github user who added this node.
+     * Range: [String](types/String.md)
+ * [contributor_orcid](contributor_orcid.md)  <sub>0..1</sub>
+     * Description: The ORCiD of the person who added this node.
+     * Range: [Uriorcurie](types/Uriorcurie.md)
+     * Example: ORCID:0000-0001-1234-5678 None
+ * [contribution_date](contribution_date.md)  <sub>0..1</sub>
+     * Description: The date on which the node was added.
+     * Range: [Date](types/Date.md)
+     * Example: 2023-03-20 None

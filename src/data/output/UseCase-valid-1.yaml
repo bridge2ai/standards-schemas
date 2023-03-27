@@ -9,6 +9,9 @@ description: Collecting clinical data from patient visits involves the process o
   This may also include more focused evaluations, as with the AI-READI project’s assessments
   of cognitive function and visual acuity. Medical records may include structured/unstructured
   text, values for lab results, and/or images.
+contributor_name: Sashi Wattana
+contributor_orcid: ORCID:0000-0001-1234-5678
+contribution_date: '2023-01-01'
 use_case_category: acquisition
 known_limitations: xyz
 relevance_to_dgps:

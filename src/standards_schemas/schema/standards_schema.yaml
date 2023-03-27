@@ -66,6 +66,10 @@ classes:
       - description
       - subclass_of
       - related_to
+      - contributor_name
+      - contributor_github_name
+      - contributor_orcid
+      - contribution_date
     class_uri: schema:Thing
 
 slots:
@@ -140,6 +144,27 @@ slots:
       URI of corresponding class in an ontology
       of experimental procedures, in CURIE form.
     multivalued: true
+
+  contributor_name:
+    is_a: node_property
+    range: string
+    description: The name of the person who added this node.
+  contributor_github_name:
+    is_a: node_property
+    range: string
+    description: The name of the github user who added this node.
+  contributor_orcid:
+    is_a: node_property
+    range: uriorcurie
+    description: The ORCiD of the person who added this node.
+    examples:
+      - value: "ORCID:0000-0001-1234-5678"
+  contribution_date:
+    is_a: node_property
+    range: date
+    description: The date on which the node was added.
+    examples:
+      - value: "2023-03-20"
 
   related_to:
     description: >-

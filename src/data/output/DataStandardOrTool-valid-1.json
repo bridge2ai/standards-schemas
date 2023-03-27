@@ -3,6 +3,9 @@
   "category": "BiomedicalStandard",
   "name": "OMOP CDM",
   "description": "Observational Medical Outcomes Partnership Common Data Model",
+  "contributor_name": "Guadalupe Nurul",
+  "contributor_orcid": "ORCID:0000-0005-1272-5161",
+  "contribution_date": "2023-03-03",
   "collection": [
     "datamodel"
   ],

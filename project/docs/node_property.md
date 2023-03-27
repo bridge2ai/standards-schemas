@@ -18,6 +18,10 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/node_property](https://w3i
 
  *  [alternative_standards_and_tools](alternative_standards_and_tools.md)
  *  [collection](collection.md)
+ *  [contribution_date](contribution_date.md)
+ *  [contributor_github_name](contributor_github_name.md)
+ *  [contributor_name](contributor_name.md)
+ *  [contributor_orcid](contributor_orcid.md)
  *  [data_substrates](data_substrates.md)
  *  [data_topics](data_topics.md)
  *  [enables](enables.md)

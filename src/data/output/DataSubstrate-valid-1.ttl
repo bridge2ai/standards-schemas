@@ -1,11 +1,15 @@
 @prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_SUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/> .
 @prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 B2AI_SUBSTRATE:53 schema1:description "BED (Browser Extensible Data) format provides a flexible way to define the data lines that are displayed in a genome annotation track." ;
     schema1:name "BED" ;
     B2AI_SUBSTRATE:metadata_storage "file headers" ;
     B2AI:category "DataSubstrate" ;
+    B2AI:contribution_date "2023-02-02"^^xsd:date ;
+    B2AI:contributor_name "Kiran Neelam" ;
+    B2AI:contributor_orcid "ORCID:0000-0001-1276-5602"^^xsd:anyURI ;
     B2AI:edam_id "edam.format:3003" ;
     B2AI:ncit_id "ncit:C153367" ;
     B2AI:subclass_of B2AI_SUBSTRATE:1 .

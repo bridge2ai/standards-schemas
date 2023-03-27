@@ -6,6 +6,10 @@ type BiomedicalStandard
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -26,6 +30,10 @@ type DataStandard
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -46,6 +54,10 @@ type DataStandardOrTool
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -71,6 +83,10 @@ type DataSubstrate
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     edamId: EdamIdentifier
     meshId: MeshIdentifier
     ncitId: NcitIdentifier
@@ -92,6 +108,10 @@ type DataTopic
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     edamId: EdamIdentifier
     meshId: MeshIdentifier
     ncitId: NcitIdentifier
@@ -110,6 +130,10 @@ type ModelRepository
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -130,6 +154,10 @@ type NamedThing
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
   }
 
 type OntologyOrVocabulary
@@ -140,6 +168,10 @@ type OntologyOrVocabulary
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -159,6 +191,10 @@ type Organization
     name: String
     description: String
     subclassOf: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     rorId: RorIdentifier
     wikidataId: WikidataIdentifier
     url: Uriorcurie
@@ -178,6 +214,10 @@ type ReferenceDataOrDataset
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -198,6 +238,10 @@ type ReferenceImplementation
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -218,6 +262,10 @@ type Registry
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -238,6 +286,10 @@ type SoftwareOrTool
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -258,6 +310,10 @@ type TrainingProgram
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
@@ -278,6 +334,10 @@ type UseCase
     description: String
     subclassOf: [NamedThing]
     relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
     useCaseCategory: UseCaseCategory!
     knownLimitations: String
     relevanceToDgps: [DataGeneratingProject]
