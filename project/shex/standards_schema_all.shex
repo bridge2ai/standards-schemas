@@ -153,7 +153,11 @@ B2AI:NamedThing  (
              schema1:name @linkml:String ? ;
              schema1:description @linkml:String ? ;
              B2AI:subclass_of @B2AI:NamedThing * ;
-             B2AI:related_to @B2AI:NamedThing *
+             B2AI:related_to @B2AI:NamedThing * ;
+             B2AI:contributor_name @linkml:String ? ;
+             B2AI:contributor_github_name @linkml:String ? ;
+             B2AI:contributor_orcid @linkml:Uriorcurie ? ;
+             B2AI:contribution_date @linkml:Date ?
           ) ;
           rdf:type [ schema1:Thing ]
        )

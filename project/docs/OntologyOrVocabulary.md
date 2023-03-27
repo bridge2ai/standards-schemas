@@ -7,7 +7,7 @@ A set of concepts and categories, potentially defined or accompanied by their hi
 URI: [https://w3id.org/bridge2ai/standards-schema-all/OntologyOrVocabulary](https://w3id.org/bridge2ai/standards-schema-all/OntologyOrVocabulary)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[DataStandardOrTool]^-[OntologyOrVocabulary&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[NamedThing],[DataTopic],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[DataStandardOrTool]^-[OntologyOrVocabulary&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F],[NamedThing],[DataTopic],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[DataStandardOrTool]^-[OntologyOrVocabulary&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[NamedThing],[DataTopic],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[DataStandardOrTool]^-[OntologyOrVocabulary&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[NamedThing],[DataTopic],[DataStandardOrTool])
 
 ## Parents
 
@@ -36,6 +36,20 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/OntologyOrVocabulary](http
  * [related_to](related_to.md)  <sub>0..\*</sub>
      * Description: A relationship that is asserted between two named things.
      * Range: [NamedThing](NamedThing.md)
+ * [contributor_name](contributor_name.md)  <sub>0..1</sub>
+     * Description: The name of the person who added this node.
+     * Range: [String](types/String.md)
+ * [contributor_github_name](contributor_github_name.md)  <sub>0..1</sub>
+     * Description: The name of the github user who added this node.
+     * Range: [String](types/String.md)
+ * [contributor_orcid](contributor_orcid.md)  <sub>0..1</sub>
+     * Description: The ORCiD of the person who added this node.
+     * Range: [Uriorcurie](types/Uriorcurie.md)
+     * Example: ORCID:0000-0001-1234-5678 None
+ * [contribution_date](contribution_date.md)  <sub>0..1</sub>
+     * Description: The date on which the node was added.
+     * Range: [Date](types/Date.md)
+     * Example: 2023-03-20 None
  * [collection](collection.md)  <sub>0..\*</sub>
      * Description: Tags for specific sets of standards.
      * Range: [StandardsCollectionTag](StandardsCollectionTag.md)

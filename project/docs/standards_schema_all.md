@@ -50,6 +50,10 @@ High-level classes for Bridge2AI Standards schemas.
  * [node_property](node_property.md) - A grouping for any property that holds between a node and a value.
      * [alternative_standards_and_tools](alternative_standards_and_tools.md) - List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.
      * [collection](collection.md) - Tags for specific sets of standards.
+     * [contribution_date](contribution_date.md) - The date on which the node was added.
+     * [contributor_github_name](contributor_github_name.md) - The name of the github user who added this node.
+     * [contributor_name](contributor_name.md) - The name of the person who added this node.
+     * [contributor_orcid](contributor_orcid.md) - The ORCiD of the person who added this node.
      * [data_substrates](data_substrates.md) - Relevance of the use case to one or more data substrates.
      * [data_topics](data_topics.md) - Relevance of the use case to one or more data topics.
      * [enables](enables.md) - Other use case(s) this use case supports or makes possible.

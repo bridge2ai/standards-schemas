@@ -41,6 +41,10 @@ Name: standards-schema-all
 | [category](category.md) | Name of the high level ontology class in which this entity is categorized |
 | [collection](collection.md) | Tags for specific sets of standards |
 | [concerns_data_topic](concerns_data_topic.md) | Subject standard is generally applied in the context of object data topic |
+| [contribution_date](contribution_date.md) | The date on which the node was added |
+| [contributor_github_name](contributor_github_name.md) | The name of the github user who added this node |
+| [contributor_name](contributor_name.md) | The name of the person who added this node |
+| [contributor_orcid](contributor_orcid.md) | The ORCiD of the person who added this node |
 | [data_standardortools_collection](data_standardortools_collection.md) | Collection of associated data standards or tools |
 | [data_substrates](data_substrates.md) | Relevance of the use case to one or more data substrates |
 | [data_substrates_collection](data_substrates_collection.md) | Collection of associated data substrates |

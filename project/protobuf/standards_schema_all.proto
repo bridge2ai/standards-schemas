@@ -7,6 +7,10 @@ message BiomedicalStandard
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -27,6 +31,10 @@ message DataStandard
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -47,6 +55,10 @@ message DataStandardOrTool
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -72,6 +84,10 @@ message DataSubstrate
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
   edamIdentifier edamId = 0
   meshIdentifier meshId = 0
   ncitIdentifier ncitId = 0
@@ -93,6 +109,10 @@ message DataTopic
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
   edamIdentifier edamId = 0
   meshIdentifier meshId = 0
   ncitIdentifier ncitId = 0
@@ -111,6 +131,10 @@ message ModelRepository
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -131,6 +155,10 @@ message NamedThing
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  }
 // A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.
 message OntologyOrVocabulary
@@ -141,6 +169,10 @@ message OntologyOrVocabulary
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -160,6 +192,10 @@ message Organization
   string name = 0
   string description = 0
  repeated  namedThing subclassOf = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
   rorIdentifier rorId = 0
   wikidataIdentifier wikidataId = 0
   uriorcurie url = 0
@@ -179,6 +215,10 @@ message ReferenceDataOrDataset
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -199,6 +239,10 @@ message ReferenceImplementation
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -219,6 +263,10 @@ message Registry
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -239,6 +287,10 @@ message SoftwareOrTool
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -259,6 +311,10 @@ message TrainingProgram
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
@@ -279,6 +335,10 @@ message UseCase
   string description = 0
  repeated  namedThing subclassOf = 0
  repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
   useCaseCategory useCaseCategory = 0
   string knownLimitations = 0
  repeated  dataGeneratingProject relevanceToDgps = 0
