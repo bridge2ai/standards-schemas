@@ -9,17 +9,17 @@ relevance_to_dgps:
   - 2
   - 3
 data_topics:  # Representative IDs only
-  - B2AI.TOPIC:Image
-  - B2AI.TOPIC::Clinical_Observations
+  - B2AI_TOPIC:Image
+  - B2AI_TOPIC::Clinical_Observations
 standards_and_tools_for_dgp_use:  # Representative IDs only
-  - B2AI.STANDARD:DICOM
-  - B2AI.STANDARD:OMOP_CDM
+  - B2AI_STANDARD:DICOM
+  - B2AI_STANDARD:OMOP_CDM
 alternative_standards_and_tools:
 enables:
-  - B2AI.USECASE:5
-  - B2AI.USECASE:13
-  - B2AI.USECASE:17
-  - B2AI.USECASE:19
+  - B2AI_USECASE:5
+  - B2AI_USECASE:13
+  - B2AI_USECASE:17
+  - B2AI_USECASE:19
 involved_in_experimental_design: True
 involved_in_metadata_management: True
 involved_in_quality_control: "Not applicable"

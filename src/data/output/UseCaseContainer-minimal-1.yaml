@@ -1,0 +1,5 @@
+use_cases:
+- id: B2AI_USECASE:1
+  use_case_category: acquisition
+- id: B2AI_USECASE:2
+  use_case_category: acquisition

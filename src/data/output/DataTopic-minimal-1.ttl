@@ -1,0 +1,4 @@
+@prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
+
+B2AI_TOPIC:2 a B2AI_TOPIC:DataTopic .
+

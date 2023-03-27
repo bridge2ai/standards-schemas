@@ -1,0 +1,4 @@
+@prefix B2AI_SUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/> .
+
+B2AI_SUBSTRATE:53 a B2AI_SUBSTRATE:DataSubstrate .
+

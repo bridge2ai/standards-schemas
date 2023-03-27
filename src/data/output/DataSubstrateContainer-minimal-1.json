@@ -1,0 +1,11 @@
+{
+  "data_substrates_collection": [
+    {
+      "id": "B2AI_SUBSTRATE:1"
+    },
+    {
+      "id": "B2AI_SUBSTRATE:2"
+    }
+  ],
+  "@type": "DataSubstrateContainer"
+}

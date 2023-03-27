@@ -1,0 +1,18 @@
+id: B2AI_STANDARD:53
+category: BiomedicalStandard
+name: OMOP CDM
+description: Observational Medical Outcomes Partnership Common Data Model
+collection:
+- datamodel
+concerns_data_topic:
+- B2AI_TOPIC:4
+has_relevant_organization:
+- B2AI_ORGANIZATION:76
+purpose_detail: Open community data standard designed to standardize the structure
+  and content of observational data and to enable efficient analyses that can produce
+  reliable evidence.
+is_open: true
+requires_registration: false
+url: https://ohdsi.github.io/CommonDataModel/
+publication: doi:10.3233/978-1-61499-564-7-574
+formal_specification: https://github.com/OHDSI/CommonDataModel

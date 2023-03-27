@@ -1,0 +1,34 @@
+@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+@prefix B2AI_SUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/> .
+@prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
+@prefix B2AI_USECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+B2AI_USECASE:1 schema1:description "Collecting clinical data from patient visits involves the process of gathering information about a patient's medical history, current symptoms, and other relevant information during a healthcare appointment. This typically includes taking a detailed medical history, conducting a physical examination, ordering and interpreting diagnostic tests, and documenting the findings in the patient's medical record. This may also include more focused evaluations, as with the AI-READI project’s assessments of cognitive function and visual acuity. Medical records may include structured/unstructured text, values for lab results, and/or images." ;
+    schema1:name "Obtain patient data from records of clinical visits." ;
+    B2AI:category "UseCase" ;
+    B2AI:xref "B2AI_USECASE:123"^^xsd:anyURI,
+        "B2AI_USECASE:456"^^xsd:anyURI ;
+    B2AI_USECASE:alternative_standards_and_tools B2AI_STANDARD:123,
+        B2AI_STANDARD:555 ;
+    B2AI_USECASE:data_substrates B2AI_SUBSTRATE:12,
+        B2AI_SUBSTRATE:34 ;
+    B2AI_USECASE:data_topics B2AI_TOPIC:5,
+        B2AI_TOPIC:6 ;
+    B2AI_USECASE:enables B2AI_USECASE:13,
+        B2AI_USECASE:17,
+        B2AI_USECASE:19,
+        B2AI_USECASE:5 ;
+    B2AI_USECASE:involved_in_experimental_design true ;
+    B2AI_USECASE:involved_in_metadata_management true ;
+    B2AI_USECASE:involved_in_quality_control false ;
+    B2AI_USECASE:known_limitations "xyz" ;
+    B2AI_USECASE:relevance_to_dgps "aireadi",
+        "chorus",
+        "voice" ;
+    B2AI_USECASE:standards_and_tools_for_dgp_use B2AI_STANDARD:10,
+        B2AI_STANDARD:5 ;
+    B2AI_USECASE:use_case_category "acquisition" .
+

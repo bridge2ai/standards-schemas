@@ -1,0 +1,40 @@
+id: B2AI_USECASE:1
+category: UseCase
+name: Obtain patient data from records of clinical visits.
+description: Collecting clinical data from patient visits involves the process of
+  gathering information about a patient's medical history, current symptoms, and other
+  relevant information during a healthcare appointment. This typically includes taking
+  a detailed medical history, conducting a physical examination, ordering and interpreting
+  diagnostic tests, and documenting the findings in the patient's medical record.
+  This may also include more focused evaluations, as with the AI-READI project’s assessments
+  of cognitive function and visual acuity. Medical records may include structured/unstructured
+  text, values for lab results, and/or images.
+use_case_category: acquisition
+known_limitations: xyz
+relevance_to_dgps:
+- aireadi
+- chorus
+- voice
+data_topics:
+- B2AI_TOPIC:5
+- B2AI_TOPIC:6
+data_substrates:
+- B2AI_SUBSTRATE:12
+- B2AI_SUBSTRATE:34
+standards_and_tools_for_dgp_use:
+- B2AI_STANDARD:5
+- B2AI_STANDARD:10
+alternative_standards_and_tools:
+- B2AI_STANDARD:123
+- B2AI_STANDARD:555
+enables:
+- B2AI_USECASE:5
+- B2AI_USECASE:13
+- B2AI_USECASE:17
+- B2AI_USECASE:19
+involved_in_experimental_design: true
+involved_in_metadata_management: true
+involved_in_quality_control: false
+xref:
+- B2AI_USECASE:123
+- B2AI_USECASE:456

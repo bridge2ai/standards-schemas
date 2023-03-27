@@ -1,0 +1,10 @@
+@prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+
+B2AI_STANDARD:1 a B2AI_STANDARD:DataStandardOrTool .
+
+B2AI_STANDARD:2 a B2AI_STANDARD:DataStandardOrTool .
+
+[] a B2AI_STANDARD:DataStandardOrToolContainer ;
+    B2AI_STANDARD:data_standardortools_collection B2AI_STANDARD:1,
+        B2AI_STANDARD:2 .
+
