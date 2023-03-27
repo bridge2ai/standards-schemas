@@ -70,11 +70,11 @@ subclass_of:
 ```yaml
 category: Organization
 description: US Agency for Healthcare Research and Quality
-id: B2AI_ORGANIZATION:1
+id: B2AI_ORG:1
 name: AHRQ
 ror_id: ror:03jmfdf59
 subclass_of:
-- B2AI_ORGANIZATION:2
+- B2AI_ORG:2
 url: https://www.ahrq.gov/
 wikidata_id: wikidata:Q4692008
 
@@ -104,7 +104,7 @@ concerns_data_topic:
 description: Observational Medical Outcomes Partnership Common Data Model
 formal_specification: https://github.com/OHDSI/CommonDataModel
 has_relevant_organization:
-- B2AI_ORGANIZATION:76
+- B2AI_ORG:76
 id: B2AI_STANDARD:53
 is_open: true
 name: OMOP CDM
@@ -135,7 +135,7 @@ data_topics_collection:
 ## Organization-minimal-1
 ### Input
 ```yaml
-id: B2AI_ORGANIZATION:2
+id: B2AI_ORG:2
 
 ```
 ## UseCase-minimal-1
@@ -181,8 +181,8 @@ data_substrates_collection:
 ### Input
 ```yaml
 organizations:
-- id: B2AI_ORGANIZATION:1
-- id: B2AI_ORGANIZATION:2
+- id: B2AI_ORG:1
+- id: B2AI_ORG:2
 
 ```
 ## DataTopic-minimal-1
@@ -292,8 +292,8 @@ ROR_ID: ror_03jmfdf59
 URL: null
 Wikidata_ID: CHEBI:Q4692008
 description: My Uncle Greg's Storage Unit
-id: B2AI_ORGANIZATION:1
+id: B2AI_ORG:1
 name: null
-subclass_of: B2AI_ORGANIZATION:2
+subclass_of: B2AI_ORG:2
 
 ```

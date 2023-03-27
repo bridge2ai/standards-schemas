@@ -1,4 +1,4 @@
-@prefix B2AI_ORGANIZATION: <https://w3id.org/bridge2ai/standards-organization-schema/> .
+@prefix B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/> .
 
-B2AI_ORGANIZATION:2 a B2AI_ORGANIZATION:Organization .
+B2AI_ORG:2 a B2AI_ORG:Organization .
 

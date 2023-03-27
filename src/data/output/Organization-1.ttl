@@ -1,13 +1,13 @@
 @prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
-@prefix B2AI_ORGANIZATION: <https://w3id.org/bridge2ai/standards-organization-schema/> .
+@prefix B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/> .
 @prefix schema1: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-B2AI_ORGANIZATION:1 schema1:description "US Agency for Healthcare Research and Quality" ;
+B2AI_ORG:1 schema1:description "US Agency for Healthcare Research and Quality" ;
     schema1:name "AHRQ" ;
-    B2AI_ORGANIZATION:ror_id "ror:03jmfdf59" ;
-    B2AI_ORGANIZATION:wikidata_id "wikidata:Q4692008" ;
+    B2AI_ORG:ror_id "ror:03jmfdf59" ;
+    B2AI_ORG:wikidata_id "wikidata:Q4692008" ;
     B2AI:category "Organization" ;
-    B2AI:subclass_of B2AI_ORGANIZATION:2 ;
+    B2AI:subclass_of B2AI_ORG:2 ;
     B2AI:url "https://www.ahrq.gov/"^^xsd:anyURI .
 
