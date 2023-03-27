@@ -164,7 +164,7 @@ slots:
     range: date
     description: The date on which the node was added.
     examples:
-      - value: 2023-03-20
+      - value: "2023-03-20"
 
   related_to:
     description: >-

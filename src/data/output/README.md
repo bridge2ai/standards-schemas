@@ -11,6 +11,9 @@ alternative_standards_and_tools:
 - B2AI_STANDARD:123
 - B2AI_STANDARD:555
 category: UseCase
+contribution_date: '2023-01-01'
+contributor_name: Sashi Wattana
+contributor_orcid: ORCID:0000-0001-1234-5678
 data_substrates:
 - B2AI_SUBSTRATE:12
 - B2AI_SUBSTRATE:34
@@ -53,6 +56,9 @@ xref:
 ### Input
 ```yaml
 category: DataSubstrate
+contribution_date: '2023-02-02'
+contributor_name: Kiran Neelam
+contributor_orcid: ORCID:0000-0001-1276-5602
 description: BED (Browser Extensible Data) format provides a flexible way to define
   the data lines that are displayed in a genome annotation track.
 edam_id: edam.format:3003
@@ -69,6 +75,9 @@ subclass_of:
 ### Input
 ```yaml
 category: Organization
+contribution_date: '2023-05-05'
+contributor_name: Radha Chris
+contributor_orcid: ORCID:0000-0005-1555-5773
 description: US Agency for Healthcare Research and Quality
 id: B2AI_ORG:1
 name: AHRQ
@@ -83,6 +92,9 @@ wikidata_id: wikidata:Q4692008
 ### Input
 ```yaml
 category: DataTopic
+contribution_date: '2023-04-04'
+contributor_name: Pitsiulaaq Mtendere
+contributor_orcid: ORCID:0000-0002-1245-5763
 description: Data involving any study of living organisms at any scale.
 edam_id: edam.topic:3070
 id: B2AI_TOPIC:2
@@ -101,6 +113,9 @@ collection:
 - datamodel
 concerns_data_topic:
 - B2AI_TOPIC:4
+contribution_date: '2023-03-03'
+contributor_name: Guadalupe Nurul
+contributor_orcid: ORCID:0000-0005-1272-5161
 description: Observational Medical Outcomes Partnership Common Data Model
 formal_specification: https://github.com/OHDSI/CommonDataModel
 has_relevant_organization:

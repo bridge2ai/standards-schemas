@@ -9,3 +9,7 @@ edam_id: edam.format:3003
 ncit_id: ncit:C153367
 metadata_storage:
   - file headers
+
+contributor_name: "Kiran Neelam"
+contributor_orcid: ORCID:0000-0001-1276-5602
+contribution_date: "2023-02-02"
