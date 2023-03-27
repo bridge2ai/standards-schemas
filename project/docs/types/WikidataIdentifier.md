@@ -4,7 +4,7 @@
 
 Identifier from Wikidata open knowledge base.
 
-URI: [B2AI.ORGANIZATION:WikidataIdentifier](https://w3id.org/bridge2ai/standards-organization-schema/WikidataIdentifier)
+URI: [B2AI_ORGANIZATION:WikidataIdentifier](https://w3id.org/bridge2ai/standards-organization-schema/WikidataIdentifier)
 
 |  |  |  |
 | --- | --- | --- |

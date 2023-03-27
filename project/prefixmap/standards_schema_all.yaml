@@ -1,72 +1,72 @@
 {
    "B2AI": "https://w3id.org/bridge2ai/standards-schema/",
-   "B2AI.ORGANIZATION": "https://w3id.org/bridge2ai/standards-organization-schema/",
-   "B2AI.STANDARD": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/",
-   "B2AI.SUBSTRATE": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/",
-   "B2AI.TOPIC": "https://w3id.org/bridge2ai/standards-datatopic-schema/",
-   "B2AI.USECASE": "https://w3id.org/bridge2ai/standards-usecase-schema/",
+   "B2AI_ORGANIZATION": "https://w3id.org/bridge2ai/standards-organization-schema/",
+   "B2AI_STANDARD": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/",
+   "B2AI_SUBSTRATE": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/",
+   "B2AI_TOPIC": "https://w3id.org/bridge2ai/standards-datatopic-schema/",
+   "B2AI_USECASE": "https://w3id.org/bridge2ai/standards-usecase-schema/",
    "MESH": "http://id.nlm.nih.gov/mesh/",
    "linkml": "https://w3id.org/linkml/",
    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "schema": "http://schema.org/",
    "BiomedicalStandard": {
-      "@id": "B2AI.STANDARD:BiomedicalStandard"
+      "@id": "B2AI_STANDARD:BiomedicalStandard"
    },
    "DataStandard": {
-      "@id": "B2AI.STANDARD:DataStandard"
+      "@id": "B2AI_STANDARD:DataStandard"
    },
    "DataStandardOrTool": {
-      "@id": "B2AI.STANDARD:DataStandardOrTool"
+      "@id": "B2AI_STANDARD:DataStandardOrTool"
    },
    "DataStandardOrToolContainer": {
-      "@id": "B2AI.STANDARD:DataStandardOrToolContainer"
+      "@id": "B2AI_STANDARD:DataStandardOrToolContainer"
    },
    "DataSubstrate": {
-      "@id": "B2AI.SUBSTRATE:DataSubstrate"
+      "@id": "B2AI_SUBSTRATE:DataSubstrate"
    },
    "DataSubstrateContainer": {
-      "@id": "B2AI.SUBSTRATE:DataSubstrateContainer"
+      "@id": "B2AI_SUBSTRATE:DataSubstrateContainer"
    },
    "DataTopic": {
-      "@id": "B2AI.TOPIC:DataTopic"
+      "@id": "B2AI_TOPIC:DataTopic"
    },
    "DataTopicContainer": {
-      "@id": "B2AI.TOPIC:DataTopicContainer"
+      "@id": "B2AI_TOPIC:DataTopicContainer"
    },
    "ModelRepository": {
-      "@id": "B2AI.STANDARD:ModelRepository"
+      "@id": "B2AI_STANDARD:ModelRepository"
    },
    "NamedThing": {
       "@id": "schema:Thing"
    },
    "OntologyOrVocabulary": {
-      "@id": "B2AI.STANDARD:OntologyOrVocabulary"
+      "@id": "B2AI_STANDARD:OntologyOrVocabulary"
    },
    "Organization": {
-      "@id": "B2AI.ORGANIZATION:Organization"
+      "@id": "B2AI_ORGANIZATION:Organization"
    },
    "OrganizationContainer": {
-      "@id": "B2AI.ORGANIZATION:OrganizationContainer"
+      "@id": "B2AI_ORGANIZATION:OrganizationContainer"
    },
    "ReferenceDataOrDataset": {
-      "@id": "B2AI.STANDARD:ReferenceDataOrDataset"
+      "@id": "B2AI_STANDARD:ReferenceDataOrDataset"
    },
    "ReferenceImplementation": {
-      "@id": "B2AI.STANDARD:ReferenceImplementation"
+      "@id": "B2AI_STANDARD:ReferenceImplementation"
    },
    "Registry": {
-      "@id": "B2AI.STANDARD:Registry"
+      "@id": "B2AI_STANDARD:Registry"
    },
    "SoftwareOrTool": {
-      "@id": "B2AI.STANDARD:SoftwareOrTool"
+      "@id": "B2AI_STANDARD:SoftwareOrTool"
    },
    "TrainingProgram": {
-      "@id": "B2AI.STANDARD:TrainingProgram"
+      "@id": "B2AI_STANDARD:TrainingProgram"
    },
    "UseCase": {
-      "@id": "B2AI.USECASE:UseCase"
+      "@id": "B2AI_USECASE:UseCase"
    },
    "UseCaseContainer": {
-      "@id": "B2AI.USECASE:UseCaseContainer"
+      "@id": "B2AI_USECASE:UseCaseContainer"
    }
 }

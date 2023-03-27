@@ -25,5 +25,5 @@ None &#8594;  <sub>0..1</sub> [WikidataIdentifier](types/WikidataIdentifier.md)
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example(value='WIKIDATA:Q282186', description=None) |
+| **Examples:** | | Example(value='WIKIDATA:Q282186', description=None, object=None) |
 
