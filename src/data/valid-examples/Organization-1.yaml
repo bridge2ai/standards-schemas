@@ -1,10 +1,10 @@
 # Example Organization data
 
-id: B2AI_ORGANIZATION:1
+id: B2AI_ORG:1
 name: AHRQ
 category: Organization
 subclass_of:
-  - B2AI_ORGANIZATION:2
+  - B2AI_ORG:2
 description: US Agency for Healthcare Research and Quality
 ror_id: ror:03jmfdf59
 wikidata_id: wikidata:Q4692008
