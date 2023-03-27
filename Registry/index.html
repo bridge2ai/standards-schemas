@@ -216,6 +216,14 @@
 
           Registry ..&gt; DataTopic : concerns_data_topic
 
+      Registry : contribution_date
+
+      Registry : contributor_github_name
+
+      Registry : contributor_name
+
+      Registry : contributor_orcid
+
       Registry : description
 
       Registry : formal_specification
@@ -365,6 +373,30 @@
 <td><a href="../related_to/">related_to</a></td>
 <td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>A relationship that is asserted between two named things</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The name of the person who added this node</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The name of the github user who added this node</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>The ORCiD of the person who added this node</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>The date on which the node was added</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
@@ -628,6 +660,58 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+  contributor_name:
+    name: contributor_name
+    description: The name of the person who added this node.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contributor_name
+    owner: Registry
+    domain_of:
+    - NamedThing
+    range: string
+  contributor_github_name:
+    name: contributor_github_name
+    description: The name of the github user who added this node.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contributor_github_name
+    owner: Registry
+    domain_of:
+    - NamedThing
+    range: string
+  contributor_orcid:
+    name: contributor_orcid
+    description: The ORCiD of the person who added this node.
+    examples:
+    - value: ORCID:0000-0001-1234-5678
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contributor_orcid
+    owner: Registry
+    domain_of:
+    - NamedThing
+    range: uriorcurie
+  contribution_date:
+    name: contribution_date
+    description: The date on which the node was added.
+    examples:
+    - value: '2023-03-20'
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contribution_date
+    owner: Registry
+    domain_of:
+    - NamedThing
+    range: date
 
 </code></pre>
 </details>

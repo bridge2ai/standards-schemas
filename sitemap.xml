@@ -2,547 +2,572 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/BiomedicalStandard/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Boolean/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/CategoryType/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-schema/Curie/</loc>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/DataGeneratingProject/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/DataStandard/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/DataStandardOrTool/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/DataStandardOrToolContainer/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/DataSubstrate/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/DataSubstrateContainer/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/DataTopic/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/DataTopicContainer/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Date/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/DateOrDatetime/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Datetime/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Decimal/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Double/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/EDAM_ID/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/EdamIdentifier/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Float/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Integer/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/MESH_ID/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/MeSH_ID/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/MeshIdentifier/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/ModelRepository/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/NCIT_ID/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/NamedThing/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/NcitIdentifier/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Ncname/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Nodeidentifier/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Objectidentifier/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/OntologyOrVocabulary/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Organization/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/OrganizationContainer/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/ROR_ID/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/ReferenceDataOrDataset/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/ReferenceImplementation/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Registry/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/RorIdentifier/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/SoftwareOrTool/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/StandardsCollectionTag/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/String/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Time/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/TrainingProgram/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/URL/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Uri/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Uriorcurie/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/UseCase/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/UseCaseCategory/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/UseCaseContainer/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/WikidataIdentifier/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/Wikidata_ID/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/about/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/alternative_standards_and_tools/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/category/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/collection/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/concerns_data_topic/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-schema/contribution_date/</loc>
+         <lastmod>2023-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-schema/contributor_github_name/</loc>
+         <lastmod>2023-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-schema/contributor_name/</loc>
+         <lastmod>2023-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bridge2ai.github.io/standards-schema/contributor_orcid/</loc>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/data_standardortools_collection/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/data_substrates/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/data_substrates_collection/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/data_topics/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/data_topics_collection/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/data_types/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/description/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/edam_id/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/enables/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/entries/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/file_extensions/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/formal_specification/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/has_relevant_organization/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/id/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/involved_in_experimental_design/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/involved_in_metadata_management/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/involved_in_quality_control/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/is_open/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/known_limitations/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/limitations/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/mesh_id/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/metadata_storage/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/name/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/ncit_id/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/node_property/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/not_relevant_to_dgps/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/organizations/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/primary_email/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/publication/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/purpose_detail/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/related_to/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/relevance_to_dgps/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/requires_registration/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/ror_id/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/standards-datastandardortool-schema/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/standards-datasubstrate-schema/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/standards-datatopic-schema/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/standards-organization-schema/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/standards-schema-all/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/standards-schema/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/standards-usecase-schema/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/standards_and_tools_for_dgp_use/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/subclass_of/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/type/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/types/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/url/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/use_case_category/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/use_cases/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/usecases/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/wikidata_id/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/xref/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bridge2ai.github.io/standards-schema/xrefs/</loc>
-         <lastmod>2023-03-17</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

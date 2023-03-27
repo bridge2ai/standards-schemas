@@ -217,6 +217,14 @@
 
       NamedThing : category
 
+      NamedThing : contribution_date
+
+      NamedThing : contributor_github_name
+
+      NamedThing : contributor_name
+
+      NamedThing : contributor_orcid
+
       NamedThing : description
 
       NamedThing : id
@@ -289,6 +297,30 @@
 <td><a href="../related_to/">related_to</a></td>
 <td>0..* <br/> <a href="./">NamedThing</a></td>
 <td>A relationship that is asserted between two named things</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The name of the person who added this node</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The name of the github user who added this node</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>The ORCiD of the person who added this node</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>The date on which the node was added</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -401,6 +433,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -479,6 +535,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../DataStandard/">DataStandard</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -557,6 +637,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -635,6 +739,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../Registry/">Registry</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -713,6 +841,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -791,6 +943,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../ModelRepository/">ModelRepository</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -869,6 +1045,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -947,6 +1147,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -1025,6 +1249,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -1103,6 +1351,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="../TrainingProgram/">TrainingProgram</a></td>
 <td><a href="../collection/">collection</a></td>
 <td>domain</td>
@@ -1178,6 +1450,30 @@
 <td><a href="../TrainingProgram/">TrainingProgram</a></td>
 <td><a href="../related_to/">related_to</a></td>
 <td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
@@ -1211,6 +1507,30 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
 <td><a href="./">NamedThing</a></td>
 <td><a href="../category/">category</a></td>
 <td>domain</td>
@@ -1238,6 +1558,30 @@
 <td><a href="./">NamedThing</a></td>
 <td><a href="../related_to/">related_to</a></td>
 <td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
@@ -1274,6 +1618,30 @@
 <td><a href="../Organization/">Organization</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
@@ -1324,6 +1692,30 @@
 <td>range</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -1365,6 +1757,10 @@ slots:
 - description
 - subclass_of
 - related_to
+- contributor_name
+- contributor_github_name
+- contributor_orcid
+- contribution_date
 class_uri: schema:Thing
 
 </code></pre>
@@ -1460,6 +1856,58 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+  contributor_name:
+    name: contributor_name
+    description: The name of the person who added this node.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contributor_name
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: string
+  contributor_github_name:
+    name: contributor_github_name
+    description: The name of the github user who added this node.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contributor_github_name
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: string
+  contributor_orcid:
+    name: contributor_orcid
+    description: The ORCiD of the person who added this node.
+    examples:
+    - value: ORCID:0000-0001-1234-5678
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contributor_orcid
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: uriorcurie
+  contribution_date:
+    name: contribution_date
+    description: The date on which the node was added.
+    examples:
+    - value: '2023-03-20'
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: contribution_date
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: date
 class_uri: schema:Thing
 
 </code></pre>
