@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-03-27T13:47:46
+# Generation date: 2023-03-27T15:40:08
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -22,8 +22,8 @@ from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from rdflib import Namespace, URIRef
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.linkml_model.types import Boolean, String, Uriorcurie
-from linkml_runtime.utils.metamodelcore import Bool, URIorCURIE
+from linkml_runtime.linkml_model.types import Boolean, Date, String, Uriorcurie
+from linkml_runtime.utils.metamodelcore import Bool, URIorCURIE, XSDDate
 
 metamodel_version = "1.7.0"
 version = None
@@ -174,6 +174,10 @@ class NamedThing(YAMLRoot):
     description: Optional[str] = None
     subclass_of: Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]] = empty_list()
     related_to: Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]] = empty_list()
+    contributor_name: Optional[str] = None
+    contributor_github_name: Optional[str] = None
+    contributor_orcid: Optional[Union[str, URIorCURIE]] = None
+    contribution_date: Optional[Union[str, XSDDate]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -197,6 +201,18 @@ class NamedThing(YAMLRoot):
         if not isinstance(self.related_to, list):
             self.related_to = [self.related_to] if self.related_to is not None else []
         self.related_to = [v if isinstance(v, NamedThingId) else NamedThingId(v) for v in self.related_to]
+
+        if self.contributor_name is not None and not isinstance(self.contributor_name, str):
+            self.contributor_name = str(self.contributor_name)
+
+        if self.contributor_github_name is not None and not isinstance(self.contributor_github_name, str):
+            self.contributor_github_name = str(self.contributor_github_name)
+
+        if self.contributor_orcid is not None and not isinstance(self.contributor_orcid, URIorCURIE):
+            self.contributor_orcid = URIorCURIE(self.contributor_orcid)
+
+        if self.contribution_date is not None and not isinstance(self.contribution_date, XSDDate):
+            self.contribution_date = XSDDate(self.contribution_date)
 
         super().__post_init__(**kwargs)
 
@@ -945,6 +961,18 @@ slots.url = Slot(uri=B2AI.url, name="url", curie=B2AI.curie('url'),
 
 slots.xref = Slot(uri=B2AI.xref, name="xref", curie=B2AI.curie('xref'),
                    model_uri=DEFAULT_.xref, domain=NamedThing, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+
+slots.contributor_name = Slot(uri=B2AI.contributor_name, name="contributor_name", curie=B2AI.curie('contributor_name'),
+                   model_uri=DEFAULT_.contributor_name, domain=NamedThing, range=Optional[str])
+
+slots.contributor_github_name = Slot(uri=B2AI.contributor_github_name, name="contributor_github_name", curie=B2AI.curie('contributor_github_name'),
+                   model_uri=DEFAULT_.contributor_github_name, domain=NamedThing, range=Optional[str])
+
+slots.contributor_orcid = Slot(uri=B2AI.contributor_orcid, name="contributor_orcid", curie=B2AI.curie('contributor_orcid'),
+                   model_uri=DEFAULT_.contributor_orcid, domain=NamedThing, range=Optional[Union[str, URIorCURIE]])
+
+slots.contribution_date = Slot(uri=B2AI.contribution_date, name="contribution_date", curie=B2AI.curie('contribution_date'),
+                   model_uri=DEFAULT_.contribution_date, domain=NamedThing, range=Optional[Union[str, XSDDate]])
 
 slots.related_to = Slot(uri=B2AI.related_to, name="related_to", curie=B2AI.curie('related_to'),
                    model_uri=DEFAULT_.related_to, domain=NamedThing, range=Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]])
