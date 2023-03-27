@@ -1745,7 +1745,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-03-20T18:11:26",
   "source_file_size": 439,
-  "generation_date": "2023-03-27T13:35:58",
+  "generation_date": "2023-03-27T13:47:37",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

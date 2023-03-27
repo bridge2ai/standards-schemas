@@ -5,7 +5,7 @@ PREFIX linkml: <https://w3id.org/linkml/>
 PREFIX schema1: <http://schema.org/>
 PREFIX B2AI: <https://w3id.org/bridge2ai/standards-schema/>
 PREFIX B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/>
-PREFIX B2AI_ORGANIZATION: <https://w3id.org/bridge2ai/standards-organization-schema/>
+PREFIX B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/>
 PREFIX B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/>
 PREFIX B2AI_SUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/>
 PREFIX B2AI_USECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/>
@@ -51,9 +51,9 @@ B2AI:MeshIdentifier IRI
 
 B2AI:NcitIdentifier IRI
 
-B2AI_ORGANIZATION:RorIdentifier IRI
+B2AI_ORG:RorIdentifier IRI
 
-B2AI_ORGANIZATION:WikidataIdentifier IRI
+B2AI_ORG:WikidataIdentifier IRI
 
 B2AI_STANDARD:BiomedicalStandard CLOSED {
     (  $B2AI_STANDARD:BiomedicalStandard_tes (  &B2AI_STANDARD:DataStandard_tes ;
@@ -79,7 +79,7 @@ B2AI_STANDARD:DataStandardOrTool  (
              rdf:type [ schema1:Thing ] ? ;
              B2AI_STANDARD:collection @B2AI_STANDARD:StandardsCollectionTag * ;
              B2AI_STANDARD:concerns_data_topic @B2AI_TOPIC:DataTopic * ;
-             B2AI_STANDARD:has_relevant_organization @B2AI_ORGANIZATION:Organization * ;
+             B2AI_STANDARD:has_relevant_organization @B2AI_ORG:Organization * ;
              B2AI_STANDARD:purpose_detail @linkml:String ? ;
              B2AI_STANDARD:is_open @linkml:Boolean ? ;
              B2AI_STANDARD:requires_registration @linkml:Boolean ? ;
@@ -157,8 +157,8 @@ B2AI:NamedThing  (
           ) ;
           rdf:type [ schema1:Thing ]
        )
-    } OR @B2AI_STANDARD:DataStandardOrTool OR @B2AI_SUBSTRATE:DataSubstrate OR @B2AI_TOPIC:DataTopic OR
-    @B2AI_ORGANIZATION:Organization OR @B2AI_USECASE:UseCase
+    } OR @B2AI_STANDARD:DataStandardOrTool OR @B2AI_SUBSTRATE:DataSubstrate OR @B2AI_TOPIC:DataTopic OR @B2AI_ORG:Organization OR
+    @B2AI_USECASE:UseCase
 )
 
 B2AI_STANDARD:OntologyOrVocabulary CLOSED {
@@ -169,20 +169,20 @@ B2AI_STANDARD:OntologyOrVocabulary CLOSED {
     )
 }
 
-B2AI_ORGANIZATION:Organization CLOSED {
-    (  $B2AI_ORGANIZATION:Organization_tes (  &B2AI:NamedThing_tes ;
+B2AI_ORG:Organization CLOSED {
+    (  $B2AI_ORG:Organization_tes (  &B2AI:NamedThing_tes ;
           rdf:type [ schema1:Thing ] ? ;
-          B2AI_ORGANIZATION:ror_id @B2AI_ORGANIZATION:RorIdentifier ? ;
-          B2AI_ORGANIZATION:wikidata_id @B2AI_ORGANIZATION:WikidataIdentifier ? ;
+          B2AI_ORG:ror_id @B2AI_ORG:RorIdentifier ? ;
+          B2AI_ORG:wikidata_id @B2AI_ORG:WikidataIdentifier ? ;
           B2AI:url @linkml:Uriorcurie ?
        ) ;
-       rdf:type [ B2AI_ORGANIZATION:Organization ]
+       rdf:type [ B2AI_ORG:Organization ]
     )
 }
 
-B2AI_ORGANIZATION:OrganizationContainer CLOSED {
-    (  $B2AI_ORGANIZATION:OrganizationContainer_tes B2AI_ORGANIZATION:organizations @B2AI_ORGANIZATION:Organization * ;
-       rdf:type [ B2AI_ORGANIZATION:OrganizationContainer ] ?
+B2AI_ORG:OrganizationContainer CLOSED {
+    (  $B2AI_ORG:OrganizationContainer_tes B2AI_ORG:organizations @B2AI_ORG:Organization * ;
+       rdf:type [ B2AI_ORG:OrganizationContainer ] ?
     )
 }
 

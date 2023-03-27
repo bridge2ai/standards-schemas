@@ -1,6 +1,6 @@
 {
    "B2AI": "https://w3id.org/bridge2ai/standards-schema/",
-   "B2AI_ORGANIZATION": "https://w3id.org/bridge2ai/standards-organization-schema/",
+   "B2AI_ORG": "https://w3id.org/bridge2ai/standards-organization-schema/",
    "B2AI_STANDARD": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/",
    "B2AI_SUBSTRATE": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/",
    "B2AI_TOPIC": "https://w3id.org/bridge2ai/standards-datatopic-schema/",
@@ -43,10 +43,10 @@
       "@id": "B2AI_STANDARD:OntologyOrVocabulary"
    },
    "Organization": {
-      "@id": "B2AI_ORGANIZATION:Organization"
+      "@id": "B2AI_ORG:Organization"
    },
    "OrganizationContainer": {
-      "@id": "B2AI_ORGANIZATION:OrganizationContainer"
+      "@id": "B2AI_ORG:OrganizationContainer"
    },
    "ReferenceDataOrDataset": {
       "@id": "B2AI_STANDARD:ReferenceDataOrDataset"

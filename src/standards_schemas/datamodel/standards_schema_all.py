@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-03-27T13:36:08
+# Generation date: 2023-03-27T13:47:46
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -33,7 +33,7 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
 B2AI = CurieNamespace('B2AI', 'https://w3id.org/bridge2ai/standards-schema/')
-B2AI_ORGANIZATION = CurieNamespace('B2AI_ORGANIZATION', 'https://w3id.org/bridge2ai/standards-organization-schema/')
+B2AI_ORG = CurieNamespace('B2AI_ORG', 'https://w3id.org/bridge2ai/standards-organization-schema/')
 B2AI_STANDARD = CurieNamespace('B2AI_STANDARD', 'https://w3id.org/bridge2ai/standards-datastandardortool-schema/')
 B2AI_SUBSTRATE = CurieNamespace('B2AI_SUBSTRATE', 'https://w3id.org/bridge2ai/standards-datasubstrate-schema/')
 B2AI_TOPIC = CurieNamespace('B2AI_TOPIC', 'https://w3id.org/bridge2ai/standards-datatopic-schema/')
@@ -633,8 +633,8 @@ class Organization(NamedThing):
     """
     _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
 
-    class_class_uri: ClassVar[URIRef] = B2AI_ORGANIZATION.Organization
-    class_class_curie: ClassVar[str] = "B2AI_ORGANIZATION:Organization"
+    class_class_uri: ClassVar[URIRef] = B2AI_ORG.Organization
+    class_class_curie: ClassVar[str] = "B2AI_ORG:Organization"
     class_name: ClassVar[str] = "Organization"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/Organization")
 
@@ -673,8 +673,8 @@ class OrganizationContainer(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = B2AI_ORGANIZATION.OrganizationContainer
-    class_class_curie: ClassVar[str] = "B2AI_ORGANIZATION:OrganizationContainer"
+    class_class_uri: ClassVar[URIRef] = B2AI_ORG.OrganizationContainer
+    class_class_curie: ClassVar[str] = "B2AI_ORG:OrganizationContainer"
     class_name: ClassVar[str] = "OrganizationContainer"
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer")
 
@@ -997,13 +997,13 @@ slots.data_substrates_collection = Slot(uri=B2AI_SUBSTRATE.data_substrates_colle
 slots.data_topics_collection = Slot(uri=B2AI_TOPIC.data_topics_collection, name="data_topics_collection", curie=B2AI_TOPIC.curie('data_topics_collection'),
                    model_uri=DEFAULT_.data_topics_collection, domain=None, range=Optional[Union[Dict[Union[str, DataTopicId], Union[dict, DataTopic]], List[Union[dict, DataTopic]]]])
 
-slots.ror_id = Slot(uri=B2AI_ORGANIZATION.ror_id, name="ror_id", curie=B2AI_ORGANIZATION.curie('ror_id'),
+slots.ror_id = Slot(uri=B2AI_ORG.ror_id, name="ror_id", curie=B2AI_ORG.curie('ror_id'),
                    model_uri=DEFAULT_.ror_id, domain=None, range=Optional[Union[str, RorIdentifier]])
 
-slots.wikidata_id = Slot(uri=B2AI_ORGANIZATION.wikidata_id, name="wikidata_id", curie=B2AI_ORGANIZATION.curie('wikidata_id'),
+slots.wikidata_id = Slot(uri=B2AI_ORG.wikidata_id, name="wikidata_id", curie=B2AI_ORG.curie('wikidata_id'),
                    model_uri=DEFAULT_.wikidata_id, domain=None, range=Optional[Union[str, WikidataIdentifier]])
 
-slots.organizations = Slot(uri=B2AI_ORGANIZATION.organizations, name="organizations", curie=B2AI_ORGANIZATION.curie('organizations'),
+slots.organizations = Slot(uri=B2AI_ORG.organizations, name="organizations", curie=B2AI_ORG.curie('organizations'),
                    model_uri=DEFAULT_.organizations, domain=None, range=Optional[Union[Dict[Union[str, OrganizationId], Union[dict, Organization]], List[Union[dict, Organization]]]])
 
 slots.use_case_category = Slot(uri=B2AI_USECASE.use_case_category, name="use_case_category", curie=B2AI_USECASE.curie('use_case_category'),

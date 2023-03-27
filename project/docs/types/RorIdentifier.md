@@ -4,7 +4,7 @@
 
 Identifier from Research Organization Registry.
 
-URI: [B2AI_ORGANIZATION:RorIdentifier](https://w3id.org/bridge2ai/standards-organization-schema/RorIdentifier)
+URI: [B2AI_ORG:RorIdentifier](https://w3id.org/bridge2ai/standards-organization-schema/RorIdentifier)
 
 |  |  |  |
 | --- | --- | --- |
