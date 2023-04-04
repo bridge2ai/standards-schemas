@@ -16,6 +16,7 @@ High-level classes for Bridge2AI Standards schemas.
  * [DataSubstrateContainer](DataSubstrateContainer.md) - A container for DataSubstrates.
  * [DataTopicContainer](DataTopicContainer.md) - A container for DataTopics.
  * [NamedThing](NamedThing.md) - A generic grouping for any identifiable entity
+     * [AnatomicalEntity](AnatomicalEntity.md) - A subcellular location, cell type or gross anatomical part
      * [DataStandardOrTool](DataStandardOrTool.md) - Represents a standard or tool in the Bridge2AI Standards Registry.
          * [DataStandard](DataStandard.md) - Represents a general purpose standard in the Bridge2AI Standards Registry.
              * [BiomedicalStandard](BiomedicalStandard.md) - Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes.
@@ -80,6 +81,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [concerns_data_topic](concerns_data_topic.md) - Subject standard is generally applied in the context of object data topic.
      * [has_relevant_organization](has_relevant_organization.md) - Subject standard is managed or otherwise guided buy the object organization(s).
      * [subclass_of](subclass_of.md) - Holds between two classes where the domain class is a specialization of the range class.
+     * [topic_involves_anatomy](topic_involves_anatomy.md) - A relationship between a DataTopic and an anatomical entity.
  * [relevance_to_dgps](relevance_to_dgps.md) - Relevance of the use case to one or more DGPs.
  * [ror_id](ror_id.md) - Unique ROR identifier.
  * [type](type.md) - A generic slot for any label corresponding to the label  for an entity type associated to the class.

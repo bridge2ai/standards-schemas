@@ -55,6 +55,14 @@ B2AI_ORG:RorIdentifier IRI
 
 B2AI_ORG:WikidataIdentifier IRI
 
+B2AI:AnatomicalEntity CLOSED {
+    (  $B2AI:AnatomicalEntity_tes (  &B2AI:NamedThing_tes ;
+          rdf:type [ schema1:Thing ] ?
+       ) ;
+       rdf:type [ B2AI:AnatomicalEntity ]
+    )
+}
+
 B2AI_STANDARD:BiomedicalStandard CLOSED {
     (  $B2AI_STANDARD:BiomedicalStandard_tes (  &B2AI_STANDARD:DataStandard_tes ;
           rdf:type [ B2AI_STANDARD:DataStandard ] ?
@@ -127,7 +135,8 @@ B2AI_TOPIC:DataTopic CLOSED {
           rdf:type [ schema1:Thing ] ? ;
           B2AI:edam_id @B2AI:EdamIdentifier ? ;
           B2AI:mesh_id @B2AI:MeshIdentifier ? ;
-          B2AI:ncit_id @B2AI:NcitIdentifier ?
+          B2AI:ncit_id @B2AI:NcitIdentifier ? ;
+          B2AI_TOPIC:topic_involves_anatomy @B2AI:AnatomicalEntity *
        ) ;
        rdf:type [ B2AI_TOPIC:DataTopic ]
     )
@@ -161,8 +170,8 @@ B2AI:NamedThing  (
           ) ;
           rdf:type [ schema1:Thing ]
        )
-    } OR @B2AI_STANDARD:DataStandardOrTool OR @B2AI_SUBSTRATE:DataSubstrate OR @B2AI_TOPIC:DataTopic OR @B2AI_ORG:Organization OR
-    @B2AI_USECASE:UseCase
+    } OR @B2AI:AnatomicalEntity OR @B2AI_STANDARD:DataStandardOrTool OR @B2AI_SUBSTRATE:DataSubstrate OR @B2AI_TOPIC:DataTopic OR
+    @B2AI_ORG:Organization OR @B2AI_USECASE:UseCase
 )
 
 B2AI_STANDARD:OntologyOrVocabulary CLOSED {

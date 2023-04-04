@@ -344,6 +344,22 @@ CREATE TABLE "UseCaseContainer" (
 	PRIMARY KEY (use_cases)
 );
 
+CREATE TABLE "AnatomicalEntity" (
+	id TEXT NOT NULL, 
+	category TEXT, 
+	name TEXT, 
+	description TEXT, 
+	subclass_of TEXT, 
+	related_to TEXT, 
+	contributor_name TEXT, 
+	contributor_github_name TEXT, 
+	contributor_orcid TEXT, 
+	contribution_date DATE, 
+	"DataTopic_id" TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY("DataTopic_id") REFERENCES "DataTopic" (id)
+);
+
 CREATE TABLE "BiomedicalStandard_collection" (
 	backref_id TEXT, 
 	collection VARCHAR(24), 

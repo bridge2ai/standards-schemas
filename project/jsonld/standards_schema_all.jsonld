@@ -1091,6 +1091,26 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "topic_involves_anatomy",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy",
+      "description": "A relationship between a DataTopic and an anatomical entity.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
+      "exact_mappings": [
+        "http://purl.obolibrary.org/obo/RO_0004026"
+      ],
+      "is_a": "related_to",
+      "domain": "DataTopic",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy",
+      "multivalued": true,
+      "inherited": true,
+      "owner": "DataTopic",
+      "domain_of": [
+        "DataTopic"
+      ],
+      "range": "AnatomicalEntity",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "ror_id",
       "definition_uri": "https://w3id.org/bridge2ai/standards-organization-schema/ror_id",
       "description": "Unique ROR identifier.",
@@ -1378,6 +1398,38 @@
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Thing",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AnatomicalEntity",
+      "id_prefixes": [
+        "uberon"
+      ],
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity",
+      "description": "A subcellular location, cell type or gross anatomical part",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "exact_mappings": [
+        "uberon:0001062",
+        "wikidata:Q4936952"
+      ],
+      "narrow_mappings": [
+        "ncit:C12219"
+      ],
+      "is_a": "NamedThing",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "contributor_name",
+        "contributor_github_name",
+        "contributor_orcid",
+        "contribution_date"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity",
       "@type": "ClassDefinition"
     },
     {
@@ -1771,7 +1823,8 @@
         "contribution_date",
         "edam_id",
         "mesh_id",
-        "ncit_id"
+        "ncit_id",
+        "topic_involves_anatomy"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic",
@@ -1877,7 +1930,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-03-27T14:02:39",
   "source_file_size": 439,
-  "generation_date": "2023-03-27T15:44:32",
+  "generation_date": "2023-04-04T13:52:19",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

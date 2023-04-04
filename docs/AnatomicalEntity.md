@@ -1,51 +1,41 @@
-# Class: DataTopic
-_Represents a general data topic for Bridge2AI data or the tools/standards applied to the data._
+# Class: AnatomicalEntity
+_A subcellular location, cell type or gross anatomical part_
 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.org/bridge2ai/standards-schema-all/:DataTopic)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity](https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity)
 
 
 
 ```mermaid
  classDiagram
-    class DataTopic
-      NamedThing <|-- DataTopic
+    class AnatomicalEntity
+      NamedThing <|-- AnatomicalEntity
       
-      DataTopic : category
+      AnatomicalEntity : category
         
-      DataTopic : contribution_date
+      AnatomicalEntity : contribution_date
         
-      DataTopic : contributor_github_name
+      AnatomicalEntity : contributor_github_name
         
-      DataTopic : contributor_name
+      AnatomicalEntity : contributor_name
         
-      DataTopic : contributor_orcid
+      AnatomicalEntity : contributor_orcid
         
-      DataTopic : description
+      AnatomicalEntity : description
         
-      DataTopic : edam_id
+      AnatomicalEntity : id
         
-      DataTopic : id
+      AnatomicalEntity : name
         
-      DataTopic : mesh_id
+      AnatomicalEntity : related_to
         
-      DataTopic : name
+          AnatomicalEntity ..> NamedThing : related_to
         
-      DataTopic : ncit_id
+      AnatomicalEntity : subclass_of
         
-      DataTopic : related_to
-        
-          DataTopic ..> NamedThing : related_to
-        
-      DataTopic : subclass_of
-        
-          DataTopic ..> NamedThing : subclass_of
-        
-      DataTopic : topic_involves_anatomy
-        
-          DataTopic ..> AnatomicalEntity : topic_involves_anatomy
+          AnatomicalEntity ..> NamedThing : subclass_of
         
       
 ```
@@ -56,7 +46,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 
 ## Inheritance
 * [NamedThing](NamedThing.md)
-    * **DataTopic**
+    * **AnatomicalEntity**
 
 
 
@@ -64,10 +54,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [edam_id](edam_id.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) | Unique EDAM identifier | direct |
-| [mesh_id](mesh_id.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) | Unique MeSH identifier | direct |
-| [ncit_id](ncit_id.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) | Unique NCIt Identifier | direct |
-| [topic_involves_anatomy](topic_involves_anatomy.md) | 0..* <br/> [AnatomicalEntity](AnatomicalEntity.md) | A relationship between a DataTopic and an anatomical entity | direct |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -87,19 +73,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [UseCase](UseCase.md) | [data_topics](data_topics.md) | range | [DataTopic](DataTopic.md) |
-| [DataStandardOrTool](DataStandardOrTool.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [DataStandard](DataStandard.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [BiomedicalStandard](BiomedicalStandard.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [Registry](Registry.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [OntologyOrVocabulary](OntologyOrVocabulary.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [ModelRepository](ModelRepository.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [SoftwareOrTool](SoftwareOrTool.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [ReferenceImplementation](ReferenceImplementation.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [TrainingProgram](TrainingProgram.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
-| [DataTopic](DataTopic.md) | [topic_involves_anatomy](topic_involves_anatomy.md) | domain | [DataTopic](DataTopic.md) |
-| [DataTopicContainer](DataTopicContainer.md) | [data_topics_collection](data_topics_collection.md) | range | [DataTopic](DataTopic.md) |
+| [DataTopic](DataTopic.md) | [topic_involves_anatomy](topic_involves_anatomy.md) | range | [AnatomicalEntity](AnatomicalEntity.md) |
 
 
 
@@ -107,6 +81,14 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 
 
 ## Identifier and Mapping Information
+
+
+### Valid ID Prefixes
+
+Instances of this class *should* have identifiers with one of the following prefixes:
+
+* uberon
+
 
 
 
@@ -127,8 +109,10 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:DataTopic |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:DataTopic |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity |
+| exact | uberon:0001062, wikidata:Q4936952 |
+| narrow | ncit:C12219 |
 
 
 
@@ -142,17 +126,18 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 
 <details>
 ```yaml
-name: DataTopic
-description: Represents a general data topic for Bridge2AI data or the tools/standards
-  applied to the data.
+name: AnatomicalEntity
+id_prefixes:
+- uberon
+description: A subcellular location, cell type or gross anatomical part
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
+exact_mappings:
+- uberon:0001062
+- wikidata:Q4936952
+narrow_mappings:
+- ncit:C12219
 rank: 1000
 is_a: NamedThing
-slots:
-- edam_id
-- mesh_id
-- ncit_id
-- topic_involves_anatomy
 
 ```
 </details>
@@ -161,77 +146,19 @@ slots:
 
 <details>
 ```yaml
-name: DataTopic
-description: Represents a general data topic for Bridge2AI data or the tools/standards
-  applied to the data.
+name: AnatomicalEntity
+id_prefixes:
+- uberon
+description: A subcellular location, cell type or gross anatomical part
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
+exact_mappings:
+- uberon:0001062
+- wikidata:Q4936952
+narrow_mappings:
+- ncit:C12219
 rank: 1000
 is_a: NamedThing
 attributes:
-  edam_id:
-    name: edam_id
-    description: Unique EDAM identifier
-    examples:
-    - value: edam.data:0006
-    from_schema: https://w3id.org/bridge2ai/standards-schema-all
-    rank: 1000
-    values_from:
-    - edam.data
-    - edam.format
-    - edam.operation
-    - edam.topic
-    alias: edam_id
-    owner: DataTopic
-    domain_of:
-    - DataTopic
-    - DataSubstrate
-    range: edam_identifier
-  mesh_id:
-    name: mesh_id
-    description: Unique MeSH identifier
-    examples:
-    - value: MeSH:D014831
-    from_schema: https://w3id.org/bridge2ai/standards-schema-all
-    rank: 1000
-    values_from:
-    - MeSH
-    alias: mesh_id
-    owner: DataTopic
-    domain_of:
-    - DataTopic
-    - DataSubstrate
-    range: mesh_identifier
-  ncit_id:
-    name: ncit_id
-    description: Unique NCIt Identifier
-    examples:
-    - value: NCIT:C92692
-    from_schema: https://w3id.org/bridge2ai/standards-schema-all
-    rank: 1000
-    values_from:
-    - NCIT
-    alias: ncit_id
-    owner: DataTopic
-    domain_of:
-    - DataTopic
-    - DataSubstrate
-    range: ncit_identifier
-  topic_involves_anatomy:
-    name: topic_involves_anatomy
-    description: A relationship between a DataTopic and an anatomical entity.
-    from_schema: https://w3id.org/bridge2ai/standards-schema-all
-    exact_mappings:
-    - RO:0004026
-    rank: 1000
-    is_a: related_to
-    domain: DataTopic
-    multivalued: true
-    inherited: true
-    alias: topic_involves_anatomy
-    owner: DataTopic
-    domain_of:
-    - DataTopic
-    range: AnatomicalEntity
   id:
     name: id
     description: A unique identifier for a thing.
@@ -240,7 +167,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: uriorcurie
@@ -255,7 +182,7 @@ attributes:
     domain: NamedThing
     designates_type: true
     alias: category
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: category_type
@@ -266,7 +193,7 @@ attributes:
     rank: 1000
     slot_uri: schema:name
     alias: name
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: string
@@ -277,7 +204,7 @@ attributes:
     rank: 1000
     slot_uri: schema:description
     alias: description
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: string
@@ -297,7 +224,7 @@ attributes:
     multivalued: true
     inherited: true
     alias: subclass_of
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: NamedThing
@@ -310,7 +237,7 @@ attributes:
     multivalued: true
     inherited: true
     alias: related_to
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     - Organization
@@ -324,7 +251,7 @@ attributes:
     is_a: node_property
     domain: NamedThing
     alias: contributor_name
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: string
@@ -336,7 +263,7 @@ attributes:
     is_a: node_property
     domain: NamedThing
     alias: contributor_github_name
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: string
@@ -350,7 +277,7 @@ attributes:
     is_a: node_property
     domain: NamedThing
     alias: contributor_orcid
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: uriorcurie
@@ -364,7 +291,7 @@ attributes:
     is_a: node_property
     domain: NamedThing
     alias: contribution_date
-    owner: DataTopic
+    owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: date

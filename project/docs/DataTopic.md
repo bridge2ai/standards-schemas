@@ -7,7 +7,7 @@ Represents a general data topic for Bridge2AI data or the tools/standards applie
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.org/bridge2ai/standards-schema-all/DataTopic)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[UseCase]-%20data_topics%200..*>[DataTopic],[DataTopicContainer]++-%20data_topics_collection%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataTopicContainer],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[UseCase]-%20data_topics%200..*>[DataTopic],[DataTopicContainer]++-%20data_topics_collection%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataTopicContainer],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[AnatomicalEntity]<topic_involves_anatomy%200..*-%20[DataTopic&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic],[UseCase]-%20data_topics%200..*>[DataTopic],[DataTopicContainer]++-%20data_topics_collection%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataTopicContainer],[DataStandardOrTool],[AnatomicalEntity])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[AnatomicalEntity]<topic_involves_anatomy%200..*-%20[DataTopic&#124;edam_id:edam_identifier%20%3F;mesh_id:mesh_identifier%20%3F;ncit_id:ncit_identifier%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]-%20concerns_data_topic%200..*>[DataTopic],[UseCase]-%20data_topics%200..*>[DataTopic],[DataTopicContainer]++-%20data_topics_collection%200..*>[DataTopic],[NamedThing]^-[DataTopic],[UseCase],[DataTopicContainer],[DataStandardOrTool],[AnatomicalEntity])
 
 ## Parents
 
@@ -36,6 +36,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
      * Description: Unique NCIt Identifier
      * Range: [NcitIdentifier](types/NcitIdentifier.md)
      * Example: NCIT:C92692 None
+ * [topic_involves_anatomy](topic_involves_anatomy.md)  <sub>0..\*</sub>
+     * Description: A relationship between a DataTopic and an anatomical entity.
+     * Range: [AnatomicalEntity](AnatomicalEntity.md)
 
 ### Inherited from NamedThing:
 

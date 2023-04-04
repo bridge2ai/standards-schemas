@@ -19,6 +19,7 @@ None &#8594;  <sub>1..1</sub> [Uriorcurie](types/Uriorcurie.md)
 
 ## Used by
 
+ * [AnatomicalEntity](AnatomicalEntity.md)
  * [BiomedicalStandard](BiomedicalStandard.md)
  * [DataStandard](DataStandard.md)
  * [DataStandardOrTool](DataStandardOrTool.md)

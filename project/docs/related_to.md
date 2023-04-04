@@ -19,9 +19,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/related_to](https://w3id.o
  *  [concerns_data_topic](concerns_data_topic.md)
  *  [has_relevant_organization](has_relevant_organization.md)
  *  [subclass_of](subclass_of.md)
+ *  [topic_involves_anatomy](topic_involves_anatomy.md)
 
 ## Used by
 
+ * [AnatomicalEntity](AnatomicalEntity.md)
  * [BiomedicalStandard](BiomedicalStandard.md)
  * [DataStandard](DataStandard.md)
  * [DataStandardOrTool](DataStandardOrTool.md)
