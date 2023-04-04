@@ -16,6 +16,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy](h
 
 
 
+## Applicable Classes
+
+| Name | Description |
+| --- | --- |
+[DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app...
+
+
+
+
 
 
 ## Properties
@@ -61,6 +70,8 @@ domain: DataTopic
 multivalued: true
 inherited: true
 alias: topic_involves_anatomy
+domain_of:
+- DataTopic
 range: AnatomicalEntity
 
 ```

@@ -7,7 +7,7 @@ A subcellular location, cell type or gross anatomical part
 URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataTopic],[NamedThing]^-[AnatomicalEntity&#124;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataTopic],[NamedThing]^-[AnatomicalEntity&#124;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataTopic],[DataTopic]-%20topic_involves_anatomy%200..*>[AnatomicalEntity&#124;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[NamedThing]^-[AnatomicalEntity])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[DataTopic],[DataTopic]-%20topic_involves_anatomy%200..*>[AnatomicalEntity&#124;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[NamedThing]^-[AnatomicalEntity])
 
 ## Identifier prefixes
 

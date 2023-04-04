@@ -1,19 +1,5 @@
 
 
-CREATE TABLE "AnatomicalEntity" (
-	id TEXT NOT NULL, 
-	category TEXT, 
-	name TEXT, 
-	description TEXT, 
-	subclass_of TEXT, 
-	related_to TEXT, 
-	contributor_name TEXT, 
-	contributor_github_name TEXT, 
-	contributor_orcid TEXT, 
-	contribution_date DATE, 
-	PRIMARY KEY (id)
-);
-
 CREATE TABLE "BiomedicalStandard" (
 	id TEXT NOT NULL, 
 	category TEXT, 
@@ -356,6 +342,22 @@ CREATE TABLE "UseCase" (
 CREATE TABLE "UseCaseContainer" (
 	use_cases TEXT, 
 	PRIMARY KEY (use_cases)
+);
+
+CREATE TABLE "AnatomicalEntity" (
+	id TEXT NOT NULL, 
+	category TEXT, 
+	name TEXT, 
+	description TEXT, 
+	subclass_of TEXT, 
+	related_to TEXT, 
+	contributor_name TEXT, 
+	contributor_github_name TEXT, 
+	contributor_orcid TEXT, 
+	contribution_date DATE, 
+	"DataTopic_id" TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY("DataTopic_id") REFERENCES "DataTopic" (id)
 );
 
 CREATE TABLE "BiomedicalStandard_collection" (

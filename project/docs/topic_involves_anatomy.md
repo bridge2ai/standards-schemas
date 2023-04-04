@@ -20,6 +20,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/topic_involves_anatomy](ht
 
 ## Used by
 
+ * [DataTopic](DataTopic.md)
 
 ## Other properties
 

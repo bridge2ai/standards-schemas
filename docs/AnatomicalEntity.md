@@ -69,6 +69,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity](https:/
 
 
 
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [DataTopic](DataTopic.md) | [topic_involves_anatomy](topic_involves_anatomy.md) | range | [AnatomicalEntity](AnatomicalEntity.md) |
+
+
 
 
 

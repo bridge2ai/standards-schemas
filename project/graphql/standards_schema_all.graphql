@@ -129,6 +129,7 @@ type DataTopic
     edamId: EdamIdentifier
     meshId: MeshIdentifier
     ncitId: NcitIdentifier
+    topicInvolvesAnatomy: [AnatomicalEntity]
   }
 
 type DataTopicContainer

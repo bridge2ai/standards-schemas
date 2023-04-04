@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-04-04T13:37:06
+# Generation date: 2023-04-04T13:52:30
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -623,7 +623,7 @@ class DataTopic(NamedThing):
     """
     Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
     """
-    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to"]
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "topic_involves_anatomy"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_TOPIC.DataTopic
     class_class_curie: ClassVar[str] = "B2AI_TOPIC:DataTopic"
@@ -634,6 +634,7 @@ class DataTopic(NamedThing):
     edam_id: Optional[Union[str, EdamIdentifier]] = None
     mesh_id: Optional[Union[str, MeshIdentifier]] = None
     ncit_id: Optional[Union[str, NcitIdentifier]] = None
+    topic_involves_anatomy: Optional[Union[Union[str, AnatomicalEntityId], List[Union[str, AnatomicalEntityId]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -649,6 +650,10 @@ class DataTopic(NamedThing):
 
         if self.ncit_id is not None and not isinstance(self.ncit_id, NcitIdentifier):
             self.ncit_id = NcitIdentifier(self.ncit_id)
+
+        if not isinstance(self.topic_involves_anatomy, list):
+            self.topic_involves_anatomy = [self.topic_involves_anatomy] if self.topic_involves_anatomy is not None else []
+        self.topic_involves_anatomy = [v if isinstance(v, AnatomicalEntityId) else AnatomicalEntityId(v) for v in self.topic_involves_anatomy]
 
         super().__post_init__(**kwargs)
 

@@ -43,6 +43,10 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
         
           DataTopic ..> NamedThing : subclass_of
         
+      DataTopic : topic_involves_anatomy
+        
+          DataTopic ..> AnatomicalEntity : topic_involves_anatomy
+        
       
 ```
 
@@ -63,6 +67,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 | [edam_id](edam_id.md) | 0..1 <br/> [EdamIdentifier](EdamIdentifier.md) | Unique EDAM identifier | direct |
 | [mesh_id](mesh_id.md) | 0..1 <br/> [MeshIdentifier](MeshIdentifier.md) | Unique MeSH identifier | direct |
 | [ncit_id](ncit_id.md) | 0..1 <br/> [NcitIdentifier](NcitIdentifier.md) | Unique NCIt Identifier | direct |
+| [topic_involves_anatomy](topic_involves_anatomy.md) | 0..* <br/> [AnatomicalEntity](AnatomicalEntity.md) | A relationship between a DataTopic and an anatomical entity | direct |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -93,6 +98,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 | [SoftwareOrTool](SoftwareOrTool.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
 | [TrainingProgram](TrainingProgram.md) | [concerns_data_topic](concerns_data_topic.md) | range | [DataTopic](DataTopic.md) |
+| [DataTopic](DataTopic.md) | [topic_involves_anatomy](topic_involves_anatomy.md) | domain | [DataTopic](DataTopic.md) |
 | [DataTopicContainer](DataTopicContainer.md) | [data_topics_collection](data_topics_collection.md) | range | [DataTopic](DataTopic.md) |
 
 
@@ -146,6 +152,7 @@ slots:
 - edam_id
 - mesh_id
 - ncit_id
+- topic_involves_anatomy
 
 ```
 </details>
@@ -209,6 +216,22 @@ attributes:
     - DataTopic
     - DataSubstrate
     range: ncit_identifier
+  topic_involves_anatomy:
+    name: topic_involves_anatomy
+    description: A relationship between a DataTopic and an anatomical entity.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    exact_mappings:
+    - RO:0004026
+    rank: 1000
+    is_a: related_to
+    domain: DataTopic
+    multivalued: true
+    inherited: true
+    alias: topic_involves_anatomy
+    owner: DataTopic
+    domain_of:
+    - DataTopic
+    range: AnatomicalEntity
   id:
     name: id
     description: A unique identifier for a thing.

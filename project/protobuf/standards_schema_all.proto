@@ -130,6 +130,7 @@ message DataTopic
   edamIdentifier edamId = 0
   meshIdentifier meshId = 0
   ncitIdentifier ncitId = 0
+ repeated  anatomicalEntity topicInvolvesAnatomy = 0
  }
 // A container for DataTopics.
 message DataTopicContainer

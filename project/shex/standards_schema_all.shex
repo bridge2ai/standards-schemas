@@ -135,7 +135,8 @@ B2AI_TOPIC:DataTopic CLOSED {
           rdf:type [ schema1:Thing ] ? ;
           B2AI:edam_id @B2AI:EdamIdentifier ? ;
           B2AI:mesh_id @B2AI:MeshIdentifier ? ;
-          B2AI:ncit_id @B2AI:NcitIdentifier ?
+          B2AI:ncit_id @B2AI:NcitIdentifier ? ;
+          B2AI_TOPIC:topic_involves_anatomy @B2AI:AnatomicalEntity *
        ) ;
        rdf:type [ B2AI_TOPIC:DataTopic ]
     )
