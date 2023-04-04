@@ -1,3 +1,17 @@
+// A subcellular location, cell type or gross anatomical part
+message AnatomicalEntity
+ {
+  uriorcurie id = 0
+  categoryType category = 0
+  string name = 0
+  string description = 0
+ repeated  namedThing subclassOf = 0
+ repeated  namedThing relatedTo = 0
+  string contributorName = 0
+  string contributorGithubName = 0
+  uriorcurie contributorOrcid = 0
+  date contributionDate = 0
+ }
 // Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes.
 message BiomedicalStandard
  {

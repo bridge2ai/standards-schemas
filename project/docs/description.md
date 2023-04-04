@@ -19,6 +19,7 @@ None &#8594;  <sub>0..1</sub> [String](types/String.md)
 
 ## Used by
 
+ * [AnatomicalEntity](AnatomicalEntity.md)
  * [BiomedicalStandard](BiomedicalStandard.md)
  * [DataStandard](DataStandard.md)
  * [DataStandardOrTool](DataStandardOrTool.md)

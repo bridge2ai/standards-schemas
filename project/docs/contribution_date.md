@@ -20,6 +20,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/contribution_date](https:/
 
 ## Used by
 
+ * [AnatomicalEntity](AnatomicalEntity.md)
  * [BiomedicalStandard](BiomedicalStandard.md)
  * [DataStandard](DataStandard.md)
  * [DataStandardOrTool](DataStandardOrTool.md)

@@ -14,6 +14,7 @@ URI: [schema:Thing](http://schema.org/Thing)
       NamedThing <|-- UseCase
       NamedThing <|-- DataStandardOrTool
       NamedThing <|-- DataTopic
+      NamedThing <|-- AnatomicalEntity
       NamedThing <|-- Organization
       NamedThing <|-- DataSubstrate
       
@@ -53,6 +54,7 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [UseCase](UseCase.md)
     * [DataStandardOrTool](DataStandardOrTool.md)
     * [DataTopic](DataTopic.md)
+    * [AnatomicalEntity](AnatomicalEntity.md)
     * [Organization](Organization.md)
     * [DataSubstrate](DataSubstrate.md)
 
@@ -289,6 +291,15 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [NamedThing](NamedThing.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
 | [NamedThing](NamedThing.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [NamedThing](NamedThing.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [contributor_name](contributor_name.md) | domain | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [Organization](Organization.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
 | [Organization](Organization.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
 | [Organization](Organization.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |

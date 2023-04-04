@@ -6,9 +6,16 @@
    "B2AI_TOPIC": "https://w3id.org/bridge2ai/standards-datatopic-schema/",
    "B2AI_USECASE": "https://w3id.org/bridge2ai/standards-usecase-schema/",
    "MESH": "http://id.nlm.nih.gov/mesh/",
+   "RO": "http://purl.obolibrary.org/obo/RO_",
    "linkml": "https://w3id.org/linkml/",
+   "ncit": "http://purl.obolibrary.org/obo/NCIT_",
    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "schema": "http://schema.org/",
+   "uberon": "http://purl.obolibrary.org/obo/uberon/core#",
+   "wikidata": "http://www.wikidata.org/wiki/",
+   "AnatomicalEntity": {
+      "@id": "B2AI:AnatomicalEntity"
+   },
    "BiomedicalStandard": {
       "@id": "B2AI_STANDARD:BiomedicalStandard"
    },

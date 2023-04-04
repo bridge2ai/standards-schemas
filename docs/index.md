@@ -11,6 +11,7 @@ Name: standards-schema-all
 
 | Class | Description |
 | --- | --- |
+| [AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part |
 | [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app... |
 | [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |
 | [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |
@@ -78,6 +79,7 @@ Name: standards-schema-all
 | [ror_id](ror_id.md) | Unique ROR identifier |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |
+| [topic_involves_anatomy](topic_involves_anatomy.md) | A relationship between a DataTopic and an anatomical entity |
 | [type](type.md) | A generic slot for any label corresponding to the label  for an entity type a... |
 | [url](url.md) | URL for basic documentation of the standard or tool |
 | [use_case_category](use_case_category.md) | Category of the UseCase |

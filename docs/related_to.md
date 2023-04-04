@@ -12,6 +12,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:related_to](https://w3id.
 * **related_to**
     * [concerns_data_topic](concerns_data_topic.md)
     * [has_relevant_organization](has_relevant_organization.md)
+    * [topic_involves_anatomy](topic_involves_anatomy.md)
     * [subclass_of](subclass_of.md)
 
 
@@ -36,6 +37,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:related_to](https://w3id.
 [ReferenceImplementation](ReferenceImplementation.md) | Represents an implementation of one or more standards or tools in the Bridge2...
 [TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ...
 [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app...
+[AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part
 [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data
 
 

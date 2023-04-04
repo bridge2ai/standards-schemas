@@ -1,3 +1,17 @@
+type AnatomicalEntity
+  {
+    id: Uriorcurie!
+    category: CategoryType
+    name: String
+    description: String
+    subclassOf: [NamedThing]
+    relatedTo: [NamedThing]
+    contributorName: String
+    contributorGithubName: String
+    contributorOrcid: Uriorcurie
+    contributionDate: Date
+  }
+
 type BiomedicalStandard
   {
     id: Uriorcurie!
