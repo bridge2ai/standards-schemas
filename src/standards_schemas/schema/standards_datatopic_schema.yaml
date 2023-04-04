@@ -19,6 +19,7 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
+  RO: 
 default_prefix: B2AI_TOPIC
 default_range: string
 
@@ -52,3 +53,13 @@ slots:
     inlined: true
     inlined_as_list: true
     multivalued: true
+
+  topic_involves_anatomy:
+    description: >-
+      A relationship between a DataTopic and an anatomical entity.
+    is_a: related_to
+    domain: DataTopic
+    range: AnatomicalEntity
+    multivalued: True
+    exact_mappings:
+      - RO:0004026
