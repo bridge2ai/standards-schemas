@@ -29,8 +29,12 @@ Please carefully read our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Guidelines for Contributions and Requests
 
+Please open a pull request on this repository with any changes to the data schemas.
+
+To request a new data element (e.g., add Standard XYZ or a new data topic), please open an issue on the [Standards Registry repository](https://github.com/bridge2ai/b2ai-standards-registry). 
+
 <a id="reporting-bugs"></a>
 
 ### Reporting problems with the data model
 
-Please use our [Issue Tracker](https://github.com/bridge2ai/standards-schemas/issues/) for reporting problems with the ontology. 
+Please use our [Issue Tracker](https://github.com/bridge2ai/standards-schemas/issues/) for reporting problems with the schemas. 
