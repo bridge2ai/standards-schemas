@@ -4,7 +4,7 @@ Data schema for Bridge2AI Standards Schemas.
 
 ## Website
 
-* [https://bridge2ai.github.io/standards-schemas](https://bridge2ai.github.io/standards-schema)
+* [https://bridge2ai.github.io/standards-schemas](https://bridge2ai.github.io/standards-schemas)
 
 ## Repository Structure
 
