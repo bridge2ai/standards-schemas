@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://bridge2ai.github.io/standards-schema/MeSH_ID/">
+        <link rel="canonical" href="https://bridge2ai.github.io/standards-schema/use_conditions/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: MeSH_ID - standards-schema</title>
+        <title>Slot: use_conditions - standards-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-mesh_id" class="md-skip">
+        <a href="#slot-use_conditions" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: MeSH_ID
+              Slot: use_conditions
             
           </span>
         </div>
@@ -256,8 +256,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
+  <a href="#inheritance" class="md-nav__link">
+    Inheritance
   </a>
   
 </li>
@@ -265,13 +265,6 @@
         <li class="md-nav__item">
   <a href="#properties" class="md-nav__link">
     Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
   </a>
   
 </li>
@@ -317,72 +310,46 @@
                 
                   
 
-  <a href="https://github.com/bridge2ai/standards-schema/edit/master/docs/MeSH_ID.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/bridge2ai/standards-schema/edit/master/docs/use_conditions.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-mesh_id">Slot: MeSH_ID</h1>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema/MeSH_ID">STANDARDS:MeSH_ID</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td>Represents a general data topic for Bridge2AI data or the tools/standards app...</td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td>Represents a data substrate for Bridge2AI data</td>
-</tr>
-</tbody>
-</table>
+<h1 id="slot-use_conditions">Slot: use_conditions</h1>
+<p><em>Applicable conditions on use, as defined by the Data Use Ontology (DUO).</em></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:use_conditions">https://w3id.org/bridge2ai/standards-schema-all/:use_conditions</a></p>
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../node_property/">node_property</a><ul>
+<li><strong>use_conditions</strong></li>
+</ul>
+</li>
+</ul>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../MeshIdentifier/">MeshIdentifier</a></li>
+<li>Range: <a href="../Uriorcurie/">Uriorcurie</a></li>
+<li>Multivalued: True</li>
 </ul>
-<h2 id="examples">Examples</h2>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MeSH:D014831</td>
-</tr>
-</tbody>
-</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/bridge2ai/standards-schema</li>
+<li>from schema: https://w3id.org/bridge2ai/standards-schema-all</li>
 </ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: MeSH_ID
-examples:
-- value: MeSH:D014831
-from_schema: https://w3id.org/bridge2ai/standards-schema
+<pre><code class="language-yaml">name: use_conditions
+description: Applicable conditions on use, as defined by the Data Use Ontology (DUO).
+from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
+is_a: node_property
 values_from:
-- MeSH
-alias: MeSH_ID
-domain_of:
-- DataTopic
-- DataSubstrate
-range: mesh identifier
+- DUO
+domain: NamedThing
+multivalued: true
+alias: use_conditions
+range: uriorcurie
 
 </code></pre>
 
