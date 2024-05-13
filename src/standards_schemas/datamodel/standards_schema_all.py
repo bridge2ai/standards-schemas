@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-04-10T15:11:21
+# Generation date: 2024-05-13T15:51:55
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -1024,6 +1024,9 @@ slots.purpose_detail = Slot(uri=B2AI_STANDARD.purpose_detail, name="purpose_deta
 
 slots.is_open = Slot(uri=B2AI_STANDARD.is_open, name="is_open", curie=B2AI_STANDARD.curie('is_open'),
                    model_uri=DEFAULT_.is_open, domain=NamedThing, range=Optional[Union[bool, Bool]])
+
+slots.use_conditions = Slot(uri=B2AI_STANDARD.use_conditions, name="use_conditions", curie=B2AI_STANDARD.curie('use_conditions'),
+                   model_uri=DEFAULT_.use_conditions, domain=NamedThing, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
 
 slots.requires_registration = Slot(uri=B2AI_STANDARD.requires_registration, name="requires_registration", curie=B2AI_STANDARD.curie('requires_registration'),
                    model_uri=DEFAULT_.requires_registration, domain=NamedThing, range=Optional[Union[bool, Bool]])

@@ -75,6 +75,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [url](url.md) - URL for basic documentation of the standard or tool.
      * [use_case_category](use_case_category.md) - Category of the UseCase. Not all projects will incorporate use cases in all categories.
          * [UseCase➞use_case_category](UseCase_use_case_category.md)
+     * [use_conditions](use_conditions.md) - Applicable conditions on use, as defined by the Data Use Ontology (DUO).
      * [xref](xref.md) - URI of corresponding class in an ontology of experimental procedures, in CURIE form.
  * [organizations](organizations.md) - Collection of associated organizations.
  * [related_to](related_to.md) - A relationship that is asserted between two named things.
@@ -131,12 +132,15 @@ High-level classes for Bridge2AI Standards schemas.
  * [EdamIdentifier](types/EdamIdentifier.md)  ([Uriorcurie](types/Uriorcurie.md))  - Identifier from EDAM ontology
  * [Float](types/Float.md)  (**float**)  - A real number that conforms to the xsd:float specification
  * [Integer](types/Integer.md)  (**int**)  - An integer
+ * [Jsonpath](types/Jsonpath.md)  (**str**)  - A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.
+ * [Jsonpointer](types/Jsonpointer.md)  (**str**)  - A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.
  * [MeshIdentifier](types/MeshIdentifier.md)  ([Uriorcurie](types/Uriorcurie.md))  - Identifier from Medical Subject Headings (MeSH) biomedical vocabulary.
  * [NcitIdentifier](types/NcitIdentifier.md)  ([Uriorcurie](types/Uriorcurie.md))  - Identifier from NCIT reference terminology with broad coverage of the cancer domain.
  * [Ncname](types/Ncname.md)  (**NCName**)  - Prefix part of CURIE
  * [Nodeidentifier](types/Nodeidentifier.md)  (**NodeIdentifier**)  - A URI, CURIE or BNODE that represents a node in a model.
  * [Objectidentifier](types/Objectidentifier.md)  (**ElementIdentifier**)  - A URI or CURIE that represents an object in the model.
  * [RorIdentifier](types/RorIdentifier.md)  ([Uriorcurie](types/Uriorcurie.md))  - Identifier from Research Organization Registry.
+ * [Sparqlpath](types/Sparqlpath.md)  (**str**)  - A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.
  * [String](types/String.md)  (**str**)  - A character string
  * [Time](types/Time.md)  (**XSDTime**)  - A time object represents a (local) time of day, independent of any particular day
  * [Uri](types/Uri.md)  (**URI**)  - a complete URI

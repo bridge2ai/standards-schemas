@@ -41,6 +41,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/node_property](https://w3i
  *  [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md)
  *  [url](url.md)
  *  [use_case_category](use_case_category.md)
+ *  [use_conditions](use_conditions.md)
  *  [xref](xref.md)
 
 ## Used by

@@ -84,6 +84,7 @@ Name: standards-schema-all
 | [url](url.md) | URL for basic documentation of the standard or tool |
 | [use_case_category](use_case_category.md) | Category of the UseCase |
 | [use_cases](use_cases.md) | Collection of associated use cases |
+| [use_conditions](use_conditions.md) | Applicable conditions on use, as defined by the Data Use Ontology (DUO) |
 | [wikidata_id](wikidata_id.md) | Unique Wikidata identifier |
 | [xref](xref.md) | URI of corresponding class in an ontology of experimental procedures, in CURI... |
 

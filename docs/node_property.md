@@ -23,6 +23,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:node_property](https://w3
     * [collection](collection.md)
     * [purpose_detail](purpose_detail.md)
     * [is_open](is_open.md)
+    * [use_conditions](use_conditions.md)
     * [requires_registration](requires_registration.md)
     * [publication](publication.md)
     * [formal_specification](formal_specification.md)
