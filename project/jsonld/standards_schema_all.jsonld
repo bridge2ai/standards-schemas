@@ -585,6 +585,10 @@
         {
           "text": "standardsregistry",
           "description": "Standards Registry"
+        },
+        {
+          "text": "has_ai_application",
+          "description": "Has a direct AI application, defined as standards/tools that are: associated with ML or neural networks; schemas, or have schemas; data models; associated with DICOM; associated with AI; associated with standards used within Bridge2AI"
         }
       ]
     },
@@ -2035,7 +2039,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2023-03-27T14:02:39",
   "source_file_size": 439,
-  "generation_date": "2024-05-13T15:51:43",
+  "generation_date": "2024-11-04T17:40:38",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

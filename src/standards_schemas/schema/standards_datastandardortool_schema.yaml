@@ -271,3 +271,12 @@ enums:
         description: Speech Data
       standardsregistry:
         description: Standards Registry
+      has_ai_application:
+        description: >-
+          Has a direct AI application, defined as standards/tools that are:
+          associated with ML or neural networks;
+          schemas, or have schemas;
+          data models;
+          associated with DICOM;
+          associated with AI;
+          associated with standards used within Bridge2AI

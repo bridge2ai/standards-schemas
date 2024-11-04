@@ -50,4 +50,5 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/StandardsCollectionTag](ht
 | scrnaseqanalysis | scRNA-seq Analysis |  |  |
 | speechdata | Speech Data |  |  |
 | standardsregistry | Standards Registry |  |  |
+| has_ai_application | Has a direct AI application, defined as standards/tools that are: associated with ML or neural networks; schemas, or have schemas; data models; associated with DICOM; associated with AI; associated with standards used within Bridge2AI |  |  |
 
