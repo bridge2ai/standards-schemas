@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.9.0
-# Generation date: 2024-05-13T15:51:55
+# Generation date: 2024-11-04T17:40:51
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -933,6 +933,8 @@ class StandardsCollectionTag(EnumDefinitionImpl):
                                            description="Speech Data")
     standardsregistry = PermissibleValue(text="standardsregistry",
                                                          description="Standards Registry")
+    has_ai_application = PermissibleValue(text="has_ai_application",
+                                                           description="Has a direct AI application, defined as standards/tools that are: associated with ML or neural networks; schemas, or have schemas; data models; associated with DICOM; associated with AI; associated with standards used within Bridge2AI")
 
     _defn = EnumDefinition(
         name="StandardsCollectionTag",

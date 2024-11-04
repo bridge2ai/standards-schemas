@@ -1430,7 +1430,8 @@
                 "referencegenome",
                 "scrnaseqanalysis",
                 "speechdata",
-                "standardsregistry"
+                "standardsregistry",
+                "has_ai_application"
             ],
             "title": "StandardsCollectionTag",
             "type": "string"
