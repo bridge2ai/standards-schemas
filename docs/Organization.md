@@ -1,5 +1,10 @@
+
+
 # Class: Organization
+
+
 _Represents a group or organization related to or responsible for one or more Bridge2AI standards._
+
 
 
 
@@ -8,10 +13,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
 
 
 
+
+
+
 ```mermaid
  classDiagram
     class Organization
+    click Organization href "../Organization"
       NamedThing <|-- Organization
+        click NamedThing href "../NamedThing"
       
       Organization : category
         
@@ -31,13 +41,23 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
         
       Organization : related_to
         
-          Organization ..> NamedThing : related_to
+          
+    
+    
+    Organization --> "*" NamedThing : related_to
+    click NamedThing href "../NamedThing"
+
         
       Organization : ror_id
         
       Organization : subclass_of
         
-          Organization ..> NamedThing : subclass_of
+          
+    
+    
+    Organization --> "*" NamedThing : subclass_of
+    click NamedThing href "../NamedThing"
+
         
       Organization : url
         
@@ -63,12 +83,12 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
 | [ror_id](ror_id.md) | 0..1 <br/> [RorIdentifier](RorIdentifier.md) | Unique ROR identifier | direct |
 | [wikidata_id](wikidata_id.md) | 0..1 <br/> [WikidataIdentifier](WikidataIdentifier.md) | Unique Wikidata identifier | direct |
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | direct |
-| [related_to](related_to.md) | 0..* <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | direct |
-| [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
+| [related_to](related_to.md) | * <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | direct |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
-| [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
+| [subclass_of](subclass_of.md) | * <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
 | [contributor_name](contributor_name.md) | 0..1 <br/> [String](String.md) | The name of the person who added this node | [NamedThing](NamedThing.md) |
 | [contributor_github_name](contributor_github_name.md) | 0..1 <br/> [String](String.md) | The name of the github user who added this node | [NamedThing](NamedThing.md) |
 | [contributor_orcid](contributor_orcid.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The ORCiD of the person who added this node | [NamedThing](NamedThing.md) |
@@ -115,13 +135,14 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
 
 
 
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/:Organization |
 | native | https://w3id.org/bridge2ai/standards-schema-all/:Organization |
+
+
 
 
 
@@ -139,7 +160,6 @@ name: Organization
 description: Represents a group or organization related to or responsible for one
   or more Bridge2AI standards.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: NamedThing
 slots:
 - ror_id
@@ -158,7 +178,6 @@ name: Organization
 description: Represents a group or organization related to or responsible for one
   or more Bridge2AI standards.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: NamedThing
 attributes:
   ror_id:
@@ -208,7 +227,6 @@ attributes:
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: related_to
     owner: Organization
@@ -217,6 +235,7 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+    multivalued: true
   id:
     name: id
     description: A unique identifier for a thing.
@@ -279,13 +298,13 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: subclass_of
     owner: Organization
     domain_of:
     - NamedThing
     range: NamedThing
+    multivalued: true
   contributor_name:
     name: contributor_name
     description: The name of the person who added this node.

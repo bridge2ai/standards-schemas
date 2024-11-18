@@ -1,5 +1,12 @@
+
+
 # Slot: topic_involves_anatomy
+
+
 _A relationship between a DataTopic and an anatomical entity._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy](https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy](h
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
+
 
 
 
@@ -30,10 +39,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy](h
 ## Properties
 
 * Range: [AnatomicalEntity](AnatomicalEntity.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -55,6 +62,17 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy](h
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy |
+| exact | RO:0004026 |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -67,12 +85,12 @@ exact_mappings:
 rank: 1000
 is_a: related_to
 domain: DataTopic
-multivalued: true
 inherited: true
 alias: topic_involves_anatomy
 domain_of:
 - DataTopic
 range: AnatomicalEntity
+multivalued: true
 
 ```
 </details>

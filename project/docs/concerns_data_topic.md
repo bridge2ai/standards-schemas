@@ -1,7 +1,6 @@
 
 # Slot: concerns_data_topic
 
-
 Subject standard is generally applied in the context of object data topic.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/concerns_data_topic](https://w3id.org/bridge2ai/standards-schema-all/concerns_data_topic)

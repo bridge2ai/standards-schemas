@@ -1,5 +1,12 @@
+
+
 # Slot: ncit_id
+
+
 _Unique NCIt Identifier_
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org/bridge2ai/standards-schema-all/:ncit_id)
@@ -11,12 +18,14 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app...
-[DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
+| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
+
 
 
 
@@ -26,8 +35,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org
 ## Properties
 
 * Range: [NcitIdentifier](NcitIdentifier.md)
-
-
 
 
 
@@ -56,6 +63,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:ncit_id |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:ncit_id |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -70,8 +87,8 @@ values_from:
 - NCIT
 alias: ncit_id
 domain_of:
-- DataTopic
 - DataSubstrate
+- DataTopic
 range: ncit_identifier
 
 ```

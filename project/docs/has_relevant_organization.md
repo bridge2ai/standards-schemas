@@ -1,7 +1,6 @@
 
 # Slot: has_relevant_organization
 
-
 Subject standard is managed or otherwise guided buy the object organization(s).
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/has_relevant_organization](https://w3id.org/bridge2ai/standards-schema-all/has_relevant_organization)

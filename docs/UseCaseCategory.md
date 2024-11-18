@@ -1,10 +1,13 @@
 # Enum: UseCaseCategory
 
 
+
+
 _Category of use case._
 
 
-URI: [UseCaseCategory](UseCaseCategory)
+
+URI: [UseCaseCategory](UseCaseCategory.md)
 
 ## Permissible Values
 
@@ -43,6 +46,8 @@ URI: [UseCaseCategory](UseCaseCategory)
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
 
 
 

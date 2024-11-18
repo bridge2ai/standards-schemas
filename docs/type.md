@@ -1,5 +1,12 @@
+
+
 # Slot: type
+
+
 _A generic slot for any label corresponding to the label  for an entity type associated to the class._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:type](https://w3id.org/bridge2ai/standards-schema-all/:type)
@@ -18,11 +25,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:type](https://w3id.org/br
 
 
 
+
+
 ## Properties
 
 * Range: NONE
-
-
 
 
 
@@ -40,6 +47,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:type](https://w3id.org/br
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:type |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:type |
 
 
 

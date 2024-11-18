@@ -1,3 +1,4 @@
+# metamodel_version: 1.7.0
 BASE <https://w3id.org/bridge2ai/standards-schema-all/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -91,9 +92,45 @@ B2AI_STANDARD:DataStandardOrTool  (
     CLOSED {
        (  $B2AI_STANDARD:DataStandardOrTool_tes (  &B2AI:NamedThing_tes ;
              rdf:type [ schema1:Thing ] ? ;
-             B2AI_STANDARD:collection @B2AI_STANDARD:StandardsCollectionTag * ;
+             B2AI_STANDARD:collection [
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#audiovisual>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#deprecated>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#fileformat>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#toolkit>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#clinicaldata>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#multimodal>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#text>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#cloudplatform>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#cloudservice>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#codesystem>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#datamodel>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#dataregistry>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#softwareregistry>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#datavisualization>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#notebookplatform>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#datasheets>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#machinelearningframework>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#workflowlanguage>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#diagnosticinstrument>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#drugdata>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#eyedata>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#markuplanguage>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#graphdataplatform>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#guidelines>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#minimuminformationschema>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#modelcards>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#obofoundry>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#ontologyregistry>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#policy>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#proteindata>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#referencegenome>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#scrnaseqanalysis>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#speechdata>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#standardsregistry>
+                <https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag#has_ai_application> ] * ;
              B2AI_STANDARD:concerns_data_topic @B2AI_TOPIC:DataTopic * ;
              B2AI_STANDARD:has_relevant_organization @B2AI_ORG:Organization * ;
+             B2AI_STANDARD:has_training_resource @B2AI_STANDARD:DataStandardOrTool * ;
              B2AI_STANDARD:purpose_detail @linkml:String ? ;
              B2AI_STANDARD:is_open @linkml:Boolean ? ;
              B2AI_STANDARD:requires_registration @linkml:Boolean ? ;
@@ -248,9 +285,16 @@ B2AI_STANDARD:TrainingProgram CLOSED {
 B2AI_USECASE:UseCase CLOSED {
     (  $B2AI_USECASE:UseCase_tes (  &B2AI:NamedThing_tes ;
           rdf:type [ schema1:Thing ] ? ;
-          B2AI_USECASE:use_case_category @B2AI_USECASE:UseCaseCategory ;
+          B2AI_USECASE:use_case_category [ <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#acquisition>
+             <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#integration>
+             <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#standardization>
+             <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#modeling>
+             <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#application>
+             <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#assessment> ] ;
           B2AI_USECASE:known_limitations @linkml:String ? ;
-          B2AI_USECASE:relevance_to_dgps @B2AI:DataGeneratingProject * ;
+          B2AI_USECASE:relevance_to_dgps [ <https://reporter.nih.gov/project-details/10471118>
+             <https://reporter.nih.gov/project-details/10472824> <https://reporter.nih.gov/project-details/10473403>
+             <https://reporter.nih.gov/project-details/10473236> ] * ;
           B2AI_USECASE:data_topics @B2AI_TOPIC:DataTopic * ;
           B2AI_USECASE:data_substrates @B2AI_SUBSTRATE:DataSubstrate * ;
           B2AI_USECASE:standards_and_tools_for_dgp_use @B2AI_STANDARD:DataStandardOrTool * ;
@@ -270,5 +314,4 @@ B2AI_USECASE:UseCaseContainer CLOSED {
        rdf:type [ B2AI_USECASE:UseCaseContainer ] ?
     )
 }
-
 

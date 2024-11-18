@@ -1,5 +1,12 @@
+
+
 # Slot: xref
+
+
 _URI of corresponding class in an ontology of experimental procedures, in CURIE form._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:xref](https://w3id.org/bridge2ai/standards-schema-all/:xref)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:xref](https://w3id.org/br
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
+
 
 
 
@@ -30,10 +39,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:xref](https://w3id.org/br
 ## Properties
 
 * Range: [Uriorcurie](Uriorcurie.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -62,6 +69,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:xref](https://w3id.org/br
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:xref |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:xref |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -77,11 +94,11 @@ aliases:
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: xref
 domain_of:
 - UseCase
 range: uriorcurie
+multivalued: true
 
 ```
 </details>

@@ -1,16 +1,10 @@
 
 # Enum: StandardsCollectionTag
 
-
 Tags for specific sets of standards.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/StandardsCollectionTag](https://w3id.org/bridge2ai/standards-schema-all/StandardsCollectionTag)
 
-
-## Other properties
-
-|  |  |  |
-| --- | --- | --- |
 
 ## Permissible Values
 

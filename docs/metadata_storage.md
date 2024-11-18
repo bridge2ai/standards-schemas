@@ -1,5 +1,12 @@
+
+
 # Slot: metadata_storage
+
+
 _Data Substrate in which metadata is stored._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage](https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage](https:/
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
+
 
 
 
@@ -29,11 +38,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage](https:/
 
 ## Properties
 
-* Range: [String](String.md)
+* Range: [String](String.md)&nbsp;or&nbsp;<br />[DataSubstrate](DataSubstrate.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -55,6 +62,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage](https:/
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -65,11 +82,11 @@ from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: metadata_storage
 domain_of:
 - DataSubstrate
 range: string
+multivalued: true
 any_of:
 - range: DataSubstrate
 - equals_string: file headers

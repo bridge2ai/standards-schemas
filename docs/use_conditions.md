@@ -1,5 +1,12 @@
+
+
 # Slot: use_conditions
+
+
 _Applicable conditions on use, as defined by the Data Use Ontology (DUO)._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_conditions](https://w3id.org/bridge2ai/standards-schema-all/:use_conditions)
@@ -18,13 +25,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_conditions](https://w
 
 
 
+
+
 ## Properties
 
 * Range: [Uriorcurie](Uriorcurie.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -46,6 +53,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_conditions](https://w
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:use_conditions |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:use_conditions |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -58,9 +75,9 @@ is_a: node_property
 values_from:
 - DUO
 domain: NamedThing
-multivalued: true
 alias: use_conditions
 range: uriorcurie
+multivalued: true
 
 ```
 </details>

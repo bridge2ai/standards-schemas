@@ -1,5 +1,12 @@
+
+
 # Slot: ror_id
+
+
 _Unique ROR identifier._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:ror_id](https://w3id.org/bridge2ai/standards-schema-all/:ror_id)
@@ -11,11 +18,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ror_id](https://w3id.org/
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ... |  no  |
+
 
 
 
@@ -25,8 +34,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ror_id](https://w3id.org/
 ## Properties
 
 * Range: [RorIdentifier](RorIdentifier.md)
-
-
 
 
 
@@ -51,6 +58,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ror_id](https://w3id.org/
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:ror_id |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:ror_id |
 
 
 

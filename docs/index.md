@@ -3,6 +3,7 @@
 High-level classes for Bridge2AI Standards schemas.
 
 URI: https://w3id.org/bridge2ai/standards-schema-all
+
 Name: standards-schema-all
 
 
@@ -11,27 +12,28 @@ Name: standards-schema-all
 
 | Class | Description |
 | --- | --- |
-| [AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part |
-| [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app... |
-| [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |
-| [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |
-| [DataStandardOrToolContainer](DataStandardOrToolContainer.md) | A container for DataStandardOrTool(s) |
-| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |
-| [DataSubstrateContainer](DataSubstrateContainer.md) | A container for DataSubstrates |
-| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |
-| [DataTopicContainer](DataTopicContainer.md) | A container for DataTopics |
-| [ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |
+| [DataStandardOrToolContainer](DataStandardOrToolContainer.md) | A container for DataStandardOrTool(s). |
+| [DataSubstrateContainer](DataSubstrateContainer.md) | A container for DataSubstrates. |
+| [DataTopicContainer](DataTopicContainer.md) | A container for DataTopics. |
 | [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |
-| [OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their... |
-| [Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ... |
-| [OrganizationContainer](OrganizationContainer.md) | A container for Organizations |
-| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | Represents a resource in the Bridge2AI Standards Registry serving as a standa... |
-| [ReferenceImplementation](ReferenceImplementation.md) | Represents an implementation of one or more standards or tools in the Bridge2... |
-| [Registry](Registry.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |
-| [SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standar... |
-| [TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ... |
-| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |
-| [UseCaseContainer](UseCaseContainer.md) | A container for UseCase |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a repository, the resource must not index models alone. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ReferenceDataOrDataset](ReferenceDataOrDataset.md) | Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ReferenceImplementation](ReferenceImplementation.md) | Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Registry](Registry.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standards Registry. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards applied to the data. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Organization](Organization.md) | Represents a group or organization related to or responsible for one or more Bridge2AI standards. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards. |
+| [OrganizationContainer](OrganizationContainer.md) | A container for Organizations. |
+| [UseCaseContainer](UseCaseContainer.md) | A container for UseCase. |
+
 
 
 ## Slots
@@ -57,6 +59,7 @@ Name: standards-schema-all
 | [file_extensions](file_extensions.md) | Commonly used file extensions for this substrate |
 | [formal_specification](formal_specification.md) | Relevant code repository or other location for a formal specification of the ... |
 | [has_relevant_organization](has_relevant_organization.md) | Subject standard is managed or otherwise guided buy the object organization(s... |
+| [has_training_resource](has_training_resource.md) | Relevant training resources, standard usage manuals, or other documentation f... |
 | [id](id.md) | A unique identifier for a thing |
 | [involved_in_experimental_design](involved_in_experimental_design.md) | True if use case is likely to be implemented as part of an experimental proce... |
 | [involved_in_metadata_management](involved_in_metadata_management.md) | True if use case is likely to be implemented as part of metadata indexing, sa... |
@@ -75,7 +78,7 @@ Name: standards-schema-all
 | [purpose_detail](purpose_detail.md) | Text description of the standard or tool |
 | [related_to](related_to.md) | A relationship that is asserted between two named things |
 | [relevance_to_dgps](relevance_to_dgps.md) | Relevance of the use case to one or more DGPs |
-| [requires_registration](requires_registration.md) | Does usage of the standard or tool require registrion of a user or group with... |
+| [requires_registration](requires_registration.md) | Does usage of the standard or tool require registration of a user or group wi... |
 | [ror_id](ror_id.md) | Unique ROR identifier |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |
@@ -113,12 +116,15 @@ Name: standards-schema-all
 | [EdamIdentifier](EdamIdentifier.md) | Identifier from EDAM ontology |
 | [Float](Float.md) | A real number that conforms to the xsd:float specification |
 | [Integer](Integer.md) | An integer |
+| [Jsonpath](Jsonpath.md) | A string encoding a JSON Path |
+| [Jsonpointer](Jsonpointer.md) | A string encoding a JSON Pointer |
 | [MeshIdentifier](MeshIdentifier.md) | Identifier from Medical Subject Headings (MeSH) biomedical vocabulary |
 | [NcitIdentifier](NcitIdentifier.md) | Identifier from NCIT reference terminology with broad coverage of the cancer ... |
 | [Ncname](Ncname.md) | Prefix part of CURIE |
 | [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
 | [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [RorIdentifier](RorIdentifier.md) | Identifier from Research Organization Registry |
+| [Sparqlpath](Sparqlpath.md) | A string encoding a SPARQL Property Path |
 | [String](String.md) | A character string |
 | [Time](Time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](Uri.md) | a complete URI |

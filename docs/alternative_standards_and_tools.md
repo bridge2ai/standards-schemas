@@ -1,5 +1,12 @@
+
+
 # Slot: alternative_standards_and_tools
+
+
 _List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and_tools](https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and_tools)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
+
 
 
 
@@ -30,10 +39,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and
 ## Properties
 
 * Range: [DataStandardOrTool](DataStandardOrTool.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -55,6 +62,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and_tools |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and_tools |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -67,11 +84,11 @@ from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: alternative_standards_and_tools
 domain_of:
 - UseCase
 range: DataStandardOrTool
+multivalued: true
 
 ```
 </details>

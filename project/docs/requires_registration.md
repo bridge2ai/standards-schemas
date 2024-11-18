@@ -1,8 +1,7 @@
 
 # Slot: requires_registration
 
-
-Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?
+Does usage of the standard or tool require registration of a user or group with some organization or managerial body?
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/requires_registration](https://w3id.org/bridge2ai/standards-schema-all/requires_registration)
 

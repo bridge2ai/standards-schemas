@@ -1,5 +1,12 @@
+
+
 # Slot: known_limitations
+
+
 _Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:known_limitations](https://w3id.org/bridge2ai/standards-schema-all/:known_limitations)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:known_limitations](https:
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
+
 
 
 
@@ -30,8 +39,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:known_limitations](https:
 ## Properties
 
 * Range: [String](String.md)
-
-
 
 
 
@@ -49,6 +56,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:known_limitations](https:
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:known_limitations |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:known_limitations |
 
 
 

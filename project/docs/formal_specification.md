@@ -1,7 +1,6 @@
 
 # Slot: formal_specification
 
-
 Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/formal_specification](https://w3id.org/bridge2ai/standards-schema-all/formal_specification)

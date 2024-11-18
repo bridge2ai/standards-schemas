@@ -815,12 +815,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/xref",
-      "multivalued": true,
       "owner": "xref",
       "domain_of": [
         "UseCase"
       ],
       "range": "uriorcurie",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -902,7 +902,6 @@
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/related_to",
-      "multivalued": true,
       "inherited": true,
       "owner": "Organization",
       "domain_of": [
@@ -911,6 +910,7 @@
       ],
       "symmetric": true,
       "range": "NamedThing",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -928,13 +928,13 @@
       "is_a": "related_to",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/subclass_of",
-      "multivalued": true,
       "inherited": true,
       "owner": "NamedThing",
       "domain_of": [
         "NamedThing"
       ],
       "range": "NamedThing",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -945,12 +945,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection",
-      "multivalued": true,
       "owner": "DataStandardOrTool",
       "domain_of": [
         "DataStandardOrTool"
       ],
       "range": "StandardsCollectionTag",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -994,15 +994,15 @@
       ],
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/use_conditions",
-      "multivalued": true,
       "owner": "use_conditions",
       "range": "uriorcurie",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
       "name": "requires_registration",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration",
-      "description": "Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?",
+      "description": "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?",
       "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
@@ -1022,13 +1022,13 @@
       "is_a": "related_to",
       "domain": "DataStandardOrTool",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic",
-      "multivalued": true,
       "inherited": true,
       "owner": "DataStandardOrTool",
       "domain_of": [
         "DataStandardOrTool"
       ],
       "range": "DataTopic",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1069,13 +1069,29 @@
       "is_a": "related_to",
       "domain": "DataStandardOrTool",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization",
-      "multivalued": true,
       "inherited": true,
       "owner": "DataStandardOrTool",
       "domain_of": [
         "DataStandardOrTool"
       ],
       "range": "Organization",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "has_training_resource",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource",
+      "description": "Relevant training resources, standard usage manuals, or other documentation for the standard or tool.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource",
+      "owner": "DataStandardOrTool",
+      "domain_of": [
+        "DataStandardOrTool"
+      ],
+      "range": "DataStandardOrTool",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1084,12 +1100,12 @@
       "description": "Collection of associated data standards or tools",
       "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/data_standardortools_collection",
-      "multivalued": true,
       "owner": "DataStandardOrToolContainer",
       "domain_of": [
         "DataStandardOrToolContainer"
       ],
       "range": "DataStandardOrTool",
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -1117,12 +1133,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage",
-      "multivalued": true,
       "owner": "DataSubstrate",
       "domain_of": [
         "DataSubstrate"
       ],
       "range": "string",
+      "multivalued": true,
       "any_of": [
         {
           "range": "DataSubstrate",
@@ -1143,12 +1159,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions",
-      "multivalued": true,
       "owner": "DataSubstrate",
       "domain_of": [
         "DataSubstrate"
       ],
       "range": "string",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1159,12 +1175,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations",
-      "multivalued": true,
       "owner": "DataSubstrate",
       "domain_of": [
         "DataSubstrate"
       ],
       "range": "string",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1173,12 +1189,12 @@
       "description": "Collection of associated data substrates",
       "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/data_substrates_collection",
-      "multivalued": true,
       "owner": "DataSubstrateContainer",
       "domain_of": [
         "DataSubstrateContainer"
       ],
       "range": "DataSubstrate",
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -1189,12 +1205,12 @@
       "description": "Collection of associated data topics.",
       "from_schema": "https://w3id.org/bridge2ai/standards-datatopic-schema",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/data_topics_collection",
-      "multivalued": true,
       "owner": "DataTopicContainer",
       "domain_of": [
         "DataTopicContainer"
       ],
       "range": "DataTopic",
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -1210,13 +1226,13 @@
       "is_a": "related_to",
       "domain": "DataTopic",
       "slot_uri": "https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy",
-      "multivalued": true,
       "inherited": true,
       "owner": "DataTopic",
       "domain_of": [
         "DataTopic"
       ],
       "range": "AnatomicalEntity",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1269,12 +1285,12 @@
       "description": "Collection of associated organizations.",
       "from_schema": "https://w3id.org/bridge2ai/standards-organization-schema",
       "slot_uri": "https://w3id.org/bridge2ai/standards-organization-schema/organizations",
-      "multivalued": true,
       "owner": "OrganizationContainer",
       "domain_of": [
         "OrganizationContainer"
       ],
       "range": "Organization",
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -1315,12 +1331,12 @@
       "description": "Relevance of the use case to one or more DGPs.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps",
-      "multivalued": true,
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
       "range": "DataGeneratingProject",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1331,12 +1347,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_topics",
-      "multivalued": true,
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
       "range": "DataTopic",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1347,12 +1363,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates",
-      "multivalued": true,
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
       "range": "DataSubstrate",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1363,12 +1379,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use",
-      "multivalued": true,
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
       "range": "DataStandardOrTool",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1379,12 +1395,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools",
-      "multivalued": true,
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
       "range": "DataStandardOrTool",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1395,12 +1411,12 @@
       "is_a": "node_property",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/enables",
-      "multivalued": true,
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
       "range": "UseCase",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1454,12 +1470,12 @@
       "description": "Collection of associated use cases",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_cases",
-      "multivalued": true,
       "owner": "UseCaseContainer",
       "domain_of": [
         "UseCaseContainer"
       ],
       "range": "UseCase",
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -1561,6 +1577,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -1593,6 +1610,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -1625,6 +1643,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -1657,6 +1676,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -1689,6 +1709,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -1704,7 +1725,7 @@
     {
       "name": "ModelRepository",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository",
-      "description": "Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.",
+      "description": "Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a repository, the resource must not index models alone.",
       "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
       "is_a": "DataStandardOrTool",
       "slots": [
@@ -1721,6 +1742,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -1753,6 +1775,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -1785,6 +1808,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -1817,6 +1841,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -1849,6 +1874,7 @@
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
+        "has_training_resource",
         "purpose_detail",
         "is_open",
         "requires_registration",
@@ -2037,9 +2063,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
-  "source_file_date": "2023-03-27T14:02:39",
+  "source_file_date": "2024-11-18T16:26:57",
   "source_file_size": 439,
-  "generation_date": "2024-11-04T17:40:38",
+  "generation_date": "2024-11-18T17:25:30",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

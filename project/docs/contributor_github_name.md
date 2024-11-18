@@ -1,7 +1,6 @@
 
 # Slot: contributor_github_name
 
-
 The name of the github user who added this node.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/contributor_github_name](https://w3id.org/bridge2ai/standards-schema-all/contributor_github_name)

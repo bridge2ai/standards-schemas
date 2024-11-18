@@ -1,7 +1,6 @@
 
 # Class: NamedThing
 
-
 A generic grouping for any identifiable entity
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/NamedThing](https://w3id.org/bridge2ai/standards-schema-all/NamedThing)
@@ -66,4 +65,3 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/NamedThing](https://w3id.o
 |  |  |  |
 | --- | --- | --- |
 | **Mappings:** | | schema:Thing |
-

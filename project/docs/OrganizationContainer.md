@@ -1,7 +1,6 @@
 
 # Class: OrganizationContainer
 
-
 A container for Organizations.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer](https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer)

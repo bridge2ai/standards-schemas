@@ -1,7 +1,10 @@
 # Type: NcitIdentifier
 
 
+
+
 _Identifier from NCIT reference terminology with broad coverage of the cancer domain._
+
 
 
 URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
@@ -40,6 +43,16 @@ Instances of this class *should* have identifiers with one of the following pref
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:ncit_identifier |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:ncit_identifier |
 
 
 

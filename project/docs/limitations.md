@@ -1,7 +1,6 @@
 
 # Slot: limitations
 
-
 Potential obstacles particular to this substrate or implementation.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/limitations](https://w3id.org/bridge2ai/standards-schema-all/limitations)

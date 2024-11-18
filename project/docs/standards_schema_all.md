@@ -20,7 +20,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [DataStandardOrTool](DataStandardOrTool.md) - Represents a standard or tool in the Bridge2AI Standards Registry.
          * [DataStandard](DataStandard.md) - Represents a general purpose standard in the Bridge2AI Standards Registry.
              * [BiomedicalStandard](BiomedicalStandard.md) - Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes.
-         * [ModelRepository](ModelRepository.md) - Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.
+         * [ModelRepository](ModelRepository.md) - Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a repository, the resource must not index models alone.
          * [OntologyOrVocabulary](OntologyOrVocabulary.md) - A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.
          * [ReferenceDataOrDataset](ReferenceDataOrDataset.md) - Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.
          * [ReferenceImplementation](ReferenceImplementation.md) - Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case.
@@ -60,6 +60,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [enables](enables.md) - Other use case(s) this use case supports or makes possible.
      * [file_extensions](file_extensions.md) - Commonly used file extensions for this substrate.
      * [formal_specification](formal_specification.md) - Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
+     * [has_training_resource](has_training_resource.md) - Relevant training resources, standard usage manuals, or other documentation for the standard or tool.
      * [involved_in_experimental_design](involved_in_experimental_design.md) - True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment.
      * [involved_in_metadata_management](involved_in_metadata_management.md) - True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data.
      * [involved_in_quality_control](involved_in_quality_control.md) - True is use case is likely to be implemented as part of data validation operations.
@@ -70,7 +71,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [not_relevant_to_dgps](not_relevant_to_dgps.md) - Is the standard or tool currently relevant to DGPs?
      * [publication](publication.md) - Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
      * [purpose_detail](purpose_detail.md) - Text description of the standard or tool.
-     * [requires_registration](requires_registration.md) - Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?
+     * [requires_registration](requires_registration.md) - Does usage of the standard or tool require registration of a user or group with some organization or managerial body?
      * [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) - List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.
      * [url](url.md) - URL for basic documentation of the standard or tool.
      * [use_case_category](use_case_category.md) - Category of the UseCase. Not all projects will incorporate use cases in all categories.

@@ -1,7 +1,6 @@
 
 # Class: AnatomicalEntity
 
-
 A subcellular location, cell type or gross anatomical part
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity)
@@ -66,4 +65,3 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 | **Exact Mappings:** | | uberon:0001062 |
 |  | | wikidata:Q4936952 |
 | **Narrow Mappings:** | | ncit:C12219 |
-

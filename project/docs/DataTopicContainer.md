@@ -1,7 +1,6 @@
 
 # Class: DataTopicContainer
 
-
 A container for DataTopics.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer](https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer)

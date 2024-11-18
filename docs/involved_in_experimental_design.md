@@ -1,5 +1,12 @@
+
+
 # Slot: involved_in_experimental_design
+
+
 _True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:involved_in_experimental_design](https://w3id.org/bridge2ai/standards-schema-all/:involved_in_experimental_design)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:involved_in_experimental_
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
+
 
 
 
@@ -30,8 +39,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:involved_in_experimental_
 ## Properties
 
 * Range: [Boolean](Boolean.md)
-
-
 
 
 
@@ -49,6 +56,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:involved_in_experimental_
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:involved_in_experimental_design |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:involved_in_experimental_design |
 
 
 

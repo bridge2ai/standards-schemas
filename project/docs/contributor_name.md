@@ -1,7 +1,6 @@
 
 # Slot: contributor_name
 
-
 The name of the person who added this node.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/contributor_name](https://w3id.org/bridge2ai/standards-schema-all/contributor_name)

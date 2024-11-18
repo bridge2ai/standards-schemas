@@ -1,7 +1,6 @@
 
 # Slot: description
 
-
 A human-readable description for a thing.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/description](https://w3id.org/bridge2ai/standards-schema-all/description)
@@ -41,4 +40,3 @@ None &#8594;  <sub>0..1</sub> [String](types/String.md)
 |  |  |  |
 | --- | --- | --- |
 | **Mappings:** | | schema:description |
-

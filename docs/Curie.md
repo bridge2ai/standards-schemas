@@ -1,7 +1,10 @@
 # Type: Curie
 
 
+
+
 _a compact URI_
+
 
 
 URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
@@ -36,6 +39,16 @@ URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | xsd:string |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:curie |
 
 
 

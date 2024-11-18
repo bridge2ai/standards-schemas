@@ -1,5 +1,12 @@
+
+
 # Slot: use_cases
+
+
 _Collection of associated use cases_
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_cases](https://w3id.org/bridge2ai/standards-schema-all/:use_cases)
@@ -11,11 +18,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_cases](https://w3id.o
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCaseContainer](UseCaseContainer.md) | A container for UseCase
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCaseContainer](UseCaseContainer.md) | A container for UseCase |  no  |
+
 
 
 
@@ -25,10 +34,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_cases](https://w3id.o
 ## Properties
 
 * Range: [UseCase](UseCase.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -50,6 +57,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_cases](https://w3id.o
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:use_cases |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:use_cases |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -58,11 +75,11 @@ name: use_cases
 description: Collection of associated use cases
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-multivalued: true
 alias: use_cases
 domain_of:
 - UseCaseContainer
 range: UseCase
+multivalued: true
 inlined: true
 inlined_as_list: true
 

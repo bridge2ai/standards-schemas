@@ -1,16 +1,10 @@
 
 # Enum: DataGeneratingProject
 
-
 One of the Bridge2AI Data Generating Projects.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataGeneratingProject](https://w3id.org/bridge2ai/standards-schema-all/DataGeneratingProject)
 
-
-## Other properties
-
-|  |  |  |
-| --- | --- | --- |
 
 ## Permissible Values
 

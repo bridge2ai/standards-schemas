@@ -1,7 +1,6 @@
 
 # Slot: collection
 
-
 Tags for specific sets of standards.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/collection](https://w3id.org/bridge2ai/standards-schema-all/collection)

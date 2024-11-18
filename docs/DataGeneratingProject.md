@@ -1,10 +1,13 @@
 # Enum: DataGeneratingProject
 
 
+
+
 _One of the Bridge2AI Data Generating Projects._
 
 
-URI: [DataGeneratingProject](DataGeneratingProject)
+
+URI: [DataGeneratingProject](DataGeneratingProject.md)
 
 ## Permissible Values
 
@@ -41,6 +44,8 @@ URI: [DataGeneratingProject](DataGeneratingProject)
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
 
 
 

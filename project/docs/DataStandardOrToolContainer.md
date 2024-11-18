@@ -1,7 +1,6 @@
 
 # Class: DataStandardOrToolContainer
 
-
 A container for DataStandardOrTool(s).
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer](https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer)

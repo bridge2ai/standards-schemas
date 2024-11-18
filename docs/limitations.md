@@ -1,5 +1,12 @@
+
+
 # Slot: limitations
+
+
 _Potential obstacles particular to this substrate or implementation. _
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:limitations](https://w3id.org/bridge2ai/standards-schema-all/:limitations)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:limitations](https://w3id
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
+
 
 
 
@@ -30,10 +39,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:limitations](https://w3id
 ## Properties
 
 * Range: [String](String.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -55,6 +62,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:limitations](https://w3id
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:limitations |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:limitations |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -65,11 +82,11 @@ from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: limitations
 domain_of:
 - DataSubstrate
 range: string
+multivalued: true
 
 ```
 </details>

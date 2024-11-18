@@ -1,7 +1,6 @@
 
 # Slot: subclass_of
 
-
 Holds between two classes where the domain class is a specialization of the range class.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/subclass_of](https://w3id.org/bridge2ai/standards-schema-all/subclass_of)
@@ -44,4 +43,3 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/subclass_of](https://w3id.
 | **Exact Mappings:** | | rdfs:subClassOf |
 |  | | MESH:isa |
 | **Narrow Mappings:** | | rdfs:subPropertyOf |
-

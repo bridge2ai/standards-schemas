@@ -1,10 +1,13 @@
 # Enum: StandardsCollectionTag
 
 
+
+
 _Tags for specific sets of standards._
 
 
-URI: [StandardsCollectionTag](StandardsCollectionTag)
+
+URI: [StandardsCollectionTag](StandardsCollectionTag.md)
 
 ## Permissible Values
 
@@ -72,6 +75,8 @@ URI: [StandardsCollectionTag](StandardsCollectionTag)
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
 
 
 

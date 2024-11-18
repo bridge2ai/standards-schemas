@@ -1,7 +1,6 @@
 
 # Class: UseCase
 
-
 Represents a use case for Bridge2AI standards.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase](https://w3id.org/bridge2ai/standards-schema-all/UseCase)

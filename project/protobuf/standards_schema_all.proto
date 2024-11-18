@@ -1,3 +1,6 @@
+ syntax="proto3";
+ package
+// metamodel_version: 1.7.0
 // A subcellular location, cell type or gross anatomical part
 message AnatomicalEntity
  {
@@ -28,6 +31,7 @@ message BiomedicalStandard
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0
@@ -52,6 +56,7 @@ message DataStandard
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0
@@ -76,6 +81,7 @@ message DataStandardOrTool
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0
@@ -137,7 +143,7 @@ message DataTopicContainer
  {
  repeated  dataTopic dataTopicsCollection = 0
  }
-// Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.
+// Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a repository, the resource must not index models alone.
 message ModelRepository
  {
   uriorcurie id = 0
@@ -153,6 +159,7 @@ message ModelRepository
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0
@@ -191,6 +198,7 @@ message OntologyOrVocabulary
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0
@@ -237,6 +245,7 @@ message ReferenceDataOrDataset
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0
@@ -261,6 +270,7 @@ message ReferenceImplementation
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0
@@ -285,6 +295,7 @@ message Registry
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0
@@ -309,6 +320,7 @@ message SoftwareOrTool
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0
@@ -333,6 +345,7 @@ message TrainingProgram
  repeated  standardsCollectionTag collection = 0
  repeated  dataTopic concernsDataTopic = 0
  repeated  organization hasRelevantOrganization = 0
+ repeated  dataStandardOrTool hasTrainingResource = 0
   string purposeDetail = 0
   boolean isOpen = 0
   boolean requiresRegistration = 0

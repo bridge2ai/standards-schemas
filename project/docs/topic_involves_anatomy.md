@@ -1,7 +1,6 @@
 
 # Slot: topic_involves_anatomy
 
-
 A relationship between a DataTopic and an anatomical entity.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/topic_involves_anatomy](https://w3id.org/bridge2ai/standards-schema-all/topic_involves_anatomy)
@@ -27,4 +26,3 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/topic_involves_anatomy](ht
 |  |  |  |
 | --- | --- | --- |
 | **Exact Mappings:** | | RO:0004026 |
-

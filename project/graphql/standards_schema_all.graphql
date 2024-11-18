@@ -1,3 +1,61 @@
+# metamodel_version: 1.7.0
+enum DataGeneratingProject
+  {
+    aireadi
+    chorus
+    cm4ai
+    voice
+  }
+
+enum StandardsCollectionTag
+  {
+    audiovisual
+    deprecated
+    fileformat
+    toolkit
+    clinicaldata
+    multimodal
+    text
+    cloudplatform
+    cloudservice
+    codesystem
+    datamodel
+    dataregistry
+    softwareregistry
+    datavisualization
+    notebookplatform
+    datasheets
+    machinelearningframework
+    workflowlanguage
+    diagnosticinstrument
+    drugdata
+    eyedata
+    markuplanguage
+    graphdataplatform
+    guidelines
+    minimuminformationschema
+    modelcards
+    obofoundry
+    ontologyregistry
+    policy
+    proteindata
+    referencegenome
+    scrnaseqanalysis
+    speechdata
+    standardsregistry
+    has_ai_application
+  }
+
+enum UseCaseCategory
+  {
+    acquisition
+    integration
+    standardization
+    modeling
+    application
+    assessment
+  }
+
 type AnatomicalEntity
   {
     id: Uriorcurie!
@@ -27,6 +85,7 @@ type BiomedicalStandard
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean
@@ -51,6 +110,7 @@ type DataStandard
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean
@@ -75,6 +135,7 @@ type DataStandardOrTool
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean
@@ -152,6 +213,7 @@ type ModelRepository
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean
@@ -190,6 +252,7 @@ type OntologyOrVocabulary
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean
@@ -236,6 +299,7 @@ type ReferenceDataOrDataset
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean
@@ -260,6 +324,7 @@ type ReferenceImplementation
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean
@@ -284,6 +349,7 @@ type Registry
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean
@@ -308,6 +374,7 @@ type SoftwareOrTool
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean
@@ -332,6 +399,7 @@ type TrainingProgram
     collection: [StandardsCollectionTag]
     concernsDataTopic: [DataTopic]
     hasRelevantOrganization: [Organization]
+    hasTrainingResource: [DataStandardOrTool]
     purposeDetail: String
     isOpen: Boolean
     requiresRegistration: Boolean

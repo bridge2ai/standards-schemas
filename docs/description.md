@@ -1,5 +1,12 @@
+
+
 # Slot: description
+
+
 _A human-readable description for a thing._
+
+
+
 
 
 URI: [schema:description](http://schema.org/description)
@@ -11,26 +18,28 @@ URI: [schema:description](http://schema.org/description)
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[NamedThing](NamedThing.md) | A generic grouping for any identifiable entity
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
-[DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry
-[DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry
-[BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app...
-[Registry](Registry.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a...
-[OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their...
-[ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a...
-[ReferenceDataOrDataset](ReferenceDataOrDataset.md) | Represents a resource in the Bridge2AI Standards Registry serving as a standa...
-[SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standar...
-[ReferenceImplementation](ReferenceImplementation.md) | Represents an implementation of one or more standards or tools in the Bridge2...
-[TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ...
-[DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app...
-[AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part
-[Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ...
-[DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part |  no  |
+| [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |  no  |
+| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | Represents a resource in the Bridge2AI Standards Registry serving as a standa... |  no  |
+| [Registry](Registry.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |  no  |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their... |  no  |
+| [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app... |  no  |
+| [ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |  no  |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
+| [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |  no  |
+| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
+| [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |  no  |
+| [TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ... |  no  |
+| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
+| [SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standar... |  no  |
+| [Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ... |  no  |
+| [ReferenceImplementation](ReferenceImplementation.md) | Represents an implementation of one or more standards or tools in the Bridge2... |  no  |
+
 
 
 
@@ -40,8 +49,6 @@ URI: [schema:description](http://schema.org/description)
 ## Properties
 
 * Range: [String](String.md)
-
-
 
 
 
@@ -59,6 +66,16 @@ URI: [schema:description](http://schema.org/description)
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | schema:description |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:description |
 
 
 

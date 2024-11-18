@@ -1,13 +1,12 @@
 
 # Class: DataStandardOrTool
 
-
 Represents a standard or tool in the Bridge2AI Standards Registry.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[TrainingProgram],[SoftwareOrTool],[Registry],[ReferenceImplementation],[ReferenceDataOrDataset],[Organization],[OntologyOrVocabulary],[NamedThing],[ModelRepository],[DataTopic],[Organization]<has_relevant_organization%200..*-%20[DataStandardOrTool&#124;collection:StandardsCollectionTag%20*;purpose_detail:string%20%3F;is_open:boolean%20%3F;requires_registration:boolean%20%3F;url:uriorcurie%20%3F;publication:uriorcurie%20%3F;formal_specification:uriorcurie%20%3F;not_relevant_to_dgps:boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataTopic]<concerns_data_topic%200..*-%20[DataStandardOrTool],[UseCase]-%20alternative_standards_and_tools%200..*>[DataStandardOrTool],[DataStandardOrToolContainer]++-%20data_standardortools_collection%200..*>[DataStandardOrTool],[UseCase]-%20standards_and_tools_for_dgp_use%200..*>[DataStandardOrTool],[DataStandardOrTool]^-[TrainingProgram],[DataStandardOrTool]^-[SoftwareOrTool],[DataStandardOrTool]^-[Registry],[DataStandardOrTool]^-[ReferenceImplementation],[DataStandardOrTool]^-[ReferenceDataOrDataset],[DataStandardOrTool]^-[OntologyOrVocabulary],[DataStandardOrTool]^-[ModelRepository],[DataStandardOrTool]^-[DataStandard],[NamedThing]^-[DataStandardOrTool],[UseCase],[DataStandardOrToolContainer],[DataStandard])](https://yuml.me/diagram/nofunky;dir:TB/class/[TrainingProgram],[SoftwareOrTool],[Registry],[ReferenceImplementation],[ReferenceDataOrDataset],[Organization],[OntologyOrVocabulary],[NamedThing],[ModelRepository],[DataTopic],[Organization]<has_relevant_organization%200..*-%20[DataStandardOrTool&#124;collection:StandardsCollectionTag%20*;purpose_detail:string%20%3F;is_open:boolean%20%3F;requires_registration:boolean%20%3F;url:uriorcurie%20%3F;publication:uriorcurie%20%3F;formal_specification:uriorcurie%20%3F;not_relevant_to_dgps:boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataTopic]<concerns_data_topic%200..*-%20[DataStandardOrTool],[UseCase]-%20alternative_standards_and_tools%200..*>[DataStandardOrTool],[DataStandardOrToolContainer]++-%20data_standardortools_collection%200..*>[DataStandardOrTool],[UseCase]-%20standards_and_tools_for_dgp_use%200..*>[DataStandardOrTool],[DataStandardOrTool]^-[TrainingProgram],[DataStandardOrTool]^-[SoftwareOrTool],[DataStandardOrTool]^-[Registry],[DataStandardOrTool]^-[ReferenceImplementation],[DataStandardOrTool]^-[ReferenceDataOrDataset],[DataStandardOrTool]^-[OntologyOrVocabulary],[DataStandardOrTool]^-[ModelRepository],[DataStandardOrTool]^-[DataStandard],[NamedThing]^-[DataStandardOrTool],[UseCase],[DataStandardOrToolContainer],[DataStandard])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[TrainingProgram],[SoftwareOrTool],[Registry],[ReferenceImplementation],[ReferenceDataOrDataset],[Organization],[OntologyOrVocabulary],[NamedThing],[ModelRepository],[DataTopic],[DataStandardOrTool]<has_training_resource%200..*-%20[DataStandardOrTool&#124;collection:StandardsCollectionTag%20*;purpose_detail:string%20%3F;is_open:boolean%20%3F;requires_registration:boolean%20%3F;url:uriorcurie%20%3F;publication:uriorcurie%20%3F;formal_specification:uriorcurie%20%3F;not_relevant_to_dgps:boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[Organization]<has_relevant_organization%200..*-%20[DataStandardOrTool],[DataTopic]<concerns_data_topic%200..*-%20[DataStandardOrTool],[UseCase]-%20alternative_standards_and_tools%200..*>[DataStandardOrTool],[DataStandardOrToolContainer]++-%20data_standardortools_collection%200..*>[DataStandardOrTool],[UseCase]-%20standards_and_tools_for_dgp_use%200..*>[DataStandardOrTool],[DataStandardOrTool]^-[TrainingProgram],[DataStandardOrTool]^-[SoftwareOrTool],[DataStandardOrTool]^-[Registry],[DataStandardOrTool]^-[ReferenceImplementation],[DataStandardOrTool]^-[ReferenceDataOrDataset],[DataStandardOrTool]^-[OntologyOrVocabulary],[DataStandardOrTool]^-[ModelRepository],[DataStandardOrTool]^-[DataStandard],[NamedThing]^-[DataStandardOrTool],[UseCase],[DataStandardOrToolContainer],[DataStandard])](https://yuml.me/diagram/nofunky;dir:TB/class/[TrainingProgram],[SoftwareOrTool],[Registry],[ReferenceImplementation],[ReferenceDataOrDataset],[Organization],[OntologyOrVocabulary],[NamedThing],[ModelRepository],[DataTopic],[DataStandardOrTool]<has_training_resource%200..*-%20[DataStandardOrTool&#124;collection:StandardsCollectionTag%20*;purpose_detail:string%20%3F;is_open:boolean%20%3F;requires_registration:boolean%20%3F;url:uriorcurie%20%3F;publication:uriorcurie%20%3F;formal_specification:uriorcurie%20%3F;not_relevant_to_dgps:boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[Organization]<has_relevant_organization%200..*-%20[DataStandardOrTool],[DataTopic]<concerns_data_topic%200..*-%20[DataStandardOrTool],[UseCase]-%20alternative_standards_and_tools%200..*>[DataStandardOrTool],[DataStandardOrToolContainer]++-%20data_standardortools_collection%200..*>[DataStandardOrTool],[UseCase]-%20standards_and_tools_for_dgp_use%200..*>[DataStandardOrTool],[DataStandardOrTool]^-[TrainingProgram],[DataStandardOrTool]^-[SoftwareOrTool],[DataStandardOrTool]^-[Registry],[DataStandardOrTool]^-[ReferenceImplementation],[DataStandardOrTool]^-[ReferenceDataOrDataset],[DataStandardOrTool]^-[OntologyOrVocabulary],[DataStandardOrTool]^-[ModelRepository],[DataStandardOrTool]^-[DataStandard],[NamedThing]^-[DataStandardOrTool],[UseCase],[DataStandardOrToolContainer],[DataStandard])
 
 ## Parents
 
@@ -16,7 +15,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
 ## Children
 
  * [DataStandard](DataStandard.md) - Represents a general purpose standard in the Bridge2AI Standards Registry.
- * [ModelRepository](ModelRepository.md) - Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a respository, the resource must not index models alone.
+ * [ModelRepository](ModelRepository.md) - Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a repository, the resource must not index models alone.
  * [OntologyOrVocabulary](OntologyOrVocabulary.md) - A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.
  * [ReferenceDataOrDataset](ReferenceDataOrDataset.md) - Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.
  * [ReferenceImplementation](ReferenceImplementation.md) - Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case.
@@ -28,6 +27,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
 
  *  **[NamedThing](NamedThing.md)** *[alternative_standards_and_tools](alternative_standards_and_tools.md)*  <sub>0..\*</sub>  **[DataStandardOrTool](DataStandardOrTool.md)**
  *  **None** *[data_standardortools_collection](data_standardortools_collection.md)*  <sub>0..\*</sub>  **[DataStandardOrTool](DataStandardOrTool.md)**
+ *  **[NamedThing](NamedThing.md)** *[has_training_resource](has_training_resource.md)*  <sub>0..\*</sub>  **[DataStandardOrTool](DataStandardOrTool.md)**
  *  **[NamedThing](NamedThing.md)** *[standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md)*  <sub>0..\*</sub>  **[DataStandardOrTool](DataStandardOrTool.md)**
 
 ## Attributes
@@ -44,6 +44,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
  * [has_relevant_organization](has_relevant_organization.md)  <sub>0..\*</sub>
      * Description: Subject standard is managed or otherwise guided buy the object organization(s).
      * Range: [Organization](Organization.md)
+ * [has_training_resource](has_training_resource.md)  <sub>0..\*</sub>
+     * Description: Relevant training resources, standard usage manuals, or other documentation for the standard or tool.
+     * Range: [DataStandardOrTool](DataStandardOrTool.md)
  * [purpose_detail](purpose_detail.md)  <sub>0..1</sub>
      * Description: Text description of the standard or tool.
      * Range: [String](types/String.md)
@@ -51,7 +54,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
      * Description: Is the standard or tool FAIR and available free of cost?
      * Range: [Boolean](types/Boolean.md)
  * [requires_registration](requires_registration.md)  <sub>0..1</sub>
-     * Description: Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?
+     * Description: Does usage of the standard or tool require registration of a user or group with some organization or managerial body?
      * Range: [Boolean](types/Boolean.md)
  * [url](url.md)  <sub>0..1</sub>
      * Description: URL for basic documentation of the standard or tool.

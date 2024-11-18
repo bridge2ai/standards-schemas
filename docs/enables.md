@@ -1,5 +1,12 @@
+
+
 # Slot: enables
+
+
 _Other use case(s) this use case supports or makes possible._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:enables](https://w3id.org/bridge2ai/standards-schema-all/:enables)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:enables](https://w3id.org
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
+
 
 
 
@@ -30,10 +39,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:enables](https://w3id.org
 ## Properties
 
 * Range: [UseCase](UseCase.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -55,6 +62,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:enables](https://w3id.org
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:enables |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:enables |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -65,11 +82,11 @@ from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: enables
 domain_of:
 - UseCase
 range: UseCase
+multivalued: true
 
 ```
 </details>
