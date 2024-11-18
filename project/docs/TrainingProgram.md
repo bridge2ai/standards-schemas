@@ -1,7 +1,6 @@
 
 # Class: TrainingProgram
 
-
 Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram](https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram)
@@ -59,6 +58,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram](https://w
  * [has_relevant_organization](has_relevant_organization.md)  <sub>0..\*</sub>
      * Description: Subject standard is managed or otherwise guided buy the object organization(s).
      * Range: [Organization](Organization.md)
+ * [has_training_resource](has_training_resource.md)  <sub>0..\*</sub>
+     * Description: Relevant training resources, standard usage manuals, or other documentation for the standard or tool.
+     * Range: [DataStandardOrTool](DataStandardOrTool.md)
  * [purpose_detail](purpose_detail.md)  <sub>0..1</sub>
      * Description: Text description of the standard or tool.
      * Range: [String](types/String.md)
@@ -66,7 +68,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram](https://w
      * Description: Is the standard or tool FAIR and available free of cost?
      * Range: [Boolean](types/Boolean.md)
  * [requires_registration](requires_registration.md)  <sub>0..1</sub>
-     * Description: Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?
+     * Description: Does usage of the standard or tool require registration of a user or group with some organization or managerial body?
      * Range: [Boolean](types/Boolean.md)
  * [url](url.md)  <sub>0..1</sub>
      * Description: URL for basic documentation of the standard or tool.

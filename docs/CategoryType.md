@@ -1,7 +1,10 @@
 # Type: CategoryType
 
 
+
+
 _A primitive type in which the value denotes a class within the model._
+
 
 
 URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
@@ -32,6 +35,16 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:category_type |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:category_type |
 
 
 

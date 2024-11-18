@@ -1,7 +1,6 @@
 
 # Slot: contribution_date
 
-
 The date on which the node was added.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/contribution_date](https://w3id.org/bridge2ai/standards-schema-all/contribution_date)
@@ -41,5 +40,4 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/contribution_date](https:/
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example(value='2023-03-20', description=None, object=None) |
-
+| **Examples:** | | Example({'value': '2023-03-20'}) |

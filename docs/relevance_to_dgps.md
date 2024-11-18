@@ -1,5 +1,12 @@
+
+
 # Slot: relevance_to_dgps
+
+
 _Relevance of the use case to one or more DGPs._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:relevance_to_dgps](https://w3id.org/bridge2ai/standards-schema-all/:relevance_to_dgps)
@@ -11,11 +18,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:relevance_to_dgps](https:
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
+
 
 
 
@@ -25,10 +34,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:relevance_to_dgps](https:
 ## Properties
 
 * Range: [DataGeneratingProject](DataGeneratingProject.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -50,6 +57,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:relevance_to_dgps](https:
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:relevance_to_dgps |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:relevance_to_dgps |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -58,11 +75,11 @@ name: relevance_to_dgps
 description: Relevance of the use case to one or more DGPs.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-multivalued: true
 alias: relevance_to_dgps
 domain_of:
 - UseCase
 range: DataGeneratingProject
+multivalued: true
 
 ```
 </details>

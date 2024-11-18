@@ -1,7 +1,6 @@
 
 # Slot: data_substrates
 
-
 Relevance of the use case to one or more data substrates.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/data_substrates](https://w3id.org/bridge2ai/standards-schema-all/data_substrates)

@@ -1,5 +1,12 @@
+
+
 # Slot: data_substrates_collection
+
+
 _Collection of associated data substrates_
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collection](https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collection)
@@ -11,11 +18,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collectio
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[DataSubstrateContainer](DataSubstrateContainer.md) | A container for DataSubstrates
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [DataSubstrateContainer](DataSubstrateContainer.md) | A container for DataSubstrates |  no  |
+
 
 
 
@@ -25,10 +34,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collectio
 ## Properties
 
 * Range: [DataSubstrate](DataSubstrate.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -50,6 +57,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collectio
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collection |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collection |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -58,11 +75,11 @@ name: data_substrates_collection
 description: Collection of associated data substrates
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-multivalued: true
 alias: data_substrates_collection
 domain_of:
 - DataSubstrateContainer
 range: DataSubstrate
+multivalued: true
 inlined: true
 inlined_as_list: true
 

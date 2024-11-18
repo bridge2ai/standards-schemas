@@ -1,5 +1,12 @@
+
+
 # Slot: organizations
+
+
 _Collection of associated organizations._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:organizations](https://w3id.org/bridge2ai/standards-schema-all/:organizations)
@@ -11,11 +18,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:organizations](https://w3
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[OrganizationContainer](OrganizationContainer.md) | A container for Organizations
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [OrganizationContainer](OrganizationContainer.md) | A container for Organizations |  no  |
+
 
 
 
@@ -25,10 +34,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:organizations](https://w3
 ## Properties
 
 * Range: [Organization](Organization.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -50,6 +57,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:organizations](https://w3
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:organizations |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:organizations |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -58,11 +75,11 @@ name: organizations
 description: Collection of associated organizations.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-multivalued: true
 alias: organizations
 domain_of:
 - OrganizationContainer
 range: Organization
+multivalued: true
 inlined: true
 inlined_as_list: true
 

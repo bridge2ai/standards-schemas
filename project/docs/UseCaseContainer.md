@@ -1,7 +1,6 @@
 
 # Class: UseCaseContainer
 
-
 A container for UseCase.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer](https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer)

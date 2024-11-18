@@ -1,7 +1,6 @@
 
 # Slot: name
 
-
 A human-readable name for a thing.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/name](https://w3id.org/bridge2ai/standards-schema-all/name)
@@ -41,4 +40,3 @@ None &#8594;  <sub>0..1</sub> [String](types/String.md)
 |  |  |  |
 | --- | --- | --- |
 | **Mappings:** | | schema:name |
-

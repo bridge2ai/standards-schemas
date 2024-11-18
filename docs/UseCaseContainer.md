@@ -1,5 +1,10 @@
+
+
 # Class: UseCaseContainer
+
+
 _A container for UseCase._
+
 
 
 
@@ -8,12 +13,21 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer](https:/
 
 
 
+
+
+
 ```mermaid
  classDiagram
     class UseCaseContainer
+    click UseCaseContainer href "../UseCaseContainer"
       UseCaseContainer : use_cases
         
-          UseCaseContainer ..> UseCase : use_cases
+          
+    
+    
+    UseCaseContainer --> "*" UseCase : use_cases
+    click UseCase href "../UseCase"
+
         
       
 ```
@@ -28,7 +42,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer](https:/
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [use_cases](use_cases.md) | 0..* <br/> [UseCase](UseCase.md) | Collection of associated use cases | direct |
+| [use_cases](use_cases.md) | * <br/> [UseCase](UseCase.md) | Collection of associated use cases | direct |
 
 
 
@@ -54,13 +68,14 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer](https:/
 
 
 
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer |
+
+
 
 
 
@@ -77,7 +92,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer](https:/
 name: UseCaseContainer
 description: A container for UseCase.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 slots:
 - use_cases
 
@@ -91,19 +105,18 @@ slots:
 name: UseCaseContainer
 description: A container for UseCase.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 attributes:
   use_cases:
     name: use_cases
     description: Collection of associated use cases
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    multivalued: true
     alias: use_cases
     owner: UseCaseContainer
     domain_of:
     - UseCaseContainer
     range: UseCase
+    multivalued: true
     inlined: true
     inlined_as_list: true
 

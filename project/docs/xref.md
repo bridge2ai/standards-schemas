@@ -1,7 +1,6 @@
 
 # Slot: xref
 
-
 URI of corresponding class in an ontology of experimental procedures, in CURIE form.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/xref](https://w3id.org/bridge2ai/standards-schema-all/xref)
@@ -29,4 +28,3 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/xref](https://w3id.org/bri
 | **Aliases:** | | dbxref |
 |  | | Dbxref |
 |  | | DbXref |
-

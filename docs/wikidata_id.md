@@ -1,5 +1,12 @@
+
+
 # Slot: wikidata_id
+
+
 _Unique Wikidata identifier._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id](https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id)
@@ -11,11 +18,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id](https://w3id
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ... |  no  |
+
 
 
 
@@ -25,8 +34,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id](https://w3id
 ## Properties
 
 * Range: [WikidataIdentifier](WikidataIdentifier.md)
-
-
 
 
 
@@ -51,6 +58,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id](https://w3id
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id |
 
 
 

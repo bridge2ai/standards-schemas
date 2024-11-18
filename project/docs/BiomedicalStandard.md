@@ -1,13 +1,12 @@
 
 # Class: BiomedicalStandard
 
-
 Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[NamedThing],[DataTopic],[DataStandard],[DataStandard]^-[BiomedicalStandard&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F])](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[NamedThing],[DataTopic],[DataStandard],[DataStandard]^-[BiomedicalStandard&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[NamedThing],[DataTopic],[DataStandardOrTool],[DataStandard],[DataStandard]^-[BiomedicalStandard&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F])](https://yuml.me/diagram/nofunky;dir:TB/class/[Organization],[NamedThing],[DataTopic],[DataStandardOrTool],[DataStandard],[DataStandard]^-[BiomedicalStandard&#124;collection(i):StandardsCollectionTag%20*;purpose_detail(i):string%20%3F;is_open(i):boolean%20%3F;requires_registration(i):boolean%20%3F;url(i):uriorcurie%20%3F;publication(i):uriorcurie%20%3F;formal_specification(i):uriorcurie%20%3F;not_relevant_to_dgps(i):boolean%20%3F;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F])
 
 ## Parents
 
@@ -59,6 +58,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
  * [has_relevant_organization](has_relevant_organization.md)  <sub>0..\*</sub>
      * Description: Subject standard is managed or otherwise guided buy the object organization(s).
      * Range: [Organization](Organization.md)
+ * [has_training_resource](has_training_resource.md)  <sub>0..\*</sub>
+     * Description: Relevant training resources, standard usage manuals, or other documentation for the standard or tool.
+     * Range: [DataStandardOrTool](DataStandardOrTool.md)
  * [purpose_detail](purpose_detail.md)  <sub>0..1</sub>
      * Description: Text description of the standard or tool.
      * Range: [String](types/String.md)
@@ -66,7 +68,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
      * Description: Is the standard or tool FAIR and available free of cost?
      * Range: [Boolean](types/Boolean.md)
  * [requires_registration](requires_registration.md)  <sub>0..1</sub>
-     * Description: Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?
+     * Description: Does usage of the standard or tool require registration of a user or group with some organization or managerial body?
      * Range: [Boolean](types/Boolean.md)
  * [url](url.md)  <sub>0..1</sub>
      * Description: URL for basic documentation of the standard or tool.

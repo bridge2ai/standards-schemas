@@ -1,5 +1,10 @@
+
+
 # Class: AnatomicalEntity
+
+
 _A subcellular location, cell type or gross anatomical part_
+
 
 
 
@@ -8,10 +13,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity](https:/
 
 
 
+
+
+
 ```mermaid
  classDiagram
     class AnatomicalEntity
+    click AnatomicalEntity href "../AnatomicalEntity"
       NamedThing <|-- AnatomicalEntity
+        click NamedThing href "../NamedThing"
       
       AnatomicalEntity : category
         
@@ -31,11 +41,21 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity](https:/
         
       AnatomicalEntity : related_to
         
-          AnatomicalEntity ..> NamedThing : related_to
+          
+    
+    
+    AnatomicalEntity --> "*" NamedThing : related_to
+    click NamedThing href "../NamedThing"
+
         
       AnatomicalEntity : subclass_of
         
-          AnatomicalEntity ..> NamedThing : subclass_of
+          
+    
+    
+    AnatomicalEntity --> "*" NamedThing : subclass_of
+    click NamedThing href "../NamedThing"
+
         
       
 ```
@@ -54,12 +74,12 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity](https:/
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
-| [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
-| [related_to](related_to.md) | 0..* <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | [NamedThing](NamedThing.md) |
+| [subclass_of](subclass_of.md) | * <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
+| [related_to](related_to.md) | * <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | [NamedThing](NamedThing.md) |
 | [contributor_name](contributor_name.md) | 0..1 <br/> [String](String.md) | The name of the person who added this node | [NamedThing](NamedThing.md) |
 | [contributor_github_name](contributor_github_name.md) | 0..1 <br/> [String](String.md) | The name of the github user who added this node | [NamedThing](NamedThing.md) |
 | [contributor_orcid](contributor_orcid.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The ORCiD of the person who added this node | [NamedThing](NamedThing.md) |
@@ -104,7 +124,6 @@ Instances of this class *should* have identifiers with one of the following pref
 
 
 
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
@@ -113,6 +132,8 @@ Instances of this class *should* have identifiers with one of the following pref
 | native | https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity |
 | exact | uberon:0001062, wikidata:Q4936952 |
 | narrow | ncit:C12219 |
+
+
 
 
 
@@ -136,7 +157,6 @@ exact_mappings:
 - wikidata:Q4936952
 narrow_mappings:
 - ncit:C12219
-rank: 1000
 is_a: NamedThing
 
 ```
@@ -156,7 +176,6 @@ exact_mappings:
 - wikidata:Q4936952
 narrow_mappings:
 - ncit:C12219
-rank: 1000
 is_a: NamedThing
 attributes:
   id:
@@ -221,20 +240,19 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: subclass_of
     owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: NamedThing
+    multivalued: true
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: related_to
     owner: AnatomicalEntity
@@ -243,6 +261,7 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+    multivalued: true
   contributor_name:
     name: contributor_name
     description: The name of the person who added this node.

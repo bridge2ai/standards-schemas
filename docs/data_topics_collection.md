@@ -1,5 +1,12 @@
+
+
 # Slot: data_topics_collection
+
+
 _Collection of associated data topics._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection](https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection)
@@ -11,11 +18,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection](h
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[DataTopicContainer](DataTopicContainer.md) | A container for DataTopics
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [DataTopicContainer](DataTopicContainer.md) | A container for DataTopics |  no  |
+
 
 
 
@@ -25,10 +34,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection](h
 ## Properties
 
 * Range: [DataTopic](DataTopic.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -50,6 +57,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection](h
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -58,11 +75,11 @@ name: data_topics_collection
 description: Collection of associated data topics.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-multivalued: true
 alias: data_topics_collection
 domain_of:
 - DataTopicContainer
 range: DataTopic
+multivalued: true
 inlined: true
 inlined_as_list: true
 

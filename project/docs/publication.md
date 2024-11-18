@@ -1,7 +1,6 @@
 
 # Slot: publication
 
-
 Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/publication](https://w3id.org/bridge2ai/standards-schema-all/publication)

@@ -1,7 +1,6 @@
 
 # Slot: purpose_detail
 
-
 Text description of the standard or tool.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/purpose_detail](https://w3id.org/bridge2ai/standards-schema-all/purpose_detail)

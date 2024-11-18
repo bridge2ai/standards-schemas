@@ -1,7 +1,6 @@
 
 # Slot: url
 
-
 URL for basic documentation of the standard or tool.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/url](https://w3id.org/bridge2ai/standards-schema-all/url)

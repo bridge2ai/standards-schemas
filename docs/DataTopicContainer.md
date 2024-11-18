@@ -1,5 +1,10 @@
+
+
 # Class: DataTopicContainer
+
+
 _A container for DataTopics._
+
 
 
 
@@ -8,12 +13,21 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer](https
 
 
 
+
+
+
 ```mermaid
  classDiagram
     class DataTopicContainer
+    click DataTopicContainer href "../DataTopicContainer"
       DataTopicContainer : data_topics_collection
         
-          DataTopicContainer ..> DataTopic : data_topics_collection
+          
+    
+    
+    DataTopicContainer --> "*" DataTopic : data_topics_collection
+    click DataTopic href "../DataTopic"
+
         
       
 ```
@@ -28,7 +42,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer](https
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [data_topics_collection](data_topics_collection.md) | 0..* <br/> [DataTopic](DataTopic.md) | Collection of associated data topics | direct |
+| [data_topics_collection](data_topics_collection.md) | * <br/> [DataTopic](DataTopic.md) | Collection of associated data topics | direct |
 
 
 
@@ -54,13 +68,14 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer](https
 
 
 
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer |
+
+
 
 
 
@@ -77,7 +92,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer](https
 name: DataTopicContainer
 description: A container for DataTopics.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 slots:
 - data_topics_collection
 
@@ -91,19 +105,18 @@ slots:
 name: DataTopicContainer
 description: A container for DataTopics.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 attributes:
   data_topics_collection:
     name: data_topics_collection
     description: Collection of associated data topics.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    multivalued: true
     alias: data_topics_collection
     owner: DataTopicContainer
     domain_of:
     - DataTopicContainer
     range: DataTopic
+    multivalued: true
     inlined: true
     inlined_as_list: true
 

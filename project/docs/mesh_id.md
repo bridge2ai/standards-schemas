@@ -1,7 +1,6 @@
 
 # Slot: mesh_id
 
-
 Unique MeSH identifier
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/mesh_id](https://w3id.org/bridge2ai/standards-schema-all/mesh_id)
@@ -26,5 +25,4 @@ None &#8594;  <sub>0..1</sub> [MeshIdentifier](types/MeshIdentifier.md)
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example(value='MeSH:D014831', description=None, object=None) |
-
+| **Examples:** | | Example({'value': 'MeSH:D014831'}) |

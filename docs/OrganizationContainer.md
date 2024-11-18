@@ -1,5 +1,10 @@
+
+
 # Class: OrganizationContainer
+
+
 _A container for Organizations._
+
 
 
 
@@ -8,12 +13,21 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer](ht
 
 
 
+
+
+
 ```mermaid
  classDiagram
     class OrganizationContainer
+    click OrganizationContainer href "../OrganizationContainer"
       OrganizationContainer : organizations
         
-          OrganizationContainer ..> Organization : organizations
+          
+    
+    
+    OrganizationContainer --> "*" Organization : organizations
+    click Organization href "../Organization"
+
         
       
 ```
@@ -28,7 +42,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer](ht
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [organizations](organizations.md) | 0..* <br/> [Organization](Organization.md) | Collection of associated organizations | direct |
+| [organizations](organizations.md) | * <br/> [Organization](Organization.md) | Collection of associated organizations | direct |
 
 
 
@@ -54,13 +68,14 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer](ht
 
 
 
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer |
+
+
 
 
 
@@ -77,7 +92,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer](ht
 name: OrganizationContainer
 description: A container for Organizations.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 slots:
 - organizations
 
@@ -91,19 +105,18 @@ slots:
 name: OrganizationContainer
 description: A container for Organizations.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 attributes:
   organizations:
     name: organizations
     description: Collection of associated organizations.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    multivalued: true
     alias: organizations
     owner: OrganizationContainer
     domain_of:
     - OrganizationContainer
     range: Organization
+    multivalued: true
     inlined: true
     inlined_as_list: true
 

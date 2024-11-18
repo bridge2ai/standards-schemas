@@ -1,7 +1,6 @@
 
 # Slot: wikidata_id
 
-
 Unique Wikidata identifier.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/wikidata_id](https://w3id.org/bridge2ai/standards-schema-all/wikidata_id)
@@ -25,5 +24,4 @@ None &#8594;  <sub>0..1</sub> [WikidataIdentifier](types/WikidataIdentifier.md)
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example(value='WIKIDATA:Q282186', description=None, object=None) |
-
+| **Examples:** | | Example({'value': 'WIKIDATA:Q282186'}) |

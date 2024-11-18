@@ -1,7 +1,10 @@
 # Type: Objectidentifier
 
 
+
+
 _A URI or CURIE that represents an object in the model._
+
 
 
 URI: [shex:iri](http://www.w3.org/ns/shex#iri)
@@ -21,7 +24,7 @@ URI: [shex:iri](http://www.w3.org/ns/shex#iri)
 
 ## Comments
 
-* Used for inheritence and type checking
+* Used for inheritance and type checking
 
 ## Identifier and Mapping Information
 
@@ -35,6 +38,16 @@ URI: [shex:iri](http://www.w3.org/ns/shex#iri)
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | shex:iri |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:objectidentifier |
 
 
 

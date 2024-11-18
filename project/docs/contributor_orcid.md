@@ -1,7 +1,6 @@
 
 # Slot: contributor_orcid
 
-
 The ORCiD of the person who added this node.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/contributor_orcid](https://w3id.org/bridge2ai/standards-schema-all/contributor_orcid)
@@ -41,5 +40,4 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/contributor_orcid](https:/
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example(value='ORCID:0000-0001-1234-5678', description=None, object=None) |
-
+| **Examples:** | | Example({'value': 'ORCID:0000-0001-1234-5678'}) |

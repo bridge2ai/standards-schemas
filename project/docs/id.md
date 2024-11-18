@@ -1,7 +1,6 @@
 
 # Slot: id
 
-
 A unique identifier for a thing.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/id](https://w3id.org/bridge2ai/standards-schema-all/id)
@@ -41,4 +40,3 @@ None &#8594;  <sub>1..1</sub> [Uriorcurie](types/Uriorcurie.md)
 |  |  |  |
 | --- | --- | --- |
 | **Mappings:** | | schema:identifier |
-

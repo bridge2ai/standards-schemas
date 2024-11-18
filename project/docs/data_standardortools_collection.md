@@ -1,7 +1,6 @@
 
 # Slot: data_standardortools_collection
 
-
 Collection of associated data standards or tools
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/data_standardortools_collection](https://w3id.org/bridge2ai/standards-schema-all/data_standardortools_collection)

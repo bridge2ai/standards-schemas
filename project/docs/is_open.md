@@ -1,7 +1,6 @@
 
 # Slot: is_open
 
-
 Is the standard or tool FAIR and available free of cost?
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/is_open](https://w3id.org/bridge2ai/standards-schema-all/is_open)

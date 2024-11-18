@@ -1,7 +1,6 @@
 
 # Class: Organization
 
-
 Represents a group or organization related to or responsible for one or more Bridge2AI standards.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id.org/bridge2ai/standards-schema-all/Organization)

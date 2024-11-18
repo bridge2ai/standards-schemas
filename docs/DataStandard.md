@@ -1,5 +1,10 @@
+
+
 # Class: DataStandard
+
+
 _Represents a general purpose standard in the Bridge2AI Standards Registry._
+
 
 
 
@@ -8,24 +13,40 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandard](https://w3i
 
 
 
+
+
+
 ```mermaid
  classDiagram
     class DataStandard
+    click DataStandard href "../DataStandard"
       DataStandardOrTool <|-- DataStandard
+        click DataStandardOrTool href "../DataStandardOrTool"
       
 
       DataStandard <|-- BiomedicalStandard
+        click BiomedicalStandard href "../BiomedicalStandard"
       
       
       DataStandard : category
         
       DataStandard : collection
         
-          DataStandard ..> StandardsCollectionTag : collection
+          
+    
+    
+    DataStandard --> "*" StandardsCollectionTag : collection
+    click StandardsCollectionTag href "../StandardsCollectionTag"
+
         
       DataStandard : concerns_data_topic
         
-          DataStandard ..> DataTopic : concerns_data_topic
+          
+    
+    
+    DataStandard --> "*" DataTopic : concerns_data_topic
+    click DataTopic href "../DataTopic"
+
         
       DataStandard : contribution_date
         
@@ -41,7 +62,21 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandard](https://w3i
         
       DataStandard : has_relevant_organization
         
-          DataStandard ..> Organization : has_relevant_organization
+          
+    
+    
+    DataStandard --> "*" Organization : has_relevant_organization
+    click Organization href "../Organization"
+
+        
+      DataStandard : has_training_resource
+        
+          
+    
+    
+    DataStandard --> "*" DataStandardOrTool : has_training_resource
+    click DataStandardOrTool href "../DataStandardOrTool"
+
         
       DataStandard : id
         
@@ -57,13 +92,23 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandard](https://w3i
         
       DataStandard : related_to
         
-          DataStandard ..> NamedThing : related_to
+          
+    
+    
+    DataStandard --> "*" NamedThing : related_to
+    click NamedThing href "../NamedThing"
+
         
       DataStandard : requires_registration
         
       DataStandard : subclass_of
         
-          DataStandard ..> NamedThing : subclass_of
+          
+    
+    
+    DataStandard --> "*" NamedThing : subclass_of
+    click NamedThing href "../NamedThing"
+
         
       DataStandard : url
         
@@ -86,22 +131,23 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandard](https://w3i
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [collection](collection.md) | 0..* <br/> [StandardsCollectionTag](StandardsCollectionTag.md) | Tags for specific sets of standards | [DataStandardOrTool](DataStandardOrTool.md) |
-| [concerns_data_topic](concerns_data_topic.md) | 0..* <br/> [DataTopic](DataTopic.md) | Subject standard is generally applied in the context of object data topic | [DataStandardOrTool](DataStandardOrTool.md) |
-| [has_relevant_organization](has_relevant_organization.md) | 0..* <br/> [Organization](Organization.md) | Subject standard is managed or otherwise guided buy the object organization(s... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [collection](collection.md) | * <br/> [StandardsCollectionTag](StandardsCollectionTag.md) | Tags for specific sets of standards | [DataStandardOrTool](DataStandardOrTool.md) |
+| [concerns_data_topic](concerns_data_topic.md) | * <br/> [DataTopic](DataTopic.md) | Subject standard is generally applied in the context of object data topic | [DataStandardOrTool](DataStandardOrTool.md) |
+| [has_relevant_organization](has_relevant_organization.md) | * <br/> [Organization](Organization.md) | Subject standard is managed or otherwise guided buy the object organization(s... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [has_training_resource](has_training_resource.md) | * <br/> [DataStandardOrTool](DataStandardOrTool.md) | Relevant training resources, standard usage manuals, or other documentation f... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [purpose_detail](purpose_detail.md) | 0..1 <br/> [String](String.md) | Text description of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [is_open](is_open.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool FAIR and available free of cost? | [DataStandardOrTool](DataStandardOrTool.md) |
-| [requires_registration](requires_registration.md) | 0..1 <br/> [Boolean](Boolean.md) | Does usage of the standard or tool require registrion of a user or group with... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [requires_registration](requires_registration.md) | 0..1 <br/> [Boolean](Boolean.md) | Does usage of the standard or tool require registration of a user or group wi... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | [DataStandardOrTool](DataStandardOrTool.md) |
-| [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
-| [subclass_of](subclass_of.md) | 0..* <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
-| [related_to](related_to.md) | 0..* <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | [NamedThing](NamedThing.md) |
+| [subclass_of](subclass_of.md) | * <br/> [NamedThing](NamedThing.md) | Holds between two classes where the domain class is a specialization of the r... | [NamedThing](NamedThing.md) |
+| [related_to](related_to.md) | * <br/> [NamedThing](NamedThing.md) | A relationship that is asserted between two named things | [NamedThing](NamedThing.md) |
 | [contributor_name](contributor_name.md) | 0..1 <br/> [String](String.md) | The name of the person who added this node | [NamedThing](NamedThing.md) |
 | [contributor_github_name](contributor_github_name.md) | 0..1 <br/> [String](String.md) | The name of the github user who added this node | [NamedThing](NamedThing.md) |
 | [contributor_orcid](contributor_orcid.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The ORCiD of the person who added this node | [NamedThing](NamedThing.md) |
@@ -131,13 +177,14 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandard](https://w3i
 
 
 
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/:DataStandard |
 | native | https://w3id.org/bridge2ai/standards-schema-all/:DataStandard |
+
+
 
 
 
@@ -154,7 +201,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandard](https://w3i
 name: DataStandard
 description: Represents a general purpose standard in the Bridge2AI Standards Registry.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: DataStandardOrTool
 
 ```
@@ -167,7 +213,6 @@ is_a: DataStandardOrTool
 name: DataStandard
 description: Represents a general purpose standard in the Bridge2AI Standards Registry.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: DataStandardOrTool
 attributes:
   collection:
@@ -177,12 +222,12 @@ attributes:
     rank: 1000
     is_a: node_property
     domain: NamedThing
-    multivalued: true
     alias: collection
     owner: DataStandard
     domain_of:
     - DataStandardOrTool
     range: StandardsCollectionTag
+    multivalued: true
   concerns_data_topic:
     name: concerns_data_topic
     description: Subject standard is generally applied in the context of object data
@@ -191,13 +236,13 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: DataStandardOrTool
-    multivalued: true
     inherited: true
     alias: concerns_data_topic
     owner: DataStandard
     domain_of:
     - DataStandardOrTool
     range: DataTopic
+    multivalued: true
   has_relevant_organization:
     name: has_relevant_organization
     description: Subject standard is managed or otherwise guided buy the object organization(s).
@@ -205,13 +250,27 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: DataStandardOrTool
-    multivalued: true
     inherited: true
     alias: has_relevant_organization
     owner: DataStandard
     domain_of:
     - DataStandardOrTool
     range: Organization
+    multivalued: true
+  has_training_resource:
+    name: has_training_resource
+    description: Relevant training resources, standard usage manuals, or other documentation
+      for the standard or tool.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: has_training_resource
+    owner: DataStandard
+    domain_of:
+    - DataStandardOrTool
+    range: DataStandardOrTool
+    multivalued: true
   purpose_detail:
     name: purpose_detail
     description: Text description of the standard or tool.
@@ -238,8 +297,8 @@ attributes:
     range: boolean
   requires_registration:
     name: requires_registration
-    description: Does usage of the standard or tool require registrion of a user or
-      group with some organization or managerial body?
+    description: Does usage of the standard or tool require registration of a user
+      or group with some organization or managerial body?
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
@@ -361,20 +420,19 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: subclass_of
     owner: DataStandard
     domain_of:
     - NamedThing
     range: NamedThing
+    multivalued: true
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: related_to
     owner: DataStandard
@@ -383,6 +441,7 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+    multivalued: true
   contributor_name:
     name: contributor_name
     description: The name of the person who added this node.

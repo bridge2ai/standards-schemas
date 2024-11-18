@@ -1,7 +1,10 @@
 # Type: Float
 
 
+
+
 _A real number that conforms to the xsd:float specification_
+
 
 
 URI: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
@@ -30,6 +33,17 @@ URI: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | xsd:float |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:float |
+| exact | schema:Float |
 
 
 

@@ -1,5 +1,12 @@
+
+
 # Slot: standards_and_tools_for_dgp_use
+
+
 _List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_dgp_use](https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_dgp_use)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_d
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
+
 
 
 
@@ -30,10 +39,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_d
 ## Properties
 
 * Range: [DataStandardOrTool](DataStandardOrTool.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -55,6 +62,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_d
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_dgp_use |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_dgp_use |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -68,11 +85,11 @@ from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: standards_and_tools_for_dgp_use
 domain_of:
 - UseCase
 range: DataStandardOrTool
+multivalued: true
 
 ```
 </details>

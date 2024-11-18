@@ -1,7 +1,6 @@
 
 # Class: DataTopic
 
-
 Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.org/bridge2ai/standards-schema-all/DataTopic)

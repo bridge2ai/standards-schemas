@@ -1,5 +1,12 @@
+
+
 # Slot: data_substrates
+
+
 _Relevance of the use case to one or more data substrates._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates](https://w3id.org/bridge2ai/standards-schema-all/:data_substrates)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates](https://
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
+
 
 
 
@@ -30,10 +39,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates](https://
 ## Properties
 
 * Range: [DataSubstrate](DataSubstrate.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -55,6 +62,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates](https://
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:data_substrates |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:data_substrates |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -65,11 +82,11 @@ from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: data_substrates
 domain_of:
 - UseCase
 range: DataSubstrate
+multivalued: true
 
 ```
 </details>

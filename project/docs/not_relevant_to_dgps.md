@@ -1,7 +1,6 @@
 
 # Slot: not_relevant_to_dgps
 
-
 Is the standard or tool currently relevant to DGPs?
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/not_relevant_to_dgps](https://w3id.org/bridge2ai/standards-schema-all/not_relevant_to_dgps)

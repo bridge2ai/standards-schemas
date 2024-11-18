@@ -1,5 +1,10 @@
+
+
 # Class: DataStandardOrToolContainer
+
+
 _A container for DataStandardOrTool(s)._
+
 
 
 
@@ -8,12 +13,21 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContain
 
 
 
+
+
+
 ```mermaid
  classDiagram
     class DataStandardOrToolContainer
+    click DataStandardOrToolContainer href "../DataStandardOrToolContainer"
       DataStandardOrToolContainer : data_standardortools_collection
         
-          DataStandardOrToolContainer ..> DataStandardOrTool : data_standardortools_collection
+          
+    
+    
+    DataStandardOrToolContainer --> "*" DataStandardOrTool : data_standardortools_collection
+    click DataStandardOrTool href "../DataStandardOrTool"
+
         
       
 ```
@@ -28,7 +42,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContain
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [data_standardortools_collection](data_standardortools_collection.md) | 0..* <br/> [DataStandardOrTool](DataStandardOrTool.md) | Collection of associated data standards or tools | direct |
+| [data_standardortools_collection](data_standardortools_collection.md) | * <br/> [DataStandardOrTool](DataStandardOrTool.md) | Collection of associated data standards or tools | direct |
 
 
 
@@ -54,13 +68,14 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContain
 
 
 
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContainer |
+
+
 
 
 
@@ -77,7 +92,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContain
 name: DataStandardOrToolContainer
 description: A container for DataStandardOrTool(s).
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 slots:
 - data_standardortools_collection
 
@@ -91,19 +105,18 @@ slots:
 name: DataStandardOrToolContainer
 description: A container for DataStandardOrTool(s).
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 attributes:
   data_standardortools_collection:
     name: data_standardortools_collection
     description: Collection of associated data standards or tools
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    multivalued: true
     alias: data_standardortools_collection
     owner: DataStandardOrToolContainer
     domain_of:
     - DataStandardOrToolContainer
     range: DataStandardOrTool
+    multivalued: true
     inlined: true
     inlined_as_list: true
 

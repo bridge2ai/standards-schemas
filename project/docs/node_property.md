@@ -1,7 +1,6 @@
 
 # Slot: node_property
 
-
 A grouping for any property that holds between a node and a value.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/node_property](https://w3id.org/bridge2ai/standards-schema-all/node_property)
@@ -27,6 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/node_property](https://w3i
  *  [enables](enables.md)
  *  [file_extensions](file_extensions.md)
  *  [formal_specification](formal_specification.md)
+ *  [has_training_resource](has_training_resource.md)
  *  [involved_in_experimental_design](involved_in_experimental_design.md)
  *  [involved_in_metadata_management](involved_in_metadata_management.md)
  *  [involved_in_quality_control](involved_in_quality_control.md)

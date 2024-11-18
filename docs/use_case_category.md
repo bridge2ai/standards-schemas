@@ -1,5 +1,12 @@
+
+
 # Slot: use_case_category
+
+
 _Category of the UseCase. Not all projects will incorporate use cases in all categories._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_case_category](https://w3id.org/bridge2ai/standards-schema-all/:use_case_category)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_case_category](https:
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  yes  |
+
 
 
 
@@ -30,8 +39,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_case_category](https:
 ## Properties
 
 * Range: [UseCaseCategory](UseCaseCategory.md)
-
-
 
 
 
@@ -49,6 +56,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_case_category](https:
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:use_case_category |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:use_case_category |
 
 
 

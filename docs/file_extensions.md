@@ -1,5 +1,12 @@
+
+
 # Slot: file_extensions
+
+
 _Commonly used file extensions for this substrate._
+
+
+
 
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/:file_extensions](https://w3id.org/bridge2ai/standards-schema-all/:file_extensions)
@@ -16,11 +23,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:file_extensions](https://
 
 
 
+
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
+
 
 
 
@@ -30,10 +39,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:file_extensions](https://
 ## Properties
 
 * Range: [String](String.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -55,6 +62,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:file_extensions](https://
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:file_extensions |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:file_extensions |
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -65,11 +82,11 @@ from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: file_extensions
 domain_of:
 - DataSubstrate
 range: string
+multivalued: true
 
 ```
 </details>

@@ -1,7 +1,6 @@
 
 # Slot: use_conditions
 
-
 Applicable conditions on use, as defined by the Data Use Ontology (DUO).
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/use_conditions](https://w3id.org/bridge2ai/standards-schema-all/use_conditions)

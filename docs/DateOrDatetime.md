@@ -1,7 +1,10 @@
 # Type: DateOrDatetime
 
 
+
+
 _Either a date or a datetime_
+
 
 
 URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
@@ -31,6 +34,16 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 
 
 * from schema: https://w3id.org/bridge2ai/standards-schema-all
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | linkml:DateOrDatetime |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:date_or_datetime |
 
 
 

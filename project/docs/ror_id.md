@@ -1,7 +1,6 @@
 
 # Slot: ror_id
 
-
 Unique ROR identifier.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/ror_id](https://w3id.org/bridge2ai/standards-schema-all/ror_id)
@@ -25,5 +24,4 @@ None &#8594;  <sub>0..1</sub> [RorIdentifier](types/RorIdentifier.md)
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example(value='ROR:02mp31p96', description=None, object=None) |
-
+| **Examples:** | | Example({'value': 'ROR:02mp31p96'}) |
