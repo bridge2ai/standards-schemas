@@ -264,6 +264,7 @@ class DataStandardOrTool(NamedThing):
     collection: Optional[Union[Union[str, "StandardsCollectionTag"], List[Union[str, "StandardsCollectionTag"]]]] = empty_list()
     concerns_data_topic: Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]] = empty_list()
     has_relevant_organization: Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]] = empty_list()
+    has_training_resource: Optional[List[Union[str, DataStandardOrToolId]]] = empty_list()
     purpose_detail: Optional[str] = None
     is_open: Optional[Union[bool, Bool]] = None
     requires_registration: Optional[Union[bool, Bool]] = None
@@ -289,6 +290,12 @@ class DataStandardOrTool(NamedThing):
         if not isinstance(self.has_relevant_organization, list):
             self.has_relevant_organization = [self.has_relevant_organization] if self.has_relevant_organization is not None else []
         self.has_relevant_organization = [v if isinstance(v, OrganizationId) else OrganizationId(v) for v in self.has_relevant_organization]
+
+        if not isinstance(self.has_training_resource, list):
+            self.has_training_resource = [self.has_training_resource] if self.has_training_resource is not None else []
+        self.has_training_resource = [
+            v if isinstance(v, DataStandardOrToolId) else DataStandardOrToolId(v) for v in self.has_training_resource
+        ]
 
         if self.purpose_detail is not None and not isinstance(self.purpose_detail, str):
             self.purpose_detail = str(self.purpose_detail)
