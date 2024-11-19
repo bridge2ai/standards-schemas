@@ -375,7 +375,7 @@
     {
       "name": "ncit_identifier",
       "id_prefixes": [
-        "NCIT"
+        "ncit"
       ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/NcitIdentifier",
       "description": "Identifier from NCIT reference terminology with broad coverage of the cancer domain.",
@@ -658,7 +658,7 @@
     {
       "name": "type",
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/type",
-      "description": "A generic slot for any label corresponding to the label  for an entity type associated to the class.",
+      "description": "A generic slot for any label corresponding to the label for an entity type associated to the class.",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "domain": "NamedThing",
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/type",
@@ -746,13 +746,13 @@
       "description": "Unique MeSH identifier",
       "examples": [
         {
-          "value": "MeSH:D014831",
+          "value": "mesh:D014831",
           "@type": "Example"
         }
       ],
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "values_from": [
-        "MeSH"
+        "mesh"
       ],
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/mesh_id",
       "owner": "DataTopic",
@@ -769,13 +769,13 @@
       "description": "Unique NCIt Identifier",
       "examples": [
         {
-          "value": "NCIT:C92692",
+          "value": "ncit:C92692",
           "@type": "Example"
         }
       ],
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "values_from": [
-        "NCIT"
+        "ncit"
       ],
       "slot_uri": "https://w3id.org/bridge2ai/standards-schema/ncit_id",
       "owner": "DataTopic",
@@ -1170,7 +1170,7 @@
     {
       "name": "limitations",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations",
-      "description": "Potential obstacles particular to this substrate or implementation. ",
+      "description": "Potential obstacles particular to this substrate or implementation.",
       "from_schema": "https://w3id.org/bridge2ai/standards-datasubstrate-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
@@ -2065,7 +2065,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2024-11-18T16:26:57",
   "source_file_size": 439,
-  "generation_date": "2024-11-18T17:25:30",
+  "generation_date": "2024-11-19T12:57:46",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

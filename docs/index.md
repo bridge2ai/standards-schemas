@@ -83,7 +83,7 @@ Name: standards-schema-all
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |
 | [topic_involves_anatomy](topic_involves_anatomy.md) | A relationship between a DataTopic and an anatomical entity |
-| [type](type.md) | A generic slot for any label corresponding to the label  for an entity type a... |
+| [type](type.md) | A generic slot for any label corresponding to the label for an entity type as... |
 | [url](url.md) | URL for basic documentation of the standard or tool |
 | [use_case_category](use_case_category.md) | Category of the UseCase |
 | [use_cases](use_cases.md) | Collection of associated use cases |

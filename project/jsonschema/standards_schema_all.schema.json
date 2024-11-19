@@ -751,7 +751,7 @@
                     "type": "string"
                 },
                 "limitations": {
-                    "description": "Potential obstacles particular to this substrate or implementation. ",
+                    "description": "Potential obstacles particular to this substrate or implementation.",
                     "items": {
                         "type": "string"
                     },

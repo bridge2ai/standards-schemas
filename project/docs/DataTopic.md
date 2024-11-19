@@ -30,11 +30,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
  * [mesh_id](mesh_id.md)  <sub>0..1</sub>
      * Description: Unique MeSH identifier
      * Range: [MeshIdentifier](types/MeshIdentifier.md)
-     * Example: MeSH:D014831 None
+     * Example: mesh:D014831 None
  * [ncit_id](ncit_id.md)  <sub>0..1</sub>
      * Description: Unique NCIt Identifier
      * Range: [NcitIdentifier](types/NcitIdentifier.md)
-     * Example: NCIT:C92692 None
+     * Example: ncit:C92692 None
  * [topic_involves_anatomy](topic_involves_anatomy.md)  <sub>0..\*</sub>
      * Description: A relationship between a DataTopic and an anatomical entity.
      * Range: [AnatomicalEntity](AnatomicalEntity.md)

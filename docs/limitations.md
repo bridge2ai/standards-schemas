@@ -3,7 +3,7 @@
 # Slot: limitations
 
 
-_Potential obstacles particular to this substrate or implementation. _
+_Potential obstacles particular to this substrate or implementation._
 
 
 
@@ -77,7 +77,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:limitations](https://w3id
 <details>
 ```yaml
 name: limitations
-description: 'Potential obstacles particular to this substrate or implementation. '
+description: Potential obstacles particular to this substrate or implementation.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
