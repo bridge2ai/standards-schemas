@@ -25,4 +25,4 @@ None &#8594;  <sub>0..1</sub> [NcitIdentifier](types/NcitIdentifier.md)
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example({'value': 'NCIT:C92692'}) |
+| **Examples:** | | Example({'value': 'ncit:C92692'}) |

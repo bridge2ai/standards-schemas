@@ -45,7 +45,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:mesh_id](https://w3id.org
 
 | Value |
 | --- |
-| MeSH:D014831 |
+| mesh:D014831 |
 
 ## Identifier and Mapping Information
 
@@ -80,11 +80,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:mesh_id](https://w3id.org
 name: mesh_id
 description: Unique MeSH identifier
 examples:
-- value: MeSH:D014831
+- value: mesh:D014831
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 values_from:
-- MeSH
+- mesh
 alias: mesh_id
 domain_of:
 - DataSubstrate

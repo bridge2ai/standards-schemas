@@ -30,7 +30,7 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 
 Instances of this class *should* have identifiers with one of the following prefixes:
 
-* NCIT
+* ncit
 
 
 

@@ -25,4 +25,4 @@ None &#8594;  <sub>0..1</sub> [MeshIdentifier](types/MeshIdentifier.md)
 
 |  |  |  |
 | --- | --- | --- |
-| **Examples:** | | Example({'value': 'MeSH:D014831'}) |
+| **Examples:** | | Example({'value': 'mesh:D014831'}) |

@@ -1,7 +1,7 @@
 
 # Slot: type
 
-A generic slot for any label corresponding to the label  for an entity type associated to the class.
+A generic slot for any label corresponding to the label for an entity type associated to the class.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/type](https://w3id.org/bridge2ai/standards-schema-all/type)
 

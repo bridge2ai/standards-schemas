@@ -441,7 +441,7 @@
 --     * Slot: file_extensions Description: Commonly used file extensions for this substrate.
 -- # Class: "DataSubstrate_limitations" Description: ""
 --     * Slot: DataSubstrate_id Description: Autocreated FK slot
---     * Slot: limitations Description: Potential obstacles particular to this substrate or implementation. 
+--     * Slot: limitations Description: Potential obstacles particular to this substrate or implementation.
 -- # Class: "DataSubstrate_subclass_of" Description: ""
 --     * Slot: DataSubstrate_id Description: Autocreated FK slot
 --     * Slot: subclass_of_id Description: Holds between two classes where the domain class is a specialization of the range class.

@@ -66,7 +66,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [involved_in_quality_control](involved_in_quality_control.md) - True is use case is likely to be implemented as part of data validation operations.
      * [is_open](is_open.md) - Is the standard or tool FAIR and available free of cost?
      * [known_limitations](known_limitations.md) - Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.
-     * [limitations](limitations.md) - Potential obstacles particular to this substrate or implementation. 
+     * [limitations](limitations.md) - Potential obstacles particular to this substrate or implementation.
      * [metadata_storage](metadata_storage.md) - Data Substrate in which metadata is stored.
      * [not_relevant_to_dgps](not_relevant_to_dgps.md) - Is the standard or tool currently relevant to DGPs?
      * [publication](publication.md) - Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
@@ -86,7 +86,7 @@ High-level classes for Bridge2AI Standards schemas.
      * [topic_involves_anatomy](topic_involves_anatomy.md) - A relationship between a DataTopic and an anatomical entity.
  * [relevance_to_dgps](relevance_to_dgps.md) - Relevance of the use case to one or more DGPs.
  * [ror_id](ror_id.md) - Unique ROR identifier.
- * [type](type.md) - A generic slot for any label corresponding to the label  for an entity type associated to the class.
+ * [type](type.md) - A generic slot for any label corresponding to the label for an entity type associated to the class.
      * [category](category.md) - Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
  * [use_cases](use_cases.md) - Collection of associated use cases
  * [wikidata_id](wikidata_id.md) - Unique Wikidata identifier.

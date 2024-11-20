@@ -45,7 +45,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org
 
 | Value |
 | --- |
-| NCIT:C92692 |
+| ncit:C92692 |
 
 ## Identifier and Mapping Information
 
@@ -80,11 +80,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org
 name: ncit_id
 description: Unique NCIt Identifier
 examples:
-- value: NCIT:C92692
+- value: ncit:C92692
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 values_from:
-- NCIT
+- ncit
 alias: ncit_id
 domain_of:
 - DataSubstrate

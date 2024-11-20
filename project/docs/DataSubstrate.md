@@ -29,11 +29,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
  * [mesh_id](mesh_id.md)  <sub>0..1</sub>
      * Description: Unique MeSH identifier
      * Range: [MeshIdentifier](types/MeshIdentifier.md)
-     * Example: MeSH:D014831 None
+     * Example: mesh:D014831 None
  * [ncit_id](ncit_id.md)  <sub>0..1</sub>
      * Description: Unique NCIt Identifier
      * Range: [NcitIdentifier](types/NcitIdentifier.md)
-     * Example: NCIT:C92692 None
+     * Example: ncit:C92692 None
  * [metadata_storage](metadata_storage.md)  <sub>0..\*</sub>
      * Description: Data Substrate in which metadata is stored.
      * Range: [String](types/String.md)
@@ -41,7 +41,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
      * Description: Commonly used file extensions for this substrate.
      * Range: [String](types/String.md)
  * [limitations](limitations.md)  <sub>0..\*</sub>
-     * Description: Potential obstacles particular to this substrate or implementation. 
+     * Description: Potential obstacles particular to this substrate or implementation.
      * Range: [String](types/String.md)
 
 ### Inherited from NamedThing:
