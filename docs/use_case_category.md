@@ -3,7 +3,7 @@
 # Slot: use_case_category
 
 
-_Category of the UseCase. Not all projects will incorporate use cases in all categories._
+_Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories._
 
 
 
@@ -39,6 +39,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_case_category](https:
 ## Properties
 
 * Range: [UseCaseCategory](UseCaseCategory.md)
+
+* Multivalued: True
 
 
 
@@ -76,7 +78,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_case_category](https:
 ```yaml
 name: use_case_category
 description: Category of the UseCase. Not all projects will incorporate use cases
-  in all categories.
+  in all categories. This is multivalued, as a use case may span categories.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
@@ -85,6 +87,7 @@ alias: use_case_category
 domain_of:
 - UseCase
 range: UseCaseCategory
+multivalued: true
 
 ```
 </details>

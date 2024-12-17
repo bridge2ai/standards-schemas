@@ -124,7 +124,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
           
     
     
-    UseCase --> "1" UseCaseCategory : use_case_category
+    UseCase --> "1..*" UseCaseCategory : use_case_category
     click UseCaseCategory href "../UseCaseCategory"
 
         
@@ -147,17 +147,17 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [use_case_category](use_case_category.md) | 1 <br/> [UseCaseCategory](UseCaseCategory.md) | Category of the UseCase | direct |
+| [use_case_category](use_case_category.md) | 1..* <br/> [UseCaseCategory](UseCaseCategory.md) | Category of the UseCase | direct |
 | [known_limitations](known_limitations.md) | 0..1 <br/> [String](String.md) | Any current obstacles to implementing this use case | direct |
 | [relevance_to_dgps](relevance_to_dgps.md) | * <br/> [DataGeneratingProject](DataGeneratingProject.md) | Relevance of the use case to one or more DGPs | direct |
 | [data_topics](data_topics.md) | * <br/> [DataTopic](DataTopic.md) | Relevance of the use case to one or more data topics | direct |
 | [data_substrates](data_substrates.md) | * <br/> [DataSubstrate](DataSubstrate.md) | Relevance of the use case to one or more data substrates | direct |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | * <br/> [DataStandardOrTool](DataStandardOrTool.md) | List of identifiers of standards and tools; those planned to be used, or alre... | direct |
 | [alternative_standards_and_tools](alternative_standards_and_tools.md) | * <br/> [DataStandardOrTool](DataStandardOrTool.md) | List of identifiers of standards and tools; those not explicitly planned to b... | direct |
-| [enables](enables.md) | * <br/> [UseCase](UseCase.md) | Other use case(s) this use case supports or makes possible | direct |
+| [enables](enables.md) | * <br/> [UseCase](UseCase.md) | List of other use case(s) this use case supports or makes possible | direct |
 | [involved_in_experimental_design](involved_in_experimental_design.md) | 0..1 <br/> [Boolean](Boolean.md) | True if use case is likely to be implemented as part of an experimental proce... | direct |
 | [involved_in_metadata_management](involved_in_metadata_management.md) | 0..1 <br/> [Boolean](Boolean.md) | True if use case is likely to be implemented as part of metadata indexing, sa... | direct |
-| [involved_in_quality_control](involved_in_quality_control.md) | 0..1 <br/> [Boolean](Boolean.md) | True is use case is likely to be implemented as part of data validation opera... | direct |
+| [involved_in_quality_control](involved_in_quality_control.md) | 0..1 <br/> [Boolean](Boolean.md) | A value of True indicates a use case is likely to be implemented as part of d... | direct |
 | [xref](xref.md) | * <br/> [Uriorcurie](Uriorcurie.md) | URI of corresponding class in an ontology of experimental procedures, in CURI... | direct |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | Name of the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
@@ -264,7 +264,7 @@ attributes:
   use_case_category:
     name: use_case_category
     description: Category of the UseCase. Not all projects will incorporate use cases
-      in all categories.
+      in all categories. This is multivalued, as a use case may span categories.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
@@ -275,6 +275,7 @@ attributes:
     - UseCase
     range: UseCaseCategory
     required: true
+    multivalued: true
   known_limitations:
     name: known_limitations
     description: Any current obstacles to implementing this use case. This could be
@@ -330,8 +331,8 @@ attributes:
     name: standards_and_tools_for_dgp_use
     description: List of identifiers of standards and tools; those planned to be used,
       or already in use, by one or more Bridge2AI DGPs in addressing this use case,
-      from those in the Standards Registry, or TBD if standards/tools not yet finalized
-      for this use case.
+      from those in the Standards Registry. If no value is provided here, the use
+      case may not have a direct relationship to a standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
@@ -359,7 +360,7 @@ attributes:
     multivalued: true
   enables:
     name: enables
-    description: Other use case(s) this use case supports or makes possible.
+    description: List of other use case(s) this use case supports or makes possible.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
@@ -399,8 +400,8 @@ attributes:
     range: boolean
   involved_in_quality_control:
     name: involved_in_quality_control
-    description: True is use case is likely to be implemented as part of data validation
-      operations.
+    description: A value of True indicates a use case is likely to be implemented
+      as part of data validation operations.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property

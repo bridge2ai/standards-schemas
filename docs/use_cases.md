@@ -3,7 +3,7 @@
 # Slot: use_cases
 
 
-_Collection of associated use cases_
+_Collection of associated use cases._
 
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_cases](https://w3id.o
 <details>
 ```yaml
 name: use_cases
-description: Collection of associated use cases
+description: Collection of associated use cases.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 alias: use_cases

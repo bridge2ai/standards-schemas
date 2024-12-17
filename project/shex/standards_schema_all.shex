@@ -290,7 +290,7 @@ B2AI_USECASE:UseCase CLOSED {
              <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#standardization>
              <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#modeling>
              <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#application>
-             <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#assessment> ] ;
+             <https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory#assessment> ] + ;
           B2AI_USECASE:known_limitations @linkml:String ? ;
           B2AI_USECASE:relevance_to_dgps [ <https://reporter.nih.gov/project-details/10471118>
              <https://reporter.nih.gov/project-details/10472824> <https://reporter.nih.gov/project-details/10473403>

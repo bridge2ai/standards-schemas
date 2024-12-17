@@ -421,7 +421,7 @@ type UseCase
     contributorGithubName: String
     contributorOrcid: Uriorcurie
     contributionDate: Date
-    useCaseCategory: UseCaseCategory!
+    useCaseCategory: [UseCaseCategory]!
     knownLimitations: String
     relevanceToDgps: [DataGeneratingProject]
     dataTopics: [DataTopic]

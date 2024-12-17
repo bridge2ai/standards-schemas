@@ -55,7 +55,7 @@ Name: standards-schema-all
 | [data_topics_collection](data_topics_collection.md) | Collection of associated data topics |
 | [description](description.md) | A human-readable description for a thing |
 | [edam_id](edam_id.md) | Unique EDAM identifier |
-| [enables](enables.md) | Other use case(s) this use case supports or makes possible |
+| [enables](enables.md) | List of other use case(s) this use case supports or makes possible |
 | [file_extensions](file_extensions.md) | Commonly used file extensions for this substrate |
 | [formal_specification](formal_specification.md) | Relevant code repository or other location for a formal specification of the ... |
 | [has_relevant_organization](has_relevant_organization.md) | Subject standard is managed or otherwise guided buy the object organization(s... |
@@ -63,7 +63,7 @@ Name: standards-schema-all
 | [id](id.md) | A unique identifier for a thing |
 | [involved_in_experimental_design](involved_in_experimental_design.md) | True if use case is likely to be implemented as part of an experimental proce... |
 | [involved_in_metadata_management](involved_in_metadata_management.md) | True if use case is likely to be implemented as part of metadata indexing, sa... |
-| [involved_in_quality_control](involved_in_quality_control.md) | True is use case is likely to be implemented as part of data validation opera... |
+| [involved_in_quality_control](involved_in_quality_control.md) | A value of True indicates a use case is likely to be implemented as part of d... |
 | [is_open](is_open.md) | Is the standard or tool FAIR and available free of cost? |
 | [known_limitations](known_limitations.md) | Any current obstacles to implementing this use case |
 | [limitations](limitations.md) | Potential obstacles particular to this substrate or implementation |

@@ -6,45 +6,47 @@
     sh:closed true ;
     sh:description "Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ sh:datatype xsd:boolean ;
+    sh:property [ sh:datatype xsd:boolean ;
             sh:description "Is the standard or tool FAIR and available free of cost?" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 5 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool currently relevant to DGPs?" ;
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+            sh:order 20 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
         [ sh:datatype xsd:string ;
             sh:description "Text description of the standard or tool." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/description> ],
+            sh:order 19 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "A unique identifier for a thing." ;
             sh:maxCount 1 ;
@@ -52,68 +54,12 @@
             sh:nodeKind sh:Literal ;
             sh:order 11 ;
             sh:path <http://schema.org/identifier> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 15 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ sh:description "Tags for specific sets of standards." ;
-            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
         [ sh:datatype xsd:boolean ;
-            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
+            sh:description "Is the standard or tool currently relevant to DGPs?" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
         [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
             sh:description "Subject standard is generally applied in the context of object data topic." ;
             sh:nodeKind sh:IRI ;
@@ -124,103 +70,78 @@
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ] ;
-    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard> .
-
-<https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard> a sh:NodeShape ;
-    sh:closed true ;
-    sh:description "Represents a general purpose standard in the Bridge2AI Standards Registry." ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:description "Tags for specific sets of standards." ;
-            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
         [ sh:class <http://schema.org/Thing> ;
             sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
             sh:nodeKind sh:IRI ;
             sh:order 15 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool FAIR and available free of cost?" ;
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            sh:description "Subject standard is generally applied in the context of object data topic." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool currently relevant to DGPs?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
         [ sh:datatype xsd:string ;
             sh:description "A human-readable name for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 13 ;
             sh:path <http://schema.org/name> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "A unique identifier for a thing." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path <http://schema.org/identifier> ],
+        [ sh:description "Tags for specific sets of standards." ;
+            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
         [ sh:datatype xsd:string ;
             sh:description "A human-readable description for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 14 ;
             sh:path <http://schema.org/description> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
+        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
             sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
         [ sh:datatype xsd:boolean ;
             sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 6 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ] ;
+    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard> .
+
+<https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard> a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents a general purpose standard in the Bridge2AI Standards Registry." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 19 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
         [ sh:datatype xsd:string ;
             sh:description "The name of the github user who added this node." ;
             sh:maxCount 1 ;
@@ -228,23 +149,102 @@
             sh:order 18 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
         [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
+            sh:description "A human-readable name for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+            sh:order 13 ;
+            sh:path <http://schema.org/name> ],
         [ sh:datatype xsd:string ;
             sh:description "Text description of the standard or tool." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 8 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ sh:description "Tags for specific sets of standards." ;
+            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool currently relevant to DGPs?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            sh:description "Subject standard is generally applied in the context of object data topic." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 15 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool FAIR and available free of cost?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path <http://schema.org/identifier> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
         [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
             sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
             sh:nodeKind sh:IRI ;
@@ -267,512 +267,86 @@
     sh:closed true ;
     sh:description "Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a repository, the resource must not index models alone." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool FAIR and available free of cost?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ sh:datatype xsd:string ;
-            sh:description "Text description of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 15 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ sh:description "Tags for specific sets of standards." ;
-            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool currently relevant to DGPs?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "A unique identifier for a thing." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path <http://schema.org/identifier> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            sh:description "Subject standard is generally applied in the context of object data topic." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ] ;
-    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository> .
-
-<https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary> a sh:NodeShape ;
-    sh:closed true ;
-    sh:description "A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships." ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Tags for specific sets of standards." ;
-            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool currently relevant to DGPs?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "A unique identifier for a thing." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path <http://schema.org/identifier> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 15 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            sh:description "Subject standard is generally applied in the context of object data topic." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool FAIR and available free of cost?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:datatype xsd:string ;
-            sh:description "Text description of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ] ;
-    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary> .
-
-<https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset> a sh:NodeShape ;
-    sh:closed true ;
-    sh:description "Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source." ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "A unique identifier for a thing." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path <http://schema.org/identifier> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool FAIR and available free of cost?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool currently relevant to DGPs?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            sh:description "Subject standard is generally applied in the context of object data topic." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:description "Tags for specific sets of standards." ;
-            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 15 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
-        [ sh:datatype xsd:string ;
-            sh:description "Text description of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ] ;
-    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset> .
-
-<https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation> a sh:NodeShape ;
-    sh:closed true ;
-    sh:description "Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case." ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:anyURI ;
-            sh:description "A unique identifier for a thing." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path <http://schema.org/identifier> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:datatype xsd:string ;
-            sh:description "Text description of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
-        [ sh:description "Tags for specific sets of standards." ;
-            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool currently relevant to DGPs?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 15 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            sh:description "Subject standard is generally applied in the context of object data topic." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool FAIR and available free of cost?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ] ;
-    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation> .
-
-<https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry> a sh:NodeShape ;
-    sh:closed true ;
-    sh:description "Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources." ;
-    sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class <http://schema.org/Thing> ;
             sh:description "A relationship that is asserted between two named things." ;
             sh:nodeKind sh:IRI ;
             sh:order 16 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
         [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool FAIR and available free of cost?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Text description of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 15 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path <http://schema.org/identifier> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the github user who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool currently relevant to DGPs?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            sh:description "Subject standard is generally applied in the context of object data topic." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:description "Tags for specific sets of standards." ;
+            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
+        [ sh:datatype xsd:boolean ;
             sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -790,46 +364,59 @@
             sh:nodeKind sh:Literal ;
             sh:order 8 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
             sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
         [ sh:datatype xsd:string ;
             sh:description "The name of the person who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 17 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ] ;
+    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository> .
+
+<https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary> a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool FAIR and available free of cost?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path <http://schema.org/identifier> ],
         [ sh:datatype xsd:string ;
             sh:description "Text description of the standard or tool." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            sh:description "Subject standard is generally applied in the context of object data topic." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
         [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool FAIR and available free of cost?" ;
+            sh:description "Is the standard or tool currently relevant to DGPs?" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
         [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
             sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
             sh:nodeKind sh:IRI ;
@@ -840,23 +427,67 @@
             sh:order 0 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
         [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
+            sh:description "A human-readable name for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "A unique identifier for a thing." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path <http://schema.org/identifier> ],
+            sh:order 13 ;
+            sh:path <http://schema.org/name> ],
         [ sh:class <http://schema.org/Thing> ;
             sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
             sh:nodeKind sh:IRI ;
             sh:order 15 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            sh:description "Subject standard is generally applied in the context of object data topic." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the github user who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 19 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
         [ sh:datatype xsd:date ;
             sh:description "The date on which the node was added." ;
             sh:maxCount 1 ;
@@ -869,45 +500,404 @@
             sh:nodeKind sh:Literal ;
             sh:order 9 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ] ;
+    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary> .
+
+<https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset> a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 12 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            sh:description "Subject standard is generally applied in the context of object data topic." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the github user who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path <http://schema.org/identifier> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 19 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 15 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
         [ sh:datatype xsd:boolean ;
             sh:description "Is the standard or tool currently relevant to DGPs?" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 10 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Text description of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
         [ sh:datatype xsd:string ;
             sh:description "A human-readable name for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 13 ;
-            sh:path <http://schema.org/name> ] ;
+            sh:path <http://schema.org/name> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool FAIR and available free of cost?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ sh:description "Tags for specific sets of standards." ;
+            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ] ;
+    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset> .
+
+<https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation> a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool FAIR and available free of cost?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path <http://schema.org/identifier> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool currently relevant to DGPs?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            sh:description "Subject standard is generally applied in the context of object data topic." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 15 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Text description of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the github user who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 19 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:description "Tags for specific sets of standards." ;
+            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ] ;
+    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation> .
+
+<https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry> a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool FAIR and available free of cost?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 19 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool currently relevant to DGPs?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path <http://schema.org/identifier> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
+        [ sh:description "Tags for specific sets of standards." ;
+            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 15 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Text description of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            sh:description "Subject standard is generally applied in the context of object data topic." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the github user who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ] ;
     sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry> .
 
 <https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool> a sh:NodeShape ;
     sh:closed true ;
     sh:description "Represents a piece of software or computational tool in the Bridge2AI Standards Registry." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool currently relevant to DGPs?" ;
+    sh:property [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+            sh:order 19 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
         [ sh:datatype xsd:boolean ;
             sh:description "Is the standard or tool FAIR and available free of cost?" ;
             sh:maxCount 1 ;
@@ -919,24 +909,36 @@
             sh:nodeKind sh:IRI ;
             sh:order 1 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool currently relevant to DGPs?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
         [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
+            sh:description "Text description of the standard or tool." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
         [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
+            sh:description "URL for basic documentation of the standard or tool." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
         [ sh:datatype xsd:string ;
             sh:description "A human-readable name for a thing." ;
             sh:maxCount 1 ;
@@ -948,158 +950,11 @@
             sh:order 0 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
         [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
+            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 15 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:datatype xsd:string ;
-            sh:description "Text description of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "A unique identifier for a thing." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path <http://schema.org/identifier> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ] ;
-    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool> .
-
-<https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram> a sh:NodeShape ;
-    sh:closed true ;
-    sh:description "Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry." ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:boolean ;
-            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
-        [ sh:description "Tags for specific sets of standards." ;
-            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            sh:description "Subject standard is generally applied in the context of object data topic." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 15 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool currently relevant to DGPs?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:datatype xsd:string ;
-            sh:description "Text description of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool FAIR and available free of cost?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
         [ sh:datatype xsd:date ;
             sh:description "The date on which the node was added." ;
             sh:maxCount 1 ;
@@ -1107,22 +962,16 @@
             sh:order 20 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
         [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
             sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+            sh:order 15 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
         [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
+            sh:description "The name of the github user who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
+            sh:order 18 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "A unique identifier for a thing." ;
             sh:maxCount 1 ;
@@ -1130,12 +979,163 @@
             sh:nodeKind sh:Literal ;
             sh:order 11 ;
             sh:path <http://schema.org/identifier> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ] ;
+    sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool> .
+
+<https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram> a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            sh:description "Subject standard is managed or otherwise guided buy the object organization(s)." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "URL for basic documentation of the standard or tool." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ] ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the github user who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 15 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 19 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ sh:description "Tags for specific sets of standards." ;
+            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool currently relevant to DGPs?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Text description of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path <http://schema.org/identifier> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool FAIR and available free of cost?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            sh:description "Subject standard is generally applied in the context of object data topic." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ] ;
     sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram> .
 
 <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrateContainer> a sh:NodeShape ;
@@ -1176,7 +1176,7 @@
     sh:description "A container for UseCase." ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> ;
-            sh:description "Collection of associated use cases" ;
+            sh:description "Collection of associated use cases." ;
             sh:nodeKind sh:IRI ;
             sh:order 0 ;
             sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/use_cases> ] ;
@@ -1186,7 +1186,13 @@
     sh:closed true ;
     sh:description "A subcellular location, cell type or gross anatomical part" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
@@ -1202,18 +1208,11 @@
             sh:nodeKind sh:IRI ;
             sh:order 5 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path <http://schema.org/description> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "A unique identifier for a thing." ;
             sh:maxCount 1 ;
@@ -1233,17 +1232,18 @@
             sh:nodeKind sh:Literal ;
             sh:order 7 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
         [ sh:datatype xsd:string ;
             sh:description "The name of the person who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ] ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ] ;
     sh:targetClass <https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity> .
 
 <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> a sh:NodeShape ;
@@ -1251,40 +1251,33 @@
     sh:description "Represents a use case for Bridge2AI standards." ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
+            sh:description "A human-readable description for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:order 15 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry." ;
             sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the github user who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "True is use case is likely to be implemented as part of data validation operations." ;
+            sh:order 19 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> ],
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations> ],
         [ sh:datatype xsd:date ;
             sh:description "The date on which the node was added." ;
             sh:maxCount 1 ;
@@ -1295,60 +1288,27 @@
             sh:in ( <https://reporter.nih.gov/project-details/10471118> <https://reporter.nih.gov/project-details/10472824> <https://reporter.nih.gov/project-details/10473403> <https://reporter.nih.gov/project-details/10473236> ) ;
             sh:order 2 ;
             sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URI of corresponding class in an ontology of experimental procedures, in CURIE form." ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/xref> ],
         [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 13 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 15 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ;
-            sh:description "Relevance of the use case to one or more data substrates." ;
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool." ;
             sh:nodeKind sh:IRI ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> ;
-            sh:description "Other use case(s) this use case supports or makes possible." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/enables> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:description "Category of the UseCase. Not all projects will incorporate use cases in all categories." ;
-            sh:in ( "acquisition" "integration" "standardization" "modeling" "application" "assessment" ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            sh:description "Relevance of the use case to one or more data topics." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/data_topics> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use> ],
         [ sh:datatype xsd:boolean ;
-            sh:description "True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment." ;
+            sh:description "True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design> ],
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "A unique identifier for a thing." ;
             sh:maxCount 1 ;
@@ -1356,69 +1316,99 @@
             sh:nodeKind sh:Literal ;
             sh:order 12 ;
             sh:path <http://schema.org/identifier> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URI of corresponding class in an ontology of experimental procedures, in CURIE form." ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/xref> ],
-        [ sh:datatype xsd:string ;
-            sh:description "Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc." ;
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry." ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design> ],
+        [ sh:description "Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories." ;
+            sh:in ( "acquisition" "integration" "standardization" "modeling" "application" "assessment" ) ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "A value of True indicates a use case is likely to be implemented as part of data validation operations." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ;
+            sh:description "Relevance of the use case to one or more data substrates." ;
             sh:nodeKind sh:IRI ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools> ] ;
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> ;
+            sh:description "List of other use case(s) this use case supports or makes possible." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/enables> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            sh:description "Relevance of the use case to one or more data topics." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-usecase-schema/data_topics> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ] ;
     sh:targetClass <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> .
 
 <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> a sh:NodeShape ;
     sh:closed true ;
     sh:description "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
+    sh:property [ sh:description "Unique EDAM identifier" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 11 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
         [ sh:datatype xsd:string ;
             sh:description "The name of the github user who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 13 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:datatype xsd:string ;
-            sh:description "Commonly used file extensions for this substrate." ;
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 11 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions> ],
+            sh:order 6 ;
+            sh:path <http://schema.org/identifier> ],
         [ sh:description "Data Substrate in which metadata is stored." ;
             sh:or ( [ sh:class <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ] [ ] ) ;
             sh:order 3 ;
             sh:path <https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage> ],
-        [ sh:description "Unique MeSH identifier" ;
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:description "Unique NCIt Identifier" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
         [ sh:datatype xsd:date ;
             sh:description "The date on which the node was added." ;
             sh:maxCount 1 ;
@@ -1426,28 +1416,37 @@
             sh:order 15 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
         [ sh:datatype xsd:string ;
-            sh:description "Potential obstacles particular to this substrate or implementation." ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations> ],
-        [ sh:description "Unique EDAM identifier" ;
+            sh:description "A human-readable name for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
+            sh:order 8 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:description "Unique NCIt Identifier" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
+        [ sh:description "Unique MeSH identifier" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "The ORCiD of the person who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 14 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "A unique identifier for a thing." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
+        [ sh:datatype xsd:string ;
+            sh:description "Potential obstacles particular to this substrate or implementation." ;
             sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <http://schema.org/identifier> ],
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
         [ sh:datatype xsd:string ;
             sh:description "The name of the person who added this node." ;
             sh:maxCount 1 ;
@@ -1455,23 +1454,86 @@
             sh:order 12 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
         [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
+            sh:description "A human-readable description for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Commonly used file extensions for this substrate." ;
             sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ] ;
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions> ] ;
     sh:targetClass <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> .
 
 <https://w3id.org/bridge2ai/standards-organization-schema/Organization> a sh:NodeShape ;
     sh:closed true ;
     sh:description "Represents a group or organization related to or responsible for one or more Bridge2AI standards." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:anyURI ;
+    sh:property [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the github user who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path <http://schema.org/identifier> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:description "Unique ROR identifier." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-organization-schema/ror_id> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:datatype xsd:anyURI ;
             sh:description "The ORCiD of the person who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -1481,115 +1543,18 @@
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "A unique identifier for a thing." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path <http://schema.org/identifier> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:description "Unique ROR identifier." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-organization-schema/ror_id> ] ;
+            sh:path <https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id> ] ;
     sh:targetClass <https://w3id.org/bridge2ai/standards-organization-schema/Organization> .
 
 <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> a sh:NodeShape ;
     sh:closed true ;
     sh:description "Represents a general data topic for Bridge2AI data or the tools/standards applied to the data." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class <https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity> ;
-            sh:description "A relationship between a DataTopic and an anatomical entity." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy> ],
-        [ sh:description "Unique EDAM identifier" ;
+    sh:property [ sh:description "Unique NCIt Identifier" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:description "Unique MeSH identifier" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <http://schema.org/name> ],
+            sh:order 2 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "A unique identifier for a thing." ;
             sh:maxCount 1 ;
@@ -1597,38 +1562,72 @@
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path <http://schema.org/identifier> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+        [ sh:class <https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity> ;
+            sh:description "A relationship between a DataTopic and an anatomical entity." ;
             sh:nodeKind sh:IRI ;
-            sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "The ORCiD of the person who added this node." ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ sh:description "Unique NCIt Identifier" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
         [ sh:datatype xsd:string ;
             sh:description "The name of the github user who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 11 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ] ;
+            sh:order 10 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:description "Unique EDAM identifier" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:description "Unique MeSH identifier" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "The ORCiD of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ] ;
     sh:targetClass <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> .
 
 <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> a sh:NodeShape ;
@@ -1636,70 +1635,66 @@
     sh:description "Represents a standard or tool in the Bridge2AI Standards Registry." ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
-            sh:description "Text description of the standard or tool." ;
+            sh:description "A human-readable description for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
+            sh:order 14 ;
+            sh:path <http://schema.org/description> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Is the standard or tool FAIR and available free of cost?" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:description "Tags for specific sets of standards." ;
-            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
-            sh:order 0 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the github user who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            sh:description "Subject standard is generally applied in the context of object data topic." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 15 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "The ORCiD of the person who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 19 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 15 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            sh:description "Subject standard is generally applied in the context of object data topic." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ sh:class <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            sh:description "Relevant training resources, standard usage manuals, or other documentation for the standard or tool." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
         [ sh:class <http://schema.org/Thing> ;
             sh:description "A relationship that is asserted between two named things." ;
             sh:nodeKind sh:IRI ;
             sh:order 16 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URL for basic documentation of the standard or tool." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/url> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "Relevant publication for the standard or tool. Prefer a DOI or PUBMED." ;
             sh:maxCount 1 ;
@@ -1707,23 +1702,35 @@
             sh:order 8 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
         [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
+            sh:description "A human-readable name for a thing." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Does usage of the standard or tool require registration of a user or group with some organization or managerial body?" ;
+            sh:order 13 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Text description of the standard or tool." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
         [ sh:datatype xsd:boolean ;
             sh:description "Is the standard or tool currently relevant to DGPs?" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 10 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the github user who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository." ;
             sh:maxCount 1 ;
@@ -1735,76 +1742,29 @@
             sh:nodeKind sh:IRI ;
             sh:order 2 ;
             sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ sh:description "Tags for specific sets of standards." ;
+            sh:in ( "audiovisual" "deprecated" "fileformat" "toolkit" "clinicaldata" "multimodal" "text" "cloudplatform" "cloudservice" "codesystem" "datamodel" "dataregistry" "softwareregistry" "datavisualization" "notebookplatform" "datasheets" "machinelearningframework" "workflowlanguage" "diagnosticinstrument" "drugdata" "eyedata" "markuplanguage" "graphdataplatform" "guidelines" "minimuminformationschema" "modelcards" "obofoundry" "ontologyregistry" "policy" "proteindata" "referencegenome" "scrnaseqanalysis" "speechdata" "standardsregistry" "has_ai_application" ) ;
+            sh:order 0 ;
+            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "A unique identifier for a thing." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 11 ;
-            sh:path <http://schema.org/identifier> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Is the standard or tool FAIR and available free of cost?" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ] ;
+            sh:path <http://schema.org/identifier> ] ;
     sh:targetClass <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> .
 
 <http://schema.org/Thing> a sh:NodeShape ;
     sh:closed true ;
     sh:description "A generic grouping for any identifiable entity" ;
-    sh:ignoredProperties ( <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> <https://w3id.org/bridge2ai/standards-schema/xref> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> <https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> <https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category> rdf:type <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> <https://w3id.org/bridge2ai/standards-organization-schema/ror_id> <https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use> <https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools> <https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions> <https://w3id.org/bridge2ai/standards-schema/url> <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> <https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations> <https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates> <https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> <https://w3id.org/bridge2ai/standards-schema/edam_id> <https://w3id.org/bridge2ai/standards-usecase-schema/enables> <https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id> <https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations> <https://w3id.org/bridge2ai/standards-schema/mesh_id> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> <https://w3id.org/bridge2ai/standards-schema/ncit_id> <https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage> <https://w3id.org/bridge2ai/standards-usecase-schema/data_topics> ) ;
-    sh:property [ sh:class <http://schema.org/Thing> ;
-            sh:description "A relationship that is asserted between two named things." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 5 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
-        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ sh:datatype xsd:string ;
+    sh:ignoredProperties ( <https://w3id.org/bridge2ai/standards-usecase-schema/data_topics> <https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> <https://w3id.org/bridge2ai/standards-schema/edam_id> <https://w3id.org/bridge2ai/standards-usecase-schema/enables> rdf:type <https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage> <https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> <https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps> <https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations> <https://w3id.org/bridge2ai/standards-organization-schema/ror_id> <https://w3id.org/bridge2ai/standards-schema/xref> <https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy> <https://w3id.org/bridge2ai/standards-schema/url> <https://w3id.org/bridge2ai/standards-schema/mesh_id> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design> <https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> <https://w3id.org/bridge2ai/standards-schema/ncit_id> <https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use> <https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools> <https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> <https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category> <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ) ;
+    sh:property [ sh:datatype xsd:string ;
             sh:description "The name of the github user who added this node." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 7 ;
             sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable name for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path <http://schema.org/name> ],
-        [ sh:datatype xsd:string ;
-            sh:description "A human-readable description for a thing." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path <http://schema.org/description> ],
-        [ sh:datatype xsd:string ;
-            sh:description "The name of the person who added this node." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ sh:datatype xsd:date ;
-            sh:description "The date on which the node was added." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ sh:class <http://schema.org/Thing> ;
-            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 4 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
         [ sh:datatype xsd:anyURI ;
             sh:description "A unique identifier for a thing." ;
             sh:maxCount 1 ;
@@ -1817,6 +1777,45 @@
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 8 ;
-            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ] ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "Holds between two classes where the domain class is a specialization of the range class." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 4 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ sh:description "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\"." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path <http://schema.org/name> ],
+        [ sh:datatype xsd:date ;
+            sh:description "The date on which the node was added." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ sh:class <http://schema.org/Thing> ;
+            sh:description "A relationship that is asserted between two named things." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 5 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ sh:datatype xsd:string ;
+            sh:description "The name of the person who added this node." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path <http://schema.org/description> ] ;
     sh:targetClass <http://schema.org/Thing> .
 
