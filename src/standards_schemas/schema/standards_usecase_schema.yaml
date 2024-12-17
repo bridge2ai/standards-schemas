@@ -109,7 +109,9 @@ slots:
   enables:  # Should probably be an association type
     is_a: node_property
     range: UseCase
-    description: Other use case(s) this use case supports or makes possible.
+    description: >-
+      List of other use case(s) this use case supports
+      or makes possible.
     multivalued: true
   involved_in_experimental_design:
     is_a: node_property
@@ -131,10 +133,10 @@ slots:
     is_a: node_property
     range: boolean
     description: >-
-      True is use case is likely to be implemented as
-      part of data validation operations.
+      A value of True indicates a use case is likely to be
+      implemented as part of data validation operations.
   use_cases:
-    description: Collection of associated use cases
+    description: Collection of associated use cases.
     range: UseCase
     inlined: true
     inlined_as_list: true
@@ -142,23 +144,52 @@ slots:
 
 enums:
   UseCaseCategory:
-    description: Category of use case.
+    description: >-
+      Category of use case. These define the high-level
+      purpose of a task or activity as part of a broader
+      research effort or other data-related project.
+      They are not mutually exclusive and one use case
+      may involve multiple categories.
     permissible_values:
       acquisition:
         description: Acquisition
-        meaning:
+        meaning: >-
+          The use case involves the collection of data
+          from one or more sources, including data
+          generation, data capture, and data entry.
       integration:
         description: Integration
-        meaning:
+        meaning: >-
+          The use case involves the combination of data
+          from multiple sources, including data harmonization,
+          data linkage, and data aggregation.
       standardization:
         description: Standardization
-        meaning:
+        meaning: >-
+          The use case involves the application of
+          standards to data, including data normalization,
+          data validation, and quality control.
       modeling:
         description: Modeling
-        meaning:
+        meaning: >-
+          The use case involves the development of
+          models, including predictive models, statistical
+          models, and machine learning models.
       application:
         description: Application
-        meaning:
+        meaning: >-
+          The use case involves the use of data for
+          a specific scientific or otherwise productive purpose,
+          including data analysis, data visualization, and data
+          interpretation. This also includes clinical decision
+          support, patient care, and other applications of data
+          in a biomedical context.
       assessment:
         description: Assessment
-        meaning:
+        meaning: >-
+          The use case involves the evaluation of data
+          quality, data provenance, and data utility, including
+          the assessment of standards, data tools, and data
+          resources. Note this differs from the standardization
+          category, which involves the application of standards
+          to data.
