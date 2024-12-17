@@ -1,7 +1,7 @@
 # Example DataSubstrate data
 id: B2AI_SUBSTRATE:53
 name: BED
-category: DataSubstrate
+category: B2AI_SUBSTRATE:DataSubstrate
 subclass_of:
   - B2AI_SUBSTRATE:1
 description: BED (Browser Extensible Data) format provides a flexible way to define the data lines that are displayed in a genome annotation track.

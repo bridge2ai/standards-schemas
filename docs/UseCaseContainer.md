@@ -108,7 +108,7 @@ from_schema: https://w3id.org/bridge2ai/standards-schema-all
 attributes:
   use_cases:
     name: use_cases
-    description: Collection of associated use cases
+    description: Collection of associated use cases.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     alias: use_cases

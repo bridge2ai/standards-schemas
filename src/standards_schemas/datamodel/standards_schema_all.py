@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-11-19T12:57:46
+# Generation date: 2024-12-17T14:35:19
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -829,7 +829,7 @@ class UseCase(NamedThing):
     class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/UseCase")
 
     id: Union[str, UseCaseId] = None
-    use_case_category: Union[str, "UseCaseCategory"] = None
+    use_case_category: Union[Union[str, "UseCaseCategory"], List[Union[str, "UseCaseCategory"]]] = None
     known_limitations: Optional[str] = None
     relevance_to_dgps: Optional[Union[Union[str, "DataGeneratingProject"], List[Union[str, "DataGeneratingProject"]]]] = empty_list()
     data_topics: Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]] = empty_list()
@@ -850,8 +850,9 @@ class UseCase(NamedThing):
 
         if self._is_empty(self.use_case_category):
             self.MissingRequiredField("use_case_category")
-        if not isinstance(self.use_case_category, UseCaseCategory):
-            self.use_case_category = UseCaseCategory(self.use_case_category)
+        if not isinstance(self.use_case_category, list):
+            self.use_case_category = [self.use_case_category] if self.use_case_category is not None else []
+        self.use_case_category = [v if isinstance(v, UseCaseCategory) else UseCaseCategory(v) for v in self.use_case_category]
 
         if self.known_limitations is not None and not isinstance(self.known_limitations, str):
             self.known_limitations = str(self.known_limitations)
@@ -1061,30 +1062,32 @@ class StandardsCollectionTag(EnumDefinitionImpl):
 
 class UseCaseCategory(EnumDefinitionImpl):
     """
-    Category of use case.
+    Category of use case. These define the high-level purpose of a task or activity as part of a broader research
+    effort or other data-related project. They are not mutually exclusive and one use case may involve multiple
+    categories.
     """
     acquisition = PermissibleValue(
         text="acquisition",
-        description="Acquisition")
+        description="""Acquisition. The use case involves the collection of data from one or more sources, including data generation, data capture, and data entry.""")
     integration = PermissibleValue(
         text="integration",
-        description="Integration")
+        description="""Integration. The use case involves the combination of data from multiple sources, including data harmonization, data linkage, and data aggregation.""")
     standardization = PermissibleValue(
         text="standardization",
-        description="Standardization")
+        description="""Standardization. The use case involves the application of standards to data, including data normalization, data validation, and quality control.""")
     modeling = PermissibleValue(
         text="modeling",
-        description="Modeling")
+        description="""Modeling. The use case involves the development of models, including predictive models, statistical models, and machine learning models.""")
     application = PermissibleValue(
         text="application",
-        description="Application")
+        description="""Application. The use case involves the use of data for a specific scientific or otherwise productive purpose, including data analysis, data visualization, and data interpretation. This also includes clinical decision support, patient care, and other applications of data in a biomedical context.""")
     assessment = PermissibleValue(
         text="assessment",
-        description="Assessment")
+        description="""Assessment. The use case involves the evaluation of data quality, data provenance, and data utility, including the assessment of standards, data tools, and data resources. Note this differs from the standardization category, which involves the application of standards to data.""")
 
     _defn = EnumDefinition(
         name="UseCaseCategory",
-        description="Category of use case.",
+        description="""Category of use case. These define the high-level purpose of a task or activity as part of a broader research effort or other data-related project. They are not mutually exclusive and one use case may involve multiple categories.""",
     )
 
 # Slots
@@ -1206,7 +1209,7 @@ slots.organizations = Slot(uri=B2AI_ORG.organizations, name="organizations", cur
                    model_uri=DEFAULT_.organizations, domain=None, range=Optional[Union[Dict[Union[str, OrganizationId], Union[dict, Organization]], List[Union[dict, Organization]]]])
 
 slots.use_case_category = Slot(uri=B2AI_USECASE.use_case_category, name="use_case_category", curie=B2AI_USECASE.curie('use_case_category'),
-                   model_uri=DEFAULT_.use_case_category, domain=NamedThing, range=Optional[Union[str, "UseCaseCategory"]])
+                   model_uri=DEFAULT_.use_case_category, domain=NamedThing, range=Optional[Union[Union[str, "UseCaseCategory"], List[Union[str, "UseCaseCategory"]]]])
 
 slots.known_limitations = Slot(uri=B2AI_USECASE.known_limitations, name="known_limitations", curie=B2AI_USECASE.curie('known_limitations'),
                    model_uri=DEFAULT_.known_limitations, domain=NamedThing, range=Optional[str])
@@ -1242,4 +1245,4 @@ slots.use_cases = Slot(uri=B2AI_USECASE.use_cases, name="use_cases", curie=B2AI_
                    model_uri=DEFAULT_.use_cases, domain=None, range=Optional[Union[Dict[Union[str, UseCaseId], Union[dict, UseCase]], List[Union[dict, UseCase]]]])
 
 slots.UseCase_use_case_category = Slot(uri=B2AI_USECASE.use_case_category, name="UseCase_use_case_category", curie=B2AI_USECASE.curie('use_case_category'),
-                   model_uri=DEFAULT_.UseCase_use_case_category, domain=UseCase, range=Union[str, "UseCaseCategory"])
+                   model_uri=DEFAULT_.UseCase_use_case_category, domain=UseCase, range=Union[Union[str, "UseCaseCategory"], List[Union[str, "UseCaseCategory"]]])

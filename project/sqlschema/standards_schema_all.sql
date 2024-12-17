@@ -225,11 +225,10 @@
 -- # Class: "OrganizationContainer" Description: "A container for Organizations."
 --     * Slot: id Description: 
 -- # Class: "UseCase" Description: "Represents a use case for Bridge2AI standards."
---     * Slot: use_case_category Description: Category of the UseCase. Not all projects will incorporate use cases in all categories.
 --     * Slot: known_limitations Description: Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.
 --     * Slot: involved_in_experimental_design Description: True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment.
 --     * Slot: involved_in_metadata_management Description: True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data.
---     * Slot: involved_in_quality_control Description: True is use case is likely to be implemented as part of data validation operations.
+--     * Slot: involved_in_quality_control Description: A value of True indicates a use case is likely to be implemented as part of data validation operations.
 --     * Slot: id Description: A unique identifier for a thing.
 --     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
 --     * Slot: name Description: A human-readable name for a thing.
@@ -463,6 +462,9 @@
 -- # Class: "Organization_subclass_of" Description: ""
 --     * Slot: Organization_id Description: Autocreated FK slot
 --     * Slot: subclass_of_id Description: Holds between two classes where the domain class is a specialization of the range class.
+-- # Class: "UseCase_use_case_category" Description: ""
+--     * Slot: UseCase_id Description: Autocreated FK slot
+--     * Slot: use_case_category Description: Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories.
 -- # Class: "UseCase_relevance_to_dgps" Description: ""
 --     * Slot: UseCase_id Description: Autocreated FK slot
 --     * Slot: relevance_to_dgps Description: Relevance of the use case to one or more DGPs.
@@ -474,13 +476,13 @@
 --     * Slot: data_substrates_id Description: Relevance of the use case to one or more data substrates.
 -- # Class: "UseCase_standards_and_tools_for_dgp_use" Description: ""
 --     * Slot: UseCase_id Description: Autocreated FK slot
---     * Slot: standards_and_tools_for_dgp_use_id Description: List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.
+--     * Slot: standards_and_tools_for_dgp_use_id Description: List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.
 -- # Class: "UseCase_alternative_standards_and_tools" Description: ""
 --     * Slot: UseCase_id Description: Autocreated FK slot
 --     * Slot: alternative_standards_and_tools_id Description: List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.
 -- # Class: "UseCase_enables" Description: ""
 --     * Slot: UseCase_id Description: Autocreated FK slot
---     * Slot: enables_id Description: Other use case(s) this use case supports or makes possible.
+--     * Slot: enables_id Description: List of other use case(s) this use case supports or makes possible.
 -- # Class: "UseCase_xref" Description: ""
 --     * Slot: UseCase_id Description: Autocreated FK slot
 --     * Slot: xref Description: URI of corresponding class in an ontology of experimental procedures, in CURIE form.
@@ -764,7 +766,6 @@ CREATE TABLE "Organization" (
 	FOREIGN KEY("OrganizationContainer_id") REFERENCES "OrganizationContainer" (id)
 );
 CREATE TABLE "UseCase" (
-	use_case_category VARCHAR(15) NOT NULL, 
 	known_limitations TEXT, 
 	involved_in_experimental_design BOOLEAN, 
 	involved_in_metadata_management BOOLEAN, 
@@ -1285,6 +1286,12 @@ CREATE TABLE "Organization_subclass_of" (
 	PRIMARY KEY ("Organization_id", subclass_of_id), 
 	FOREIGN KEY("Organization_id") REFERENCES "Organization" (id), 
 	FOREIGN KEY(subclass_of_id) REFERENCES "NamedThing" (id)
+);
+CREATE TABLE "UseCase_use_case_category" (
+	"UseCase_id" TEXT, 
+	use_case_category VARCHAR(15) NOT NULL, 
+	PRIMARY KEY ("UseCase_id", use_case_category), 
+	FOREIGN KEY("UseCase_id") REFERENCES "UseCase" (id)
 );
 CREATE TABLE "UseCase_relevance_to_dgps" (
 	"UseCase_id" TEXT, 

@@ -3,7 +3,7 @@
 # Slot: standards_and_tools_for_dgp_use
 
 
-_List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case._
+_List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool._
 
 
 
@@ -79,8 +79,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_d
 name: standards_and_tools_for_dgp_use
 description: List of identifiers of standards and tools; those planned to be used,
   or already in use, by one or more Bridge2AI DGPs in addressing this use case, from
-  those in the Standards Registry, or TBD if standards/tools not yet finalized for
-  this use case.
+  those in the Standards Registry. If no value is provided here, the use case may
+  not have a direct relationship to a standard or tool.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property

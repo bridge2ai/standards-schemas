@@ -1,7 +1,7 @@
 
 # Slot: use_cases
 
-Collection of associated use cases
+Collection of associated use cases.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/use_cases](https://w3id.org/bridge2ai/standards-schema-all/use_cases)
 

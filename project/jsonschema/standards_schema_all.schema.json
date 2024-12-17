@@ -2558,7 +2558,7 @@
                     ]
                 },
                 "enables": {
-                    "description": "Other use case(s) this use case supports or makes possible.",
+                    "description": "List of other use case(s) this use case supports or makes possible.",
                     "items": {
                         "type": "string"
                     },
@@ -2586,7 +2586,7 @@
                     ]
                 },
                 "involved_in_quality_control": {
-                    "description": "True is use case is likely to be implemented as part of data validation operations.",
+                    "description": "A value of True indicates a use case is likely to be implemented as part of data validation operations.",
                     "type": [
                         "boolean",
                         "null"
@@ -2627,7 +2627,7 @@
                     ]
                 },
                 "standards_and_tools_for_dgp_use": {
-                    "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.",
+                    "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.",
                     "items": {
                         "type": "string"
                     },
@@ -2647,8 +2647,11 @@
                     ]
                 },
                 "use_case_category": {
-                    "$ref": "#/$defs/UseCaseCategory",
-                    "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories."
+                    "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories.",
+                    "items": {
+                        "$ref": "#/$defs/UseCaseCategory"
+                    },
+                    "type": "array"
                 },
                 "xref": {
                     "description": "URI of corresponding class in an ontology of experimental procedures, in CURIE form.",
@@ -2669,7 +2672,7 @@
             "type": "object"
         },
         "UseCaseCategory": {
-            "description": "Category of use case.",
+            "description": "Category of use case. These define the high-level purpose of a task or activity as part of a broader research effort or other data-related project. They are not mutually exclusive and one use case may involve multiple categories.",
             "enum": [
                 "acquisition",
                 "integration",
@@ -2686,7 +2689,7 @@
             "description": "A container for UseCase.",
             "properties": {
                 "use_cases": {
-                    "description": "Collection of associated use cases",
+                    "description": "Collection of associated use cases.",
                     "items": {
                         "$ref": "#/$defs/UseCase"
                     },

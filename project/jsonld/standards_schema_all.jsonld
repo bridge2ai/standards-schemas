@@ -595,32 +595,32 @@
     {
       "name": "UseCaseCategory",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseCategory",
-      "description": "Category of use case.",
+      "description": "Category of use case. These define the high-level purpose of a task or activity as part of a broader research effort or other data-related project. They are not mutually exclusive and one use case may involve multiple categories.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "permissible_values": [
         {
           "text": "acquisition",
-          "description": "Acquisition"
+          "description": "Acquisition. The use case involves the collection of data from one or more sources, including data generation, data capture, and data entry."
         },
         {
           "text": "integration",
-          "description": "Integration"
+          "description": "Integration. The use case involves the combination of data from multiple sources, including data harmonization, data linkage, and data aggregation."
         },
         {
           "text": "standardization",
-          "description": "Standardization"
+          "description": "Standardization. The use case involves the application of standards to data, including data normalization, data validation, and quality control."
         },
         {
           "text": "modeling",
-          "description": "Modeling"
+          "description": "Modeling. The use case involves the development of models, including predictive models, statistical models, and machine learning models."
         },
         {
           "text": "application",
-          "description": "Application"
+          "description": "Application. The use case involves the use of data for a specific scientific or otherwise productive purpose, including data analysis, data visualization, and data interpretation. This also includes clinical decision support, patient care, and other applications of data in a biomedical context."
         },
         {
           "text": "assessment",
-          "description": "Assessment"
+          "description": "Assessment. The use case involves the evaluation of data quality, data provenance, and data utility, including the assessment of standards, data tools, and data resources. Note this differs from the standardization category, which involves the application of standards to data."
         }
       ]
     }
@@ -1298,7 +1298,7 @@
     {
       "name": "use_case_category",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
-      "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories.",
+      "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
@@ -1308,6 +1308,7 @@
         "UseCase"
       ],
       "range": "UseCaseCategory",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1374,7 +1375,7 @@
     {
       "name": "standards_and_tools_for_dgp_use",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use",
-      "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.",
+      "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
@@ -1406,7 +1407,7 @@
     {
       "name": "enables",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/enables",
-      "description": "Other use case(s) this use case supports or makes possible.",
+      "description": "List of other use case(s) this use case supports or makes possible.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
@@ -1452,7 +1453,7 @@
     {
       "name": "involved_in_quality_control",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control",
-      "description": "True is use case is likely to be implemented as part of data validation operations.",
+      "description": "A value of True indicates a use case is likely to be implemented as part of data validation operations.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
@@ -1467,7 +1468,7 @@
     {
       "name": "use_cases",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_cases",
-      "description": "Collection of associated use cases",
+      "description": "Collection of associated use cases.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_cases",
       "owner": "UseCaseContainer",
@@ -1483,7 +1484,7 @@
     {
       "name": "UseCase_use_case_category",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
-      "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories.",
+      "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "is_a": "use_case_category",
       "domain": "UseCase",
@@ -1497,6 +1498,7 @@
       "usage_slot_name": "use_case_category",
       "range": "UseCaseCategory",
       "required": true,
+      "multivalued": true,
       "@type": "SlotDefinition"
     }
   ],
@@ -2063,9 +2065,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
-  "source_file_date": "2024-11-18T16:26:57",
+  "source_file_date": "2023-03-27T14:02:39",
   "source_file_size": 439,
-  "generation_date": "2024-11-19T12:57:46",
+  "generation_date": "2024-12-17T14:35:18",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

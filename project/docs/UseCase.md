@@ -6,7 +6,7 @@ Represents a use case for Bridge2AI standards.
 URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase](https://w3id.org/bridge2ai/standards-schema-all/UseCase)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<enables%200..*-%20[UseCase&#124;use_case_category:UseCaseCategory;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20*;involved_in_experimental_design:boolean%20%3F;involved_in_metadata_management:boolean%20%3F;involved_in_quality_control:boolean%20%3F;xref:uriorcurie%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]<alternative_standards_and_tools%200..*-%20[UseCase],[DataStandardOrTool]<standards_and_tools_for_dgp_use%200..*-%20[UseCase],[DataSubstrate]<data_substrates%200..*-%20[UseCase],[DataTopic]<data_topics%200..*-%20[UseCase],[UseCaseContainer]++-%20use_cases%200..*>[UseCase],[NamedThing]^-[UseCase],[UseCaseContainer],[NamedThing],[DataTopic],[DataSubstrate],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<enables%200..*-%20[UseCase&#124;use_case_category:UseCaseCategory;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20*;involved_in_experimental_design:boolean%20%3F;involved_in_metadata_management:boolean%20%3F;involved_in_quality_control:boolean%20%3F;xref:uriorcurie%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]<alternative_standards_and_tools%200..*-%20[UseCase],[DataStandardOrTool]<standards_and_tools_for_dgp_use%200..*-%20[UseCase],[DataSubstrate]<data_substrates%200..*-%20[UseCase],[DataTopic]<data_topics%200..*-%20[UseCase],[UseCaseContainer]++-%20use_cases%200..*>[UseCase],[NamedThing]^-[UseCase],[UseCaseContainer],[NamedThing],[DataTopic],[DataSubstrate],[DataStandardOrTool])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<enables%200..*-%20[UseCase&#124;use_case_category:UseCaseCategory%20%2B;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20*;involved_in_experimental_design:boolean%20%3F;involved_in_metadata_management:boolean%20%3F;involved_in_quality_control:boolean%20%3F;xref:uriorcurie%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]<alternative_standards_and_tools%200..*-%20[UseCase],[DataStandardOrTool]<standards_and_tools_for_dgp_use%200..*-%20[UseCase],[DataSubstrate]<data_substrates%200..*-%20[UseCase],[DataTopic]<data_topics%200..*-%20[UseCase],[UseCaseContainer]++-%20use_cases%200..*>[UseCase],[NamedThing]^-[UseCase],[UseCaseContainer],[NamedThing],[DataTopic],[DataSubstrate],[DataStandardOrTool])](https://yuml.me/diagram/nofunky;dir:TB/class/[UseCase]<enables%200..*-%20[UseCase&#124;use_case_category:UseCaseCategory%20%2B;known_limitations:string%20%3F;relevance_to_dgps:DataGeneratingProject%20*;involved_in_experimental_design:boolean%20%3F;involved_in_metadata_management:boolean%20%3F;involved_in_quality_control:boolean%20%3F;xref:uriorcurie%20*;id(i):uriorcurie;category(i):category_type%20%3F;name(i):string%20%3F;description(i):string%20%3F;contributor_name(i):string%20%3F;contributor_github_name(i):string%20%3F;contributor_orcid(i):uriorcurie%20%3F;contribution_date(i):date%20%3F],[DataStandardOrTool]<alternative_standards_and_tools%200..*-%20[UseCase],[DataStandardOrTool]<standards_and_tools_for_dgp_use%200..*-%20[UseCase],[DataSubstrate]<data_substrates%200..*-%20[UseCase],[DataTopic]<data_topics%200..*-%20[UseCase],[UseCaseContainer]++-%20use_cases%200..*>[UseCase],[NamedThing]^-[UseCase],[UseCaseContainer],[NamedThing],[DataTopic],[DataSubstrate],[DataStandardOrTool])
 
 ## Parents
 
@@ -22,8 +22,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase](https://w3id.org/
 
 ### Own
 
- * [UseCase➞use_case_category](UseCase_use_case_category.md)  <sub>1..1</sub>
-     * Description: Category of the UseCase. Not all projects will incorporate use cases in all categories.
+ * [UseCase➞use_case_category](UseCase_use_case_category.md)  <sub>1..\*</sub>
+     * Description: Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories.
      * Range: [UseCaseCategory](UseCaseCategory.md)
  * [known_limitations](known_limitations.md)  <sub>0..1</sub>
      * Description: Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.
@@ -38,13 +38,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase](https://w3id.org/
      * Description: Relevance of the use case to one or more data substrates.
      * Range: [DataSubstrate](DataSubstrate.md)
  * [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md)  <sub>0..\*</sub>
-     * Description: List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.
+     * Description: List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.
      * Range: [DataStandardOrTool](DataStandardOrTool.md)
  * [alternative_standards_and_tools](alternative_standards_and_tools.md)  <sub>0..\*</sub>
      * Description: List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.
      * Range: [DataStandardOrTool](DataStandardOrTool.md)
  * [enables](enables.md)  <sub>0..\*</sub>
-     * Description: Other use case(s) this use case supports or makes possible.
+     * Description: List of other use case(s) this use case supports or makes possible.
      * Range: [UseCase](UseCase.md)
  * [involved_in_experimental_design](involved_in_experimental_design.md)  <sub>0..1</sub>
      * Description: True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment.
@@ -53,7 +53,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase](https://w3id.org/
      * Description: True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data.
      * Range: [Boolean](types/Boolean.md)
  * [involved_in_quality_control](involved_in_quality_control.md)  <sub>0..1</sub>
-     * Description: True is use case is likely to be implemented as part of data validation operations.
+     * Description: A value of True indicates a use case is likely to be implemented as part of data validation operations.
      * Range: [Boolean](types/Boolean.md)
  * [xref](xref.md)  <sub>0..\*</sub>
      * Description: URI of corresponding class in an ontology of experimental procedures, in CURIE form.

@@ -14,5 +14,5 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer](https://
 ### Own
 
  * [use_cases](use_cases.md)  <sub>0..\*</sub>
-     * Description: Collection of associated use cases
+     * Description: Collection of associated use cases.
      * Range: [UseCase](UseCase.md)

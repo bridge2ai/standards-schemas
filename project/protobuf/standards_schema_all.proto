@@ -367,7 +367,7 @@ message UseCase
   string contributorGithubName = 0
   uriorcurie contributorOrcid = 0
   date contributionDate = 0
-  useCaseCategory useCaseCategory = 0
+ repeated  useCaseCategory useCaseCategory = 0
   string knownLimitations = 0
  repeated  dataGeneratingProject relevanceToDgps = 0
  repeated  dataTopic dataTopics = 0

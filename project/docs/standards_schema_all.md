@@ -57,13 +57,13 @@ High-level classes for Bridge2AI Standards schemas.
      * [contributor_orcid](contributor_orcid.md) - The ORCiD of the person who added this node.
      * [data_substrates](data_substrates.md) - Relevance of the use case to one or more data substrates.
      * [data_topics](data_topics.md) - Relevance of the use case to one or more data topics.
-     * [enables](enables.md) - Other use case(s) this use case supports or makes possible.
+     * [enables](enables.md) - List of other use case(s) this use case supports or makes possible.
      * [file_extensions](file_extensions.md) - Commonly used file extensions for this substrate.
      * [formal_specification](formal_specification.md) - Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
      * [has_training_resource](has_training_resource.md) - Relevant training resources, standard usage manuals, or other documentation for the standard or tool.
      * [involved_in_experimental_design](involved_in_experimental_design.md) - True if use case is likely to be implemented as part of an experimental procedure or collection of data to be used as part of an experiment.
      * [involved_in_metadata_management](involved_in_metadata_management.md) - True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data.
-     * [involved_in_quality_control](involved_in_quality_control.md) - True is use case is likely to be implemented as part of data validation operations.
+     * [involved_in_quality_control](involved_in_quality_control.md) - A value of True indicates a use case is likely to be implemented as part of data validation operations.
      * [is_open](is_open.md) - Is the standard or tool FAIR and available free of cost?
      * [known_limitations](known_limitations.md) - Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc.
      * [limitations](limitations.md) - Potential obstacles particular to this substrate or implementation.
@@ -72,9 +72,9 @@ High-level classes for Bridge2AI Standards schemas.
      * [publication](publication.md) - Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
      * [purpose_detail](purpose_detail.md) - Text description of the standard or tool.
      * [requires_registration](requires_registration.md) - Does usage of the standard or tool require registration of a user or group with some organization or managerial body?
-     * [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) - List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.
+     * [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) - List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.
      * [url](url.md) - URL for basic documentation of the standard or tool.
-     * [use_case_category](use_case_category.md) - Category of the UseCase. Not all projects will incorporate use cases in all categories.
+     * [use_case_category](use_case_category.md) - Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories.
          * [UseCase➞use_case_category](UseCase_use_case_category.md)
      * [use_conditions](use_conditions.md) - Applicable conditions on use, as defined by the Data Use Ontology (DUO).
      * [xref](xref.md) - URI of corresponding class in an ontology of experimental procedures, in CURIE form.
@@ -88,14 +88,14 @@ High-level classes for Bridge2AI Standards schemas.
  * [ror_id](ror_id.md) - Unique ROR identifier.
  * [type](type.md) - A generic slot for any label corresponding to the label for an entity type associated to the class.
      * [category](category.md) - Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
- * [use_cases](use_cases.md) - Collection of associated use cases
+ * [use_cases](use_cases.md) - Collection of associated use cases.
  * [wikidata_id](wikidata_id.md) - Unique Wikidata identifier.
 
 ### Enums
 
  * [DataGeneratingProject](DataGeneratingProject.md) - One of the Bridge2AI Data Generating Projects.
  * [StandardsCollectionTag](StandardsCollectionTag.md) - Tags for specific sets of standards.
- * [UseCaseCategory](UseCaseCategory.md) - Category of use case.
+ * [UseCaseCategory](UseCaseCategory.md) - Category of use case. These define the high-level purpose of a task or activity as part of a broader research effort or other data-related project. They are not mutually exclusive and one use case may involve multiple categories.
 
 ### Subsets
 

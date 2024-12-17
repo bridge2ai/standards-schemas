@@ -1,7 +1,7 @@
 
 # Slot: involved_in_quality_control
 
-True is use case is likely to be implemented as part of data validation operations.
+A value of True indicates a use case is likely to be implemented as part of data validation operations.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/involved_in_quality_control](https://w3id.org/bridge2ai/standards-schema-all/involved_in_quality_control)
 

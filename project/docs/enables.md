@@ -1,7 +1,7 @@
 
 # Slot: enables
 
-Other use case(s) this use case supports or makes possible.
+List of other use case(s) this use case supports or makes possible.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/enables](https://w3id.org/bridge2ai/standards-schema-all/enables)
 

@@ -1,14 +1,14 @@
 
 # Slot: use_case_category
 
-Category of the UseCase. Not all projects will incorporate use cases in all categories.
+Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories.
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase_use_case_category](https://w3id.org/bridge2ai/standards-schema-all/UseCase_use_case_category)
 
 
 ## Domain and Range
 
-[UseCase](UseCase.md) &#8594;  <sub>1..1</sub> [UseCaseCategory](UseCaseCategory.md)
+[UseCase](UseCase.md) &#8594;  <sub>1..\*</sub> [UseCaseCategory](UseCaseCategory.md)
 
 ## Parents
 
