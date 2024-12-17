@@ -2,7 +2,7 @@
 
 id: B2AI_ORG:1
 name: AHRQ
-category: B2AI_ORGANIZATION:Organization
+category: B2AI_ORG:Organization
 subclass_of:
   - B2AI_ORG:2
 description: US Agency for Healthcare Research and Quality
