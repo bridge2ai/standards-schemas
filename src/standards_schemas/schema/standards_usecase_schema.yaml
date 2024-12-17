@@ -83,18 +83,18 @@ slots:
   data_substrates:
     is_a: node_property
     range: DataSubstrate
-    description: Relevance of the use case to one or more data substrates. 
+    description: Relevance of the use case to one or more data substrates.
     multivalued: true
   standards_and_tools_for_dgp_use:
-    # TODO: add option for this to be TBD
     is_a: node_property
     range: DataStandardOrTool
     description: >-
       List of identifiers of standards and tools;
       those planned to be used, or already in use,
       by one or more Bridge2AI DGPs in addressing this use case,
-      from those in the Standards Registry,
-      or TBD if standards/tools not yet finalized for this use case.
+      from those in the Standards Registry.
+      If no value is provided here, the use case may not have
+      a direct relationship to a standard or tool.
     multivalued: true
   alternative_standards_and_tools:
     is_a: node_property
