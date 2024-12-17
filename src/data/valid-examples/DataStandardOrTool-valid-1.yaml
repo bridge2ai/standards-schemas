@@ -1,7 +1,7 @@
 # Example DataStandardOrTool data
 id: B2AI_STANDARD:53
 name: OMOP CDM
-category: B2AI_STANDARD:BiomedicalStandard
+category: B2AI_STANDARD:DataStandardOrTool
 description: Observational Medical Outcomes Partnership Common Data Model
 collection:
   - datamodel
