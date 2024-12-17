@@ -152,42 +152,36 @@ enums:
       may involve multiple categories.
     permissible_values:
       acquisition:
-        description: Acquisition
-        meaning: >-
-          The use case involves the collection of data
+        description: >-
+          Acquisition. The use case involves the collection of data
           from one or more sources, including data
           generation, data capture, and data entry.
       integration:
-        description: Integration
-        meaning: >-
-          The use case involves the combination of data
+        description: >-
+          Integration. The use case involves the combination of data
           from multiple sources, including data harmonization,
           data linkage, and data aggregation.
       standardization:
-        description: Standardization
-        meaning: >-
-          The use case involves the application of
+        description: >-
+          Standardization. The use case involves the application of
           standards to data, including data normalization,
           data validation, and quality control.
       modeling:
-        description: Modeling
-        meaning: >-
-          The use case involves the development of
+        description: >-
+          Modeling. The use case involves the development of
           models, including predictive models, statistical
           models, and machine learning models.
       application:
-        description: Application
-        meaning: >-
-          The use case involves the use of data for
+        description: >-
+          Application. The use case involves the use of data for
           a specific scientific or otherwise productive purpose,
           including data analysis, data visualization, and data
           interpretation. This also includes clinical decision
           support, patient care, and other applications of data
           in a biomedical context.
       assessment:
-        description: Assessment
-        meaning: >-
-          The use case involves the evaluation of data
+        description: >-
+          Assessment. The use case involves the evaluation of data
           quality, data provenance, and data utility, including
           the assessment of standards, data tools, and data
           resources. Note this differs from the standardization
