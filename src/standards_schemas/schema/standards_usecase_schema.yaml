@@ -58,9 +58,11 @@ slots:
   use_case_category:
     is_a: node_property
     range: UseCaseCategory
+    multivalued: true
     description: >-
       Category of the UseCase.
       Not all projects will incorporate use cases in all categories.
+      This is multivalued, as a use case may span categories.
   known_limitations:
     is_a: node_property
     range: string
@@ -137,7 +139,7 @@ slots:
     inlined: true
     inlined_as_list: true
     multivalued: true
-    
+
 enums:
   UseCaseCategory:
     description: Category of use case.
