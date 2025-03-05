@@ -1,6 +1,6 @@
 {
   "id": "B2AI_STANDARD:53",
-  "category": "BiomedicalStandard",
+  "category": "B2AI_STANDARD:DataStandardOrTool",
   "name": "OMOP CDM",
   "description": "Observational Medical Outcomes Partnership Common Data Model",
   "contributor_name": "Guadalupe Nurul",
@@ -21,5 +21,5 @@
   "url": "https://ohdsi.github.io/CommonDataModel/",
   "publication": "doi:10.3233/978-1-61499-564-7-574",
   "formal_specification": "https://github.com/OHDSI/CommonDataModel",
-  "@type": "BiomedicalStandard"
+  "@type": "DataStandardOrTool"
 }

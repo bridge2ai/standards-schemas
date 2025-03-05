@@ -1,5 +1,11 @@
 @prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/> .
 
+B2AI_ORG:1 B2AI:category "B2AI_ORG:Organization" .
+
 B2AI_ORG:2 B2AI:category "B2AI_ORG:Organization" .
+
+[] a B2AI_ORG:OrganizationContainer ;
+    B2AI_ORG:organizations B2AI_ORG:1,
+        B2AI_ORG:2 .
 

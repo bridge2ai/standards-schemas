@@ -1,5 +1,5 @@
 id: B2AI_USECASE:1
-category: UseCase
+category: B2AI_USECASE:UseCase
 name: Obtain patient data from records of clinical visits.
 description: Collecting clinical data from patient visits involves the process of
   gathering information about a patient's medical history, current symptoms, and other
@@ -12,7 +12,8 @@ description: Collecting clinical data from patient visits involves the process o
 contributor_name: Sashi Wattana
 contributor_orcid: ORCID:0000-0001-1234-5678
 contribution_date: '2023-01-01'
-use_case_category: acquisition
+use_case_category:
+- acquisition
 known_limitations: xyz
 relevance_to_dgps:
 - aireadi

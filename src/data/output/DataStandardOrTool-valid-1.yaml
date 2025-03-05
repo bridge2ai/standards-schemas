@@ -1,5 +1,5 @@
 id: B2AI_STANDARD:53
-category: BiomedicalStandard
+category: B2AI_STANDARD:DataStandardOrTool
 name: OMOP CDM
 description: Observational Medical Outcomes Partnership Common Data Model
 contributor_name: Guadalupe Nurul

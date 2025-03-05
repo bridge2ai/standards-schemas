@@ -5,7 +5,7 @@
 
 B2AI_TOPIC:2 schema1:description "Data involving any study of living organisms at any scale." ;
     schema1:name "Biology" ;
-    B2AI:category "DataTopic" ;
+    B2AI:category "B2AI_TOPIC:DataTopic" ;
     B2AI:contribution_date "2023-04-04"^^xsd:date ;
     B2AI:contributor_name "Pitsiulaaq Mtendere" ;
     B2AI:contributor_orcid "ORCID:0000-0002-1245-5763"^^xsd:anyURI ;

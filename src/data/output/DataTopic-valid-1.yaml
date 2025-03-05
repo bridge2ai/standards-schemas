@@ -1,5 +1,5 @@
 id: B2AI_TOPIC:2
-category: DataTopic
+category: B2AI_TOPIC:DataTopic
 name: Biology
 description: Data involving any study of living organisms at any scale.
 subclass_of:
