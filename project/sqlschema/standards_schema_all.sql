@@ -1,6 +1,6 @@
 -- # Class: "NamedThing" Description: "A generic grouping for any identifiable entity"
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -9,7 +9,7 @@
 --     * Slot: contribution_date Description: The date on which the node was added.
 -- # Class: "AnatomicalEntity" Description: "A subcellular location, cell type or gross anatomical part"
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -25,7 +25,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -42,7 +42,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -58,7 +58,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -74,7 +74,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -90,7 +90,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -106,7 +106,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -122,7 +122,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -138,7 +138,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -154,7 +154,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -170,7 +170,7 @@
 --     * Slot: formal_specification Description: Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.
 --     * Slot: not_relevant_to_dgps Description: Is the standard or tool currently relevant to DGPs?
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -184,7 +184,7 @@
 --     * Slot: mesh_id Description: Unique MeSH identifier
 --     * Slot: ncit_id Description: Unique NCIt Identifier
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -199,7 +199,7 @@
 --     * Slot: mesh_id Description: Unique MeSH identifier
 --     * Slot: ncit_id Description: Unique NCIt Identifier
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -214,7 +214,7 @@
 --     * Slot: wikidata_id Description: Unique Wikidata identifier.
 --     * Slot: url Description: URL for basic documentation of the standard or tool.
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.
@@ -230,7 +230,7 @@
 --     * Slot: involved_in_metadata_management Description: True if use case is likely to be implemented as part of metadata indexing, sample tracking, or any other storage of high-level data properties. Includes use cases in which metadata will be collected along with data.
 --     * Slot: involved_in_quality_control Description: A value of True indicates a use case is likely to be implemented as part of data validation operations.
 --     * Slot: id Description: A unique identifier for a thing.
---     * Slot: category Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+--     * Slot: category Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 --     * Slot: name Description: A human-readable name for a thing.
 --     * Slot: description Description: A human-readable description for a thing.
 --     * Slot: contributor_name Description: The name of the person who added this node.

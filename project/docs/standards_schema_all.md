@@ -87,7 +87,7 @@ High-level classes for Bridge2AI Standards schemas.
  * [relevance_to_dgps](relevance_to_dgps.md) - Relevance of the use case to one or more DGPs.
  * [ror_id](ror_id.md) - Unique ROR identifier.
  * [type](type.md) - A generic slot for any label corresponding to the label for an entity type associated to the class.
-     * [category](category.md) - Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+     * [category](category.md) - CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
  * [use_cases](use_cases.md) - Collection of associated use cases.
  * [wikidata_id](wikidata_id.md) - Unique Wikidata identifier.
 

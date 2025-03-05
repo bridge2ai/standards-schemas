@@ -669,7 +669,7 @@
     {
       "name": "category",
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/category",
-      "description": "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"BiomedicalStandard\".",
+      "description": "CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"B2AI_STANDARD:DataStandard\".",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "is_a": "type",
       "domain": "NamedThing",
@@ -2065,9 +2065,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
-  "source_file_date": "2023-03-27T14:02:39",
+  "source_file_date": "2025-03-05T10:24:19",
   "source_file_size": 439,
-  "generation_date": "2024-12-17T14:35:18",
+  "generation_date": "2025-03-05T10:57:55",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",
