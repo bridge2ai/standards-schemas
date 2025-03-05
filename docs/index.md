@@ -41,7 +41,7 @@ Name: standards-schema-all
 | Slot | Description |
 | --- | --- |
 | [alternative_standards_and_tools](alternative_standards_and_tools.md) | List of identifiers of standards and tools; those not explicitly planned to b... |
-| [category](category.md) | Name of the high level ontology class in which this entity is categorized |
+| [category](category.md) | CURIE for the high level ontology class in which this entity is categorized |
 | [collection](collection.md) | Tags for specific sets of standards |
 | [concerns_data_topic](concerns_data_topic.md) | Subject standard is generally applied in the context of object data topic |
 | [contribution_date](contribution_date.md) | The date on which the node was added |

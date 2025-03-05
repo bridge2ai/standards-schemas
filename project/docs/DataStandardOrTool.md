@@ -75,7 +75,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
      * Description: A unique identifier for a thing.
      * Range: [Uriorcurie](types/Uriorcurie.md)
  * [category](category.md)  <sub>0..1</sub>
-     * Description: Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+     * Description: CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
      * Range: [CategoryType](types/CategoryType.md)
  * [name](name.md)  <sub>0..1</sub>
      * Description: A human-readable name for a thing.
