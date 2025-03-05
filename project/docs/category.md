@@ -1,7 +1,7 @@
 
 # Slot: category
 
-Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
 
 URI: [https://w3id.org/bridge2ai/standards-schema-all/category](https://w3id.org/bridge2ai/standards-schema-all/category)
 
