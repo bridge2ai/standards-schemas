@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10"]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
 
     steps:
 
@@ -32,14 +32,14 @@ jobs:
         uses: snok/install-poetry@v1.3
 
       #----------------------------------------------
-      # install dependencies if cache does not exist 
+      # install dependencies if cache does not exist
       #----------------------------------------------
       - name: Install dependencies
         run: poetry install --no-interaction --no-root
 
       #----------------------------------------------
-      #    install your root project, if required 
-      #----------------------------------------------      
+      #    install your root project, if required
+      #----------------------------------------------
       - name: Install library
         run: poetry install --no-interaction
 
