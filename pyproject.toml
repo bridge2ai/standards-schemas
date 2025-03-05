@@ -8,7 +8,7 @@ readme = "README.md"
 include = ["README.md", "src/standards_schemas/schema", "project"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<3.13"
 linkml-runtime = "^1.1.24"
 cruft = "^2.12.0"
 
