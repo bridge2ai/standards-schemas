@@ -19,6 +19,8 @@ Data schema for Bridge2AI Standards Schemas.
 
 ## Developer Documentation
 
+First, you must install [poetry](https://python-poetry.org/docs/#installation).
+
 * `poetry install`: initiate poetry environment for development and build environment
 
 ### Project Generation
