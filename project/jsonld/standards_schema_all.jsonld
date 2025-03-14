@@ -2065,9 +2065,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
-  "source_file_date": "2025-03-05T10:24:19",
+  "source_file_date": "2025-03-14T14:08:19",
   "source_file_size": 439,
-  "generation_date": "2025-03-05T10:57:55",
+  "generation_date": "2025-03-14T14:21:35",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",
