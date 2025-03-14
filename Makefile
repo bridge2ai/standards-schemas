@@ -87,10 +87,8 @@ gen-examples:
 	cp src/data/examples/* $(EXAMPLEDIR)
 
 # generates all project files
-
 gen-project: $(PYMODEL)
-	$(RUN) gen-project -d $(DEST) $(SOURCE_SCHEMA_PATH) && mv $(DEST)/*.py $(PYMODEL)
-
+	$(RUN) gen-project -I python -I jsonschema -I jsonld -I owl -d $(DEST) $(SOURCE_SCHEMA_PATH) && mv $(DEST)/*.py $(PYMODEL)
 
 test: test-schema test-python
 test-schema:
