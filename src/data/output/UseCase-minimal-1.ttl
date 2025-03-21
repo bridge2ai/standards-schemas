@@ -1,5 +1,6 @@
+@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_USECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/> .
 
-B2AI_USECASE:1 a B2AI_USECASE:UseCase ;
+B2AI_USECASE:1 B2AI:category "B2AI_USECASE:UseCase" ;
     B2AI_USECASE:use_case_category "acquisition" .
 

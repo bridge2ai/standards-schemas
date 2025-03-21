@@ -1,2 +1,4 @@
 id: B2AI_USECASE:1
-use_case_category: acquisition
+category: B2AI_USECASE:UseCase
+use_case_category:
+- acquisition

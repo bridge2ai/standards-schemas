@@ -6,7 +6,7 @@
 B2AI_SUBSTRATE:53 schema1:description "BED (Browser Extensible Data) format provides a flexible way to define the data lines that are displayed in a genome annotation track." ;
     schema1:name "BED" ;
     B2AI_SUBSTRATE:metadata_storage "file headers" ;
-    B2AI:category "DataSubstrate" ;
+    B2AI:category "B2AI_SUBSTRATE:DataSubstrate" ;
     B2AI:contribution_date "2023-02-02"^^xsd:date ;
     B2AI:contributor_name "Kiran Neelam" ;
     B2AI:contributor_orcid "ORCID:0000-0001-1276-5602"^^xsd:anyURI ;

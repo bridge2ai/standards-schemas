@@ -15,7 +15,8 @@ B2AI_STANDARD:53 schema1:description "Observational Medical Outcomes Partnership
     B2AI_STANDARD:publication "doi:10.3233/978-1-61499-564-7-574"^^xsd:anyURI ;
     B2AI_STANDARD:purpose_detail "Open community data standard designed to standardize the structure and content of observational data and to enable efficient analyses that can produce reliable evidence." ;
     B2AI_STANDARD:requires_registration false ;
-    B2AI:category "BiomedicalStandard" ;
+    B2AI_STANDARD:responsible_organization B2AI_ORG:76 ;
+    B2AI:category "B2AI_STANDARD:DataStandardOrTool" ;
     B2AI:contribution_date "2023-03-03"^^xsd:date ;
     B2AI:contributor_name "Guadalupe Nurul" ;
     B2AI:contributor_orcid "ORCID:0000-0005-1272-5161"^^xsd:anyURI ;

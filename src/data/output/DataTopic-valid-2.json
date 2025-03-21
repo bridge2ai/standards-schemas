@@ -1,0 +1,19 @@
+{
+  "id": "B2AI_TOPIC:22",
+  "category": "B2AI_TOPIC:DataTopic",
+  "name": "Neurologic Imaging",
+  "description": "Images obtained through one or more brain imaging techniques, including computed tomography, positron emission tomography, magnetic resonance imaging, or imaging of associated body structures (e.g., angiography).",
+  "subclass_of": [
+    "B2AI_TOPIC:15"
+  ],
+  "contributor_name": "Laverne Billie",
+  "contributor_github_name": "laverne",
+  "contributor_orcid": "ORCID:0000-0001-5555-7811",
+  "edam_id": "edam.data:3424",
+  "mesh_id": "mesh:D059906",
+  "ncit_id": "ncit:C173635",
+  "topic_involves_anatomy": [
+    "uberon:0000955"
+  ],
+  "@type": "DataTopic"
+}
