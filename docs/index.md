@@ -58,7 +58,7 @@ Name: standards-schema-all
 | [enables](enables.md) | List of other use case(s) this use case supports or makes possible |
 | [file_extensions](file_extensions.md) | Commonly used file extensions for this substrate |
 | [formal_specification](formal_specification.md) | Relevant code repository or other location for a formal specification of the ... |
-| [has_relevant_organization](has_relevant_organization.md) | Subject standard is managed or otherwise guided buy the object organization(s... |
+| [has_relevant_organization](has_relevant_organization.md) | Subject standard has some relationship to the object organization(s), includi... |
 | [has_training_resource](has_training_resource.md) | Relevant training resources, standard usage manuals, or other documentation f... |
 | [id](id.md) | A unique identifier for a thing |
 | [involved_in_experimental_design](involved_in_experimental_design.md) | True if use case is likely to be implemented as part of an experimental proce... |
@@ -79,6 +79,7 @@ Name: standards-schema-all
 | [related_to](related_to.md) | A relationship that is asserted between two named things |
 | [relevance_to_dgps](relevance_to_dgps.md) | Relevance of the use case to one or more DGPs |
 | [requires_registration](requires_registration.md) | Does usage of the standard or tool require registration of a user or group wi... |
+| [responsible_organization](responsible_organization.md) | Organization(s) responsible for providing and/or supporting the standard or t... |
 | [ror_id](ror_id.md) | Unique ROR identifier |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |

@@ -1064,7 +1064,7 @@
     {
       "name": "has_relevant_organization",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization",
-      "description": "Subject standard is managed or otherwise guided buy the object organization(s).",
+      "description": "Subject standard has some relationship to the object organization(s), including as a user. This is distinct from the responsible organization, which is the group providing or supporting the standard or tool.",
       "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
       "is_a": "related_to",
       "domain": "DataStandardOrTool",
@@ -1123,6 +1123,22 @@
         "DataStandardOrTool"
       ],
       "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "responsible_organization",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/responsible_organization",
+      "description": "Organization(s) responsible for providing and/or supporting the standard or tool.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "node_property",
+      "domain": "DataStandardOrTool",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/responsible_organization",
+      "owner": "DataStandardOrTool",
+      "domain_of": [
+        "DataStandardOrTool"
+      ],
+      "range": "Organization",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1586,7 +1602,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool",
@@ -1619,7 +1636,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard",
@@ -1652,7 +1670,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard",
@@ -1685,7 +1704,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry",
@@ -1718,7 +1738,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary",
@@ -1751,7 +1772,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository",
@@ -1784,7 +1806,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset",
@@ -1817,7 +1840,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool",
@@ -1850,7 +1874,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation",
@@ -1883,7 +1908,8 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps"
+        "not_relevant_to_dgps",
+        "responsible_organization"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram",
@@ -2067,7 +2093,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2025-03-14T14:08:19",
   "source_file_size": 439,
-  "generation_date": "2025-03-14T14:21:35",
+  "generation_date": "2025-03-21T11:58:11",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

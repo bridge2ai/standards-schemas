@@ -1,0 +1,13 @@
+{
+  "organizations": [
+    {
+      "id": "B2AI_ORG:1",
+      "category": "B2AI_ORG:Organization"
+    },
+    {
+      "id": "B2AI_ORG:2",
+      "category": "B2AI_ORG:Organization"
+    }
+  ],
+  "@type": "OrganizationContainer"
+}

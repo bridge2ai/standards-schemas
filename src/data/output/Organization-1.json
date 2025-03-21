@@ -1,6 +1,6 @@
 {
   "id": "B2AI_ORG:1",
-  "category": "Organization",
+  "category": "B2AI_ORG:Organization",
   "name": "AHRQ",
   "description": "US Agency for Healthcare Research and Quality",
   "subclass_of": [

@@ -103,15 +103,25 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [DataStandardOrTool](DataStandardOrTool.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [DataStandardOrTool](DataStandardOrTool.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [DataStandard](DataStandard.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [DataStandard](DataStandard.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [BiomedicalStandard](BiomedicalStandard.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [Registry](Registry.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [Registry](Registry.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [ModelRepository](ModelRepository.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [ModelRepository](ModelRepository.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [SoftwareOrTool](SoftwareOrTool.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [ReferenceImplementation](ReferenceImplementation.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [TrainingProgram](TrainingProgram.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
+| [TrainingProgram](TrainingProgram.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [OrganizationContainer](OrganizationContainer.md) | [organizations](organizations.md) | range | [Organization](Organization.md) |
 
 

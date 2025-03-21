@@ -2,6 +2,7 @@
   "data_topics_collection": [
     {
       "id": "B2AI_TOPIC:2",
+      "category": "B2AI_TOPIC:DataTopic",
       "name": "Biology",
       "description": "Data involving any study of living organisms at any scale.",
       "subclass_of": [
@@ -13,6 +14,7 @@
     },
     {
       "id": "B2AI_TOPIC:3",
+      "category": "B2AI_TOPIC:DataTopic",
       "name": "Science"
     }
   ],

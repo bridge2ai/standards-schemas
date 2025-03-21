@@ -7,7 +7,7 @@ B2AI_ORG:1 schema1:description "US Agency for Healthcare Research and Quality" ;
     schema1:name "AHRQ" ;
     B2AI_ORG:ror_id "ror:03jmfdf59" ;
     B2AI_ORG:wikidata_id "wikidata:Q4692008" ;
-    B2AI:category "Organization" ;
+    B2AI:category "B2AI_ORG:Organization" ;
     B2AI:contribution_date "2023-05-05"^^xsd:date ;
     B2AI:contributor_name "Radha Chris" ;
     B2AI:contributor_orcid "ORCID:0000-0005-1555-5773"^^xsd:anyURI ;

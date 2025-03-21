@@ -96,6 +96,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
         
       BiomedicalStandard : requires_registration
         
+      BiomedicalStandard : responsible_organization
+        
+          
+    
+    
+    BiomedicalStandard --> "*" Organization : responsible_organization
+    click Organization href "../Organization"
+
+        
       BiomedicalStandard : subclass_of
         
           
@@ -128,7 +137,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
 | ---  | --- | --- | --- |
 | [collection](collection.md) | * <br/> [StandardsCollectionTag](StandardsCollectionTag.md) | Tags for specific sets of standards | [DataStandardOrTool](DataStandardOrTool.md) |
 | [concerns_data_topic](concerns_data_topic.md) | * <br/> [DataTopic](DataTopic.md) | Subject standard is generally applied in the context of object data topic | [DataStandardOrTool](DataStandardOrTool.md) |
-| [has_relevant_organization](has_relevant_organization.md) | * <br/> [Organization](Organization.md) | Subject standard is managed or otherwise guided buy the object organization(s... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [has_relevant_organization](has_relevant_organization.md) | * <br/> [Organization](Organization.md) | Subject standard has some relationship to the object organization(s), includi... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [has_training_resource](has_training_resource.md) | * <br/> [DataStandardOrTool](DataStandardOrTool.md) | Relevant training resources, standard usage manuals, or other documentation f... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [purpose_detail](purpose_detail.md) | 0..1 <br/> [String](String.md) | Text description of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [is_open](is_open.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool FAIR and available free of cost? | [DataStandardOrTool](DataStandardOrTool.md) |
@@ -137,6 +146,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | [DataStandardOrTool](DataStandardOrTool.md) |
+| [responsible_organization](responsible_organization.md) | * <br/> [Organization](Organization.md) | Organization(s) responsible for providing and/or supporting the standard or t... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | CURIE for the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -242,7 +252,9 @@ attributes:
     multivalued: true
   has_relevant_organization:
     name: has_relevant_organization
-    description: Subject standard is managed or otherwise guided buy the object organization(s).
+    description: Subject standard has some relationship to the object organization(s),
+      including as a user. This is distinct from the responsible organization, which
+      is the group providing or supporting the standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: related_to
@@ -355,6 +367,20 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: boolean
+  responsible_organization:
+    name: responsible_organization
+    description: Organization(s) responsible for providing and/or supporting the standard
+      or tool.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: DataStandardOrTool
+    alias: responsible_organization
+    owner: BiomedicalStandard
+    domain_of:
+    - DataStandardOrTool
+    range: Organization
+    multivalued: true
   id:
     name: id
     description: A unique identifier for a thing.
