@@ -32,6 +32,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:node_property](https://w3
     * [formal_specification](formal_specification.md)
     * [has_training_resource](has_training_resource.md)
     * [not_relevant_to_dgps](not_relevant_to_dgps.md)
+    * [responsible_organization](responsible_organization.md)
     * [metadata_storage](metadata_storage.md)
     * [file_extensions](file_extensions.md)
     * [limitations](limitations.md)

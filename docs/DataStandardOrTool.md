@@ -115,6 +115,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
         
       DataStandardOrTool : requires_registration
         
+      DataStandardOrTool : responsible_organization
+        
+          
+    
+    
+    DataStandardOrTool --> "*" Organization : responsible_organization
+    click Organization href "../Organization"
+
+        
       DataStandardOrTool : subclass_of
         
           
@@ -153,7 +162,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
 | ---  | --- | --- | --- |
 | [collection](collection.md) | * <br/> [StandardsCollectionTag](StandardsCollectionTag.md) | Tags for specific sets of standards | direct |
 | [concerns_data_topic](concerns_data_topic.md) | * <br/> [DataTopic](DataTopic.md) | Subject standard is generally applied in the context of object data topic | direct |
-| [has_relevant_organization](has_relevant_organization.md) | * <br/> [Organization](Organization.md) | Subject standard is managed or otherwise guided buy the object organization(s... | direct |
+| [has_relevant_organization](has_relevant_organization.md) | * <br/> [Organization](Organization.md) | Subject standard has some relationship to the object organization(s), includi... | direct |
 | [has_training_resource](has_training_resource.md) | * <br/> [DataStandardOrTool](DataStandardOrTool.md) | Relevant training resources, standard usage manuals, or other documentation f... | direct |
 | [purpose_detail](purpose_detail.md) | 0..1 <br/> [String](String.md) | Text description of the standard or tool | direct |
 | [is_open](is_open.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool FAIR and available free of cost? | direct |
@@ -162,6 +171,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | direct |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | direct |
 | [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | direct |
+| [responsible_organization](responsible_organization.md) | * <br/> [Organization](Organization.md) | Organization(s) responsible for providing and/or supporting the standard or t... | direct |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | CURIE for the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -184,33 +194,43 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
 | [DataStandardOrTool](DataStandardOrTool.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [DataStandardOrTool](DataStandardOrTool.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [DataStandard](DataStandard.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [DataStandard](DataStandard.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [DataStandard](DataStandard.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [DataStandard](DataStandard.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [BiomedicalStandard](BiomedicalStandard.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [Registry](Registry.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [Registry](Registry.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [Registry](Registry.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [Registry](Registry.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ModelRepository](ModelRepository.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ModelRepository](ModelRepository.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ModelRepository](ModelRepository.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [ModelRepository](ModelRepository.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [SoftwareOrTool](SoftwareOrTool.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [ReferenceImplementation](ReferenceImplementation.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [TrainingProgram](TrainingProgram.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [TrainingProgram](TrainingProgram.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [TrainingProgram](TrainingProgram.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [TrainingProgram](TrainingProgram.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [DataStandardOrToolContainer](DataStandardOrToolContainer.md) | [data_standardortools_collection](data_standardortools_collection.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
 | [UseCase](UseCase.md) | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
 | [UseCase](UseCase.md) | [alternative_standards_and_tools](alternative_standards_and_tools.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
@@ -273,6 +293,7 @@ slots:
 - publication
 - formal_specification
 - not_relevant_to_dgps
+- responsible_organization
 
 ```
 </details>
@@ -316,7 +337,9 @@ attributes:
     multivalued: true
   has_relevant_organization:
     name: has_relevant_organization
-    description: Subject standard is managed or otherwise guided buy the object organization(s).
+    description: Subject standard has some relationship to the object organization(s),
+      including as a user. This is distinct from the responsible organization, which
+      is the group providing or supporting the standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: related_to
@@ -429,6 +452,20 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: boolean
+  responsible_organization:
+    name: responsible_organization
+    description: Organization(s) responsible for providing and/or supporting the standard
+      or tool.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: DataStandardOrTool
+    alias: responsible_organization
+    owner: DataStandardOrTool
+    domain_of:
+    - DataStandardOrTool
+    range: Organization
+    multivalued: true
   id:
     name: id
     description: A unique identifier for a thing.

@@ -1,15 +1,15 @@
 
 
-# Slot: formal_specification
+# Slot: responsible_organization
 
 
-_Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository._
+_Organization(s) responsible for providing and/or supporting the standard or tool._
 
 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:formal_specification](https://w3id.org/bridge2ai/standards-schema-all/:formal_specification)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/:responsible_organization](https://w3id.org/bridge2ai/standards-schema-all/:responsible_organization)
 
 
 
@@ -17,7 +17,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:formal_specification](htt
 ## Inheritance
 
 * [node_property](node_property.md)
-    * **formal_specification**
+    * **responsible_organization**
 
 
 
@@ -47,7 +47,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:formal_specification](htt
 
 ## Properties
 
-* Range: [Uriorcurie](Uriorcurie.md)
+* Range: [Organization](Organization.md)
+
+* Multivalued: True
 
 
 
@@ -73,8 +75,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:formal_specification](htt
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:formal_specification |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:formal_specification |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:responsible_organization |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:responsible_organization |
 
 
 
@@ -83,17 +85,18 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:formal_specification](htt
 
 <details>
 ```yaml
-name: formal_specification
-description: Relevant code repository or other location for a formal specification
-  of the standard or tool. Often a URL, particularly to a Git repository.
+name: responsible_organization
+description: Organization(s) responsible for providing and/or supporting the standard
+  or tool.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
-domain: NamedThing
-alias: formal_specification
+domain: DataStandardOrTool
+alias: responsible_organization
 domain_of:
 - DataStandardOrTool
-range: uriorcurie
+range: Organization
+multivalued: true
 
 ```
 </details>

@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-03-14T14:21:36
+# Generation date: 2025-03-21T11:58:12
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -332,6 +332,7 @@ class DataStandardOrTool(NamedThing):
     publication: Optional[Union[str, URIorCURIE]] = None
     formal_specification: Optional[Union[str, URIorCURIE]] = None
     not_relevant_to_dgps: Optional[Union[bool, Bool]] = None
+    responsible_organization: Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -375,6 +376,10 @@ class DataStandardOrTool(NamedThing):
 
         if self.not_relevant_to_dgps is not None and not isinstance(self.not_relevant_to_dgps, Bool):
             self.not_relevant_to_dgps = Bool(self.not_relevant_to_dgps)
+
+        if not isinstance(self.responsible_organization, list):
+            self.responsible_organization = [self.responsible_organization] if self.responsible_organization is not None else []
+        self.responsible_organization = [v if isinstance(v, OrganizationId) else OrganizationId(v) for v in self.responsible_organization]
 
         super().__post_init__(**kwargs)
         self.category = str(self.class_class_curie)
@@ -1180,6 +1185,9 @@ slots.data_standardortools_collection = Slot(uri=B2AI_STANDARD.data_standardorto
 
 slots.not_relevant_to_dgps = Slot(uri=B2AI_STANDARD.not_relevant_to_dgps, name="not_relevant_to_dgps", curie=B2AI_STANDARD.curie('not_relevant_to_dgps'),
                    model_uri=DEFAULT_.not_relevant_to_dgps, domain=NamedThing, range=Optional[Union[bool, Bool]])
+
+slots.responsible_organization = Slot(uri=B2AI_STANDARD.responsible_organization, name="responsible_organization", curie=B2AI_STANDARD.curie('responsible_organization'),
+                   model_uri=DEFAULT_.responsible_organization, domain=DataStandardOrTool, range=Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]])
 
 slots.metadata_storage = Slot(uri=B2AI_SUBSTRATE.metadata_storage, name="metadata_storage", curie=B2AI_SUBSTRATE.curie('metadata_storage'),
                    model_uri=DEFAULT_.metadata_storage, domain=NamedThing, range=Optional[Union[str, List[str]]])
