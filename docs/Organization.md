@@ -123,6 +123,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
 | [TrainingProgram](TrainingProgram.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
 | [TrainingProgram](TrainingProgram.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [OrganizationContainer](OrganizationContainer.md) | [organizations](organizations.md) | range | [Organization](Organization.md) |
+| [DataSet](DataSet.md) | [produced_by](produced_by.md) | range | [Organization](Organization.md) |
 
 
 

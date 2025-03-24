@@ -24,12 +24,14 @@ URI: [schema:Thing](http://schema.org/Thing)
         click AnatomicalEntity href "../AnatomicalEntity"
       NamedThing <|-- DataStandardOrTool
         click DataStandardOrTool href "../DataStandardOrTool"
+      NamedThing <|-- Organization
+        click Organization href "../Organization"
+      NamedThing <|-- DataSet
+        click DataSet href "../DataSet"
       NamedThing <|-- DataSubstrate
         click DataSubstrate href "../DataSubstrate"
       NamedThing <|-- DataTopic
         click DataTopic href "../DataTopic"
-      NamedThing <|-- Organization
-        click Organization href "../Organization"
       NamedThing <|-- UseCase
         click UseCase href "../UseCase"
       
@@ -78,9 +80,10 @@ URI: [schema:Thing](http://schema.org/Thing)
 * **NamedThing**
     * [AnatomicalEntity](AnatomicalEntity.md)
     * [DataStandardOrTool](DataStandardOrTool.md)
+    * [Organization](Organization.md)
+    * [DataSet](DataSet.md)
     * [DataSubstrate](DataSubstrate.md)
     * [DataTopic](DataTopic.md)
-    * [Organization](Organization.md)
     * [UseCase](UseCase.md)
 
 
@@ -306,6 +309,25 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [TrainingProgram](TrainingProgram.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [contributor_name](contributor_name.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [contributor_name](contributor_name.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [metadata_storage](metadata_storage.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [file_extensions](file_extensions.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [limitations](limitations.md) | domain | [NamedThing](NamedThing.md) |
@@ -327,16 +349,6 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataTopic](DataTopic.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
 | [DataTopic](DataTopic.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [DataTopic](DataTopic.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [contributor_name](contributor_name.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [use_case_category](use_case_category.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [known_limitations](known_limitations.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [data_topics](data_topics.md) | domain | [NamedThing](NamedThing.md) |

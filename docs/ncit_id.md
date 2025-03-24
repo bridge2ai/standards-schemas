@@ -23,8 +23,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
 | [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
+| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
 
 
 

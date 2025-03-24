@@ -1,0 +1,23 @@
+id: B2AI_DATA:3
+category: B2AI_DATA:DataSet
+name: Artificial Intelligence in Cell Phenotypes - June 2024 Release
+description: This dataset is the June 2024 (v2) release of data for the Artificial
+  Intelligence in Cell Phenotypes project. It includes data on cell phenotypes and
+  their relationships to various biological processes.
+contributor_name: Verena Eadán
+contributor_orcid: ORCID:0000-0005-1292-5161
+contribution_date: '2024-03-05'
+has_files:
+- some_top_level_file.csv
+has_parts:
+- B2AI_TOPIC:4
+produced_by:
+- B2AI_ORG:1
+data_url: https://example.com/data
+documentation_url: https://example.com/docs
+datasheet_url: https://example.com/datasheet
+is_public: true
+substrates:
+- B2AI_SUBSTRATE:1
+topics:
+- B2AI_TOPIC:4

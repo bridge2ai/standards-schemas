@@ -7,6 +7,7 @@
     "linkml:types",
     "standards_schema",
     "standards_datastandardortool_schema",
+    "standards_dataset_schema",
     "standards_datasubstrate_schema",
     "standards_datatopic_schema",
     "standards_organization_schema",
@@ -1142,6 +1143,167 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "data_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/data_collection",
+      "description": "Collection of associated DataSet objects.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/data_collection",
+      "owner": "DataSetContainer",
+      "domain_of": [
+        "DataSetContainer"
+      ],
+      "range": "DataSet",
+      "multivalued": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_url",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/data_url",
+      "description": "URL where the data set can be accessed.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "node_property",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/data_url",
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "documentation_url",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/documentation_url",
+      "description": "URL where documentation for the data set can be accessed.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "node_property",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/documentation_url",
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "datasheet_url",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/datasheet_url",
+      "description": "URL where the datasheet for the data set can be accessed.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "node_property",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/datasheet_url",
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "has_files",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/has_files",
+      "description": "Subject data set has the file(s) listed in this slot as parts. Note that each file is not a data set and does not have its own ID in the registry. For data sets that are parts of this data set, use the `has_parts` slot.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "related_to",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/has_files",
+      "inherited": true,
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "string",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "has_parts",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/has_parts",
+      "description": "Subject data set has the data set(s) listed in this slot as parts. Note that each part is itself a data set, with its own ID in the registry. For specific files, use the `has_files` slot.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "related_to",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/has_parts",
+      "inherited": true,
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "DataSet",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "is_public",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/is_public",
+      "description": "True if the data set is publicly available. False if the data set is private or requires special permissions to access.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "node_property",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/is_public",
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "produced_by",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/produced_by",
+      "description": "Subject data set was produced by the organization(s) listed in this slot. Must be an Organization object, referenced with its B2AI_ORG ID.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "related_to",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/produced_by",
+      "inherited": true,
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "Organization",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "substrates",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/substrates",
+      "description": "Subject data set is relevant to the substrate(s) listed in this slot. Must be a DataSubstrate object, referenced with its B2AI_SUBSTRATE ID.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "related_to",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/substrates",
+      "inherited": true,
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "DataSubstrate",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "topics",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/topics",
+      "description": "Subject data set is relevant to the topic(s) listed in this slot. Must be a DataTopic object, referenced with its B2AI_TOPIC ID.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "related_to",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/topics",
+      "inherited": true,
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "DataTopic",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "metadata_storage",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage",
       "description": "Data Substrate in which metadata is stored.",
@@ -1928,6 +2090,49 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "DataSet",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSet",
+      "description": "Represents a data set produced by a group in the Bridge2AI consortium. ",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "NamedThing",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "contributor_name",
+        "contributor_github_name",
+        "contributor_orcid",
+        "contribution_date",
+        "has_files",
+        "has_parts",
+        "produced_by",
+        "data_url",
+        "documentation_url",
+        "datasheet_url",
+        "is_public",
+        "substrates",
+        "topics"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSet",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DataSetContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSetContainer",
+      "description": "A container for DataSets.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "slots": [
+        "data_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSetContainer",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "DataSubstrate",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate",
       "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.",
@@ -2091,15 +2296,16 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
-  "source_file_date": "2025-03-14T14:08:19",
-  "source_file_size": 439,
-  "generation_date": "2025-03-21T11:58:11",
+  "source_file_date": "2025-03-24T11:17:20",
+  "source_file_size": 468,
+  "generation_date": "2025-03-24T12:01:05",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     "standards_schema.context.jsonld",
     "standards_datastandardortool_schema.context.jsonld",
+    "standards_dataset_schema.context.jsonld",
     "standards_datasubstrate_schema.context.jsonld",
     "standards_datatopic_schema.context.jsonld",
     "standards_organization_schema.context.jsonld",

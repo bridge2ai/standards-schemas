@@ -1,0 +1,5 @@
+data_collection:
+- id: B2AI_DATA:1
+  category: B2AI_DATA:DataSet
+- id: B2AI_DATA:2
+  category: B2AI_DATA:DataSet

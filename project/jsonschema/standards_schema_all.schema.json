@@ -286,6 +286,190 @@
             "title": "DataGeneratingProject",
             "type": "string"
         },
+        "DataSet": {
+            "additionalProperties": false,
+            "description": "Represents a data set produced by a group in the Bridge2AI consortium.",
+            "properties": {
+                "category": {
+                    "description": "CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"B2AI_STANDARD:DataStandard\".",
+                    "enum": [
+                        "B2AI_DATA:DataSet"
+                    ],
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "data_url": {
+                    "description": "URL where the data set can be accessed.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "datasheet_url": {
+                    "description": "URL where the datasheet for the data set can be accessed.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "description": {
+                    "description": "A human-readable description for a thing.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "documentation_url": {
+                    "description": "URL where documentation for the data set can be accessed.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "has_files": {
+                    "description": "Subject data set has the file(s) listed in this slot as parts. Note that each file is not a data set and does not have its own ID in the registry. For data sets that are parts of this data set, use the `has_parts` slot.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "has_parts": {
+                    "description": "Subject data set has the data set(s) listed in this slot as parts. Note that each part is itself a data set, with its own ID in the registry. For specific files, use the `has_files` slot.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "A unique identifier for a thing.",
+                    "type": "string"
+                },
+                "is_public": {
+                    "description": "True if the data set is publicly available. False if the data set is private or requires special permissions to access.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "name": {
+                    "description": "A human-readable name for a thing.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "produced_by": {
+                    "description": "Subject data set was produced by the organization(s) listed in this slot. Must be an Organization object, referenced with its B2AI_ORG ID.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "substrates": {
+                    "description": "Subject data set is relevant to the substrate(s) listed in this slot. Must be a DataSubstrate object, referenced with its B2AI_SUBSTRATE ID.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "topics": {
+                    "description": "Subject data set is relevant to the topic(s) listed in this slot. Must be a DataTopic object, referenced with its B2AI_TOPIC ID.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "DataSet",
+            "type": "object"
+        },
+        "DataSetContainer": {
+            "additionalProperties": false,
+            "description": "A container for DataSets.",
+            "properties": {
+                "data_collection": {
+                    "description": "Collection of associated DataSet objects.",
+                    "items": {
+                        "$ref": "#/$defs/DataSet"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "DataSetContainer",
+            "type": "object"
+        },
         "DataStandard": {
             "additionalProperties": false,
             "description": "Represents a general purpose standard in the Bridge2AI Standards Registry.",
