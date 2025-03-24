@@ -12,6 +12,7 @@ Name: standards-schema-all
 
 | Class | Description |
 | --- | --- |
+| [DataSetContainer](DataSetContainer.md) | A container for DataSets. |
 | [DataStandardOrToolContainer](DataStandardOrToolContainer.md) | A container for DataStandardOrTool(s). |
 | [DataSubstrateContainer](DataSubstrateContainer.md) | A container for DataSubstrates. |
 | [DataTopicContainer](DataTopicContainer.md) | A container for DataTopics. |
@@ -49,6 +50,7 @@ Name: standards-schema-all
 | [contributor_github_name](contributor_github_name.md) | The name of the github user who added this node |
 | [contributor_name](contributor_name.md) | The name of the person who added this node |
 | [contributor_orcid](contributor_orcid.md) | The ORCiD of the person who added this node |
+| [data_collection](data_collection.md) | Collection of associated DataSet objects |
 | [data_standardortools_collection](data_standardortools_collection.md) | Collection of associated data standards or tools |
 | [data_substrates](data_substrates.md) | Relevance of the use case to one or more data substrates |
 | [data_substrates_collection](data_substrates_collection.md) | Collection of associated data substrates |

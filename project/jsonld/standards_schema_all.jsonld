@@ -1143,6 +1143,22 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "data_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/data_collection",
+      "description": "Collection of associated DataSet objects.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/data_collection",
+      "owner": "DataSetContainer",
+      "domain_of": [
+        "DataSetContainer"
+      ],
+      "range": "DataSet",
+      "multivalued": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "data_url",
       "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/data_url",
       "description": "URL where the data set can be accessed.",
@@ -2105,6 +2121,18 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "DataSetContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSetContainer",
+      "description": "A container for DataSets.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "slots": [
+        "data_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSetContainer",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "DataSubstrate",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate",
       "description": "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard.",
@@ -2270,7 +2298,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2025-03-24T11:17:20",
   "source_file_size": 468,
-  "generation_date": "2025-03-24T11:58:20",
+  "generation_date": "2025-03-24T12:01:05",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

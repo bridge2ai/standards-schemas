@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-03-24T11:58:20
+# Generation date: 2025-03-24T12:01:06
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -696,6 +696,26 @@ class DataSet(NamedThing):
 
 
 @dataclass(repr=False)
+class DataSetContainer(YAMLRoot):
+    """
+    A container for DataSets.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = B2AI_DATA["DataSetContainer"]
+    class_class_curie: ClassVar[str] = "B2AI_DATA:DataSetContainer"
+    class_name: ClassVar[str] = "DataSetContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer")
+
+    data_collection: Optional[Union[Dict[Union[str, DataSetId], Union[dict, DataSet]], List[Union[dict, DataSet]]]] = empty_dict()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        self._normalize_inlined_as_list(slot_name="data_collection", slot_type=DataSet, key_name="id", keyed=True)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
 class DataSubstrate(NamedThing):
     """
     Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific
@@ -1258,6 +1278,9 @@ slots.not_relevant_to_dgps = Slot(uri=B2AI_STANDARD.not_relevant_to_dgps, name="
 
 slots.responsible_organization = Slot(uri=B2AI_STANDARD.responsible_organization, name="responsible_organization", curie=B2AI_STANDARD.curie('responsible_organization'),
                    model_uri=DEFAULT_.responsible_organization, domain=DataStandardOrTool, range=Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]])
+
+slots.data_collection = Slot(uri=B2AI_DATA.data_collection, name="data_collection", curie=B2AI_DATA.curie('data_collection'),
+                   model_uri=DEFAULT_.data_collection, domain=None, range=Optional[Union[Dict[Union[str, DataSetId], Union[dict, DataSet]], List[Union[dict, DataSet]]]])
 
 slots.data_url = Slot(uri=B2AI_DATA.data_url, name="data_url", curie=B2AI_DATA.curie('data_url'),
                    model_uri=DEFAULT_.data_url, domain=DataSet, range=Optional[Union[str, URIorCURIE]])

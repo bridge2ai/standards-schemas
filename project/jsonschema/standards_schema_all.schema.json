@@ -452,6 +452,24 @@
             "title": "DataSet",
             "type": "object"
         },
+        "DataSetContainer": {
+            "additionalProperties": false,
+            "description": "A container for DataSets.",
+            "properties": {
+                "data_collection": {
+                    "description": "Collection of associated DataSet objects.",
+                    "items": {
+                        "$ref": "#/$defs/DataSet"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "DataSetContainer",
+            "type": "object"
+        },
         "DataStandard": {
             "additionalProperties": false,
             "description": "Represents a general purpose standard in the Bridge2AI Standards Registry.",

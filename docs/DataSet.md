@@ -158,6 +158,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSet](https://w3id.org
 | [DataSet](DataSet.md) | [is_public](is_public.md) | domain | [DataSet](DataSet.md) |
 | [DataSet](DataSet.md) | [substrates](substrates.md) | domain | [DataSet](DataSet.md) |
 | [DataSet](DataSet.md) | [topics](topics.md) | domain | [DataSet](DataSet.md) |
+| [DataSetContainer](DataSetContainer.md) | [data_collection](data_collection.md) | range | [DataSet](DataSet.md) |
 
 
 
