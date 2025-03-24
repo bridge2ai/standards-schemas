@@ -9,6 +9,7 @@ description: |-
   their metadata (e.g., Datasheets for Datasets).
 license: MIT
 prefixes:
+  B2AI_DATA: https://w3id.org/bridge2ai/standards-dataset-schema/
   B2AI_ORG: https://w3id.org/bridge2ai/standards-organization-schema/
   B2AI_SUBSTRATE: https://w3id.org/bridge2ai/standards-datasubstrate-schema/
   B2AI_TOPIC: https://w3id.org/bridge2ai/standards-datatopic-schema/
