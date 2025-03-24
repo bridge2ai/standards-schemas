@@ -43,6 +43,42 @@ use_cases:
   - acquisition
 
 ```
+## DataSet-valid-1
+### Input
+```yaml
+category: B2AI_DATA:DataSet
+contribution_date: '2024-03-05'
+contributor_name: "Verena Ead\xE1n"
+contributor_orcid: ORCID:0000-0005-1292-5161
+data_url: https://example.com/data
+datasheet_url: https://example.com/datasheet
+description: This dataset is the June 2024 (v2) release of data for the Artificial
+  Intelligence in Cell Phenotypes project. It includes data on cell phenotypes and
+  their relationships to various biological processes.
+documentation_url: https://example.com/docs
+has_files:
+- some_top_level_file.csv
+has_parts:
+- B2AI_TOPIC:4
+id: B2AI_DATA:3
+is_public: true
+name: Artificial Intelligence in Cell Phenotypes - June 2024 Release
+produced_by:
+- B2AI_ORG:1
+substrates:
+- B2AI_SUBSTRATE:1
+topics:
+- B2AI_TOPIC:4
+
+```
+## DataSetContainer-valid-1
+### Input
+```yaml
+data_collection:
+- id: B2AI_DATA:1
+- id: B2AI_DATA:2
+
+```
 ## Organization-1
 ### Input
 ```yaml
@@ -141,6 +177,12 @@ use_case_category:
 xref:
 - B2AI_USECASE:123
 - B2AI_USECASE:456
+
+```
+## DataSet-minimal-1
+### Input
+```yaml
+id: B2AI_DATA:3
 
 ```
 ## DataTopic-valid-1
