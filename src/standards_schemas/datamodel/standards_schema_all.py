@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-03-21T11:58:12
+# Generation date: 2025-03-24T11:58:20
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -68,6 +68,7 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
 B2AI = CurieNamespace('B2AI', 'https://w3id.org/bridge2ai/standards-schema/')
+B2AI_DATA = CurieNamespace('B2AI_DATA', 'https://w3id.org/bridge2ai/standards-dataset-schema/')
 B2AI_ORG = CurieNamespace('B2AI_ORG', 'https://w3id.org/bridge2ai/standards-organization-schema/')
 B2AI_STANDARD = CurieNamespace('B2AI_STANDARD', 'https://w3id.org/bridge2ai/standards-datastandardortool-schema/')
 B2AI_SUBSTRATE = CurieNamespace('B2AI_SUBSTRATE', 'https://w3id.org/bridge2ai/standards-datasubstrate-schema/')
@@ -180,6 +181,10 @@ class ReferenceImplementationId(DataStandardOrToolId):
 
 
 class TrainingProgramId(DataStandardOrToolId):
+    pass
+
+
+class DataSetId(NamedThingId):
     pass
 
 
@@ -623,6 +628,71 @@ class DataStandardOrToolContainer(YAMLRoot):
         self._normalize_inlined_as_list(slot_name="data_standardortools_collection", slot_type=DataStandardOrTool, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class DataSet(NamedThing):
+    """
+    Represents a data set produced by a group in the Bridge2AI consortium.
+    """
+    _inherited_slots: ClassVar[List[str]] = ["subclass_of", "related_to", "has_files", "has_parts", "produced_by", "substrates", "topics"]
+
+    class_class_uri: ClassVar[URIRef] = B2AI_DATA["DataSet"]
+    class_class_curie: ClassVar[str] = "B2AI_DATA:DataSet"
+    class_name: ClassVar[str] = "DataSet"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataSet")
+
+    id: Union[str, DataSetId] = None
+    has_files: Optional[Union[str, List[str]]] = empty_list()
+    has_parts: Optional[Union[Union[str, DataSetId], List[Union[str, DataSetId]]]] = empty_list()
+    produced_by: Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]] = empty_list()
+    data_url: Optional[Union[str, URIorCURIE]] = None
+    documentation_url: Optional[Union[str, URIorCURIE]] = None
+    datasheet_url: Optional[Union[str, URIorCURIE]] = None
+    is_public: Optional[Union[bool, Bool]] = None
+    substrates: Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]] = empty_list()
+    topics: Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]] = empty_list()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, DataSetId):
+            self.id = DataSetId(self.id)
+
+        if not isinstance(self.has_files, list):
+            self.has_files = [self.has_files] if self.has_files is not None else []
+        self.has_files = [v if isinstance(v, str) else str(v) for v in self.has_files]
+
+        if not isinstance(self.has_parts, list):
+            self.has_parts = [self.has_parts] if self.has_parts is not None else []
+        self.has_parts = [v if isinstance(v, DataSetId) else DataSetId(v) for v in self.has_parts]
+
+        if not isinstance(self.produced_by, list):
+            self.produced_by = [self.produced_by] if self.produced_by is not None else []
+        self.produced_by = [v if isinstance(v, OrganizationId) else OrganizationId(v) for v in self.produced_by]
+
+        if self.data_url is not None and not isinstance(self.data_url, URIorCURIE):
+            self.data_url = URIorCURIE(self.data_url)
+
+        if self.documentation_url is not None and not isinstance(self.documentation_url, URIorCURIE):
+            self.documentation_url = URIorCURIE(self.documentation_url)
+
+        if self.datasheet_url is not None and not isinstance(self.datasheet_url, URIorCURIE):
+            self.datasheet_url = URIorCURIE(self.datasheet_url)
+
+        if self.is_public is not None and not isinstance(self.is_public, Bool):
+            self.is_public = Bool(self.is_public)
+
+        if not isinstance(self.substrates, list):
+            self.substrates = [self.substrates] if self.substrates is not None else []
+        self.substrates = [v if isinstance(v, DataSubstrateId) else DataSubstrateId(v) for v in self.substrates]
+
+        if not isinstance(self.topics, list):
+            self.topics = [self.topics] if self.topics is not None else []
+        self.topics = [v if isinstance(v, DataTopicId) else DataTopicId(v) for v in self.topics]
+
+        super().__post_init__(**kwargs)
+        self.category = str(self.class_class_curie)
 
 
 @dataclass(repr=False)
@@ -1188,6 +1258,33 @@ slots.not_relevant_to_dgps = Slot(uri=B2AI_STANDARD.not_relevant_to_dgps, name="
 
 slots.responsible_organization = Slot(uri=B2AI_STANDARD.responsible_organization, name="responsible_organization", curie=B2AI_STANDARD.curie('responsible_organization'),
                    model_uri=DEFAULT_.responsible_organization, domain=DataStandardOrTool, range=Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]])
+
+slots.data_url = Slot(uri=B2AI_DATA.data_url, name="data_url", curie=B2AI_DATA.curie('data_url'),
+                   model_uri=DEFAULT_.data_url, domain=DataSet, range=Optional[Union[str, URIorCURIE]])
+
+slots.documentation_url = Slot(uri=B2AI_DATA.documentation_url, name="documentation_url", curie=B2AI_DATA.curie('documentation_url'),
+                   model_uri=DEFAULT_.documentation_url, domain=DataSet, range=Optional[Union[str, URIorCURIE]])
+
+slots.datasheet_url = Slot(uri=B2AI_DATA.datasheet_url, name="datasheet_url", curie=B2AI_DATA.curie('datasheet_url'),
+                   model_uri=DEFAULT_.datasheet_url, domain=DataSet, range=Optional[Union[str, URIorCURIE]])
+
+slots.has_files = Slot(uri=B2AI_DATA.has_files, name="has_files", curie=B2AI_DATA.curie('has_files'),
+                   model_uri=DEFAULT_.has_files, domain=DataSet, range=Optional[Union[str, List[str]]])
+
+slots.has_parts = Slot(uri=B2AI_DATA.has_parts, name="has_parts", curie=B2AI_DATA.curie('has_parts'),
+                   model_uri=DEFAULT_.has_parts, domain=DataSet, range=Optional[Union[Union[str, DataSetId], List[Union[str, DataSetId]]]])
+
+slots.is_public = Slot(uri=B2AI_DATA.is_public, name="is_public", curie=B2AI_DATA.curie('is_public'),
+                   model_uri=DEFAULT_.is_public, domain=DataSet, range=Optional[Union[bool, Bool]])
+
+slots.produced_by = Slot(uri=B2AI_DATA.produced_by, name="produced_by", curie=B2AI_DATA.curie('produced_by'),
+                   model_uri=DEFAULT_.produced_by, domain=DataSet, range=Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]])
+
+slots.substrates = Slot(uri=B2AI_DATA.substrates, name="substrates", curie=B2AI_DATA.curie('substrates'),
+                   model_uri=DEFAULT_.substrates, domain=DataSet, range=Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]])
+
+slots.topics = Slot(uri=B2AI_DATA.topics, name="topics", curie=B2AI_DATA.curie('topics'),
+                   model_uri=DEFAULT_.topics, domain=DataSet, range=Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]])
 
 slots.metadata_storage = Slot(uri=B2AI_SUBSTRATE.metadata_storage, name="metadata_storage", curie=B2AI_SUBSTRATE.curie('metadata_storage'),
                    model_uri=DEFAULT_.metadata_storage, domain=NamedThing, range=Optional[Union[str, List[str]]])

@@ -17,6 +17,7 @@ Name: standards-schema-all
 | [DataTopicContainer](DataTopicContainer.md) | A container for DataTopics. |
 | [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataSet](DataSet.md) | Represents a data set produced by a group in the Bridge2AI consortium.  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes. |
@@ -53,11 +54,16 @@ Name: standards-schema-all
 | [data_substrates_collection](data_substrates_collection.md) | Collection of associated data substrates |
 | [data_topics](data_topics.md) | Relevance of the use case to one or more data topics |
 | [data_topics_collection](data_topics_collection.md) | Collection of associated data topics |
+| [data_url](data_url.md) | URL where the data set can be accessed |
+| [datasheet_url](datasheet_url.md) | URL where the datasheet for the data set can be accessed |
 | [description](description.md) | A human-readable description for a thing |
+| [documentation_url](documentation_url.md) | URL where documentation for the data set can be accessed |
 | [edam_id](edam_id.md) | Unique EDAM identifier |
 | [enables](enables.md) | List of other use case(s) this use case supports or makes possible |
 | [file_extensions](file_extensions.md) | Commonly used file extensions for this substrate |
 | [formal_specification](formal_specification.md) | Relevant code repository or other location for a formal specification of the ... |
+| [has_files](has_files.md) | Subject data set has the file(s) listed in this slot as parts |
+| [has_parts](has_parts.md) | Subject data set has the data set(s) listed in this slot as parts |
 | [has_relevant_organization](has_relevant_organization.md) | Subject standard has some relationship to the object organization(s), includi... |
 | [has_training_resource](has_training_resource.md) | Relevant training resources, standard usage manuals, or other documentation f... |
 | [id](id.md) | A unique identifier for a thing |
@@ -65,6 +71,7 @@ Name: standards-schema-all
 | [involved_in_metadata_management](involved_in_metadata_management.md) | True if use case is likely to be implemented as part of metadata indexing, sa... |
 | [involved_in_quality_control](involved_in_quality_control.md) | A value of True indicates a use case is likely to be implemented as part of d... |
 | [is_open](is_open.md) | Is the standard or tool FAIR and available free of cost? |
+| [is_public](is_public.md) | True if the data set is publicly available |
 | [known_limitations](known_limitations.md) | Any current obstacles to implementing this use case |
 | [limitations](limitations.md) | Potential obstacles particular to this substrate or implementation |
 | [mesh_id](mesh_id.md) | Unique MeSH identifier |
@@ -74,6 +81,7 @@ Name: standards-schema-all
 | [node_property](node_property.md) | A grouping for any property that holds between a node and a value |
 | [not_relevant_to_dgps](not_relevant_to_dgps.md) | Is the standard or tool currently relevant to DGPs? |
 | [organizations](organizations.md) | Collection of associated organizations |
+| [produced_by](produced_by.md) | Subject data set was produced by the organization(s) listed in this slot |
 | [publication](publication.md) | Relevant publication for the standard or tool |
 | [purpose_detail](purpose_detail.md) | Text description of the standard or tool |
 | [related_to](related_to.md) | A relationship that is asserted between two named things |
@@ -83,7 +91,9 @@ Name: standards-schema-all
 | [ror_id](ror_id.md) | Unique ROR identifier |
 | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |
+| [substrates](substrates.md) | Subject data set is relevant to the substrate(s) listed in this slot |
 | [topic_involves_anatomy](topic_involves_anatomy.md) | A relationship between a DataTopic and an anatomical entity |
+| [topics](topics.md) | Subject data set is relevant to the topic(s) listed in this slot |
 | [type](type.md) | A generic slot for any label corresponding to the label for an entity type as... |
 | [url](url.md) | URL for basic documentation of the standard or tool |
 | [use_case_category](use_case_category.md) | Category of the UseCase |

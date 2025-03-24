@@ -111,6 +111,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrate](https://w3
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
+| [DataSet](DataSet.md) | [substrates](substrates.md) | range | [DataSubstrate](DataSubstrate.md) |
 | [DataSubstrate](DataSubstrate.md) | [metadata_storage](metadata_storage.md) | any_of[range] | [DataSubstrate](DataSubstrate.md) |
 | [DataSubstrateContainer](DataSubstrateContainer.md) | [data_substrates_collection](data_substrates_collection.md) | range | [DataSubstrate](DataSubstrate.md) |
 | [UseCase](UseCase.md) | [data_substrates](data_substrates.md) | range | [DataSubstrate](DataSubstrate.md) |
