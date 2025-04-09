@@ -1,3 +1,5 @@
+> **_This repository is under review for potential modification in compliance with Administration directives._**
+
 # standards-schemas
 
 Data schema for Bridge2AI Standards Schemas.
