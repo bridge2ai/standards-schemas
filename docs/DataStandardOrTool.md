@@ -98,8 +98,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
         
       DataStandardOrTool : name
         
-      DataStandardOrTool : not_relevant_to_dgps
-        
       DataStandardOrTool : publication
         
       DataStandardOrTool : purpose_detail
@@ -134,6 +132,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
 
         
       DataStandardOrTool : url
+        
+      DataStandardOrTool : used_in_bridge2ai
         
       
 ```
@@ -170,7 +170,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | direct |
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | direct |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | direct |
-| [not_relevant_to_dgps](not_relevant_to_dgps.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool currently relevant to DGPs? | direct |
 | [responsible_organization](responsible_organization.md) | * <br/> [Organization](Organization.md) | Organization(s) responsible for providing and/or supporting the standard or t... | direct |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | CURIE for the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
@@ -182,6 +181,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
 | [contributor_github_name](contributor_github_name.md) | 0..1 <br/> [String](String.md) | The name of the github user who added this node | [NamedThing](NamedThing.md) |
 | [contributor_orcid](contributor_orcid.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The ORCiD of the person who added this node | [NamedThing](NamedThing.md) |
 | [contribution_date](contribution_date.md) | 0..1 <br/> [Date](Date.md) | The date on which the node was added | [NamedThing](NamedThing.md) |
+| [used_in_bridge2ai](used_in_bridge2ai.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the entity is used, developed, or otherwise related to work in the Br... | [NamedThing](NamedThing.md) |
 
 
 
@@ -292,7 +292,6 @@ slots:
 - url
 - publication
 - formal_specification
-- not_relevant_to_dgps
 - responsible_organization
 
 ```
@@ -440,18 +439,6 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: uriorcurie
-  not_relevant_to_dgps:
-    name: not_relevant_to_dgps
-    description: Is the standard or tool currently relevant to DGPs?
-    from_schema: https://w3id.org/bridge2ai/standards-schema-all
-    rank: 1000
-    is_a: node_property
-    domain: NamedThing
-    alias: not_relevant_to_dgps
-    owner: DataStandardOrTool
-    domain_of:
-    - DataStandardOrTool
-    range: boolean
   responsible_organization:
     name: responsible_organization
     description: Organization(s) responsible for providing and/or supporting the standard
@@ -602,6 +589,21 @@ attributes:
     domain_of:
     - NamedThing
     range: date
+  used_in_bridge2ai:
+    name: used_in_bridge2ai
+    description: True if the entity is used, developed, or otherwise related to work
+      in the Bridge2AI consortium. If false, the entity is not explicitly related
+      to Bridge2AI. If not specified, it is not known if the entity is related to
+      Bridge2AI.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: used_in_bridge2ai
+    owner: DataStandardOrTool
+    domain_of:
+    - NamedThing
+    range: boolean
 
 ```
 </details>

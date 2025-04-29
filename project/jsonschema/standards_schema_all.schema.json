@@ -80,6 +80,13 @@
                         "array",
                         "null"
                     ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 }
             },
             "required": [
@@ -203,13 +210,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -265,6 +265,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -444,6 +451,13 @@
                         "array",
                         "null"
                     ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 }
             },
             "required": [
@@ -585,13 +599,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -647,6 +654,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -772,13 +786,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -834,6 +841,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -1032,6 +1046,13 @@
                         "array",
                         "null"
                     ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 }
             },
             "required": [
@@ -1167,6 +1188,13 @@
                     },
                     "type": [
                         "array",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -1310,13 +1338,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -1372,6 +1393,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -1460,6 +1488,13 @@
                     },
                     "type": [
                         "array",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -1585,13 +1620,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -1647,6 +1675,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -1749,6 +1784,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 },
@@ -1899,13 +1941,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -1961,6 +1996,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -2086,13 +2128,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -2148,6 +2183,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -2273,13 +2315,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -2335,6 +2370,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -2460,13 +2502,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -2522,6 +2557,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -2689,13 +2731,6 @@
                         "null"
                     ]
                 },
-                "not_relevant_to_dgps": {
-                    "description": "Is the standard or tool currently relevant to DGPs?",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
                 "publication": {
                     "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
                     "type": [
@@ -2751,6 +2786,13 @@
                     "description": "URL for basic documentation of the standard or tool.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
                         "null"
                     ]
                 }
@@ -2936,6 +2978,13 @@
                         "$ref": "#/$defs/UseCaseCategory"
                     },
                     "type": "array"
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "xref": {
                     "description": "URI of corresponding class in an ontology of experimental procedures, in CURIE form.",

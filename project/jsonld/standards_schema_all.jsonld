@@ -939,6 +939,21 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "used_in_bridge2ai",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/used_in_bridge2ai",
+      "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/used_in_bridge2ai",
+      "owner": "NamedThing",
+      "domain_of": [
+        "NamedThing"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "collection",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection",
       "description": "Tags for specific sets of standards.",
@@ -1109,21 +1124,6 @@
       "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "not_relevant_to_dgps",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps",
-      "description": "Is the standard or tool currently relevant to DGPs?",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "node_property",
-      "domain": "NamedThing",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/not_relevant_to_dgps",
-      "owner": "DataStandardOrTool",
-      "domain_of": [
-        "DataStandardOrTool"
-      ],
-      "range": "boolean",
       "@type": "SlotDefinition"
     },
     {
@@ -1699,7 +1699,8 @@
         "contributor_name",
         "contributor_github_name",
         "contributor_orcid",
-        "contribution_date"
+        "contribution_date",
+        "used_in_bridge2ai"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Thing",
@@ -1731,7 +1732,8 @@
         "contributor_name",
         "contributor_github_name",
         "contributor_orcid",
-        "contribution_date"
+        "contribution_date",
+        "used_in_bridge2ai"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity",
@@ -1754,6 +1756,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1764,7 +1767,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -1788,6 +1790,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1798,7 +1801,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -1822,6 +1824,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1832,7 +1835,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -1856,6 +1858,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1866,7 +1869,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -1890,6 +1892,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1900,7 +1903,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -1924,6 +1926,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1934,7 +1937,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -1958,6 +1960,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -1968,7 +1971,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -1992,6 +1994,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2002,7 +2005,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -2026,6 +2028,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2036,7 +2039,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -2060,6 +2062,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2070,7 +2073,6 @@
         "url",
         "publication",
         "formal_specification",
-        "not_relevant_to_dgps",
         "responsible_organization"
       ],
       "slot_usage": {},
@@ -2106,6 +2108,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "has_files",
         "has_parts",
         "produced_by",
@@ -2149,6 +2152,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "edam_id",
         "mesh_id",
         "ncit_id",
@@ -2189,6 +2193,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "edam_id",
         "mesh_id",
         "ncit_id",
@@ -2226,6 +2231,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "ror_id",
         "wikidata_id",
         "url",
@@ -2264,6 +2270,7 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
+        "used_in_bridge2ai",
         "UseCase_use_case_category",
         "known_limitations",
         "relevance_to_dgps",
@@ -2296,9 +2303,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
-  "source_file_date": "2025-03-24T11:17:20",
+  "source_file_date": "2025-03-24T12:27:18",
   "source_file_size": 468,
-  "generation_date": "2025-03-24T12:01:05",
+  "generation_date": "2025-04-29T11:33:12",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

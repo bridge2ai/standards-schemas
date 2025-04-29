@@ -81,7 +81,6 @@ Name: standards-schema-all
 | [name](name.md) | A human-readable name for a thing |
 | [ncit_id](ncit_id.md) | Unique NCIt Identifier |
 | [node_property](node_property.md) | A grouping for any property that holds between a node and a value |
-| [not_relevant_to_dgps](not_relevant_to_dgps.md) | Is the standard or tool currently relevant to DGPs? |
 | [organizations](organizations.md) | Collection of associated organizations |
 | [produced_by](produced_by.md) | Subject data set was produced by the organization(s) listed in this slot |
 | [publication](publication.md) | Relevant publication for the standard or tool |
@@ -101,6 +100,7 @@ Name: standards-schema-all
 | [use_case_category](use_case_category.md) | Category of the UseCase |
 | [use_cases](use_cases.md) | Collection of associated use cases |
 | [use_conditions](use_conditions.md) | Applicable conditions on use, as defined by the Data Use Ontology (DUO) |
+| [used_in_bridge2ai](used_in_bridge2ai.md) | True if the entity is used, developed, or otherwise related to work in the Br... |
 | [wikidata_id](wikidata_id.md) | Unique Wikidata identifier |
 | [xref](xref.md) | URI of corresponding class in an ontology of experimental procedures, in CURI... |
 

@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-03-24T12:01:06
+# Generation date: 2025-04-29T11:33:12
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -226,6 +226,7 @@ class NamedThing(YAMLRoot):
     contributor_github_name: Optional[str] = None
     contributor_orcid: Optional[Union[str, URIorCURIE]] = None
     contribution_date: Optional[Union[str, XSDDate]] = None
+    used_in_bridge2ai: Optional[Union[bool, Bool]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -260,6 +261,9 @@ class NamedThing(YAMLRoot):
 
         if self.contribution_date is not None and not isinstance(self.contribution_date, XSDDate):
             self.contribution_date = XSDDate(self.contribution_date)
+
+        if self.used_in_bridge2ai is not None and not isinstance(self.used_in_bridge2ai, Bool):
+            self.used_in_bridge2ai = Bool(self.used_in_bridge2ai)
 
         super().__post_init__(**kwargs)
 
@@ -336,7 +340,6 @@ class DataStandardOrTool(NamedThing):
     url: Optional[Union[str, URIorCURIE]] = None
     publication: Optional[Union[str, URIorCURIE]] = None
     formal_specification: Optional[Union[str, URIorCURIE]] = None
-    not_relevant_to_dgps: Optional[Union[bool, Bool]] = None
     responsible_organization: Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -378,9 +381,6 @@ class DataStandardOrTool(NamedThing):
 
         if self.formal_specification is not None and not isinstance(self.formal_specification, URIorCURIE):
             self.formal_specification = URIorCURIE(self.formal_specification)
-
-        if self.not_relevant_to_dgps is not None and not isinstance(self.not_relevant_to_dgps, Bool):
-            self.not_relevant_to_dgps = Bool(self.not_relevant_to_dgps)
 
         if not isinstance(self.responsible_organization, list):
             self.responsible_organization = [self.responsible_organization] if self.responsible_organization is not None else []
@@ -1240,6 +1240,9 @@ slots.related_to = Slot(uri=B2AI.related_to, name="related_to", curie=B2AI.curie
 slots.subclass_of = Slot(uri=B2AI.subclass_of, name="subclass_of", curie=B2AI.curie('subclass_of'),
                    model_uri=DEFAULT_.subclass_of, domain=NamedThing, range=Optional[Union[Union[str, NamedThingId], List[Union[str, NamedThingId]]]])
 
+slots.used_in_bridge2ai = Slot(uri=B2AI.used_in_bridge2ai, name="used_in_bridge2ai", curie=B2AI.curie('used_in_bridge2ai'),
+                   model_uri=DEFAULT_.used_in_bridge2ai, domain=NamedThing, range=Optional[Union[bool, Bool]])
+
 slots.collection = Slot(uri=B2AI_STANDARD.collection, name="collection", curie=B2AI_STANDARD.curie('collection'),
                    model_uri=DEFAULT_.collection, domain=NamedThing, range=Optional[Union[Union[str, "StandardsCollectionTag"], List[Union[str, "StandardsCollectionTag"]]]])
 
@@ -1272,9 +1275,6 @@ slots.has_training_resource = Slot(uri=B2AI_STANDARD.has_training_resource, name
 
 slots.data_standardortools_collection = Slot(uri=B2AI_STANDARD.data_standardortools_collection, name="data_standardortools_collection", curie=B2AI_STANDARD.curie('data_standardortools_collection'),
                    model_uri=DEFAULT_.data_standardortools_collection, domain=None, range=Optional[Union[Dict[Union[str, DataStandardOrToolId], Union[dict, DataStandardOrTool]], List[Union[dict, DataStandardOrTool]]]])
-
-slots.not_relevant_to_dgps = Slot(uri=B2AI_STANDARD.not_relevant_to_dgps, name="not_relevant_to_dgps", curie=B2AI_STANDARD.curie('not_relevant_to_dgps'),
-                   model_uri=DEFAULT_.not_relevant_to_dgps, domain=NamedThing, range=Optional[Union[bool, Bool]])
 
 slots.responsible_organization = Slot(uri=B2AI_STANDARD.responsible_organization, name="responsible_organization", curie=B2AI_STANDARD.curie('responsible_organization'),
                    model_uri=DEFAULT_.responsible_organization, domain=DataStandardOrTool, range=Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]])
