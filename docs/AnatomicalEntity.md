@@ -57,6 +57,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity](https:/
     click NamedThing href "../NamedThing"
 
         
+      AnatomicalEntity : used_in_bridge2ai
+        
       
 ```
 
@@ -84,6 +86,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity](https:/
 | [contributor_github_name](contributor_github_name.md) | 0..1 <br/> [String](String.md) | The name of the github user who added this node | [NamedThing](NamedThing.md) |
 | [contributor_orcid](contributor_orcid.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The ORCiD of the person who added this node | [NamedThing](NamedThing.md) |
 | [contribution_date](contribution_date.md) | 0..1 <br/> [Date](Date.md) | The date on which the node was added | [NamedThing](NamedThing.md) |
+| [used_in_bridge2ai](used_in_bridge2ai.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the entity is used, developed, or otherwise related to work in the Br... | [NamedThing](NamedThing.md) |
 
 
 
@@ -314,6 +317,21 @@ attributes:
     domain_of:
     - NamedThing
     range: date
+  used_in_bridge2ai:
+    name: used_in_bridge2ai
+    description: True if the entity is used, developed, or otherwise related to work
+      in the Bridge2AI consortium. If false, the entity is not explicitly related
+      to Bridge2AI. If not specified, it is not known if the entity is related to
+      Bridge2AI.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: used_in_bridge2ai
+    owner: AnatomicalEntity
+    domain_of:
+    - NamedThing
+    range: boolean
 
 ```
 </details>

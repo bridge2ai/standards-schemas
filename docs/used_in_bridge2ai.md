@@ -1,23 +1,23 @@
 
 
-# Slot: has_relevant_organization
+# Slot: used_in_bridge2ai
 
 
-_Subject standard has some relationship to the object organization(s), including as a user. This is distinct from the responsible organization, which is the group providing or supporting the standard or tool._
+_True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI._
 
 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_relevant_organization](https://w3id.org/bridge2ai/standards-schema-all/:has_relevant_organization)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/:used_in_bridge2ai](https://w3id.org/bridge2ai/standards-schema-all/:used_in_bridge2ai)
 
 
 
 
 ## Inheritance
 
-* [related_to](related_to.md)
-    * **has_relevant_organization**
+* [node_property](node_property.md)
+    * **used_in_bridge2ai**
 
 
 
@@ -28,8 +28,12 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_relevant_organization
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [DataSet](DataSet.md) | Represents a data set produced by a group in the Bridge2AI consortium |  no  |
 | [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |  no  |
+| [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |  no  |
+| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
 | [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app... |  no  |
+| [AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part |  no  |
 | [ReferenceImplementation](ReferenceImplementation.md) | Represents an implementation of one or more standards or tools in the Bridge2... |  no  |
 | [Registry](Registry.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |  no  |
 | [SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standar... |  no  |
@@ -37,6 +41,9 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_relevant_organization
 | [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |  no  |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their... |  no  |
 | [ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |  no  |
+| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
+| [Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ... |  no  |
+| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | Represents a resource in the Bridge2AI Standards Registry serving as a standa... |  no  |
 
 
@@ -47,9 +54,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_relevant_organization
 
 ## Properties
 
-* Range: [Organization](Organization.md)
-
-* Multivalued: True
+* Range: [Boolean](Boolean.md)
 
 
 
@@ -75,8 +80,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_relevant_organization
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:has_relevant_organization |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:has_relevant_organization |
+| self | https://w3id.org/bridge2ai/standards-schema-all/:used_in_bridge2ai |
+| native | https://w3id.org/bridge2ai/standards-schema-all/:used_in_bridge2ai |
 
 
 
@@ -85,20 +90,18 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_relevant_organization
 
 <details>
 ```yaml
-name: has_relevant_organization
-description: Subject standard has some relationship to the object organization(s),
-  including as a user. This is distinct from the responsible organization, which is
-  the group providing or supporting the standard or tool.
+name: used_in_bridge2ai
+description: True if the entity is used, developed, or otherwise related to work in
+  the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI.
+  If not specified, it is not known if the entity is related to Bridge2AI.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: related_to
-domain: DataStandardOrTool
-inherited: true
-alias: has_relevant_organization
+is_a: node_property
+domain: NamedThing
+alias: used_in_bridge2ai
 domain_of:
-- DataStandardOrTool
-range: Organization
-multivalued: true
+- NamedThing
+range: boolean
 
 ```
 </details>
