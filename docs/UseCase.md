@@ -92,21 +92,21 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
     click NamedThing href "../NamedThing"
 
         
-      UseCase : relevance_to_dgps
+      UseCase : relevant_to_gcs
         
           
     
     
-    UseCase --> "*" DataGeneratingProject : relevance_to_dgps
-    click DataGeneratingProject href "../DataGeneratingProject"
+    UseCase --> "*" Organization : relevant_to_gcs
+    click Organization href "../Organization"
 
         
-      UseCase : standards_and_tools_for_dgp_use
+      UseCase : standards_and_tools_for_gc_use
         
           
     
     
-    UseCase --> "*" DataStandardOrTool : standards_and_tools_for_dgp_use
+    UseCase --> "*" DataStandardOrTool : standards_and_tools_for_gc_use
     click DataStandardOrTool href "../DataStandardOrTool"
 
         
@@ -151,10 +151,10 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
 | ---  | --- | --- | --- |
 | [use_case_category](use_case_category.md) | 1..* <br/> [UseCaseCategory](UseCaseCategory.md) | Category of the UseCase | direct |
 | [known_limitations](known_limitations.md) | 0..1 <br/> [String](String.md) | Any current obstacles to implementing this use case | direct |
-| [relevance_to_dgps](relevance_to_dgps.md) | * <br/> [DataGeneratingProject](DataGeneratingProject.md) | Relevance of the use case to one or more DGPs | direct |
+| [relevant_to_gcs](relevant_to_gcs.md) | * <br/> [Organization](Organization.md) | Bridge2AI Grand Challenges related to this use case, generally because they a... | direct |
 | [data_topics](data_topics.md) | * <br/> [DataTopic](DataTopic.md) | Relevance of the use case to one or more data topics | direct |
 | [data_substrates](data_substrates.md) | * <br/> [DataSubstrate](DataSubstrate.md) | Relevance of the use case to one or more data substrates | direct |
-| [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | * <br/> [DataStandardOrTool](DataStandardOrTool.md) | List of identifiers of standards and tools; those planned to be used, or alre... | direct |
+| [standards_and_tools_for_gc_use](standards_and_tools_for_gc_use.md) | * <br/> [DataStandardOrTool](DataStandardOrTool.md) | List of identifiers of standards and tools; those planned to be used, or alre... | direct |
 | [alternative_standards_and_tools](alternative_standards_and_tools.md) | * <br/> [DataStandardOrTool](DataStandardOrTool.md) | List of identifiers of standards and tools; those not explicitly planned to b... | direct |
 | [enables](enables.md) | * <br/> [UseCase](UseCase.md) | List of other use case(s) this use case supports or makes possible | direct |
 | [involved_in_experimental_design](involved_in_experimental_design.md) | 0..1 <br/> [Boolean](Boolean.md) | True if use case is likely to be implemented as part of an experimental proce... | direct |
@@ -233,10 +233,10 @@ is_a: NamedThing
 slots:
 - use_case_category
 - known_limitations
-- relevance_to_dgps
+- relevant_to_gcs
 - data_topics
 - data_substrates
-- standards_and_tools_for_dgp_use
+- standards_and_tools_for_gc_use
 - alternative_standards_and_tools
 - enables
 - involved_in_experimental_design
@@ -293,16 +293,18 @@ attributes:
     domain_of:
     - UseCase
     range: string
-  relevance_to_dgps:
-    name: relevance_to_dgps
-    description: Relevance of the use case to one or more DGPs.
+  relevant_to_gcs:
+    name: relevant_to_gcs
+    description: Bridge2AI Grand Challenges related to this use case, generally because
+      they actively pursue this use case, or because they have investigated it in
+      some manner. GCs should be identified by their Bridge2AI identifier, e.g., B2AI_ORG:117.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    alias: relevance_to_dgps
+    alias: relevant_to_gcs
     owner: UseCase
     domain_of:
     - UseCase
-    range: DataGeneratingProject
+    range: Organization
     multivalued: true
   data_topics:
     name: data_topics
@@ -330,17 +332,17 @@ attributes:
     - UseCase
     range: DataSubstrate
     multivalued: true
-  standards_and_tools_for_dgp_use:
-    name: standards_and_tools_for_dgp_use
+  standards_and_tools_for_gc_use:
+    name: standards_and_tools_for_gc_use
     description: List of identifiers of standards and tools; those planned to be used,
-      or already in use, by one or more Bridge2AI DGPs in addressing this use case,
+      or already in use, by one or more Bridge2AI GCs in addressing this use case,
       from those in the Standards Registry. If no value is provided here, the use
       case may not have a direct relationship to a standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
     domain: NamedThing
-    alias: standards_and_tools_for_dgp_use
+    alias: standards_and_tools_for_gc_use
     owner: UseCase
     domain_of:
     - UseCase
@@ -349,7 +351,7 @@ attributes:
   alternative_standards_and_tools:
     name: alternative_standards_and_tools
     description: List of identifiers of standards and tools; those not explicitly
-      planned to be used, by one or more Bridge2AI DGPs in addressing this use case
+      planned to be used, by one or more Bridge2AI GCs in addressing this use case
       but serving as viable alternatives, from those in the Standards Registry.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000

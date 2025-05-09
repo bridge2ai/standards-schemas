@@ -362,7 +362,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [UseCase](UseCase.md) | [known_limitations](known_limitations.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [data_topics](data_topics.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [data_substrates](data_substrates.md) | domain | [NamedThing](NamedThing.md) |
-| [UseCase](UseCase.md) | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | domain | [NamedThing](NamedThing.md) |
+| [UseCase](UseCase.md) | [standards_and_tools_for_gc_use](standards_and_tools_for_gc_use.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [alternative_standards_and_tools](alternative_standards_and_tools.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [enables](enables.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [involved_in_experimental_design](involved_in_experimental_design.md) | domain | [NamedThing](NamedThing.md) |

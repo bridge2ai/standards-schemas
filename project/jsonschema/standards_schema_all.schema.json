@@ -282,17 +282,6 @@
             "title": "BiomedicalStandard",
             "type": "object"
         },
-        "DataGeneratingProject": {
-            "description": "One of the Bridge2AI Data Generating Projects.",
-            "enum": [
-                "aireadi",
-                "chorus",
-                "cm4ai",
-                "voice"
-            ],
-            "title": "DataGeneratingProject",
-            "type": "string"
-        },
         "DataSet": {
             "additionalProperties": false,
             "description": "Represents a data set produced by a group in the Bridge2AI consortium.",
@@ -2808,7 +2797,7 @@
             "description": "Represents a use case for Bridge2AI standards.",
             "properties": {
                 "alternative_standards_and_tools": {
-                    "description": "List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.",
+                    "description": "List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI GCs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.",
                     "items": {
                         "type": "string"
                     },
@@ -2942,18 +2931,18 @@
                         "null"
                     ]
                 },
-                "relevance_to_dgps": {
-                    "description": "Relevance of the use case to one or more DGPs.",
+                "relevant_to_gcs": {
+                    "description": "Bridge2AI Grand Challenges related to this use case, generally because they actively pursue this use case, or because they have investigated it in some manner. GCs should be identified by their Bridge2AI identifier, e.g., B2AI_ORG:117.",
                     "items": {
-                        "$ref": "#/$defs/DataGeneratingProject"
+                        "type": "string"
                     },
                     "type": [
                         "array",
                         "null"
                     ]
                 },
-                "standards_and_tools_for_dgp_use": {
-                    "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.",
+                "standards_and_tools_for_gc_use": {
+                    "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI GCs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.",
                     "items": {
                         "type": "string"
                     },
