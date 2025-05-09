@@ -418,34 +418,6 @@
   ],
   "enums": [
     {
-      "name": "DataGeneratingProject",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/DataGeneratingProject",
-      "description": "One of the Bridge2AI Data Generating Projects.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
-      "permissible_values": [
-        {
-          "text": "aireadi",
-          "description": "AI-READI: Uncovering the details of how human health is restored after disease, using type 2 diabetes as a model.",
-          "meaning": "https://reporter.nih.gov/project-details/10471118"
-        },
-        {
-          "text": "chorus",
-          "description": "CHoRUS: Collaborative Hospital Repository Uniting Standards. Using imaging, clinical, and other data collected in an ICU setting for diagnosis and risk prediction.",
-          "meaning": "https://reporter.nih.gov/project-details/10472824"
-        },
-        {
-          "text": "cm4ai",
-          "description": "CM4AI: Cell Maps for AI. Mapping spatiotemporal architecture of human cells to interpret cell structure/function in health and disease.",
-          "meaning": "https://reporter.nih.gov/project-details/10473403"
-        },
-        {
-          "text": "voice",
-          "description": "Voice as a Biomarker of Health: Building an ethically sourced, bioaccoustic database to understand disease like never before.",
-          "meaning": "https://reporter.nih.gov/project-details/10473236"
-        }
-      ]
-    },
-    {
       "name": "StandardsCollectionTag",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/StandardsCollectionTag",
       "description": "Tags for specific sets of standards.",
@@ -1505,16 +1477,16 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "relevance_to_dgps",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps",
-      "description": "Relevance of the use case to one or more DGPs.",
+      "name": "relevant_to_gcs",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/relevant_to_gcs",
+      "description": "Bridge2AI Grand Challenges related to this use case, generally because they actively pursue this use case, or because they have investigated it in some manner. GCs should be identified by their Bridge2AI identifier, e.g., B2AI_ORG:117.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/relevance_to_dgps",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/relevant_to_gcs",
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
       ],
-      "range": "DataGeneratingProject",
+      "range": "Organization",
       "multivalued": true,
       "@type": "SlotDefinition"
     },
@@ -1551,13 +1523,13 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "standards_and_tools_for_dgp_use",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use",
-      "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.",
+      "name": "standards_and_tools_for_gc_use",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_gc_use",
+      "description": "List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI GCs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
-      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_dgp_use",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_gc_use",
       "owner": "UseCase",
       "domain_of": [
         "UseCase"
@@ -1569,7 +1541,7 @@
     {
       "name": "alternative_standards_and_tools",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools",
-      "description": "List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.",
+      "description": "List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI GCs in addressing this use case but serving as viable alternatives, from those in the Standards Registry.",
       "from_schema": "https://w3id.org/bridge2ai/standards-usecase-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
@@ -2273,10 +2245,10 @@
         "used_in_bridge2ai",
         "UseCase_use_case_category",
         "known_limitations",
-        "relevance_to_dgps",
+        "relevant_to_gcs",
         "data_topics",
         "data_substrates",
-        "standards_and_tools_for_dgp_use",
+        "standards_and_tools_for_gc_use",
         "alternative_standards_and_tools",
         "enables",
         "involved_in_experimental_design",
@@ -2305,7 +2277,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2025-03-24T12:27:18",
   "source_file_size": 468,
-  "generation_date": "2025-04-29T11:33:12",
+  "generation_date": "2025-05-09T10:28:49",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

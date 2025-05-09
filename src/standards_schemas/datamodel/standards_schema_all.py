@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-04-29T11:33:12
+# Generation date: 2025-05-09T10:28:50
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -926,10 +926,10 @@ class UseCase(NamedThing):
     id: Union[str, UseCaseId] = None
     use_case_category: Union[Union[str, "UseCaseCategory"], List[Union[str, "UseCaseCategory"]]] = None
     known_limitations: Optional[str] = None
-    relevance_to_dgps: Optional[Union[Union[str, "DataGeneratingProject"], List[Union[str, "DataGeneratingProject"]]]] = empty_list()
+    relevant_to_gcs: Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]] = empty_list()
     data_topics: Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]] = empty_list()
     data_substrates: Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]] = empty_list()
-    standards_and_tools_for_dgp_use: Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]] = empty_list()
+    standards_and_tools_for_gc_use: Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]] = empty_list()
     alternative_standards_and_tools: Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]] = empty_list()
     enables: Optional[Union[Union[str, UseCaseId], List[Union[str, UseCaseId]]]] = empty_list()
     involved_in_experimental_design: Optional[Union[bool, Bool]] = None
@@ -952,9 +952,9 @@ class UseCase(NamedThing):
         if self.known_limitations is not None and not isinstance(self.known_limitations, str):
             self.known_limitations = str(self.known_limitations)
 
-        if not isinstance(self.relevance_to_dgps, list):
-            self.relevance_to_dgps = [self.relevance_to_dgps] if self.relevance_to_dgps is not None else []
-        self.relevance_to_dgps = [v if isinstance(v, DataGeneratingProject) else DataGeneratingProject(v) for v in self.relevance_to_dgps]
+        if not isinstance(self.relevant_to_gcs, list):
+            self.relevant_to_gcs = [self.relevant_to_gcs] if self.relevant_to_gcs is not None else []
+        self.relevant_to_gcs = [v if isinstance(v, OrganizationId) else OrganizationId(v) for v in self.relevant_to_gcs]
 
         if not isinstance(self.data_topics, list):
             self.data_topics = [self.data_topics] if self.data_topics is not None else []
@@ -964,9 +964,9 @@ class UseCase(NamedThing):
             self.data_substrates = [self.data_substrates] if self.data_substrates is not None else []
         self.data_substrates = [v if isinstance(v, DataSubstrateId) else DataSubstrateId(v) for v in self.data_substrates]
 
-        if not isinstance(self.standards_and_tools_for_dgp_use, list):
-            self.standards_and_tools_for_dgp_use = [self.standards_and_tools_for_dgp_use] if self.standards_and_tools_for_dgp_use is not None else []
-        self.standards_and_tools_for_dgp_use = [v if isinstance(v, DataStandardOrToolId) else DataStandardOrToolId(v) for v in self.standards_and_tools_for_dgp_use]
+        if not isinstance(self.standards_and_tools_for_gc_use, list):
+            self.standards_and_tools_for_gc_use = [self.standards_and_tools_for_gc_use] if self.standards_and_tools_for_gc_use is not None else []
+        self.standards_and_tools_for_gc_use = [v if isinstance(v, DataStandardOrToolId) else DataStandardOrToolId(v) for v in self.standards_and_tools_for_gc_use]
 
         if not isinstance(self.alternative_standards_and_tools, list):
             self.alternative_standards_and_tools = [self.alternative_standards_and_tools] if self.alternative_standards_and_tools is not None else []
@@ -1014,32 +1014,6 @@ class UseCaseContainer(YAMLRoot):
 
 
 # Enumerations
-class DataGeneratingProject(EnumDefinitionImpl):
-    """
-    One of the Bridge2AI Data Generating Projects.
-    """
-    aireadi = PermissibleValue(
-        text="aireadi",
-        description="""AI-READI: Uncovering the details of how human health is restored after disease, using type 2 diabetes as a model.""",
-        meaning=None)
-    chorus = PermissibleValue(
-        text="chorus",
-        description="""CHoRUS: Collaborative Hospital Repository Uniting Standards. Using imaging, clinical, and other data collected in an ICU setting for diagnosis and risk prediction.""",
-        meaning=None)
-    cm4ai = PermissibleValue(
-        text="cm4ai",
-        description="""CM4AI: Cell Maps for AI. Mapping spatiotemporal architecture of human cells to interpret cell structure/function in health and disease.""",
-        meaning=None)
-    voice = PermissibleValue(
-        text="voice",
-        description="""Voice as a Biomarker of Health: Building an ethically sourced, bioaccoustic database to understand disease like never before.""",
-        meaning=None)
-
-    _defn = EnumDefinition(
-        name="DataGeneratingProject",
-        description="One of the Bridge2AI Data Generating Projects.",
-    )
-
 class StandardsCollectionTag(EnumDefinitionImpl):
     """
     Tags for specific sets of standards.
@@ -1342,8 +1316,8 @@ slots.use_case_category = Slot(uri=B2AI_USECASE.use_case_category, name="use_cas
 slots.known_limitations = Slot(uri=B2AI_USECASE.known_limitations, name="known_limitations", curie=B2AI_USECASE.curie('known_limitations'),
                    model_uri=DEFAULT_.known_limitations, domain=NamedThing, range=Optional[str])
 
-slots.relevance_to_dgps = Slot(uri=B2AI_USECASE.relevance_to_dgps, name="relevance_to_dgps", curie=B2AI_USECASE.curie('relevance_to_dgps'),
-                   model_uri=DEFAULT_.relevance_to_dgps, domain=None, range=Optional[Union[Union[str, "DataGeneratingProject"], List[Union[str, "DataGeneratingProject"]]]])
+slots.relevant_to_gcs = Slot(uri=B2AI_USECASE.relevant_to_gcs, name="relevant_to_gcs", curie=B2AI_USECASE.curie('relevant_to_gcs'),
+                   model_uri=DEFAULT_.relevant_to_gcs, domain=None, range=Optional[Union[Union[str, OrganizationId], List[Union[str, OrganizationId]]]])
 
 slots.data_topics = Slot(uri=B2AI_USECASE.data_topics, name="data_topics", curie=B2AI_USECASE.curie('data_topics'),
                    model_uri=DEFAULT_.data_topics, domain=NamedThing, range=Optional[Union[Union[str, DataTopicId], List[Union[str, DataTopicId]]]])
@@ -1351,8 +1325,8 @@ slots.data_topics = Slot(uri=B2AI_USECASE.data_topics, name="data_topics", curie
 slots.data_substrates = Slot(uri=B2AI_USECASE.data_substrates, name="data_substrates", curie=B2AI_USECASE.curie('data_substrates'),
                    model_uri=DEFAULT_.data_substrates, domain=NamedThing, range=Optional[Union[Union[str, DataSubstrateId], List[Union[str, DataSubstrateId]]]])
 
-slots.standards_and_tools_for_dgp_use = Slot(uri=B2AI_USECASE.standards_and_tools_for_dgp_use, name="standards_and_tools_for_dgp_use", curie=B2AI_USECASE.curie('standards_and_tools_for_dgp_use'),
-                   model_uri=DEFAULT_.standards_and_tools_for_dgp_use, domain=NamedThing, range=Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]])
+slots.standards_and_tools_for_gc_use = Slot(uri=B2AI_USECASE.standards_and_tools_for_gc_use, name="standards_and_tools_for_gc_use", curie=B2AI_USECASE.curie('standards_and_tools_for_gc_use'),
+                   model_uri=DEFAULT_.standards_and_tools_for_gc_use, domain=NamedThing, range=Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]])
 
 slots.alternative_standards_and_tools = Slot(uri=B2AI_USECASE.alternative_standards_and_tools, name="alternative_standards_and_tools", curie=B2AI_USECASE.curie('alternative_standards_and_tools'),
                    model_uri=DEFAULT_.alternative_standards_and_tools, domain=NamedThing, range=Optional[Union[Union[str, DataStandardOrToolId], List[Union[str, DataStandardOrToolId]]]])

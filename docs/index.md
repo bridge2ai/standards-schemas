@@ -86,11 +86,11 @@ Name: standards-schema-all
 | [publication](publication.md) | Relevant publication for the standard or tool |
 | [purpose_detail](purpose_detail.md) | Text description of the standard or tool |
 | [related_to](related_to.md) | A relationship that is asserted between two named things |
-| [relevance_to_dgps](relevance_to_dgps.md) | Relevance of the use case to one or more DGPs |
+| [relevant_to_gcs](relevant_to_gcs.md) | Bridge2AI Grand Challenges related to this use case, generally because they a... |
 | [requires_registration](requires_registration.md) | Does usage of the standard or tool require registration of a user or group wi... |
 | [responsible_organization](responsible_organization.md) | Organization(s) responsible for providing and/or supporting the standard or t... |
 | [ror_id](ror_id.md) | Unique ROR identifier |
-| [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
+| [standards_and_tools_for_gc_use](standards_and_tools_for_gc_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |
 | [substrates](substrates.md) | Subject data set is relevant to the substrate(s) listed in this slot |
 | [topic_involves_anatomy](topic_involves_anatomy.md) | A relationship between a DataTopic and an anatomical entity |
@@ -109,7 +109,6 @@ Name: standards-schema-all
 
 | Enumeration | Description |
 | --- | --- |
-| [DataGeneratingProject](DataGeneratingProject.md) | One of the Bridge2AI Data Generating Projects |
 | [StandardsCollectionTag](StandardsCollectionTag.md) | Tags for specific sets of standards |
 | [UseCaseCategory](UseCaseCategory.md) | Category of use case |
 

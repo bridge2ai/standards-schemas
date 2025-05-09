@@ -232,7 +232,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
 | [TrainingProgram](TrainingProgram.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
 | [TrainingProgram](TrainingProgram.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [DataStandardOrToolContainer](DataStandardOrToolContainer.md) | [data_standardortools_collection](data_standardortools_collection.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
-| [UseCase](UseCase.md) | [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
+| [UseCase](UseCase.md) | [standards_and_tools_for_gc_use](standards_and_tools_for_gc_use.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
 | [UseCase](UseCase.md) | [alternative_standards_and_tools](alternative_standards_and_tools.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
 
 

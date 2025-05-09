@@ -44,7 +44,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:node_property](https://w3
     * [known_limitations](known_limitations.md)
     * [data_topics](data_topics.md)
     * [data_substrates](data_substrates.md)
-    * [standards_and_tools_for_dgp_use](standards_and_tools_for_dgp_use.md)
+    * [standards_and_tools_for_gc_use](standards_and_tools_for_gc_use.md)
     * [alternative_standards_and_tools](alternative_standards_and_tools.md)
     * [enables](enables.md)
     * [involved_in_experimental_design](involved_in_experimental_design.md)

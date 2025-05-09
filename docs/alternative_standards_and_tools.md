@@ -3,7 +3,7 @@
 # Slot: alternative_standards_and_tools
 
 
-_List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI DGPs in addressing this use case but serving as viable alternatives, from those in the Standards Registry._
+_List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI GCs in addressing this use case but serving as viable alternatives, from those in the Standards Registry._
 
 
 
@@ -78,7 +78,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and
 ```yaml
 name: alternative_standards_and_tools
 description: List of identifiers of standards and tools; those not explicitly planned
-  to be used, by one or more Bridge2AI DGPs in addressing this use case but serving
+  to be used, by one or more Bridge2AI GCs in addressing this use case but serving
   as viable alternatives, from those in the Standards Registry.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
