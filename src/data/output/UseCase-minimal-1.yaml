@@ -1,4 +1,6 @@
 id: B2AI_USECASE:1
 category: B2AI_USECASE:UseCase
+name: Minimal UseCase Example
+description: A minimal but valid use case example that conforms to the schema
 use_case_category:
 - acquisition

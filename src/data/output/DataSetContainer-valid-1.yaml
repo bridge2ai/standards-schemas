@@ -1,5 +1,5 @@
 data_collection:
 - id: B2AI_DATA:1
   category: B2AI_DATA:DataSet
-- id: B2AI_DATA:2
-  category: B2AI_DATA:DataSet
+  name: Valid DataSet Example
+  description: A valid data set example that conforms to the schema

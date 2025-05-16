@@ -3,6 +3,3 @@ organizations:
   category: B2AI_ORG:Organization
   name: Minimal OrganizationContainer Example
   description: A minimal but valid organization container example that conforms to the schema
-  organizations:
-    - id: B2AI_ORG:1
-    - id: B2AI_ORG:2

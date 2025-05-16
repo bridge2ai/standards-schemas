@@ -28,10 +28,5 @@ B2AI_USECASE:1 schema1:description "Collecting clinical data from patient visits
     B2AI_USECASE:involved_in_metadata_management true ;
     B2AI_USECASE:involved_in_quality_control false ;
     B2AI_USECASE:known_limitations "xyz" ;
-    B2AI_USECASE:relevance_to_dgps "aireadi",
-        "chorus",
-        "voice" ;
-    B2AI_USECASE:standards_and_tools_for_dgp_use B2AI_STANDARD:10,
-        B2AI_STANDARD:5 ;
     B2AI_USECASE:use_case_category "acquisition" .
 

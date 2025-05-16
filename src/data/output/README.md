@@ -1,7 +1,10 @@
 ## DataTopic-minimal-1
 ### Input
 ```yaml
+category: B2AI_TOPIC:DataTopic
+description: A minimal but valid data topic example that conforms to the schema
 id: B2AI_TOPIC:2
+name: Minimal DataTopic Example
 
 ```
 ## DataSubstrate-valid-1
@@ -27,18 +30,22 @@ subclass_of:
 ### Input
 ```yaml
 organizations:
-- id: B2AI_ORG:1
-- id: B2AI_ORG:2
+- category: B2AI_ORG:Organization
+  description: A minimal but valid organization container example that conforms to
+    the schema
+  id: B2AI_ORG:container1
+  name: Minimal OrganizationContainer Example
 
 ```
 ## UseCaseContainer-minimal-1
 ### Input
 ```yaml
 use_cases:
-- id: B2AI_USECASE:1
-  use_case_category:
-  - acquisition
-- id: B2AI_USECASE:2
+- category: B2AI_USECASE:UseCase
+  description: A minimal but valid use case container example that conforms to the
+    schema
+  id: B2AI_USECASE:container1
+  name: Minimal UseCaseContainer Example
   use_case_category:
   - acquisition
 
@@ -75,8 +82,10 @@ topics:
 ### Input
 ```yaml
 data_collection:
-- id: B2AI_DATA:1
-- id: B2AI_DATA:2
+- category: B2AI_DATA:DataSet
+  description: A valid data set example that conforms to the schema
+  id: B2AI_DATA:1
+  name: Valid DataSet Example
 
 ```
 ## Organization-1
@@ -127,7 +136,11 @@ url: https://ohdsi.github.io/CommonDataModel/
 ## DataStandardOrTool-minimal-1
 ### Input
 ```yaml
+category: B2AI_STANDARD:DataStandardOrTool
+description: A minimal but valid data standard or tool example that conforms to the
+  schema
 id: B2AI_STANDARD:53
+name: Minimal DataStandardOrTool Example
 
 ```
 ## UseCase-valid-1
@@ -165,13 +178,6 @@ involved_in_metadata_management: true
 involved_in_quality_control: false
 known_limitations: xyz
 name: Obtain patient data from records of clinical visits.
-relevance_to_dgps:
-- aireadi
-- chorus
-- voice
-standards_and_tools_for_dgp_use:
-- B2AI_STANDARD:5
-- B2AI_STANDARD:10
 use_case_category:
 - acquisition
 xref:
@@ -182,7 +188,10 @@ xref:
 ## DataSet-minimal-1
 ### Input
 ```yaml
+category: B2AI_DATA:DataSet
+description: A minimal but valid dataset example that conforms to the schema
 id: B2AI_DATA:3
+name: Minimal Dataset Example
 
 ```
 ## DataTopic-valid-1
@@ -205,23 +214,32 @@ subclass_of:
 ## DataSubstrate-minimal-1
 ### Input
 ```yaml
+category: B2AI_SUBSTRATE:DataSubstrate
+description: A minimal but valid data substrate example that conforms to the schema
 id: B2AI_SUBSTRATE:53
+name: Minimal DataSubstrate Example
 
 ```
 ## DataSubstrateContainer-minimal-1
 ### Input
 ```yaml
 data_substrates_collection:
-- id: B2AI_SUBSTRATE:1
-- id: B2AI_SUBSTRATE:2
+- category: B2AI_SUBSTRATE:DataSubstrate
+  description: A minimal but valid data substrate container example that conforms
+    to the schema
+  id: B2AI_SUBSTRATE:container1
+  name: Minimal DataSubstrateContainer Example
 
 ```
 ## DataStandardOrToolContainer-minimal-1
 ### Input
 ```yaml
 data_standardortools_collection:
-- id: B2AI_STANDARD:1
-- id: B2AI_STANDARD:2
+- category: B2AI_STANDARD:DataStandardOrTool
+  description: A minimal but valid data standard or tool container example that conforms
+    to the schema
+  id: B2AI_STANDARD:container1
+  name: Minimal DataStandardOrToolContainer Example
 
 ```
 ## DataTopic-valid-2
@@ -264,13 +282,19 @@ data_topics_collection:
 ## Organization-minimal-1
 ### Input
 ```yaml
+category: B2AI_ORG:Organization
+description: A minimal but valid organization example that conforms to the schema
 id: B2AI_ORG:2
+name: Minimal Organization Example
 
 ```
 ## UseCase-minimal-1
 ### Input
 ```yaml
+category: B2AI_USECASE:UseCase
+description: A minimal but valid use case example that conforms to the schema
 id: B2AI_USECASE:1
+name: Minimal UseCase Example
 use_case_category:
 - acquisition
 
