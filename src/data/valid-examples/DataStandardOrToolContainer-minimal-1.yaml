@@ -1,6 +1,6 @@
 data_standardortools_collection:
 - id: B2AI_STANDARD:container1
-  category: B2AI_STANDARD:DataStandardOrToolContainer
+  category: B2AI_STANDARD:DataStandardOrTool
   name: Minimal DataStandardOrToolContainer Example
   description: A minimal but valid data standard or tool container example that conforms to the schema
   data_standardortools_collection:

@@ -1,8 +1,8 @@
 data_collection:
-- id: B2AI_DATA:container1
-  category: B2AI_DATA:DataSetContainer
-  name: Valid DataSetContainer Example
-  description: A valid data set container example that conforms to the schema
+- id: B2AI_DATA:1
+  category: B2AI_DATA:DataSet
+  name: Valid DataSet Example
+  description: A valid data set example that conforms to the schema
   data_collection:
     - id: B2AI_DATA:1
     - id: B2AI_DATA:2
