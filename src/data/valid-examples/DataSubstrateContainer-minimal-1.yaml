@@ -1,7 +1,8 @@
-id: B2AI_SUBSTRATE:container1
-category: B2AI_SUBSTRATE:DataSubstrateContainer
-name: Minimal DataSubstrateContainer Example
-description: A minimal but valid data substrate container example that conforms to the schema
 data_substrates_collection:
-  - id: B2AI_SUBSTRATE:1
-  - id: B2AI_SUBSTRATE:2
+- id: B2AI_SUBSTRATE:container1
+  category: B2AI_SUBSTRATE:DataSubstrateContainer
+  name: Minimal DataSubstrateContainer Example
+  description: A minimal but valid data substrate container example that conforms to the schema
+  data_substrates_collection:
+    - id: B2AI_SUBSTRATE:1
+    - id: B2AI_SUBSTRATE:2

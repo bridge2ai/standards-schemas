@@ -1,11 +1,12 @@
-id: B2AI_USECASE:container1
-category: B2AI_USECASE:UseCaseContainer
-name: Minimal UseCaseContainer Example
-description: A minimal but valid use case container example that conforms to the schema
 use_cases:
-  - id: B2AI_USECASE:1
-    use_case_category:
-      - acquisition
-  - id: B2AI_USECASE:2
-    use_case_category:
-      - acquisition
+- id: B2AI_USECASE:container1
+  category: B2AI_USECASE:UseCaseContainer
+  name: Minimal UseCaseContainer Example
+  description: A minimal but valid use case container example that conforms to the schema
+  use_cases:
+    - id: B2AI_USECASE:1
+      use_case_category:
+        - acquisition
+    - id: B2AI_USECASE:2
+      use_case_category:
+        - acquisition
