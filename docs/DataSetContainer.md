@@ -1,6 +1,6 @@
 
 
-# Class: DataSetContainer
+# Class: DataSetContainer 
 
 
 _A container for DataSets._
@@ -9,7 +9,7 @@ _A container for DataSets._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSetContainer](https://w3id.org/bridge2ai/standards-schema-all/:DataSetContainer)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer](https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer)
 
 
 
@@ -24,9 +24,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSetContainer](https:/
         
           
     
+        
+        
+        DataSetContainer --> "*" DataSet : data_collection
+        click DataSet href "../DataSet"
     
-    DataSetContainer --> "*" DataSet : data_collection
-    click DataSet href "../DataSet"
 
         
       
@@ -72,8 +74,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSetContainer](https:/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:DataSetContainer |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:DataSetContainer |
+| self | https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer |
+| native | https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer |
 
 
 

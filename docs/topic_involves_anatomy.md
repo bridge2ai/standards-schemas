@@ -1,6 +1,6 @@
 
 
-# Slot: topic_involves_anatomy
+# Slot: topic_involves_anatomy 
 
 
 _A relationship between a DataTopic and an anatomical entity._
@@ -9,9 +9,8 @@ _A relationship between a DataTopic and an anatomical entity._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy](https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/topic_involves_anatomy](https://w3id.org/bridge2ai/standards-schema-all/topic_involves_anatomy)
+Alias: topic_involves_anatomy
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy](h
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:topic_involves_anatomy |
+| self | https://w3id.org/bridge2ai/standards-schema-all/topic_involves_anatomy |
+| native | https://w3id.org/bridge2ai/standards-schema-all/topic_involves_anatomy |
 | exact | RO:0004026 |
 
 

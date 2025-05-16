@@ -1,6 +1,6 @@
 
 
-# Class: ModelRepository
+# Class: ModelRepository 
 
 
 _Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be a repository, the resource must not index models alone._
@@ -9,7 +9,7 @@ _Represents a resource in the Bridge2AI Standards Registry serving to curate and
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository](https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/ModelRepository](https://w3id.org/bridge2ai/standards-schema-all/ModelRepository)
 
 
 
@@ -29,18 +29,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository](https://
         
           
     
+        
+        
+        ModelRepository --> "*" StandardsCollectionTag : collection
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
-    ModelRepository --> "*" StandardsCollectionTag : collection
-    click StandardsCollectionTag href "../StandardsCollectionTag"
 
         
       ModelRepository : concerns_data_topic
         
           
     
+        
+        
+        ModelRepository --> "*" DataTopic : concerns_data_topic
+        click DataTopic href "../DataTopic"
     
-    ModelRepository --> "*" DataTopic : concerns_data_topic
-    click DataTopic href "../DataTopic"
 
         
       ModelRepository : contribution_date
@@ -59,18 +63,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository](https://
         
           
     
+        
+        
+        ModelRepository --> "*" Organization : has_relevant_organization
+        click Organization href "../Organization"
     
-    ModelRepository --> "*" Organization : has_relevant_organization
-    click Organization href "../Organization"
 
         
       ModelRepository : has_training_resource
         
           
     
+        
+        
+        ModelRepository --> "*" DataStandardOrTool : has_training_resource
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    ModelRepository --> "*" DataStandardOrTool : has_training_resource
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       ModelRepository : id
@@ -87,9 +95,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository](https://
         
           
     
+        
+        
+        ModelRepository --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    ModelRepository --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       ModelRepository : requires_registration
@@ -98,18 +108,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository](https://
         
           
     
+        
+        
+        ModelRepository --> "*" Organization : responsible_organization
+        click Organization href "../Organization"
     
-    ModelRepository --> "*" Organization : responsible_organization
-    click Organization href "../Organization"
 
         
       ModelRepository : subclass_of
         
           
     
+        
+        
+        ModelRepository --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    ModelRepository --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       ModelRepository : url
@@ -185,8 +199,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository](https://
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:ModelRepository |
+| self | https://w3id.org/bridge2ai/standards-schema-all/ModelRepository |
+| native | https://w3id.org/bridge2ai/standards-schema-all/ModelRepository |
 
 
 

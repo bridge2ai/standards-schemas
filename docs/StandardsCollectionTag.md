@@ -1,4 +1,4 @@
-# Enum: StandardsCollectionTag
+# Enum: StandardsCollectionTag 
 
 
 
@@ -48,6 +48,11 @@ URI: [StandardsCollectionTag](StandardsCollectionTag.md)
 | speechdata | None | Speech Data |
 | standardsregistry | None | Standards Registry |
 | has_ai_application | None | Has a direct AI application, defined as standards/tools that are: associated ... |
+| standards_process_maturity_final | None | This standard has undergone a review process by one or more SDOs and has been... |
+| standards_process_maturity_draft | None | This standard is undergoing a review process by one or more SDOs to determine... |
+| standards_process_maturity_development | None | This standard is in its initial development stages and has not yet entered a ... |
+| implementation_maturity_production | None | This standard has one or more implementations appropriate for production use,... |
+| implementation_maturity_pilot | None | This standard has one or more implementations intended for testing or evaluat... |
 
 
 
@@ -198,6 +203,29 @@ permissible_values:
       associated with ML or neural networks; schemas, or have schemas; data models;
       associated with DICOM; associated with AI; associated with standards used within
       Bridge2AI'
+  standards_process_maturity_final:
+    text: standards_process_maturity_final
+    description: This standard has undergone a review process by one or more SDOs
+      and has been determined to be in a mature state. Future revisions may still
+      be possible.
+  standards_process_maturity_draft:
+    text: standards_process_maturity_draft
+    description: This standard is undergoing a review process by one or more SDOs
+      to determine its maturity.
+  standards_process_maturity_development:
+    text: standards_process_maturity_development
+    description: This standard is in its initial development stages and has not yet
+      entered a review process, or is early in the process and still likely to be
+      extensively revised.
+  implementation_maturity_production:
+    text: implementation_maturity_production
+    description: This standard has one or more implementations appropriate for production
+      use, i.e., in use cases and environments where adherence to the standard is
+      expected to be fully consistent.
+  implementation_maturity_pilot:
+    text: implementation_maturity_pilot
+    description: This standard has one or more implementations intended for testing
+      or evaluation purposes but may not be appropriate for production applications.
 
 ```
 </details>

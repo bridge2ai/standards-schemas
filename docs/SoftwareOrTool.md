@@ -1,6 +1,6 @@
 
 
-# Class: SoftwareOrTool
+# Class: SoftwareOrTool 
 
 
 _Represents a piece of software or computational tool in the Bridge2AI Standards Registry._
@@ -9,7 +9,7 @@ _Represents a piece of software or computational tool in the Bridge2AI Standards
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool](https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool)
 
 
 
@@ -29,18 +29,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool](https://w
         
           
     
+        
+        
+        SoftwareOrTool --> "*" StandardsCollectionTag : collection
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
-    SoftwareOrTool --> "*" StandardsCollectionTag : collection
-    click StandardsCollectionTag href "../StandardsCollectionTag"
 
         
       SoftwareOrTool : concerns_data_topic
         
           
     
+        
+        
+        SoftwareOrTool --> "*" DataTopic : concerns_data_topic
+        click DataTopic href "../DataTopic"
     
-    SoftwareOrTool --> "*" DataTopic : concerns_data_topic
-    click DataTopic href "../DataTopic"
 
         
       SoftwareOrTool : contribution_date
@@ -59,18 +63,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool](https://w
         
           
     
+        
+        
+        SoftwareOrTool --> "*" Organization : has_relevant_organization
+        click Organization href "../Organization"
     
-    SoftwareOrTool --> "*" Organization : has_relevant_organization
-    click Organization href "../Organization"
 
         
       SoftwareOrTool : has_training_resource
         
           
     
+        
+        
+        SoftwareOrTool --> "*" DataStandardOrTool : has_training_resource
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    SoftwareOrTool --> "*" DataStandardOrTool : has_training_resource
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       SoftwareOrTool : id
@@ -87,9 +95,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool](https://w
         
           
     
+        
+        
+        SoftwareOrTool --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    SoftwareOrTool --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       SoftwareOrTool : requires_registration
@@ -98,18 +108,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool](https://w
         
           
     
+        
+        
+        SoftwareOrTool --> "*" Organization : responsible_organization
+        click Organization href "../Organization"
     
-    SoftwareOrTool --> "*" Organization : responsible_organization
-    click Organization href "../Organization"
 
         
       SoftwareOrTool : subclass_of
         
           
     
+        
+        
+        SoftwareOrTool --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    SoftwareOrTool --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       SoftwareOrTool : url
@@ -185,8 +199,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool](https://w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:SoftwareOrTool |
+| self | https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool |
+| native | https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool |
 
 
 

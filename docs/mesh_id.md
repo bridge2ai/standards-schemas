@@ -1,6 +1,6 @@
 
 
-# Slot: mesh_id
+# Slot: mesh_id 
 
 
 _Unique MeSH identifier_
@@ -9,9 +9,8 @@ _Unique MeSH identifier_
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:mesh_id](https://w3id.org/bridge2ai/standards-schema-all/:mesh_id)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/mesh_id](https://w3id.org/bridge2ai/standards-schema-all/mesh_id)
+Alias: mesh_id
 
 <!-- no inheritance hierarchy -->
 
@@ -67,8 +66,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:mesh_id](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:mesh_id |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:mesh_id |
+| self | https://w3id.org/bridge2ai/standards-schema-all/mesh_id |
+| native | https://w3id.org/bridge2ai/standards-schema-all/mesh_id |
 
 
 

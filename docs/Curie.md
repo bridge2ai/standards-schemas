@@ -1,4 +1,4 @@
-# Type: Curie
+# Type: Curie 
 
 
 
@@ -48,7 +48,7 @@ URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:string |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:curie |
+| native | https://w3id.org/bridge2ai/standards-schema-all/curie |
 
 
 

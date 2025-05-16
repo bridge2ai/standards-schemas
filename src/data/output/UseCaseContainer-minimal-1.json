@@ -1,15 +1,10 @@
 {
   "use_cases": [
     {
-      "id": "B2AI_USECASE:1",
+      "id": "B2AI_USECASE:container1",
       "category": "B2AI_USECASE:UseCase",
-      "use_case_category": [
-        "acquisition"
-      ]
-    },
-    {
-      "id": "B2AI_USECASE:2",
-      "category": "B2AI_USECASE:UseCase",
+      "name": "Minimal UseCaseContainer Example",
+      "description": "A minimal but valid use case container example that conforms to the schema",
       "use_case_category": [
         "acquisition"
       ]

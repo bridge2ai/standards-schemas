@@ -1,6 +1,6 @@
 
 
-# Class: DataSet
+# Class: DataSet 
 
 
 _Represents a data set produced by a group in the Bridge2AI consortium. _
@@ -9,7 +9,7 @@ _Represents a data set produced by a group in the Bridge2AI consortium. _
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSet](https://w3id.org/bridge2ai/standards-schema-all/:DataSet)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/bridge2ai/standards-schema-all/DataSet)
 
 
 
@@ -47,9 +47,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSet](https://w3id.org
         
           
     
+        
+        
+        DataSet --> "*" DataSet : has_parts
+        click DataSet href "../DataSet"
     
-    DataSet --> "*" DataSet : has_parts
-    click DataSet href "../DataSet"
 
         
       DataSet : id
@@ -62,45 +64,55 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSet](https://w3id.org
         
           
     
+        
+        
+        DataSet --> "*" Organization : produced_by
+        click Organization href "../Organization"
     
-    DataSet --> "*" Organization : produced_by
-    click Organization href "../Organization"
 
         
       DataSet : related_to
         
           
     
+        
+        
+        DataSet --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    DataSet --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       DataSet : subclass_of
         
           
     
+        
+        
+        DataSet --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    DataSet --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       DataSet : substrates
         
           
     
+        
+        
+        DataSet --> "*" DataSubstrate : substrates
+        click DataSubstrate href "../DataSubstrate"
     
-    DataSet --> "*" DataSubstrate : substrates
-    click DataSubstrate href "../DataSubstrate"
 
         
       DataSet : topics
         
           
     
+        
+        
+        DataSet --> "*" DataTopic : topics
+        click DataTopic href "../DataTopic"
     
-    DataSet --> "*" DataTopic : topics
-    click DataTopic href "../DataTopic"
 
         
       DataSet : used_in_bridge2ai
@@ -188,8 +200,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSet](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:DataSet |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:DataSet |
+| self | https://w3id.org/bridge2ai/standards-schema-all/DataSet |
+| native | https://w3id.org/bridge2ai/standards-schema-all/DataSet |
 
 
 

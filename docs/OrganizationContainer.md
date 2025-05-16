@@ -1,6 +1,6 @@
 
 
-# Class: OrganizationContainer
+# Class: OrganizationContainer 
 
 
 _A container for Organizations._
@@ -9,7 +9,7 @@ _A container for Organizations._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer](https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer](https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer)
 
 
 
@@ -24,9 +24,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer](ht
         
           
     
+        
+        
+        OrganizationContainer --> "*" Organization : organizations
+        click Organization href "../Organization"
     
-    OrganizationContainer --> "*" Organization : organizations
-    click Organization href "../Organization"
 
         
       
@@ -72,8 +74,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer](ht
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer |
+| self | https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer |
+| native | https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer |
 
 
 

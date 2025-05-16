@@ -1,2 +1,5 @@
 id: B2AI_STANDARD:53
 category: B2AI_STANDARD:DataStandardOrTool
+name: Minimal DataStandardOrTool Example
+description: A minimal but valid data standard or tool example that conforms to the
+  schema

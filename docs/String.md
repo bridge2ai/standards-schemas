@@ -1,4 +1,4 @@
-# Type: String
+# Type: String 
 
 
 
@@ -42,7 +42,7 @@ URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:string |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:string |
+| native | https://w3id.org/bridge2ai/standards-schema-all/string |
 | exact | schema:Text |
 
 

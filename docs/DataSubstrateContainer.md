@@ -1,6 +1,6 @@
 
 
-# Class: DataSubstrateContainer
+# Class: DataSubstrateContainer 
 
 
 _A container for DataSubstrates._
@@ -9,7 +9,7 @@ _A container for DataSubstrates._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer](https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer](https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer)
 
 
 
@@ -24,9 +24,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer](h
         
           
     
+        
+        
+        DataSubstrateContainer --> "*" DataSubstrate : data_substrates_collection
+        click DataSubstrate href "../DataSubstrate"
     
-    DataSubstrateContainer --> "*" DataSubstrate : data_substrates_collection
-    click DataSubstrate href "../DataSubstrate"
 
         
       
@@ -72,8 +74,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer](h
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer |
+| self | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer |
+| native | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer |
 
 
 

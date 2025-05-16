@@ -1,6 +1,6 @@
 
 
-# Class: ReferenceDataOrDataset
+# Class: ReferenceDataOrDataset 
 
 
 _Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source._
@@ -9,7 +9,7 @@ _Represents a resource in the Bridge2AI Standards Registry serving as a standard
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset](https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/ReferenceDataOrDataset](https://w3id.org/bridge2ai/standards-schema-all/ReferenceDataOrDataset)
 
 
 
@@ -29,18 +29,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset](h
         
           
     
+        
+        
+        ReferenceDataOrDataset --> "*" StandardsCollectionTag : collection
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
-    ReferenceDataOrDataset --> "*" StandardsCollectionTag : collection
-    click StandardsCollectionTag href "../StandardsCollectionTag"
 
         
       ReferenceDataOrDataset : concerns_data_topic
         
           
     
+        
+        
+        ReferenceDataOrDataset --> "*" DataTopic : concerns_data_topic
+        click DataTopic href "../DataTopic"
     
-    ReferenceDataOrDataset --> "*" DataTopic : concerns_data_topic
-    click DataTopic href "../DataTopic"
 
         
       ReferenceDataOrDataset : contribution_date
@@ -59,18 +63,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset](h
         
           
     
+        
+        
+        ReferenceDataOrDataset --> "*" Organization : has_relevant_organization
+        click Organization href "../Organization"
     
-    ReferenceDataOrDataset --> "*" Organization : has_relevant_organization
-    click Organization href "../Organization"
 
         
       ReferenceDataOrDataset : has_training_resource
         
           
     
+        
+        
+        ReferenceDataOrDataset --> "*" DataStandardOrTool : has_training_resource
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    ReferenceDataOrDataset --> "*" DataStandardOrTool : has_training_resource
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       ReferenceDataOrDataset : id
@@ -87,9 +95,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset](h
         
           
     
+        
+        
+        ReferenceDataOrDataset --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    ReferenceDataOrDataset --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       ReferenceDataOrDataset : requires_registration
@@ -98,18 +108,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset](h
         
           
     
+        
+        
+        ReferenceDataOrDataset --> "*" Organization : responsible_organization
+        click Organization href "../Organization"
     
-    ReferenceDataOrDataset --> "*" Organization : responsible_organization
-    click Organization href "../Organization"
 
         
       ReferenceDataOrDataset : subclass_of
         
           
     
+        
+        
+        ReferenceDataOrDataset --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    ReferenceDataOrDataset --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       ReferenceDataOrDataset : url
@@ -185,8 +199,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset](h
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:ReferenceDataOrDataset |
+| self | https://w3id.org/bridge2ai/standards-schema-all/ReferenceDataOrDataset |
+| native | https://w3id.org/bridge2ai/standards-schema-all/ReferenceDataOrDataset |
 
 
 

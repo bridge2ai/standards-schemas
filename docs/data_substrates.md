@@ -1,6 +1,6 @@
 
 
-# Slot: data_substrates
+# Slot: data_substrates 
 
 
 _Relevance of the use case to one or more data substrates._
@@ -9,9 +9,8 @@ _Relevance of the use case to one or more data substrates._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates](https://w3id.org/bridge2ai/standards-schema-all/:data_substrates)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/data_substrates](https://w3id.org/bridge2ai/standards-schema-all/data_substrates)
+Alias: data_substrates
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates](https://
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:data_substrates |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:data_substrates |
+| self | https://w3id.org/bridge2ai/standards-schema-all/data_substrates |
+| native | https://w3id.org/bridge2ai/standards-schema-all/data_substrates |
 
 
 

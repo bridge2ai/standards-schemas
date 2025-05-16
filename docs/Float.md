@@ -1,4 +1,4 @@
-# Type: Float
+# Type: Float 
 
 
 
@@ -42,7 +42,7 @@ URI: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:float |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:float |
+| native | https://w3id.org/bridge2ai/standards-schema-all/float |
 | exact | schema:Float |
 
 

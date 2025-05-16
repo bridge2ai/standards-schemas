@@ -1,2 +1,4 @@
 id: B2AI_DATA:3
 category: B2AI_DATA:DataSet
+name: Minimal Dataset Example
+description: A minimal but valid dataset example that conforms to the schema

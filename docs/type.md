@@ -1,6 +1,6 @@
 
 
-# Slot: type
+# Slot: type 
 
 
 _A generic slot for any label corresponding to the label for an entity type associated to the class._
@@ -9,9 +9,8 @@ _A generic slot for any label corresponding to the label for an entity type asso
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:type](https://w3id.org/bridge2ai/standards-schema-all/:type)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/type](https://w3id.org/bridge2ai/standards-schema-all/type)
+Alias: type
 
 
 ## Inheritance
@@ -55,8 +54,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:type](https://w3id.org/br
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:type |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:type |
+| self | https://w3id.org/bridge2ai/standards-schema-all/type |
+| native | https://w3id.org/bridge2ai/standards-schema-all/type |
 
 
 

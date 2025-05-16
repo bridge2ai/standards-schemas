@@ -1,4 +1,4 @@
-# Type: CategoryType
+# Type: CategoryType 
 
 
 
@@ -43,8 +43,8 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:category_type |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:category_type |
+| self | https://w3id.org/bridge2ai/standards-schema-all/category_type |
+| native | https://w3id.org/bridge2ai/standards-schema-all/category_type |
 
 
 

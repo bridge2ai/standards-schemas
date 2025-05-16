@@ -2600,7 +2600,12 @@
                 "scrnaseqanalysis",
                 "speechdata",
                 "standardsregistry",
-                "has_ai_application"
+                "has_ai_application",
+                "standards_process_maturity_final",
+                "standards_process_maturity_draft",
+                "standards_process_maturity_development",
+                "implementation_maturity_production",
+                "implementation_maturity_pilot"
             ],
             "title": "StandardsCollectionTag",
             "type": "string"

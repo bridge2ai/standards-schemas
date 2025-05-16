@@ -1,6 +1,6 @@
 
 
-# Class: DataTopic
+# Class: DataTopic 
 
 
 _Represents a general data topic for Bridge2AI data or the tools/standards applied to the data._
@@ -9,7 +9,7 @@ _Represents a general data topic for Bridge2AI data or the tools/standards appli
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.org/bridge2ai/standards-schema-all/:DataTopic)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.org/bridge2ai/standards-schema-all/DataTopic)
 
 
 
@@ -49,27 +49,33 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
         
           
     
+        
+        
+        DataTopic --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    DataTopic --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       DataTopic : subclass_of
         
           
     
+        
+        
+        DataTopic --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    DataTopic --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       DataTopic : topic_involves_anatomy
         
           
     
+        
+        
+        DataTopic --> "*" AnatomicalEntity : topic_involves_anatomy
+        click AnatomicalEntity href "../AnatomicalEntity"
     
-    DataTopic --> "*" AnatomicalEntity : topic_involves_anatomy
-    click AnatomicalEntity href "../AnatomicalEntity"
 
         
       DataTopic : used_in_bridge2ai
@@ -155,8 +161,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopic](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:DataTopic |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:DataTopic |
+| self | https://w3id.org/bridge2ai/standards-schema-all/DataTopic |
+| native | https://w3id.org/bridge2ai/standards-schema-all/DataTopic |
 
 
 

@@ -1,4 +1,4 @@
-# Type: NcitIdentifier
+# Type: NcitIdentifier 
 
 
 
@@ -51,8 +51,8 @@ Instances of this class *should* have identifiers with one of the following pref
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:ncit_identifier |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:ncit_identifier |
+| self | https://w3id.org/bridge2ai/standards-schema-all/ncit_identifier |
+| native | https://w3id.org/bridge2ai/standards-schema-all/ncit_identifier |
 
 
 

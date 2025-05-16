@@ -1,6 +1,6 @@
 
 
-# Slot: data_url
+# Slot: data_url 
 
 
 _URL where the data set can be accessed._
@@ -9,9 +9,8 @@ _URL where the data set can be accessed._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_url](https://w3id.org/bridge2ai/standards-schema-all/:data_url)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/data_url](https://w3id.org/bridge2ai/standards-schema-all/data_url)
+Alias: data_url
 
 
 ## Inheritance
@@ -64,8 +63,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_url](https://w3id.or
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:data_url |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:data_url |
+| self | https://w3id.org/bridge2ai/standards-schema-all/data_url |
+| native | https://w3id.org/bridge2ai/standards-schema-all/data_url |
 
 
 

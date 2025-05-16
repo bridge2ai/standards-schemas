@@ -1,6 +1,6 @@
 
 
-# Slot: data_topics_collection
+# Slot: data_topics_collection 
 
 
 _Collection of associated data topics._
@@ -9,9 +9,8 @@ _Collection of associated data topics._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection](https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/data_topics_collection](https://w3id.org/bridge2ai/standards-schema-all/data_topics_collection)
+Alias: data_topics_collection
 
 <!-- no inheritance hierarchy -->
 
@@ -61,8 +60,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection](h
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:data_topics_collection |
+| self | https://w3id.org/bridge2ai/standards-schema-all/data_topics_collection |
+| native | https://w3id.org/bridge2ai/standards-schema-all/data_topics_collection |
 
 
 

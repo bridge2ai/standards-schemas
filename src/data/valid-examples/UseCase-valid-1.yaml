@@ -25,21 +25,12 @@ involved_in_experimental_design: True
 involved_in_metadata_management: True
 involved_in_quality_control: False
 
-relevance_to_dgps:
-  - aireadi
-  - chorus
-  - voice
-
 # there are some edge cases in which a YAML value,
 # containing a colon but without quotation marks
 #   will fail to parse
 data_topics: # Representative IDs only
   - "B2AI_TOPIC:5"
   - "B2AI_TOPIC:6"
-
-standards_and_tools_for_dgp_use: # Representative IDs only
-  - "B2AI_STANDARD:5"
-  - "B2AI_STANDARD:10"
 
 enables:
   - B2AI_USECASE:5

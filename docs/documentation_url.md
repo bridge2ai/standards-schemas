@@ -1,6 +1,6 @@
 
 
-# Slot: documentation_url
+# Slot: documentation_url 
 
 
 _URL where documentation for the data set can be accessed._
@@ -9,9 +9,8 @@ _URL where documentation for the data set can be accessed._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:documentation_url](https://w3id.org/bridge2ai/standards-schema-all/:documentation_url)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/documentation_url](https://w3id.org/bridge2ai/standards-schema-all/documentation_url)
+Alias: documentation_url
 
 
 ## Inheritance
@@ -64,8 +63,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:documentation_url](https:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:documentation_url |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:documentation_url |
+| self | https://w3id.org/bridge2ai/standards-schema-all/documentation_url |
+| native | https://w3id.org/bridge2ai/standards-schema-all/documentation_url |
 
 
 

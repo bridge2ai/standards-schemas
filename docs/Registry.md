@@ -1,6 +1,6 @@
 
 
-# Class: Registry
+# Class: Registry 
 
 
 _Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources._
@@ -9,7 +9,7 @@ _Represents a resource in the Bridge2AI Standards Registry serving to curate and
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:Registry](https://w3id.org/bridge2ai/standards-schema-all/:Registry)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org/bridge2ai/standards-schema-all/Registry)
 
 
 
@@ -29,18 +29,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Registry](https://w3id.or
         
           
     
+        
+        
+        Registry --> "*" StandardsCollectionTag : collection
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
-    Registry --> "*" StandardsCollectionTag : collection
-    click StandardsCollectionTag href "../StandardsCollectionTag"
 
         
       Registry : concerns_data_topic
         
           
     
+        
+        
+        Registry --> "*" DataTopic : concerns_data_topic
+        click DataTopic href "../DataTopic"
     
-    Registry --> "*" DataTopic : concerns_data_topic
-    click DataTopic href "../DataTopic"
 
         
       Registry : contribution_date
@@ -59,18 +63,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Registry](https://w3id.or
         
           
     
+        
+        
+        Registry --> "*" Organization : has_relevant_organization
+        click Organization href "../Organization"
     
-    Registry --> "*" Organization : has_relevant_organization
-    click Organization href "../Organization"
 
         
       Registry : has_training_resource
         
           
     
+        
+        
+        Registry --> "*" DataStandardOrTool : has_training_resource
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    Registry --> "*" DataStandardOrTool : has_training_resource
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       Registry : id
@@ -87,9 +95,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Registry](https://w3id.or
         
           
     
+        
+        
+        Registry --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    Registry --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       Registry : requires_registration
@@ -98,18 +108,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Registry](https://w3id.or
         
           
     
+        
+        
+        Registry --> "*" Organization : responsible_organization
+        click Organization href "../Organization"
     
-    Registry --> "*" Organization : responsible_organization
-    click Organization href "../Organization"
 
         
       Registry : subclass_of
         
           
     
+        
+        
+        Registry --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    Registry --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       Registry : url
@@ -185,8 +199,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Registry](https://w3id.or
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:Registry |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:Registry |
+| self | https://w3id.org/bridge2ai/standards-schema-all/Registry |
+| native | https://w3id.org/bridge2ai/standards-schema-all/Registry |
 
 
 

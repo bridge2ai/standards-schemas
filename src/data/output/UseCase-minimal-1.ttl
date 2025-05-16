@@ -1,6 +1,9 @@
 @prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_USECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/> .
+@prefix schema1: <http://schema.org/> .
 
-B2AI_USECASE:1 B2AI:category "B2AI_USECASE:UseCase" ;
+B2AI_USECASE:1 schema1:description "A minimal but valid use case example that conforms to the schema" ;
+    schema1:name "Minimal UseCase Example" ;
+    B2AI:category "B2AI_USECASE:UseCase" ;
     B2AI_USECASE:use_case_category "acquisition" .
 

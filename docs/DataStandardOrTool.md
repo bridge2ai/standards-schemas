@@ -1,6 +1,6 @@
 
 
-# Class: DataStandardOrTool
+# Class: DataStandardOrTool 
 
 
 _Represents a standard or tool in the Bridge2AI Standards Registry._
@@ -9,7 +9,7 @@ _Represents a standard or tool in the Bridge2AI Standards Registry._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool)
 
 
 
@@ -48,18 +48,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
         
           
     
+        
+        
+        DataStandardOrTool --> "*" StandardsCollectionTag : collection
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
-    DataStandardOrTool --> "*" StandardsCollectionTag : collection
-    click StandardsCollectionTag href "../StandardsCollectionTag"
 
         
       DataStandardOrTool : concerns_data_topic
         
           
     
+        
+        
+        DataStandardOrTool --> "*" DataTopic : concerns_data_topic
+        click DataTopic href "../DataTopic"
     
-    DataStandardOrTool --> "*" DataTopic : concerns_data_topic
-    click DataTopic href "../DataTopic"
 
         
       DataStandardOrTool : contribution_date
@@ -78,18 +82,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
         
           
     
+        
+        
+        DataStandardOrTool --> "*" Organization : has_relevant_organization
+        click Organization href "../Organization"
     
-    DataStandardOrTool --> "*" Organization : has_relevant_organization
-    click Organization href "../Organization"
 
         
       DataStandardOrTool : has_training_resource
         
           
     
+        
+        
+        DataStandardOrTool --> "*" DataStandardOrTool : has_training_resource
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    DataStandardOrTool --> "*" DataStandardOrTool : has_training_resource
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       DataStandardOrTool : id
@@ -106,9 +114,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
         
           
     
+        
+        
+        DataStandardOrTool --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    DataStandardOrTool --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       DataStandardOrTool : requires_registration
@@ -117,18 +127,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
         
           
     
+        
+        
+        DataStandardOrTool --> "*" Organization : responsible_organization
+        click Organization href "../Organization"
     
-    DataStandardOrTool --> "*" Organization : responsible_organization
-    click Organization href "../Organization"
 
         
       DataStandardOrTool : subclass_of
         
           
     
+        
+        
+        DataStandardOrTool --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    DataStandardOrTool --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       DataStandardOrTool : url
@@ -260,8 +274,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool](https
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrTool |
+| self | https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool |
+| native | https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool |
 
 
 

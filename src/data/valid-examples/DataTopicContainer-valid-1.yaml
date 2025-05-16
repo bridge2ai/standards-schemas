@@ -1,4 +1,3 @@
-# Example DataTopic data
 data_topics_collection:
   - id: B2AI_TOPIC:2
     name: Biology

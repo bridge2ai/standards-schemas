@@ -1,6 +1,6 @@
 
 
-# Slot: standards_and_tools_for_gc_use
+# Slot: standards_and_tools_for_gc_use 
 
 
 _List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI GCs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool._
@@ -9,9 +9,8 @@ _List of identifiers of standards and tools; those planned to be used, or alread
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_gc_use](https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_gc_use)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/standards_and_tools_for_gc_use](https://w3id.org/bridge2ai/standards-schema-all/standards_and_tools_for_gc_use)
+Alias: standards_and_tools_for_gc_use
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_g
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_gc_use |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_gc_use |
+| self | https://w3id.org/bridge2ai/standards-schema-all/standards_and_tools_for_gc_use |
+| native | https://w3id.org/bridge2ai/standards-schema-all/standards_and_tools_for_gc_use |
 
 
 

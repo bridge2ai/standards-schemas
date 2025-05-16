@@ -1,6 +1,6 @@
 
 
-# Slot: ncit_id
+# Slot: ncit_id 
 
 
 _Unique NCIt Identifier_
@@ -9,9 +9,8 @@ _Unique NCIt Identifier_
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org/bridge2ai/standards-schema-all/:ncit_id)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/ncit_id](https://w3id.org/bridge2ai/standards-schema-all/ncit_id)
+Alias: ncit_id
 
 <!-- no inheritance hierarchy -->
 
@@ -67,8 +66,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ncit_id](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:ncit_id |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:ncit_id |
+| self | https://w3id.org/bridge2ai/standards-schema-all/ncit_id |
+| native | https://w3id.org/bridge2ai/standards-schema-all/ncit_id |
 
 
 

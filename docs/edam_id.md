@@ -1,6 +1,6 @@
 
 
-# Slot: edam_id
+# Slot: edam_id 
 
 
 _Unique EDAM identifier_
@@ -9,9 +9,8 @@ _Unique EDAM identifier_
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:edam_id](https://w3id.org/bridge2ai/standards-schema-all/:edam_id)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/edam_id](https://w3id.org/bridge2ai/standards-schema-all/edam_id)
+Alias: edam_id
 
 <!-- no inheritance hierarchy -->
 
@@ -67,8 +66,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:edam_id](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:edam_id |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:edam_id |
+| self | https://w3id.org/bridge2ai/standards-schema-all/edam_id |
+| native | https://w3id.org/bridge2ai/standards-schema-all/edam_id |
 
 
 

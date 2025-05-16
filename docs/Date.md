@@ -1,4 +1,4 @@
-# Type: Date
+# Type: Date 
 
 
 
@@ -43,7 +43,7 @@ URI: [xsd:date](http://www.w3.org/2001/XMLSchema#date)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:date |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:date |
+| native | https://w3id.org/bridge2ai/standards-schema-all/date |
 | exact | schema:Date |
 
 

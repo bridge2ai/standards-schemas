@@ -1,6 +1,6 @@
 
 
-# Slot: substrates
+# Slot: substrates 
 
 
 _Subject data set is relevant to the substrate(s) listed in this slot. Must be a DataSubstrate object, referenced with its B2AI_SUBSTRATE ID._
@@ -9,9 +9,8 @@ _Subject data set is relevant to the substrate(s) listed in this slot. Must be a
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:substrates](https://w3id.org/bridge2ai/standards-schema-all/:substrates)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/substrates](https://w3id.org/bridge2ai/standards-schema-all/substrates)
+Alias: substrates
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:substrates](https://w3id.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:substrates |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:substrates |
+| self | https://w3id.org/bridge2ai/standards-schema-all/substrates |
+| native | https://w3id.org/bridge2ai/standards-schema-all/substrates |
 
 
 

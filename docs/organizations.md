@@ -1,6 +1,6 @@
 
 
-# Slot: organizations
+# Slot: organizations 
 
 
 _Collection of associated organizations._
@@ -9,9 +9,8 @@ _Collection of associated organizations._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:organizations](https://w3id.org/bridge2ai/standards-schema-all/:organizations)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/organizations](https://w3id.org/bridge2ai/standards-schema-all/organizations)
+Alias: organizations
 
 <!-- no inheritance hierarchy -->
 
@@ -61,8 +60,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:organizations](https://w3
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:organizations |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:organizations |
+| self | https://w3id.org/bridge2ai/standards-schema-all/organizations |
+| native | https://w3id.org/bridge2ai/standards-schema-all/organizations |
 
 
 

@@ -1,4 +1,4 @@
-# Type: Uri
+# Type: Uri 
 
 
 
@@ -47,7 +47,7 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:anyURI |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:uri |
+| native | https://w3id.org/bridge2ai/standards-schema-all/uri |
 | close | schema:URL |
 
 

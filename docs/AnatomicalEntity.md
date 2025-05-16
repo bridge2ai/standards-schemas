@@ -1,6 +1,6 @@
 
 
-# Class: AnatomicalEntity
+# Class: AnatomicalEntity 
 
 
 _A subcellular location, cell type or gross anatomical part_
@@ -9,7 +9,7 @@ _A subcellular location, cell type or gross anatomical part_
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity](https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity)
 
 
 
@@ -43,18 +43,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity](https:/
         
           
     
+        
+        
+        AnatomicalEntity --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    AnatomicalEntity --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       AnatomicalEntity : subclass_of
         
           
     
+        
+        
+        AnatomicalEntity --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    AnatomicalEntity --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       AnatomicalEntity : used_in_bridge2ai
@@ -131,8 +135,8 @@ Instances of this class *should* have identifiers with one of the following pref
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity |
+| self | https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity |
+| native | https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity |
 | exact | uberon:0001062, wikidata:Q4936952 |
 | narrow | ncit:C12219 |
 

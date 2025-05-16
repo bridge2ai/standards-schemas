@@ -1,6 +1,6 @@
 
 
-# Slot: data_collection
+# Slot: data_collection 
 
 
 _Collection of associated DataSet objects._
@@ -9,9 +9,8 @@ _Collection of associated DataSet objects._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_collection](https://w3id.org/bridge2ai/standards-schema-all/:data_collection)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/data_collection](https://w3id.org/bridge2ai/standards-schema-all/data_collection)
+Alias: data_collection
 
 <!-- no inheritance hierarchy -->
 
@@ -61,8 +60,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_collection](https://
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:data_collection |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:data_collection |
+| self | https://w3id.org/bridge2ai/standards-schema-all/data_collection |
+| native | https://w3id.org/bridge2ai/standards-schema-all/data_collection |
 
 
 

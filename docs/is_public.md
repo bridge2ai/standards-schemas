@@ -1,6 +1,6 @@
 
 
-# Slot: is_public
+# Slot: is_public 
 
 
 _True if the data set is publicly available. False if the data set is private or requires special permissions to access._
@@ -9,9 +9,8 @@ _True if the data set is publicly available. False if the data set is private or
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:is_public](https://w3id.org/bridge2ai/standards-schema-all/:is_public)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/is_public](https://w3id.org/bridge2ai/standards-schema-all/is_public)
+Alias: is_public
 
 
 ## Inheritance
@@ -64,8 +63,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:is_public](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:is_public |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:is_public |
+| self | https://w3id.org/bridge2ai/standards-schema-all/is_public |
+| native | https://w3id.org/bridge2ai/standards-schema-all/is_public |
 
 
 

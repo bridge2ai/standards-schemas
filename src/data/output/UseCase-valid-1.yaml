@@ -15,19 +15,12 @@ contribution_date: '2023-01-01'
 use_case_category:
 - acquisition
 known_limitations: xyz
-relevance_to_dgps:
-- aireadi
-- chorus
-- voice
 data_topics:
 - B2AI_TOPIC:5
 - B2AI_TOPIC:6
 data_substrates:
 - B2AI_SUBSTRATE:12
 - B2AI_SUBSTRATE:34
-standards_and_tools_for_dgp_use:
-- B2AI_STANDARD:5
-- B2AI_STANDARD:10
 alternative_standards_and_tools:
 - B2AI_STANDARD:123
 - B2AI_STANDARD:555

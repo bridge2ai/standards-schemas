@@ -1,6 +1,6 @@
 
 
-# Class: UseCaseContainer
+# Class: UseCaseContainer 
 
 
 _A container for UseCase._
@@ -9,7 +9,7 @@ _A container for UseCase._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer](https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer](https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer)
 
 
 
@@ -24,9 +24,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer](https:/
         
           
     
+        
+        
+        UseCaseContainer --> "*" UseCase : use_cases
+        click UseCase href "../UseCase"
     
-    UseCaseContainer --> "*" UseCase : use_cases
-    click UseCase href "../UseCase"
 
         
       
@@ -72,8 +74,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer](https:/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer |
+| self | https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer |
+| native | https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer |
 
 
 

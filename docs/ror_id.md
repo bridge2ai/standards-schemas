@@ -1,6 +1,6 @@
 
 
-# Slot: ror_id
+# Slot: ror_id 
 
 
 _Unique ROR identifier._
@@ -9,9 +9,8 @@ _Unique ROR identifier._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:ror_id](https://w3id.org/bridge2ai/standards-schema-all/:ror_id)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/ror_id](https://w3id.org/bridge2ai/standards-schema-all/ror_id)
+Alias: ror_id
 
 <!-- no inheritance hierarchy -->
 
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ror_id](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:ror_id |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:ror_id |
+| self | https://w3id.org/bridge2ai/standards-schema-all/ror_id |
+| native | https://w3id.org/bridge2ai/standards-schema-all/ror_id |
 
 
 
