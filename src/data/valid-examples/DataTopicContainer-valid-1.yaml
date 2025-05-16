@@ -1,4 +1,8 @@
 # Example DataTopic data
+id: B2AI_TOPIC:container1
+category: B2AI_TOPIC:DataTopicContainer
+name: Valid DataTopicContainer Example
+description: A valid data topic container example that conforms to the schema
 data_topics_collection:
   - id: B2AI_TOPIC:2
     name: Biology

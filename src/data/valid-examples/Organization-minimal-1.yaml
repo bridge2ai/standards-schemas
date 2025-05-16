@@ -1,1 +1,4 @@
 id: B2AI_ORG:2
+category: B2AI_ORG:Organization
+name: Minimal Organization Example
+description: A minimal but valid organization example that conforms to the schema

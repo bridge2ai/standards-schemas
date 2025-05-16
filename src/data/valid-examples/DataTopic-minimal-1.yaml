@@ -1,1 +1,4 @@
 id: B2AI_TOPIC:2
+category: B2AI_TOPIC:DataTopic
+name: Minimal DataTopic Example
+description: A minimal but valid data topic example that conforms to the schema
