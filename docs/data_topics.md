@@ -1,6 +1,6 @@
 
 
-# Slot: data_topics
+# Slot: data_topics 
 
 
 _Relevance of the use case to one or more data topics._
@@ -9,9 +9,8 @@ _Relevance of the use case to one or more data topics._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics](https://w3id.org/bridge2ai/standards-schema-all/:data_topics)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/data_topics](https://w3id.org/bridge2ai/standards-schema-all/data_topics)
+Alias: data_topics
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_topics](https://w3id
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:data_topics |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:data_topics |
+| self | https://w3id.org/bridge2ai/standards-schema-all/data_topics |
+| native | https://w3id.org/bridge2ai/standards-schema-all/data_topics |
 
 
 

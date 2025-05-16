@@ -1,6 +1,6 @@
 
 
-# Class: Organization
+# Class: Organization 
 
 
 _Represents a group or organization related to or responsible for one or more Bridge2AI standards._
@@ -9,7 +9,7 @@ _Represents a group or organization related to or responsible for one or more Br
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3id.org/bridge2ai/standards-schema-all/:Organization)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id.org/bridge2ai/standards-schema-all/Organization)
 
 
 
@@ -43,9 +43,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
         
           
     
+        
+        
+        Organization --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    Organization --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       Organization : ror_id
@@ -54,9 +56,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
         
           
     
+        
+        
+        Organization --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    Organization --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       Organization : url
@@ -154,8 +158,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:Organization](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:Organization |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:Organization |
+| self | https://w3id.org/bridge2ai/standards-schema-all/Organization |
+| native | https://w3id.org/bridge2ai/standards-schema-all/Organization |
 
 
 

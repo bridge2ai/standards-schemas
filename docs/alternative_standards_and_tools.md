@@ -1,6 +1,6 @@
 
 
-# Slot: alternative_standards_and_tools
+# Slot: alternative_standards_and_tools 
 
 
 _List of identifiers of standards and tools; those not explicitly planned to be used, by one or more Bridge2AI GCs in addressing this use case but serving as viable alternatives, from those in the Standards Registry._
@@ -9,9 +9,8 @@ _List of identifiers of standards and tools; those not explicitly planned to be 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and_tools](https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and_tools)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/alternative_standards_and_tools](https://w3id.org/bridge2ai/standards-schema-all/alternative_standards_and_tools)
+Alias: alternative_standards_and_tools
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and_tools |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:alternative_standards_and_tools |
+| self | https://w3id.org/bridge2ai/standards-schema-all/alternative_standards_and_tools |
+| native | https://w3id.org/bridge2ai/standards-schema-all/alternative_standards_and_tools |
 
 
 

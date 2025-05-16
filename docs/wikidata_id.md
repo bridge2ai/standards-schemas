@@ -1,6 +1,6 @@
 
 
-# Slot: wikidata_id
+# Slot: wikidata_id 
 
 
 _Unique Wikidata identifier._
@@ -9,9 +9,8 @@ _Unique Wikidata identifier._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id](https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/wikidata_id](https://w3id.org/bridge2ai/standards-schema-all/wikidata_id)
+Alias: wikidata_id
 
 <!-- no inheritance hierarchy -->
 
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id](https://w3id
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:wikidata_id |
+| self | https://w3id.org/bridge2ai/standards-schema-all/wikidata_id |
+| native | https://w3id.org/bridge2ai/standards-schema-all/wikidata_id |
 
 
 

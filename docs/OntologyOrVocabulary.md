@@ -1,6 +1,6 @@
 
 
-# Class: OntologyOrVocabulary
+# Class: OntologyOrVocabulary 
 
 
 _A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships._
@@ -9,7 +9,7 @@ _A set of concepts and categories, potentially defined or accompanied by their h
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:OntologyOrVocabulary](https://w3id.org/bridge2ai/standards-schema-all/:OntologyOrVocabulary)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/OntologyOrVocabulary](https://w3id.org/bridge2ai/standards-schema-all/OntologyOrVocabulary)
 
 
 
@@ -29,18 +29,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OntologyOrVocabulary](htt
         
           
     
+        
+        
+        OntologyOrVocabulary --> "*" StandardsCollectionTag : collection
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
-    OntologyOrVocabulary --> "*" StandardsCollectionTag : collection
-    click StandardsCollectionTag href "../StandardsCollectionTag"
 
         
       OntologyOrVocabulary : concerns_data_topic
         
           
     
+        
+        
+        OntologyOrVocabulary --> "*" DataTopic : concerns_data_topic
+        click DataTopic href "../DataTopic"
     
-    OntologyOrVocabulary --> "*" DataTopic : concerns_data_topic
-    click DataTopic href "../DataTopic"
 
         
       OntologyOrVocabulary : contribution_date
@@ -59,18 +63,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OntologyOrVocabulary](htt
         
           
     
+        
+        
+        OntologyOrVocabulary --> "*" Organization : has_relevant_organization
+        click Organization href "../Organization"
     
-    OntologyOrVocabulary --> "*" Organization : has_relevant_organization
-    click Organization href "../Organization"
 
         
       OntologyOrVocabulary : has_training_resource
         
           
     
+        
+        
+        OntologyOrVocabulary --> "*" DataStandardOrTool : has_training_resource
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    OntologyOrVocabulary --> "*" DataStandardOrTool : has_training_resource
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       OntologyOrVocabulary : id
@@ -87,9 +95,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OntologyOrVocabulary](htt
         
           
     
+        
+        
+        OntologyOrVocabulary --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    OntologyOrVocabulary --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       OntologyOrVocabulary : requires_registration
@@ -98,18 +108,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OntologyOrVocabulary](htt
         
           
     
+        
+        
+        OntologyOrVocabulary --> "*" Organization : responsible_organization
+        click Organization href "../Organization"
     
-    OntologyOrVocabulary --> "*" Organization : responsible_organization
-    click Organization href "../Organization"
 
         
       OntologyOrVocabulary : subclass_of
         
           
     
+        
+        
+        OntologyOrVocabulary --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    OntologyOrVocabulary --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       OntologyOrVocabulary : url
@@ -185,8 +199,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:OntologyOrVocabulary](htt
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:OntologyOrVocabulary |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:OntologyOrVocabulary |
+| self | https://w3id.org/bridge2ai/standards-schema-all/OntologyOrVocabulary |
+| native | https://w3id.org/bridge2ai/standards-schema-all/OntologyOrVocabulary |
 
 
 

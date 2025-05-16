@@ -1,6 +1,6 @@
 
 
-# Class: NamedThing
+# Class: NamedThing 
 
 
 _A generic grouping for any identifiable entity_
@@ -55,18 +55,22 @@ URI: [schema:Thing](http://schema.org/Thing)
         
           
     
+        
+        
+        NamedThing --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    NamedThing --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       NamedThing : subclass_of
         
           
     
+        
+        
+        NamedThing --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    NamedThing --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       NamedThing : used_in_bridge2ai
@@ -406,7 +410,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | schema:Thing |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:NamedThing |
+| native | https://w3id.org/bridge2ai/standards-schema-all/NamedThing |
 
 
 

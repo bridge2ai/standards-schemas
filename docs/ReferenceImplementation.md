@@ -1,6 +1,6 @@
 
 
-# Class: ReferenceImplementation
+# Class: ReferenceImplementation 
 
 
 _Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case._
@@ -9,7 +9,7 @@ _Represents an implementation of one or more standards or tools in the Bridge2AI
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation](https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/ReferenceImplementation](https://w3id.org/bridge2ai/standards-schema-all/ReferenceImplementation)
 
 
 
@@ -29,18 +29,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation](
         
           
     
+        
+        
+        ReferenceImplementation --> "*" StandardsCollectionTag : collection
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
-    ReferenceImplementation --> "*" StandardsCollectionTag : collection
-    click StandardsCollectionTag href "../StandardsCollectionTag"
 
         
       ReferenceImplementation : concerns_data_topic
         
           
     
+        
+        
+        ReferenceImplementation --> "*" DataTopic : concerns_data_topic
+        click DataTopic href "../DataTopic"
     
-    ReferenceImplementation --> "*" DataTopic : concerns_data_topic
-    click DataTopic href "../DataTopic"
 
         
       ReferenceImplementation : contribution_date
@@ -59,18 +63,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation](
         
           
     
+        
+        
+        ReferenceImplementation --> "*" Organization : has_relevant_organization
+        click Organization href "../Organization"
     
-    ReferenceImplementation --> "*" Organization : has_relevant_organization
-    click Organization href "../Organization"
 
         
       ReferenceImplementation : has_training_resource
         
           
     
+        
+        
+        ReferenceImplementation --> "*" DataStandardOrTool : has_training_resource
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    ReferenceImplementation --> "*" DataStandardOrTool : has_training_resource
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       ReferenceImplementation : id
@@ -87,9 +95,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation](
         
           
     
+        
+        
+        ReferenceImplementation --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    ReferenceImplementation --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       ReferenceImplementation : requires_registration
@@ -98,18 +108,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation](
         
           
     
+        
+        
+        ReferenceImplementation --> "*" Organization : responsible_organization
+        click Organization href "../Organization"
     
-    ReferenceImplementation --> "*" Organization : responsible_organization
-    click Organization href "../Organization"
 
         
       ReferenceImplementation : subclass_of
         
           
     
+        
+        
+        ReferenceImplementation --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    ReferenceImplementation --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       ReferenceImplementation : url
@@ -185,8 +199,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation](
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:ReferenceImplementation |
+| self | https://w3id.org/bridge2ai/standards-schema-all/ReferenceImplementation |
+| native | https://w3id.org/bridge2ai/standards-schema-all/ReferenceImplementation |
 
 
 

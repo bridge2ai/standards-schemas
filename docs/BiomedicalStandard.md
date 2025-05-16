@@ -1,6 +1,6 @@
 
 
-# Class: BiomedicalStandard
+# Class: BiomedicalStandard 
 
 
 _Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or biomedical research purposes._
@@ -9,7 +9,7 @@ _Represents a standard in the Bridge2AI Standards Registry with particular appli
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard)
 
 
 
@@ -29,18 +29,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
         
           
     
+        
+        
+        BiomedicalStandard --> "*" StandardsCollectionTag : collection
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
-    BiomedicalStandard --> "*" StandardsCollectionTag : collection
-    click StandardsCollectionTag href "../StandardsCollectionTag"
 
         
       BiomedicalStandard : concerns_data_topic
         
           
     
+        
+        
+        BiomedicalStandard --> "*" DataTopic : concerns_data_topic
+        click DataTopic href "../DataTopic"
     
-    BiomedicalStandard --> "*" DataTopic : concerns_data_topic
-    click DataTopic href "../DataTopic"
 
         
       BiomedicalStandard : contribution_date
@@ -59,18 +63,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
         
           
     
+        
+        
+        BiomedicalStandard --> "*" Organization : has_relevant_organization
+        click Organization href "../Organization"
     
-    BiomedicalStandard --> "*" Organization : has_relevant_organization
-    click Organization href "../Organization"
 
         
       BiomedicalStandard : has_training_resource
         
           
     
+        
+        
+        BiomedicalStandard --> "*" DataStandardOrTool : has_training_resource
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    BiomedicalStandard --> "*" DataStandardOrTool : has_training_resource
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       BiomedicalStandard : id
@@ -87,9 +95,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
         
           
     
+        
+        
+        BiomedicalStandard --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    BiomedicalStandard --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       BiomedicalStandard : requires_registration
@@ -98,18 +108,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
         
           
     
+        
+        
+        BiomedicalStandard --> "*" Organization : responsible_organization
+        click Organization href "../Organization"
     
-    BiomedicalStandard --> "*" Organization : responsible_organization
-    click Organization href "../Organization"
 
         
       BiomedicalStandard : subclass_of
         
           
     
+        
+        
+        BiomedicalStandard --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    BiomedicalStandard --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       BiomedicalStandard : url
@@ -186,8 +200,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard](https
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:BiomedicalStandard |
+| self | https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard |
+| native | https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard |
 
 
 

@@ -1,6 +1,6 @@
 
 
-# Slot: enables
+# Slot: enables 
 
 
 _List of other use case(s) this use case supports or makes possible._
@@ -9,9 +9,8 @@ _List of other use case(s) this use case supports or makes possible._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:enables](https://w3id.org/bridge2ai/standards-schema-all/:enables)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/enables](https://w3id.org/bridge2ai/standards-schema-all/enables)
+Alias: enables
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:enables](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:enables |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:enables |
+| self | https://w3id.org/bridge2ai/standards-schema-all/enables |
+| native | https://w3id.org/bridge2ai/standards-schema-all/enables |
 
 
 

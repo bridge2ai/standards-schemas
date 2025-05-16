@@ -1,6 +1,6 @@
 
 
-# Slot: data_standardortools_collection
+# Slot: data_standardortools_collection 
 
 
 _Collection of associated data standards or tools_
@@ -9,9 +9,8 @@ _Collection of associated data standards or tools_
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_standardortools_collection](https://w3id.org/bridge2ai/standards-schema-all/:data_standardortools_collection)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/data_standardortools_collection](https://w3id.org/bridge2ai/standards-schema-all/data_standardortools_collection)
+Alias: data_standardortools_collection
 
 <!-- no inheritance hierarchy -->
 
@@ -61,8 +60,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_standardortools_coll
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:data_standardortools_collection |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:data_standardortools_collection |
+| self | https://w3id.org/bridge2ai/standards-schema-all/data_standardortools_collection |
+| native | https://w3id.org/bridge2ai/standards-schema-all/data_standardortools_collection |
 
 
 

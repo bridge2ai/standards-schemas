@@ -1,6 +1,6 @@
 
 
-# Slot: datasheet_url
+# Slot: datasheet_url 
 
 
 _URL where the datasheet for the data set can be accessed._
@@ -9,9 +9,8 @@ _URL where the datasheet for the data set can be accessed._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:datasheet_url](https://w3id.org/bridge2ai/standards-schema-all/:datasheet_url)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/datasheet_url](https://w3id.org/bridge2ai/standards-schema-all/datasheet_url)
+Alias: datasheet_url
 
 
 ## Inheritance
@@ -64,8 +63,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:datasheet_url](https://w3
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:datasheet_url |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:datasheet_url |
+| self | https://w3id.org/bridge2ai/standards-schema-all/datasheet_url |
+| native | https://w3id.org/bridge2ai/standards-schema-all/datasheet_url |
 
 
 

@@ -1,6 +1,6 @@
 
 
-# Slot: use_cases
+# Slot: use_cases 
 
 
 _Collection of associated use cases._
@@ -9,9 +9,8 @@ _Collection of associated use cases._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_cases](https://w3id.org/bridge2ai/standards-schema-all/:use_cases)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/use_cases](https://w3id.org/bridge2ai/standards-schema-all/use_cases)
+Alias: use_cases
 
 <!-- no inheritance hierarchy -->
 
@@ -61,8 +60,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_cases](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:use_cases |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:use_cases |
+| self | https://w3id.org/bridge2ai/standards-schema-all/use_cases |
+| native | https://w3id.org/bridge2ai/standards-schema-all/use_cases |
 
 
 

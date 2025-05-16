@@ -1,4 +1,4 @@
-# Type: DateOrDatetime
+# Type: DateOrDatetime 
 
 
 
@@ -43,7 +43,7 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | linkml:DateOrDatetime |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:date_or_datetime |
+| native | https://w3id.org/bridge2ai/standards-schema-all/date_or_datetime |
 
 
 

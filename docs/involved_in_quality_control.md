@@ -1,6 +1,6 @@
 
 
-# Slot: involved_in_quality_control
+# Slot: involved_in_quality_control 
 
 
 _A value of True indicates a use case is likely to be implemented as part of data validation operations._
@@ -9,9 +9,8 @@ _A value of True indicates a use case is likely to be implemented as part of dat
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:involved_in_quality_control](https://w3id.org/bridge2ai/standards-schema-all/:involved_in_quality_control)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/involved_in_quality_control](https://w3id.org/bridge2ai/standards-schema-all/involved_in_quality_control)
+Alias: involved_in_quality_control
 
 
 ## Inheritance
@@ -64,8 +63,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:involved_in_quality_contr
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:involved_in_quality_control |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:involved_in_quality_control |
+| self | https://w3id.org/bridge2ai/standards-schema-all/involved_in_quality_control |
+| native | https://w3id.org/bridge2ai/standards-schema-all/involved_in_quality_control |
 
 
 

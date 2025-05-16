@@ -1,4 +1,4 @@
-# Type: Objectidentifier
+# Type: Objectidentifier 
 
 
 
@@ -47,7 +47,7 @@ URI: [shex:iri](http://www.w3.org/ns/shex#iri)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | shex:iri |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:objectidentifier |
+| native | https://w3id.org/bridge2ai/standards-schema-all/objectidentifier |
 
 
 

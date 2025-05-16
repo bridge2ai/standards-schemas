@@ -1,6 +1,6 @@
 
 
-# Slot: topics
+# Slot: topics 
 
 
 _Subject data set is relevant to the topic(s) listed in this slot. Must be a DataTopic object, referenced with its B2AI_TOPIC ID._
@@ -9,9 +9,8 @@ _Subject data set is relevant to the topic(s) listed in this slot. Must be a Dat
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:topics](https://w3id.org/bridge2ai/standards-schema-all/:topics)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/topics](https://w3id.org/bridge2ai/standards-schema-all/topics)
+Alias: topics
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:topics](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:topics |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:topics |
+| self | https://w3id.org/bridge2ai/standards-schema-all/topics |
+| native | https://w3id.org/bridge2ai/standards-schema-all/topics |
 
 
 

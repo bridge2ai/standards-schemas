@@ -1,4 +1,4 @@
-# Type: Time
+# Type: Time 
 
 
 
@@ -43,7 +43,7 @@ URI: [xsd:time](http://www.w3.org/2001/XMLSchema#time)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:time |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:time |
+| native | https://w3id.org/bridge2ai/standards-schema-all/time |
 | exact | schema:Time |
 
 

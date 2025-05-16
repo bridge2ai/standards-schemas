@@ -1,6 +1,6 @@
 
 
-# Slot: file_extensions
+# Slot: file_extensions 
 
 
 _Commonly used file extensions for this substrate._
@@ -9,9 +9,8 @@ _Commonly used file extensions for this substrate._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:file_extensions](https://w3id.org/bridge2ai/standards-schema-all/:file_extensions)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/file_extensions](https://w3id.org/bridge2ai/standards-schema-all/file_extensions)
+Alias: file_extensions
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:file_extensions](https://
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:file_extensions |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:file_extensions |
+| self | https://w3id.org/bridge2ai/standards-schema-all/file_extensions |
+| native | https://w3id.org/bridge2ai/standards-schema-all/file_extensions |
 
 
 

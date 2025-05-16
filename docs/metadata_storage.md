@@ -1,6 +1,6 @@
 
 
-# Slot: metadata_storage
+# Slot: metadata_storage 
 
 
 _Data Substrate in which metadata is stored._
@@ -9,9 +9,8 @@ _Data Substrate in which metadata is stored._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage](https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/metadata_storage](https://w3id.org/bridge2ai/standards-schema-all/metadata_storage)
+Alias: metadata_storage
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage](https:/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:metadata_storage |
+| self | https://w3id.org/bridge2ai/standards-schema-all/metadata_storage |
+| native | https://w3id.org/bridge2ai/standards-schema-all/metadata_storage |
 
 
 

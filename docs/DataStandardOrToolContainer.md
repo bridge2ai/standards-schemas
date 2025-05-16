@@ -1,6 +1,6 @@
 
 
-# Class: DataStandardOrToolContainer
+# Class: DataStandardOrToolContainer 
 
 
 _A container for DataStandardOrTool(s)._
@@ -9,7 +9,7 @@ _A container for DataStandardOrTool(s)._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContainer](https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContainer)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer](https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer)
 
 
 
@@ -24,9 +24,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContain
         
           
     
+        
+        
+        DataStandardOrToolContainer --> "*" DataStandardOrTool : data_standardortools_collection
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    DataStandardOrToolContainer --> "*" DataStandardOrTool : data_standardortools_collection
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       
@@ -72,8 +74,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContain
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContainer |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:DataStandardOrToolContainer |
+| self | https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer |
+| native | https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer |
 
 
 

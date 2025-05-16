@@ -1,4 +1,4 @@
-# Type: Decimal
+# Type: Decimal 
 
 
 
@@ -42,7 +42,7 @@ URI: [xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:decimal |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:decimal |
+| native | https://w3id.org/bridge2ai/standards-schema-all/decimal |
 | broad | schema:Number |
 
 

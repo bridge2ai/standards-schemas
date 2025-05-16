@@ -1,6 +1,6 @@
 
 
-# Class: UseCase
+# Class: UseCase 
 
 
 _Represents a use case for Bridge2AI standards._
@@ -9,7 +9,7 @@ _Represents a use case for Bridge2AI standards._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org/bridge2ai/standards-schema-all/:UseCase)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCase](https://w3id.org/bridge2ai/standards-schema-all/UseCase)
 
 
 
@@ -27,9 +27,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
         
           
     
+        
+        
+        UseCase --> "*" DataStandardOrTool : alternative_standards_and_tools
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    UseCase --> "*" DataStandardOrTool : alternative_standards_and_tools
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       UseCase : category
@@ -46,18 +48,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
         
           
     
+        
+        
+        UseCase --> "*" DataSubstrate : data_substrates
+        click DataSubstrate href "../DataSubstrate"
     
-    UseCase --> "*" DataSubstrate : data_substrates
-    click DataSubstrate href "../DataSubstrate"
 
         
       UseCase : data_topics
         
           
     
+        
+        
+        UseCase --> "*" DataTopic : data_topics
+        click DataTopic href "../DataTopic"
     
-    UseCase --> "*" DataTopic : data_topics
-    click DataTopic href "../DataTopic"
 
         
       UseCase : description
@@ -66,9 +72,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
         
           
     
+        
+        
+        UseCase --> "*" UseCase : enables
+        click UseCase href "../UseCase"
     
-    UseCase --> "*" UseCase : enables
-    click UseCase href "../UseCase"
 
         
       UseCase : id
@@ -87,45 +95,55 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
         
           
     
+        
+        
+        UseCase --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    UseCase --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       UseCase : relevant_to_gcs
         
           
     
+        
+        
+        UseCase --> "*" Organization : relevant_to_gcs
+        click Organization href "../Organization"
     
-    UseCase --> "*" Organization : relevant_to_gcs
-    click Organization href "../Organization"
 
         
       UseCase : standards_and_tools_for_gc_use
         
           
     
+        
+        
+        UseCase --> "*" DataStandardOrTool : standards_and_tools_for_gc_use
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    UseCase --> "*" DataStandardOrTool : standards_and_tools_for_gc_use
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       UseCase : subclass_of
         
           
     
+        
+        
+        UseCase --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    UseCase --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       UseCase : use_case_category
         
           
     
+        
+        
+        UseCase --> "1..*" UseCaseCategory : use_case_category
+        click UseCaseCategory href "../UseCaseCategory"
     
-    UseCase --> "1..*" UseCaseCategory : use_case_category
-    click UseCaseCategory href "../UseCaseCategory"
 
         
       UseCase : used_in_bridge2ai
@@ -209,8 +227,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:UseCase](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:UseCase |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:UseCase |
+| self | https://w3id.org/bridge2ai/standards-schema-all/UseCase |
+| native | https://w3id.org/bridge2ai/standards-schema-all/UseCase |
 
 
 

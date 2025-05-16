@@ -1,6 +1,6 @@
 
 
-# Slot: has_files
+# Slot: has_files 
 
 
 _Subject data set has the file(s) listed in this slot as parts. Note that each file is not a data set and does not have its own ID in the registry. For data sets that are parts of this data set, use the `has_parts` slot._
@@ -9,9 +9,8 @@ _Subject data set has the file(s) listed in this slot as parts. Note that each f
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_files](https://w3id.org/bridge2ai/standards-schema-all/:has_files)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/has_files](https://w3id.org/bridge2ai/standards-schema-all/has_files)
+Alias: has_files
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_files](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:has_files |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:has_files |
+| self | https://w3id.org/bridge2ai/standards-schema-all/has_files |
+| native | https://w3id.org/bridge2ai/standards-schema-all/has_files |
 
 
 

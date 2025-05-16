@@ -1,6 +1,6 @@
 
 
-# Slot: node_property
+# Slot: node_property 
 
 
 _A grouping for any property that holds between a node and a value._
@@ -9,9 +9,8 @@ _A grouping for any property that holds between a node and a value._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:node_property](https://w3id.org/bridge2ai/standards-schema-all/:node_property)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/node_property](https://w3id.org/bridge2ai/standards-schema-all/node_property)
+Alias: node_property
 
 
 ## Inheritance
@@ -87,8 +86,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:node_property](https://w3
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:node_property |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:node_property |
+| self | https://w3id.org/bridge2ai/standards-schema-all/node_property |
+| native | https://w3id.org/bridge2ai/standards-schema-all/node_property |
 
 
 

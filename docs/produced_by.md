@@ -1,6 +1,6 @@
 
 
-# Slot: produced_by
+# Slot: produced_by 
 
 
 _Subject data set was produced by the organization(s) listed in this slot. Must be an Organization object, referenced with its B2AI_ORG ID._
@@ -9,9 +9,8 @@ _Subject data set was produced by the organization(s) listed in this slot. Must 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:produced_by](https://w3id.org/bridge2ai/standards-schema-all/:produced_by)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/produced_by](https://w3id.org/bridge2ai/standards-schema-all/produced_by)
+Alias: produced_by
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:produced_by](https://w3id
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:produced_by |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:produced_by |
+| self | https://w3id.org/bridge2ai/standards-schema-all/produced_by |
+| native | https://w3id.org/bridge2ai/standards-schema-all/produced_by |
 
 
 

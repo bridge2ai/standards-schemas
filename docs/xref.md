@@ -1,6 +1,6 @@
 
 
-# Slot: xref
+# Slot: xref 
 
 
 _URI of corresponding class in an ontology of experimental procedures, in CURIE form._
@@ -9,9 +9,8 @@ _URI of corresponding class in an ontology of experimental procedures, in CURIE 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:xref](https://w3id.org/bridge2ai/standards-schema-all/:xref)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/xref](https://w3id.org/bridge2ai/standards-schema-all/xref)
+Alias: xref
 
 
 ## Inheritance
@@ -73,8 +72,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:xref](https://w3id.org/br
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:xref |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:xref |
+| self | https://w3id.org/bridge2ai/standards-schema-all/xref |
+| native | https://w3id.org/bridge2ai/standards-schema-all/xref |
 
 
 

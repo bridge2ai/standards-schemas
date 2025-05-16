@@ -1,6 +1,6 @@
 
 
-# Slot: relevant_to_gcs
+# Slot: relevant_to_gcs 
 
 
 _Bridge2AI Grand Challenges related to this use case, generally because they actively pursue this use case, or because they have investigated it in some manner. GCs should be identified by their Bridge2AI identifier, e.g., B2AI_ORG:117._
@@ -9,9 +9,8 @@ _Bridge2AI Grand Challenges related to this use case, generally because they act
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:relevant_to_gcs](https://w3id.org/bridge2ai/standards-schema-all/:relevant_to_gcs)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/relevant_to_gcs](https://w3id.org/bridge2ai/standards-schema-all/relevant_to_gcs)
+Alias: relevant_to_gcs
 
 <!-- no inheritance hierarchy -->
 
@@ -61,8 +60,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:relevant_to_gcs](https://
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:relevant_to_gcs |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:relevant_to_gcs |
+| self | https://w3id.org/bridge2ai/standards-schema-all/relevant_to_gcs |
+| native | https://w3id.org/bridge2ai/standards-schema-all/relevant_to_gcs |
 
 
 

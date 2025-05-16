@@ -1,6 +1,6 @@
 
 
-# Slot: data_substrates_collection
+# Slot: data_substrates_collection 
 
 
 _Collection of associated data substrates_
@@ -9,9 +9,8 @@ _Collection of associated data substrates_
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collection](https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collection)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/data_substrates_collection](https://w3id.org/bridge2ai/standards-schema-all/data_substrates_collection)
+Alias: data_substrates_collection
 
 <!-- no inheritance hierarchy -->
 
@@ -61,8 +60,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collectio
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collection |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:data_substrates_collection |
+| self | https://w3id.org/bridge2ai/standards-schema-all/data_substrates_collection |
+| native | https://w3id.org/bridge2ai/standards-schema-all/data_substrates_collection |
 
 
 

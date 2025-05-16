@@ -1,4 +1,4 @@
-# Type: Double
+# Type: Double 
 
 
 
@@ -42,7 +42,7 @@ URI: [xsd:double](http://www.w3.org/2001/XMLSchema#double)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:double |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:double |
+| native | https://w3id.org/bridge2ai/standards-schema-all/double |
 | close | schema:Float |
 
 

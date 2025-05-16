@@ -1,6 +1,6 @@
 
 
-# Slot: use_case_category
+# Slot: use_case_category 
 
 
 _Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories._
@@ -9,9 +9,8 @@ _Category of the UseCase. Not all projects will incorporate use cases in all cat
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_case_category](https://w3id.org/bridge2ai/standards-schema-all/:use_case_category)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/use_case_category](https://w3id.org/bridge2ai/standards-schema-all/use_case_category)
+Alias: use_case_category
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_case_category](https:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:use_case_category |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:use_case_category |
+| self | https://w3id.org/bridge2ai/standards-schema-all/use_case_category |
+| native | https://w3id.org/bridge2ai/standards-schema-all/use_case_category |
 
 
 

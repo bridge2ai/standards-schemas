@@ -1,6 +1,6 @@
 
 
-# Class: DataSubstrate
+# Class: DataSubstrate 
 
 
 _Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as "data, in this form or format", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard._
@@ -9,7 +9,7 @@ _Represents a data substrate for Bridge2AI data. This may be a high-level data s
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrate](https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrate)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate)
 
 
 
@@ -55,18 +55,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrate](https://w3
         
           
     
+        
+        
+        DataSubstrate --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    DataSubstrate --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       DataSubstrate : subclass_of
         
           
     
+        
+        
+        DataSubstrate --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    DataSubstrate --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       DataSubstrate : used_in_bridge2ai
@@ -144,8 +148,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrate](https://w3
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrate |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrate |
+| self | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate |
+| native | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate |
 
 
 

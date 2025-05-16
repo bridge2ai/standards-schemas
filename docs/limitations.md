@@ -1,6 +1,6 @@
 
 
-# Slot: limitations
+# Slot: limitations 
 
 
 _Potential obstacles particular to this substrate or implementation._
@@ -9,9 +9,8 @@ _Potential obstacles particular to this substrate or implementation._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:limitations](https://w3id.org/bridge2ai/standards-schema-all/:limitations)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/limitations](https://w3id.org/bridge2ai/standards-schema-all/limitations)
+Alias: limitations
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:limitations](https://w3id
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:limitations |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:limitations |
+| self | https://w3id.org/bridge2ai/standards-schema-all/limitations |
+| native | https://w3id.org/bridge2ai/standards-schema-all/limitations |
 
 
 

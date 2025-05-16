@@ -1,6 +1,6 @@
 
 
-# Slot: use_conditions
+# Slot: use_conditions 
 
 
 _Applicable conditions on use, as defined by the Data Use Ontology (DUO)._
@@ -9,9 +9,8 @@ _Applicable conditions on use, as defined by the Data Use Ontology (DUO)._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_conditions](https://w3id.org/bridge2ai/standards-schema-all/:use_conditions)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/use_conditions](https://w3id.org/bridge2ai/standards-schema-all/use_conditions)
+Alias: use_conditions
 
 
 ## Inheritance
@@ -57,8 +56,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:use_conditions](https://w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:use_conditions |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:use_conditions |
+| self | https://w3id.org/bridge2ai/standards-schema-all/use_conditions |
+| native | https://w3id.org/bridge2ai/standards-schema-all/use_conditions |
 
 
 

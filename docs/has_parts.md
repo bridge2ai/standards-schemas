@@ -1,6 +1,6 @@
 
 
-# Slot: has_parts
+# Slot: has_parts 
 
 
 _Subject data set has the data set(s) listed in this slot as parts. Note that each part is itself a data set, with its own ID in the registry. For specific files, use the `has_files` slot._
@@ -9,9 +9,8 @@ _Subject data set has the data set(s) listed in this slot as parts. Note that ea
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_parts](https://w3id.org/bridge2ai/standards-schema-all/:has_parts)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/has_parts](https://w3id.org/bridge2ai/standards-schema-all/has_parts)
+Alias: has_parts
 
 
 ## Inheritance
@@ -66,8 +65,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:has_parts](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:has_parts |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:has_parts |
+| self | https://w3id.org/bridge2ai/standards-schema-all/has_parts |
+| native | https://w3id.org/bridge2ai/standards-schema-all/has_parts |
 
 
 

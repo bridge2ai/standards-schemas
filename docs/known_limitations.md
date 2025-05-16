@@ -1,6 +1,6 @@
 
 
-# Slot: known_limitations
+# Slot: known_limitations 
 
 
 _Any current obstacles to implementing this use case. This could be a selection from one or more predefined categories including lack of standards, lack of relevant patient cohort, lack of funding, etc._
@@ -9,9 +9,8 @@ _Any current obstacles to implementing this use case. This could be a selection 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:known_limitations](https://w3id.org/bridge2ai/standards-schema-all/:known_limitations)
-
-
+URI: [https://w3id.org/bridge2ai/standards-schema-all/known_limitations](https://w3id.org/bridge2ai/standards-schema-all/known_limitations)
+Alias: known_limitations
 
 
 ## Inheritance
@@ -64,8 +63,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:known_limitations](https:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:known_limitations |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:known_limitations |
+| self | https://w3id.org/bridge2ai/standards-schema-all/known_limitations |
+| native | https://w3id.org/bridge2ai/standards-schema-all/known_limitations |
 
 
 

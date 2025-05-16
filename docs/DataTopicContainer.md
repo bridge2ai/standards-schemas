@@ -1,6 +1,6 @@
 
 
-# Class: DataTopicContainer
+# Class: DataTopicContainer 
 
 
 _A container for DataTopics._
@@ -9,7 +9,7 @@ _A container for DataTopics._
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer](https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer](https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer)
 
 
 
@@ -24,9 +24,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer](https
         
           
     
+        
+        
+        DataTopicContainer --> "*" DataTopic : data_topics_collection
+        click DataTopic href "../DataTopic"
     
-    DataTopicContainer --> "*" DataTopic : data_topics_collection
-    click DataTopic href "../DataTopic"
 
         
       
@@ -72,8 +74,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer](https
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:DataTopicContainer |
+| self | https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer |
+| native | https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer |
 
 
 

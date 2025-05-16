@@ -1,6 +1,6 @@
 
 
-# Class: TrainingProgram
+# Class: TrainingProgram 
 
 
 _Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards Registry._
@@ -9,7 +9,7 @@ _Represents a training program for skills and experience related to standards or
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram](https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram](https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram)
 
 
 
@@ -29,18 +29,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram](https://
         
           
     
+        
+        
+        TrainingProgram --> "*" StandardsCollectionTag : collection
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
-    TrainingProgram --> "*" StandardsCollectionTag : collection
-    click StandardsCollectionTag href "../StandardsCollectionTag"
 
         
       TrainingProgram : concerns_data_topic
         
           
     
+        
+        
+        TrainingProgram --> "*" DataTopic : concerns_data_topic
+        click DataTopic href "../DataTopic"
     
-    TrainingProgram --> "*" DataTopic : concerns_data_topic
-    click DataTopic href "../DataTopic"
 
         
       TrainingProgram : contribution_date
@@ -59,18 +63,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram](https://
         
           
     
+        
+        
+        TrainingProgram --> "*" Organization : has_relevant_organization
+        click Organization href "../Organization"
     
-    TrainingProgram --> "*" Organization : has_relevant_organization
-    click Organization href "../Organization"
 
         
       TrainingProgram : has_training_resource
         
           
     
+        
+        
+        TrainingProgram --> "*" DataStandardOrTool : has_training_resource
+        click DataStandardOrTool href "../DataStandardOrTool"
     
-    TrainingProgram --> "*" DataStandardOrTool : has_training_resource
-    click DataStandardOrTool href "../DataStandardOrTool"
 
         
       TrainingProgram : id
@@ -87,9 +95,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram](https://
         
           
     
+        
+        
+        TrainingProgram --> "*" NamedThing : related_to
+        click NamedThing href "../NamedThing"
     
-    TrainingProgram --> "*" NamedThing : related_to
-    click NamedThing href "../NamedThing"
 
         
       TrainingProgram : requires_registration
@@ -98,18 +108,22 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram](https://
         
           
     
+        
+        
+        TrainingProgram --> "*" Organization : responsible_organization
+        click Organization href "../Organization"
     
-    TrainingProgram --> "*" Organization : responsible_organization
-    click Organization href "../Organization"
 
         
       TrainingProgram : subclass_of
         
           
     
+        
+        
+        TrainingProgram --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing"
     
-    TrainingProgram --> "*" NamedThing : subclass_of
-    click NamedThing href "../NamedThing"
 
         
       TrainingProgram : url
@@ -185,8 +199,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram](https://
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram |
-| native | https://w3id.org/bridge2ai/standards-schema-all/:TrainingProgram |
+| self | https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram |
+| native | https://w3id.org/bridge2ai/standards-schema-all/TrainingProgram |
 
 
 
