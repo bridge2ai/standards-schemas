@@ -216,6 +216,18 @@ slots:
     range: Organization
     multivalued: true
   
+  has_relevant_data_substrate:
+    is_a: related_to
+    description: >-
+      Subject standard has some relationship
+      to the object data substrate(s), including
+      whether it is intended to be used with
+      the data substrate, or whether it is
+      implemented through the data substrate.
+    domain: DataStandardOrTool
+    range: DataSubstrate
+    multivalued: true
+  
 enums:
   StandardsCollectionTag:
     description: Tags for specific sets of standards.
