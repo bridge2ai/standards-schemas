@@ -228,7 +228,7 @@ slots:
     domain: DataStandardOrTool
     range: DataSubstrate
     multivalued: true
-  
+
 enums:
   StandardsCollectionTag:
     description: Tags for specific sets of standards.
