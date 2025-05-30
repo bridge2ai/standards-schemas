@@ -3,7 +3,7 @@
 # Class: DataSet 
 
 
-_Represents a data set produced by a group in the Bridge2AI consortium. _
+_Represents a data set produced by a group in the Bridge2AI consortium._
 
 
 
@@ -218,7 +218,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 <details>
 ```yaml
 name: DataSet
-description: 'Represents a data set produced by a group in the Bridge2AI consortium. '
+description: Represents a data set produced by a group in the Bridge2AI consortium.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 is_a: NamedThing
 slots:
@@ -240,7 +240,7 @@ slots:
 <details>
 ```yaml
 name: DataSet
-description: 'Represents a data set produced by a group in the Bridge2AI consortium. '
+description: Represents a data set produced by a group in the Bridge2AI consortium.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 is_a: NamedThing
 attributes:

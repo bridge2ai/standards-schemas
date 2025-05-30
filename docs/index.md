@@ -66,6 +66,7 @@ Name: standards-schema-all
 | [formal_specification](formal_specification.md) | Relevant code repository or other location for a formal specification of the ... |
 | [has_files](has_files.md) | Subject data set has the file(s) listed in this slot as parts |
 | [has_parts](has_parts.md) | Subject data set has the data set(s) listed in this slot as parts |
+| [has_relevant_data_substrate](has_relevant_data_substrate.md) | Subject standard has some relationship to the object data substrate(s), inclu... |
 | [has_relevant_organization](has_relevant_organization.md) | Subject standard has some relationship to the object organization(s), includi... |
 | [has_training_resource](has_training_resource.md) | Relevant training resources, standard usage manuals, or other documentation f... |
 | [id](id.md) | A unique identifier for a thing |

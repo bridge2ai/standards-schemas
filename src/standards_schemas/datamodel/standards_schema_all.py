@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-05-16T12:28:55
+# Generation date: 2025-05-30T14:53:29
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -318,7 +318,7 @@ class DataStandardOrTool(NamedThing):
     """
     Represents a standard or tool in the Bridge2AI Standards Registry.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["DataStandardOrTool"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:DataStandardOrTool"
@@ -337,6 +337,7 @@ class DataStandardOrTool(NamedThing):
     publication: Optional[Union[str, URIorCURIE]] = None
     formal_specification: Optional[Union[str, URIorCURIE]] = None
     responsible_organization: Optional[Union[Union[str, OrganizationId], list[Union[str, OrganizationId]]]] = empty_list()
+    has_relevant_data_substrate: Optional[Union[Union[str, DataSubstrateId], list[Union[str, DataSubstrateId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -382,6 +383,10 @@ class DataStandardOrTool(NamedThing):
             self.responsible_organization = [self.responsible_organization] if self.responsible_organization is not None else []
         self.responsible_organization = [v if isinstance(v, OrganizationId) else OrganizationId(v) for v in self.responsible_organization]
 
+        if not isinstance(self.has_relevant_data_substrate, list):
+            self.has_relevant_data_substrate = [self.has_relevant_data_substrate] if self.has_relevant_data_substrate is not None else []
+        self.has_relevant_data_substrate = [v if isinstance(v, DataSubstrateId) else DataSubstrateId(v) for v in self.has_relevant_data_substrate]
+
         super().__post_init__(**kwargs)
         self.category = str(self.class_class_curie)
 
@@ -391,7 +396,7 @@ class DataStandard(DataStandardOrTool):
     """
     Represents a general purpose standard in the Bridge2AI Standards Registry.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["DataStandard"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:DataStandard"
@@ -416,7 +421,7 @@ class BiomedicalStandard(DataStandard):
     Represents a standard in the Bridge2AI Standards Registry with particular applications or relevance to clinical or
     biomedical research purposes.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["BiomedicalStandard"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:BiomedicalStandard"
@@ -440,7 +445,7 @@ class Registry(DataStandardOrTool):
     """
     Represents a resource in the Bridge2AI Standards Registry serving to curate and/or index other resources.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["Registry"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:Registry"
@@ -464,7 +469,7 @@ class OntologyOrVocabulary(DataStandardOrTool):
     """
     A set of concepts and categories, potentially defined or accompanied by their hierarchical relationships.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["OntologyOrVocabulary"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:OntologyOrVocabulary"
@@ -489,7 +494,7 @@ class ModelRepository(DataStandardOrTool):
     Represents a resource in the Bridge2AI Standards Registry serving to curate and store computational models. To be
     a repository, the resource must not index models alone.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["ModelRepository"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:ModelRepository"
@@ -513,7 +518,7 @@ class ReferenceDataOrDataset(DataStandardOrTool):
     """
     Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["ReferenceDataOrDataset"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:ReferenceDataOrDataset"
@@ -537,7 +542,7 @@ class SoftwareOrTool(DataStandardOrTool):
     """
     Represents a piece of software or computational tool in the Bridge2AI Standards Registry.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["SoftwareOrTool"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:SoftwareOrTool"
@@ -562,7 +567,7 @@ class ReferenceImplementation(DataStandardOrTool):
     Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a
     full specification in a particular language or as an application to a specific use case.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["ReferenceImplementation"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:ReferenceImplementation"
@@ -587,7 +592,7 @@ class TrainingProgram(DataStandardOrTool):
     Represents a training program for skills and experience related to standards or tools in the Bridge2AI Standards
     Registry.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["TrainingProgram"]
     class_class_curie: ClassVar[str] = "B2AI_STANDARD:TrainingProgram"
@@ -1263,6 +1268,9 @@ slots.data_standardortools_collection = Slot(uri=B2AI_STANDARD.data_standardorto
 
 slots.responsible_organization = Slot(uri=B2AI_STANDARD.responsible_organization, name="responsible_organization", curie=B2AI_STANDARD.curie('responsible_organization'),
                    model_uri=DEFAULT_.responsible_organization, domain=DataStandardOrTool, range=Optional[Union[Union[str, OrganizationId], list[Union[str, OrganizationId]]]])
+
+slots.has_relevant_data_substrate = Slot(uri=B2AI_STANDARD.has_relevant_data_substrate, name="has_relevant_data_substrate", curie=B2AI_STANDARD.curie('has_relevant_data_substrate'),
+                   model_uri=DEFAULT_.has_relevant_data_substrate, domain=DataStandardOrTool, range=Optional[Union[Union[str, DataSubstrateId], list[Union[str, DataSubstrateId]]]])
 
 slots.data_collection = Slot(uri=B2AI_DATA.data_collection, name="data_collection", curie=B2AI_DATA.curie('data_collection'),
                    model_uri=DEFAULT_.data_collection, domain=None, range=Optional[Union[dict[Union[str, DataSetId], Union[dict, DataSet]], list[Union[dict, DataSet]]]])

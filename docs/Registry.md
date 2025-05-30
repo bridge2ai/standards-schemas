@@ -59,6 +59,17 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
       Registry : formal_specification
         
+      Registry : has_relevant_data_substrate
+        
+          
+    
+        
+        
+        Registry --> "*" DataSubstrate : has_relevant_data_substrate
+        click DataSubstrate href "../DataSubstrate"
+    
+
+        
       Registry : has_relevant_organization
         
           
@@ -159,6 +170,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
 | [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [responsible_organization](responsible_organization.md) | * <br/> [Organization](Organization.md) | Organization(s) responsible for providing and/or supporting the standard or t... | [DataStandardOrTool](DataStandardOrTool.md) |
+| [has_relevant_data_substrate](has_relevant_data_substrate.md) | * <br/> [DataSubstrate](DataSubstrate.md) | Subject standard has some relationship to the object data substrate(s), inclu... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | CURIE for the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -381,6 +393,22 @@ attributes:
     domain_of:
     - DataStandardOrTool
     range: Organization
+    multivalued: true
+  has_relevant_data_substrate:
+    name: has_relevant_data_substrate
+    description: Subject standard has some relationship to the object data substrate(s),
+      including whether it is intended to be used with the data substrate, or whether
+      it is implemented through the data substrate.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: related_to
+    domain: DataStandardOrTool
+    inherited: true
+    alias: has_relevant_data_substrate
+    owner: Registry
+    domain_of:
+    - DataStandardOrTool
+    range: DataSubstrate
     multivalued: true
   id:
     name: id
