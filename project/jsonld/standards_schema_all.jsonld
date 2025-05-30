@@ -1135,6 +1135,23 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "has_relevant_data_substrate",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_data_substrate",
+      "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
+      "is_a": "related_to",
+      "domain": "DataStandardOrTool",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_data_substrate",
+      "inherited": true,
+      "owner": "DataStandardOrTool",
+      "domain_of": [
+        "DataStandardOrTool"
+      ],
+      "range": "DataSubstrate",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "data_collection",
       "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/data_collection",
       "description": "Collection of associated DataSet objects.",
@@ -1759,7 +1776,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool",
@@ -1793,7 +1811,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard",
@@ -1827,7 +1846,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard",
@@ -1861,7 +1881,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry",
@@ -1895,7 +1916,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary",
@@ -1929,7 +1951,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository",
@@ -1963,7 +1986,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset",
@@ -1997,7 +2021,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool",
@@ -2031,7 +2056,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation",
@@ -2065,7 +2091,8 @@
         "url",
         "publication",
         "formal_specification",
-        "responsible_organization"
+        "responsible_organization",
+        "has_relevant_data_substrate"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram",
@@ -2086,7 +2113,7 @@
     {
       "name": "DataSet",
       "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSet",
-      "description": "Represents a data set produced by a group in the Bridge2AI consortium. ",
+      "description": "Represents a data set produced by a group in the Bridge2AI consortium.",
       "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
       "is_a": "NamedThing",
       "slots": [
@@ -2297,7 +2324,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2025-03-24T12:27:18",
   "source_file_size": 468,
-  "generation_date": "2025-05-16T12:28:54",
+  "generation_date": "2025-05-30T14:53:29",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

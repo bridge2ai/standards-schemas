@@ -172,6 +172,16 @@
                         "null"
                     ]
                 },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "has_relevant_organization": {
                     "description": "Subject standard has some relationship to the object organization(s), including as a user. This is distinct from the responsible organization, which is the group providing or supporting the standard or tool.",
                     "items": {
@@ -550,6 +560,16 @@
                         "null"
                     ]
                 },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "has_relevant_organization": {
                     "description": "Subject standard has some relationship to the object organization(s), including as a user. This is distinct from the responsible organization, which is the group providing or supporting the standard or tool.",
                     "items": {
@@ -734,6 +754,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -1289,6 +1319,16 @@
                         "null"
                     ]
                 },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "has_relevant_organization": {
                     "description": "Subject standard has some relationship to the object organization(s), including as a user. This is distinct from the responsible organization, which is the group providing or supporting the standard or tool.",
                     "items": {
@@ -1568,6 +1608,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -1892,6 +1942,16 @@
                         "null"
                     ]
                 },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "has_relevant_organization": {
                     "description": "Subject standard has some relationship to the object organization(s), including as a user. This is distinct from the responsible organization, which is the group providing or supporting the standard or tool.",
                     "items": {
@@ -2076,6 +2136,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -2266,6 +2336,16 @@
                         "null"
                     ]
                 },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "has_relevant_organization": {
                     "description": "Subject standard has some relationship to the object organization(s), including as a user. This is distinct from the responsible organization, which is the group providing or supporting the standard or tool.",
                     "items": {
@@ -2450,6 +2530,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -2684,6 +2774,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_relevant_data_substrate": {
+                    "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },

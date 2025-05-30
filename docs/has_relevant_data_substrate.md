@@ -1,22 +1,22 @@
 
 
-# Slot: category 
+# Slot: has_relevant_data_substrate 
 
 
-_CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard"._
+_Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate._
 
 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/category](https://w3id.org/bridge2ai/standards-schema-all/category)
-Alias: category
+URI: [https://w3id.org/bridge2ai/standards-schema-all/has_relevant_data_substrate](https://w3id.org/bridge2ai/standards-schema-all/has_relevant_data_substrate)
+Alias: has_relevant_data_substrate
 
 
 ## Inheritance
 
-* [type](type.md)
-    * **category**
+* [related_to](related_to.md)
+    * **has_relevant_data_substrate**
 
 
 
@@ -29,20 +29,13 @@ Alias: category
 | --- | --- | --- |
 | [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |  no  |
 | [ReferenceImplementation](ReferenceImplementation.md) | Represents an implementation of one or more standards or tools in the Bridge2... |  no  |
-| [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |  no  |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their... |  no  |
 | [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app... |  no  |
-| [Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ... |  no  |
-| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
 | [Registry](Registry.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |  no  |
-| [UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |  no  |
-| [AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part |  no  |
 | [ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |  no  |
 | [TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ... |  no  |
 | [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | Represents a resource in the Bridge2AI Standards Registry serving as a standa... |  no  |
 | [SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standar... |  no  |
-| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
-| [DataSet](DataSet.md) | Represents a data set produced by a group in the Bridge2AI consortium |  no  |
 | [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |  no  |
 
 
@@ -53,7 +46,9 @@ Alias: category
 
 ## Properties
 
-* Range: [CategoryType](CategoryType.md)
+* Range: [DataSubstrate](DataSubstrate.md)
+
+* Multivalued: True
 
 
 
@@ -79,8 +74,8 @@ Alias: category
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/category |
-| native | https://w3id.org/bridge2ai/standards-schema-all/category |
+| self | https://w3id.org/bridge2ai/standards-schema-all/has_relevant_data_substrate |
+| native | https://w3id.org/bridge2ai/standards-schema-all/has_relevant_data_substrate |
 
 
 
@@ -89,18 +84,20 @@ Alias: category
 
 <details>
 ```yaml
-name: category
-description: CURIE for the high level ontology class in which this entity is categorized.
-  Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
+name: has_relevant_data_substrate
+description: Subject standard has some relationship to the object data substrate(s),
+  including whether it is intended to be used with the data substrate, or whether
+  it is implemented through the data substrate.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: type
-domain: NamedThing
-designates_type: true
-alias: category
+is_a: related_to
+domain: DataStandardOrTool
+inherited: true
+alias: has_relevant_data_substrate
 domain_of:
-- NamedThing
-range: category_type
+- DataStandardOrTool
+range: DataSubstrate
+multivalued: true
 
 ```
 </details>

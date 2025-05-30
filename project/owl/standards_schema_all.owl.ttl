@@ -83,10 +83,10 @@
         linkml:ClassDefinition ;
     rdfs:label "UseCaseContainer" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/use_cases> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/use_cases> ] ;
     skos:definition "A container for UseCase." ;
     skos:inScheme <https://w3id.org/bridge2ai/standards-usecase-schema> .
@@ -219,6 +219,15 @@
     rdfs:label "data_standardortools_collection" ;
     rdfs:range <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
     skos:definition "Collection of associated data standards or tools" ;
+    skos:inScheme <https://w3id.org/bridge2ai/standards-datastandardortool-schema> .
+
+<https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_data_substrate> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "has_relevant_data_substrate" ;
+    rdfs:domain <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+    rdfs:range <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ;
+    rdfs:subPropertyOf <https://w3id.org/bridge2ai/standards-schema/related_to> ;
+    skos:definition "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate." ;
     skos:inScheme <https://w3id.org/bridge2ai/standards-datastandardortool-schema> .
 
 <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> a owl:ObjectProperty,
@@ -885,101 +894,150 @@
     rdfs:label "UseCase" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/xref> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/enables> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/data_topics> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> ],
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema-all/:UseCaseCategory> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category> ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uriorcurie ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/xref> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/relevant_to_gcs> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/data_topics> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_gc_use> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/enables> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_gc_use> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/enables> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/relevant_to_gcs> ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/data_topics> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/xref> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/data_topics> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_quality_control> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/standards_and_tools_for_gc_use> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/relevant_to_gcs> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/data_substrates> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/alternative_standards_and_tools> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/enables> ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/known_limitations> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema-all/:UseCaseCategory> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_experimental_design> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-usecase-schema/involved_in_metadata_management> ],
         <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
     skos:definition "Represents a use case for Bridge2AI standards." ;
     skos:inScheme <https://w3id.org/bridge2ai/standards-usecase-schema> .
+
+<https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "DataTopic" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/edam_identifier> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/ncit_identifier> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/mesh_identifier> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy> ],
+        <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
+    skos:definition "Represents a general data topic for Bridge2AI data or the tools/standards applied to the data." ;
+    skos:inScheme <https://w3id.org/bridge2ai/standards-datatopic-schema> .
 
 <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "DataSubstrate" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/mesh_identifier> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a rdfs:Datatype ;
                     owl:intersectionOf ( [ owl:unionOf ( <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> [ a rdfs:Datatype ;
@@ -987,84 +1045,35 @@
                                             owl:withRestrictions ( [ xsd:pattern "file headers" ] ) ] ) ] linkml:String ) ] ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/ncit_identifier> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/edam_identifier> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage> ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/ncit_identifier> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datasubstrate-schema/limitations> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datasubstrate-schema/file_extensions> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/edam_identifier> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
-        <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
-    skos:definition "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard." ;
-    skos:inScheme <https://w3id.org/bridge2ai/standards-datasubstrate-schema> .
-
-<https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> a owl:Class,
-        linkml:ClassDefinition ;
-    rdfs:label "DataTopic" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/edam_identifier> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/ncit_identifier> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datatopic-schema/topic_involves_anatomy> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/ncit_id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/mesh_identifier> ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/mesh_id> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/edam_id> ],
         <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
-    skos:definition "Represents a general data topic for Bridge2AI data or the tools/standards applied to the data." ;
-    skos:inScheme <https://w3id.org/bridge2ai/standards-datatopic-schema> .
+    skos:definition "Represents a data substrate for Bridge2AI data. This may be a high-level data structure or a specific implementation of that structure. Interpret as \"data, in this form or format\", as compared to DataStandard, which refers to the set of rules defining a standard. For example, data in TSV format is represented as a DataSubstrate but the concept of TSV format is a DataStandard." ;
+    skos:inScheme <https://w3id.org/bridge2ai/standards-datasubstrate-schema> .
 
 <https://w3id.org/bridge2ai/standards-organization-schema/Organization> a owl:Class,
         linkml:ClassDefinition ;
@@ -1073,20 +1082,23 @@
             owl:maxCardinality 1 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/ror_identifier> ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-organization-schema/ror_id> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-organization-schema/ror_id> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-organization-schema/ror_id> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/related_to> ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uriorcurie ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
@@ -1094,26 +1106,14 @@
             owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/related_to> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/wikidata_identifier> ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-organization-schema/wikidata_id> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/ror_identifier> ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-organization-schema/ror_id> ],
         <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
     skos:definition "Represents a group or organization related to or responsible for one or more Bridge2AI standards." ;
     skos:inScheme <https://w3id.org/bridge2ai/standards-organization-schema> .
-
-<https://w3id.org/bridge2ai/standards-schema/related_to> a owl:ObjectProperty,
-        owl:SymmetricProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "related_to" ;
-    rdfs:domain <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
-    rdfs:range <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
-    skos:definition "A relationship that is asserted between two named things." ;
-    skos:inScheme <https://w3id.org/bridge2ai/standards-schema> .
 
 <https://w3id.org/bridge2ai/standards-schema-all/:UseCaseCategory> a owl:Class,
         linkml:EnumDefinition ;
@@ -1125,175 +1125,184 @@
         <https://w3id.org/bridge2ai/standards-schema-all/:UseCaseCategory#modeling>,
         <https://w3id.org/bridge2ai/standards-schema-all/:UseCaseCategory#standardization> .
 
+<https://w3id.org/bridge2ai/standards-schema/related_to> a owl:ObjectProperty,
+        owl:SymmetricProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "related_to" ;
+    rdfs:domain <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
+    rdfs:range <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
+    skos:definition "A relationship that is asserted between two named things." ;
+    skos:inScheme <https://w3id.org/bridge2ai/standards-schema> .
+
 <https://w3id.org/bridge2ai/standards-dataset-schema/DataSet> a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "DataSet" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/documentation_url> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/data_url> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/has_parts> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/is_public> ],
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-dataset-schema/DataSet> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/has_parts> ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uriorcurie ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/datasheet_url> ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/has_files> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/is_public> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/datasheet_url> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/data_url> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/produced_by> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/documentation_url> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/topics> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/documentation_url> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/has_files> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/topics> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/data_url> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/is_public> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/datasheet_url> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/is_public> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/documentation_url> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/substrates> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/is_public> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/data_url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/topics> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/datasheet_url> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/topics> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/data_url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/datasheet_url> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/produced_by> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-dataset-schema/DataSet> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/has_parts> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/substrates> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Uriorcurie ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/data_url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/documentation_url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/produced_by> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/is_public> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Uriorcurie ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/documentation_url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-dataset-schema/has_files> ],
         <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
-    skos:definition "Represents a data set produced by a group in the Bridge2AI consortium. " ;
+    skos:definition "Represents a data set produced by a group in the Bridge2AI consortium." ;
     skos:inScheme <https://w3id.org/bridge2ai/standards-dataset-schema> .
 
 <https://w3id.org/bridge2ai/standards-schema/NamedThing> a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "NamedThing" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/category_type> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/related_to> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/description> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Uriorcurie ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/id> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/name> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/related_to> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Date ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/used_in_bridge2ai> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/name> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Uriorcurie ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/description> ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/id> ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/used_in_bridge2ai> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/name> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/id> ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Boolean ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/used_in_bridge2ai> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/description> ] ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/used_in_bridge2ai> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/id> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/related_to> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contribution_date> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_orcid> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/id> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/name> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/category_type> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_github_name> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contributor_name> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/subclass_of> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/description> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Date ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/contribution_date> ] ;
     skos:definition "A generic grouping for any identifiable entity" ;
     skos:exactMatch <http://schema.org/Thing> ;
     skos:inScheme <https://w3id.org/bridge2ai/standards-schema> .
@@ -1311,92 +1320,98 @@
         linkml:ClassDefinition ;
     rdfs:label "DataStandardOrTool" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Uriorcurie ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Uriorcurie ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_data_substrate> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/responsible_organization> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/responsible_organization> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://w3id.org/bridge2ai/standards-schema-all/:StandardsCollectionTag> ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uriorcurie ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_training_resource> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/responsible_organization> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/formal_specification> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-schema/url> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_data_substrate> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/purpose_detail> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/has_relevant_organization> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/requires_registration> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/is_open> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/responsible_organization> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <https://w3id.org/bridge2ai/standards-datastandardortool-schema/concerns_data_topic> ],
         <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
     skos:definition "Represents a standard or tool in the Bridge2AI Standards Registry." ;
     skos:inScheme <https://w3id.org/bridge2ai/standards-datastandardortool-schema> .
@@ -1453,29 +1468,9 @@
         <https://w3id.org/bridge2ai/standards-schema-all/:StandardsCollectionTag#workflowlanguage> .
 
 [] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard> ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ;
     owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard> .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard> ;
-    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard> .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> ;
-    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool> ;
-    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool> .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry> ;
-    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry> .
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> .
 
 [] a owl:Restriction ;
     rdfs:subClassOf <https://w3id.org/bridge2ai/standards-schema/NamedThing> ;
@@ -1483,24 +1478,9 @@
     owl:someValuesFrom <https://w3id.org/bridge2ai/standards-schema/NamedThing> .
 
 [] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-dataset-schema/DataSet> ;
-    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-dataset-schema/DataSet> .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> ;
-    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datasubstrate-schema/DataSubstrate> .
-
-[] a owl:Restriction ;
     rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset> ;
     owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
     owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset> .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary> ;
-    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary> .
 
 [] a owl:Restriction ;
     rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram> ;
@@ -1508,19 +1488,9 @@
     owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/TrainingProgram> .
 
 [] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity> ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-dataset-schema/DataSet> ;
     owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity> .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation> ;
-    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation> .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
-    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/Organization> .
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-dataset-schema/DataSet> .
 
 [] a owl:Restriction ;
     rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository> ;
@@ -1528,12 +1498,57 @@
     owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ModelRepository> .
 
 [] a owl:Restriction ;
-    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity> ;
     owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
-    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> .
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity> .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry> ;
+    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/Registry> .
 
 [] a owl:Restriction ;
     rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> ;
     owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
     owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datatopic-schema/DataTopic> .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard> ;
+    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/BiomedicalStandard> .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation> ;
+    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceImplementation> .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool> ;
+    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool> .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> ;
+    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool> .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary> ;
+    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/OntologyOrVocabulary> .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard> ;
+    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandard> .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-organization-schema/Organization> ;
+    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-organization-schema/Organization> .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> ;
+    owl:onProperty <https://w3id.org/bridge2ai/standards-schema/category> ;
+    owl:someValuesFrom <https://w3id.org/bridge2ai/standards-usecase-schema/UseCase> .
 

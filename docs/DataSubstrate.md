@@ -118,6 +118,16 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
+| [DataStandardOrTool](DataStandardOrTool.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [DataStandard](DataStandard.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [BiomedicalStandard](BiomedicalStandard.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [Registry](Registry.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [ModelRepository](ModelRepository.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [SoftwareOrTool](SoftwareOrTool.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [ReferenceImplementation](ReferenceImplementation.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [TrainingProgram](TrainingProgram.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | range | [DataSubstrate](DataSubstrate.md) |
 | [DataSet](DataSet.md) | [substrates](substrates.md) | range | [DataSubstrate](DataSubstrate.md) |
 | [DataSubstrate](DataSubstrate.md) | [metadata_storage](metadata_storage.md) | any_of[range] | [DataSubstrate](DataSubstrate.md) |
 | [DataSubstrateContainer](DataSubstrateContainer.md) | [data_substrates_collection](data_substrates_collection.md) | range | [DataSubstrate](DataSubstrate.md) |
