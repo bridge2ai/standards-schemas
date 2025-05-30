@@ -44,6 +44,7 @@ classes:
       - publication
       - formal_specification
       - responsible_organization
+      - has_relevant_data_substrate
 
   DataStandard:
     is_a: DataStandardOrTool
