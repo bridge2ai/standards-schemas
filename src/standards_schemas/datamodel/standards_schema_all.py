@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-05-30T14:53:29
+# Generation date: 2025-06-12T11:10:08
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -161,10 +161,6 @@ class OntologyOrVocabularyId(DataStandardOrToolId):
 
 
 class ModelRepositoryId(DataStandardOrToolId):
-    pass
-
-
-class ReferenceDataOrDatasetId(DataStandardOrToolId):
     pass
 
 
@@ -514,30 +510,6 @@ class ModelRepository(DataStandardOrTool):
 
 
 @dataclass(repr=False)
-class ReferenceDataOrDataset(DataStandardOrTool):
-    """
-    Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.
-    """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "concerns_data_topic", "has_relevant_organization", "has_relevant_data_substrate"]
-
-    class_class_uri: ClassVar[URIRef] = B2AI_STANDARD["ReferenceDataOrDataset"]
-    class_class_curie: ClassVar[str] = "B2AI_STANDARD:ReferenceDataOrDataset"
-    class_name: ClassVar[str] = "ReferenceDataOrDataset"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/ReferenceDataOrDataset")
-
-    id: Union[str, ReferenceDataOrDatasetId] = None
-
-    def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, ReferenceDataOrDatasetId):
-            self.id = ReferenceDataOrDatasetId(self.id)
-
-        super().__post_init__(**kwargs)
-        self.category = str(self.class_class_curie)
-
-
-@dataclass(repr=False)
 class SoftwareOrTool(DataStandardOrTool):
     """
     Represents a piece of software or computational tool in the Bridge2AI Standards Registry.
@@ -634,7 +606,7 @@ class DataStandardOrToolContainer(YAMLRoot):
 @dataclass(repr=False)
 class DataSet(NamedThing):
     """
-    Represents a data set produced by a group in the Bridge2AI consortium.
+    Represents a data set by its metadata. This may or may not be produced by a group in the Bridge2AI consortium.
     """
     _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "has_files", "has_parts", "produced_by", "substrates", "topics"]
 
@@ -653,6 +625,7 @@ class DataSet(NamedThing):
     is_public: Optional[Union[bool, Bool]] = None
     substrates: Optional[Union[Union[str, DataSubstrateId], list[Union[str, DataSubstrateId]]]] = empty_list()
     topics: Optional[Union[Union[str, DataTopicId], list[Union[str, DataTopicId]]]] = empty_list()
+    is_bridge2ai_data: Optional[Union[bool, Bool]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -691,6 +664,9 @@ class DataSet(NamedThing):
         if not isinstance(self.topics, list):
             self.topics = [self.topics] if self.topics is not None else []
         self.topics = [v if isinstance(v, DataTopicId) else DataTopicId(v) for v in self.topics]
+
+        if self.is_bridge2ai_data is not None and not isinstance(self.is_bridge2ai_data, Bool):
+            self.is_bridge2ai_data = Bool(self.is_bridge2ai_data)
 
         super().__post_init__(**kwargs)
         self.category = str(self.class_class_curie)
@@ -1301,6 +1277,9 @@ slots.substrates = Slot(uri=B2AI_DATA.substrates, name="substrates", curie=B2AI_
 
 slots.topics = Slot(uri=B2AI_DATA.topics, name="topics", curie=B2AI_DATA.curie('topics'),
                    model_uri=DEFAULT_.topics, domain=DataSet, range=Optional[Union[Union[str, DataTopicId], list[Union[str, DataTopicId]]]])
+
+slots.is_bridge2ai_data = Slot(uri=B2AI_DATA.is_bridge2ai_data, name="is_bridge2ai_data", curie=B2AI_DATA.curie('is_bridge2ai_data'),
+                   model_uri=DEFAULT_.is_bridge2ai_data, domain=DataSet, range=Optional[Union[bool, Bool]])
 
 slots.metadata_storage = Slot(uri=B2AI_SUBSTRATE.metadata_storage, name="metadata_storage", curie=B2AI_SUBSTRATE.curie('metadata_storage'),
                    model_uri=DEFAULT_.metadata_storage, domain=NamedThing, range=Optional[Union[str, list[str]]])

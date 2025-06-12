@@ -32,8 +32,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         click OntologyOrVocabulary href "../OntologyOrVocabulary"
       DataStandardOrTool <|-- ModelRepository
         click ModelRepository href "../ModelRepository"
-      DataStandardOrTool <|-- ReferenceDataOrDataset
-        click ReferenceDataOrDataset href "../ReferenceDataOrDataset"
       DataStandardOrTool <|-- SoftwareOrTool
         click SoftwareOrTool href "../SoftwareOrTool"
       DataStandardOrTool <|-- ReferenceImplementation
@@ -174,7 +172,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         * [Registry](Registry.md)
         * [OntologyOrVocabulary](OntologyOrVocabulary.md)
         * [ModelRepository](ModelRepository.md)
-        * [ReferenceDataOrDataset](ReferenceDataOrDataset.md)
         * [SoftwareOrTool](SoftwareOrTool.md)
         * [ReferenceImplementation](ReferenceImplementation.md)
         * [TrainingProgram](TrainingProgram.md)
@@ -247,11 +244,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
 | [ModelRepository](ModelRepository.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ModelRepository](ModelRepository.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [ModelRepository](ModelRepository.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
-| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
-| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
-| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |
-| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [responsible_organization](responsible_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
-| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [has_relevant_data_substrate](has_relevant_data_substrate.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [concerns_data_topic](concerns_data_topic.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [has_relevant_organization](has_relevant_organization.md) | domain | [DataStandardOrTool](DataStandardOrTool.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [has_training_resource](has_training_resource.md) | range | [DataStandardOrTool](DataStandardOrTool.md) |

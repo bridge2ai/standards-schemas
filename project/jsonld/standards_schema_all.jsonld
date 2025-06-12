@@ -1313,6 +1313,21 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "is_bridge2ai_data",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/is_bridge2ai_data",
+      "description": "True if the data set is produced by a Bridge2AI consortium group. False if the data set is not produced by a Bridge2AI consortium group.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "node_property",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/is_bridge2ai_data",
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "metadata_storage",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage",
       "description": "Data Substrate in which metadata is stored.",
@@ -1959,41 +1974,6 @@
       "@type": "ClassDefinition"
     },
     {
-      "name": "ReferenceDataOrDataset",
-      "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset",
-      "description": "Represents a resource in the Bridge2AI Standards Registry serving as a standardized, reusable data source.",
-      "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
-      "is_a": "DataStandardOrTool",
-      "slots": [
-        "id",
-        "category",
-        "name",
-        "description",
-        "subclass_of",
-        "related_to",
-        "contributor_name",
-        "contributor_github_name",
-        "contributor_orcid",
-        "contribution_date",
-        "used_in_bridge2ai",
-        "collection",
-        "concerns_data_topic",
-        "has_relevant_organization",
-        "has_training_resource",
-        "purpose_detail",
-        "is_open",
-        "requires_registration",
-        "url",
-        "publication",
-        "formal_specification",
-        "responsible_organization",
-        "has_relevant_data_substrate"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/ReferenceDataOrDataset",
-      "@type": "ClassDefinition"
-    },
-    {
       "name": "SoftwareOrTool",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/SoftwareOrTool",
       "description": "Represents a piece of software or computational tool in the Bridge2AI Standards Registry.",
@@ -2113,7 +2093,7 @@
     {
       "name": "DataSet",
       "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSet",
-      "description": "Represents a data set produced by a group in the Bridge2AI consortium.",
+      "description": "Represents a data set by its metadata. This may or may not be produced by a group in the Bridge2AI consortium.",
       "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
       "is_a": "NamedThing",
       "slots": [
@@ -2136,7 +2116,8 @@
         "datasheet_url",
         "is_public",
         "substrates",
-        "topics"
+        "topics",
+        "is_bridge2ai_data"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSet",
@@ -2324,7 +2305,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2025-03-24T12:27:18",
   "source_file_size": 468,
-  "generation_date": "2025-05-30T14:53:29",
+  "generation_date": "2025-06-12T11:10:08",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

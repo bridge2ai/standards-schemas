@@ -3,7 +3,7 @@
 # Class: DataSet 
 
 
-_Represents a data set produced by a group in the Bridge2AI consortium._
+_Represents a data set by its metadata. This may or may not be produced by a group in the Bridge2AI consortium._
 
 
 
@@ -55,6 +55,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 
         
       DataSet : id
+        
+      DataSet : is_bridge2ai_data
         
       DataSet : is_public
         
@@ -143,6 +145,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 | [is_public](is_public.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the data set is publicly available | direct |
 | [substrates](substrates.md) | * <br/> [DataSubstrate](DataSubstrate.md) | Subject data set is relevant to the substrate(s) listed in this slot | direct |
 | [topics](topics.md) | * <br/> [DataTopic](DataTopic.md) | Subject data set is relevant to the topic(s) listed in this slot | direct |
+| [is_bridge2ai_data](is_bridge2ai_data.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the data set is produced by a Bridge2AI consortium group | direct |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | CURIE for the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -173,6 +176,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 | [DataSet](DataSet.md) | [is_public](is_public.md) | domain | [DataSet](DataSet.md) |
 | [DataSet](DataSet.md) | [substrates](substrates.md) | domain | [DataSet](DataSet.md) |
 | [DataSet](DataSet.md) | [topics](topics.md) | domain | [DataSet](DataSet.md) |
+| [DataSet](DataSet.md) | [is_bridge2ai_data](is_bridge2ai_data.md) | domain | [DataSet](DataSet.md) |
 | [DataSetContainer](DataSetContainer.md) | [data_collection](data_collection.md) | range | [DataSet](DataSet.md) |
 
 
@@ -218,7 +222,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 <details>
 ```yaml
 name: DataSet
-description: Represents a data set produced by a group in the Bridge2AI consortium.
+description: Represents a data set by its metadata. This may or may not be produced
+  by a group in the Bridge2AI consortium.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 is_a: NamedThing
 slots:
@@ -231,6 +236,7 @@ slots:
 - is_public
 - substrates
 - topics
+- is_bridge2ai_data
 
 ```
 </details>
@@ -240,7 +246,8 @@ slots:
 <details>
 ```yaml
 name: DataSet
-description: Represents a data set produced by a group in the Bridge2AI consortium.
+description: Represents a data set by its metadata. This may or may not be produced
+  by a group in the Bridge2AI consortium.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 is_a: NamedThing
 attributes:
@@ -370,6 +377,20 @@ attributes:
     - DataSet
     range: DataTopic
     multivalued: true
+  is_bridge2ai_data:
+    name: is_bridge2ai_data
+    description: True if the data set is produced by a Bridge2AI consortium group.
+      False if the data set is not produced by a Bridge2AI consortium group.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: DataSet
+    alias: is_bridge2ai_data
+    owner: DataSet
+    domain_of:
+    - DataSet
+    range: boolean
+    required: false
   id:
     name: id
     description: A unique identifier for a thing.
