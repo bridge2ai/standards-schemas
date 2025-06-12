@@ -161,5 +161,4 @@ slots:
       a Bridge2AI consortium group.
     domain: DataSet
     range: boolean
-    default_value: false
     required: false
