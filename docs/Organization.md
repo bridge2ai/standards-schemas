@@ -121,8 +121,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [ModelRepository](ModelRepository.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
 | [ModelRepository](ModelRepository.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
-| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
-| [ReferenceDataOrDataset](ReferenceDataOrDataset.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |

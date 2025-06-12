@@ -27,7 +27,7 @@ Alias: is_public
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DataSet](DataSet.md) | Represents a data set produced by a group in the Bridge2AI consortium |  no  |
+| [DataSet](DataSet.md) | Represents a data set by its metadata |  no  |
 
 
 

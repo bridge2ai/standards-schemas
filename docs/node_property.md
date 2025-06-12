@@ -36,6 +36,7 @@ Alias: node_property
     * [documentation_url](documentation_url.md)
     * [datasheet_url](datasheet_url.md)
     * [is_public](is_public.md)
+    * [is_bridge2ai_data](is_bridge2ai_data.md)
     * [metadata_storage](metadata_storage.md)
     * [file_extensions](file_extensions.md)
     * [limitations](limitations.md)
