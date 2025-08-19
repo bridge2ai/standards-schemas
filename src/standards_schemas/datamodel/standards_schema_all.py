@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-06-12T11:10:08
+# Generation date: 2025-08-19T15:25:06
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -626,6 +626,7 @@ class DataSet(NamedThing):
     substrates: Optional[Union[Union[str, DataSubstrateId], list[Union[str, DataSubstrateId]]]] = empty_list()
     topics: Optional[Union[Union[str, DataTopicId], list[Union[str, DataTopicId]]]] = empty_list()
     is_bridge2ai_data: Optional[Union[bool, Bool]] = None
+    availability_description: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -667,6 +668,9 @@ class DataSet(NamedThing):
 
         if self.is_bridge2ai_data is not None and not isinstance(self.is_bridge2ai_data, Bool):
             self.is_bridge2ai_data = Bool(self.is_bridge2ai_data)
+
+        if self.availability_description is not None and not isinstance(self.availability_description, str):
+            self.availability_description = str(self.availability_description)
 
         super().__post_init__(**kwargs)
         self.category = str(self.class_class_curie)
@@ -1280,6 +1284,9 @@ slots.topics = Slot(uri=B2AI_DATA.topics, name="topics", curie=B2AI_DATA.curie('
 
 slots.is_bridge2ai_data = Slot(uri=B2AI_DATA.is_bridge2ai_data, name="is_bridge2ai_data", curie=B2AI_DATA.curie('is_bridge2ai_data'),
                    model_uri=DEFAULT_.is_bridge2ai_data, domain=DataSet, range=Optional[Union[bool, Bool]])
+
+slots.availability_description = Slot(uri=B2AI_DATA.availability_description, name="availability_description", curie=B2AI_DATA.curie('availability_description'),
+                   model_uri=DEFAULT_.availability_description, domain=DataSet, range=Optional[str])
 
 slots.metadata_storage = Slot(uri=B2AI_SUBSTRATE.metadata_storage, name="metadata_storage", curie=B2AI_SUBSTRATE.curie('metadata_storage'),
                    model_uri=DEFAULT_.metadata_storage, domain=NamedThing, range=Optional[Union[str, list[str]]])
