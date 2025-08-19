@@ -1328,6 +1328,27 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "availability_description",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/availability_description",
+      "description": "A description of the availability of the data set, including any restrictions on access or use.",
+      "examples": [
+        {
+          "value": "\"Datasets require additional permissions. Please visit https://example.com for more information.\"",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/bridge2ai/standards-dataset-schema",
+      "is_a": "node_property",
+      "domain": "DataSet",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/availability_description",
+      "owner": "DataSet",
+      "domain_of": [
+        "DataSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "metadata_storage",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datasubstrate-schema/metadata_storage",
       "description": "Data Substrate in which metadata is stored.",
@@ -2117,7 +2138,8 @@
         "is_public",
         "substrates",
         "topics",
-        "is_bridge2ai_data"
+        "is_bridge2ai_data",
+        "availability_description"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-dataset-schema/DataSet",
@@ -2305,7 +2327,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2025-03-24T12:27:18",
   "source_file_size": 468,
-  "generation_date": "2025-06-12T11:10:08",
+  "generation_date": "2025-08-19T15:25:06",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

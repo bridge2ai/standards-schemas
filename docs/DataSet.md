@@ -23,6 +23,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
       NamedThing <|-- DataSet
         click NamedThing href "../NamedThing"
       
+      DataSet : availability_description
+        
       DataSet : category
         
       DataSet : contribution_date
@@ -146,6 +148,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 | [substrates](substrates.md) | * <br/> [DataSubstrate](DataSubstrate.md) | Subject data set is relevant to the substrate(s) listed in this slot | direct |
 | [topics](topics.md) | * <br/> [DataTopic](DataTopic.md) | Subject data set is relevant to the topic(s) listed in this slot | direct |
 | [is_bridge2ai_data](is_bridge2ai_data.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the data set is produced by a Bridge2AI consortium group | direct |
+| [availability_description](availability_description.md) | 0..1 <br/> [String](String.md) | A description of the availability of the data set, including any restrictions... | direct |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | CURIE for the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -177,6 +180,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 | [DataSet](DataSet.md) | [substrates](substrates.md) | domain | [DataSet](DataSet.md) |
 | [DataSet](DataSet.md) | [topics](topics.md) | domain | [DataSet](DataSet.md) |
 | [DataSet](DataSet.md) | [is_bridge2ai_data](is_bridge2ai_data.md) | domain | [DataSet](DataSet.md) |
+| [DataSet](DataSet.md) | [availability_description](availability_description.md) | domain | [DataSet](DataSet.md) |
 | [DataSetContainer](DataSetContainer.md) | [data_collection](data_collection.md) | range | [DataSet](DataSet.md) |
 
 
@@ -237,6 +241,7 @@ slots:
 - substrates
 - topics
 - is_bridge2ai_data
+- availability_description
 
 ```
 </details>
@@ -390,6 +395,23 @@ attributes:
     domain_of:
     - DataSet
     range: boolean
+    required: false
+  availability_description:
+    name: availability_description
+    description: A description of the availability of the data set, including any
+      restrictions on access or use.
+    examples:
+    - value: '"Datasets require additional permissions. Please visit https://example.com
+        for more information."'
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: DataSet
+    alias: availability_description
+    owner: DataSet
+    domain_of:
+    - DataSet
+    range: string
     required: false
   id:
     name: id

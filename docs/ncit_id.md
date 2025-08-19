@@ -22,8 +22,8 @@ Alias: ncit_id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
 | [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
+| [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
 
 
 

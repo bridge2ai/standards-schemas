@@ -296,6 +296,13 @@
             "additionalProperties": false,
             "description": "Represents a data set by its metadata. This may or may not be produced by a group in the Bridge2AI consortium.",
             "properties": {
+                "availability_description": {
+                    "description": "A description of the availability of the data set, including any restrictions on access or use.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
                 "category": {
                     "description": "CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"B2AI_STANDARD:DataStandard\".",
                     "enum": [
