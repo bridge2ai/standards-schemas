@@ -11,7 +11,8 @@
     "standards_datasubstrate_schema",
     "standards_datatopic_schema",
     "standards_organization_schema",
-    "standards_usecase_schema"
+    "standards_usecase_schema",
+    "standards_manifest_schema"
   ],
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "prefixes": [
@@ -1705,6 +1706,180 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "manifest_collection",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/manifest_collection",
+      "description": "Collection of associated Manifest objects.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/manifest_collection",
+      "owner": "ManifestContainer",
+      "domain_of": [
+        "ManifestContainer"
+      ],
+      "range": "Manifest",
+      "multivalued": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "organization",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/organization",
+      "description": "The manifest corresponds to this organization. Must be a single Organization object, referenced with its B2AI_ORG ID.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "is_a": "related_to",
+      "domain": "Manifest",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/organization",
+      "inherited": true,
+      "owner": "Manifest",
+      "domain_of": [
+        "Manifest"
+      ],
+      "range": "Organization",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "datasets",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/datasets",
+      "description": "The manifest includes these datasets. Must be a list of Dataset objects, referenced with their B2AI_DATA IDs.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "is_a": "related_to",
+      "domain": "Manifest",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/datasets",
+      "inherited": true,
+      "owner": "Manifest",
+      "domain_of": [
+        "Manifest"
+      ],
+      "range": "DataSet",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_parts",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/data_parts",
+      "description": "Collection of associated DataPart objects.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/data_parts",
+      "owner": "Manifest",
+      "domain_of": [
+        "Manifest"
+      ],
+      "range": "DataPart",
+      "multivalued": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_part_name",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/data_part_name",
+      "description": "Name of the data part.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/data_part_name",
+      "owner": "DataPart",
+      "domain_of": [
+        "DataPart"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "data_part_description",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/data_part_description",
+      "description": "Description of the data part.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/data_part_description",
+      "owner": "DataPart",
+      "domain_of": [
+        "DataPart"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "standards_and_tools",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/standards_and_tools",
+      "description": "The data part includes these standards and tools. Must be a list of StandardOrTool objects, referenced with their B2AI_STANDARD IDs.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "is_a": "related_to",
+      "domain": "DataPart",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/standards_and_tools",
+      "inherited": true,
+      "owner": "DataPart",
+      "domain_of": [
+        "DataPart"
+      ],
+      "range": "DataStandardOrTool",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "uses_data_substrates",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/uses_data_substrates",
+      "description": "The data part includes these data substrates. Must be a list of DataSubstrate objects, referenced with their B2AI_SUBSTRATE IDs.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "is_a": "related_to",
+      "domain": "DataPart",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/uses_data_substrates",
+      "inherited": true,
+      "owner": "DataPart",
+      "domain_of": [
+        "DataPart"
+      ],
+      "range": "DataSubstrate",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "concerns_data_topics",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/concerns_data_topics",
+      "description": "The data part includes these data topics. Must be a list of DataTopic objects, referenced with their B2AI_TOPIC IDs.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "is_a": "related_to",
+      "domain": "DataPart",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/concerns_data_topics",
+      "inherited": true,
+      "owner": "DataPart",
+      "domain_of": [
+        "DataPart"
+      ],
+      "range": "DataTopic",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "notes",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/notes",
+      "description": "Any additional notes about the manifest or the data part.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/notes",
+      "owner": "DataPart",
+      "domain_of": [
+        "Manifest",
+        "DataPart"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "anatomy",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/anatomy",
+      "description": "Relevant anatomical locations, including gross anatomical parts, cell types, and subcellular locations.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/anatomy",
+      "owner": "DataPart",
+      "domain_of": [
+        "DataPart"
+      ],
+      "range": "AnatomicalEntity",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "UseCase_use_case_category",
       "definition_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/use_case_category",
       "description": "Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories.",
@@ -1754,7 +1929,8 @@
     {
       "name": "AnatomicalEntity",
       "id_prefixes": [
-        "uberon"
+        "uberon",
+        "clo"
       ],
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity",
       "description": "A subcellular location, cell type or gross anatomical part",
@@ -2321,13 +2497,70 @@
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-usecase-schema/UseCaseContainer",
       "@type": "ClassDefinition"
+    },
+    {
+      "name": "Manifest",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/Manifest",
+      "description": "Represents a manifest. There should be a 1 to 1 mapping between a manifest and an organization, but each manifest has its own ID.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "is_a": "NamedThing",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "contributor_name",
+        "contributor_github_name",
+        "contributor_orcid",
+        "contribution_date",
+        "used_in_bridge2ai",
+        "organization",
+        "datasets",
+        "data_parts",
+        "notes"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/Manifest",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ManifestContainer",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/ManifestContainer",
+      "description": "A container for Manifests.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "slots": [
+        "manifest_collection"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/ManifestContainer",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DataPart",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/DataPart",
+      "description": "Represents a part of all datasets in a manifest. This may be a file, table, or other component. It does not have to be associated with a single dataset, but represents a general type of data produced by the organization.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
+      "slots": [
+        "data_part_name",
+        "data_part_description",
+        "standards_and_tools",
+        "uses_data_substrates",
+        "concerns_data_topics",
+        "anatomy",
+        "notes"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/DataPart",
+      "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
-  "source_file_date": "2025-03-24T12:27:18",
-  "source_file_size": 468,
-  "generation_date": "2025-08-19T15:25:06",
+  "source_file_date": "2025-09-05T15:49:49",
+  "source_file_size": 498,
+  "generation_date": "2025-09-05T16:29:52",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",
@@ -2339,6 +2572,7 @@
     "standards_datatopic_schema.context.jsonld",
     "standards_organization_schema.context.jsonld",
     "standards_usecase_schema.context.jsonld",
+    "standards_manifest_schema.context.jsonld",
     {
       "@base": "https://w3id.org/bridge2ai/standards-schema-all/"
     }

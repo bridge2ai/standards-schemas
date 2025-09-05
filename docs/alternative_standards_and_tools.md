@@ -34,7 +34,6 @@ Alias: alternative_standards_and_tools
 
 
 
-
 ## Properties
 
 * Range: [DataStandardOrTool](DataStandardOrTool.md)
@@ -44,9 +43,7 @@ Alias: alternative_standards_and_tools
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

@@ -15,19 +15,18 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
 
 
 
-
 ```mermaid
  classDiagram
     class DataStandard
-    click DataStandard href "../DataStandard"
+    click DataStandard href "../DataStandard/"
       DataStandardOrTool <|-- DataStandard
-        click DataStandardOrTool href "../DataStandardOrTool"
+        click DataStandardOrTool href "../DataStandardOrTool/"
       
 
       DataStandard <|-- BiomedicalStandard
-        click BiomedicalStandard href "../BiomedicalStandard"
+        click BiomedicalStandard href "../BiomedicalStandard/"
       
-      
+
       DataStandard : category
         
       DataStandard : collection
@@ -37,7 +36,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
         
         
         DataStandard --> "*" StandardsCollectionTag : collection
-        click StandardsCollectionTag href "../StandardsCollectionTag"
+        click StandardsCollectionTag href "../StandardsCollectionTag/"
     
 
         
@@ -48,7 +47,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
         
         
         DataStandard --> "*" DataTopic : concerns_data_topic
-        click DataTopic href "../DataTopic"
+        click DataTopic href "../DataTopic/"
     
 
         
@@ -71,7 +70,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
         
         
         DataStandard --> "*" DataSubstrate : has_relevant_data_substrate
-        click DataSubstrate href "../DataSubstrate"
+        click DataSubstrate href "../DataSubstrate/"
     
 
         
@@ -82,7 +81,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
         
         
         DataStandard --> "*" Organization : has_relevant_organization
-        click Organization href "../Organization"
+        click Organization href "../Organization/"
     
 
         
@@ -93,7 +92,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
         
         
         DataStandard --> "*" DataStandardOrTool : has_training_resource
-        click DataStandardOrTool href "../DataStandardOrTool"
+        click DataStandardOrTool href "../DataStandardOrTool/"
     
 
         
@@ -114,7 +113,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
         
         
         DataStandard --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -127,7 +126,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
         
         
         DataStandard --> "*" Organization : responsible_organization
-        click Organization href "../Organization"
+        click Organization href "../Organization/"
     
 
         
@@ -138,7 +137,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
         
         
         DataStandard --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -197,8 +196,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
 
 
 
-## Identifier and Mapping Information
 
+## Identifier and Mapping Information
 
 
 
@@ -219,7 +218,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandard](https://w3id
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataStandard |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataStandard |
-
 
 
 

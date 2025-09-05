@@ -7,7 +7,7 @@ _Tags for specific sets of standards._
 
 
 
-URI: [StandardsCollectionTag](StandardsCollectionTag.md)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/StandardsCollectionTag](https://w3id.org/bridge2ai/standards-schema-all/StandardsCollectionTag)
 
 ## Permissible Values
 
@@ -67,9 +67,7 @@ URI: [StandardsCollectionTag](StandardsCollectionTag.md)
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

@@ -34,7 +34,6 @@ Alias: use_case_category
 
 
 
-
 ## Properties
 
 * Range: [UseCaseCategory](UseCaseCategory.md)
@@ -44,9 +43,7 @@ Alias: use_case_category
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

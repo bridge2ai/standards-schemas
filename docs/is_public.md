@@ -34,7 +34,6 @@ Alias: is_public
 
 
 
-
 ## Properties
 
 * Range: [Boolean](Boolean.md)
@@ -42,9 +41,7 @@ Alias: is_public
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

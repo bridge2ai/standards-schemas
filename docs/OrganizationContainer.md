@@ -15,11 +15,10 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer](htt
 
 
 
-
 ```mermaid
  classDiagram
     class OrganizationContainer
-    click OrganizationContainer href "../OrganizationContainer"
+    click OrganizationContainer href "../OrganizationContainer/"
       OrganizationContainer : organizations
         
           
@@ -27,7 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer](htt
         
         
         OrganizationContainer --> "*" Organization : organizations
-        click Organization href "../Organization"
+        click Organization href "../Organization/"
     
 
         
@@ -54,8 +53,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer](htt
 
 
 
-## Identifier and Mapping Information
 
+## Identifier and Mapping Information
 
 
 
@@ -76,7 +75,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer](htt
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer |
-
 
 
 

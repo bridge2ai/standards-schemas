@@ -34,7 +34,6 @@ Alias: is_bridge2ai_data
 
 
 
-
 ## Properties
 
 * Range: [Boolean](Boolean.md)
@@ -42,9 +41,7 @@ Alias: is_bridge2ai_data
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

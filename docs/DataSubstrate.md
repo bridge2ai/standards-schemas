@@ -15,13 +15,12 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 
 
 
-
 ```mermaid
  classDiagram
     class DataSubstrate
-    click DataSubstrate href "../DataSubstrate"
+    click DataSubstrate href "../DataSubstrate/"
       NamedThing <|-- DataSubstrate
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
       
       DataSubstrate : category
         
@@ -58,7 +57,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
         
         
         DataSubstrate --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -69,7 +68,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
         
         
         DataSubstrate --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -131,6 +130,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 | [DataSubstrate](DataSubstrate.md) | [metadata_storage](metadata_storage.md) | any_of[range] | [DataSubstrate](DataSubstrate.md) |
 | [DataSubstrateContainer](DataSubstrateContainer.md) | [data_substrates_collection](data_substrates_collection.md) | range | [DataSubstrate](DataSubstrate.md) |
 | [UseCase](UseCase.md) | [data_substrates](data_substrates.md) | range | [DataSubstrate](DataSubstrate.md) |
+| [DataPart](DataPart.md) | [uses_data_substrates](uses_data_substrates.md) | range | [DataSubstrate](DataSubstrate.md) |
+
 
 
 
@@ -138,7 +139,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -159,7 +159,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate |
-
 
 
 

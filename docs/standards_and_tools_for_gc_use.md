@@ -34,7 +34,6 @@ Alias: standards_and_tools_for_gc_use
 
 
 
-
 ## Properties
 
 * Range: [DataStandardOrTool](DataStandardOrTool.md)
@@ -44,9 +43,7 @@ Alias: standards_and_tools_for_gc_use
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

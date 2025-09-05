@@ -12,10 +12,12 @@ Name: standards-schema-all
 
 | Class | Description |
 | --- | --- |
+| [DataPart](DataPart.md) | Represents a part of all datasets in a manifest |
 | [DataSetContainer](DataSetContainer.md) | A container for DataSets |
 | [DataStandardOrToolContainer](DataStandardOrToolContainer.md) | A container for DataStandardOrTool(s) |
 | [DataSubstrateContainer](DataSubstrateContainer.md) | A container for DataSubstrates |
 | [DataTopicContainer](DataTopicContainer.md) | A container for DataTopics |
+| [ManifestContainer](ManifestContainer.md) | A container for Manifests |
 | [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataSet](DataSet.md) | Represents a data set by its metadata |
@@ -30,6 +32,7 @@ Name: standards-schema-all
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Manifest](Manifest.md) | Represents a manifest |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |
 | [OrganizationContainer](OrganizationContainer.md) | A container for Organizations |
@@ -42,21 +45,27 @@ Name: standards-schema-all
 | Slot | Description |
 | --- | --- |
 | [alternative_standards_and_tools](alternative_standards_and_tools.md) | List of identifiers of standards and tools; those not explicitly planned to b... |
+| [anatomy](anatomy.md) | Relevant anatomical locations, including gross anatomical parts, cell types, ... |
 | [availability_description](availability_description.md) | A description of the availability of the data set, including any restrictions... |
 | [category](category.md) | CURIE for the high level ontology class in which this entity is categorized |
 | [collection](collection.md) | Tags for specific sets of standards |
 | [concerns_data_topic](concerns_data_topic.md) | Subject standard is generally applied in the context of object data topic |
+| [concerns_data_topics](concerns_data_topics.md) | The data part includes these data topics |
 | [contribution_date](contribution_date.md) | The date on which the node was added |
 | [contributor_github_name](contributor_github_name.md) | The name of the github user who added this node |
 | [contributor_name](contributor_name.md) | The name of the person who added this node |
 | [contributor_orcid](contributor_orcid.md) | The ORCiD of the person who added this node |
 | [data_collection](data_collection.md) | Collection of associated DataSet objects |
+| [data_part_description](data_part_description.md) | Description of the data part |
+| [data_part_name](data_part_name.md) | Name of the data part |
+| [data_parts](data_parts.md) | Collection of associated DataPart objects |
 | [data_standardortools_collection](data_standardortools_collection.md) | Collection of associated data standards or tools |
 | [data_substrates](data_substrates.md) | Relevance of the use case to one or more data substrates |
 | [data_substrates_collection](data_substrates_collection.md) | Collection of associated data substrates |
 | [data_topics](data_topics.md) | Relevance of the use case to one or more data topics |
 | [data_topics_collection](data_topics_collection.md) | Collection of associated data topics |
 | [data_url](data_url.md) | URL where the data set can be accessed |
+| [datasets](datasets.md) | The manifest includes these datasets |
 | [datasheet_url](datasheet_url.md) | URL where the datasheet for the data set can be accessed |
 | [description](description.md) | A human-readable description for a thing |
 | [documentation_url](documentation_url.md) | URL where documentation for the data set can be accessed |
@@ -78,11 +87,14 @@ Name: standards-schema-all
 | [is_public](is_public.md) | True if the data set is publicly available |
 | [known_limitations](known_limitations.md) | Any current obstacles to implementing this use case |
 | [limitations](limitations.md) | Potential obstacles particular to this substrate or implementation |
+| [manifest_collection](manifest_collection.md) | Collection of associated Manifest objects |
 | [mesh_id](mesh_id.md) | Unique MeSH identifier |
 | [metadata_storage](metadata_storage.md) | Data Substrate in which metadata is stored |
 | [name](name.md) | A human-readable name for a thing |
 | [ncit_id](ncit_id.md) | Unique NCIt Identifier |
 | [node_property](node_property.md) | A grouping for any property that holds between a node and a value |
+| [notes](notes.md) | Any additional notes about the manifest or the data part |
+| [organization](organization.md) | The manifest corresponds to this organization |
 | [organizations](organizations.md) | Collection of associated organizations |
 | [produced_by](produced_by.md) | Subject data set was produced by the organization(s) listed in this slot |
 | [publication](publication.md) | Relevant publication for the standard or tool |
@@ -92,6 +104,7 @@ Name: standards-schema-all
 | [requires_registration](requires_registration.md) | Does usage of the standard or tool require registration of a user or group wi... |
 | [responsible_organization](responsible_organization.md) | Organization(s) responsible for providing and/or supporting the standard or t... |
 | [ror_id](ror_id.md) | Unique ROR identifier |
+| [standards_and_tools](standards_and_tools.md) | The data part includes these standards and tools |
 | [standards_and_tools_for_gc_use](standards_and_tools_for_gc_use.md) | List of identifiers of standards and tools; those planned to be used, or alre... |
 | [subclass_of](subclass_of.md) | Holds between two classes where the domain class is a specialization of the r... |
 | [substrates](substrates.md) | Subject data set is relevant to the substrate(s) listed in this slot |
@@ -103,6 +116,7 @@ Name: standards-schema-all
 | [use_cases](use_cases.md) | Collection of associated use cases |
 | [use_conditions](use_conditions.md) | Applicable conditions on use, as defined by the Data Use Ontology (DUO) |
 | [used_in_bridge2ai](used_in_bridge2ai.md) | True if the entity is used, developed, or otherwise related to work in the Br... |
+| [uses_data_substrates](uses_data_substrates.md) | The data part includes these data substrates |
 | [wikidata_id](wikidata_id.md) | Unique Wikidata identifier |
 | [xref](xref.md) | URI of corresponding class in an ontology of experimental procedures, in CURI... |
 

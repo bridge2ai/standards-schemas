@@ -34,7 +34,6 @@ Alias: enables
 
 
 
-
 ## Properties
 
 * Range: [UseCase](UseCase.md)
@@ -44,9 +43,7 @@ Alias: enables
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

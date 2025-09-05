@@ -15,13 +15,12 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 
 
 
-
 ```mermaid
  classDiagram
     class Organization
-    click Organization href "../Organization"
+    click Organization href "../Organization/"
       NamedThing <|-- Organization
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
       
       Organization : category
         
@@ -46,7 +45,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
         
         
         Organization --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -59,7 +58,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
         
         
         Organization --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -130,6 +129,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 | [OrganizationContainer](OrganizationContainer.md) | [organizations](organizations.md) | range | [Organization](Organization.md) |
 | [DataSet](DataSet.md) | [produced_by](produced_by.md) | range | [Organization](Organization.md) |
 | [UseCase](UseCase.md) | [relevant_to_gcs](relevant_to_gcs.md) | range | [Organization](Organization.md) |
+| [Manifest](Manifest.md) | [organization](organization.md) | range | [Organization](Organization.md) |
+
 
 
 
@@ -137,7 +138,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -158,7 +158,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/Organization |
 | native | https://w3id.org/bridge2ai/standards-schema-all/Organization |
-
 
 
 

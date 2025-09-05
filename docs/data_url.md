@@ -34,7 +34,6 @@ Alias: data_url
 
 
 
-
 ## Properties
 
 * Range: [Uriorcurie](Uriorcurie.md)
@@ -42,9 +41,7 @@ Alias: data_url
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-08-19T15:25:06
+# Generation date: 2025-09-05T16:29:53
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -65,6 +65,7 @@ version = None
 # Namespaces
 B2AI = CurieNamespace('B2AI', 'https://w3id.org/bridge2ai/standards-schema/')
 B2AI_DATA = CurieNamespace('B2AI_DATA', 'https://w3id.org/bridge2ai/standards-dataset-schema/')
+B2AI_MANIFEST = CurieNamespace('B2AI_MANIFEST', 'https://w3id.org/bridge2ai/standards-manifest-schema/')
 B2AI_ORG = CurieNamespace('B2AI_ORG', 'https://w3id.org/bridge2ai/standards-organization-schema/')
 B2AI_STANDARD = CurieNamespace('B2AI_STANDARD', 'https://w3id.org/bridge2ai/standards-datastandardortool-schema/')
 B2AI_SUBSTRATE = CurieNamespace('B2AI_SUBSTRATE', 'https://w3id.org/bridge2ai/standards-datasubstrate-schema/')
@@ -72,11 +73,12 @@ B2AI_TOPIC = CurieNamespace('B2AI_TOPIC', 'https://w3id.org/bridge2ai/standards-
 B2AI_USECASE = CurieNamespace('B2AI_USECASE', 'https://w3id.org/bridge2ai/standards-usecase-schema/')
 MESH = CurieNamespace('MESH', 'http://id.nlm.nih.gov/mesh/')
 RO = CurieNamespace('RO', 'http://purl.obolibrary.org/obo/RO_')
+CLO = CurieNamespace('clo', 'http://purl.obolibrary.org/obo/CLO_')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 NCIT = CurieNamespace('ncit', 'http://purl.obolibrary.org/obo/NCIT_')
 RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')
-UBERON = CurieNamespace('uberon', 'http://purl.obolibrary.org/obo/uberon/core#')
+UBERON = CurieNamespace('uberon', 'http://purl.obolibrary.org/obo/UBERON_')
 WIKIDATA = CurieNamespace('wikidata', 'http://www.wikidata.org/wiki/')
 XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
 DEFAULT_ = CurieNamespace('', 'https://w3id.org/bridge2ai/standards-schema-all/')
@@ -193,6 +195,10 @@ class OrganizationId(NamedThingId):
 
 
 class UseCaseId(NamedThingId):
+    pass
+
+
+class ManifestId(NamedThingId):
     pass
 
 
@@ -994,6 +1000,119 @@ class UseCaseContainer(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
+@dataclass(repr=False)
+class Manifest(NamedThing):
+    """
+    Represents a manifest. There should be a 1 to 1 mapping between a manifest and an organization, but each manifest
+    has its own ID.
+    """
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "organization", "datasets"]
+
+    class_class_uri: ClassVar[URIRef] = B2AI_MANIFEST["Manifest"]
+    class_class_curie: ClassVar[str] = "B2AI_MANIFEST:Manifest"
+    class_name: ClassVar[str] = "Manifest"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/Manifest")
+
+    id: Union[str, ManifestId] = None
+    organization: Optional[Union[str, OrganizationId]] = None
+    datasets: Optional[Union[Union[str, DataSetId], list[Union[str, DataSetId]]]] = empty_list()
+    data_parts: Optional[Union[Union[dict, "DataPart"], list[Union[dict, "DataPart"]]]] = empty_list()
+    notes: Optional[str] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, ManifestId):
+            self.id = ManifestId(self.id)
+
+        if self.organization is not None and not isinstance(self.organization, OrganizationId):
+            self.organization = OrganizationId(self.organization)
+
+        if not isinstance(self.datasets, list):
+            self.datasets = [self.datasets] if self.datasets is not None else []
+        self.datasets = [v if isinstance(v, DataSetId) else DataSetId(v) for v in self.datasets]
+
+        if not isinstance(self.data_parts, list):
+            self.data_parts = [self.data_parts] if self.data_parts is not None else []
+        self.data_parts = [v if isinstance(v, DataPart) else DataPart(**as_dict(v)) for v in self.data_parts]
+
+        if self.notes is not None and not isinstance(self.notes, str):
+            self.notes = str(self.notes)
+
+        super().__post_init__(**kwargs)
+        self.category = str(self.class_class_curie)
+
+
+@dataclass(repr=False)
+class ManifestContainer(YAMLRoot):
+    """
+    A container for Manifests.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = B2AI_MANIFEST["ManifestContainer"]
+    class_class_curie: ClassVar[str] = "B2AI_MANIFEST:ManifestContainer"
+    class_name: ClassVar[str] = "ManifestContainer"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/ManifestContainer")
+
+    manifest_collection: Optional[Union[dict[Union[str, ManifestId], Union[dict, Manifest]], list[Union[dict, Manifest]]]] = empty_dict()
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        self._normalize_inlined_as_list(slot_name="manifest_collection", slot_type=Manifest, key_name="id", keyed=True)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class DataPart(YAMLRoot):
+    """
+    Represents a part of all datasets in a manifest. This may be a file, table, or other component. It does not have
+    to be associated with a single dataset, but represents a general type of data produced by the organization.
+    """
+    _inherited_slots: ClassVar[list[str]] = ["standards_and_tools", "uses_data_substrates", "concerns_data_topics"]
+
+    class_class_uri: ClassVar[URIRef] = B2AI_MANIFEST["DataPart"]
+    class_class_curie: ClassVar[str] = "B2AI_MANIFEST:DataPart"
+    class_name: ClassVar[str] = "DataPart"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/DataPart")
+
+    data_part_name: Optional[str] = None
+    data_part_description: Optional[str] = None
+    standards_and_tools: Optional[Union[Union[str, DataStandardOrToolId], list[Union[str, DataStandardOrToolId]]]] = empty_list()
+    uses_data_substrates: Optional[Union[Union[str, DataSubstrateId], list[Union[str, DataSubstrateId]]]] = empty_list()
+    concerns_data_topics: Optional[Union[Union[str, DataTopicId], list[Union[str, DataTopicId]]]] = empty_list()
+    anatomy: Optional[Union[Union[str, AnatomicalEntityId], list[Union[str, AnatomicalEntityId]]]] = empty_list()
+    notes: Optional[str] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self.data_part_name is not None and not isinstance(self.data_part_name, str):
+            self.data_part_name = str(self.data_part_name)
+
+        if self.data_part_description is not None and not isinstance(self.data_part_description, str):
+            self.data_part_description = str(self.data_part_description)
+
+        if not isinstance(self.standards_and_tools, list):
+            self.standards_and_tools = [self.standards_and_tools] if self.standards_and_tools is not None else []
+        self.standards_and_tools = [v if isinstance(v, DataStandardOrToolId) else DataStandardOrToolId(v) for v in self.standards_and_tools]
+
+        if not isinstance(self.uses_data_substrates, list):
+            self.uses_data_substrates = [self.uses_data_substrates] if self.uses_data_substrates is not None else []
+        self.uses_data_substrates = [v if isinstance(v, DataSubstrateId) else DataSubstrateId(v) for v in self.uses_data_substrates]
+
+        if not isinstance(self.concerns_data_topics, list):
+            self.concerns_data_topics = [self.concerns_data_topics] if self.concerns_data_topics is not None else []
+        self.concerns_data_topics = [v if isinstance(v, DataTopicId) else DataTopicId(v) for v in self.concerns_data_topics]
+
+        if not isinstance(self.anatomy, list):
+            self.anatomy = [self.anatomy] if self.anatomy is not None else []
+        self.anatomy = [v if isinstance(v, AnatomicalEntityId) else AnatomicalEntityId(v) for v in self.anatomy]
+
+        if self.notes is not None and not isinstance(self.notes, str):
+            self.notes = str(self.notes)
+
+        super().__post_init__(**kwargs)
+
+
 # Enumerations
 class StandardsCollectionTag(EnumDefinitionImpl):
     """
@@ -1350,6 +1469,39 @@ slots.involved_in_quality_control = Slot(uri=B2AI_USECASE.involved_in_quality_co
 
 slots.use_cases = Slot(uri=B2AI_USECASE.use_cases, name="use_cases", curie=B2AI_USECASE.curie('use_cases'),
                    model_uri=DEFAULT_.use_cases, domain=None, range=Optional[Union[dict[Union[str, UseCaseId], Union[dict, UseCase]], list[Union[dict, UseCase]]]])
+
+slots.manifest_collection = Slot(uri=B2AI_MANIFEST.manifest_collection, name="manifest_collection", curie=B2AI_MANIFEST.curie('manifest_collection'),
+                   model_uri=DEFAULT_.manifest_collection, domain=None, range=Optional[Union[dict[Union[str, ManifestId], Union[dict, Manifest]], list[Union[dict, Manifest]]]])
+
+slots.organization = Slot(uri=B2AI_MANIFEST.organization, name="organization", curie=B2AI_MANIFEST.curie('organization'),
+                   model_uri=DEFAULT_.organization, domain=Manifest, range=Optional[Union[str, OrganizationId]])
+
+slots.datasets = Slot(uri=B2AI_MANIFEST.datasets, name="datasets", curie=B2AI_MANIFEST.curie('datasets'),
+                   model_uri=DEFAULT_.datasets, domain=Manifest, range=Optional[Union[Union[str, DataSetId], list[Union[str, DataSetId]]]])
+
+slots.data_parts = Slot(uri=B2AI_MANIFEST.data_parts, name="data_parts", curie=B2AI_MANIFEST.curie('data_parts'),
+                   model_uri=DEFAULT_.data_parts, domain=None, range=Optional[Union[Union[dict, DataPart], list[Union[dict, DataPart]]]])
+
+slots.data_part_name = Slot(uri=B2AI_MANIFEST.data_part_name, name="data_part_name", curie=B2AI_MANIFEST.curie('data_part_name'),
+                   model_uri=DEFAULT_.data_part_name, domain=None, range=Optional[str])
+
+slots.data_part_description = Slot(uri=B2AI_MANIFEST.data_part_description, name="data_part_description", curie=B2AI_MANIFEST.curie('data_part_description'),
+                   model_uri=DEFAULT_.data_part_description, domain=None, range=Optional[str])
+
+slots.standards_and_tools = Slot(uri=B2AI_MANIFEST.standards_and_tools, name="standards_and_tools", curie=B2AI_MANIFEST.curie('standards_and_tools'),
+                   model_uri=DEFAULT_.standards_and_tools, domain=DataPart, range=Optional[Union[Union[str, DataStandardOrToolId], list[Union[str, DataStandardOrToolId]]]])
+
+slots.uses_data_substrates = Slot(uri=B2AI_MANIFEST.uses_data_substrates, name="uses_data_substrates", curie=B2AI_MANIFEST.curie('uses_data_substrates'),
+                   model_uri=DEFAULT_.uses_data_substrates, domain=DataPart, range=Optional[Union[Union[str, DataSubstrateId], list[Union[str, DataSubstrateId]]]])
+
+slots.concerns_data_topics = Slot(uri=B2AI_MANIFEST.concerns_data_topics, name="concerns_data_topics", curie=B2AI_MANIFEST.curie('concerns_data_topics'),
+                   model_uri=DEFAULT_.concerns_data_topics, domain=DataPart, range=Optional[Union[Union[str, DataTopicId], list[Union[str, DataTopicId]]]])
+
+slots.notes = Slot(uri=B2AI_MANIFEST.notes, name="notes", curie=B2AI_MANIFEST.curie('notes'),
+                   model_uri=DEFAULT_.notes, domain=NamedThing, range=Optional[str])
+
+slots.anatomy = Slot(uri=B2AI_MANIFEST.anatomy, name="anatomy", curie=B2AI_MANIFEST.curie('anatomy'),
+                   model_uri=DEFAULT_.anatomy, domain=NamedThing, range=Optional[Union[Union[str, AnatomicalEntityId], list[Union[str, AnatomicalEntityId]]]])
 
 slots.UseCase_use_case_category = Slot(uri=B2AI_USECASE.use_case_category, name="UseCase_use_case_category", curie=B2AI_USECASE.curie('use_case_category'),
                    model_uri=DEFAULT_.UseCase_use_case_category, domain=UseCase, range=Union[Union[str, "UseCaseCategory"], list[Union[str, "UseCaseCategory"]]])

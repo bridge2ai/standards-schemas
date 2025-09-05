@@ -29,11 +29,9 @@ Alias: wikidata_id
 
 
 
-
 ## Properties
 
 * Range: [WikidataIdentifier](WikidataIdentifier.md)
-
 
 
 
@@ -46,7 +44,6 @@ Alias: wikidata_id
 | WIKIDATA:Q282186 |
 
 ## Identifier and Mapping Information
-
 
 
 

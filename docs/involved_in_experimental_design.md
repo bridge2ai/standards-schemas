@@ -34,7 +34,6 @@ Alias: involved_in_experimental_design
 
 
 
-
 ## Properties
 
 * Range: [Boolean](Boolean.md)
@@ -42,9 +41,7 @@ Alias: involved_in_experimental_design
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

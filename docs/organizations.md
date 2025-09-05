@@ -29,7 +29,6 @@ Alias: organizations
 
 
 
-
 ## Properties
 
 * Range: [Organization](Organization.md)
@@ -39,9 +38,7 @@ Alias: organizations
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

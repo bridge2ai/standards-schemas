@@ -51,7 +51,8 @@ Alias: node_property
     * [involved_in_experimental_design](involved_in_experimental_design.md)
     * [involved_in_metadata_management](involved_in_metadata_management.md)
     * [involved_in_quality_control](involved_in_quality_control.md)
-
+    * [notes](notes.md)
+    * [anatomy](anatomy.md)
 
 
 
@@ -67,9 +68,7 @@ Alias: node_property
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 
