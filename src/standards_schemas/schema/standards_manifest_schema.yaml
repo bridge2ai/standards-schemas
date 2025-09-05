@@ -17,6 +17,8 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
+  UBERON: http://purl.obolibrary.org/obo/UBERON_
+  CLO: http://purl.obolibrary.org/obo/CLO_
 default_prefix: B2AI_MANIFEST
 default_range: string
 
@@ -62,6 +64,7 @@ classes:
       - standards_and_tools
       - data_substrates
       - data_topics
+      - anatomy
       - notes
 
 slots:
@@ -145,3 +148,12 @@ slots:
     description: >-
       Any additional notes about the manifest
       or the data part.
+
+  anatomy:
+    is_a: node_property
+    range: AnatomicalEntity
+    description: >-
+      Relevant anatomical locations,
+      including gross anatomical parts,
+      cell types, and subcellular locations.
+    multivalued: true
