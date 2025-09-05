@@ -40,9 +40,7 @@ classes:
     slots:
       - organization
       - datasets
-      - standards_and_tools
-      - data_substrates
-      - data_topics
+      - data_parts
       - notes
 
   ManifestContainer:
@@ -50,6 +48,21 @@ classes:
       A container for Manifests.
     slots:
       - manifest_collection
+
+  DataPart:
+    description: >-
+      Represents a part of all datasets in a manifest.
+      This may be a file, table, or other component.
+      It does not have to be associated with a single dataset,
+      but represents a general type of data produced
+      by the organization.
+    slots:
+      - data_part_name
+      - data_part_description
+      - standards_and_tools
+      - data_substrates
+      - data_topics
+      - notes
 
 slots:
 
@@ -81,33 +94,48 @@ slots:
     range: Dataset
     multivalued: true
 
+  data_parts:
+    description: Collection of associated DataPart objects.
+    range: DataPart
+    inlined: true
+    inlined_as_list: true
+    multivalued: true
+
+  data_part_name:
+    range: string
+    description: Name of the data part.
+
+  data_part_description:
+    range: string
+    description: Description of the data part.
+
   standards_and_tools:
     is_a: related_to
     description: >-
-      The manifest includes these standards and tools.
+      The data part includes these standards and tools.
       Must be a list of StandardOrTool objects,
       referenced with their B2AI_STANDARD IDs.
-    domain: Manifest
+    domain: DataPart
     range: DataStandardOrTool
     multivalued: true
 
   data_substrates:
     is_a: related_to
     description: >-
-      The manifest includes these data substrates.
+      The data part includes these data substrates.
       Must be a list of DataSubstrate objects,
       referenced with their B2AI_SUBSTRATE IDs.
-    domain: Manifest
+    domain: DataPart
     range: DataSubstrate
     multivalued: true
 
   data_topics:
     is_a: related_to
     description: >-
-      The manifest includes these data topics.
+      The data part includes these data topics.
       Must be a list of DataTopic objects,
       referenced with their B2AI_TOPIC IDs.
-    domain: Manifest
+    domain: DataPart
     range: DataTopic
     multivalued: true
   
@@ -115,4 +143,5 @@ slots:
     is_a: node_property
     range: string
     description: >-
-      Any additional notes about the manifest.
+      Any additional notes about the manifest
+      or the data part.
