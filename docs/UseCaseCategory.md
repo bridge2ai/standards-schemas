@@ -7,7 +7,7 @@ _Category of use case. These define the high-level purpose of a task or activity
 
 
 
-URI: [UseCaseCategory](UseCaseCategory.md)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseCategory](https://w3id.org/bridge2ai/standards-schema-all/UseCaseCategory)
 
 ## Permissible Values
 
@@ -33,9 +33,7 @@ URI: [UseCaseCategory](UseCaseCategory.md)
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

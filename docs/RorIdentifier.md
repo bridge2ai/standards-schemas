@@ -22,7 +22,6 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 
 
 
-
 ## Identifier and Mapping Information
 
 
@@ -31,7 +30,6 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 Instances of this class *should* have identifiers with one of the following prefixes:
 
 * ror
-
 
 
 
@@ -53,6 +51,5 @@ Instances of this class *should* have identifiers with one of the following pref
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/ror_identifier |
 | native | https://w3id.org/bridge2ai/standards-schema-all/ror_identifier |
-
 
 

@@ -15,13 +15,12 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 
 
 
-
 ```mermaid
  classDiagram
     class DataTopic
-    click DataTopic href "../DataTopic"
+    click DataTopic href "../DataTopic/"
       NamedThing <|-- DataTopic
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
       
       DataTopic : category
         
@@ -52,7 +51,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
         
         
         DataTopic --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -63,7 +62,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
         
         
         DataTopic --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -74,7 +73,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
         
         
         DataTopic --> "*" AnatomicalEntity : topic_involves_anatomy
-        click AnatomicalEntity href "../AnatomicalEntity"
+        click AnatomicalEntity href "../AnatomicalEntity/"
     
 
         
@@ -134,6 +133,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 | [DataTopic](DataTopic.md) | [topic_involves_anatomy](topic_involves_anatomy.md) | domain | [DataTopic](DataTopic.md) |
 | [DataTopicContainer](DataTopicContainer.md) | [data_topics_collection](data_topics_collection.md) | range | [DataTopic](DataTopic.md) |
 | [UseCase](UseCase.md) | [data_topics](data_topics.md) | range | [DataTopic](DataTopic.md) |
+| [DataPart](DataPart.md) | [concerns_data_topics](concerns_data_topics.md) | range | [DataTopic](DataTopic.md) |
+
 
 
 
@@ -141,7 +142,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -162,7 +162,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataTopic |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataTopic |
-
 
 
 

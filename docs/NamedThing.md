@@ -15,25 +15,26 @@ URI: [schema:Thing](http://schema.org/Thing)
 
 
 
-
 ```mermaid
  classDiagram
     class NamedThing
-    click NamedThing href "../NamedThing"
+    click NamedThing href "../NamedThing/"
       NamedThing <|-- AnatomicalEntity
-        click AnatomicalEntity href "../AnatomicalEntity"
+        click AnatomicalEntity href "../AnatomicalEntity/"
       NamedThing <|-- DataStandardOrTool
-        click DataStandardOrTool href "../DataStandardOrTool"
+        click DataStandardOrTool href "../DataStandardOrTool/"
       NamedThing <|-- Organization
-        click Organization href "../Organization"
+        click Organization href "../Organization/"
       NamedThing <|-- DataSet
-        click DataSet href "../DataSet"
+        click DataSet href "../DataSet/"
       NamedThing <|-- DataSubstrate
-        click DataSubstrate href "../DataSubstrate"
+        click DataSubstrate href "../DataSubstrate/"
       NamedThing <|-- DataTopic
-        click DataTopic href "../DataTopic"
+        click DataTopic href "../DataTopic/"
       NamedThing <|-- UseCase
-        click UseCase href "../UseCase"
+        click UseCase href "../UseCase/"
+      NamedThing <|-- Manifest
+        click Manifest href "../Manifest/"
       
       NamedThing : category
         
@@ -58,7 +59,7 @@ URI: [schema:Thing](http://schema.org/Thing)
         
         
         NamedThing --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -69,7 +70,7 @@ URI: [schema:Thing](http://schema.org/Thing)
         
         
         NamedThing --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -91,6 +92,7 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [DataSubstrate](DataSubstrate.md)
     * [DataTopic](DataTopic.md)
     * [UseCase](UseCase.md)
+    * [Manifest](Manifest.md)
 
 
 
@@ -365,6 +367,20 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [UseCase](UseCase.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [notes](notes.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [contributor_name](contributor_name.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [DataPart](DataPart.md) | [anatomy](anatomy.md) | domain | [NamedThing](NamedThing.md) |
+| [DataPart](DataPart.md) | [notes](notes.md) | domain | [NamedThing](NamedThing.md) |
+
 
 
 
@@ -372,7 +388,6 @@ URI: [schema:Thing](http://schema.org/Thing)
 
 
 ## Identifier and Mapping Information
-
 
 
 
@@ -393,7 +408,6 @@ URI: [schema:Thing](http://schema.org/Thing)
 | ---  | ---  |
 | self | schema:Thing |
 | native | https://w3id.org/bridge2ai/standards-schema-all/NamedThing |
-
 
 
 

@@ -15,11 +15,10 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer](https://
 
 
 
-
 ```mermaid
  classDiagram
     class DataSetContainer
-    click DataSetContainer href "../DataSetContainer"
+    click DataSetContainer href "../DataSetContainer/"
       DataSetContainer : data_collection
         
           
@@ -27,7 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer](https://
         
         
         DataSetContainer --> "*" DataSet : data_collection
-        click DataSet href "../DataSet"
+        click DataSet href "../DataSet/"
     
 
         
@@ -54,8 +53,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer](https://
 
 
 
-## Identifier and Mapping Information
 
+## Identifier and Mapping Information
 
 
 
@@ -76,7 +75,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer](https://
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataSetContainer |
-
 
 
 

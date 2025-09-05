@@ -34,7 +34,6 @@ Alias: limitations
 
 
 
-
 ## Properties
 
 * Range: [String](String.md)
@@ -44,9 +43,7 @@ Alias: limitations
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

@@ -29,7 +29,6 @@ Alias: use_cases
 
 
 
-
 ## Properties
 
 * Range: [UseCase](UseCase.md)
@@ -39,9 +38,7 @@ Alias: use_cases
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

@@ -34,7 +34,6 @@ Alias: data_substrates
 
 
 
-
 ## Properties
 
 * Range: [DataSubstrate](DataSubstrate.md)
@@ -44,9 +43,7 @@ Alias: data_substrates
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

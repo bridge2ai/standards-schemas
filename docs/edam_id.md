@@ -22,9 +22,8 @@ Alias: edam_id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
 | [DataSubstrate](DataSubstrate.md) | Represents a data substrate for Bridge2AI data |  no  |
-
+| [DataTopic](DataTopic.md) | Represents a general data topic for Bridge2AI data or the tools/standards app... |  no  |
 
 
 
@@ -39,7 +38,6 @@ Alias: edam_id
 
 
 
-
 ## Examples
 
 | Value |
@@ -47,7 +45,6 @@ Alias: edam_id
 | edam.data:0006 |
 
 ## Identifier and Mapping Information
-
 
 
 

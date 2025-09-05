@@ -34,7 +34,6 @@ Alias: topic_involves_anatomy
 
 
 
-
 ## Properties
 
 * Range: [AnatomicalEntity](AnatomicalEntity.md)
@@ -44,9 +43,7 @@ Alias: topic_involves_anatomy
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

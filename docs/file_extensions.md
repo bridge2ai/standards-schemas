@@ -34,7 +34,6 @@ Alias: file_extensions
 
 
 
-
 ## Properties
 
 * Range: [String](String.md)
@@ -44,9 +43,7 @@ Alias: file_extensions
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

@@ -292,6 +292,75 @@
             "title": "BiomedicalStandard",
             "type": "object"
         },
+        "DataPart": {
+            "additionalProperties": false,
+            "description": "Represents a part of all datasets in a manifest. This may be a file, table, or other component. It does not have to be associated with a single dataset, but represents a general type of data produced by the organization.",
+            "properties": {
+                "anatomy": {
+                    "description": "Relevant anatomical locations, including gross anatomical parts, cell types, and subcellular locations.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "concerns_data_topics": {
+                    "description": "The data part includes these data topics. Must be a list of DataTopic objects, referenced with their B2AI_TOPIC IDs.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "data_part_description": {
+                    "description": "Description of the data part.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "data_part_name": {
+                    "description": "Name of the data part.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "notes": {
+                    "description": "Any additional notes about the manifest or the data part.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "standards_and_tools": {
+                    "description": "The data part includes these standards and tools. Must be a list of StandardOrTool objects, referenced with their B2AI_STANDARD IDs.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "uses_data_substrates": {
+                    "description": "The data part includes these data substrates. Must be a list of DataSubstrate objects, referenced with their B2AI_SUBSTRATE IDs.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "DataPart",
+            "type": "object"
+        },
         "DataSet": {
             "additionalProperties": false,
             "description": "Represents a data set by its metadata. This may or may not be produced by a group in the Bridge2AI consortium.",
@@ -1251,6 +1320,156 @@
                 }
             },
             "title": "DataTopicContainer",
+            "type": "object"
+        },
+        "Manifest": {
+            "additionalProperties": false,
+            "description": "Represents a manifest. There should be a 1 to 1 mapping between a manifest and an organization, but each manifest has its own ID.",
+            "properties": {
+                "category": {
+                    "description": "CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"B2AI_STANDARD:DataStandard\".",
+                    "enum": [
+                        "B2AI_MANIFEST:Manifest"
+                    ],
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "data_parts": {
+                    "description": "Collection of associated DataPart objects.",
+                    "items": {
+                        "$ref": "#/$defs/DataPart"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "datasets": {
+                    "description": "The manifest includes these datasets. Must be a list of Dataset objects, referenced with their B2AI_DATA IDs.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "description": {
+                    "description": "A human-readable description for a thing.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "A unique identifier for a thing.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "notes": {
+                    "description": "Any additional notes about the manifest or the data part.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "organization": {
+                    "description": "The manifest corresponds to this organization. Must be a single Organization object, referenced with its B2AI_ORG ID.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Manifest",
+            "type": "object"
+        },
+        "ManifestContainer": {
+            "additionalProperties": false,
+            "description": "A container for Manifests.",
+            "properties": {
+                "manifest_collection": {
+                    "description": "Collection of associated Manifest objects.",
+                    "items": {
+                        "$ref": "#/$defs/Manifest"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "ManifestContainer",
             "type": "object"
         },
         "ModelRepository": {

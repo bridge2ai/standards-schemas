@@ -15,13 +15,12 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 
 
 
-
 ```mermaid
  classDiagram
     class AnatomicalEntity
-    click AnatomicalEntity href "../AnatomicalEntity"
+    click AnatomicalEntity href "../AnatomicalEntity/"
       NamedThing <|-- AnatomicalEntity
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
       
       AnatomicalEntity : category
         
@@ -46,7 +45,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
         
         
         AnatomicalEntity --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -57,7 +56,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
         
         
         AnatomicalEntity --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -101,6 +100,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [DataTopic](DataTopic.md) | [topic_involves_anatomy](topic_involves_anatomy.md) | range | [AnatomicalEntity](AnatomicalEntity.md) |
+| [DataPart](DataPart.md) | [anatomy](anatomy.md) | range | [AnatomicalEntity](AnatomicalEntity.md) |
+
 
 
 
@@ -116,6 +117,7 @@ Instances of this class *should* have identifiers with one of the following pref
 
 * uberon
 
+* clo
 
 
 
@@ -145,7 +147,6 @@ Instances of this class *should* have identifiers with one of the following pref
 
 
 
-
 ## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
@@ -157,6 +158,7 @@ Instances of this class *should* have identifiers with one of the following pref
 name: AnatomicalEntity
 id_prefixes:
 - uberon
+- clo
 description: A subcellular location, cell type or gross anatomical part
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 exact_mappings:
@@ -176,6 +178,7 @@ is_a: NamedThing
 name: AnatomicalEntity
 id_prefixes:
 - uberon
+- clo
 description: A subcellular location, cell type or gross anatomical part
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 exact_mappings:

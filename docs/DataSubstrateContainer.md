@@ -15,11 +15,10 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer](ht
 
 
 
-
 ```mermaid
  classDiagram
     class DataSubstrateContainer
-    click DataSubstrateContainer href "../DataSubstrateContainer"
+    click DataSubstrateContainer href "../DataSubstrateContainer/"
       DataSubstrateContainer : data_substrates_collection
         
           
@@ -27,7 +26,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer](ht
         
         
         DataSubstrateContainer --> "*" DataSubstrate : data_substrates_collection
-        click DataSubstrate href "../DataSubstrate"
+        click DataSubstrate href "../DataSubstrate/"
     
 
         
@@ -54,8 +53,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer](ht
 
 
 
-## Identifier and Mapping Information
 
+## Identifier and Mapping Information
 
 
 
@@ -76,7 +75,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer](ht
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer |
-
 
 
 

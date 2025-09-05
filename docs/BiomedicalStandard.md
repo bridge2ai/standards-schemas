@@ -15,13 +15,12 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
 
 
 
-
 ```mermaid
  classDiagram
     class BiomedicalStandard
-    click BiomedicalStandard href "../BiomedicalStandard"
+    click BiomedicalStandard href "../BiomedicalStandard/"
       DataStandard <|-- BiomedicalStandard
-        click DataStandard href "../DataStandard"
+        click DataStandard href "../DataStandard/"
       
       BiomedicalStandard : category
         
@@ -32,7 +31,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
         
         
         BiomedicalStandard --> "*" StandardsCollectionTag : collection
-        click StandardsCollectionTag href "../StandardsCollectionTag"
+        click StandardsCollectionTag href "../StandardsCollectionTag/"
     
 
         
@@ -43,7 +42,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
         
         
         BiomedicalStandard --> "*" DataTopic : concerns_data_topic
-        click DataTopic href "../DataTopic"
+        click DataTopic href "../DataTopic/"
     
 
         
@@ -66,7 +65,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
         
         
         BiomedicalStandard --> "*" DataSubstrate : has_relevant_data_substrate
-        click DataSubstrate href "../DataSubstrate"
+        click DataSubstrate href "../DataSubstrate/"
     
 
         
@@ -77,7 +76,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
         
         
         BiomedicalStandard --> "*" Organization : has_relevant_organization
-        click Organization href "../Organization"
+        click Organization href "../Organization/"
     
 
         
@@ -88,7 +87,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
         
         
         BiomedicalStandard --> "*" DataStandardOrTool : has_training_resource
-        click DataStandardOrTool href "../DataStandardOrTool"
+        click DataStandardOrTool href "../DataStandardOrTool/"
     
 
         
@@ -109,7 +108,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
         
         
         BiomedicalStandard --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -122,7 +121,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
         
         
         BiomedicalStandard --> "*" Organization : responsible_organization
-        click Organization href "../Organization"
+        click Organization href "../Organization/"
     
 
         
@@ -133,7 +132,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
         
         
         BiomedicalStandard --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -192,8 +191,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
 
 
 
-## Identifier and Mapping Information
 
+## Identifier and Mapping Information
 
 
 
@@ -214,7 +213,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard](https:
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard |
 | native | https://w3id.org/bridge2ai/standards-schema-all/BiomedicalStandard |
-
 
 
 

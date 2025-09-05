@@ -34,7 +34,6 @@ Alias: involved_in_quality_control
 
 
 
-
 ## Properties
 
 * Range: [Boolean](Boolean.md)
@@ -42,9 +41,7 @@ Alias: involved_in_quality_control
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

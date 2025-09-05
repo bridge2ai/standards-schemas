@@ -29,7 +29,6 @@ Alias: data_collection
 
 
 
-
 ## Properties
 
 * Range: [DataSet](DataSet.md)
@@ -39,9 +38,7 @@ Alias: data_collection
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

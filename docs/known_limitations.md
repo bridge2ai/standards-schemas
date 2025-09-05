@@ -34,7 +34,6 @@ Alias: known_limitations
 
 
 
-
 ## Properties
 
 * Range: [String](String.md)
@@ -42,9 +41,7 @@ Alias: known_limitations
 
 
 
-
 ## Identifier and Mapping Information
-
 
 
 

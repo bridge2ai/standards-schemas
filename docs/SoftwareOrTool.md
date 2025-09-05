@@ -15,13 +15,12 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
 
 
 
-
 ```mermaid
  classDiagram
     class SoftwareOrTool
-    click SoftwareOrTool href "../SoftwareOrTool"
+    click SoftwareOrTool href "../SoftwareOrTool/"
       DataStandardOrTool <|-- SoftwareOrTool
-        click DataStandardOrTool href "../DataStandardOrTool"
+        click DataStandardOrTool href "../DataStandardOrTool/"
       
       SoftwareOrTool : category
         
@@ -32,7 +31,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
         
         
         SoftwareOrTool --> "*" StandardsCollectionTag : collection
-        click StandardsCollectionTag href "../StandardsCollectionTag"
+        click StandardsCollectionTag href "../StandardsCollectionTag/"
     
 
         
@@ -43,7 +42,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
         
         
         SoftwareOrTool --> "*" DataTopic : concerns_data_topic
-        click DataTopic href "../DataTopic"
+        click DataTopic href "../DataTopic/"
     
 
         
@@ -66,7 +65,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
         
         
         SoftwareOrTool --> "*" DataSubstrate : has_relevant_data_substrate
-        click DataSubstrate href "../DataSubstrate"
+        click DataSubstrate href "../DataSubstrate/"
     
 
         
@@ -77,7 +76,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
         
         
         SoftwareOrTool --> "*" Organization : has_relevant_organization
-        click Organization href "../Organization"
+        click Organization href "../Organization/"
     
 
         
@@ -88,7 +87,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
         
         
         SoftwareOrTool --> "*" DataStandardOrTool : has_training_resource
-        click DataStandardOrTool href "../DataStandardOrTool"
+        click DataStandardOrTool href "../DataStandardOrTool/"
     
 
         
@@ -109,7 +108,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
         
         
         SoftwareOrTool --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -122,7 +121,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
         
         
         SoftwareOrTool --> "*" Organization : responsible_organization
-        click Organization href "../Organization"
+        click Organization href "../Organization/"
     
 
         
@@ -133,7 +132,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
         
         
         SoftwareOrTool --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing"
+        click NamedThing href "../NamedThing/"
     
 
         
@@ -191,8 +190,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
 
 
 
-## Identifier and Mapping Information
 
+## Identifier and Mapping Information
 
 
 
@@ -213,7 +212,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool](https://w3
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool |
 | native | https://w3id.org/bridge2ai/standards-schema-all/SoftwareOrTool |
-
 
 
 
