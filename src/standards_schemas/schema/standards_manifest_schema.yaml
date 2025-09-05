@@ -94,7 +94,7 @@ slots:
       Must be a list of Dataset objects,
       referenced with their B2AI_DATA IDs.
     domain: Manifest
-    range: Dataset
+    range: DataSet
     multivalued: true
 
   data_parts:
