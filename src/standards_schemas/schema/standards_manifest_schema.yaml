@@ -62,8 +62,8 @@ classes:
       - data_part_name
       - data_part_description
       - standards_and_tools
-      - data_substrates
-      - data_topics
+      - uses_data_substrates
+      - concerns_data_topics
       - anatomy
       - notes
 
@@ -122,7 +122,7 @@ slots:
     range: DataStandardOrTool
     multivalued: true
 
-  data_substrates:
+  uses_data_substrates:
     is_a: related_to
     description: >-
       The data part includes these data substrates.
@@ -132,7 +132,7 @@ slots:
     range: DataSubstrate
     multivalued: true
 
-  data_topics:
+  concerns_data_topics:
     is_a: related_to
     description: >-
       The data part includes these data topics.
