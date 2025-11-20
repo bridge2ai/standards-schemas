@@ -561,10 +561,6 @@
           "description": "Standards Registry"
         },
         {
-          "text": "has_ai_application",
-          "description": "Has a direct AI application, defined as standards/tools that are: associated with ML or neural networks; schemas, or have schemas; data models; associated with DICOM; associated with AI; associated with standards used within Bridge2AI"
-        },
-        {
           "text": "standards_process_maturity_final",
           "description": "This standard has undergone a review process by one or more SDOs and has been determined to be in a mature state. Future revisions may still be possible."
         },
@@ -818,6 +814,38 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "datasheet",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/datasheet",
+      "description": "List of one or more URLs pointing to related datasheets in the Datasheets for Datasets format.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/datasheet",
+      "owner": "Application",
+      "domain_of": [
+        "Application"
+      ],
+      "range": "uriorcurie",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "references",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/references",
+      "description": "List of one or more URLs pointing to related publications, preprints, or other references.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "is_a": "node_property",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/references",
+      "owner": "Application",
+      "domain_of": [
+        "Application"
+      ],
+      "range": "uriorcurie",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "contributor_name",
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/contributor_name",
       "description": "The name of the person who added this node.",
@@ -944,6 +972,21 @@
         "NamedThing"
       ],
       "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "has_application",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/has_application",
+      "description": "A list of one or more specific applications of this entity to a specific purpose.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "domain": "NamedThing",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/has_application",
+      "owner": "NamedThing",
+      "domain_of": [
+        "NamedThing"
+      ],
+      "range": "Application",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1920,7 +1963,8 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
-        "used_in_bridge2ai"
+        "used_in_bridge2ai",
+        "has_application"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Thing",
@@ -1954,10 +1998,37 @@
         "contributor_github_name",
         "contributor_orcid",
         "contribution_date",
-        "used_in_bridge2ai"
+        "used_in_bridge2ai",
+        "has_application"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/bridge2ai/standards-schema/AnatomicalEntity",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Application",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/Application",
+      "description": "A set of details describing a specific application of a resource (e.g., a standard or a dataset) to a specific purpose. In the context of Bridge2AI, this will generally refer to an artificial intelligence-driven application. The related_to slot can be used to link to other relevant entities, such as other Applications, UseCases, DataSets, or Standards.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "is_a": "NamedThing",
+      "slots": [
+        "id",
+        "category",
+        "name",
+        "description",
+        "subclass_of",
+        "related_to",
+        "contributor_name",
+        "contributor_github_name",
+        "contributor_orcid",
+        "contribution_date",
+        "used_in_bridge2ai",
+        "has_application",
+        "datasheet",
+        "references"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-schema/Application",
       "@type": "ClassDefinition"
     },
     {
@@ -1978,6 +2049,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2013,6 +2085,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2048,6 +2121,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2083,6 +2157,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2118,6 +2193,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2153,6 +2229,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2188,6 +2265,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2223,6 +2301,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2258,6 +2337,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "collection",
         "concerns_data_topic",
         "has_relevant_organization",
@@ -2305,6 +2385,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "has_files",
         "has_parts",
         "produced_by",
@@ -2351,6 +2432,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "edam_id",
         "mesh_id",
         "ncit_id",
@@ -2392,6 +2474,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "edam_id",
         "mesh_id",
         "ncit_id",
@@ -2430,6 +2513,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "ror_id",
         "wikidata_id",
         "url",
@@ -2469,6 +2553,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "UseCase_use_case_category",
         "known_limitations",
         "relevant_to_gcs",
@@ -2516,6 +2601,7 @@
         "contributor_orcid",
         "contribution_date",
         "used_in_bridge2ai",
+        "has_application",
         "organization",
         "datasets",
         "data_parts",
@@ -2558,9 +2644,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "standards_schema_all.yaml",
-  "source_file_date": "2025-09-05T15:49:49",
+  "source_file_date": "2025-09-05T16:34:19",
   "source_file_size": 498,
-  "generation_date": "2025-09-05T16:29:52",
+  "generation_date": "2025-11-20T11:51:48",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

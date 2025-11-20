@@ -50,6 +50,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "id": {
                     "description": "A unique identifier for a thing.",
                     "type": "string"
@@ -93,6 +103,131 @@
                 "id"
             ],
             "title": "AnatomicalEntity",
+            "type": "object"
+        },
+        "Application": {
+            "additionalProperties": false,
+            "description": "A set of details describing a specific application of a resource (e.g., a standard or a dataset) to a specific purpose. In the context of Bridge2AI, this will generally refer to an artificial intelligence-driven application. The related_to slot can be used to link to other relevant entities, such as other Applications, UseCases, DataSets, or Standards.",
+            "properties": {
+                "category": {
+                    "description": "CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"B2AI_STANDARD:DataStandard\".",
+                    "enum": [
+                        "B2AI:Application"
+                    ],
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contribution_date": {
+                    "description": "The date on which the node was added.",
+                    "format": "date",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contributor_github_name": {
+                    "description": "The name of the github user who added this node.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contributor_name": {
+                    "description": "The name of the person who added this node.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contributor_orcid": {
+                    "description": "The ORCiD of the person who added this node.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "datasheet": {
+                    "description": "List of one or more URLs pointing to related datasheets in the Datasheets for Datasets format.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "description": {
+                    "description": "A human-readable description for a thing.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "A unique identifier for a thing.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "references": {
+                    "description": "List of one or more URLs pointing to related publications, preprints, or other references.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "related_to": {
+                    "description": "A relationship that is asserted between two named things.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "subclass_of": {
+                    "description": "Holds between two classes where the domain class is a specialization of the range class.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "used_in_bridge2ai": {
+                    "description": "True if the entity is used, developed, or otherwise related to work in the Bridge2AI consortium. If false, the entity is not explicitly related to Bridge2AI. If not specified, it is not known if the entity is related to Bridge2AI.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Application",
             "type": "object"
         },
         "BiomedicalStandard": {
@@ -169,6 +304,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -439,6 +584,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "has_files": {
                     "description": "Subject data set has the file(s) listed in this slot as parts. Note that each file is not a data set and does not have its own ID in the registry. For data sets that are parts of this data set, use the `has_parts` slot.",
                     "items": {
@@ -643,6 +798,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "has_relevant_data_substrate": {
                     "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
                     "items": {
@@ -837,6 +1002,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -1073,6 +1248,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "id": {
                     "description": "A unique identifier for a thing.",
                     "type": "string"
@@ -1235,6 +1420,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "id": {
                     "description": "A unique identifier for a thing.",
                     "type": "string"
@@ -1392,6 +1587,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "id": {
                     "description": "A unique identifier for a thing.",
                     "type": "string"
@@ -1546,6 +1751,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -1719,6 +1934,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "id": {
                     "description": "A unique identifier for a thing.",
                     "type": "string"
@@ -1838,6 +2063,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -2011,6 +2246,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "id": {
                     "description": "A unique identifier for a thing.",
                     "type": "string"
@@ -2169,6 +2414,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -2369,6 +2624,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "has_relevant_data_substrate": {
                     "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
                     "items": {
@@ -2566,6 +2831,16 @@
                         "null"
                     ]
                 },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "has_relevant_data_substrate": {
                     "description": "Subject standard has some relationship to the object data substrate(s), including whether it is intended to be used with the data substrate, or whether it is implemented through the data substrate.",
                     "items": {
@@ -2723,7 +2998,6 @@
                 "scrnaseqanalysis",
                 "speechdata",
                 "standardsregistry",
-                "has_ai_application",
                 "standards_process_maturity_final",
                 "standards_process_maturity_draft",
                 "standards_process_maturity_development",
@@ -2807,6 +3081,16 @@
                     "description": "Relevant code repository or other location for a formal specification of the standard or tool. Often a URL, particularly to a Git repository.",
                     "type": [
                         "string",
+                        "null"
+                    ]
+                },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
                         "null"
                     ]
                 },
@@ -3012,6 +3296,16 @@
                 },
                 "enables": {
                     "description": "List of other use case(s) this use case supports or makes possible.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "has_application": {
+                    "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
                         "type": "string"
                     },
