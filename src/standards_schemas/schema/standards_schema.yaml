@@ -9,6 +9,7 @@ see_also:
 
 prefixes:
   B2AI: https://w3id.org/bridge2ai/standards-schema/
+  B2AI_APP: https://w3id.org/bridge2ai/standards-schema/
   biolink: https://w3id.org/biolink/vocab/
   clo: http://purl.obolibrary.org/obo/CLO_
   edam.data: http://edamontology.org/data_
@@ -98,6 +99,10 @@ classes:
       an artificial intelligence-driven application.
       The related_to slot can be used to link to other relevant entities,
       such as other Applications, UseCases, DataSets, or Standards.
+      Application objects have unique identifiers with the prefix B2AI_APP.
+      This allows an Application to be referenced from other objects
+      if needed. The category slot for Application objects
+      should always be set to B2AI:Application for clarity.
     slots:
       - datasheet
       - references
@@ -253,4 +258,6 @@ slots:
       of this entity to a specific purpose.
     domain: NamedThing
     range: Application
+    inlined: true
+    inlined_as_list: true
     multivalued: true
