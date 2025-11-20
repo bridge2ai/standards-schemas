@@ -73,6 +73,7 @@ classes:
       - contributor_orcid
       - contribution_date
       - used_in_bridge2ai
+      - has_application
     class_uri: schema:Thing
 
   AnatomicalEntity:  # Based on Biolink Model v.3.2.6
@@ -98,7 +99,6 @@ classes:
       The related_to slot can be used to link to other relevant entities,
       such as other Applications, UseCases, DataSets, or Standards.
     slots:
-      - used_in_bridge2ai
       - datasheet
       - references
 
@@ -246,3 +246,11 @@ slots:
       specified, it is not known if the entity is
       related to Bridge2AI.
     range: boolean
+
+  has_application:
+    description: >-
+      A list of one or more specific applications
+      of this entity to a specific purpose.
+    domain: NamedThing
+    range: Application
+    multivalued: true
