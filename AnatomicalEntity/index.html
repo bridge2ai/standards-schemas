@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://bridge2ai.github.io/standards-schema/AnatomicalEntity/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: AnatomicalEntity - standards-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -211,10 +211,12 @@
 </a>
 <h1 id="class-anatomicalentity">Class: AnatomicalEntity</h1>
 <p><em>A subcellular location, cell type or gross anatomical part</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity">https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity">https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity</a></p>
 <div class="mermaid"> classDiagram
     class AnatomicalEntity
+    click AnatomicalEntity href "../AnatomicalEntity/"
       NamedThing &lt;|-- AnatomicalEntity
+        click NamedThing href "../NamedThing/"
 
       AnatomicalEntity : category
 
@@ -228,17 +230,44 @@
 
       AnatomicalEntity : description
 
+      AnatomicalEntity : has_application
+
+
+
+
+
+        AnatomicalEntity --&gt; "*" Application : has_application
+        click Application href "../Application/"
+
+
+
       AnatomicalEntity : id
 
       AnatomicalEntity : name
 
       AnatomicalEntity : related_to
 
-          AnatomicalEntity ..&gt; NamedThing : related_to
+
+
+
+
+        AnatomicalEntity --&gt; "*" NamedThing : related_to
+        click NamedThing href "../NamedThing/"
+
+
 
       AnatomicalEntity : subclass_of
 
-          AnatomicalEntity ..&gt; NamedThing : subclass_of
+
+
+
+
+        AnatomicalEntity --&gt; "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing/"
+
+
+
+      AnatomicalEntity : used_in_bridge2ai
 
 
 </div>
@@ -262,14 +291,14 @@
 <tbody>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>A unique identifier for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../category/">category</a></td>
 <td>0..1 <br/> <a href="../CategoryType/">CategoryType</a></td>
-<td>Name of the high level ontology class in which this entity is categorized</td>
+<td>CURIE for the high level ontology class in which this entity is categorized</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
@@ -286,13 +315,13 @@
 </tr>
 <tr>
 <td><a href="../subclass_of/">subclass_of</a></td>
-<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>Holds between two classes where the domain class is a specialization of the r...</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../related_to/">related_to</a></td>
-<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>A relationship that is asserted between two named things</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -320,6 +349,18 @@
 <td>The date on which the node was added</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
+<tr>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>True if the entity is used, developed, or otherwise related to work in the Br...</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../has_application/">has_application</a></td>
+<td>* <br/> <a href="../Application/">Application</a></td>
+<td>A list of one or more specific applications of this entity to a specific purp...</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -339,13 +380,24 @@
 <td>range</td>
 <td><a href="./">AnatomicalEntity</a></td>
 </tr>
+<tr>
+<td><a href="../DataPart/">DataPart</a></td>
+<td><a href="../anatomy/">anatomy</a></td>
+<td>range</td>
+<td><a href="./">AnatomicalEntity</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="valid-id-prefixes">Valid ID Prefixes</h3>
 <p>Instances of this class <em>should</em> have identifiers with one of the following prefixes:</p>
 <ul>
-<li>uberon</li>
+<li>
+<p>uberon</p>
+</li>
+<li>
+<p>clo</p>
+</li>
 </ul>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -362,11 +414,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:AnatomicalEntity</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -385,6 +437,7 @@
 <pre><code class="language-yaml">name: AnatomicalEntity
 id_prefixes:
 - uberon
+- clo
 description: A subcellular location, cell type or gross anatomical part
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 exact_mappings:
@@ -392,7 +445,6 @@ exact_mappings:
 - wikidata:Q4936952
 narrow_mappings:
 - ncit:C12219
-rank: 1000
 is_a: NamedThing
 
 </code></pre>
@@ -402,6 +454,7 @@ is_a: NamedThing
 <pre><code class="language-yaml">name: AnatomicalEntity
 id_prefixes:
 - uberon
+- clo
 description: A subcellular location, cell type or gross anatomical part
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 exact_mappings:
@@ -409,7 +462,6 @@ exact_mappings:
 - wikidata:Q4936952
 narrow_mappings:
 - ncit:C12219
-rank: 1000
 is_a: NamedThing
 attributes:
   id:
@@ -427,8 +479,8 @@ attributes:
     required: true
   category:
     name: category
-    description: Name of the high level ontology class in which this entity is categorized.
-      Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+    description: CURIE for the high level ontology class in which this entity is categorized.
+      Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: type
@@ -474,20 +526,19 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: subclass_of
     owner: AnatomicalEntity
     domain_of:
     - NamedThing
     range: NamedThing
+    multivalued: true
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: related_to
     owner: AnatomicalEntity
@@ -496,6 +547,7 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+    multivalued: true
   contributor_name:
     name: contributor_name
     description: The name of the person who added this node.
@@ -548,6 +600,36 @@ attributes:
     domain_of:
     - NamedThing
     range: date
+  used_in_bridge2ai:
+    name: used_in_bridge2ai
+    description: True if the entity is used, developed, or otherwise related to work
+      in the Bridge2AI consortium. If false, the entity is not explicitly related
+      to Bridge2AI. If not specified, it is not known if the entity is related to
+      Bridge2AI.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: used_in_bridge2ai
+    owner: AnatomicalEntity
+    domain_of:
+    - NamedThing
+    range: boolean
+  has_application:
+    name: has_application
+    description: A list of one or more specific applications of this entity to a specific
+      purpose.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    domain: NamedThing
+    alias: has_application
+    owner: AnatomicalEntity
+    domain_of:
+    - NamedThing
+    range: Application
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
 
 </code></pre>
 </details>

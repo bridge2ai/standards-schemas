@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://bridge2ai.github.io/standards-schema/UseCase/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: UseCase - standards-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -206,14 +206,23 @@
 </a>
 <h1 id="class-usecase">Class: UseCase</h1>
 <p><em>Represents a use case for Bridge2AI standards.</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:UseCase">https://w3id.org/bridge2ai/standards-schema-all/:UseCase</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/UseCase">https://w3id.org/bridge2ai/standards-schema-all/UseCase</a></p>
 <div class="mermaid"> classDiagram
     class UseCase
+    click UseCase href "../UseCase/"
       NamedThing &lt;|-- UseCase
+        click NamedThing href "../NamedThing/"
 
       UseCase : alternative_standards_and_tools
 
-          UseCase ..&gt; DataStandardOrTool : alternative_standards_and_tools
+
+
+
+
+        UseCase --&gt; "*" DataStandardOrTool : alternative_standards_and_tools
+        click DataStandardOrTool href "../DataStandardOrTool/"
+
+
 
       UseCase : category
 
@@ -227,17 +236,49 @@
 
       UseCase : data_substrates
 
-          UseCase ..&gt; DataSubstrate : data_substrates
+
+
+
+
+        UseCase --&gt; "*" DataSubstrate : data_substrates
+        click DataSubstrate href "../DataSubstrate/"
+
+
 
       UseCase : data_topics
 
-          UseCase ..&gt; DataTopic : data_topics
+
+
+
+
+        UseCase --&gt; "*" DataTopic : data_topics
+        click DataTopic href "../DataTopic/"
+
+
 
       UseCase : description
 
       UseCase : enables
 
-          UseCase ..&gt; UseCase : enables
+
+
+
+
+        UseCase --&gt; "*" UseCase : enables
+        click UseCase href "../UseCase/"
+
+
+
+      UseCase : has_application
+
+
+
+
+
+        UseCase --&gt; "*" Application : has_application
+        click Application href "../Application/"
+
+
 
       UseCase : id
 
@@ -253,23 +294,60 @@
 
       UseCase : related_to
 
-          UseCase ..&gt; NamedThing : related_to
 
-      UseCase : relevance_to_dgps
 
-          UseCase ..&gt; DataGeneratingProject : relevance_to_dgps
 
-      UseCase : standards_and_tools_for_dgp_use
 
-          UseCase ..&gt; DataStandardOrTool : standards_and_tools_for_dgp_use
+        UseCase --&gt; "*" NamedThing : related_to
+        click NamedThing href "../NamedThing/"
+
+
+
+      UseCase : relevant_to_gcs
+
+
+
+
+
+        UseCase --&gt; "*" Organization : relevant_to_gcs
+        click Organization href "../Organization/"
+
+
+
+      UseCase : standards_and_tools_for_gc_use
+
+
+
+
+
+        UseCase --&gt; "*" DataStandardOrTool : standards_and_tools_for_gc_use
+        click DataStandardOrTool href "../DataStandardOrTool/"
+
+
 
       UseCase : subclass_of
 
-          UseCase ..&gt; NamedThing : subclass_of
+
+
+
+
+        UseCase --&gt; "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing/"
+
+
 
       UseCase : use_case_category
 
-          UseCase ..&gt; UseCaseCategory : use_case_category
+
+
+
+
+        UseCase --&gt; "1..*" UseCaseCategory : use_case_category
+        click UseCaseCategory href "../UseCaseCategory/"
+
+
+
+      UseCase : used_in_bridge2ai
 
       UseCase : xref
 
@@ -295,7 +373,7 @@
 <tbody>
 <tr>
 <td><a href="../use_case_category/">use_case_category</a></td>
-<td>0..1 <br/> <a href="../UseCaseCategory/">UseCaseCategory</a></td>
+<td>1..* <br/> <a href="../UseCaseCategory/">UseCaseCategory</a></td>
 <td>Category of the UseCase</td>
 <td>direct</td>
 </tr>
@@ -306,39 +384,39 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../relevance_to_dgps/">relevance_to_dgps</a></td>
-<td>0..* <br/> <a href="../DataGeneratingProject/">DataGeneratingProject</a></td>
-<td>Relevance of the use case to one or more DGPs</td>
+<td><a href="../relevant_to_gcs/">relevant_to_gcs</a></td>
+<td>* <br/> <a href="../Organization/">Organization</a></td>
+<td>Bridge2AI Grand Challenges related to this use case, generally because they a...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../data_topics/">data_topics</a></td>
-<td>0..* <br/> <a href="../DataTopic/">DataTopic</a></td>
+<td>* <br/> <a href="../DataTopic/">DataTopic</a></td>
 <td>Relevance of the use case to one or more data topics</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../data_substrates/">data_substrates</a></td>
-<td>0..* <br/> <a href="../DataSubstrate/">DataSubstrate</a></td>
+<td>* <br/> <a href="../DataSubstrate/">DataSubstrate</a></td>
 <td>Relevance of the use case to one or more data substrates</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../standards_and_tools_for_dgp_use/">standards_and_tools_for_dgp_use</a></td>
-<td>0..* <br/> <a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../standards_and_tools_for_gc_use/">standards_and_tools_for_gc_use</a></td>
+<td>* <br/> <a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 <td>List of identifiers of standards and tools; those planned to be used, or alre...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../alternative_standards_and_tools/">alternative_standards_and_tools</a></td>
-<td>0..* <br/> <a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td>* <br/> <a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 <td>List of identifiers of standards and tools; those not explicitly planned to b...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../enables/">enables</a></td>
-<td>0..* <br/> <a href="./">UseCase</a></td>
-<td>Other use case(s) this use case supports or makes possible</td>
+<td>* <br/> <a href="./">UseCase</a></td>
+<td>List of other use case(s) this use case supports or makes possible</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -356,25 +434,25 @@
 <tr>
 <td><a href="../involved_in_quality_control/">involved_in_quality_control</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>True is use case is likely to be implemented as part of data validation opera...</td>
+<td>A value of True indicates a use case is likely to be implemented as part of d...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../xref/">xref</a></td>
-<td>0..* <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>* <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>URI of corresponding class in an ontology of experimental procedures, in CURI...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>A unique identifier for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../category/">category</a></td>
 <td>0..1 <br/> <a href="../CategoryType/">CategoryType</a></td>
-<td>Name of the high level ontology class in which this entity is categorized</td>
+<td>CURIE for the high level ontology class in which this entity is categorized</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
@@ -391,13 +469,13 @@
 </tr>
 <tr>
 <td><a href="../subclass_of/">subclass_of</a></td>
-<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>Holds between two classes where the domain class is a specialization of the r...</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../related_to/">related_to</a></td>
-<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>A relationship that is asserted between two named things</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -423,6 +501,18 @@
 <td><a href="../contribution_date/">contribution_date</a></td>
 <td>0..1 <br/> <a href="../Date/">Date</a></td>
 <td>The date on which the node was added</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>True if the entity is used, developed, or otherwise related to work in the Br...</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../has_application/">has_application</a></td>
+<td>* <br/> <a href="../Application/">Application</a></td>
+<td>A list of one or more specific applications of this entity to a specific purp...</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
@@ -468,11 +558,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:UseCase</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/UseCase</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:UseCase</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/UseCase</td>
 </tr>
 </tbody>
 </table>
@@ -483,15 +573,14 @@
 <pre><code class="language-yaml">name: UseCase
 description: Represents a use case for Bridge2AI standards.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: NamedThing
 slots:
 - use_case_category
 - known_limitations
-- relevance_to_dgps
+- relevant_to_gcs
 - data_topics
 - data_substrates
-- standards_and_tools_for_dgp_use
+- standards_and_tools_for_gc_use
 - alternative_standards_and_tools
 - enables
 - involved_in_experimental_design
@@ -501,8 +590,6 @@ slots:
 slot_usage:
   use_case_category:
     name: use_case_category
-    domain_of:
-    - UseCase
     required: true
 
 </code></pre>
@@ -512,19 +599,16 @@ slot_usage:
 <pre><code class="language-yaml">name: UseCase
 description: Represents a use case for Bridge2AI standards.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: NamedThing
 slot_usage:
   use_case_category:
     name: use_case_category
-    domain_of:
-    - UseCase
     required: true
 attributes:
   use_case_category:
     name: use_case_category
     description: Category of the UseCase. Not all projects will incorporate use cases
-      in all categories.
+      in all categories. This is multivalued, as a use case may span categories.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
@@ -535,6 +619,7 @@ attributes:
     - UseCase
     range: UseCaseCategory
     required: true
+    multivalued: true
   known_limitations:
     name: known_limitations
     description: Any current obstacles to implementing this use case. This could be
@@ -549,17 +634,19 @@ attributes:
     domain_of:
     - UseCase
     range: string
-  relevance_to_dgps:
-    name: relevance_to_dgps
-    description: Relevance of the use case to one or more DGPs.
+  relevant_to_gcs:
+    name: relevant_to_gcs
+    description: Bridge2AI Grand Challenges related to this use case, generally because
+      they actively pursue this use case, or because they have investigated it in
+      some manner. GCs should be identified by their Bridge2AI identifier, e.g., B2AI_ORG:117.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    multivalued: true
-    alias: relevance_to_dgps
+    alias: relevant_to_gcs
     owner: UseCase
     domain_of:
     - UseCase
-    range: DataGeneratingProject
+    range: Organization
+    multivalued: true
   data_topics:
     name: data_topics
     description: Relevance of the use case to one or more data topics.
@@ -567,12 +654,12 @@ attributes:
     rank: 1000
     is_a: node_property
     domain: NamedThing
-    multivalued: true
     alias: data_topics
     owner: UseCase
     domain_of:
     - UseCase
     range: DataTopic
+    multivalued: true
   data_substrates:
     name: data_substrates
     description: Relevance of the use case to one or more data substrates.
@@ -580,56 +667,56 @@ attributes:
     rank: 1000
     is_a: node_property
     domain: NamedThing
-    multivalued: true
     alias: data_substrates
     owner: UseCase
     domain_of:
     - UseCase
     range: DataSubstrate
-  standards_and_tools_for_dgp_use:
-    name: standards_and_tools_for_dgp_use
+    multivalued: true
+  standards_and_tools_for_gc_use:
+    name: standards_and_tools_for_gc_use
     description: List of identifiers of standards and tools; those planned to be used,
-      or already in use, by one or more Bridge2AI DGPs in addressing this use case,
-      from those in the Standards Registry, or TBD if standards/tools not yet finalized
-      for this use case.
+      or already in use, by one or more Bridge2AI GCs in addressing this use case,
+      from those in the Standards Registry. If no value is provided here, the use
+      case may not have a direct relationship to a standard or tool.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
     domain: NamedThing
-    multivalued: true
-    alias: standards_and_tools_for_dgp_use
+    alias: standards_and_tools_for_gc_use
     owner: UseCase
     domain_of:
     - UseCase
     range: DataStandardOrTool
+    multivalued: true
   alternative_standards_and_tools:
     name: alternative_standards_and_tools
     description: List of identifiers of standards and tools; those not explicitly
-      planned to be used, by one or more Bridge2AI DGPs in addressing this use case
+      planned to be used, by one or more Bridge2AI GCs in addressing this use case
       but serving as viable alternatives, from those in the Standards Registry.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
     domain: NamedThing
-    multivalued: true
     alias: alternative_standards_and_tools
     owner: UseCase
     domain_of:
     - UseCase
     range: DataStandardOrTool
+    multivalued: true
   enables:
     name: enables
-    description: Other use case(s) this use case supports or makes possible.
+    description: List of other use case(s) this use case supports or makes possible.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
     domain: NamedThing
-    multivalued: true
     alias: enables
     owner: UseCase
     domain_of:
     - UseCase
     range: UseCase
+    multivalued: true
   involved_in_experimental_design:
     name: involved_in_experimental_design
     description: True if use case is likely to be implemented as part of an experimental
@@ -659,8 +746,8 @@ attributes:
     range: boolean
   involved_in_quality_control:
     name: involved_in_quality_control
-    description: True is use case is likely to be implemented as part of data validation
-      operations.
+    description: A value of True indicates a use case is likely to be implemented
+      as part of data validation operations.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
@@ -682,12 +769,12 @@ attributes:
     rank: 1000
     is_a: node_property
     domain: NamedThing
-    multivalued: true
     alias: xref
     owner: UseCase
     domain_of:
     - UseCase
     range: uriorcurie
+    multivalued: true
   id:
     name: id
     description: A unique identifier for a thing.
@@ -703,8 +790,8 @@ attributes:
     required: true
   category:
     name: category
-    description: Name of the high level ontology class in which this entity is categorized.
-      Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+    description: CURIE for the high level ontology class in which this entity is categorized.
+      Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: type
@@ -750,20 +837,19 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: subclass_of
     owner: UseCase
     domain_of:
     - NamedThing
     range: NamedThing
+    multivalued: true
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: related_to
     owner: UseCase
@@ -772,6 +858,7 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+    multivalued: true
   contributor_name:
     name: contributor_name
     description: The name of the person who added this node.
@@ -824,6 +911,36 @@ attributes:
     domain_of:
     - NamedThing
     range: date
+  used_in_bridge2ai:
+    name: used_in_bridge2ai
+    description: True if the entity is used, developed, or otherwise related to work
+      in the Bridge2AI consortium. If false, the entity is not explicitly related
+      to Bridge2AI. If not specified, it is not known if the entity is related to
+      Bridge2AI.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: used_in_bridge2ai
+    owner: UseCase
+    domain_of:
+    - NamedThing
+    range: boolean
+  has_application:
+    name: has_application
+    description: A list of one or more specific applications of this entity to a specific
+      purpose.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    domain: NamedThing
+    alias: has_application
+    owner: UseCase
+    domain_of:
+    - NamedThing
+    range: Application
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
 
 </code></pre>
 </details>

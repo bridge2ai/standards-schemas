@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://bridge2ai.github.io/standards-schema/Organization/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: Organization - standards-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -206,10 +206,12 @@
 </a>
 <h1 id="class-organization">Class: Organization</h1>
 <p><em>Represents a group or organization related to or responsible for one or more Bridge2AI standards.</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:Organization">https://w3id.org/bridge2ai/standards-schema-all/:Organization</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/Organization">https://w3id.org/bridge2ai/standards-schema-all/Organization</a></p>
 <div class="mermaid"> classDiagram
     class Organization
+    click Organization href "../Organization/"
       NamedThing &lt;|-- Organization
+        click NamedThing href "../NamedThing/"
 
       Organization : category
 
@@ -223,21 +225,48 @@
 
       Organization : description
 
+      Organization : has_application
+
+
+
+
+
+        Organization --&gt; "*" Application : has_application
+        click Application href "../Application/"
+
+
+
       Organization : id
 
       Organization : name
 
       Organization : related_to
 
-          Organization ..&gt; NamedThing : related_to
+
+
+
+
+        Organization --&gt; "*" NamedThing : related_to
+        click NamedThing href "../NamedThing/"
+
+
 
       Organization : ror_id
 
       Organization : subclass_of
 
-          Organization ..&gt; NamedThing : subclass_of
+
+
+
+
+        Organization --&gt; "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing/"
+
+
 
       Organization : url
+
+      Organization : used_in_bridge2ai
 
       Organization : wikidata_id
 
@@ -281,20 +310,20 @@
 </tr>
 <tr>
 <td><a href="../related_to/">related_to</a></td>
-<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>A relationship that is asserted between two named things</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>A unique identifier for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../category/">category</a></td>
 <td>0..1 <br/> <a href="../CategoryType/">CategoryType</a></td>
-<td>Name of the high level ontology class in which this entity is categorized</td>
+<td>CURIE for the high level ontology class in which this entity is categorized</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
@@ -311,7 +340,7 @@
 </tr>
 <tr>
 <td><a href="../subclass_of/">subclass_of</a></td>
-<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>Holds between two classes where the domain class is a specialization of the r...</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -339,6 +368,18 @@
 <td>The date on which the node was added</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
+<tr>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>True if the entity is used, developed, or otherwise related to work in the Br...</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../has_application/">has_application</a></td>
+<td>* <br/> <a href="../Application/">Application</a></td>
+<td>A list of one or more specific applications of this entity to a specific purp...</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -359,8 +400,20 @@
 <td><a href="./">Organization</a></td>
 </tr>
 <tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../responsible_organization/">responsible_organization</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
 <td><a href="../DataStandard/">DataStandard</a></td>
 <td><a href="../has_relevant_organization/">has_relevant_organization</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../responsible_organization/">responsible_organization</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
@@ -371,8 +424,20 @@
 <td><a href="./">Organization</a></td>
 </tr>
 <tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../responsible_organization/">responsible_organization</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
 <td><a href="../Registry/">Registry</a></td>
 <td><a href="../has_relevant_organization/">has_relevant_organization</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../responsible_organization/">responsible_organization</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
@@ -383,14 +448,20 @@
 <td><a href="./">Organization</a></td>
 </tr>
 <tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../responsible_organization/">responsible_organization</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
 <td><a href="../ModelRepository/">ModelRepository</a></td>
 <td><a href="../has_relevant_organization/">has_relevant_organization</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
 <tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../has_relevant_organization/">has_relevant_organization</a></td>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../responsible_organization/">responsible_organization</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
@@ -401,8 +472,20 @@
 <td><a href="./">Organization</a></td>
 </tr>
 <tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../responsible_organization/">responsible_organization</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
 <td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
 <td><a href="../has_relevant_organization/">has_relevant_organization</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../responsible_organization/">responsible_organization</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
@@ -413,8 +496,32 @@
 <td><a href="./">Organization</a></td>
 </tr>
 <tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../responsible_organization/">responsible_organization</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
 <td><a href="../OrganizationContainer/">OrganizationContainer</a></td>
 <td><a href="../organizations/">organizations</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../produced_by/">produced_by</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../relevant_to_gcs/">relevant_to_gcs</a></td>
+<td>range</td>
+<td><a href="./">Organization</a></td>
+</tr>
+<tr>
+<td><a href="../Manifest/">Manifest</a></td>
+<td><a href="../organization/">organization</a></td>
 <td>range</td>
 <td><a href="./">Organization</a></td>
 </tr>
@@ -436,11 +543,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:Organization</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/Organization</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:Organization</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/Organization</td>
 </tr>
 </tbody>
 </table>
@@ -452,7 +559,6 @@
 description: Represents a group or organization related to or responsible for one
   or more Bridge2AI standards.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: NamedThing
 slots:
 - ror_id
@@ -468,7 +574,6 @@ slots:
 description: Represents a group or organization related to or responsible for one
   or more Bridge2AI standards.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: NamedThing
 attributes:
   ror_id:
@@ -518,7 +623,6 @@ attributes:
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: related_to
     owner: Organization
@@ -527,6 +631,7 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+    multivalued: true
   id:
     name: id
     description: A unique identifier for a thing.
@@ -542,8 +647,8 @@ attributes:
     required: true
   category:
     name: category
-    description: Name of the high level ontology class in which this entity is categorized.
-      Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+    description: CURIE for the high level ontology class in which this entity is categorized.
+      Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: type
@@ -589,13 +694,13 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: subclass_of
     owner: Organization
     domain_of:
     - NamedThing
     range: NamedThing
+    multivalued: true
   contributor_name:
     name: contributor_name
     description: The name of the person who added this node.
@@ -648,6 +753,36 @@ attributes:
     domain_of:
     - NamedThing
     range: date
+  used_in_bridge2ai:
+    name: used_in_bridge2ai
+    description: True if the entity is used, developed, or otherwise related to work
+      in the Bridge2AI consortium. If false, the entity is not explicitly related
+      to Bridge2AI. If not specified, it is not known if the entity is related to
+      Bridge2AI.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: used_in_bridge2ai
+    owner: Organization
+    domain_of:
+    - NamedThing
+    range: boolean
+  has_application:
+    name: has_application
+    description: A list of one or more specific applications of this entity to a specific
+      purpose.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    domain: NamedThing
+    alias: has_application
+    owner: Organization
+    domain_of:
+    - NamedThing
+    range: Application
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
 
 </code></pre>
 </details>

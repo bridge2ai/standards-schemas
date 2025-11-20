@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://bridge2ai.github.io/standards-schema/">
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -381,8 +381,8 @@
 
 <h1 id="standards-schema-all">standards-schema-all</h1>
 <p>High-level classes for Bridge2AI Standards schemas.</p>
-<p>URI: https://w3id.org/bridge2ai/standards-schema-all
-Name: standards-schema-all</p>
+<p>URI: https://w3id.org/bridge2ai/standards-schema-all</p>
+<p>Name: standards-schema-all</p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -393,84 +393,104 @@ Name: standards-schema-all</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="AnatomicalEntity/">AnatomicalEntity</a></td>
-<td>A subcellular location, cell type or gross anatomical part</td>
+<td><a href="DataPart/">DataPart</a></td>
+<td>Represents a part of all datasets in a manifest</td>
 </tr>
 <tr>
-<td><a href="BiomedicalStandard/">BiomedicalStandard</a></td>
-<td>Represents a standard in the Bridge2AI Standards Registry with particular app...</td>
-</tr>
-<tr>
-<td><a href="DataStandard/">DataStandard</a></td>
-<td>Represents a general purpose standard in the Bridge2AI Standards Registry</td>
-</tr>
-<tr>
-<td><a href="DataStandardOrTool/">DataStandardOrTool</a></td>
-<td>Represents a standard or tool in the Bridge2AI Standards Registry</td>
+<td><a href="DataSetContainer/">DataSetContainer</a></td>
+<td>A container for DataSets</td>
 </tr>
 <tr>
 <td><a href="DataStandardOrToolContainer/">DataStandardOrToolContainer</a></td>
 <td>A container for DataStandardOrTool(s)</td>
 </tr>
 <tr>
-<td><a href="DataSubstrate/">DataSubstrate</a></td>
-<td>Represents a data substrate for Bridge2AI data</td>
-</tr>
-<tr>
 <td><a href="DataSubstrateContainer/">DataSubstrateContainer</a></td>
 <td>A container for DataSubstrates</td>
-</tr>
-<tr>
-<td><a href="DataTopic/">DataTopic</a></td>
-<td>Represents a general data topic for Bridge2AI data or the tools/standards app...</td>
 </tr>
 <tr>
 <td><a href="DataTopicContainer/">DataTopicContainer</a></td>
 <td>A container for DataTopics</td>
 </tr>
 <tr>
-<td><a href="ModelRepository/">ModelRepository</a></td>
-<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
+<td><a href="ManifestContainer/">ManifestContainer</a></td>
+<td>A container for Manifests</td>
 </tr>
 <tr>
 <td><a href="NamedThing/">NamedThing</a></td>
 <td>A generic grouping for any identifiable entity</td>
 </tr>
 <tr>
-<td><a href="OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AnatomicalEntity/">AnatomicalEntity</a></td>
+<td>A subcellular location, cell type or gross anatomical part</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Application/">Application</a></td>
+<td>A set of details describing a specific application of a resource (e</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DataSet/">DataSet</a></td>
+<td>Represents a data set by its metadata</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DataStandardOrTool/">DataStandardOrTool</a></td>
+<td>Represents a standard or tool in the Bridge2AI Standards Registry</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DataStandard/">DataStandard</a></td>
+<td>Represents a general purpose standard in the Bridge2AI Standards Registry</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="BiomedicalStandard/">BiomedicalStandard</a></td>
+<td>Represents a standard in the Bridge2AI Standards Registry with particular app...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ModelRepository/">ModelRepository</a></td>
+<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
 <td>A set of concepts and categories, potentially defined or accompanied by their...</td>
 </tr>
 <tr>
-<td><a href="Organization/">Organization</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ReferenceImplementation/">ReferenceImplementation</a></td>
+<td>Represents an implementation of one or more standards or tools in the Bridge2...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Registry/">Registry</a></td>
+<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SoftwareOrTool/">SoftwareOrTool</a></td>
+<td>Represents a piece of software or computational tool in the Bridge2AI Standar...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TrainingProgram/">TrainingProgram</a></td>
+<td>Represents a training program for skills and experience related to standards ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DataSubstrate/">DataSubstrate</a></td>
+<td>Represents a data substrate for Bridge2AI data</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DataTopic/">DataTopic</a></td>
+<td>Represents a general data topic for Bridge2AI data or the tools/standards app...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Manifest/">Manifest</a></td>
+<td>Represents a manifest</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Organization/">Organization</a></td>
 <td>Represents a group or organization related to or responsible for one or more ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="UseCase/">UseCase</a></td>
+<td>Represents a use case for Bridge2AI standards</td>
 </tr>
 <tr>
 <td><a href="OrganizationContainer/">OrganizationContainer</a></td>
 <td>A container for Organizations</td>
-</tr>
-<tr>
-<td><a href="ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td>Represents a resource in the Bridge2AI Standards Registry serving as a standa...</td>
-</tr>
-<tr>
-<td><a href="ReferenceImplementation/">ReferenceImplementation</a></td>
-<td>Represents an implementation of one or more standards or tools in the Bridge2...</td>
-</tr>
-<tr>
-<td><a href="Registry/">Registry</a></td>
-<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
-</tr>
-<tr>
-<td><a href="SoftwareOrTool/">SoftwareOrTool</a></td>
-<td>Represents a piece of software or computational tool in the Bridge2AI Standar...</td>
-</tr>
-<tr>
-<td><a href="TrainingProgram/">TrainingProgram</a></td>
-<td>Represents a training program for skills and experience related to standards ...</td>
-</tr>
-<tr>
-<td><a href="UseCase/">UseCase</a></td>
-<td>Represents a use case for Bridge2AI standards</td>
 </tr>
 <tr>
 <td><a href="UseCaseContainer/">UseCaseContainer</a></td>
@@ -492,8 +512,16 @@ Name: standards-schema-all</p>
 <td>List of identifiers of standards and tools; those not explicitly planned to b...</td>
 </tr>
 <tr>
+<td><a href="anatomy/">anatomy</a></td>
+<td>Relevant anatomical locations, including gross anatomical parts, cell types, ...</td>
+</tr>
+<tr>
+<td><a href="availability_description/">availability_description</a></td>
+<td>A description of the availability of the data set, including any restrictions...</td>
+</tr>
+<tr>
 <td><a href="category/">category</a></td>
-<td>Name of the high level ontology class in which this entity is categorized</td>
+<td>CURIE for the high level ontology class in which this entity is categorized</td>
 </tr>
 <tr>
 <td><a href="collection/">collection</a></td>
@@ -502,6 +530,10 @@ Name: standards-schema-all</p>
 <tr>
 <td><a href="concerns_data_topic/">concerns_data_topic</a></td>
 <td>Subject standard is generally applied in the context of object data topic</td>
+</tr>
+<tr>
+<td><a href="concerns_data_topics/">concerns_data_topics</a></td>
+<td>The data part includes these data topics</td>
 </tr>
 <tr>
 <td><a href="contribution_date/">contribution_date</a></td>
@@ -518,6 +550,22 @@ Name: standards-schema-all</p>
 <tr>
 <td><a href="contributor_orcid/">contributor_orcid</a></td>
 <td>The ORCiD of the person who added this node</td>
+</tr>
+<tr>
+<td><a href="data_collection/">data_collection</a></td>
+<td>Collection of associated DataSet objects</td>
+</tr>
+<tr>
+<td><a href="data_part_description/">data_part_description</a></td>
+<td>Description of the data part</td>
+</tr>
+<tr>
+<td><a href="data_part_name/">data_part_name</a></td>
+<td>Name of the data part</td>
+</tr>
+<tr>
+<td><a href="data_parts/">data_parts</a></td>
+<td>Collection of associated DataPart objects</td>
 </tr>
 <tr>
 <td><a href="data_standardortools_collection/">data_standardortools_collection</a></td>
@@ -540,8 +588,28 @@ Name: standards-schema-all</p>
 <td>Collection of associated data topics</td>
 </tr>
 <tr>
+<td><a href="data_url/">data_url</a></td>
+<td>URL where the data set can be accessed</td>
+</tr>
+<tr>
+<td><a href="datasets/">datasets</a></td>
+<td>The manifest includes these datasets</td>
+</tr>
+<tr>
+<td><a href="datasheet/">datasheet</a></td>
+<td>List of one or more URLs pointing to related datasheets in the Datasheets for...</td>
+</tr>
+<tr>
+<td><a href="datasheet_url/">datasheet_url</a></td>
+<td>URL where the datasheet for the data set can be accessed</td>
+</tr>
+<tr>
 <td><a href="description/">description</a></td>
 <td>A human-readable description for a thing</td>
+</tr>
+<tr>
+<td><a href="documentation_url/">documentation_url</a></td>
+<td>URL where documentation for the data set can be accessed</td>
 </tr>
 <tr>
 <td><a href="edam_id/">edam_id</a></td>
@@ -549,7 +617,7 @@ Name: standards-schema-all</p>
 </tr>
 <tr>
 <td><a href="enables/">enables</a></td>
-<td>Other use case(s) this use case supports or makes possible</td>
+<td>List of other use case(s) this use case supports or makes possible</td>
 </tr>
 <tr>
 <td><a href="file_extensions/">file_extensions</a></td>
@@ -560,8 +628,28 @@ Name: standards-schema-all</p>
 <td>Relevant code repository or other location for a formal specification of the ...</td>
 </tr>
 <tr>
+<td><a href="has_application/">has_application</a></td>
+<td>A list of one or more specific applications of this entity to a specific purp...</td>
+</tr>
+<tr>
+<td><a href="has_files/">has_files</a></td>
+<td>Subject data set has the file(s) listed in this slot as parts</td>
+</tr>
+<tr>
+<td><a href="has_parts/">has_parts</a></td>
+<td>Subject data set has the data set(s) listed in this slot as parts</td>
+</tr>
+<tr>
+<td><a href="has_relevant_data_substrate/">has_relevant_data_substrate</a></td>
+<td>Subject standard has some relationship to the object data substrate(s), inclu...</td>
+</tr>
+<tr>
 <td><a href="has_relevant_organization/">has_relevant_organization</a></td>
-<td>Subject standard is managed or otherwise guided buy the object organization(s...</td>
+<td>Subject standard has some relationship to the object organization(s), includi...</td>
+</tr>
+<tr>
+<td><a href="has_training_resource/">has_training_resource</a></td>
+<td>Relevant training resources, standard usage manuals, or other documentation f...</td>
 </tr>
 <tr>
 <td><a href="id/">id</a></td>
@@ -577,11 +665,19 @@ Name: standards-schema-all</p>
 </tr>
 <tr>
 <td><a href="involved_in_quality_control/">involved_in_quality_control</a></td>
-<td>True is use case is likely to be implemented as part of data validation opera...</td>
+<td>A value of True indicates a use case is likely to be implemented as part of d...</td>
+</tr>
+<tr>
+<td><a href="is_bridge2ai_data/">is_bridge2ai_data</a></td>
+<td>True if the data set is produced by a Bridge2AI consortium group</td>
 </tr>
 <tr>
 <td><a href="is_open/">is_open</a></td>
 <td>Is the standard or tool FAIR and available free of cost?</td>
+</tr>
+<tr>
+<td><a href="is_public/">is_public</a></td>
+<td>True if the data set is publicly available</td>
 </tr>
 <tr>
 <td><a href="known_limitations/">known_limitations</a></td>
@@ -590,6 +686,10 @@ Name: standards-schema-all</p>
 <tr>
 <td><a href="limitations/">limitations</a></td>
 <td>Potential obstacles particular to this substrate or implementation</td>
+</tr>
+<tr>
+<td><a href="manifest_collection/">manifest_collection</a></td>
+<td>Collection of associated Manifest objects</td>
 </tr>
 <tr>
 <td><a href="mesh_id/">mesh_id</a></td>
@@ -612,12 +712,20 @@ Name: standards-schema-all</p>
 <td>A grouping for any property that holds between a node and a value</td>
 </tr>
 <tr>
-<td><a href="not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>Is the standard or tool currently relevant to DGPs?</td>
+<td><a href="notes/">notes</a></td>
+<td>Any additional notes about the manifest or the data part</td>
+</tr>
+<tr>
+<td><a href="organization/">organization</a></td>
+<td>The manifest corresponds to this organization</td>
 </tr>
 <tr>
 <td><a href="organizations/">organizations</a></td>
 <td>Collection of associated organizations</td>
+</tr>
+<tr>
+<td><a href="produced_by/">produced_by</a></td>
+<td>Subject data set was produced by the organization(s) listed in this slot</td>
 </tr>
 <tr>
 <td><a href="publication/">publication</a></td>
@@ -628,23 +736,35 @@ Name: standards-schema-all</p>
 <td>Text description of the standard or tool</td>
 </tr>
 <tr>
+<td><a href="references/">references</a></td>
+<td>List of one or more URLs pointing to related publications, preprints, or othe...</td>
+</tr>
+<tr>
 <td><a href="related_to/">related_to</a></td>
 <td>A relationship that is asserted between two named things</td>
 </tr>
 <tr>
-<td><a href="relevance_to_dgps/">relevance_to_dgps</a></td>
-<td>Relevance of the use case to one or more DGPs</td>
+<td><a href="relevant_to_gcs/">relevant_to_gcs</a></td>
+<td>Bridge2AI Grand Challenges related to this use case, generally because they a...</td>
 </tr>
 <tr>
 <td><a href="requires_registration/">requires_registration</a></td>
-<td>Does usage of the standard or tool require registrion of a user or group with...</td>
+<td>Does usage of the standard or tool require registration of a user or group wi...</td>
+</tr>
+<tr>
+<td><a href="responsible_organization/">responsible_organization</a></td>
+<td>Organization(s) responsible for providing and/or supporting the standard or t...</td>
 </tr>
 <tr>
 <td><a href="ror_id/">ror_id</a></td>
 <td>Unique ROR identifier</td>
 </tr>
 <tr>
-<td><a href="standards_and_tools_for_dgp_use/">standards_and_tools_for_dgp_use</a></td>
+<td><a href="standards_and_tools/">standards_and_tools</a></td>
+<td>The data part includes these standards and tools</td>
+</tr>
+<tr>
+<td><a href="standards_and_tools_for_gc_use/">standards_and_tools_for_gc_use</a></td>
 <td>List of identifiers of standards and tools; those planned to be used, or alre...</td>
 </tr>
 <tr>
@@ -652,12 +772,20 @@ Name: standards-schema-all</p>
 <td>Holds between two classes where the domain class is a specialization of the r...</td>
 </tr>
 <tr>
+<td><a href="substrates/">substrates</a></td>
+<td>Subject data set is relevant to the substrate(s) listed in this slot</td>
+</tr>
+<tr>
 <td><a href="topic_involves_anatomy/">topic_involves_anatomy</a></td>
 <td>A relationship between a DataTopic and an anatomical entity</td>
 </tr>
 <tr>
+<td><a href="topics/">topics</a></td>
+<td>Subject data set is relevant to the topic(s) listed in this slot</td>
+</tr>
+<tr>
 <td><a href="type/">type</a></td>
-<td>A generic slot for any label corresponding to the label  for an entity type a...</td>
+<td>A generic slot for any label corresponding to the label for an entity type as...</td>
 </tr>
 <tr>
 <td><a href="url/">url</a></td>
@@ -674,6 +802,14 @@ Name: standards-schema-all</p>
 <tr>
 <td><a href="use_conditions/">use_conditions</a></td>
 <td>Applicable conditions on use, as defined by the Data Use Ontology (DUO)</td>
+</tr>
+<tr>
+<td><a href="used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>True if the entity is used, developed, or otherwise related to work in the Br...</td>
+</tr>
+<tr>
+<td><a href="uses_data_substrates/">uses_data_substrates</a></td>
+<td>The data part includes these data substrates</td>
 </tr>
 <tr>
 <td><a href="wikidata_id/">wikidata_id</a></td>
@@ -694,10 +830,6 @@ Name: standards-schema-all</p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="DataGeneratingProject/">DataGeneratingProject</a></td>
-<td>One of the Bridge2AI Data Generating Projects</td>
-</tr>
 <tr>
 <td><a href="StandardsCollectionTag/">StandardsCollectionTag</a></td>
 <td>Tags for specific sets of standards</td>
@@ -762,6 +894,14 @@ Name: standards-schema-all</p>
 <td>An integer</td>
 </tr>
 <tr>
+<td><a href="Jsonpath/">Jsonpath</a></td>
+<td>A string encoding a JSON Path</td>
+</tr>
+<tr>
+<td><a href="Jsonpointer/">Jsonpointer</a></td>
+<td>A string encoding a JSON Pointer</td>
+</tr>
+<tr>
 <td><a href="MeshIdentifier/">MeshIdentifier</a></td>
 <td>Identifier from Medical Subject Headings (MeSH) biomedical vocabulary</td>
 </tr>
@@ -784,6 +924,10 @@ Name: standards-schema-all</p>
 <tr>
 <td><a href="RorIdentifier/">RorIdentifier</a></td>
 <td>Identifier from Research Organization Registry</td>
+</tr>
+<tr>
+<td><a href="Sparqlpath/">Sparqlpath</a></td>
+<td>A string encoding a SPARQL Property Path</td>
 </tr>
 <tr>
 <td><a href="String/">String</a></td>

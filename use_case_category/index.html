@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://bridge2ai.github.io/standards-schema/use_case_category/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -297,6 +297,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mappings" class="md-nav__link">
+    Mappings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linkml-source" class="md-nav__link">
     LinkML Source
   </a>
@@ -324,8 +331,9 @@
 
 
 <h1 id="slot-use_case_category">Slot: use_case_category</h1>
-<p><em>Category of the UseCase. Not all projects will incorporate use cases in all categories.</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:use_case_category">https://w3id.org/bridge2ai/standards-schema-all/:use_case_category</a></p>
+<p><em>Category of the UseCase. Not all projects will incorporate use cases in all categories. This is multivalued, as a use case may span categories.</em></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/use_case_category">https://w3id.org/bridge2ai/standards-schema-all/use_case_category</a>
+Alias: use_case_category</p>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../node_property/">node_property</a><ul>
@@ -339,30 +347,56 @@
 <tr>
 <th>Name</th>
 <th>Description</th>
+<th>Modifies Slot</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="../UseCase/">UseCase</a></td>
 <td>Represents a use case for Bridge2AI standards</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../UseCaseCategory/">UseCaseCategory</a></li>
+<li>
+<p>Range: <a href="../UseCaseCategory/">UseCaseCategory</a></p>
+</li>
+<li>
+<p>Multivalued: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
 <li>from schema: https://w3id.org/bridge2ai/standards-schema-all</li>
 </ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/use_case_category</td>
+</tr>
+<tr>
+<td>native</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/use_case_category</td>
+</tr>
+</tbody>
+</table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: use_case_category
 description: Category of the UseCase. Not all projects will incorporate use cases
-  in all categories.
+  in all categories. This is multivalued, as a use case may span categories.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
@@ -371,6 +405,7 @@ alias: use_case_category
 domain_of:
 - UseCase
 range: UseCaseCategory
+multivalued: true
 
 </code></pre>
 

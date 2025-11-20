@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://bridge2ai.github.io/standards-schema/data_substrates/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -297,6 +297,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mappings" class="md-nav__link">
+    Mappings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linkml-source" class="md-nav__link">
     LinkML Source
   </a>
@@ -325,7 +332,8 @@
 
 <h1 id="slot-data_substrates">Slot: data_substrates</h1>
 <p><em>Relevance of the use case to one or more data substrates.</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:data_substrates">https://w3id.org/bridge2ai/standards-schema-all/:data_substrates</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/data_substrates">https://w3id.org/bridge2ai/standards-schema-all/data_substrates</a>
+Alias: data_substrates</p>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../node_property/">node_property</a><ul>
@@ -339,25 +347,50 @@
 <tr>
 <th>Name</th>
 <th>Description</th>
+<th>Modifies Slot</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="../UseCase/">UseCase</a></td>
 <td>Represents a use case for Bridge2AI standards</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../DataSubstrate/">DataSubstrate</a></li>
-<li>Multivalued: True</li>
+<li>
+<p>Range: <a href="../DataSubstrate/">DataSubstrate</a></p>
+</li>
+<li>
+<p>Multivalued: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
 <li>from schema: https://w3id.org/bridge2ai/standards-schema-all</li>
 </ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/data_substrates</td>
+</tr>
+<tr>
+<td>native</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/data_substrates</td>
+</tr>
+</tbody>
+</table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
@@ -367,11 +400,11 @@ from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: data_substrates
 domain_of:
 - UseCase
 range: DataSubstrate
+multivalued: true
 
 </code></pre>
 

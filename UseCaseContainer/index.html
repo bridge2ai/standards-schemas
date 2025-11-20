@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://bridge2ai.github.io/standards-schema/UseCaseContainer/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: UseCaseContainer - standards-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -196,12 +196,20 @@
 </a>
 <h1 id="class-usecasecontainer">Class: UseCaseContainer</h1>
 <p><em>A container for UseCase.</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer">https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer">https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer</a></p>
 <div class="mermaid"> classDiagram
     class UseCaseContainer
+    click UseCaseContainer href "../UseCaseContainer/"
       UseCaseContainer : use_cases
 
-          UseCaseContainer ..&gt; UseCase : use_cases
+
+
+
+
+        UseCaseContainer --&gt; "*" UseCase : use_cases
+        click UseCase href "../UseCase/"
+
+
 
 
 </div>
@@ -219,7 +227,7 @@
 <tbody>
 <tr>
 <td><a href="../use_cases/">use_cases</a></td>
-<td>0..* <br/> <a href="../UseCase/">UseCase</a></td>
+<td>* <br/> <a href="../UseCase/">UseCase</a></td>
 <td>Collection of associated use cases</td>
 <td>direct</td>
 </tr>
@@ -241,11 +249,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:UseCaseContainer</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer</td>
 </tr>
 </tbody>
 </table>
@@ -256,7 +264,6 @@
 <pre><code class="language-yaml">name: UseCaseContainer
 description: A container for UseCase.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 slots:
 - use_cases
 
@@ -267,19 +274,18 @@ slots:
 <pre><code class="language-yaml">name: UseCaseContainer
 description: A container for UseCase.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 attributes:
   use_cases:
     name: use_cases
-    description: Collection of associated use cases
+    description: Collection of associated use cases.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    multivalued: true
     alias: use_cases
     owner: UseCaseContainer
     domain_of:
     - UseCaseContainer
     range: UseCase
+    multivalued: true
     inlined: true
     inlined_as_list: true
 

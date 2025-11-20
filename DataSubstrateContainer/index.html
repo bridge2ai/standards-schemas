@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://bridge2ai.github.io/standards-schema/DataSubstrateContainer/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: DataSubstrateContainer - standards-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -196,12 +196,20 @@
 </a>
 <h1 id="class-datasubstratecontainer">Class: DataSubstrateContainer</h1>
 <p><em>A container for DataSubstrates.</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer">https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer">https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer</a></p>
 <div class="mermaid"> classDiagram
     class DataSubstrateContainer
+    click DataSubstrateContainer href "../DataSubstrateContainer/"
       DataSubstrateContainer : data_substrates_collection
 
-          DataSubstrateContainer ..&gt; DataSubstrate : data_substrates_collection
+
+
+
+
+        DataSubstrateContainer --&gt; "*" DataSubstrate : data_substrates_collection
+        click DataSubstrate href "../DataSubstrate/"
+
+
 
 
 </div>
@@ -219,7 +227,7 @@
 <tbody>
 <tr>
 <td><a href="../data_substrates_collection/">data_substrates_collection</a></td>
-<td>0..* <br/> <a href="../DataSubstrate/">DataSubstrate</a></td>
+<td>* <br/> <a href="../DataSubstrate/">DataSubstrate</a></td>
 <td>Collection of associated data substrates</td>
 <td>direct</td>
 </tr>
@@ -241,11 +249,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:DataSubstrateContainer</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/DataSubstrateContainer</td>
 </tr>
 </tbody>
 </table>
@@ -256,7 +264,6 @@
 <pre><code class="language-yaml">name: DataSubstrateContainer
 description: A container for DataSubstrates.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 slots:
 - data_substrates_collection
 
@@ -267,19 +274,18 @@ slots:
 <pre><code class="language-yaml">name: DataSubstrateContainer
 description: A container for DataSubstrates.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 attributes:
   data_substrates_collection:
     name: data_substrates_collection
     description: Collection of associated data substrates
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    multivalued: true
     alias: data_substrates_collection
     owner: DataSubstrateContainer
     domain_of:
     - DataSubstrateContainer
     range: DataSubstrate
+    multivalued: true
     inlined: true
     inlined_as_list: true
 

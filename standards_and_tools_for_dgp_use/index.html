@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://bridge2ai.github.io/standards-schema/standards_and_tools_for_dgp_use/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -297,6 +297,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mappings" class="md-nav__link">
+    Mappings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linkml-source" class="md-nav__link">
     LinkML Source
   </a>
@@ -324,7 +331,7 @@
 
 
 <h1 id="slot-standards_and_tools_for_dgp_use">Slot: standards_and_tools_for_dgp_use</h1>
-<p><em>List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry, or TBD if standards/tools not yet finalized for this use case.</em></p>
+<p><em>List of identifiers of standards and tools; those planned to be used, or already in use, by one or more Bridge2AI DGPs in addressing this use case, from those in the Standards Registry. If no value is provided here, the use case may not have a direct relationship to a standard or tool.</em></p>
 <p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_dgp_use">https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_dgp_use</a></p>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
@@ -339,42 +346,67 @@
 <tr>
 <th>Name</th>
 <th>Description</th>
+<th>Modifies Slot</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="../UseCase/">UseCase</a></td>
 <td>Represents a use case for Bridge2AI standards</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../DataStandardOrTool/">DataStandardOrTool</a></li>
-<li>Multivalued: True</li>
+<li>
+<p>Range: <a href="../DataStandardOrTool/">DataStandardOrTool</a></p>
+</li>
+<li>
+<p>Multivalued: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
 <li>from schema: https://w3id.org/bridge2ai/standards-schema-all</li>
 </ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_dgp_use</td>
+</tr>
+<tr>
+<td>native</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/:standards_and_tools_for_dgp_use</td>
+</tr>
+</tbody>
+</table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: standards_and_tools_for_dgp_use
 description: List of identifiers of standards and tools; those planned to be used,
   or already in use, by one or more Bridge2AI DGPs in addressing this use case, from
-  those in the Standards Registry, or TBD if standards/tools not yet finalized for
-  this use case.
+  those in the Standards Registry. If no value is provided here, the use case may
+  not have a direct relationship to a standard or tool.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
 domain: NamedThing
-multivalued: true
 alias: standards_and_tools_for_dgp_use
 domain_of:
 - UseCase
 range: DataStandardOrTool
+multivalued: true
 
 </code></pre>
 

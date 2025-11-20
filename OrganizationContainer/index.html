@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://bridge2ai.github.io/standards-schema/OrganizationContainer/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: OrganizationContainer - standards-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -196,12 +196,20 @@
 </a>
 <h1 id="class-organizationcontainer">Class: OrganizationContainer</h1>
 <p><em>A container for Organizations.</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer">https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer">https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer</a></p>
 <div class="mermaid"> classDiagram
     class OrganizationContainer
+    click OrganizationContainer href "../OrganizationContainer/"
       OrganizationContainer : organizations
 
-          OrganizationContainer ..&gt; Organization : organizations
+
+
+
+
+        OrganizationContainer --&gt; "*" Organization : organizations
+        click Organization href "../Organization/"
+
+
 
 
 </div>
@@ -219,7 +227,7 @@
 <tbody>
 <tr>
 <td><a href="../organizations/">organizations</a></td>
-<td>0..* <br/> <a href="../Organization/">Organization</a></td>
+<td>* <br/> <a href="../Organization/">Organization</a></td>
 <td>Collection of associated organizations</td>
 <td>direct</td>
 </tr>
@@ -241,11 +249,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:OrganizationContainer</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/OrganizationContainer</td>
 </tr>
 </tbody>
 </table>
@@ -256,7 +264,6 @@
 <pre><code class="language-yaml">name: OrganizationContainer
 description: A container for Organizations.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 slots:
 - organizations
 
@@ -267,19 +274,18 @@ slots:
 <pre><code class="language-yaml">name: OrganizationContainer
 description: A container for Organizations.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 attributes:
   organizations:
     name: organizations
     description: Collection of associated organizations.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
-    multivalued: true
     alias: organizations
     owner: OrganizationContainer
     domain_of:
     - OrganizationContainer
     range: Organization
+    multivalued: true
     inlined: true
     inlined_as_list: true
 

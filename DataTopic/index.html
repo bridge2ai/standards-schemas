@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://bridge2ai.github.io/standards-schema/DataTopic/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: DataTopic - standards-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -206,10 +206,12 @@
 </a>
 <h1 id="class-datatopic">Class: DataTopic</h1>
 <p><em>Represents a general data topic for Bridge2AI data or the tools/standards applied to the data.</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:DataTopic">https://w3id.org/bridge2ai/standards-schema-all/:DataTopic</a></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/DataTopic">https://w3id.org/bridge2ai/standards-schema-all/DataTopic</a></p>
 <div class="mermaid"> classDiagram
     class DataTopic
+    click DataTopic href "../DataTopic/"
       NamedThing &lt;|-- DataTopic
+        click NamedThing href "../NamedThing/"
 
       DataTopic : category
 
@@ -225,6 +227,17 @@
 
       DataTopic : edam_id
 
+      DataTopic : has_application
+
+
+
+
+
+        DataTopic --&gt; "*" Application : has_application
+        click Application href "../Application/"
+
+
+
       DataTopic : id
 
       DataTopic : mesh_id
@@ -235,15 +248,38 @@
 
       DataTopic : related_to
 
-          DataTopic ..&gt; NamedThing : related_to
+
+
+
+
+        DataTopic --&gt; "*" NamedThing : related_to
+        click NamedThing href "../NamedThing/"
+
+
 
       DataTopic : subclass_of
 
-          DataTopic ..&gt; NamedThing : subclass_of
+
+
+
+
+        DataTopic --&gt; "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing/"
+
+
 
       DataTopic : topic_involves_anatomy
 
-          DataTopic ..&gt; AnatomicalEntity : topic_involves_anatomy
+
+
+
+
+        DataTopic --&gt; "*" AnatomicalEntity : topic_involves_anatomy
+        click AnatomicalEntity href "../AnatomicalEntity/"
+
+
+
+      DataTopic : used_in_bridge2ai
 
 
 </div>
@@ -285,20 +321,20 @@
 </tr>
 <tr>
 <td><a href="../topic_involves_anatomy/">topic_involves_anatomy</a></td>
-<td>0..* <br/> <a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td>* <br/> <a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
 <td>A relationship between a DataTopic and an anatomical entity</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>A unique identifier for a thing</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../category/">category</a></td>
 <td>0..1 <br/> <a href="../CategoryType/">CategoryType</a></td>
-<td>Name of the high level ontology class in which this entity is categorized</td>
+<td>CURIE for the high level ontology class in which this entity is categorized</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
@@ -315,13 +351,13 @@
 </tr>
 <tr>
 <td><a href="../subclass_of/">subclass_of</a></td>
-<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>Holds between two classes where the domain class is a specialization of the r...</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../related_to/">related_to</a></td>
-<td>0..* <br/> <a href="../NamedThing/">NamedThing</a></td>
+<td>* <br/> <a href="../NamedThing/">NamedThing</a></td>
 <td>A relationship that is asserted between two named things</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -349,6 +385,18 @@
 <td>The date on which the node was added</td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
+<tr>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>True if the entity is used, developed, or otherwise related to work in the Br...</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../has_application/">has_application</a></td>
+<td>* <br/> <a href="../Application/">Application</a></td>
+<td>A list of one or more specific applications of this entity to a specific purp...</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -362,12 +410,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="../UseCase/">UseCase</a></td>
-<td><a href="../data_topics/">data_topics</a></td>
-<td>range</td>
-<td><a href="./">DataTopic</a></td>
-</tr>
 <tr>
 <td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
 <td><a href="../concerns_data_topic/">concerns_data_topic</a></td>
@@ -405,12 +447,6 @@
 <td><a href="./">DataTopic</a></td>
 </tr>
 <tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../concerns_data_topic/">concerns_data_topic</a></td>
-<td>range</td>
-<td><a href="./">DataTopic</a></td>
-</tr>
-<tr>
 <td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
 <td><a href="../concerns_data_topic/">concerns_data_topic</a></td>
 <td>range</td>
@@ -429,6 +465,12 @@
 <td><a href="./">DataTopic</a></td>
 </tr>
 <tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../topics/">topics</a></td>
+<td>range</td>
+<td><a href="./">DataTopic</a></td>
+</tr>
+<tr>
 <td><a href="./">DataTopic</a></td>
 <td><a href="../topic_involves_anatomy/">topic_involves_anatomy</a></td>
 <td>domain</td>
@@ -437,6 +479,18 @@
 <tr>
 <td><a href="../DataTopicContainer/">DataTopicContainer</a></td>
 <td><a href="../data_topics_collection/">data_topics_collection</a></td>
+<td>range</td>
+<td><a href="./">DataTopic</a></td>
+</tr>
+<tr>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../data_topics/">data_topics</a></td>
+<td>range</td>
+<td><a href="./">DataTopic</a></td>
+</tr>
+<tr>
+<td><a href="../DataPart/">DataPart</a></td>
+<td><a href="../concerns_data_topics/">concerns_data_topics</a></td>
 <td>range</td>
 <td><a href="./">DataTopic</a></td>
 </tr>
@@ -458,11 +512,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:DataTopic</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/DataTopic</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:DataTopic</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/DataTopic</td>
 </tr>
 </tbody>
 </table>
@@ -474,7 +528,6 @@
 description: Represents a general data topic for Bridge2AI data or the tools/standards
   applied to the data.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: NamedThing
 slots:
 - edam_id
@@ -490,7 +543,6 @@ slots:
 description: Represents a general data topic for Bridge2AI data or the tools/standards
   applied to the data.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 is_a: NamedThing
 attributes:
   edam_id:
@@ -508,38 +560,38 @@ attributes:
     alias: edam_id
     owner: DataTopic
     domain_of:
-    - DataTopic
     - DataSubstrate
+    - DataTopic
     range: edam_identifier
   mesh_id:
     name: mesh_id
     description: Unique MeSH identifier
     examples:
-    - value: MeSH:D014831
+    - value: mesh:D014831
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     values_from:
-    - MeSH
+    - mesh
     alias: mesh_id
     owner: DataTopic
     domain_of:
-    - DataTopic
     - DataSubstrate
+    - DataTopic
     range: mesh_identifier
   ncit_id:
     name: ncit_id
     description: Unique NCIt Identifier
     examples:
-    - value: NCIT:C92692
+    - value: ncit:C92692
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     values_from:
-    - NCIT
+    - ncit
     alias: ncit_id
     owner: DataTopic
     domain_of:
-    - DataTopic
     - DataSubstrate
+    - DataTopic
     range: ncit_identifier
   topic_involves_anatomy:
     name: topic_involves_anatomy
@@ -550,13 +602,13 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: DataTopic
-    multivalued: true
     inherited: true
     alias: topic_involves_anatomy
     owner: DataTopic
     domain_of:
     - DataTopic
     range: AnatomicalEntity
+    multivalued: true
   id:
     name: id
     description: A unique identifier for a thing.
@@ -572,8 +624,8 @@ attributes:
     required: true
   category:
     name: category
-    description: Name of the high level ontology class in which this entity is categorized.
-      Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+    description: CURIE for the high level ontology class in which this entity is categorized.
+      Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: type
@@ -619,20 +671,19 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: subclass_of
     owner: DataTopic
     domain_of:
     - NamedThing
     range: NamedThing
+    multivalued: true
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: related_to
     owner: DataTopic
@@ -641,6 +692,7 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+    multivalued: true
   contributor_name:
     name: contributor_name
     description: The name of the person who added this node.
@@ -693,6 +745,36 @@ attributes:
     domain_of:
     - NamedThing
     range: date
+  used_in_bridge2ai:
+    name: used_in_bridge2ai
+    description: True if the entity is used, developed, or otherwise related to work
+      in the Bridge2AI consortium. If false, the entity is not explicitly related
+      to Bridge2AI. If not specified, it is not known if the entity is related to
+      Bridge2AI.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: used_in_bridge2ai
+    owner: DataTopic
+    domain_of:
+    - NamedThing
+    range: boolean
+  has_application:
+    name: has_application
+    description: A list of one or more specific applications of this entity to a specific
+      purpose.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    domain: NamedThing
+    alias: has_application
+    owner: DataTopic
+    domain_of:
+    - NamedThing
+    range: Application
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
 
 </code></pre>
 </details>

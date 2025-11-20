@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://bridge2ai.github.io/standards-schema/requires_registration/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
@@ -297,6 +297,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mappings" class="md-nav__link">
+    Mappings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linkml-source" class="md-nav__link">
     LinkML Source
   </a>
@@ -324,8 +331,9 @@
 
 
 <h1 id="slot-requires_registration">Slot: requires_registration</h1>
-<p><em>Does usage of the standard or tool require registrion of a user or group with some organization or managerial body?</em></p>
-<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/:requires_registration">https://w3id.org/bridge2ai/standards-schema-all/:requires_registration</a></p>
+<p><em>Does usage of the standard or tool require registration of a user or group with some organization or managerial body?</em></p>
+<p>URI: <a href="https://w3id.org/bridge2ai/standards-schema-all/requires_registration">https://w3id.org/bridge2ai/standards-schema-all/requires_registration</a>
+Alias: requires_registration</p>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../node_property/">node_property</a><ul>
@@ -339,48 +347,54 @@
 <tr>
 <th>Name</th>
 <th>Description</th>
+<th>Modifies Slot</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td>Represents a standard or tool in the Bridge2AI Standards Registry</td>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td>A set of concepts and categories, potentially defined or accompanied by their...</td>
+<td>no</td>
 </tr>
 <tr>
 <td><a href="../DataStandard/">DataStandard</a></td>
 <td>Represents a general purpose standard in the Bridge2AI Standards Registry</td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td>Represents a standard in the Bridge2AI Standards Registry with particular app...</td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td>A set of concepts and categories, potentially defined or accompanied by their...</td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td>Represents a resource in the Bridge2AI Standards Registry serving as a standa...</td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td>Represents a piece of software or computational tool in the Bridge2AI Standar...</td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td>Represents an implementation of one or more standards or tools in the Bridge2...</td>
+<td>no</td>
 </tr>
 <tr>
 <td><a href="../TrainingProgram/">TrainingProgram</a></td>
 <td>Represents a training program for skills and experience related to standards ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td>Represents an implementation of one or more standards or tools in the Bridge2...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td>Represents a standard or tool in the Bridge2AI Standards Registry</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td>Represents a standard in the Bridge2AI Standards Registry with particular app...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td>Represents a resource in the Bridge2AI Standards Registry serving to curate a...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td>Represents a piece of software or computational tool in the Bridge2AI Standar...</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -393,12 +407,31 @@
 <ul>
 <li>from schema: https://w3id.org/bridge2ai/standards-schema-all</li>
 </ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/requires_registration</td>
+</tr>
+<tr>
+<td>native</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/requires_registration</td>
+</tr>
+</tbody>
+</table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: requires_registration
-description: Does usage of the standard or tool require registrion of a user or group
-  with some organization or managerial body?
+description: Does usage of the standard or tool require registration of a user or
+  group with some organization or managerial body?
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property

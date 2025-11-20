@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://bridge2ai.github.io/standards-schema/NamedThing/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: NamedThing - standards-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -209,12 +209,25 @@
 <p>URI: <a href="http://schema.org/Thing">schema:Thing</a></p>
 <div class="mermaid"> classDiagram
     class NamedThing
-      NamedThing &lt;|-- UseCase
-      NamedThing &lt;|-- DataStandardOrTool
-      NamedThing &lt;|-- DataTopic
+    click NamedThing href "../NamedThing/"
       NamedThing &lt;|-- AnatomicalEntity
+        click AnatomicalEntity href "../AnatomicalEntity/"
+      NamedThing &lt;|-- Application
+        click Application href "../Application/"
+      NamedThing &lt;|-- DataStandardOrTool
+        click DataStandardOrTool href "../DataStandardOrTool/"
       NamedThing &lt;|-- Organization
+        click Organization href "../Organization/"
+      NamedThing &lt;|-- DataSet
+        click DataSet href "../DataSet/"
       NamedThing &lt;|-- DataSubstrate
+        click DataSubstrate href "../DataSubstrate/"
+      NamedThing &lt;|-- DataTopic
+        click DataTopic href "../DataTopic/"
+      NamedThing &lt;|-- UseCase
+        click UseCase href "../UseCase/"
+      NamedThing &lt;|-- Manifest
+        click Manifest href "../Manifest/"
 
       NamedThing : category
 
@@ -228,29 +241,59 @@
 
       NamedThing : description
 
+      NamedThing : has_application
+
+
+
+
+
+        NamedThing --&gt; "*" Application : has_application
+        click Application href "../Application/"
+
+
+
       NamedThing : id
 
       NamedThing : name
 
       NamedThing : related_to
 
-          NamedThing ..&gt; NamedThing : related_to
+
+
+
+
+        NamedThing --&gt; "*" NamedThing : related_to
+        click NamedThing href "../NamedThing/"
+
+
 
       NamedThing : subclass_of
 
-          NamedThing ..&gt; NamedThing : subclass_of
+
+
+
+
+        NamedThing --&gt; "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing/"
+
+
+
+      NamedThing : used_in_bridge2ai
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><strong>NamedThing</strong><ul>
-<li><a href="../UseCase/">UseCase</a></li>
-<li><a href="../DataStandardOrTool/">DataStandardOrTool</a></li>
-<li><a href="../DataTopic/">DataTopic</a></li>
 <li><a href="../AnatomicalEntity/">AnatomicalEntity</a></li>
+<li><a href="../Application/">Application</a></li>
+<li><a href="../DataStandardOrTool/">DataStandardOrTool</a></li>
 <li><a href="../Organization/">Organization</a></li>
+<li><a href="../DataSet/">DataSet</a></li>
 <li><a href="../DataSubstrate/">DataSubstrate</a></li>
+<li><a href="../DataTopic/">DataTopic</a></li>
+<li><a href="../UseCase/">UseCase</a></li>
+<li><a href="../Manifest/">Manifest</a></li>
 </ul>
 </li>
 </ul>
@@ -267,14 +310,14 @@
 <tbody>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>A unique identifier for a thing</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../category/">category</a></td>
 <td>0..1 <br/> <a href="../CategoryType/">CategoryType</a></td>
-<td>Name of the high level ontology class in which this entity is categorized</td>
+<td>CURIE for the high level ontology class in which this entity is categorized</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -291,13 +334,13 @@
 </tr>
 <tr>
 <td><a href="../subclass_of/">subclass_of</a></td>
-<td>0..* <br/> <a href="./">NamedThing</a></td>
+<td>* <br/> <a href="./">NamedThing</a></td>
 <td>Holds between two classes where the domain class is a specialization of the r...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../related_to/">related_to</a></td>
-<td>0..* <br/> <a href="./">NamedThing</a></td>
+<td>* <br/> <a href="./">NamedThing</a></td>
 <td>A relationship that is asserted between two named things</td>
 <td>direct</td>
 </tr>
@@ -325,6 +368,18 @@
 <td>The date on which the node was added</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>True if the entity is used, developed, or otherwise related to work in the Br...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../has_application/">has_application</a></td>
+<td>* <br/> <a href="../Application/">Application</a></td>
+<td>A list of one or more specific applications of this entity to a specific purp...</td>
+<td>direct</td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -338,6 +393,1530 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="./">NamedThing</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../datasheet/">datasheet</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../references/">references</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Application/">Application</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../collection/">collection</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../has_training_resource/">has_training_resource</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../is_open/">is_open</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../requires_registration/">requires_registration</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../publication/">publication</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../formal_specification/">formal_specification</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../collection/">collection</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../has_training_resource/">has_training_resource</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../is_open/">is_open</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../requires_registration/">requires_registration</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../publication/">publication</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../formal_specification/">formal_specification</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataStandard/">DataStandard</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../collection/">collection</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../has_training_resource/">has_training_resource</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../is_open/">is_open</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../requires_registration/">requires_registration</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../publication/">publication</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../formal_specification/">formal_specification</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../collection/">collection</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../has_training_resource/">has_training_resource</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../is_open/">is_open</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../requires_registration/">requires_registration</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../publication/">publication</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../formal_specification/">formal_specification</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Registry/">Registry</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../collection/">collection</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../has_training_resource/">has_training_resource</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../is_open/">is_open</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../requires_registration/">requires_registration</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../publication/">publication</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../formal_specification/">formal_specification</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../collection/">collection</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../has_training_resource/">has_training_resource</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../is_open/">is_open</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../requires_registration/">requires_registration</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../publication/">publication</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../formal_specification/">formal_specification</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ModelRepository/">ModelRepository</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../collection/">collection</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../has_training_resource/">has_training_resource</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../is_open/">is_open</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../requires_registration/">requires_registration</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../publication/">publication</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../formal_specification/">formal_specification</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../collection/">collection</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../has_training_resource/">has_training_resource</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../is_open/">is_open</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../requires_registration/">requires_registration</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../publication/">publication</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../formal_specification/">formal_specification</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../collection/">collection</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../has_training_resource/">has_training_resource</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../is_open/">is_open</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../requires_registration/">requires_registration</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../publication/">publication</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../formal_specification/">formal_specification</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../TrainingProgram/">TrainingProgram</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../url/">url</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSet/">DataSet</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../metadata_storage/">metadata_storage</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../file_extensions/">file_extensions</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../limitations/">limitations</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataSubstrate/">DataSubstrate</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../category/">category</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../related_to/">related_to</a></td>
+<td>range</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../contributor_name/">contributor_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../contributor_github_name/">contributor_github_name</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../contribution_date/">contribution_date</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
+<tr>
+<td><a href="../DataTopic/">DataTopic</a></td>
+<td><a href="../has_application/">has_application</a></td>
+<td>domain</td>
+<td><a href="./">NamedThing</a></td>
+</tr>
 <tr>
 <td><a href="../UseCase/">UseCase</a></td>
 <td><a href="../use_case_category/">use_case_category</a></td>
@@ -364,7 +1943,7 @@
 </tr>
 <tr>
 <td><a href="../UseCase/">UseCase</a></td>
-<td><a href="../standards_and_tools_for_dgp_use/">standards_and_tools_for_dgp_use</a></td>
+<td><a href="../standards_and_tools_for_gc_use/">standards_and_tools_for_gc_use</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
@@ -459,1316 +2038,98 @@
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td><a href="../collection/">collection</a></td>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td><a href="../UseCase/">UseCase</a></td>
+<td><a href="../has_application/">has_application</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td><a href="../is_open/">is_open</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
+<td><a href="../notes/">notes</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
 <td><a href="../category/">category</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
 <td><a href="../subclass_of/">subclass_of</a></td>
 <td>range</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
 <td><a href="../related_to/">related_to</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
 <td><a href="../related_to/">related_to</a></td>
 <td>range</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
 <td><a href="../contributor_name/">contributor_name</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
 <td><a href="../contributor_github_name/">contributor_github_name</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
 <td><a href="../contributor_orcid/">contributor_orcid</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandardOrTool/">DataStandardOrTool</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
 <td><a href="../contribution_date/">contribution_date</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../collection/">collection</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
+<td><a href="../used_in_bridge2ai/">used_in_bridge2ai</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
+<td><a href="../Manifest/">Manifest</a></td>
+<td><a href="../has_application/">has_application</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../is_open/">is_open</a></td>
+<td><a href="../DataPart/">DataPart</a></td>
+<td><a href="../anatomy/">anatomy</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
 <tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataStandard/">DataStandard</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../collection/">collection</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../is_open/">is_open</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../BiomedicalStandard/">BiomedicalStandard</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../collection/">collection</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../is_open/">is_open</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Registry/">Registry</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../collection/">collection</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../is_open/">is_open</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../OntologyOrVocabulary/">OntologyOrVocabulary</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../collection/">collection</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../is_open/">is_open</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ModelRepository/">ModelRepository</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../collection/">collection</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../is_open/">is_open</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceDataOrDataset/">ReferenceDataOrDataset</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../collection/">collection</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../is_open/">is_open</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../SoftwareOrTool/">SoftwareOrTool</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../collection/">collection</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../is_open/">is_open</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../ReferenceImplementation/">ReferenceImplementation</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../collection/">collection</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../purpose_detail/">purpose_detail</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../is_open/">is_open</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../requires_registration/">requires_registration</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../publication/">publication</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../formal_specification/">formal_specification</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../not_relevant_to_dgps/">not_relevant_to_dgps</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../TrainingProgram/">TrainingProgram</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataTopic/">DataTopic</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="./">NamedThing</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="./">NamedThing</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="./">NamedThing</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="./">NamedThing</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="./">NamedThing</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="./">NamedThing</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="./">NamedThing</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="./">NamedThing</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="./">NamedThing</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../AnatomicalEntity/">AnatomicalEntity</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../url/">url</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../metadata_storage/">metadata_storage</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../file_extensions/">file_extensions</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../limitations/">limitations</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../category/">category</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../subclass_of/">subclass_of</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../related_to/">related_to</a></td>
-<td>range</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../contributor_name/">contributor_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../contributor_github_name/">contributor_github_name</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
-<td>domain</td>
-<td><a href="./">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../DataSubstrate/">DataSubstrate</a></td>
-<td><a href="../contribution_date/">contribution_date</a></td>
+<td><a href="../DataPart/">DataPart</a></td>
+<td><a href="../notes/">notes</a></td>
 <td>domain</td>
 <td><a href="./">NamedThing</a></td>
 </tr>
@@ -1794,7 +2155,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/bridge2ai/standards-schema-all/:NamedThing</td>
+<td>https://w3id.org/bridge2ai/standards-schema-all/NamedThing</td>
 </tr>
 </tbody>
 </table>
@@ -1805,7 +2166,6 @@
 <pre><code class="language-yaml">name: NamedThing
 description: A generic grouping for any identifiable entity
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 slots:
 - id
 - category
@@ -1817,6 +2177,8 @@ slots:
 - contributor_github_name
 - contributor_orcid
 - contribution_date
+- used_in_bridge2ai
+- has_application
 class_uri: schema:Thing
 
 </code></pre>
@@ -1826,7 +2188,6 @@ class_uri: schema:Thing
 <pre><code class="language-yaml">name: NamedThing
 description: A generic grouping for any identifiable entity
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-rank: 1000
 attributes:
   id:
     name: id
@@ -1843,8 +2204,8 @@ attributes:
     required: true
   category:
     name: category
-    description: Name of the high level ontology class in which this entity is categorized.
-      Corresponds to the label for the entity type class, e.g., "BiomedicalStandard".
+    description: CURIE for the high level ontology class in which this entity is categorized.
+      Corresponds to the label for the entity type class, e.g., "B2AI_STANDARD:DataStandard".
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: type
@@ -1890,20 +2251,19 @@ attributes:
     rank: 1000
     is_a: related_to
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: subclass_of
     owner: NamedThing
     domain_of:
     - NamedThing
     range: NamedThing
+    multivalued: true
   related_to:
     name: related_to
     description: A relationship that is asserted between two named things.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     domain: NamedThing
-    multivalued: true
     inherited: true
     alias: related_to
     owner: NamedThing
@@ -1912,6 +2272,7 @@ attributes:
     - Organization
     symmetric: true
     range: NamedThing
+    multivalued: true
   contributor_name:
     name: contributor_name
     description: The name of the person who added this node.
@@ -1964,6 +2325,36 @@ attributes:
     domain_of:
     - NamedThing
     range: date
+  used_in_bridge2ai:
+    name: used_in_bridge2ai
+    description: True if the entity is used, developed, or otherwise related to work
+      in the Bridge2AI consortium. If false, the entity is not explicitly related
+      to Bridge2AI. If not specified, it is not known if the entity is related to
+      Bridge2AI.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: used_in_bridge2ai
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: boolean
+  has_application:
+    name: has_application
+    description: A list of one or more specific applications of this entity to a specific
+      purpose.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    domain: NamedThing
+    alias: has_application
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: Application
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
 class_uri: schema:Thing
 
 </code></pre>
