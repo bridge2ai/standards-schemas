@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-11-20T11:51:48
+# Generation date: 2025-11-20T12:18:50
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -229,7 +229,7 @@ class NamedThing(YAMLRoot):
     contributor_orcid: Optional[Union[str, URIorCURIE]] = None
     contribution_date: Optional[Union[str, XSDDate]] = None
     used_in_bridge2ai: Optional[Union[bool, Bool]] = None
-    has_application: Optional[Union[Union[str, ApplicationId], list[Union[str, ApplicationId]]]] = empty_list()
+    has_application: Optional[Union[dict[Union[str, ApplicationId], Union[dict, "Application"]], list[Union[dict, "Application"]]]] = empty_dict()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -268,9 +268,7 @@ class NamedThing(YAMLRoot):
         if self.used_in_bridge2ai is not None and not isinstance(self.used_in_bridge2ai, Bool):
             self.used_in_bridge2ai = Bool(self.used_in_bridge2ai)
 
-        if not isinstance(self.has_application, list):
-            self.has_application = [self.has_application] if self.has_application is not None else []
-        self.has_application = [v if isinstance(v, ApplicationId) else ApplicationId(v) for v in self.has_application]
+        self._normalize_inlined_as_list(slot_name="has_application", slot_type=Application, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -330,7 +328,9 @@ class Application(NamedThing):
     A set of details describing a specific application of a resource (e.g., a standard or a dataset) to a specific
     purpose. In the context of Bridge2AI, this will generally refer to an artificial intelligence-driven application.
     The related_to slot can be used to link to other relevant entities, such as other Applications, UseCases,
-    DataSets, or Standards.
+    DataSets, or Standards. Application objects have unique identifiers with the prefix B2AI_APP. This allows an
+    Application to be referenced from other objects if needed. The category slot for Application objects should always
+    be set to B2AI:Application for clarity.
     """
     _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to"]
 
@@ -1382,7 +1382,7 @@ slots.used_in_bridge2ai = Slot(uri=B2AI.used_in_bridge2ai, name="used_in_bridge2
                    model_uri=DEFAULT_.used_in_bridge2ai, domain=NamedThing, range=Optional[Union[bool, Bool]])
 
 slots.has_application = Slot(uri=B2AI.has_application, name="has_application", curie=B2AI.curie('has_application'),
-                   model_uri=DEFAULT_.has_application, domain=NamedThing, range=Optional[Union[Union[str, ApplicationId], list[Union[str, ApplicationId]]]])
+                   model_uri=DEFAULT_.has_application, domain=NamedThing, range=Optional[Union[dict[Union[str, ApplicationId], Union[dict, "Application"]], list[Union[dict, "Application"]]]])
 
 slots.collection = Slot(uri=B2AI_STANDARD.collection, name="collection", curie=B2AI_STANDARD.curie('collection'),
                    model_uri=DEFAULT_.collection, domain=NamedThing, range=Optional[Union[Union[str, "StandardsCollectionTag"], list[Union[str, "StandardsCollectionTag"]]]])

@@ -987,6 +987,8 @@
       ],
       "range": "Application",
       "multivalued": true,
+      "inlined": true,
+      "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
     {
@@ -2008,7 +2010,7 @@
     {
       "name": "Application",
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/Application",
-      "description": "A set of details describing a specific application of a resource (e.g., a standard or a dataset) to a specific purpose. In the context of Bridge2AI, this will generally refer to an artificial intelligence-driven application. The related_to slot can be used to link to other relevant entities, such as other Applications, UseCases, DataSets, or Standards.",
+      "description": "A set of details describing a specific application of a resource (e.g., a standard or a dataset) to a specific purpose. In the context of Bridge2AI, this will generally refer to an artificial intelligence-driven application. The related_to slot can be used to link to other relevant entities, such as other Applications, UseCases, DataSets, or Standards. Application objects have unique identifiers with the prefix B2AI_APP. This allows an Application to be referenced from other objects if needed. The category slot for Application objects should always be set to B2AI:Application for clarity.",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "is_a": "NamedThing",
       "slots": [
@@ -2646,7 +2648,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2025-09-05T16:34:19",
   "source_file_size": 498,
-  "generation_date": "2025-11-20T11:51:48",
+  "generation_date": "2025-11-20T12:18:49",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

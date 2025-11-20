@@ -53,7 +53,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -107,7 +107,7 @@
         },
         "Application": {
             "additionalProperties": false,
-            "description": "A set of details describing a specific application of a resource (e.g., a standard or a dataset) to a specific purpose. In the context of Bridge2AI, this will generally refer to an artificial intelligence-driven application. The related_to slot can be used to link to other relevant entities, such as other Applications, UseCases, DataSets, or Standards.",
+            "description": "A set of details describing a specific application of a resource (e.g., a standard or a dataset) to a specific purpose. In the context of Bridge2AI, this will generally refer to an artificial intelligence-driven application. The related_to slot can be used to link to other relevant entities, such as other Applications, UseCases, DataSets, or Standards. Application objects have unique identifiers with the prefix B2AI_APP. This allows an Application to be referenced from other objects if needed. The category slot for Application objects should always be set to B2AI:Application for clarity.",
             "properties": {
                 "category": {
                     "description": "CURIE for the high level ontology class in which this entity is categorized. Corresponds to the label for the entity type class, e.g., \"B2AI_STANDARD:DataStandard\".",
@@ -168,7 +168,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -310,7 +310,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -587,7 +587,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -801,7 +801,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -1008,7 +1008,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -1251,7 +1251,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -1423,7 +1423,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -1590,7 +1590,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -1757,7 +1757,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -1937,7 +1937,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -2069,7 +2069,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -2249,7 +2249,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -2420,7 +2420,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -2627,7 +2627,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -2834,7 +2834,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -3087,7 +3087,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
@@ -3307,7 +3307,7 @@
                 "has_application": {
                     "description": "A list of one or more specific applications of this entity to a specific purpose.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Application"
                     },
                     "type": [
                         "array",
