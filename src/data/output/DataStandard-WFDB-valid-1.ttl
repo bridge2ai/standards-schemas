@@ -1,0 +1,39 @@
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/> .
+@prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+@prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+B2AI_STANDARD:202 schema1:description "The WaveForm DataBase (WFDB) format is a widely-used standard for storing physiological signals and annotations. Originally developed for cardiac signals, WFDB now supports a wide range of physiological waveform data including ECG, EEG, blood pressure, and respiratory waveforms. The format consists of binary signal files and text header files that describe the signal properties, making it efficient for long-term physiological recordings while maintaining compatibility across platforms." ;
+    schema1:name "WaveForm DataBase (WFDB) Format" ;
+    B2AI_STANDARD:collection "clinicaldata" ;
+    B2AI_STANDARD:concerns_data_topic B2AI_TOPIC:36,
+        B2AI_TOPIC:4 ;
+    B2AI_STANDARD:formal_specification "https://physionet.org/physiotools/wag/header-5.htm"^^xsd:anyURI ;
+    B2AI_STANDARD:has_relevant_organization B2AI_ORG:140 ;
+    B2AI_STANDARD:is_open true ;
+    B2AI_STANDARD:publication "https://doi.org/10.13026/C2V30W"^^xsd:anyURI ;
+    B2AI_STANDARD:purpose_detail "WFDB format enables standardized storage and exchange of physiological signal data for clinical care, research, and algorithm development, particularly for cardiology and critical care applications." ;
+    B2AI_STANDARD:requires_registration false ;
+    B2AI_STANDARD:responsible_organization B2AI_ORG:140 ;
+    B2AI_APP:category "B2AI_STANDARD:DataStandard" ;
+    B2AI_APP:contribution_date "2024-12-20"^^xsd:date ;
+    B2AI_APP:contributor_name "Harry Caufield" ;
+    B2AI_APP:contributor_orcid "ORCID:0000-0001-5705-7831"^^xsd:anyURI ;
+    B2AI_APP:has_application B2AI_APP:230,
+        B2AI_APP:231 ;
+    B2AI_APP:url "https://physionet.org/content/wfdb/"^^xsd:anyURI .
+
+B2AI_APP:230 schema1:description "Recurrent neural network that processes WFDB-formatted ECG signals to automatically detect and classify cardiac arrhythmias in real-time monitoring applications." ;
+    schema1:name "WFDB Arrhythmia Detection" ;
+    B2AI_APP:category "B2AI:Application" ;
+    B2AI_APP:datasheet "https://example.org/wfdb-arrhythmia-datasheet"^^xsd:anyURI ;
+    B2AI_APP:references "https://doi.org/10.1161/CIRCEP.example"^^xsd:anyURI .
+
+B2AI_APP:231 schema1:description "Multi-modal deep learning system that analyzes WFDB-formatted vital sign waveforms to predict adverse events in intensive care unit patients." ;
+    schema1:name "WFDB Critical Care Event Prediction" ;
+    B2AI_APP:category "B2AI:Application" ;
+    B2AI_APP:datasheet "https://example.org/wfdb-icu-datasheet"^^xsd:anyURI ;
+    B2AI_APP:references "https://doi.org/10.1097/CCM.example"^^xsd:anyURI .
+

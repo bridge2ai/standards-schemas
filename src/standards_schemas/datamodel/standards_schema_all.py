@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-09-05T16:29:53
+# Generation date: 2025-11-20T12:18:50
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -142,6 +142,10 @@ class AnatomicalEntityId(NamedThingId):
     pass
 
 
+class ApplicationId(NamedThingId):
+    pass
+
+
 class DataStandardOrToolId(NamedThingId):
     pass
 
@@ -225,6 +229,7 @@ class NamedThing(YAMLRoot):
     contributor_orcid: Optional[Union[str, URIorCURIE]] = None
     contribution_date: Optional[Union[str, XSDDate]] = None
     used_in_bridge2ai: Optional[Union[bool, Bool]] = None
+    has_application: Optional[Union[dict[Union[str, ApplicationId], Union[dict, "Application"]], list[Union[dict, "Application"]]]] = empty_dict()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -262,6 +267,8 @@ class NamedThing(YAMLRoot):
 
         if self.used_in_bridge2ai is not None and not isinstance(self.used_in_bridge2ai, Bool):
             self.used_in_bridge2ai = Bool(self.used_in_bridge2ai)
+
+        self._normalize_inlined_as_list(slot_name="has_application", slot_type=Application, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -310,6 +317,45 @@ class AnatomicalEntity(NamedThing):
             self.MissingRequiredField("id")
         if not isinstance(self.id, AnatomicalEntityId):
             self.id = AnatomicalEntityId(self.id)
+
+        super().__post_init__(**kwargs)
+        self.category = str(self.class_class_curie)
+
+
+@dataclass(repr=False)
+class Application(NamedThing):
+    """
+    A set of details describing a specific application of a resource (e.g., a standard or a dataset) to a specific
+    purpose. In the context of Bridge2AI, this will generally refer to an artificial intelligence-driven application.
+    The related_to slot can be used to link to other relevant entities, such as other Applications, UseCases,
+    DataSets, or Standards. Application objects have unique identifiers with the prefix B2AI_APP. This allows an
+    Application to be referenced from other objects if needed. The category slot for Application objects should always
+    be set to B2AI:Application for clarity.
+    """
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to"]
+
+    class_class_uri: ClassVar[URIRef] = B2AI["Application"]
+    class_class_curie: ClassVar[str] = "B2AI:Application"
+    class_name: ClassVar[str] = "Application"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/Application")
+
+    id: Union[str, ApplicationId] = None
+    datasheet: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
+    references: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, ApplicationId):
+            self.id = ApplicationId(self.id)
+
+        if not isinstance(self.datasheet, list):
+            self.datasheet = [self.datasheet] if self.datasheet is not None else []
+        self.datasheet = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.datasheet]
+
+        if not isinstance(self.references, list):
+            self.references = [self.references] if self.references is not None else []
+        self.references = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.references]
 
         super().__post_init__(**kwargs)
         self.category = str(self.class_class_curie)
@@ -1220,9 +1266,6 @@ class StandardsCollectionTag(EnumDefinitionImpl):
     standardsregistry = PermissibleValue(
         text="standardsregistry",
         description="Standards Registry")
-    has_ai_application = PermissibleValue(
-        text="has_ai_application",
-        description="""Has a direct AI application, defined as standards/tools that are: associated with ML or neural networks; schemas, or have schemas; data models; associated with DICOM; associated with AI; associated with standards used within Bridge2AI""")
     standards_process_maturity_final = PermissibleValue(
         text="standards_process_maturity_final",
         description="""This standard has undergone a review process by one or more SDOs and has been determined to be in a mature state. Future revisions may still be possible.""")
@@ -1311,6 +1354,12 @@ slots.url = Slot(uri=B2AI.url, name="url", curie=B2AI.curie('url'),
 slots.xref = Slot(uri=B2AI.xref, name="xref", curie=B2AI.curie('xref'),
                    model_uri=DEFAULT_.xref, domain=NamedThing, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 
+slots.datasheet = Slot(uri=B2AI.datasheet, name="datasheet", curie=B2AI.curie('datasheet'),
+                   model_uri=DEFAULT_.datasheet, domain=NamedThing, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+
+slots.references = Slot(uri=B2AI.references, name="references", curie=B2AI.curie('references'),
+                   model_uri=DEFAULT_.references, domain=NamedThing, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+
 slots.contributor_name = Slot(uri=B2AI.contributor_name, name="contributor_name", curie=B2AI.curie('contributor_name'),
                    model_uri=DEFAULT_.contributor_name, domain=NamedThing, range=Optional[str])
 
@@ -1331,6 +1380,9 @@ slots.subclass_of = Slot(uri=B2AI.subclass_of, name="subclass_of", curie=B2AI.cu
 
 slots.used_in_bridge2ai = Slot(uri=B2AI.used_in_bridge2ai, name="used_in_bridge2ai", curie=B2AI.curie('used_in_bridge2ai'),
                    model_uri=DEFAULT_.used_in_bridge2ai, domain=NamedThing, range=Optional[Union[bool, Bool]])
+
+slots.has_application = Slot(uri=B2AI.has_application, name="has_application", curie=B2AI.curie('has_application'),
+                   model_uri=DEFAULT_.has_application, domain=NamedThing, range=Optional[Union[dict[Union[str, ApplicationId], Union[dict, "Application"]], list[Union[dict, "Application"]]]])
 
 slots.collection = Slot(uri=B2AI_STANDARD.collection, name="collection", curie=B2AI_STANDARD.curie('collection'),
                    model_uri=DEFAULT_.collection, domain=NamedThing, range=Optional[Union[Union[str, "StandardsCollectionTag"], list[Union[str, "StandardsCollectionTag"]]]])

@@ -1,18 +1,18 @@
-@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
 @prefix schema1: <http://schema.org/> .
-@prefix uberon: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix uberon: <http://purl.obolibrary.org/obo/UBERON_> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 B2AI_TOPIC:22 schema1:description "Images obtained through one or more brain imaging techniques, including computed tomography, positron emission tomography, magnetic resonance imaging, or imaging of associated body structures (e.g., angiography)." ;
     schema1:name "Neurologic Imaging" ;
     B2AI_TOPIC:topic_involves_anatomy uberon:0000955 ;
-    B2AI:category "B2AI_TOPIC:DataTopic" ;
-    B2AI:contributor_github_name "laverne" ;
-    B2AI:contributor_name "Laverne Billie" ;
-    B2AI:contributor_orcid "ORCID:0000-0001-5555-7811"^^xsd:anyURI ;
-    B2AI:edam_id "edam.data:3424" ;
-    B2AI:mesh_id "mesh:D059906" ;
-    B2AI:ncit_id "ncit:C173635" ;
-    B2AI:subclass_of B2AI_TOPIC:15 .
+    B2AI_APP:category "B2AI_TOPIC:DataTopic" ;
+    B2AI_APP:contributor_github_name "laverne" ;
+    B2AI_APP:contributor_name "Laverne Billie" ;
+    B2AI_APP:contributor_orcid "ORCID:0000-0001-5555-7811"^^xsd:anyURI ;
+    B2AI_APP:edam_id "edam.data:3424" ;
+    B2AI_APP:mesh_id "mesh:D059906" ;
+    B2AI_APP:ncit_id "ncit:C173635" ;
+    B2AI_APP:subclass_of B2AI_TOPIC:15 .
 

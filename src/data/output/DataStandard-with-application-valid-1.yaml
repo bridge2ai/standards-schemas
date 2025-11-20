@@ -1,0 +1,69 @@
+id: B2AI_STANDARD:201
+category: B2AI_STANDARD:DataStandard
+name: DICOM (Digital Imaging and Communications in Medicine)
+description: International standard for medical imaging information and related data
+  exchange. DICOM enables the integration of medical imaging devices, PACS, and other
+  systems from multiple manufacturers into a picture archiving and communication system.
+contributor_name: Alexandra Thompson
+contributor_github_name: athompson
+contributor_orcid: ORCID:0000-0002-5555-6666
+contribution_date: '2024-07-10'
+used_in_bridge2ai: true
+has_application:
+- id: B2AI_APP:201
+  category: B2AI:Application
+  name: AI-Assisted Lung Nodule Detection in CT Scans
+  description: Deep learning system that analyzes chest CT images in DICOM format
+    to automatically detect and characterize pulmonary nodules, assisting radiologists
+    in early lung cancer screening programs.
+  contributor_name: Dr. Sarah Chen
+  contributor_orcid: ORCID:0000-0003-1111-2222
+  contribution_date: '2024-10-20'
+  datasheet:
+  - https://example.com/lung-nodule-ai-model-card.pdf
+  references:
+  - https://doi.org/10.1000/lung.nodule.ai.2024
+- id: B2AI_APP:202
+  category: B2AI:Application
+  name: Automated Brain Tumor Segmentation
+  description: Convolutional neural network pipeline for automatic segmentation and
+    classification of brain tumors in DICOM MRI sequences, supporting treatment planning
+    and surgical navigation.
+  contributor_name: Dr. Michael Park
+  contributor_orcid: ORCID:0000-0003-2222-3333
+  contribution_date: '2024-09-15'
+  datasheet:
+  - https://example.com/brain-tumor-segmentation-datasheet.pdf
+  references:
+  - https://doi.org/10.1000/brain.tumor.seg.2024
+  - https://arxiv.org/abs/2403.56789
+- id: B2AI_APP:203
+  category: B2AI:Application
+  name: Retinal Disease Classification from Fundus Images
+  description: Multi-task learning model for detecting diabetic retinopathy, age-related
+    macular degeneration, and glaucoma from DICOM-formatted fundus photographs, enabling
+    automated screening in ophthalmology clinics.
+  contributor_name: Dr. James Liu
+  contributor_orcid: ORCID:0000-0003-3333-4444
+  contribution_date: '2024-08-30'
+  references:
+  - https://doi.org/10.1000/retinal.ai.2024
+collection:
+- datamodel
+- clinicaldata
+- standards_process_maturity_final
+- implementation_maturity_production
+concerns_data_topic:
+- B2AI_TOPIC:15
+has_relevant_organization:
+- B2AI_ORG:200
+- B2AI_ORG:201
+purpose_detail: Facilitates storage, transmission, and display of medical images across
+  heterogeneous systems while preserving clinical context and patient information.
+is_open: true
+requires_registration: false
+url: https://www.dicomstandard.org/
+publication: doi:10.1148/radiology.148.1.6856849
+formal_specification: https://github.com/dicom/dicom-standard
+responsible_organization:
+- B2AI_ORG:200

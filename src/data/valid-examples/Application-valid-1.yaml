@@ -1,0 +1,52 @@
+# filepath: /home/harry/standards-schemas/src/data/valid-examples/Application-valid-1.yaml
+# Example Application showing how FHIR standard is applied to a clinical AI decision support system
+
+id: B2AI_APP:101
+category: B2AI:Application
+name: AI-Powered Clinical Decision Support for Sepsis Prediction
+description: >-
+  An artificial intelligence application that uses machine learning models to predict
+  early onset of sepsis in hospitalized patients. The system integrates electronic health
+  record data standardized using FHIR (Fast Healthcare Interoperability Resources) to
+  enable real-time risk assessment and alert generation for clinical care teams.
+
+# Related entities - linking to standards, datasets, and use cases
+related_to:
+  - B2AI_STANDARD:105  # FHIR standard
+  - B2AI_DATA:42       # Clinical EHR dataset
+  - B2AI_USECASE:8     # Clinical prediction use case
+
+# Datasheets documenting this application
+datasheet:
+  - https://example.com/datasheets/sepsis-ai-model-card.pdf
+  - https://example.com/datasheets/sepsis-ai-datasheet.pdf
+
+# References to publications about this application
+references:
+  - https://doi.org/10.1000/example.sepsis.ai.2024
+  - https://arxiv.org/abs/2401.12345
+
+# Contributor information
+contributor_name: "Elena Rodriguez"
+contributor_github_name: "erodriguez"
+contributor_orcid: ORCID:0000-0002-3456-7890
+contribution_date: "2024-11-15"
+
+# Bridge2AI relevance
+used_in_bridge2ai: true
+
+# This application could have its own sub-applications
+# But they need to be defined in full rather than by reference
+has_application:
+  - id: B2AI_APP:102
+    category: B2AI:Application
+    name: Mobile Alerting Component
+    description: Mobile application component that receives alerts from the AI-powered clinical decision support system and notifies healthcare providers in real-time.
+    datasheet:
+      - https://example.com/datasheets/mobile-alerting-datasheet.pdf
+    references:
+      - https://doi.org/10.1000/example.mobile.alerting.2024
+    contributor_name: "Elena Rodriguez"
+    contributor_github_name: "erodriguez"
+    contributor_orcid: ORCID:0000-0002-3456-7890
+    contribution_date: "2024-11-15"

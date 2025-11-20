@@ -1,4 +1,4 @@
-@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
 @prefix B2AI_SUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/> .
 @prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
@@ -8,11 +8,11 @@
 
 B2AI_USECASE:1 schema1:description "Collecting clinical data from patient visits involves the process of gathering information about a patient's medical history, current symptoms, and other relevant information during a healthcare appointment. This typically includes taking a detailed medical history, conducting a physical examination, ordering and interpreting diagnostic tests, and documenting the findings in the patient's medical record. This may also include more focused evaluations, as with the AI-READI project’s assessments of cognitive function and visual acuity. Medical records may include structured/unstructured text, values for lab results, and/or images." ;
     schema1:name "Obtain patient data from records of clinical visits." ;
-    B2AI:category "B2AI_USECASE:UseCase" ;
-    B2AI:contribution_date "2023-01-01"^^xsd:date ;
-    B2AI:contributor_name "Sashi Wattana" ;
-    B2AI:contributor_orcid "ORCID:0000-0001-1234-5678"^^xsd:anyURI ;
-    B2AI:xref "B2AI_USECASE:123"^^xsd:anyURI,
+    B2AI_APP:category "B2AI_USECASE:UseCase" ;
+    B2AI_APP:contribution_date "2023-01-01"^^xsd:date ;
+    B2AI_APP:contributor_name "Sashi Wattana" ;
+    B2AI_APP:contributor_orcid "ORCID:0000-0001-1234-5678"^^xsd:anyURI ;
+    B2AI_APP:xref "B2AI_USECASE:123"^^xsd:anyURI,
         "B2AI_USECASE:456"^^xsd:anyURI ;
     B2AI_USECASE:alternative_standards_and_tools B2AI_STANDARD:123,
         B2AI_STANDARD:555 ;

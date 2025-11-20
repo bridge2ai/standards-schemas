@@ -1,8 +1,8 @@
-@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
 @prefix schema1: <http://schema.org/> .
 
 B2AI_TOPIC:2 schema1:description "A minimal but valid data topic example that conforms to the schema" ;
     schema1:name "Minimal DataTopic Example" ;
-    B2AI:category "B2AI_TOPIC:DataTopic" .
+    B2AI_APP:category "B2AI_TOPIC:DataTopic" .
 

@@ -1,0 +1,30 @@
+id: B2AI_STANDARD:180
+category: B2AI_STANDARD:OntologyOrVocabulary
+name: SNOMED CT
+description: SNOMED CT (Systematized Nomenclature of Medicine -- Clinical Terms) is
+  a comprehensive clinical terminology that provides a standardized way to represent
+  clinical information across the entire healthcare spectrum. It contains more than
+  350,000 active concepts with unique meanings organized into hierarchies, enabling
+  semantic interoperability between healthcare systems and supporting clinical documentation,
+  decision support, and analytics.
+contributor_name: Harry Caufield
+contributor_orcid: ORCID:0000-0001-5705-7831
+contribution_date: '2024-12-20'
+collection:
+- obofoundry
+- clinicaldata
+concerns_data_topic:
+- B2AI_TOPIC:4
+- B2AI_TOPIC:5
+has_relevant_organization:
+- B2AI_ORG:130
+purpose_detail: SNOMED CT serves as a clinical reference terminology enabling consistent
+  representation and sharing of clinical data across systems, supporting clinical
+  care delivery, research, and health information exchange worldwide.
+is_open: false
+requires_registration: true
+url: https://www.snomed.org/
+publication: https://doi.org/10.1093/jamia/ocu011
+formal_specification: https://confluence.ihtsdotools.org/display/DOCSTART
+responsible_organization:
+- B2AI_ORG:130

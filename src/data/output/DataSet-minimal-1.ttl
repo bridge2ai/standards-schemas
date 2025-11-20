@@ -1,8 +1,8 @@
-@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_DATA: <https://w3id.org/bridge2ai/standards-dataset-schema/> .
 @prefix schema1: <http://schema.org/> .
 
 B2AI_DATA:3 schema1:description "A minimal but valid dataset example that conforms to the schema" ;
     schema1:name "Minimal Dataset Example" ;
-    B2AI:category "B2AI_DATA:DataSet" .
+    B2AI_APP:category "B2AI_DATA:DataSet" .
 

@@ -1,0 +1,40 @@
+id: B2AI_STANDARD:105
+category: B2AI_STANDARD:DataStandard
+name: HL7 FHIR
+description: Fast Healthcare Interoperability Resources (FHIR) is a standard for exchanging healthcare information electronically. It provides a modular framework of components called resources that can be assembled into working systems to solve clinical and administrative problems. FHIR combines the best features of HL7's v2, v3 and CDA product lines while leveraging the latest web standards.
+collection:
+  - datamodel
+  - clinicaldata
+concerns_data_topic:
+  - B2AI_TOPIC:4  # Clinical Observations
+  - B2AI_TOPIC:5  # Data
+has_relevant_organization:
+  - B2AI_ORG:50  # HL7 International
+responsible_organization:
+  - B2AI_ORG:50  # HL7 International
+purpose_detail: FHIR is designed to enable healthcare information exchange across different systems and organizations, supporting clinical care delivery, research, and public health reporting.
+is_open: true
+requires_registration: false
+url: https://www.hl7.org/fhir/
+publication: https://doi.org/10.1016/j.jbi.2019.103175
+formal_specification: https://www.hl7.org/fhir/overview.html
+has_application:
+  - id: B2AI_APP:200
+    category: B2AI:Application
+    name: FHIR-based Clinical Decision Support
+    description: AI-powered clinical decision support system that analyzes FHIR-formatted patient data to provide real-time recommendations for diagnosis and treatment planning.
+    datasheet:
+      - https://example.org/cds-datasheet
+    references:
+      - https://doi.org/10.1093/jamia/example1
+  - id: B2AI_APP:201
+    category: B2AI:Application
+    name: FHIR Patient Risk Prediction
+    description: Machine learning application that processes FHIR-based electronic health records to predict patient readmission risk and adverse outcomes.
+    datasheet:
+      - https://example.org/risk-prediction-datasheet
+    references:
+      - https://doi.org/10.1038/s41746-example
+contributor_name: Harry Caufield
+contributor_orcid: ORCID:0000-0001-5705-7831
+contribution_date: "2024-12-20"

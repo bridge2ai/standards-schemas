@@ -1,0 +1,49 @@
+id: B2AI_STANDARD:202
+category: B2AI_STANDARD:DataStandard
+name: WaveForm DataBase (WFDB) Format
+description: The WaveForm DataBase (WFDB) format is a widely-used standard for storing
+  physiological signals and annotations. Originally developed for cardiac signals,
+  WFDB now supports a wide range of physiological waveform data including ECG, EEG,
+  blood pressure, and respiratory waveforms. The format consists of binary signal
+  files and text header files that describe the signal properties, making it efficient
+  for long-term physiological recordings while maintaining compatibility across platforms.
+contributor_name: Harry Caufield
+contributor_orcid: ORCID:0000-0001-5705-7831
+contribution_date: '2024-12-20'
+has_application:
+- id: B2AI_APP:230
+  category: B2AI:Application
+  name: WFDB Arrhythmia Detection
+  description: Recurrent neural network that processes WFDB-formatted ECG signals
+    to automatically detect and classify cardiac arrhythmias in real-time monitoring
+    applications.
+  datasheet:
+  - https://example.org/wfdb-arrhythmia-datasheet
+  references:
+  - https://doi.org/10.1161/CIRCEP.example
+- id: B2AI_APP:231
+  category: B2AI:Application
+  name: WFDB Critical Care Event Prediction
+  description: Multi-modal deep learning system that analyzes WFDB-formatted vital
+    sign waveforms to predict adverse events in intensive care unit patients.
+  datasheet:
+  - https://example.org/wfdb-icu-datasheet
+  references:
+  - https://doi.org/10.1097/CCM.example
+collection:
+- clinicaldata
+concerns_data_topic:
+- B2AI_TOPIC:4
+- B2AI_TOPIC:36
+has_relevant_organization:
+- B2AI_ORG:140
+purpose_detail: WFDB format enables standardized storage and exchange of physiological
+  signal data for clinical care, research, and algorithm development, particularly
+  for cardiology and critical care applications.
+is_open: true
+requires_registration: false
+url: https://physionet.org/content/wfdb/
+publication: https://doi.org/10.13026/C2V30W
+formal_specification: https://physionet.org/physiotools/wag/header-5.htm
+responsible_organization:
+- B2AI_ORG:140

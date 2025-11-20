@@ -1,0 +1,26 @@
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/> .
+@prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+@prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+B2AI_STANDARD:180 schema1:description "SNOMED CT (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology that provides a standardized way to represent clinical information across the entire healthcare spectrum. It contains more than 350,000 active concepts with unique meanings organized into hierarchies, enabling semantic interoperability between healthcare systems and supporting clinical documentation, decision support, and analytics." ;
+    schema1:name "SNOMED CT" ;
+    B2AI_STANDARD:collection "clinicaldata",
+        "obofoundry" ;
+    B2AI_STANDARD:concerns_data_topic B2AI_TOPIC:4,
+        B2AI_TOPIC:5 ;
+    B2AI_STANDARD:formal_specification "https://confluence.ihtsdotools.org/display/DOCSTART"^^xsd:anyURI ;
+    B2AI_STANDARD:has_relevant_organization B2AI_ORG:130 ;
+    B2AI_STANDARD:is_open false ;
+    B2AI_STANDARD:publication "https://doi.org/10.1093/jamia/ocu011"^^xsd:anyURI ;
+    B2AI_STANDARD:purpose_detail "SNOMED CT serves as a clinical reference terminology enabling consistent representation and sharing of clinical data across systems, supporting clinical care delivery, research, and health information exchange worldwide." ;
+    B2AI_STANDARD:requires_registration true ;
+    B2AI_STANDARD:responsible_organization B2AI_ORG:130 ;
+    B2AI_APP:category "B2AI_STANDARD:OntologyOrVocabulary" ;
+    B2AI_APP:contribution_date "2024-12-20"^^xsd:date ;
+    B2AI_APP:contributor_name "Harry Caufield" ;
+    B2AI_APP:contributor_orcid "ORCID:0000-0001-5705-7831"^^xsd:anyURI ;
+    B2AI_APP:url "https://www.snomed.org/"^^xsd:anyURI .
+
