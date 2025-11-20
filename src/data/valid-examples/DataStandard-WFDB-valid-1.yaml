@@ -17,10 +17,6 @@ requires_registration: false
 url: https://physionet.org/content/wfdb/
 publication: https://doi.org/10.13026/C2V30W
 formal_specification: https://physionet.org/physiotools/wag/header-5.htm
-file_extensions:
-  - .dat
-  - .hea
-  - .atr
 has_application:
   - id: B2AI_APP:230
     category: B2AI:Application

@@ -18,9 +18,6 @@ requires_registration: false
 url: https://www.hl7.org/fhir/
 publication: https://doi.org/10.1016/j.jbi.2019.103175
 formal_specification: https://www.hl7.org/fhir/overview.html
-file_extensions:
-  - .json
-  - .xml
 has_application:
   - id: B2AI_APP:200
     category: B2AI:Application

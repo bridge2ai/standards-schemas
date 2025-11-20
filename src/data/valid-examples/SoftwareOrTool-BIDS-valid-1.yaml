@@ -18,11 +18,6 @@ requires_registration: false
 url: https://bids.neuroimaging.io/
 publication: https://doi.org/10.1038/sdata.2016.44
 formal_specification: https://bids-specification.readthedocs.io/
-file_extensions:
-  - .nii
-  - .nii.gz
-  - .json
-  - .tsv
 has_training_resource:
   - B2AI_STANDARD:900  # BIDS Training Materials
 has_application:
