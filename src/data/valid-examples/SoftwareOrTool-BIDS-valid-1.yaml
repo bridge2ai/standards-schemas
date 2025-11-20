@@ -1,0 +1,47 @@
+id: B2AI_STANDARD:33
+category: B2AI_STANDARD:SoftwareOrTool
+name: Brain Imaging Data Structure (BIDS)
+description: The Brain Imaging Data Structure (BIDS) is a specification for organizing and describing neuroimaging and behavioral data. BIDS prescribes a file structure and naming convention to organize data files and includes standardized metadata schemas for describing experimental details. It supports multiple neuroimaging modalities including MRI, EEG, MEG, iEEG, and PET, making neuroimaging datasets machine-readable and enabling automated data processing pipelines.
+collection:
+  - datamodel
+  - minimuminformationschema
+concerns_data_topic:
+  - B2AI_TOPIC:22  # Neurologic Imaging
+  - B2AI_TOPIC:5  # Data
+has_relevant_organization:
+  - B2AI_ORG:85  # BIDS Community
+responsible_organization:
+  - B2AI_ORG:85  # BIDS Community
+purpose_detail: BIDS facilitates data sharing, reproducibility, and collaboration in neuroimaging research by providing a standardized format that can be automatically validated and processed by analysis tools.
+is_open: true
+requires_registration: false
+url: https://bids.neuroimaging.io/
+publication: https://doi.org/10.1038/sdata.2016.44
+formal_specification: https://bids-specification.readthedocs.io/
+file_extensions:
+  - .nii
+  - .nii.gz
+  - .json
+  - .tsv
+has_training_resource:
+  - B2AI_STANDARD:900  # BIDS Training Materials
+has_application:
+  - id: B2AI_APP:220
+    category: B2AI:Application
+    name: BIDS-based Alzheimer's Disease Prediction
+    description: Convolutional neural network trained on BIDS-formatted structural MRI data to predict Alzheimer's disease progression from baseline and longitudinal neuroimaging features.
+    datasheet:
+      - https://example.org/bids-alzheimers-datasheet
+    references:
+      - https://doi.org/10.1016/j.neuroimage.example
+  - id: B2AI_APP:221
+    category: B2AI:Application
+    name: BIDS fMRI Pattern Classification
+    description: Deep learning framework that processes BIDS-formatted functional MRI data to classify cognitive states and decode brain activity patterns.
+    datasheet:
+      - https://example.org/bids-fmri-datasheet
+    references:
+      - https://doi.org/10.1038/nn.example
+contributor_name: Harry Caufield
+contributor_orcid: ORCID:0000-0001-5705-7831
+contribution_date: "2024-12-20"

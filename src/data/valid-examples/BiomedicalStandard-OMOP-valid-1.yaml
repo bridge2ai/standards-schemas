@@ -1,0 +1,34 @@
+id: B2AI_STANDARD:243
+category: B2AI_STANDARD:BiomedicalStandard
+name: OMOP Common Data Model
+description: The Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) is a standardized data model that enables systematic analysis of disparate observational databases. The CDM provides a common format and content, as well as standard vocabularies to encode healthcare data from diverse sources. It is designed to standardize the structure and content of observational data to enable efficient analyses that can produce reliable evidence.
+collection:
+  - datamodel
+  - clinicaldata
+concerns_data_topic:
+  - B2AI_TOPIC:4  # Clinical Observations
+  - B2AI_TOPIC:5  # Data
+  - B2AI_TOPIC:29  # SDoH
+has_relevant_organization:
+  - B2AI_ORG:75  # OHDSI (Observational Health Data Sciences and Informatics)
+responsible_organization:
+  - B2AI_ORG:75  # OHDSI
+purpose_detail: OMOP CDM is designed to standardize observational health data from electronic health records, administrative claims, and disease registries, enabling large-scale analytics and machine learning across diverse healthcare datasets.
+is_open: true
+requires_registration: false
+url: https://www.ohdsi.org/data-standardization/the-common-data-model/
+publication: https://doi.org/10.1093/jamia/ocv153
+formal_specification: https://ohdsi.github.io/CommonDataModel/
+limitations: Primarily designed for observational studies and may require customization for certain clinical research applications. Data transformation from source systems can be complex and resource-intensive.
+has_application:
+  - id: B2AI_APP:210
+    category: B2AI:Application
+    name: OMOP-based Patient Trajectory Prediction
+    description: Deep learning model that analyzes patient timelines in OMOP CDM format to predict disease progression and treatment outcomes across multiple conditions.
+    datasheet:
+      - https://example.org/omop-trajectory-datasheet
+    references:
+      - https://doi.org/10.1093/jamia/example-omop
+contributor_name: Harry Caufield
+contributor_orcid: ORCID:0000-0001-5705-7831
+contribution_date: "2024-12-20"
