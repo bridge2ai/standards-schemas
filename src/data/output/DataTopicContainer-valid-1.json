@@ -15,7 +15,8 @@
     {
       "id": "B2AI_TOPIC:3",
       "category": "B2AI_TOPIC:DataTopic",
-      "name": "Science"
+      "name": "Science",
+      "description": "A broad data topic encompassing all scientific disciplines"
     }
   ],
   "@type": "DataTopicContainer"

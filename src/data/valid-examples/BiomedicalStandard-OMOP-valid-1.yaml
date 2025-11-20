@@ -19,7 +19,6 @@ requires_registration: false
 url: https://www.ohdsi.org/data-standardization/the-common-data-model/
 publication: https://doi.org/10.1093/jamia/ocv153
 formal_specification: https://ohdsi.github.io/CommonDataModel/
-limitations: Primarily designed for observational studies and may require customization for certain clinical research applications. Data transformation from source systems can be complex and resource-intensive.
 has_application:
   - id: B2AI_APP:210
     category: B2AI:Application

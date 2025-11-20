@@ -18,9 +18,6 @@ requires_registration: true
 url: https://www.snomed.org/
 publication: https://doi.org/10.1093/jamia/ocu011
 formal_specification: https://confluence.ihtsdotools.org/display/DOCSTART
-edam_id: EDAM:format_3620
-mesh_id: MESH:D058977
-notes: SNOMED CT is available for use in IHTSDO member countries through national licensing agreements. Some countries provide free access to healthcare providers and researchers.
 contributor_name: Harry Caufield
 contributor_orcid: ORCID:0000-0001-5705-7831
 contribution_date: "2024-12-20"

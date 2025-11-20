@@ -36,5 +36,17 @@ contribution_date: "2024-11-15"
 used_in_bridge2ai: true
 
 # This application could have its own sub-applications
+# But they need to be defined in full rather than by reference
 has_application:
-  - B2AI_APP:102  # Mobile alerting component
+  - id: B2AI_APP:102
+    category: B2AI:Application
+    name: Mobile Alerting Component
+    description: Mobile application component that receives alerts from the AI-powered clinical decision support system and notifies healthcare providers in real-time.
+    datasheet:
+      - https://example.com/datasheets/mobile-alerting-datasheet.pdf
+    references:
+      - https://doi.org/10.1000/example.mobile.alerting.2024
+    contributor_name: "Elena Rodriguez"
+    contributor_github_name: "erodriguez"
+    contributor_orcid: ORCID:0000-0002-3456-7890
+    contribution_date: "2024-11-15"

@@ -1,0 +1,7 @@
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix schema1: <http://schema.org/> .
+
+B2AI_APP:1 schema1:description "A minimal but valid application example that conforms to the schema" ;
+    schema1:name "Minimal Application Example" ;
+    B2AI_APP:category "B2AI:Application" .
+

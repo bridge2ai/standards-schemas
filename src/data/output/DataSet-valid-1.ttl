@@ -1,4 +1,4 @@
-@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_DATA: <https://w3id.org/bridge2ai/standards-dataset-schema/> .
 @prefix B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/> .
 @prefix B2AI_SUBSTRATE: <https://w3id.org/bridge2ai/standards-datasubstrate-schema/> .
@@ -17,8 +17,8 @@ B2AI_DATA:3 schema1:description "This dataset is the June 2024 (v2) release of d
     B2AI_DATA:produced_by B2AI_ORG:1 ;
     B2AI_DATA:substrates B2AI_SUBSTRATE:1 ;
     B2AI_DATA:topics B2AI_TOPIC:4 ;
-    B2AI:category "B2AI_DATA:DataSet" ;
-    B2AI:contribution_date "2024-03-05"^^xsd:date ;
-    B2AI:contributor_name "Verena Eadán" ;
-    B2AI:contributor_orcid "ORCID:0000-0005-1292-5161"^^xsd:anyURI .
+    B2AI_APP:category "B2AI_DATA:DataSet" ;
+    B2AI_APP:contribution_date "2024-03-05"^^xsd:date ;
+    B2AI_APP:contributor_name "Verena Eadán" ;
+    B2AI_APP:contributor_orcid "ORCID:0000-0005-1292-5161"^^xsd:anyURI .
 

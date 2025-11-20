@@ -1,17 +1,18 @@
-@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
 @prefix schema1: <http://schema.org/> .
 
 B2AI_TOPIC:2 schema1:description "Data involving any study of living organisms at any scale." ;
     schema1:name "Biology" ;
-    B2AI:category "B2AI_TOPIC:DataTopic" ;
-    B2AI:edam_id "edam.topic:3070" ;
-    B2AI:mesh_id "mesh:D001695" ;
-    B2AI:ncit_id "ncit:C16345" ;
-    B2AI:subclass_of B2AI_TOPIC:1 .
+    B2AI_APP:category "B2AI_TOPIC:DataTopic" ;
+    B2AI_APP:edam_id "edam.topic:3070" ;
+    B2AI_APP:mesh_id "mesh:D001695" ;
+    B2AI_APP:ncit_id "ncit:C16345" ;
+    B2AI_APP:subclass_of B2AI_TOPIC:1 .
 
-B2AI_TOPIC:3 schema1:name "Science" ;
-    B2AI:category "B2AI_TOPIC:DataTopic" .
+B2AI_TOPIC:3 schema1:description "A broad data topic encompassing all scientific disciplines" ;
+    schema1:name "Science" ;
+    B2AI_APP:category "B2AI_TOPIC:DataTopic" .
 
 [] a B2AI_TOPIC:DataTopicContainer ;
     B2AI_TOPIC:data_topics_collection B2AI_TOPIC:2,

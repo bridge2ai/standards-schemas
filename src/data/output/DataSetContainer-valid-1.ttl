@@ -1,10 +1,10 @@
-@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_DATA: <https://w3id.org/bridge2ai/standards-dataset-schema/> .
 @prefix schema1: <http://schema.org/> .
 
 B2AI_DATA:1 schema1:description "A valid data set example that conforms to the schema" ;
     schema1:name "Valid DataSet Example" ;
-    B2AI:category "B2AI_DATA:DataSet" .
+    B2AI_APP:category "B2AI_DATA:DataSet" .
 
 [] a B2AI_DATA:DataSetContainer ;
     B2AI_DATA:data_collection B2AI_DATA:1 .

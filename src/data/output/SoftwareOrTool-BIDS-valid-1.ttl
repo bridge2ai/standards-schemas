@@ -1,0 +1,41 @@
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/> .
+@prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+@prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+B2AI_STANDARD:33 schema1:description "The Brain Imaging Data Structure (BIDS) is a specification for organizing and describing neuroimaging and behavioral data. BIDS prescribes a file structure and naming convention to organize data files and includes standardized metadata schemas for describing experimental details. It supports multiple neuroimaging modalities including MRI, EEG, MEG, iEEG, and PET, making neuroimaging datasets machine-readable and enabling automated data processing pipelines." ;
+    schema1:name "Brain Imaging Data Structure (BIDS)" ;
+    B2AI_STANDARD:collection "datamodel",
+        "minimuminformationschema" ;
+    B2AI_STANDARD:concerns_data_topic B2AI_TOPIC:22,
+        B2AI_TOPIC:5 ;
+    B2AI_STANDARD:formal_specification "https://bids-specification.readthedocs.io/"^^xsd:anyURI ;
+    B2AI_STANDARD:has_relevant_organization B2AI_ORG:85 ;
+    B2AI_STANDARD:has_training_resource B2AI_STANDARD:900 ;
+    B2AI_STANDARD:is_open true ;
+    B2AI_STANDARD:publication "https://doi.org/10.1038/sdata.2016.44"^^xsd:anyURI ;
+    B2AI_STANDARD:purpose_detail "BIDS facilitates data sharing, reproducibility, and collaboration in neuroimaging research by providing a standardized format that can be automatically validated and processed by analysis tools." ;
+    B2AI_STANDARD:requires_registration false ;
+    B2AI_STANDARD:responsible_organization B2AI_ORG:85 ;
+    B2AI_APP:category "B2AI_STANDARD:SoftwareOrTool" ;
+    B2AI_APP:contribution_date "2024-12-20"^^xsd:date ;
+    B2AI_APP:contributor_name "Harry Caufield" ;
+    B2AI_APP:contributor_orcid "ORCID:0000-0001-5705-7831"^^xsd:anyURI ;
+    B2AI_APP:has_application B2AI_APP:220,
+        B2AI_APP:221 ;
+    B2AI_APP:url "https://bids.neuroimaging.io/"^^xsd:anyURI .
+
+B2AI_APP:220 schema1:description "Convolutional neural network trained on BIDS-formatted structural MRI data to predict Alzheimer's disease progression from baseline and longitudinal neuroimaging features." ;
+    schema1:name "BIDS-based Alzheimer's Disease Prediction" ;
+    B2AI_APP:category "B2AI:Application" ;
+    B2AI_APP:datasheet "https://example.org/bids-alzheimers-datasheet"^^xsd:anyURI ;
+    B2AI_APP:references "https://doi.org/10.1016/j.neuroimage.example"^^xsd:anyURI .
+
+B2AI_APP:221 schema1:description "Deep learning framework that processes BIDS-formatted functional MRI data to classify cognitive states and decode brain activity patterns." ;
+    schema1:name "BIDS fMRI Pattern Classification" ;
+    B2AI_APP:category "B2AI:Application" ;
+    B2AI_APP:datasheet "https://example.org/bids-fmri-datasheet"^^xsd:anyURI ;
+    B2AI_APP:references "https://doi.org/10.1038/nn.example"^^xsd:anyURI .
+

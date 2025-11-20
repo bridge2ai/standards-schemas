@@ -1,8 +1,8 @@
-@prefix B2AI: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
 @prefix schema1: <http://schema.org/> .
 
 B2AI_STANDARD:53 schema1:description "A minimal but valid data standard or tool example that conforms to the schema" ;
     schema1:name "Minimal DataStandardOrTool Example" ;
-    B2AI:category "B2AI_STANDARD:DataStandardOrTool" .
+    B2AI_APP:category "B2AI_STANDARD:DataStandardOrTool" .
 

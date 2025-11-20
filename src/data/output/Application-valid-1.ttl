@@ -1,0 +1,34 @@
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_DATA: <https://w3id.org/bridge2ai/standards-dataset-schema/> .
+@prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+@prefix B2AI_USECASE: <https://w3id.org/bridge2ai/standards-usecase-schema/> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+B2AI_APP:101 schema1:description "An artificial intelligence application that uses machine learning models to predict early onset of sepsis in hospitalized patients. The system integrates electronic health record data standardized using FHIR (Fast Healthcare Interoperability Resources) to enable real-time risk assessment and alert generation for clinical care teams." ;
+    schema1:name "AI-Powered Clinical Decision Support for Sepsis Prediction" ;
+    B2AI_APP:category "B2AI:Application" ;
+    B2AI_APP:contribution_date "2024-11-15"^^xsd:date ;
+    B2AI_APP:contributor_github_name "erodriguez" ;
+    B2AI_APP:contributor_name "Elena Rodriguez" ;
+    B2AI_APP:contributor_orcid "ORCID:0000-0002-3456-7890"^^xsd:anyURI ;
+    B2AI_APP:datasheet "https://example.com/datasheets/sepsis-ai-datasheet.pdf"^^xsd:anyURI,
+        "https://example.com/datasheets/sepsis-ai-model-card.pdf"^^xsd:anyURI ;
+    B2AI_APP:has_application B2AI_APP:102 ;
+    B2AI_APP:references "https://arxiv.org/abs/2401.12345"^^xsd:anyURI,
+        "https://doi.org/10.1000/example.sepsis.ai.2024"^^xsd:anyURI ;
+    B2AI_APP:related_to B2AI_DATA:42,
+        B2AI_STANDARD:105,
+        B2AI_USECASE:8 ;
+    B2AI_APP:used_in_bridge2ai true .
+
+B2AI_APP:102 schema1:description "Mobile application component that receives alerts from the AI-powered clinical decision support system and notifies healthcare providers in real-time." ;
+    schema1:name "Mobile Alerting Component" ;
+    B2AI_APP:category "B2AI:Application" ;
+    B2AI_APP:contribution_date "2024-11-15"^^xsd:date ;
+    B2AI_APP:contributor_github_name "erodriguez" ;
+    B2AI_APP:contributor_name "Elena Rodriguez" ;
+    B2AI_APP:contributor_orcid "ORCID:0000-0002-3456-7890"^^xsd:anyURI ;
+    B2AI_APP:datasheet "https://example.com/datasheets/mobile-alerting-datasheet.pdf"^^xsd:anyURI ;
+    B2AI_APP:references "https://doi.org/10.1000/example.mobile.alerting.2024"^^xsd:anyURI .
+

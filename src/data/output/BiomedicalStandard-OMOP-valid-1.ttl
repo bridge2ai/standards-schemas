@@ -1,0 +1,34 @@
+@prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
+@prefix B2AI_ORG: <https://w3id.org/bridge2ai/standards-organization-schema/> .
+@prefix B2AI_STANDARD: <https://w3id.org/bridge2ai/standards-datastandardortool-schema/> .
+@prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+B2AI_STANDARD:243 schema1:description "The Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) is a standardized data model that enables systematic analysis of disparate observational databases. The CDM provides a common format and content, as well as standard vocabularies to encode healthcare data from diverse sources. It is designed to standardize the structure and content of observational data to enable efficient analyses that can produce reliable evidence." ;
+    schema1:name "OMOP Common Data Model" ;
+    B2AI_STANDARD:collection "clinicaldata",
+        "datamodel" ;
+    B2AI_STANDARD:concerns_data_topic B2AI_TOPIC:29,
+        B2AI_TOPIC:4,
+        B2AI_TOPIC:5 ;
+    B2AI_STANDARD:formal_specification "https://ohdsi.github.io/CommonDataModel/"^^xsd:anyURI ;
+    B2AI_STANDARD:has_relevant_organization B2AI_ORG:75 ;
+    B2AI_STANDARD:is_open true ;
+    B2AI_STANDARD:publication "https://doi.org/10.1093/jamia/ocv153"^^xsd:anyURI ;
+    B2AI_STANDARD:purpose_detail "OMOP CDM is designed to standardize observational health data from electronic health records, administrative claims, and disease registries, enabling large-scale analytics and machine learning across diverse healthcare datasets." ;
+    B2AI_STANDARD:requires_registration false ;
+    B2AI_STANDARD:responsible_organization B2AI_ORG:75 ;
+    B2AI_APP:category "B2AI_STANDARD:BiomedicalStandard" ;
+    B2AI_APP:contribution_date "2024-12-20"^^xsd:date ;
+    B2AI_APP:contributor_name "Harry Caufield" ;
+    B2AI_APP:contributor_orcid "ORCID:0000-0001-5705-7831"^^xsd:anyURI ;
+    B2AI_APP:has_application B2AI_APP:210 ;
+    B2AI_APP:url "https://www.ohdsi.org/data-standardization/the-common-data-model/"^^xsd:anyURI .
+
+B2AI_APP:210 schema1:description "Deep learning model that analyzes patient timelines in OMOP CDM format to predict disease progression and treatment outcomes across multiple conditions." ;
+    schema1:name "OMOP-based Patient Trajectory Prediction" ;
+    B2AI_APP:category "B2AI:Application" ;
+    B2AI_APP:datasheet "https://example.org/omop-trajectory-datasheet"^^xsd:anyURI ;
+    B2AI_APP:references "https://doi.org/10.1093/jamia/example-omop"^^xsd:anyURI .
+
