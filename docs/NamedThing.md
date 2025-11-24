@@ -21,16 +21,18 @@ URI: [schema:Thing](http://schema.org/Thing)
     click NamedThing href "../NamedThing/"
       NamedThing <|-- AnatomicalEntity
         click AnatomicalEntity href "../AnatomicalEntity/"
+      NamedThing <|-- Application
+        click Application href "../Application/"
       NamedThing <|-- DataStandardOrTool
         click DataStandardOrTool href "../DataStandardOrTool/"
-      NamedThing <|-- Organization
-        click Organization href "../Organization/"
       NamedThing <|-- DataSet
         click DataSet href "../DataSet/"
       NamedThing <|-- DataSubstrate
         click DataSubstrate href "../DataSubstrate/"
       NamedThing <|-- DataTopic
         click DataTopic href "../DataTopic/"
+      NamedThing <|-- Organization
+        click Organization href "../Organization/"
       NamedThing <|-- UseCase
         click UseCase href "../UseCase/"
       NamedThing <|-- Manifest
@@ -47,6 +49,17 @@ URI: [schema:Thing](http://schema.org/Thing)
       NamedThing : contributor_orcid
         
       NamedThing : description
+        
+      NamedThing : has_application
+        
+          
+    
+        
+        
+        NamedThing --> "*" Application : has_application
+        click Application href "../Application/"
+    
+
         
       NamedThing : id
         
@@ -86,11 +99,12 @@ URI: [schema:Thing](http://schema.org/Thing)
 ## Inheritance
 * **NamedThing**
     * [AnatomicalEntity](AnatomicalEntity.md)
+    * [Application](Application.md)
     * [DataStandardOrTool](DataStandardOrTool.md)
-    * [Organization](Organization.md)
     * [DataSet](DataSet.md)
     * [DataSubstrate](DataSubstrate.md)
     * [DataTopic](DataTopic.md)
+    * [Organization](Organization.md)
     * [UseCase](UseCase.md)
     * [Manifest](Manifest.md)
 
@@ -111,6 +125,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [contributor_orcid](contributor_orcid.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The ORCiD of the person who added this node | direct |
 | [contribution_date](contribution_date.md) | 0..1 <br/> [Date](Date.md) | The date on which the node was added | direct |
 | [used_in_bridge2ai](used_in_bridge2ai.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the entity is used, developed, or otherwise related to work in the Br... | direct |
+| [has_application](has_application.md) | * <br/> [Application](Application.md) | A list of one or more specific applications of this entity to a specific purp... | direct |
 
 
 
@@ -130,6 +145,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [NamedThing](NamedThing.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [NamedThing](NamedThing.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [NamedThing](NamedThing.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [NamedThing](NamedThing.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [AnatomicalEntity](AnatomicalEntity.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [AnatomicalEntity](AnatomicalEntity.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [AnatomicalEntity](AnatomicalEntity.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -140,6 +156,20 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [AnatomicalEntity](AnatomicalEntity.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [AnatomicalEntity](AnatomicalEntity.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [AnatomicalEntity](AnatomicalEntity.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [datasheet](datasheet.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [references](references.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [contributor_name](contributor_name.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [Application](Application.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [has_training_resource](has_training_resource.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
@@ -158,6 +188,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataStandardOrTool](DataStandardOrTool.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandardOrTool](DataStandardOrTool.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [DataStandardOrTool](DataStandardOrTool.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [has_training_resource](has_training_resource.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
@@ -176,6 +207,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataStandard](DataStandard.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [DataStandard](DataStandard.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [DataStandard](DataStandard.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [has_training_resource](has_training_resource.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
@@ -194,6 +226,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [BiomedicalStandard](BiomedicalStandard.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [BiomedicalStandard](BiomedicalStandard.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [BiomedicalStandard](BiomedicalStandard.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [has_training_resource](has_training_resource.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
@@ -212,6 +245,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [Registry](Registry.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [Registry](Registry.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [Registry](Registry.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [has_training_resource](has_training_resource.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
@@ -230,6 +264,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [OntologyOrVocabulary](OntologyOrVocabulary.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [has_training_resource](has_training_resource.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
@@ -248,6 +283,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [ModelRepository](ModelRepository.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [ModelRepository](ModelRepository.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [ModelRepository](ModelRepository.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [has_training_resource](has_training_resource.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
@@ -266,6 +302,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [SoftwareOrTool](SoftwareOrTool.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [SoftwareOrTool](SoftwareOrTool.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [SoftwareOrTool](SoftwareOrTool.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [has_training_resource](has_training_resource.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
@@ -284,6 +321,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [ReferenceImplementation](ReferenceImplementation.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [ReferenceImplementation](ReferenceImplementation.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [ReferenceImplementation](ReferenceImplementation.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [collection](collection.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [has_training_resource](has_training_resource.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [purpose_detail](purpose_detail.md) | domain | [NamedThing](NamedThing.md) |
@@ -302,17 +340,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [TrainingProgram](TrainingProgram.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [TrainingProgram](TrainingProgram.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [contributor_name](contributor_name.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
-| [Organization](Organization.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [TrainingProgram](TrainingProgram.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSet](DataSet.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSet](DataSet.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSet](DataSet.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -323,6 +351,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataSet](DataSet.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSet](DataSet.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSet](DataSet.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSet](DataSet.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [metadata_storage](metadata_storage.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [file_extensions](file_extensions.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [limitations](limitations.md) | domain | [NamedThing](NamedThing.md) |
@@ -336,6 +365,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataSubstrate](DataSubstrate.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [DataSubstrate](DataSubstrate.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [DataSubstrate](DataSubstrate.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [DataTopic](DataTopic.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [DataTopic](DataTopic.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
 | [DataTopic](DataTopic.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
@@ -346,6 +376,19 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [DataTopic](DataTopic.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [DataTopic](DataTopic.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [DataTopic](DataTopic.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [DataTopic](DataTopic.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [url](url.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [related_to](related_to.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [related_to](related_to.md) | range | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [subclass_of](subclass_of.md) | range | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [contributor_name](contributor_name.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [contributor_github_name](contributor_github_name.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [Organization](Organization.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [use_case_category](use_case_category.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [known_limitations](known_limitations.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [data_topics](data_topics.md) | domain | [NamedThing](NamedThing.md) |
@@ -367,6 +410,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [UseCase](UseCase.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [UseCase](UseCase.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [UseCase](UseCase.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [Manifest](Manifest.md) | [notes](notes.md) | domain | [NamedThing](NamedThing.md) |
 | [Manifest](Manifest.md) | [category](category.md) | domain | [NamedThing](NamedThing.md) |
 | [Manifest](Manifest.md) | [subclass_of](subclass_of.md) | domain | [NamedThing](NamedThing.md) |
@@ -378,6 +422,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [Manifest](Manifest.md) | [contributor_orcid](contributor_orcid.md) | domain | [NamedThing](NamedThing.md) |
 | [Manifest](Manifest.md) | [contribution_date](contribution_date.md) | domain | [NamedThing](NamedThing.md) |
 | [Manifest](Manifest.md) | [used_in_bridge2ai](used_in_bridge2ai.md) | domain | [NamedThing](NamedThing.md) |
+| [Manifest](Manifest.md) | [has_application](has_application.md) | domain | [NamedThing](NamedThing.md) |
 | [DataPart](DataPart.md) | [anatomy](anatomy.md) | domain | [NamedThing](NamedThing.md) |
 | [DataPart](DataPart.md) | [notes](notes.md) | domain | [NamedThing](NamedThing.md) |
 
@@ -437,6 +482,7 @@ slots:
 - contributor_orcid
 - contribution_date
 - used_in_bridge2ai
+- has_application
 class_uri: schema:Thing
 
 ```
@@ -601,6 +647,21 @@ attributes:
     domain_of:
     - NamedThing
     range: boolean
+  has_application:
+    name: has_application
+    description: A list of one or more specific applications of this entity to a specific
+      purpose.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    domain: NamedThing
+    alias: has_application
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: Application
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
 class_uri: schema:Thing
 
 ```

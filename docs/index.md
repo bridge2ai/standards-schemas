@@ -20,6 +20,7 @@ Name: standards-schema-all
 | [ManifestContainer](ManifestContainer.md) | A container for Manifests |
 | [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AnatomicalEntity](AnatomicalEntity.md) | A subcellular location, cell type or gross anatomical part |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Application](Application.md) | A set of details describing a specific application of a resource (e |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataSet](DataSet.md) | Represents a data set by its metadata |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |
@@ -66,6 +67,7 @@ Name: standards-schema-all
 | [data_topics_collection](data_topics_collection.md) | Collection of associated data topics |
 | [data_url](data_url.md) | URL where the data set can be accessed |
 | [datasets](datasets.md) | The manifest includes these datasets |
+| [datasheet](datasheet.md) | List of one or more URLs pointing to related datasheets in the Datasheets for... |
 | [datasheet_url](datasheet_url.md) | URL where the datasheet for the data set can be accessed |
 | [description](description.md) | A human-readable description for a thing |
 | [documentation_url](documentation_url.md) | URL where documentation for the data set can be accessed |
@@ -73,6 +75,7 @@ Name: standards-schema-all
 | [enables](enables.md) | List of other use case(s) this use case supports or makes possible |
 | [file_extensions](file_extensions.md) | Commonly used file extensions for this substrate |
 | [formal_specification](formal_specification.md) | Relevant code repository or other location for a formal specification of the ... |
+| [has_application](has_application.md) | A list of one or more specific applications of this entity to a specific purp... |
 | [has_files](has_files.md) | Subject data set has the file(s) listed in this slot as parts |
 | [has_parts](has_parts.md) | Subject data set has the data set(s) listed in this slot as parts |
 | [has_relevant_data_substrate](has_relevant_data_substrate.md) | Subject standard has some relationship to the object data substrate(s), inclu... |
@@ -99,6 +102,7 @@ Name: standards-schema-all
 | [produced_by](produced_by.md) | Subject data set was produced by the organization(s) listed in this slot |
 | [publication](publication.md) | Relevant publication for the standard or tool |
 | [purpose_detail](purpose_detail.md) | Text description of the standard or tool |
+| [references](references.md) | List of one or more URLs pointing to related publications, preprints, or othe... |
 | [related_to](related_to.md) | A relationship that is asserted between two named things |
 | [relevant_to_gcs](relevant_to_gcs.md) | Bridge2AI Grand Challenges related to this use case, generally because they a... |
 | [requires_registration](requires_registration.md) | Does usage of the standard or tool require registration of a user or group wi... |

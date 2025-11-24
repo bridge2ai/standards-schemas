@@ -34,6 +34,17 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
         
       Organization : description
         
+      Organization : has_application
+        
+          
+    
+        
+        
+        Organization --> "*" Application : has_application
+        click Application href "../Application/"
+    
+
+        
       Organization : id
         
       Organization : name
@@ -99,6 +110,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 | [contributor_orcid](contributor_orcid.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The ORCiD of the person who added this node | [NamedThing](NamedThing.md) |
 | [contribution_date](contribution_date.md) | 0..1 <br/> [Date](Date.md) | The date on which the node was added | [NamedThing](NamedThing.md) |
 | [used_in_bridge2ai](used_in_bridge2ai.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the entity is used, developed, or otherwise related to work in the Br... | [NamedThing](NamedThing.md) |
+| [has_application](has_application.md) | * <br/> [Application](Application.md) | A list of one or more specific applications of this entity to a specific purp... | [NamedThing](NamedThing.md) |
 
 
 
@@ -126,8 +138,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 | [ReferenceImplementation](ReferenceImplementation.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
 | [TrainingProgram](TrainingProgram.md) | [has_relevant_organization](has_relevant_organization.md) | range | [Organization](Organization.md) |
 | [TrainingProgram](TrainingProgram.md) | [responsible_organization](responsible_organization.md) | range | [Organization](Organization.md) |
-| [OrganizationContainer](OrganizationContainer.md) | [organizations](organizations.md) | range | [Organization](Organization.md) |
 | [DataSet](DataSet.md) | [produced_by](produced_by.md) | range | [Organization](Organization.md) |
+| [OrganizationContainer](OrganizationContainer.md) | [organizations](organizations.md) | range | [Organization](Organization.md) |
 | [UseCase](UseCase.md) | [relevant_to_gcs](relevant_to_gcs.md) | range | [Organization](Organization.md) |
 | [Manifest](Manifest.md) | [organization](organization.md) | range | [Organization](Organization.md) |
 
@@ -388,6 +400,21 @@ attributes:
     domain_of:
     - NamedThing
     range: boolean
+  has_application:
+    name: has_application
+    description: A list of one or more specific applications of this entity to a specific
+      purpose.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    domain: NamedThing
+    alias: has_application
+    owner: Organization
+    domain_of:
+    - NamedThing
+    range: Application
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
 
 ```
 </details>

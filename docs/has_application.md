@@ -1,23 +1,18 @@
 
 
-# Slot: contributor_orcid 
+# Slot: has_application 
 
 
-_The ORCiD of the person who added this node._
+_A list of one or more specific applications of this entity to a specific purpose._
 
 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/contributor_orcid](https://w3id.org/bridge2ai/standards-schema-all/contributor_orcid)
-Alias: contributor_orcid
+URI: [https://w3id.org/bridge2ai/standards-schema-all/has_application](https://w3id.org/bridge2ai/standards-schema-all/has_application)
+Alias: has_application
 
-
-## Inheritance
-
-* [node_property](node_property.md)
-    * **contributor_orcid**
-
+<!-- no inheritance hierarchy -->
 
 
 
@@ -53,17 +48,12 @@ Alias: contributor_orcid
 
 ## Properties
 
-* Range: [Uriorcurie](Uriorcurie.md)
+* Range: [Application](Application.md)
+
+* Multivalued: True
 
 
 
-
-
-## Examples
-
-| Value |
-| --- |
-| ORCID:0000-0001-1234-5678 |
 
 ## Identifier and Mapping Information
 
@@ -84,8 +74,8 @@ Alias: contributor_orcid
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/contributor_orcid |
-| native | https://w3id.org/bridge2ai/standards-schema-all/contributor_orcid |
+| self | https://w3id.org/bridge2ai/standards-schema-all/has_application |
+| native | https://w3id.org/bridge2ai/standards-schema-all/has_application |
 
 
 
@@ -94,18 +84,19 @@ Alias: contributor_orcid
 
 <details>
 ```yaml
-name: contributor_orcid
-description: The ORCiD of the person who added this node.
-examples:
-- value: ORCID:0000-0001-1234-5678
+name: has_application
+description: A list of one or more specific applications of this entity to a specific
+  purpose.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: node_property
 domain: NamedThing
-alias: contributor_orcid
+alias: has_application
 domain_of:
 - NamedThing
-range: uriorcurie
+range: Application
+multivalued: true
+inlined: true
+inlined_as_list: true
 
 ```
 </details>

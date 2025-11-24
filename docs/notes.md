@@ -27,8 +27,8 @@ Alias: notes
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DataPart](DataPart.md) | Represents a part of all datasets in a manifest |  no  |
 | [Manifest](Manifest.md) | Represents a manifest |  no  |
+| [DataPart](DataPart.md) | Represents a part of all datasets in a manifest |  no  |
 
 
 

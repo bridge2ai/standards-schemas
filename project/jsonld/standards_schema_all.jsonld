@@ -1771,10 +1771,9 @@
       "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/organization",
       "description": "The manifest corresponds to this organization. Must be a single Organization object, referenced with its B2AI_ORG ID.",
       "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
-      "is_a": "related_to",
+      "is_a": "node_property",
       "domain": "Manifest",
       "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/organization",
-      "inherited": true,
       "owner": "Manifest",
       "domain_of": [
         "Manifest"
@@ -1787,10 +1786,9 @@
       "definition_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/datasets",
       "description": "The manifest includes these datasets. Must be a list of Dataset objects, referenced with their B2AI_DATA IDs.",
       "from_schema": "https://w3id.org/bridge2ai/standards-manifest-schema",
-      "is_a": "related_to",
+      "is_a": "node_property",
       "domain": "Manifest",
       "slot_uri": "https://w3id.org/bridge2ai/standards-manifest-schema/datasets",
-      "inherited": true,
       "owner": "Manifest",
       "domain_of": [
         "Manifest"
@@ -2648,7 +2646,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2025-09-05T16:34:19",
   "source_file_size": 498,
-  "generation_date": "2025-11-20T12:18:49",
+  "generation_date": "2025-11-24T17:26:32",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

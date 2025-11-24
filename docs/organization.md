@@ -15,7 +15,7 @@ Alias: organization
 
 ## Inheritance
 
-* [related_to](related_to.md)
+* [node_property](node_property.md)
     * **organization**
 
 
@@ -37,8 +37,6 @@ Alias: organization
 ## Properties
 
 * Range: [Organization](Organization.md)
-
-* Multivalued: True
 
 
 
@@ -77,14 +75,13 @@ description: The manifest corresponds to this organization. Must be a single Org
   object, referenced with its B2AI_ORG ID.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: related_to
+is_a: node_property
 domain: Manifest
-inherited: true
 alias: organization
 domain_of:
 - Manifest
 range: Organization
-multivalued: true
+multivalued: false
 
 ```
 </details>
