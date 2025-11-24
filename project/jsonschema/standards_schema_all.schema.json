@@ -1617,11 +1617,8 @@
                 },
                 "organization": {
                     "description": "The manifest corresponds to this organization. Must be a single Organization object, referenced with its B2AI_ORG ID.",
-                    "items": {
-                        "type": "string"
-                    },
                     "type": [
-                        "array",
+                        "string",
                         "null"
                     ]
                 },

@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-11-20T12:18:50
+# Generation date: 2025-11-24T17:26:33
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -1052,7 +1052,7 @@ class Manifest(NamedThing):
     Represents a manifest. There should be a 1 to 1 mapping between a manifest and an organization, but each manifest
     has its own ID.
     """
-    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to", "organization", "datasets"]
+    _inherited_slots: ClassVar[list[str]] = ["subclass_of", "related_to"]
 
     class_class_uri: ClassVar[URIRef] = B2AI_MANIFEST["Manifest"]
     class_class_curie: ClassVar[str] = "B2AI_MANIFEST:Manifest"

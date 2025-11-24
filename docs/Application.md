@@ -1,15 +1,15 @@
 
 
-# Class: AnatomicalEntity 
+# Class: Application 
 
 
-_A subcellular location, cell type or gross anatomical part_
+_A set of details describing a specific application of a resource (e.g., a standard or a dataset) to a specific purpose. In the context of Bridge2AI, this will generally refer to an artificial intelligence-driven application. The related_to slot can be used to link to other relevant entities, such as other Applications, UseCases, DataSets, or Standards. Application objects have unique identifiers with the prefix B2AI_APP. This allows an Application to be referenced from other objects if needed. The category slot for Application objects should always be set to B2AI:Application for clarity._
 
 
 
 
 
-URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity)
+URI: [https://w3id.org/bridge2ai/standards-schema-all/Application](https://w3id.org/bridge2ai/standards-schema-all/Application)
 
 
 
@@ -17,61 +17,65 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 
 ```mermaid
  classDiagram
-    class AnatomicalEntity
-    click AnatomicalEntity href "../AnatomicalEntity/"
-      NamedThing <|-- AnatomicalEntity
+    class Application
+    click Application href "../Application/"
+      NamedThing <|-- Application
         click NamedThing href "../NamedThing/"
       
-      AnatomicalEntity : category
+      Application : category
         
-      AnatomicalEntity : contribution_date
+      Application : contribution_date
         
-      AnatomicalEntity : contributor_github_name
+      Application : contributor_github_name
         
-      AnatomicalEntity : contributor_name
+      Application : contributor_name
         
-      AnatomicalEntity : contributor_orcid
+      Application : contributor_orcid
         
-      AnatomicalEntity : description
+      Application : datasheet
         
-      AnatomicalEntity : has_application
+      Application : description
+        
+      Application : has_application
         
           
     
         
         
-        AnatomicalEntity --> "*" Application : has_application
+        Application --> "*" Application : has_application
         click Application href "../Application/"
     
 
         
-      AnatomicalEntity : id
+      Application : id
         
-      AnatomicalEntity : name
+      Application : name
         
-      AnatomicalEntity : related_to
+      Application : references
         
-          
-    
-        
-        
-        AnatomicalEntity --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
-    
-
-        
-      AnatomicalEntity : subclass_of
+      Application : related_to
         
           
     
         
         
-        AnatomicalEntity --> "*" NamedThing : subclass_of
+        Application --> "*" NamedThing : related_to
         click NamedThing href "../NamedThing/"
     
 
         
-      AnatomicalEntity : used_in_bridge2ai
+      Application : subclass_of
+        
+          
+    
+        
+        
+        Application --> "*" NamedThing : subclass_of
+        click NamedThing href "../NamedThing/"
+    
+
+        
+      Application : used_in_bridge2ai
         
       
 ```
@@ -82,7 +86,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 
 ## Inheritance
 * [NamedThing](NamedThing.md)
-    * **AnatomicalEntity**
+    * **Application**
 
 
 
@@ -90,6 +94,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
+| [datasheet](datasheet.md) | * <br/> [Uriorcurie](Uriorcurie.md) | List of one or more URLs pointing to related datasheets in the Datasheets for... | direct |
+| [references](references.md) | * <br/> [Uriorcurie](Uriorcurie.md) | List of one or more URLs pointing to related publications, preprints, or othe... | direct |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | CURIE for the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -111,8 +117,24 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [DataTopic](DataTopic.md) | [topic_involves_anatomy](topic_involves_anatomy.md) | range | [AnatomicalEntity](AnatomicalEntity.md) |
-| [DataPart](DataPart.md) | [anatomy](anatomy.md) | range | [AnatomicalEntity](AnatomicalEntity.md) |
+| [NamedThing](NamedThing.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [AnatomicalEntity](AnatomicalEntity.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [Application](Application.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [DataStandardOrTool](DataStandardOrTool.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [DataStandard](DataStandard.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [BiomedicalStandard](BiomedicalStandard.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [Registry](Registry.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [ModelRepository](ModelRepository.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [SoftwareOrTool](SoftwareOrTool.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [ReferenceImplementation](ReferenceImplementation.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [TrainingProgram](TrainingProgram.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [DataSet](DataSet.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [DataSubstrate](DataSubstrate.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [DataTopic](DataTopic.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [Organization](Organization.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [UseCase](UseCase.md) | [has_application](has_application.md) | range | [Application](Application.md) |
+| [Manifest](Manifest.md) | [has_application](has_application.md) | range | [Application](Application.md) |
 
 
 
@@ -121,16 +143,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 
 
 ## Identifier and Mapping Information
-
-
-### Valid ID Prefixes
-
-Instances of this class *should* have identifiers with one of the following prefixes:
-
-* uberon
-
-* clo
-
 
 
 
@@ -149,10 +161,8 @@ Instances of this class *should* have identifiers with one of the following pref
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity |
-| native | https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity |
-| exact | uberon:0001062, wikidata:Q4936952 |
-| narrow | ncit:C12219 |
+| self | https://w3id.org/bridge2ai/standards-schema-all/Application |
+| native | https://w3id.org/bridge2ai/standards-schema-all/Application |
 
 
 
@@ -167,18 +177,20 @@ Instances of this class *should* have identifiers with one of the following pref
 
 <details>
 ```yaml
-name: AnatomicalEntity
-id_prefixes:
-- uberon
-- clo
-description: A subcellular location, cell type or gross anatomical part
+name: Application
+description: A set of details describing a specific application of a resource (e.g.,
+  a standard or a dataset) to a specific purpose. In the context of Bridge2AI, this
+  will generally refer to an artificial intelligence-driven application. The related_to
+  slot can be used to link to other relevant entities, such as other Applications,
+  UseCases, DataSets, or Standards. Application objects have unique identifiers with
+  the prefix B2AI_APP. This allows an Application to be referenced from other objects
+  if needed. The category slot for Application objects should always be set to B2AI:Application
+  for clarity.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-exact_mappings:
-- uberon:0001062
-- wikidata:Q4936952
-narrow_mappings:
-- ncit:C12219
 is_a: NamedThing
+slots:
+- datasheet
+- references
 
 ```
 </details>
@@ -187,19 +199,46 @@ is_a: NamedThing
 
 <details>
 ```yaml
-name: AnatomicalEntity
-id_prefixes:
-- uberon
-- clo
-description: A subcellular location, cell type or gross anatomical part
+name: Application
+description: A set of details describing a specific application of a resource (e.g.,
+  a standard or a dataset) to a specific purpose. In the context of Bridge2AI, this
+  will generally refer to an artificial intelligence-driven application. The related_to
+  slot can be used to link to other relevant entities, such as other Applications,
+  UseCases, DataSets, or Standards. Application objects have unique identifiers with
+  the prefix B2AI_APP. This allows an Application to be referenced from other objects
+  if needed. The category slot for Application objects should always be set to B2AI:Application
+  for clarity.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
-exact_mappings:
-- uberon:0001062
-- wikidata:Q4936952
-narrow_mappings:
-- ncit:C12219
 is_a: NamedThing
 attributes:
+  datasheet:
+    name: datasheet
+    description: List of one or more URLs pointing to related datasheets in the Datasheets
+      for Datasets format.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: datasheet
+    owner: Application
+    domain_of:
+    - Application
+    range: uriorcurie
+    multivalued: true
+  references:
+    name: references
+    description: List of one or more URLs pointing to related publications, preprints,
+      or other references.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    is_a: node_property
+    domain: NamedThing
+    alias: references
+    owner: Application
+    domain_of:
+    - Application
+    range: uriorcurie
+    multivalued: true
   id:
     name: id
     description: A unique identifier for a thing.
@@ -208,7 +247,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: uriorcurie
@@ -223,7 +262,7 @@ attributes:
     domain: NamedThing
     designates_type: true
     alias: category
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: category_type
@@ -234,7 +273,7 @@ attributes:
     rank: 1000
     slot_uri: schema:name
     alias: name
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: string
@@ -245,7 +284,7 @@ attributes:
     rank: 1000
     slot_uri: schema:description
     alias: description
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: string
@@ -264,7 +303,7 @@ attributes:
     domain: NamedThing
     inherited: true
     alias: subclass_of
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: NamedThing
@@ -277,7 +316,7 @@ attributes:
     domain: NamedThing
     inherited: true
     alias: related_to
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     - Organization
@@ -292,7 +331,7 @@ attributes:
     is_a: node_property
     domain: NamedThing
     alias: contributor_name
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: string
@@ -304,7 +343,7 @@ attributes:
     is_a: node_property
     domain: NamedThing
     alias: contributor_github_name
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: string
@@ -318,7 +357,7 @@ attributes:
     is_a: node_property
     domain: NamedThing
     alias: contributor_orcid
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: uriorcurie
@@ -332,7 +371,7 @@ attributes:
     is_a: node_property
     domain: NamedThing
     alias: contribution_date
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: date
@@ -347,7 +386,7 @@ attributes:
     is_a: node_property
     domain: NamedThing
     alias: used_in_bridge2ai
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: boolean
@@ -359,7 +398,7 @@ attributes:
     rank: 1000
     domain: NamedThing
     alias: has_application
-    owner: AnatomicalEntity
+    owner: Application
     domain_of:
     - NamedThing
     range: Application

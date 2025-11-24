@@ -47,7 +47,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/StandardsCollectionTag](ht
 | scrnaseqanalysis | None | scRNA-seq Analysis |
 | speechdata | None | Speech Data |
 | standardsregistry | None | Standards Registry |
-| has_ai_application | None | Has a direct AI application, defined as standards/tools that are: associated ... |
 | standards_process_maturity_final | None | This standard has undergone a review process by one or more SDOs and has been... |
 | standards_process_maturity_draft | None | This standard is undergoing a review process by one or more SDOs to determine... |
 | standards_process_maturity_development | None | This standard is in its initial development stages and has not yet entered a ... |
@@ -195,12 +194,6 @@ permissible_values:
   standardsregistry:
     text: standardsregistry
     description: Standards Registry
-  has_ai_application:
-    text: has_ai_application
-    description: 'Has a direct AI application, defined as standards/tools that are:
-      associated with ML or neural networks; schemas, or have schemas; data models;
-      associated with DICOM; associated with AI; associated with standards used within
-      Bridge2AI'
   standards_process_maturity_final:
     text: standards_process_maturity_final
     description: This standard has undergone a review process by one or more SDOs

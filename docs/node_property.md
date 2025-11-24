@@ -18,6 +18,8 @@ Alias: node_property
 * **node_property**
     * [url](url.md)
     * [xref](xref.md)
+    * [datasheet](datasheet.md)
+    * [references](references.md)
     * [contributor_name](contributor_name.md)
     * [contributor_github_name](contributor_github_name.md)
     * [contributor_orcid](contributor_orcid.md)
@@ -51,6 +53,8 @@ Alias: node_property
     * [involved_in_experimental_design](involved_in_experimental_design.md)
     * [involved_in_metadata_management](involved_in_metadata_management.md)
     * [involved_in_quality_control](involved_in_quality_control.md)
+    * [organization](organization.md)
+    * [datasets](datasets.md)
     * [notes](notes.md)
     * [anatomy](anatomy.md)
 

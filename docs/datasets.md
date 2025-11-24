@@ -15,7 +15,7 @@ Alias: datasets
 
 ## Inheritance
 
-* [related_to](related_to.md)
+* [node_property](node_property.md)
     * **datasets**
 
 
@@ -77,9 +77,8 @@ description: The manifest includes these datasets. Must be a list of Dataset obj
   referenced with their B2AI_DATA IDs.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
-is_a: related_to
+is_a: node_property
 domain: Manifest
-inherited: true
 alias: datasets
 domain_of:
 - Manifest

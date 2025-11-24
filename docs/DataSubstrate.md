@@ -38,6 +38,17 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
         
       DataSubstrate : file_extensions
         
+      DataSubstrate : has_application
+        
+          
+    
+        
+        
+        DataSubstrate --> "*" Application : has_application
+        click Application href "../Application/"
+    
+
+        
       DataSubstrate : id
         
       DataSubstrate : limitations
@@ -108,6 +119,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 | [contributor_orcid](contributor_orcid.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The ORCiD of the person who added this node | [NamedThing](NamedThing.md) |
 | [contribution_date](contribution_date.md) | 0..1 <br/> [Date](Date.md) | The date on which the node was added | [NamedThing](NamedThing.md) |
 | [used_in_bridge2ai](used_in_bridge2ai.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the entity is used, developed, or otherwise related to work in the Br... | [NamedThing](NamedThing.md) |
+| [has_application](has_application.md) | * <br/> [Application](Application.md) | A list of one or more specific applications of this entity to a specific purp... | [NamedThing](NamedThing.md) |
 
 
 
@@ -446,6 +458,21 @@ attributes:
     domain_of:
     - NamedThing
     range: boolean
+  has_application:
+    name: has_application
+    description: A list of one or more specific applications of this entity to a specific
+      purpose.
+    from_schema: https://w3id.org/bridge2ai/standards-schema-all
+    rank: 1000
+    domain: NamedThing
+    alias: has_application
+    owner: DataSubstrate
+    domain_of:
+    - NamedThing
+    range: Application
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
 
 ```
 </details>
