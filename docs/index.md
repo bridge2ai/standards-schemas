@@ -37,6 +37,7 @@ Name: standards-schema-all
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Organization](Organization.md) | Represents a group or organization related to or responsible for one or more ... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[UseCase](UseCase.md) | Represents a use case for Bridge2AI standards |
 | [OrganizationContainer](OrganizationContainer.md) | A container for Organizations |
+| [Reference](Reference.md) | A bibliographic reference to a publication, preprint, or other citable resour... |
 | [UseCaseContainer](UseCaseContainer.md) | A container for UseCase |
 
 
@@ -102,7 +103,12 @@ Name: standards-schema-all
 | [produced_by](produced_by.md) | Subject data set was produced by the organization(s) listed in this slot |
 | [publication](publication.md) | Relevant publication for the standard or tool |
 | [purpose_detail](purpose_detail.md) | Text description of the standard or tool |
-| [references](references.md) | List of one or more URLs pointing to related publications, preprints, or othe... |
+| [ref_authors](ref_authors.md) | List of authors of the referenced publication, preprint, or other citable res... |
+| [ref_journal](ref_journal.md) | Journal or venue of the referenced publication, preprint, or other citable re... |
+| [ref_publication_year](ref_publication_year.md) | Year of publication of the referenced publication, preprint, or other citable... |
+| [ref_title](ref_title.md) | Title of the referenced publication, preprint, or other citable resource |
+| [ref_url](ref_url.md) | URL of the referenced publication, preprint, or other citable resource |
+| [references](references.md) | List of one or more Reference objects for related publications, preprints, or... |
 | [related_to](related_to.md) | A relationship that is asserted between two named things |
 | [relevant_to_gcs](relevant_to_gcs.md) | Bridge2AI Grand Challenges related to this use case, generally because they a... |
 | [requires_registration](requires_registration.md) | Does usage of the standard or tool require registration of a user or group wi... |

@@ -21,7 +21,9 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -42,5 +44,6 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 | ---  | ---  |
 | self | linkml:DateOrDatetime |
 | native | https://w3id.org/bridge2ai/standards-schema-all/date_or_datetime |
+
 
 

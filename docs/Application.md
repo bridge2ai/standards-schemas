@@ -15,12 +15,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Application](https://w3id.
 
 
 
+
 ```mermaid
  classDiagram
     class Application
-    click Application href "../Application/"
+    click Application href "../Application"
       NamedThing <|-- Application
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
       
       Application : category
         
@@ -43,7 +44,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Application](https://w3id.
         
         
         Application --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -53,6 +54,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Application](https://w3id.
         
       Application : references
         
+          
+    
+        
+        
+        Application --> "*" Reference : references
+        click Reference href "../Reference"
+    
+
+        
       Application : related_to
         
           
@@ -60,7 +70,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Application](https://w3id.
         
         
         Application --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -71,7 +81,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Application](https://w3id.
         
         
         Application --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -95,7 +105,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Application](https://w3id.
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [datasheet](datasheet.md) | * <br/> [Uriorcurie](Uriorcurie.md) | List of one or more URLs pointing to related datasheets in the Datasheets for... | direct |
-| [references](references.md) | * <br/> [Uriorcurie](Uriorcurie.md) | List of one or more URLs pointing to related publications, preprints, or othe... | direct |
+| [references](references.md) | * <br/> [Reference](Reference.md) | List of one or more Reference objects for related publications, preprints, or... | direct |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [category](category.md) | 0..1 <br/> [CategoryType](CategoryType.md) | CURIE for the high level ontology class in which this entity is categorized | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
@@ -141,8 +151,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Application](https://w3id.
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -163,6 +173,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Application](https://w3id.
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/Application |
 | native | https://w3id.org/bridge2ai/standards-schema-all/Application |
+
 
 
 
@@ -227,7 +238,7 @@ attributes:
     multivalued: true
   references:
     name: references
-    description: List of one or more URLs pointing to related publications, preprints,
+    description: List of one or more Reference objects for related publications, preprints,
       or other references.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
@@ -237,7 +248,7 @@ attributes:
     owner: Application
     domain_of:
     - Application
-    range: uriorcurie
+    range: Reference
     multivalued: true
   id:
     name: id

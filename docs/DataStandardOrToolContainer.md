@@ -15,10 +15,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContaine
 
 
 
+
 ```mermaid
  classDiagram
     class DataStandardOrToolContainer
-    click DataStandardOrToolContainer href "../DataStandardOrToolContainer/"
+    click DataStandardOrToolContainer href "../DataStandardOrToolContainer"
       DataStandardOrToolContainer : data_standardortools_collection
         
           
@@ -26,7 +27,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContaine
         
         
         DataStandardOrToolContainer --> "*" DataStandardOrTool : data_standardortools_collection
-        click DataStandardOrTool href "../DataStandardOrTool/"
+        click DataStandardOrTool href "../DataStandardOrTool"
     
 
         
@@ -53,8 +54,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContaine
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -75,6 +76,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContaine
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrToolContainer |
+
 
 
 

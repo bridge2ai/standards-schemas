@@ -29,9 +29,11 @@ Alias: ror_id
 
 
 
+
 ## Properties
 
 * Range: [RorIdentifier](RorIdentifier.md)
+
 
 
 
@@ -44,6 +46,7 @@ Alias: ror_id
 | ROR:02mp31p96 |
 
 ## Identifier and Mapping Information
+
 
 
 

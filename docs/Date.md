@@ -21,7 +21,9 @@ URI: [xsd:date](http://www.w3.org/2001/XMLSchema#date)
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -43,5 +45,6 @@ URI: [xsd:date](http://www.w3.org/2001/XMLSchema#date)
 | self | xsd:date |
 | native | https://w3id.org/bridge2ai/standards-schema-all/date |
 | exact | schema:Date |
+
 
 

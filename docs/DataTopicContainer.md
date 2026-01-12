@@ -15,10 +15,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer](https:
 
 
 
+
 ```mermaid
  classDiagram
     class DataTopicContainer
-    click DataTopicContainer href "../DataTopicContainer/"
+    click DataTopicContainer href "../DataTopicContainer"
       DataTopicContainer : data_topics_collection
         
           
@@ -26,7 +27,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer](https:
         
         
         DataTopicContainer --> "*" DataTopic : data_topics_collection
-        click DataTopic href "../DataTopic/"
+        click DataTopic href "../DataTopic"
     
 
         
@@ -53,8 +54,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer](https:
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -75,6 +76,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer](https:
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataTopicContainer |
+
 
 
 

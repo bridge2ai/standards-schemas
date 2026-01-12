@@ -15,10 +15,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataPart](https://w3id.org
 
 
 
+
 ```mermaid
  classDiagram
     class DataPart
-    click DataPart href "../DataPart/"
+    click DataPart href "../DataPart"
       DataPart : anatomy
         
           
@@ -26,7 +27,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataPart](https://w3id.org
         
         
         DataPart --> "*" AnatomicalEntity : anatomy
-        click AnatomicalEntity href "../AnatomicalEntity/"
+        click AnatomicalEntity href "../AnatomicalEntity"
     
 
         
@@ -37,7 +38,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataPart](https://w3id.org
         
         
         DataPart --> "*" DataTopic : concerns_data_topics
-        click DataTopic href "../DataTopic/"
+        click DataTopic href "../DataTopic"
     
 
         
@@ -54,7 +55,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataPart](https://w3id.org
         
         
         DataPart --> "*" DataStandardOrTool : standards_and_tools
-        click DataStandardOrTool href "../DataStandardOrTool/"
+        click DataStandardOrTool href "../DataStandardOrTool"
     
 
         
@@ -65,7 +66,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataPart](https://w3id.org
         
         
         DataPart --> "*" DataSubstrate : uses_data_substrates
-        click DataSubstrate href "../DataSubstrate/"
+        click DataSubstrate href "../DataSubstrate"
     
 
         
@@ -108,8 +109,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataPart](https://w3id.org
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -130,6 +131,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataPart](https://w3id.org
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataPart |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataPart |
+
 
 
 

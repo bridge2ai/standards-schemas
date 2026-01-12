@@ -15,28 +15,29 @@ URI: [schema:Thing](http://schema.org/Thing)
 
 
 
+
 ```mermaid
  classDiagram
     class NamedThing
-    click NamedThing href "../NamedThing/"
+    click NamedThing href "../NamedThing"
       NamedThing <|-- AnatomicalEntity
-        click AnatomicalEntity href "../AnatomicalEntity/"
+        click AnatomicalEntity href "../AnatomicalEntity"
       NamedThing <|-- Application
-        click Application href "../Application/"
+        click Application href "../Application"
       NamedThing <|-- DataStandardOrTool
-        click DataStandardOrTool href "../DataStandardOrTool/"
+        click DataStandardOrTool href "../DataStandardOrTool"
       NamedThing <|-- DataSet
-        click DataSet href "../DataSet/"
+        click DataSet href "../DataSet"
       NamedThing <|-- DataSubstrate
-        click DataSubstrate href "../DataSubstrate/"
+        click DataSubstrate href "../DataSubstrate"
       NamedThing <|-- DataTopic
-        click DataTopic href "../DataTopic/"
+        click DataTopic href "../DataTopic"
       NamedThing <|-- Organization
-        click Organization href "../Organization/"
+        click Organization href "../Organization"
       NamedThing <|-- UseCase
-        click UseCase href "../UseCase/"
+        click UseCase href "../UseCase"
       NamedThing <|-- Manifest
-        click Manifest href "../Manifest/"
+        click Manifest href "../Manifest"
       
       NamedThing : category
         
@@ -57,7 +58,7 @@ URI: [schema:Thing](http://schema.org/Thing)
         
         
         NamedThing --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -72,7 +73,7 @@ URI: [schema:Thing](http://schema.org/Thing)
         
         
         NamedThing --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -83,7 +84,7 @@ URI: [schema:Thing](http://schema.org/Thing)
         
         
         NamedThing --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -431,8 +432,8 @@ URI: [schema:Thing](http://schema.org/Thing)
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -453,6 +454,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | ---  | ---  |
 | self | schema:Thing |
 | native | https://w3id.org/bridge2ai/standards-schema-all/NamedThing |
+
 
 
 

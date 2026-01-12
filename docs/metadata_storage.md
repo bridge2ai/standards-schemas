@@ -34,6 +34,7 @@ Alias: metadata_storage
 
 
 
+
 ## Properties
 
 * Range: [String](String.md)&nbsp;or&nbsp;<br />[DataSubstrate](DataSubstrate.md)
@@ -43,7 +44,9 @@ Alias: metadata_storage
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

@@ -3,7 +3,7 @@
 # Slot: references 
 
 
-_List of one or more URLs pointing to related publications, preprints, or other references._
+_List of one or more Reference objects for related publications, preprints, or other references._
 
 
 
@@ -34,16 +34,19 @@ Alias: references
 
 
 
+
 ## Properties
 
-* Range: [Uriorcurie](Uriorcurie.md)
+* Range: [Reference](Reference.md)
 
 * Multivalued: True
 
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -73,7 +76,7 @@ Alias: references
 <details>
 ```yaml
 name: references
-description: List of one or more URLs pointing to related publications, preprints,
+description: List of one or more Reference objects for related publications, preprints,
   or other references.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
@@ -82,7 +85,7 @@ domain: NamedThing
 alias: references
 domain_of:
 - Application
-range: uriorcurie
+range: Reference
 multivalued: true
 
 ```

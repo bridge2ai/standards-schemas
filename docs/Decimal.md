@@ -20,7 +20,9 @@ URI: [xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal)
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -42,5 +44,6 @@ URI: [xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal)
 | self | xsd:decimal |
 | native | https://w3id.org/bridge2ai/standards-schema-all/decimal |
 | broad | schema:Number |
+
 
 

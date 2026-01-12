@@ -29,6 +29,7 @@ Alias: data_parts
 
 
 
+
 ## Properties
 
 * Range: [DataPart](DataPart.md)
@@ -38,7 +39,9 @@ Alias: data_parts
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

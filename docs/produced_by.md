@@ -34,6 +34,7 @@ Alias: produced_by
 
 
 
+
 ## Properties
 
 * Range: [Organization](Organization.md)
@@ -43,7 +44,9 @@ Alias: produced_by
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

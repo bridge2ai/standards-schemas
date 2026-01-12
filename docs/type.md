@@ -25,6 +25,7 @@ Alias: type
 
 
 
+
 ## Properties
 
 * Range: NONE
@@ -32,7 +33,9 @@ Alias: type
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

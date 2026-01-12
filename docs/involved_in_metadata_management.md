@@ -34,6 +34,7 @@ Alias: involved_in_metadata_management
 
 
 
+
 ## Properties
 
 * Range: [Boolean](Boolean.md)
@@ -41,7 +42,9 @@ Alias: involved_in_metadata_management
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

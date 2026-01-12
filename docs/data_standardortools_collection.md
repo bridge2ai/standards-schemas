@@ -29,6 +29,7 @@ Alias: data_standardortools_collection
 
 
 
+
 ## Properties
 
 * Range: [DataStandardOrTool](DataStandardOrTool.md)
@@ -38,7 +39,9 @@ Alias: data_standardortools_collection
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

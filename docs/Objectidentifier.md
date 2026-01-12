@@ -21,11 +21,13 @@ URI: [shex:iri](http://www.w3.org/ns/shex#iri)
 
 
 
+
 ## Comments
 
 * Used for inheritance and type checking
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -46,5 +48,6 @@ URI: [shex:iri](http://www.w3.org/ns/shex#iri)
 | ---  | ---  |
 | self | shex:iri |
 | native | https://w3id.org/bridge2ai/standards-schema-all/objectidentifier |
+
 
 

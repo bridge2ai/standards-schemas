@@ -15,10 +15,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/ManifestContainer](https:/
 
 
 
+
 ```mermaid
  classDiagram
     class ManifestContainer
-    click ManifestContainer href "../ManifestContainer/"
+    click ManifestContainer href "../ManifestContainer"
       ManifestContainer : manifest_collection
         
           
@@ -26,7 +27,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/ManifestContainer](https:/
         
         
         ManifestContainer --> "*" Manifest : manifest_collection
-        click Manifest href "../Manifest/"
+        click Manifest href "../Manifest"
     
 
         
@@ -53,8 +54,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/ManifestContainer](https:/
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -75,6 +76,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/ManifestContainer](https:/
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/ManifestContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/ManifestContainer |
+
 
 
 

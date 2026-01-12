@@ -15,12 +15,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 
 
 
+
 ```mermaid
  classDiagram
     class Organization
-    click Organization href "../Organization/"
+    click Organization href "../Organization"
       NamedThing <|-- Organization
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
       
       Organization : category
         
@@ -41,7 +42,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
         
         
         Organization --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -56,7 +57,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
         
         
         Organization --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -69,7 +70,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
         
         
         Organization --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -148,8 +149,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -170,6 +171,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Organization](https://w3id
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/Organization |
 | native | https://w3id.org/bridge2ai/standards-schema-all/Organization |
+
 
 
 

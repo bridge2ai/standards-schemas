@@ -15,12 +15,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 
 
 
+
 ```mermaid
  classDiagram
     class DataSubstrate
-    click DataSubstrate href "../DataSubstrate/"
+    click DataSubstrate href "../DataSubstrate"
       NamedThing <|-- DataSubstrate
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
       
       DataSubstrate : category
         
@@ -45,7 +46,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
         
         
         DataSubstrate --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -68,7 +69,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
         
         
         DataSubstrate --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -79,7 +80,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
         
         
         DataSubstrate --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -149,8 +150,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -171,6 +172,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate](https://w3i
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataSubstrate |
+
 
 
 

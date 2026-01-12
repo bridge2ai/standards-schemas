@@ -20,7 +20,9 @@ URI: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -42,5 +44,6 @@ URI: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
 | self | xsd:integer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/integer |
 | exact | schema:Integer |
+
 
 

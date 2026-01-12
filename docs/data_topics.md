@@ -34,6 +34,7 @@ Alias: data_topics
 
 
 
+
 ## Properties
 
 * Range: [DataTopic](DataTopic.md)
@@ -43,7 +44,9 @@ Alias: data_topics
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
