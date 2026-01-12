@@ -14,7 +14,8 @@ B2AI_STANDARD:105 schema1:description "Fast Healthcare Interoperability Resource
     B2AI_STANDARD:formal_specification "https://www.hl7.org/fhir/overview.html"^^xsd:anyURI ;
     B2AI_STANDARD:has_relevant_organization B2AI_ORG:50 ;
     B2AI_STANDARD:is_open true ;
-    B2AI_STANDARD:publication "https://doi.org/10.1016/j.jbi.2019.103175"^^xsd:anyURI ;
+    B2AI_STANDARD:publication [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.1016/j.jbi.2019.103175"^^xsd:anyURI ] ;
     B2AI_STANDARD:purpose_detail "FHIR is designed to enable healthcare information exchange across different systems and organizations, supporting clinical care delivery, research, and public health reporting." ;
     B2AI_STANDARD:requires_registration false ;
     B2AI_STANDARD:responsible_organization B2AI_ORG:50 ;
@@ -30,11 +31,13 @@ B2AI_APP:200 schema1:description "AI-powered clinical decision support system th
     schema1:name "FHIR-based Clinical Decision Support" ;
     B2AI_APP:category "B2AI:Application" ;
     B2AI_APP:datasheet "https://example.org/cds-datasheet"^^xsd:anyURI ;
-    B2AI_APP:references "https://doi.org/10.1093/jamia/example1"^^xsd:anyURI .
+    B2AI_APP:references [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.1093/jamia/example1"^^xsd:anyURI ] .
 
 B2AI_APP:201 schema1:description "Machine learning application that processes FHIR-based electronic health records to predict patient readmission risk and adverse outcomes." ;
     schema1:name "FHIR Patient Risk Prediction" ;
     B2AI_APP:category "B2AI:Application" ;
     B2AI_APP:datasheet "https://example.org/risk-prediction-datasheet"^^xsd:anyURI ;
-    B2AI_APP:references "https://doi.org/10.1038/s41746-example"^^xsd:anyURI .
+    B2AI_APP:references [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.1038/s41746-example"^^xsd:anyURI ] .
 

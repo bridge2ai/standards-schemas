@@ -19,7 +19,7 @@ has_application:
   datasheet:
   - https://example.org/omop-trajectory-datasheet
   references:
-  - https://doi.org/10.1093/jamia/example-omop
+  - ref_url: https://doi.org/10.1093/jamia/example-omop
 collection:
 - datamodel
 - clinicaldata
@@ -35,7 +35,8 @@ purpose_detail: OMOP CDM is designed to standardize observational health data fr
 is_open: true
 requires_registration: false
 url: https://www.ohdsi.org/data-standardization/the-common-data-model/
-publication: https://doi.org/10.1093/jamia/ocv153
+publication:
+  ref_url: https://doi.org/10.1093/jamia/ocv153
 formal_specification: https://ohdsi.github.io/CommonDataModel/
 responsible_organization:
 - B2AI_ORG:75

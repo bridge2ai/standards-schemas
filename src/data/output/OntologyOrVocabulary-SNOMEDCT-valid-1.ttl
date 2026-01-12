@@ -14,7 +14,8 @@ B2AI_STANDARD:180 schema1:description "SNOMED CT (Systematized Nomenclature of M
     B2AI_STANDARD:formal_specification "https://confluence.ihtsdotools.org/display/DOCSTART"^^xsd:anyURI ;
     B2AI_STANDARD:has_relevant_organization B2AI_ORG:130 ;
     B2AI_STANDARD:is_open false ;
-    B2AI_STANDARD:publication "https://doi.org/10.1093/jamia/ocu011"^^xsd:anyURI ;
+    B2AI_STANDARD:publication [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.1093/jamia/ocu011"^^xsd:anyURI ] ;
     B2AI_STANDARD:purpose_detail "SNOMED CT serves as a clinical reference terminology enabling consistent representation and sharing of clinical data across systems, supporting clinical care delivery, research, and health information exchange worldwide." ;
     B2AI_STANDARD:requires_registration true ;
     B2AI_STANDARD:responsible_organization B2AI_ORG:130 ;

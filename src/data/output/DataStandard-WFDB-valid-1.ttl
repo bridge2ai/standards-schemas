@@ -13,7 +13,8 @@ B2AI_STANDARD:202 schema1:description "The WaveForm DataBase (WFDB) format is a 
     B2AI_STANDARD:formal_specification "https://physionet.org/physiotools/wag/header-5.htm"^^xsd:anyURI ;
     B2AI_STANDARD:has_relevant_organization B2AI_ORG:140 ;
     B2AI_STANDARD:is_open true ;
-    B2AI_STANDARD:publication "https://doi.org/10.13026/C2V30W"^^xsd:anyURI ;
+    B2AI_STANDARD:publication [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.13026/C2V30W"^^xsd:anyURI ] ;
     B2AI_STANDARD:purpose_detail "WFDB format enables standardized storage and exchange of physiological signal data for clinical care, research, and algorithm development, particularly for cardiology and critical care applications." ;
     B2AI_STANDARD:requires_registration false ;
     B2AI_STANDARD:responsible_organization B2AI_ORG:140 ;
@@ -29,11 +30,13 @@ B2AI_APP:230 schema1:description "Recurrent neural network that processes WFDB-f
     schema1:name "WFDB Arrhythmia Detection" ;
     B2AI_APP:category "B2AI:Application" ;
     B2AI_APP:datasheet "https://example.org/wfdb-arrhythmia-datasheet"^^xsd:anyURI ;
-    B2AI_APP:references "https://doi.org/10.1161/CIRCEP.example"^^xsd:anyURI .
+    B2AI_APP:references [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.1161/CIRCEP.example"^^xsd:anyURI ] .
 
 B2AI_APP:231 schema1:description "Multi-modal deep learning system that analyzes WFDB-formatted vital sign waveforms to predict adverse events in intensive care unit patients." ;
     schema1:name "WFDB Critical Care Event Prediction" ;
     B2AI_APP:category "B2AI:Application" ;
     B2AI_APP:datasheet "https://example.org/wfdb-icu-datasheet"^^xsd:anyURI ;
-    B2AI_APP:references "https://doi.org/10.1097/CCM.example"^^xsd:anyURI .
+    B2AI_APP:references [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.1097/CCM.example"^^xsd:anyURI ] .
 

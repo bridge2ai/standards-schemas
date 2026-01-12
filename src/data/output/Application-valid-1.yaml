@@ -28,10 +28,10 @@ has_application:
   datasheet:
   - https://example.com/datasheets/mobile-alerting-datasheet.pdf
   references:
-  - https://doi.org/10.1000/example.mobile.alerting.2024
+  - ref_url: https://doi.org/10.1000/example.mobile.alerting.2024
 datasheet:
 - https://example.com/datasheets/sepsis-ai-model-card.pdf
 - https://example.com/datasheets/sepsis-ai-datasheet.pdf
 references:
-- https://doi.org/10.1000/example.sepsis.ai.2024
-- https://arxiv.org/abs/2401.12345
+- ref_url: https://doi.org/10.1000/example.sepsis.ai.2024
+- ref_url: https://arxiv.org/abs/2401.12345

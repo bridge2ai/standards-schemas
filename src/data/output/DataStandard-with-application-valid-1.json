@@ -21,7 +21,9 @@
         "https://example.com/lung-nodule-ai-model-card.pdf"
       ],
       "references": [
-        "https://doi.org/10.1000/lung.nodule.ai.2024"
+        {
+          "ref_url": "https://doi.org/10.1000/lung.nodule.ai.2024"
+        }
       ]
     },
     {
@@ -36,8 +38,12 @@
         "https://example.com/brain-tumor-segmentation-datasheet.pdf"
       ],
       "references": [
-        "https://doi.org/10.1000/brain.tumor.seg.2024",
-        "https://arxiv.org/abs/2403.56789"
+        {
+          "ref_url": "https://doi.org/10.1000/brain.tumor.seg.2024"
+        },
+        {
+          "ref_url": "https://arxiv.org/abs/2403.56789"
+        }
       ]
     },
     {
@@ -49,7 +55,9 @@
       "contributor_orcid": "ORCID:0000-0003-3333-4444",
       "contribution_date": "2024-08-30",
       "references": [
-        "https://doi.org/10.1000/retinal.ai.2024"
+        {
+          "ref_url": "https://doi.org/10.1000/retinal.ai.2024"
+        }
       ]
     }
   ],
@@ -70,7 +78,9 @@
   "is_open": true,
   "requires_registration": false,
   "url": "https://www.dicomstandard.org/",
-  "publication": "doi:10.1148/radiology.148.1.6856849",
+  "publication": {
+    "ref_url": "doi:10.1148/radiology.148.1.6856849"
+  },
   "formal_specification": "https://github.com/dicom/dicom-standard",
   "responsible_organization": [
     "B2AI_ORG:200"

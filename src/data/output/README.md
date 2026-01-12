@@ -56,13 +56,14 @@ has_application:
   id: B2AI_APP:210
   name: OMOP-based Patient Trajectory Prediction
   references:
-  - https://doi.org/10.1093/jamia/example-omop
+  - ref_url: https://doi.org/10.1093/jamia/example-omop
 has_relevant_organization:
 - B2AI_ORG:75
 id: B2AI_STANDARD:243
 is_open: true
 name: OMOP Common Data Model
-publication: https://doi.org/10.1093/jamia/ocv153
+publication:
+  ref_url: https://doi.org/10.1093/jamia/ocv153
 purpose_detail: OMOP CDM is designed to standardize observational health data from
   electronic health records, administrative claims, and disease registries, enabling
   large-scale analytics and machine learning across diverse healthcare datasets.
@@ -130,7 +131,8 @@ has_relevant_organization:
 id: B2AI_STANDARD:180
 is_open: false
 name: SNOMED CT
-publication: https://doi.org/10.1093/jamia/ocu011
+publication:
+  ref_url: https://doi.org/10.1093/jamia/ocu011
 purpose_detail: SNOMED CT serves as a clinical reference terminology enabling consistent
   representation and sharing of clinical data across systems, supporting clinical
   care delivery, research, and health information exchange worldwide.
@@ -207,12 +209,12 @@ has_application:
   id: B2AI_APP:102
   name: Mobile Alerting Component
   references:
-  - https://doi.org/10.1000/example.mobile.alerting.2024
+  - ref_url: https://doi.org/10.1000/example.mobile.alerting.2024
 id: B2AI_APP:101
 name: AI-Powered Clinical Decision Support for Sepsis Prediction
 references:
-- https://doi.org/10.1000/example.sepsis.ai.2024
-- https://arxiv.org/abs/2401.12345
+- ref_url: https://doi.org/10.1000/example.sepsis.ai.2024
+- ref_url: https://arxiv.org/abs/2401.12345
 related_to:
 - B2AI_STANDARD:105
 - B2AI_DATA:42
@@ -255,7 +257,8 @@ has_relevant_organization:
 id: B2AI_STANDARD:53
 is_open: true
 name: OMOP CDM
-publication: doi:10.3233/978-1-61499-564-7-574
+publication:
+  ref_url: doi:10.3233/978-1-61499-564-7-574
 purpose_detail: Open community data standard designed to standardize the structure
   and content of observational data and to enable efficient analyses that can produce
   reliable evidence.
@@ -424,7 +427,7 @@ has_application:
   id: B2AI_APP:200
   name: FHIR-based Clinical Decision Support
   references:
-  - https://doi.org/10.1093/jamia/example1
+  - ref_url: https://doi.org/10.1093/jamia/example1
 - category: B2AI:Application
   datasheet:
   - https://example.org/risk-prediction-datasheet
@@ -433,13 +436,14 @@ has_application:
   id: B2AI_APP:201
   name: FHIR Patient Risk Prediction
   references:
-  - https://doi.org/10.1038/s41746-example
+  - ref_url: https://doi.org/10.1038/s41746-example
 has_relevant_organization:
 - B2AI_ORG:50
 id: B2AI_STANDARD:105
 is_open: true
 name: HL7 FHIR
-publication: https://doi.org/10.1016/j.jbi.2019.103175
+publication:
+  ref_url: https://doi.org/10.1016/j.jbi.2019.103175
 purpose_detail: FHIR is designed to enable healthcare information exchange across
   different systems and organizations, supporting clinical care delivery, research,
   and public health reporting.
@@ -481,7 +485,7 @@ has_application:
   id: B2AI_APP:201
   name: AI-Assisted Lung Nodule Detection in CT Scans
   references:
-  - https://doi.org/10.1000/lung.nodule.ai.2024
+  - ref_url: https://doi.org/10.1000/lung.nodule.ai.2024
 - category: B2AI:Application
   contribution_date: '2024-09-15'
   contributor_name: Dr. Michael Park
@@ -494,8 +498,8 @@ has_application:
   id: B2AI_APP:202
   name: Automated Brain Tumor Segmentation
   references:
-  - https://doi.org/10.1000/brain.tumor.seg.2024
-  - https://arxiv.org/abs/2403.56789
+  - ref_url: https://doi.org/10.1000/brain.tumor.seg.2024
+  - ref_url: https://arxiv.org/abs/2403.56789
 - category: B2AI:Application
   contribution_date: '2024-08-30'
   contributor_name: Dr. James Liu
@@ -506,14 +510,15 @@ has_application:
   id: B2AI_APP:203
   name: Retinal Disease Classification from Fundus Images
   references:
-  - https://doi.org/10.1000/retinal.ai.2024
+  - ref_url: https://doi.org/10.1000/retinal.ai.2024
 has_relevant_organization:
 - B2AI_ORG:200
 - B2AI_ORG:201
 id: B2AI_STANDARD:201
 is_open: true
 name: DICOM (Digital Imaging and Communications in Medicine)
-publication: doi:10.1148/radiology.148.1.6856849
+publication:
+  ref_url: doi:10.1148/radiology.148.1.6856849
 purpose_detail: Facilitates storage, transmission, and display of medical images across
   heterogeneous systems while preserving clinical context and patient information.
 requires_registration: false
@@ -571,7 +576,7 @@ has_application:
   id: B2AI_APP:230
   name: WFDB Arrhythmia Detection
   references:
-  - https://doi.org/10.1161/CIRCEP.example
+  - ref_url: https://doi.org/10.1161/CIRCEP.example
 - category: B2AI:Application
   datasheet:
   - https://example.org/wfdb-icu-datasheet
@@ -580,13 +585,14 @@ has_application:
   id: B2AI_APP:231
   name: WFDB Critical Care Event Prediction
   references:
-  - https://doi.org/10.1097/CCM.example
+  - ref_url: https://doi.org/10.1097/CCM.example
 has_relevant_organization:
 - B2AI_ORG:140
 id: B2AI_STANDARD:202
 is_open: true
 name: WaveForm DataBase (WFDB) Format
-publication: https://doi.org/10.13026/C2V30W
+publication:
+  ref_url: https://doi.org/10.13026/C2V30W
 purpose_detail: WFDB format enables standardized storage and exchange of physiological
   signal data for clinical care, research, and algorithm development, particularly
   for cardiology and critical care applications.
@@ -626,7 +632,7 @@ has_application:
   id: B2AI_APP:220
   name: BIDS-based Alzheimer's Disease Prediction
   references:
-  - https://doi.org/10.1016/j.neuroimage.example
+  - ref_url: https://doi.org/10.1016/j.neuroimage.example
 - category: B2AI:Application
   datasheet:
   - https://example.org/bids-fmri-datasheet
@@ -635,7 +641,7 @@ has_application:
   id: B2AI_APP:221
   name: BIDS fMRI Pattern Classification
   references:
-  - https://doi.org/10.1038/nn.example
+  - ref_url: https://doi.org/10.1038/nn.example
 has_relevant_organization:
 - B2AI_ORG:85
 has_training_resource:
@@ -643,7 +649,8 @@ has_training_resource:
 id: B2AI_STANDARD:33
 is_open: true
 name: Brain Imaging Data Structure (BIDS)
-publication: https://doi.org/10.1038/sdata.2016.44
+publication:
+  ref_url: https://doi.org/10.1038/sdata.2016.44
 purpose_detail: BIDS facilitates data sharing, reproducibility, and collaboration
   in neuroimaging research by providing a standardized format that can be automatically
   validated and processed by analysis tools.

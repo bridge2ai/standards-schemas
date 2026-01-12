@@ -15,7 +15,8 @@ purpose_detail: WFDB format enables standardized storage and exchange of physiol
 is_open: true
 requires_registration: false
 url: https://physionet.org/content/wfdb/
-publication: https://doi.org/10.13026/C2V30W
+publication:
+  ref_url: https://doi.org/10.13026/C2V30W
 formal_specification: https://physionet.org/physiotools/wag/header-5.htm
 has_application:
   - id: B2AI_APP:230
@@ -25,7 +26,7 @@ has_application:
     datasheet:
       - https://example.org/wfdb-arrhythmia-datasheet
     references:
-      - https://doi.org/10.1161/CIRCEP.example
+      - ref_url: https://doi.org/10.1161/CIRCEP.example
   - id: B2AI_APP:231
     category: B2AI:Application
     name: WFDB Critical Care Event Prediction
@@ -33,7 +34,7 @@ has_application:
     datasheet:
       - https://example.org/wfdb-icu-datasheet
     references:
-      - https://doi.org/10.1097/CCM.example
+      - ref_url: https://doi.org/10.1097/CCM.example
 contributor_name: Harry Caufield
 contributor_orcid: ORCID:0000-0001-5705-7831
 contribution_date: "2024-12-20"

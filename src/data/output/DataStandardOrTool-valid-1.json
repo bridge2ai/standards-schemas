@@ -19,7 +19,9 @@
   "is_open": true,
   "requires_registration": false,
   "url": "https://ohdsi.github.io/CommonDataModel/",
-  "publication": "doi:10.3233/978-1-61499-564-7-574",
+  "publication": {
+    "ref_url": "doi:10.3233/978-1-61499-564-7-574"
+  },
   "formal_specification": "https://github.com/OHDSI/CommonDataModel",
   "responsible_organization": [
     "B2AI_ORG:76"

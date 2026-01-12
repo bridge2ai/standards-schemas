@@ -16,7 +16,9 @@
         "https://example.org/cds-datasheet"
       ],
       "references": [
-        "https://doi.org/10.1093/jamia/example1"
+        {
+          "ref_url": "https://doi.org/10.1093/jamia/example1"
+        }
       ]
     },
     {
@@ -28,7 +30,9 @@
         "https://example.org/risk-prediction-datasheet"
       ],
       "references": [
-        "https://doi.org/10.1038/s41746-example"
+        {
+          "ref_url": "https://doi.org/10.1038/s41746-example"
+        }
       ]
     }
   ],
@@ -47,7 +51,9 @@
   "is_open": true,
   "requires_registration": false,
   "url": "https://www.hl7.org/fhir/",
-  "publication": "https://doi.org/10.1016/j.jbi.2019.103175",
+  "publication": {
+    "ref_url": "https://doi.org/10.1016/j.jbi.2019.103175"
+  },
   "formal_specification": "https://www.hl7.org/fhir/overview.html",
   "responsible_organization": [
     "B2AI_ORG:50"
