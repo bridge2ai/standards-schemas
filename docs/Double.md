@@ -20,7 +20,9 @@ URI: [xsd:double](http://www.w3.org/2001/XMLSchema#double)
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -42,5 +44,6 @@ URI: [xsd:double](http://www.w3.org/2001/XMLSchema#double)
 | self | xsd:double |
 | native | https://w3id.org/bridge2ai/standards-schema-all/double |
 | close | schema:Float |
+
 
 

@@ -21,7 +21,9 @@ URI: [shex:nonLiteral](http://www.w3.org/ns/shex#nonLiteral)
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -42,5 +44,6 @@ URI: [shex:nonLiteral](http://www.w3.org/ns/shex#nonLiteral)
 | ---  | ---  |
 | self | shex:nonLiteral |
 | native | https://w3id.org/bridge2ai/standards-schema-all/nodeidentifier |
+
 
 

@@ -21,7 +21,9 @@
   "is_open": false,
   "requires_registration": true,
   "url": "https://www.snomed.org/",
-  "publication": "https://doi.org/10.1093/jamia/ocu011",
+  "publication": {
+    "ref_url": "https://doi.org/10.1093/jamia/ocu011"
+  },
   "formal_specification": "https://confluence.ihtsdotools.org/display/DOCSTART",
   "responsible_organization": [
     "B2AI_ORG:130"

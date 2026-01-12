@@ -29,6 +29,7 @@ Alias: data_part_description
 
 
 
+
 ## Properties
 
 * Range: [String](String.md)
@@ -36,7 +37,9 @@ Alias: data_part_description
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

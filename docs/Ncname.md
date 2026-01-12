@@ -21,7 +21,9 @@ URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -42,5 +44,6 @@ URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 | ---  | ---  |
 | self | xsd:string |
 | native | https://w3id.org/bridge2ai/standards-schema-all/ncname |
+
 
 

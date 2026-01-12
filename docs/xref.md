@@ -34,6 +34,7 @@ Alias: xref
 
 
 
+
 ## Properties
 
 * Range: [Uriorcurie](Uriorcurie.md)
@@ -50,7 +51,9 @@ Alias: xref
 * DbXref
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

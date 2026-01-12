@@ -15,12 +15,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 
 
 
+
 ```mermaid
  classDiagram
     class DataTopic
-    click DataTopic href "../DataTopic/"
+    click DataTopic href "../DataTopic"
       NamedThing <|-- DataTopic
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
       
       DataTopic : category
         
@@ -43,7 +44,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
         
         
         DataTopic --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -62,7 +63,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
         
         
         DataTopic --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -73,7 +74,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
         
         
         DataTopic --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -84,7 +85,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
         
         
         DataTopic --> "*" AnatomicalEntity : topic_involves_anatomy
-        click AnatomicalEntity href "../AnatomicalEntity/"
+        click AnatomicalEntity href "../AnatomicalEntity"
     
 
         
@@ -152,8 +153,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -174,6 +175,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataTopic](https://w3id.or
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataTopic |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataTopic |
+
 
 
 

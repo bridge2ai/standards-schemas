@@ -21,7 +21,9 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -42,5 +44,6 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 | ---  | ---  |
 | self | xsd:anyURI |
 | native | https://w3id.org/bridge2ai/standards-schema-all/uriorcurie |
+
 
 

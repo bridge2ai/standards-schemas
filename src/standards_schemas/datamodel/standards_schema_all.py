@@ -1,5 +1,5 @@
 # Auto generated from standards_schema_all.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-11-24T17:26:33
+# Generation date: 2026-01-12T17:50:55
 # Schema: standards-schema-all
 #
 # id: https://w3id.org/bridge2ai/standards-schema-all
@@ -56,7 +56,7 @@ from rdflib import (
     URIRef
 )
 
-from linkml_runtime.linkml_model.types import Boolean, Date, String, Uriorcurie
+from linkml_runtime.linkml_model.types import Boolean, Date, Integer, String, Uriorcurie
 from linkml_runtime.utils.metamodelcore import Bool, URIorCURIE, XSDDate
 
 metamodel_version = "1.7.0"
@@ -341,7 +341,7 @@ class Application(NamedThing):
 
     id: Union[str, ApplicationId] = None
     datasheet: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
-    references: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
+    references: Optional[Union[Union[dict, "Reference"], list[Union[dict, "Reference"]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -355,10 +355,48 @@ class Application(NamedThing):
 
         if not isinstance(self.references, list):
             self.references = [self.references] if self.references is not None else []
-        self.references = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.references]
+        self.references = [v if isinstance(v, Reference) else Reference(**as_dict(v)) for v in self.references]
 
         super().__post_init__(**kwargs)
         self.category = str(self.class_class_curie)
+
+
+@dataclass(repr=False)
+class Reference(YAMLRoot):
+    """
+    A bibliographic reference to a publication, preprint, or other citable resource.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = B2AI["Reference"]
+    class_class_curie: ClassVar[str] = "B2AI:Reference"
+    class_name: ClassVar[str] = "Reference"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://w3id.org/bridge2ai/standards-schema-all/Reference")
+
+    ref_url: Optional[Union[str, URIorCURIE]] = None
+    ref_title: Optional[str] = None
+    ref_authors: Optional[Union[str, list[str]]] = empty_list()
+    ref_publication_year: Optional[int] = None
+    ref_journal: Optional[str] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self.ref_url is not None and not isinstance(self.ref_url, URIorCURIE):
+            self.ref_url = URIorCURIE(self.ref_url)
+
+        if self.ref_title is not None and not isinstance(self.ref_title, str):
+            self.ref_title = str(self.ref_title)
+
+        if not isinstance(self.ref_authors, list):
+            self.ref_authors = [self.ref_authors] if self.ref_authors is not None else []
+        self.ref_authors = [v if isinstance(v, str) else str(v) for v in self.ref_authors]
+
+        if self.ref_publication_year is not None and not isinstance(self.ref_publication_year, int):
+            self.ref_publication_year = int(self.ref_publication_year)
+
+        if self.ref_journal is not None and not isinstance(self.ref_journal, str):
+            self.ref_journal = str(self.ref_journal)
+
+        super().__post_init__(**kwargs)
 
 
 @dataclass(repr=False)
@@ -382,7 +420,7 @@ class DataStandardOrTool(NamedThing):
     is_open: Optional[Union[bool, Bool]] = None
     requires_registration: Optional[Union[bool, Bool]] = None
     url: Optional[Union[str, URIorCURIE]] = None
-    publication: Optional[Union[str, URIorCURIE]] = None
+    publication: Optional[Union[dict, Reference]] = None
     formal_specification: Optional[Union[str, URIorCURIE]] = None
     responsible_organization: Optional[Union[Union[str, OrganizationId], list[Union[str, OrganizationId]]]] = empty_list()
     has_relevant_data_substrate: Optional[Union[Union[str, DataSubstrateId], list[Union[str, DataSubstrateId]]]] = empty_list()
@@ -421,8 +459,8 @@ class DataStandardOrTool(NamedThing):
         if self.url is not None and not isinstance(self.url, URIorCURIE):
             self.url = URIorCURIE(self.url)
 
-        if self.publication is not None and not isinstance(self.publication, URIorCURIE):
-            self.publication = URIorCURIE(self.publication)
+        if self.publication is not None and not isinstance(self.publication, Reference):
+            self.publication = Reference(**as_dict(self.publication))
 
         if self.formal_specification is not None and not isinstance(self.formal_specification, URIorCURIE):
             self.formal_specification = URIorCURIE(self.formal_specification)
@@ -1358,7 +1396,7 @@ slots.datasheet = Slot(uri=B2AI.datasheet, name="datasheet", curie=B2AI.curie('d
                    model_uri=DEFAULT_.datasheet, domain=NamedThing, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 
 slots.references = Slot(uri=B2AI.references, name="references", curie=B2AI.curie('references'),
-                   model_uri=DEFAULT_.references, domain=NamedThing, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+                   model_uri=DEFAULT_.references, domain=NamedThing, range=Optional[Union[Union[dict, "Reference"], list[Union[dict, "Reference"]]]])
 
 slots.contributor_name = Slot(uri=B2AI.contributor_name, name="contributor_name", curie=B2AI.curie('contributor_name'),
                    model_uri=DEFAULT_.contributor_name, domain=NamedThing, range=Optional[str])
@@ -1384,6 +1422,21 @@ slots.used_in_bridge2ai = Slot(uri=B2AI.used_in_bridge2ai, name="used_in_bridge2
 slots.has_application = Slot(uri=B2AI.has_application, name="has_application", curie=B2AI.curie('has_application'),
                    model_uri=DEFAULT_.has_application, domain=NamedThing, range=Optional[Union[dict[Union[str, ApplicationId], Union[dict, "Application"]], list[Union[dict, "Application"]]]])
 
+slots.ref_url = Slot(uri=B2AI.ref_url, name="ref_url", curie=B2AI.curie('ref_url'),
+                   model_uri=DEFAULT_.ref_url, domain=Reference, range=Optional[Union[str, URIorCURIE]])
+
+slots.ref_title = Slot(uri=B2AI.ref_title, name="ref_title", curie=B2AI.curie('ref_title'),
+                   model_uri=DEFAULT_.ref_title, domain=Reference, range=Optional[str])
+
+slots.ref_authors = Slot(uri=B2AI.ref_authors, name="ref_authors", curie=B2AI.curie('ref_authors'),
+                   model_uri=DEFAULT_.ref_authors, domain=Reference, range=Optional[Union[str, list[str]]])
+
+slots.ref_publication_year = Slot(uri=B2AI.ref_publication_year, name="ref_publication_year", curie=B2AI.curie('ref_publication_year'),
+                   model_uri=DEFAULT_.ref_publication_year, domain=Reference, range=Optional[int])
+
+slots.ref_journal = Slot(uri=B2AI.ref_journal, name="ref_journal", curie=B2AI.curie('ref_journal'),
+                   model_uri=DEFAULT_.ref_journal, domain=Reference, range=Optional[str])
+
 slots.collection = Slot(uri=B2AI_STANDARD.collection, name="collection", curie=B2AI_STANDARD.curie('collection'),
                    model_uri=DEFAULT_.collection, domain=NamedThing, range=Optional[Union[Union[str, "StandardsCollectionTag"], list[Union[str, "StandardsCollectionTag"]]]])
 
@@ -1403,7 +1456,7 @@ slots.concerns_data_topic = Slot(uri=B2AI_STANDARD.concerns_data_topic, name="co
                    model_uri=DEFAULT_.concerns_data_topic, domain=DataStandardOrTool, range=Optional[Union[Union[str, DataTopicId], list[Union[str, DataTopicId]]]])
 
 slots.publication = Slot(uri=B2AI_STANDARD.publication, name="publication", curie=B2AI_STANDARD.curie('publication'),
-                   model_uri=DEFAULT_.publication, domain=NamedThing, range=Optional[Union[str, URIorCURIE]])
+                   model_uri=DEFAULT_.publication, domain=NamedThing, range=Optional[Union[dict, "Reference"]])
 
 slots.formal_specification = Slot(uri=B2AI_STANDARD.formal_specification, name="formal_specification", curie=B2AI_STANDARD.curie('formal_specification'),
                    model_uri=DEFAULT_.formal_specification, domain=NamedThing, range=Optional[Union[str, URIorCURIE]])

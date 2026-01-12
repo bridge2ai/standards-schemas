@@ -34,6 +34,7 @@ Alias: substrates
 
 
 
+
 ## Properties
 
 * Range: [DataSubstrate](DataSubstrate.md)
@@ -43,7 +44,9 @@ Alias: substrates
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

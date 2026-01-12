@@ -15,12 +15,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 
 
 
+
 ```mermaid
  classDiagram
     class AnatomicalEntity
-    click AnatomicalEntity href "../AnatomicalEntity/"
+    click AnatomicalEntity href "../AnatomicalEntity"
       NamedThing <|-- AnatomicalEntity
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
       
       AnatomicalEntity : category
         
@@ -41,7 +42,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
         
         
         AnatomicalEntity --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -56,7 +57,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
         
         
         AnatomicalEntity --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -67,7 +68,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
         
         
         AnatomicalEntity --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -119,7 +120,6 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity](https://
 
 
 
-
 ## Identifier and Mapping Information
 
 
@@ -130,6 +130,7 @@ Instances of this class *should* have identifiers with one of the following pref
 * uberon
 
 * clo
+
 
 
 
@@ -153,6 +154,7 @@ Instances of this class *should* have identifiers with one of the following pref
 | native | https://w3id.org/bridge2ai/standards-schema-all/AnatomicalEntity |
 | exact | uberon:0001062, wikidata:Q4936952 |
 | narrow | ncit:C12219 |
+
 
 
 

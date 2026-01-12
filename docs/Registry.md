@@ -15,12 +15,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
 
 
 
+
 ```mermaid
  classDiagram
     class Registry
-    click Registry href "../Registry/"
+    click Registry href "../Registry"
       DataStandardOrTool <|-- Registry
-        click DataStandardOrTool href "../DataStandardOrTool/"
+        click DataStandardOrTool href "../DataStandardOrTool"
       
       Registry : category
         
@@ -31,7 +32,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
         
         Registry --> "*" StandardsCollectionTag : collection
-        click StandardsCollectionTag href "../StandardsCollectionTag/"
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
 
         
@@ -42,7 +43,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
         
         Registry --> "*" DataTopic : concerns_data_topic
-        click DataTopic href "../DataTopic/"
+        click DataTopic href "../DataTopic"
     
 
         
@@ -65,7 +66,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
         
         Registry --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -76,7 +77,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
         
         Registry --> "*" DataSubstrate : has_relevant_data_substrate
-        click DataSubstrate href "../DataSubstrate/"
+        click DataSubstrate href "../DataSubstrate"
     
 
         
@@ -87,7 +88,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
         
         Registry --> "*" Organization : has_relevant_organization
-        click Organization href "../Organization/"
+        click Organization href "../Organization"
     
 
         
@@ -98,7 +99,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
         
         Registry --> "*" DataStandardOrTool : has_training_resource
-        click DataStandardOrTool href "../DataStandardOrTool/"
+        click DataStandardOrTool href "../DataStandardOrTool"
     
 
         
@@ -110,6 +111,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
       Registry : publication
         
+          
+    
+        
+        
+        Registry --> "0..1" Reference : publication
+        click Reference href "../Reference"
+    
+
+        
       Registry : purpose_detail
         
       Registry : related_to
@@ -119,7 +129,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
         
         Registry --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -132,7 +142,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
         
         Registry --> "*" Organization : responsible_organization
-        click Organization href "../Organization/"
+        click Organization href "../Organization"
     
 
         
@@ -143,7 +153,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
         
         
         Registry --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -177,7 +187,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
 | [is_open](is_open.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool FAIR and available free of cost? | [DataStandardOrTool](DataStandardOrTool.md) |
 | [requires_registration](requires_registration.md) | 0..1 <br/> [Boolean](Boolean.md) | Does usage of the standard or tool require registration of a user or group wi... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
-| [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
+| [publication](publication.md) | 0..1 <br/> [Reference](Reference.md) | Relevant publication for the standard or tool | [DataStandardOrTool](DataStandardOrTool.md) |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [responsible_organization](responsible_organization.md) | * <br/> [Organization](Organization.md) | Organization(s) responsible for providing and/or supporting the standard or t... | [DataStandardOrTool](DataStandardOrTool.md) |
 | [has_relevant_data_substrate](has_relevant_data_substrate.md) | * <br/> [DataSubstrate](DataSubstrate.md) | Subject standard has some relationship to the object data substrate(s), inclu... | [DataStandardOrTool](DataStandardOrTool.md) |
@@ -202,8 +212,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -224,6 +234,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Registry](https://w3id.org
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/Registry |
 | native | https://w3id.org/bridge2ai/standards-schema-all/Registry |
+
 
 
 
@@ -367,7 +378,8 @@ attributes:
     range: uriorcurie
   publication:
     name: publication
-    description: Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
+    description: Relevant publication for the standard or tool. This is a Reference
+      object.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
@@ -376,7 +388,7 @@ attributes:
     owner: Registry
     domain_of:
     - DataStandardOrTool
-    range: uriorcurie
+    range: Reference
   formal_specification:
     name: formal_specification
     description: Relevant code repository or other location for a formal specification

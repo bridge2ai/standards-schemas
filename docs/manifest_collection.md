@@ -29,6 +29,7 @@ Alias: manifest_collection
 
 
 
+
 ## Properties
 
 * Range: [Manifest](Manifest.md)
@@ -38,7 +39,9 @@ Alias: manifest_collection
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

@@ -20,7 +20,9 @@ URI: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
@@ -42,5 +44,6 @@ URI: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
 | self | xsd:float |
 | native | https://w3id.org/bridge2ai/standards-schema-all/float |
 | exact | schema:Float |
+
 
 

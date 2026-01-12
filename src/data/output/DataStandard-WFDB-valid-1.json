@@ -16,7 +16,9 @@
         "https://example.org/wfdb-arrhythmia-datasheet"
       ],
       "references": [
-        "https://doi.org/10.1161/CIRCEP.example"
+        {
+          "ref_url": "https://doi.org/10.1161/CIRCEP.example"
+        }
       ]
     },
     {
@@ -28,7 +30,9 @@
         "https://example.org/wfdb-icu-datasheet"
       ],
       "references": [
-        "https://doi.org/10.1097/CCM.example"
+        {
+          "ref_url": "https://doi.org/10.1097/CCM.example"
+        }
       ]
     }
   ],
@@ -46,7 +50,9 @@
   "is_open": true,
   "requires_registration": false,
   "url": "https://physionet.org/content/wfdb/",
-  "publication": "https://doi.org/10.13026/C2V30W",
+  "publication": {
+    "ref_url": "https://doi.org/10.13026/C2V30W"
+  },
   "formal_specification": "https://physionet.org/physiotools/wag/header-5.htm",
   "responsible_organization": [
     "B2AI_ORG:140"

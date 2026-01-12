@@ -15,7 +15,8 @@ purpose_detail: Open community data standard designed to standardize the structu
 is_open: True
 requires_registration: False
 url: https://ohdsi.github.io/CommonDataModel/
-publication: doi:10.3233/978-1-61499-564-7-574
+publication:
+  ref_url: doi:10.3233/978-1-61499-564-7-574
 formal_specification: https://github.com/OHDSI/CommonDataModel
 contributor_name: "Guadalupe Nurul"
 contributor_orcid: ORCID:0000-0005-1272-5161

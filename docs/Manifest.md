@@ -15,12 +15,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Manifest](https://w3id.org
 
 
 
+
 ```mermaid
  classDiagram
     class Manifest
-    click Manifest href "../Manifest/"
+    click Manifest href "../Manifest"
       NamedThing <|-- Manifest
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
       
       Manifest : category
         
@@ -39,7 +40,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Manifest](https://w3id.org
         
         
         Manifest --> "*" DataPart : data_parts
-        click DataPart href "../DataPart/"
+        click DataPart href "../DataPart"
     
 
         
@@ -50,7 +51,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Manifest](https://w3id.org
         
         
         Manifest --> "*" DataSet : datasets
-        click DataSet href "../DataSet/"
+        click DataSet href "../DataSet"
     
 
         
@@ -63,7 +64,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Manifest](https://w3id.org
         
         
         Manifest --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -80,7 +81,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Manifest](https://w3id.org
         
         
         Manifest --> "0..1" Organization : organization
-        click Organization href "../Organization/"
+        click Organization href "../Organization"
     
 
         
@@ -91,7 +92,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Manifest](https://w3id.org
         
         
         Manifest --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -102,7 +103,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Manifest](https://w3id.org
         
         
         Manifest --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -159,8 +160,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Manifest](https://w3id.org
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -181,6 +182,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/Manifest](https://w3id.org
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/Manifest |
 | native | https://w3id.org/bridge2ai/standards-schema-all/Manifest |
+
 
 
 

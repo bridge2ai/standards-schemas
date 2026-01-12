@@ -16,7 +16,8 @@ B2AI_STANDARD:201 schema1:description "International standard for medical imagin
     B2AI_STANDARD:has_relevant_organization B2AI_ORG:200,
         B2AI_ORG:201 ;
     B2AI_STANDARD:is_open true ;
-    B2AI_STANDARD:publication "doi:10.1148/radiology.148.1.6856849"^^xsd:anyURI ;
+    B2AI_STANDARD:publication [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "doi:10.1148/radiology.148.1.6856849"^^xsd:anyURI ] ;
     B2AI_STANDARD:purpose_detail "Facilitates storage, transmission, and display of medical images across heterogeneous systems while preserving clinical context and patient information." ;
     B2AI_STANDARD:requires_registration false ;
     B2AI_STANDARD:responsible_organization B2AI_ORG:200 ;
@@ -38,7 +39,8 @@ B2AI_APP:201 schema1:description "Deep learning system that analyzes chest CT im
     B2AI_APP:contributor_name "Dr. Sarah Chen" ;
     B2AI_APP:contributor_orcid "ORCID:0000-0003-1111-2222"^^xsd:anyURI ;
     B2AI_APP:datasheet "https://example.com/lung-nodule-ai-model-card.pdf"^^xsd:anyURI ;
-    B2AI_APP:references "https://doi.org/10.1000/lung.nodule.ai.2024"^^xsd:anyURI .
+    B2AI_APP:references [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.1000/lung.nodule.ai.2024"^^xsd:anyURI ] .
 
 B2AI_APP:202 schema1:description "Convolutional neural network pipeline for automatic segmentation and classification of brain tumors in DICOM MRI sequences, supporting treatment planning and surgical navigation." ;
     schema1:name "Automated Brain Tumor Segmentation" ;
@@ -47,8 +49,10 @@ B2AI_APP:202 schema1:description "Convolutional neural network pipeline for auto
     B2AI_APP:contributor_name "Dr. Michael Park" ;
     B2AI_APP:contributor_orcid "ORCID:0000-0003-2222-3333"^^xsd:anyURI ;
     B2AI_APP:datasheet "https://example.com/brain-tumor-segmentation-datasheet.pdf"^^xsd:anyURI ;
-    B2AI_APP:references "https://arxiv.org/abs/2403.56789"^^xsd:anyURI,
-        "https://doi.org/10.1000/brain.tumor.seg.2024"^^xsd:anyURI .
+    B2AI_APP:references [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://arxiv.org/abs/2403.56789"^^xsd:anyURI ],
+        [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.1000/brain.tumor.seg.2024"^^xsd:anyURI ] .
 
 B2AI_APP:203 schema1:description "Multi-task learning model for detecting diabetic retinopathy, age-related macular degeneration, and glaucoma from DICOM-formatted fundus photographs, enabling automated screening in ophthalmology clinics." ;
     schema1:name "Retinal Disease Classification from Fundus Images" ;
@@ -56,5 +60,6 @@ B2AI_APP:203 schema1:description "Multi-task learning model for detecting diabet
     B2AI_APP:contribution_date "2024-08-30"^^xsd:date ;
     B2AI_APP:contributor_name "Dr. James Liu" ;
     B2AI_APP:contributor_orcid "ORCID:0000-0003-3333-4444"^^xsd:anyURI ;
-    B2AI_APP:references "https://doi.org/10.1000/retinal.ai.2024"^^xsd:anyURI .
+    B2AI_APP:references [ a B2AI_APP:Reference ;
+            B2AI_APP:ref_url "https://doi.org/10.1000/retinal.ai.2024"^^xsd:anyURI ] .
 

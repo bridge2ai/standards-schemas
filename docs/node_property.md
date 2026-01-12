@@ -65,6 +65,7 @@ Alias: node_property
 
 
 
+
 ## Properties
 
 * Range: NONE
@@ -72,7 +73,9 @@ Alias: node_property
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 

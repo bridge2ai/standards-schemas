@@ -3,7 +3,7 @@
 # Slot: publication 
 
 
-_Relevant publication for the standard or tool. Prefer a DOI or PUBMED._
+_Relevant publication for the standard or tool. This is a Reference object._
 
 
 
@@ -27,15 +27,16 @@ Alias: publication
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app... |  no  |
-| [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |  no  |
-| [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |  no  |
-| [TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ... |  no  |
-| [ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |  no  |
-| [OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their... |  no  |
 | [SoftwareOrTool](SoftwareOrTool.md) | Represents a piece of software or computational tool in the Bridge2AI Standar... |  no  |
 | [ReferenceImplementation](ReferenceImplementation.md) | Represents an implementation of one or more standards or tools in the Bridge2... |  no  |
+| [BiomedicalStandard](BiomedicalStandard.md) | Represents a standard in the Bridge2AI Standards Registry with particular app... |  no  |
+| [TrainingProgram](TrainingProgram.md) | Represents a training program for skills and experience related to standards ... |  no  |
+| [ModelRepository](ModelRepository.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |  no  |
+| [DataStandard](DataStandard.md) | Represents a general purpose standard in the Bridge2AI Standards Registry |  no  |
+| [OntologyOrVocabulary](OntologyOrVocabulary.md) | A set of concepts and categories, potentially defined or accompanied by their... |  no  |
+| [DataStandardOrTool](DataStandardOrTool.md) | Represents a standard or tool in the Bridge2AI Standards Registry |  no  |
 | [Registry](Registry.md) | Represents a resource in the Bridge2AI Standards Registry serving to curate a... |  no  |
+
 
 
 
@@ -44,12 +45,14 @@ Alias: publication
 
 ## Properties
 
-* Range: [Uriorcurie](Uriorcurie.md)
+* Range: [Reference](Reference.md)
+
 
 
 
 
 ## Identifier and Mapping Information
+
 
 
 
@@ -79,7 +82,7 @@ Alias: publication
 <details>
 ```yaml
 name: publication
-description: Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
+description: Relevant publication for the standard or tool. This is a Reference object.
 from_schema: https://w3id.org/bridge2ai/standards-schema-all
 rank: 1000
 is_a: node_property
@@ -87,7 +90,7 @@ domain: NamedThing
 alias: publication
 domain_of:
 - DataStandardOrTool
-range: uriorcurie
+range: Reference
 
 ```
 </details>

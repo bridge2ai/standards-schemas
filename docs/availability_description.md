@@ -34,9 +34,11 @@ Alias: availability_description
 
 
 
+
 ## Properties
 
 * Range: [String](String.md)
+
 
 
 
@@ -49,6 +51,7 @@ Alias: availability_description
 | "Datasets require additional permissions. Please visit https://example.com for more information." |
 
 ## Identifier and Mapping Information
+
 
 
 

@@ -1,7 +1,7 @@
 @prefix B2AI_APP: <https://w3id.org/bridge2ai/standards-schema/> .
 @prefix B2AI_TOPIC: <https://w3id.org/bridge2ai/standards-datatopic-schema/> .
 @prefix schema1: <http://schema.org/> .
-@prefix uberon: <http://purl.obolibrary.org/obo/UBERON_> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 B2AI_TOPIC:22 schema1:description "Images obtained through one or more brain imaging techniques, including computed tomography, positron emission tomography, magnetic resonance imaging, or imaging of associated body structures (e.g., angiography)." ;

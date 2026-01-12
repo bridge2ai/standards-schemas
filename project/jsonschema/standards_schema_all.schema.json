@@ -187,9 +187,9 @@
                     ]
                 },
                 "references": {
-                    "description": "List of one or more URLs pointing to related publications, preprints, or other references.",
+                    "description": "List of one or more Reference objects for related publications, preprints, or other references.",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/$defs/Reference"
                     },
                     "type": [
                         "array",
@@ -366,11 +366,15 @@
                     ]
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Reference"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Relevant publication for the standard or tool. This is a Reference object."
                 },
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
@@ -857,11 +861,15 @@
                     ]
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Reference"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Relevant publication for the standard or tool. This is a Reference object."
                 },
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
@@ -1064,11 +1072,15 @@
                     ]
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Reference"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Relevant publication for the standard or tool. This is a Reference object."
                 },
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
@@ -1810,11 +1822,15 @@
                     ]
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Reference"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Relevant publication for the standard or tool. This is a Reference object."
                 },
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
@@ -2122,11 +2138,15 @@
                     ]
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Reference"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Relevant publication for the standard or tool. This is a Reference object."
                 },
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
@@ -2337,6 +2357,52 @@
             "title": "OrganizationContainer",
             "type": "object"
         },
+        "Reference": {
+            "additionalProperties": false,
+            "description": "A bibliographic reference to a publication, preprint, or other citable resource.",
+            "properties": {
+                "ref_authors": {
+                    "description": "List of authors of the referenced publication, preprint, or other citable resource. Format as surname(s) given name initials, e.g., \"Brockheimer J\", \"Gudmundsdottir JF\".",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "ref_journal": {
+                    "description": "Journal or venue of the referenced publication, preprint, or other citable resource. Follow the NLM Catalog journal title abbreviations where possible (e.g., J Biol Chem).",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "ref_publication_year": {
+                    "description": "Year of publication of the referenced publication, preprint, or other citable resource. Use four-digit year format (e.g., 2023).",
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "ref_title": {
+                    "description": "Title of the referenced publication, preprint, or other citable resource.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "ref_url": {
+                    "description": "URL of the referenced publication, preprint, or other citable resource. This will often be a DOI in URL form.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "title": "Reference",
+            "type": "object"
+        },
         "ReferenceImplementation": {
             "additionalProperties": false,
             "description": "Represents an implementation of one or more standards or tools in the Bridge2AI Standards Registry, whether as a full specification in a particular language or as an application to a specific use case.",
@@ -2473,11 +2539,15 @@
                     ]
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Reference"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Relevant publication for the standard or tool. This is a Reference object."
                 },
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
@@ -2680,11 +2750,15 @@
                     ]
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Reference"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Relevant publication for the standard or tool. This is a Reference object."
                 },
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
@@ -2887,11 +2961,15 @@
                     ]
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Reference"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Relevant publication for the standard or tool. This is a Reference object."
                 },
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",
@@ -3140,11 +3218,15 @@
                     ]
                 },
                 "publication": {
-                    "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Reference"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Relevant publication for the standard or tool. This is a Reference object."
                 },
                 "purpose_detail": {
                     "description": "Text description of the standard or tool.",

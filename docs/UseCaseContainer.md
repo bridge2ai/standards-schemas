@@ -15,10 +15,11 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer](https://
 
 
 
+
 ```mermaid
  classDiagram
     class UseCaseContainer
-    click UseCaseContainer href "../UseCaseContainer/"
+    click UseCaseContainer href "../UseCaseContainer"
       UseCaseContainer : use_cases
         
           
@@ -26,7 +27,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer](https://
         
         
         UseCaseContainer --> "*" UseCase : use_cases
-        click UseCase href "../UseCase/"
+        click UseCase href "../UseCase"
     
 
         
@@ -53,8 +54,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer](https://
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -75,6 +76,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer](https://
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer |
 | native | https://w3id.org/bridge2ai/standards-schema-all/UseCaseContainer |
+
 
 
 

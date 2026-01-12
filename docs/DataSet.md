@@ -15,12 +15,13 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 
 
 
+
 ```mermaid
  classDiagram
     class DataSet
-    click DataSet href "../DataSet/"
+    click DataSet href "../DataSet"
       NamedThing <|-- DataSet
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
       
       DataSet : availability_description
         
@@ -49,7 +50,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
         
         
         DataSet --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -62,7 +63,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
         
         
         DataSet --> "*" DataSet : has_parts
-        click DataSet href "../DataSet/"
+        click DataSet href "../DataSet"
     
 
         
@@ -81,7 +82,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
         
         
         DataSet --> "*" Organization : produced_by
-        click Organization href "../Organization/"
+        click Organization href "../Organization"
     
 
         
@@ -92,7 +93,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
         
         
         DataSet --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -103,7 +104,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
         
         
         DataSet --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -114,7 +115,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
         
         
         DataSet --> "*" DataSubstrate : substrates
-        click DataSubstrate href "../DataSubstrate/"
+        click DataSubstrate href "../DataSubstrate"
     
 
         
@@ -125,7 +126,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
         
         
         DataSet --> "*" DataTopic : topics
-        click DataTopic href "../DataTopic/"
+        click DataTopic href "../DataTopic"
     
 
         
@@ -200,8 +201,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -222,6 +223,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataSet](https://w3id.org/
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataSet |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataSet |
+
 
 
 

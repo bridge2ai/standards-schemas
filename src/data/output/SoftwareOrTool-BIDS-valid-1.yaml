@@ -20,7 +20,7 @@ has_application:
   datasheet:
   - https://example.org/bids-alzheimers-datasheet
   references:
-  - https://doi.org/10.1016/j.neuroimage.example
+  - ref_url: https://doi.org/10.1016/j.neuroimage.example
 - id: B2AI_APP:221
   category: B2AI:Application
   name: BIDS fMRI Pattern Classification
@@ -29,7 +29,7 @@ has_application:
   datasheet:
   - https://example.org/bids-fmri-datasheet
   references:
-  - https://doi.org/10.1038/nn.example
+  - ref_url: https://doi.org/10.1038/nn.example
 collection:
 - datamodel
 - minimuminformationschema
@@ -46,7 +46,8 @@ purpose_detail: BIDS facilitates data sharing, reproducibility, and collaboratio
 is_open: true
 requires_registration: false
 url: https://bids.neuroimaging.io/
-publication: https://doi.org/10.1038/sdata.2016.44
+publication:
+  ref_url: https://doi.org/10.1038/sdata.2016.44
 formal_specification: https://bids-specification.readthedocs.io/
 responsible_organization:
 - B2AI_ORG:85

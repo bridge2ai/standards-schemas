@@ -832,7 +832,7 @@
     {
       "name": "references",
       "definition_uri": "https://w3id.org/bridge2ai/standards-schema/references",
-      "description": "List of one or more URLs pointing to related publications, preprints, or other references.",
+      "description": "List of one or more Reference objects for related publications, preprints, or other references.",
       "from_schema": "https://w3id.org/bridge2ai/standards-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
@@ -841,8 +841,9 @@
       "domain_of": [
         "Application"
       ],
-      "range": "uriorcurie",
+      "range": "Reference",
       "multivalued": true,
+      "inlined": true,
       "@type": "SlotDefinition"
     },
     {
@@ -992,6 +993,77 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "ref_url",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/ref_url",
+      "description": "URL of the referenced publication, preprint, or other citable resource. This will often be a DOI in URL form.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "domain": "Reference",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/ref_url",
+      "owner": "Reference",
+      "domain_of": [
+        "Reference"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ref_title",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/ref_title",
+      "description": "Title of the referenced publication, preprint, or other citable resource.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "domain": "Reference",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/ref_title",
+      "owner": "Reference",
+      "domain_of": [
+        "Reference"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ref_authors",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/ref_authors",
+      "description": "List of authors of the referenced publication, preprint, or other citable resource. Format as surname(s) given name initials, e.g., \"Brockheimer J\", \"Gudmundsdottir JF\".",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "domain": "Reference",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/ref_authors",
+      "owner": "Reference",
+      "domain_of": [
+        "Reference"
+      ],
+      "range": "string",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ref_publication_year",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/ref_publication_year",
+      "description": "Year of publication of the referenced publication, preprint, or other citable resource. Use four-digit year format (e.g., 2023).",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "domain": "Reference",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/ref_publication_year",
+      "owner": "Reference",
+      "domain_of": [
+        "Reference"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ref_journal",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/ref_journal",
+      "description": "Journal or venue of the referenced publication, preprint, or other citable resource. Follow the NLM Catalog journal title abbreviations where possible (e.g., J Biol Chem).",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "domain": "Reference",
+      "slot_uri": "https://w3id.org/bridge2ai/standards-schema/ref_journal",
+      "owner": "Reference",
+      "domain_of": [
+        "Reference"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "collection",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/collection",
       "description": "Tags for specific sets of standards.",
@@ -1088,7 +1160,7 @@
     {
       "name": "publication",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/publication",
-      "description": "Relevant publication for the standard or tool. Prefer a DOI or PUBMED.",
+      "description": "Relevant publication for the standard or tool. This is a Reference object.",
       "from_schema": "https://w3id.org/bridge2ai/standards-datastandardortool-schema",
       "is_a": "node_property",
       "domain": "NamedThing",
@@ -1097,7 +1169,8 @@
       "domain_of": [
         "DataStandardOrTool"
       ],
-      "range": "uriorcurie",
+      "range": "Reference",
+      "inlined": true,
       "@type": "SlotDefinition"
     },
     {
@@ -2032,6 +2105,22 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "Reference",
+      "definition_uri": "https://w3id.org/bridge2ai/standards-schema/Reference",
+      "description": "A bibliographic reference to a publication, preprint, or other citable resource.",
+      "from_schema": "https://w3id.org/bridge2ai/standards-schema",
+      "slots": [
+        "ref_url",
+        "ref_title",
+        "ref_authors",
+        "ref_publication_year",
+        "ref_journal"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/bridge2ai/standards-schema/Reference",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "DataStandardOrTool",
       "definition_uri": "https://w3id.org/bridge2ai/standards-datastandardortool-schema/DataStandardOrTool",
       "description": "Represents a standard or tool in the Bridge2AI Standards Registry.",
@@ -2646,7 +2735,7 @@
   "source_file": "standards_schema_all.yaml",
   "source_file_date": "2025-09-05T16:34:19",
   "source_file_size": 498,
-  "generation_date": "2025-11-24T17:26:32",
+  "generation_date": "2026-01-12T17:50:54",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/standards_schema_all.context.jsonld",

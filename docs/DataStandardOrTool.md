@@ -15,30 +15,31 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
 
 
 
+
 ```mermaid
  classDiagram
     class DataStandardOrTool
-    click DataStandardOrTool href "../DataStandardOrTool/"
+    click DataStandardOrTool href "../DataStandardOrTool"
       NamedThing <|-- DataStandardOrTool
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
       
 
       DataStandardOrTool <|-- DataStandard
-        click DataStandard href "../DataStandard/"
+        click DataStandard href "../DataStandard"
       DataStandardOrTool <|-- Registry
-        click Registry href "../Registry/"
+        click Registry href "../Registry"
       DataStandardOrTool <|-- OntologyOrVocabulary
-        click OntologyOrVocabulary href "../OntologyOrVocabulary/"
+        click OntologyOrVocabulary href "../OntologyOrVocabulary"
       DataStandardOrTool <|-- ModelRepository
-        click ModelRepository href "../ModelRepository/"
+        click ModelRepository href "../ModelRepository"
       DataStandardOrTool <|-- SoftwareOrTool
-        click SoftwareOrTool href "../SoftwareOrTool/"
+        click SoftwareOrTool href "../SoftwareOrTool"
       DataStandardOrTool <|-- ReferenceImplementation
-        click ReferenceImplementation href "../ReferenceImplementation/"
+        click ReferenceImplementation href "../ReferenceImplementation"
       DataStandardOrTool <|-- TrainingProgram
-        click TrainingProgram href "../TrainingProgram/"
+        click TrainingProgram href "../TrainingProgram"
       
-
+      
       DataStandardOrTool : category
         
       DataStandardOrTool : collection
@@ -48,7 +49,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
         
         DataStandardOrTool --> "*" StandardsCollectionTag : collection
-        click StandardsCollectionTag href "../StandardsCollectionTag/"
+        click StandardsCollectionTag href "../StandardsCollectionTag"
     
 
         
@@ -59,7 +60,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
         
         DataStandardOrTool --> "*" DataTopic : concerns_data_topic
-        click DataTopic href "../DataTopic/"
+        click DataTopic href "../DataTopic"
     
 
         
@@ -82,7 +83,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
         
         DataStandardOrTool --> "*" Application : has_application
-        click Application href "../Application/"
+        click Application href "../Application"
     
 
         
@@ -93,7 +94,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
         
         DataStandardOrTool --> "*" DataSubstrate : has_relevant_data_substrate
-        click DataSubstrate href "../DataSubstrate/"
+        click DataSubstrate href "../DataSubstrate"
     
 
         
@@ -104,7 +105,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
         
         DataStandardOrTool --> "*" Organization : has_relevant_organization
-        click Organization href "../Organization/"
+        click Organization href "../Organization"
     
 
         
@@ -115,7 +116,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
         
         DataStandardOrTool --> "*" DataStandardOrTool : has_training_resource
-        click DataStandardOrTool href "../DataStandardOrTool/"
+        click DataStandardOrTool href "../DataStandardOrTool"
     
 
         
@@ -127,6 +128,15 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
       DataStandardOrTool : publication
         
+          
+    
+        
+        
+        DataStandardOrTool --> "0..1" Reference : publication
+        click Reference href "../Reference"
+    
+
+        
       DataStandardOrTool : purpose_detail
         
       DataStandardOrTool : related_to
@@ -136,7 +146,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
         
         DataStandardOrTool --> "*" NamedThing : related_to
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -149,7 +159,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
         
         DataStandardOrTool --> "*" Organization : responsible_organization
-        click Organization href "../Organization/"
+        click Organization href "../Organization"
     
 
         
@@ -160,7 +170,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
         
         
         DataStandardOrTool --> "*" NamedThing : subclass_of
-        click NamedThing href "../NamedThing/"
+        click NamedThing href "../NamedThing"
     
 
         
@@ -200,7 +210,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
 | [is_open](is_open.md) | 0..1 <br/> [Boolean](Boolean.md) | Is the standard or tool FAIR and available free of cost? | direct |
 | [requires_registration](requires_registration.md) | 0..1 <br/> [Boolean](Boolean.md) | Does usage of the standard or tool require registration of a user or group wi... | direct |
 | [url](url.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | URL for basic documentation of the standard or tool | direct |
-| [publication](publication.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant publication for the standard or tool | direct |
+| [publication](publication.md) | 0..1 <br/> [Reference](Reference.md) | Relevant publication for the standard or tool | direct |
 | [formal_specification](formal_specification.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Relevant code repository or other location for a formal specification of the ... | direct |
 | [responsible_organization](responsible_organization.md) | * <br/> [Organization](Organization.md) | Organization(s) responsible for providing and/or supporting the standard or t... | direct |
 | [has_relevant_data_substrate](has_relevant_data_substrate.md) | * <br/> [DataSubstrate](DataSubstrate.md) | Subject standard has some relationship to the object data substrate(s), inclu... | direct |
@@ -280,8 +290,8 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
 
 
 
-
 ## Identifier and Mapping Information
+
 
 
 
@@ -302,6 +312,7 @@ URI: [https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool](https:
 | ---  | ---  |
 | self | https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool |
 | native | https://w3id.org/bridge2ai/standards-schema-all/DataStandardOrTool |
+
 
 
 
@@ -456,7 +467,8 @@ attributes:
     range: uriorcurie
   publication:
     name: publication
-    description: Relevant publication for the standard or tool. Prefer a DOI or PUBMED.
+    description: Relevant publication for the standard or tool. This is a Reference
+      object.
     from_schema: https://w3id.org/bridge2ai/standards-schema-all
     rank: 1000
     is_a: node_property
@@ -465,7 +477,7 @@ attributes:
     owner: DataStandardOrTool
     domain_of:
     - DataStandardOrTool
-    range: uriorcurie
+    range: Reference
   formal_specification:
     name: formal_specification
     description: Relevant code repository or other location for a formal specification

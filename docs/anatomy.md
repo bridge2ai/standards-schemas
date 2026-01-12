@@ -34,6 +34,7 @@ Alias: anatomy
 
 
 
+
 ## Properties
 
 * Range: [AnatomicalEntity](AnatomicalEntity.md)
@@ -43,7 +44,9 @@ Alias: anatomy
 
 
 
+
 ## Identifier and Mapping Information
+
 
 
 
